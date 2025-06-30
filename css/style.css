@@ -1,0 +1,106 @@
+/* 基础样式 */
+:root {
+    --primary-blue: #1a3e8c;
+    --primary-red: #e63946;
+    --dark-blue: #1d3557;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6c757d;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* 导航栏样式 (严格按图片描述) */
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo-lotto {
+    color: var(--primary-blue);
+}
+
+.logo-bridge {
+    color: var(--primary-red);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--dark-blue);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.language-selector {
+    margin-left: 30px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    background: var(--white);
+    font-size: 14px;
+    color: var(--dark-blue);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .nav-links li {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 移动端导航样式 */
+}
