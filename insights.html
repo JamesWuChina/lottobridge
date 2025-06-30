@@ -56,7 +56,7 @@
 
         .header-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             padding: 15px 0;
         }
@@ -64,6 +64,7 @@
         .logo {
             display: flex;
             align-items: center;
+            margin-right: 60px;
         }
 
         .logo-text {
@@ -119,11 +120,11 @@
             width: 100%;
         }
 
+        /* 语言选择器 - 移动到右上角 */
         .language-selector {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            position: static;
+            margin-left: auto;
+            margin-right: 20px;
         }
 
         .language-selector select {
@@ -939,15 +940,6 @@
     <!-- 导航栏 -->
     <header class="header">
         <div class="container header-container">
-            <div class="language-selector">
-                <select>
-                    <option value="zh" selected>中文</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-            
             <div class="logo">
                 <a href="index.html">
                     <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
@@ -959,12 +951,21 @@
                     <li><a href="index.html">首页</a></li>
                     <li><a href="market-research.html">市场调研</a></li>
                     <li><a href="products.html">产品服务</a></li>
-                    <li><a href="case-studies.html">合作案例</a></li>
                     <li><a href="insights.html" class="active">行业洞察</a></li>
+                    <li><a href="case-studies.html">合作案例</a></li>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>
             </nav>
+            
+            <div class="language-selector">
+                <select>
+                    <option value="zh" selected>中文</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
             
             <div class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
