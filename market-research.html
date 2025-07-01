@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>市场调研 | LottoBridge</title>
+    <title data-i18n="market_research.page.title">市场调研 | LottoBridge</title>
+    <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* 基础样式 - 与首页保持一致 */
@@ -894,13 +896,13 @@
             
             <nav id="mainNav">
                 <ul class="nav-links">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="market-research.html" class="active">市场调研</a></li>
-                    <li><a href="products.html">产品服务</a></li>
-                    <li><a href="insights.html">行业洞察</a></li>
-                    <li><a href="case-studies.html">合作案例</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="market-research.html" class="active" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
+                    <li><a href="insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="case-studies.html" data-i18n="nav.case_studies">合作案例</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
                 </ul>
             </nav>
             
@@ -925,15 +927,15 @@
         <section class="mi-hero">
             <div class="container mi-hero-content">
                 <h1>
-                    Unlock Global Lottery Opportunities with AI-powered Market Research
-                    <span>快速掌握全球彩票市场的政策、规模与机会点</span>
+                    <span data-i18n="market_research.hero.title">Unlock Global Lottery Opportunities with AI-powered Market Research</span>
+                    <span data-i18n="market_research.hero.subtitle">快速掌握全球彩票市场的政策、规模与机会点</span>
                 </h1>
-                <p>由 LottoBridge AI 驱动的全球市场情报系统，为您提供一站式国家级彩票数据洞察，助您做出明智的市场决策</p>
+                <p data-i18n="market_research.hero.description">由 LottoBridge AI 驱动的全球市场情报系统，为您提供一站式国家级彩票数据洞察，助您做出明智的市场决策</p>
                 
                 <div class="mi-hero-buttons">
-                    <a href="#country-search" class="btn btn-primary">选择国家</a>
-                    <a href="contact.html" class="btn btn-outline">生成报告</a>
-                    <a href="contact.html" class="btn btn-outline">查看示例报告</a>
+                    <a href="#country-search" class="btn btn-primary" data-i18n="market_research.hero.btn_select_country">选择国家</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="market_research.hero.btn_generate_report">生成报告</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="market_research.hero.btn_view_sample">查看示例报告</a>
                 </div>
             </div>
         </section>
@@ -943,21 +945,21 @@
             <div class="container">
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" placeholder="搜索国家或地区...">
+                        <input type="text" placeholder="搜索国家或地区..." data-i18n-placeholder="market_research.country_search.placeholder">
                         <i class="fas fa-search"></i>
                     </div>
                     
                     <div class="search-filters">
-                        <div class="filter-btn active">全部</div>
-                        <div class="filter-btn">亚洲</div>
-                        <div class="filter-btn">欧洲</div>
-                        <div class="filter-btn">非洲</div>
-                        <div class="filter-btn">美洲</div>
-                        <div class="filter-btn">英语国家</div>
-                        <div class="filter-btn">新兴市场</div>
+                        <div class="filter-btn active" data-i18n="market_research.country_search.filter_all">全部</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_asia">亚洲</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_europe">欧洲</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_africa">非洲</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_america">美洲</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_english">英语国家</div>
+                        <div class="filter-btn" data-i18n="market_research.country_search.filter_emerging">新兴市场</div>
                     </div>
                     
-                    <div class="country-coverage">
+                    <div class="country-coverage" data-i18n="market_research.country_search.coverage">
                         当前已覆盖 132 个国家和地区
                     </div>
                 </div>
@@ -967,7 +969,7 @@
         <!-- 国家卡片区域 -->
         <section class="country-cards">
             <div class="container">
-                <h2 class="section-title">推荐市场</h2>
+                <h2 class="section-title" data-i18n="market_research.recommended_markets.title">推荐市场</h2>
                 
                 <div class="country-grid">
                     <!-- 国家卡片1 -->
@@ -975,38 +977,38 @@
                         <div class="country-header">
                             <div class="country-flag">🇪🇬</div>
                             <div class="country-name">
-                                <h3>埃及 Egypt</h3>
-                                <p>北非最大彩票市场</p>
+                                <h3 data-i18n="market_research.countries.egypt.name">埃及 Egypt</h3>
+                                <p data-i18n="market_research.countries.egypt.description">北非最大彩票市场</p>
                             </div>
                         </div>
                         
                         <div class="country-info">
                             <div class="info-item">
-                                <div class="label">市场状态:</div>
-                                <div class="value">合法运营</div>
+                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
+                                <div class="value" data-i18n="market_research.countries.egypt.market_status">合法运营</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">彩票品类:</div>
-                                <div class="value">乐透型、即开票、数字型</div>
+                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
+                                <div class="value" data-i18n="market_research.countries.egypt.lottery_types">乐透型、即开票、数字型</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">年销售额估算:</div>
-                                <div class="value">约 4.3 亿美元</div>
+                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
+                                <div class="value" data-i18n="market_research.countries.egypt.annual_sales">约 4.3 亿美元</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">主体结构:</div>
-                                <div class="value">国家彩票局</div>
+                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
+                                <div class="value" data-i18n="market_research.countries.egypt.main_structure">国家彩票局</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">典型玩法:</div>
-                                <div class="value">6/49、4D、Scratch-off</div>
+                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
+                                <div class="value" data-i18n="market_research.countries.egypt.typical_games">6/49、4D、Scratch-off</div>
                             </div>
                         </div>
                         
                         <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline">预约咨询</a>
+                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
                         </div>
                     </div>
                     
@@ -1015,38 +1017,38 @@
                         <div class="country-header">
                             <div class="country-flag">🇲🇽</div>
                             <div class="country-name">
-                                <h3>墨西哥 Mexico</h3>
-                                <p>拉丁美洲领先市场</p>
+                                <h3 data-i18n="market_research.countries.mexico.name">墨西哥 Mexico</h3>
+                                <p data-i18n="market_research.countries.mexico.description">拉丁美洲领先市场</p>
                             </div>
                         </div>
                         
                         <div class="country-info">
                             <div class="info-item">
-                                <div class="label">市场状态:</div>
-                                <div class="value">私营准入</div>
+                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
+                                <div class="value" data-i18n="market_research.countries.mexico.market_status">私营准入</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">彩票品类:</div>
-                                <div class="value">乐透型、体育竞猜</div>
+                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
+                                <div class="value" data-i18n="market_research.countries.mexico.lottery_types">乐透型、体育竞猜</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">年销售额估算:</div>
-                                <div class="value">约 12.5 亿美元</div>
+                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
+                                <div class="value" data-i18n="market_research.countries.mexico.annual_sales">约 12.5 亿美元</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">主体结构:</div>
-                                <div class="value">合作运营商</div>
+                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
+                                <div class="value" data-i18n="market_research.countries.mexico.main_structure">合作运营商</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">典型玩法:</div>
-                                <div class="value">Melate、Chispazo</div>
+                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
+                                <div class="value" data-i18n="market_research.countries.mexico.typical_games">Melate、Chispazo</div>
                             </div>
                         </div>
                         
                         <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline">预约咨询</a>
+                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
                         </div>
                     </div>
                     
@@ -1055,38 +1057,38 @@
                         <div class="country-header">
                             <div class="country-flag">🇵🇭</div>
                             <div class="country-name">
-                                <h3>菲律宾 Philippines</h3>
-                                <p>东南亚高增长市场</p>
+                                <h3 data-i18n="market_research.countries.philippines.name">菲律宾 Philippines</h3>
+                                <p data-i18n="market_research.countries.philippines.description">东南亚高增长市场</p>
                             </div>
                         </div>
                         
                         <div class="country-info">
                             <div class="info-item">
-                                <div class="label">市场状态:</div>
-                                <div class="value">私营准入</div>
+                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
+                                <div class="value" data-i18n="market_research.countries.philippines.market_status">私营准入</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">彩票品类:</div>
-                                <div class="value">乐透型、即开票、电子游戏</div>
+                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
+                                <div class="value" data-i18n="market_research.countries.philippines.lottery_types">乐透型、即开票、电子游戏</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">年销售额估算:</div>
-                                <div class="value">约 8.7 亿美元</div>
+                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
+                                <div class="value" data-i18n="market_research.countries.philippines.annual_sales">约 8.7 亿美元</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">主体结构:</div>
-                                <div class="value">私营独立运营</div>
+                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
+                                <div class="value" data-i18n="market_research.countries.philippines.main_structure">私营独立运营</div>
                             </div>
                             <div class="info-item">
-                                <div class="label">典型玩法:</div>
-                                <div class="value">Ultra Lotto 6/58</div>
+                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
+                                <div class="value" data-i18n="market_research.countries.philippines.typical_games">Ultra Lotto 6/58</div>
                             </div>
                         </div>
                         
                         <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline">预约咨询</a>
+                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
+                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
                         </div>
                     </div>
                 </div>
@@ -1096,29 +1098,29 @@
         <!-- 报告预览区域 -->
         <section class="report-preview" id="report-preview">
             <div class="container">
-                <h2 class="section-title">埃及彩票市场深度报告</h2>
+                <h2 class="section-title" data-i18n="market_research.report_preview.title">埃及彩票市场深度报告</h2>
                 
                 <div class="report-tabs">
-                    <div class="report-tab active">国家概况</div>
-                    <div class="report-tab">法规与监管</div>
-                    <div class="report-tab">市场规模</div>
-                    <div class="report-tab">产品结构</div>
-                    <div class="report-tab">主要参与者</div>
-                    <div class="report-tab">商业机会</div>
+                    <div class="report-tab active" data-i18n="market_research.report_preview.tabs.overview">国家概况</div>
+                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.regulations">法规与监管</div>
+                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.market_size">市场规模</div>
+                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.product_structure">产品结构</div>
+                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.key_players">主要参与者</div>
+                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.business_opportunities">商业机会</div>
                 </div>
                 
                 <div class="report-content active">
                     <div class="report-section">
-                        <h3><i class="fas fa-globe-africa"></i> 国家概况</h3>
-                        <p>埃及是阿拉伯世界人口最多的国家，拥有超过1亿人口，其中约60%的人口年龄在30岁以下。互联网普及率达65%，移动支付使用率快速增长。</p>
-                        <p>彩票在埃及有着悠久历史，最早可追溯到20世纪60年代。2018年修订的《彩票与博彩法》为市场现代化奠定了基础。</p>
+                        <h3><i class="fas fa-globe-africa"></i> <span data-i18n="market_research.report_preview.content.overview.title">国家概况</span></h3>
+                        <p data-i18n="market_research.report_preview.content.overview.demographics">埃及是阿拉伯世界人口最多的国家，拥有超过1亿人口，其中约60%的人口年龄在30岁以下。互联网普及率达65%，移动支付使用率快速增长。</p>
+                        <p data-i18n="market_research.report_preview.content.overview.history">彩票在埃及有着悠久历史，最早可追溯到20世纪60年代。2018年修订的《彩票与博彩法》为市场现代化奠定了基础。</p>
                     </div>
                     
                     <div class="report-section">
-                        <h3><i class="fas fa-landmark"></i> 彩票法制发展进程</h3>
-                        <p>1960年：埃及首次引入国家彩票系统</p>
-                        <p>2018年：修订《彩票与博彩法》，允许私营运营商参与</p>
-                        <p>2021年：推出数字彩票试点项目</p>
+                        <h3><i class="fas fa-landmark"></i> <span data-i18n="market_research.report_preview.content.overview.legal_development">彩票法制发展进程</span></h3>
+                        <p data-i18n="market_research.report_preview.content.overview.timeline_1960">1960年：埃及首次引入国家彩票系统</p>
+                        <p data-i18n="market_research.report_preview.content.overview.timeline_2018">2018年：修订《彩票与博彩法》，允许私营运营商参与</p>
+                        <p data-i18n="market_research.report_preview.content.overview.timeline_2021">2021年：推出数字彩票试点项目</p>
                     </div>
                 </div>
                 
@@ -1368,7 +1370,10 @@
                 this.classList.add('active');
                 // 这里可以添加实际筛选逻辑
             });
-        });
+ });
     </script>
+    
+    <!-- 多语言支持脚本 -->
+    <script src="js/i18n.js"></script>
 </body>
 </html>

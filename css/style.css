@@ -11,7 +11,7 @@
     --transition: all 0.3s ease;
 }
 
-/* 导航栏样式 (严格按图片描述) */
+/* 导航栏样式 (国际化优化) */
 .header {
     background: var(--white);
     box-shadow: var(--shadow);
@@ -19,18 +19,34 @@
     width: 100%;
     top: 0;
     z-index: 1000;
+    min-height: 70px;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 700;
+    flex-shrink: 0;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .logo-lotto {
@@ -41,9 +57,13 @@
     color: var(--primary-red);
 }
 
-.main-nav {
+#mainNav {
+    flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .nav-links {
@@ -51,10 +71,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: center;
+    min-width: 0;
 }
 
 .nav-links li {
-    margin-left: 30px;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 .nav-links a {
@@ -62,45 +88,244 @@
     font-weight: 500;
     text-decoration: none;
     position: relative;
-    padding: 5px 0;
+    padding: 5px 5px;
+    white-space: nowrap;
+    font-size: 11px;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: block;
+    text-align: center;
+    min-width: 0;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+
+.nav-links a:hover {
+    background-color: rgba(26, 62, 140, 0.1);
+    color: var(--primary-blue);
+}
+
+.nav-links a.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
 }
 
 .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-blue);
-    transition: var(--transition);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
+    display: none;
 }
 
 .language-selector {
-    margin-left: 30px;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .language-selector select {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
+    padding: 6px 12px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 20px;
     background: var(--white);
-    font-size: 14px;
+    font-size: 11px;
     color: var(--dark-blue);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23666" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 28px;
+    min-width: 80px;
+}
+
+.language-selector select:hover {
+    border-color: var(--primary-red);
+    box-shadow: 0 2px 8px rgba(26, 62, 140, 0.15);
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+/* 强制单行导航 */
+.header-container {
+    flex-wrap: nowrap !important;
+}
+
+.nav-links {
+    flex-wrap: nowrap !important;
 }
 
 /* 响应式设计 */
+@media (max-width: 1400px) {
+    .container {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    
+    .nav-links {
+        gap: 3px;
+    }
+    
+    .nav-links a {
+        padding: 4px 3px;
+        font-size: 10px;
+        max-width: 85px;
+    }
+    
+    #mainNav {
+        margin: 0 4px;
+    }
+    
+    .language-selector select {
+        min-width: 60px;
+        font-size: 10px;
+        padding: 4px 6px;
+        padding-right: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 6px;
+    }
+    
+    .nav-links {
+        gap: 2px;
+    }
+    
+    .nav-links a {
+        padding: 3px 3px;
+        font-size: 9px;
+        max-width: 70px;
+    }
+    
+    #mainNav {
+        margin: 0 3px;
+    }
+    
+    .language-selector select {
+        min-width: 55px;
+        font-size: 9px;
+        padding: 3px 6px;
+        padding-right: 16px;
+    }
+}
+
 @media (max-width: 992px) {
-    .nav-links li {
-        margin-left: 20px;
+    .header-container {
+        flex-wrap: nowrap !important;
+    }
+    
+    #mainNav {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .nav-links {
+        gap: 3px;
+        flex-wrap: nowrap !important;
+    }
+    
+    .nav-links a {
+        padding: 4px 4px;
+        font-size: 10px;
+        min-width: 0;
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .language-selector {
+        flex-shrink: 0;
+    }
+    
+    .language-selector select {
+        min-width: 60px;
+        font-size: 10px;
+        padding: 4px 8px;
+        padding-right: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    /* 移动端导航样式 */
+    .header-container {
+        flex-wrap: nowrap !important;
+        min-height: 70px;
+        padding: 0;
+    }
+    
+    .logo {
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+    
+    #mainNav {
+        flex: 1;
+        margin: 0 5px;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        flex-wrap: nowrap !important;
+        gap: 2px;
+    }
+    
+    .nav-links a {
+        padding: 3px 3px;
+        font-size: 9px;
+        max-width: 60px;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .language-selector {
+        flex-shrink: 0;
+    }
+    
+    .language-selector select {
+        min-width: 50px;
+        font-size: 9px;
+        padding: 3px 6px;
+        padding-right: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+    
+    #mainNav {
+        margin: 0 3px;
+    }
+    
+    .nav-links {
+        gap: 1px;
+    }
+    
+    .nav-links a {
+        padding: 2px 2px;
+        font-size: 8px;
+        max-width: 45px;
+    }
+    
+    .language-selector select {
+        min-width: 40px;
+        font-size: 8px;
+        padding: 2px 4px;
+        padding-right: 15px;
+    }
 }

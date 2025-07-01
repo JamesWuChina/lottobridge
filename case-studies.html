@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>合作案例 | LottoBridge</title>
+    <title data-i18n="case_studies.page.title">合作案例 | LottoBridge</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* 基础样式 - 与首页保持一致 */
@@ -795,13 +795,13 @@
             
             <nav id="mainNav">
                 <ul class="nav-links">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="market-research.html">市场调研</a></li>
-                    <li><a href="products.html">产品服务</a></li>
-                    <li><a href="insights.html">行业洞察</a></li>
-                    <li><a href="case-studies.html" class="active">合作案例</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="market-research.html" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
+                    <li><a href="insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="case-studies.html" class="active" data-i18n="nav.case_studies">合作案例</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
                 </ul>
             </nav>
             
@@ -825,12 +825,12 @@
         <!-- Hero区域 -->
         <section class="case-hero">
             <div class="container case-hero-content">
-                <h1>Global Success Stories – Powered by LottoBridge</h1>
-                <p>通过我们的一站式解决方案，多个国家已成功搭建本地彩票业务。查看我们的真实案例，了解平台能力与合作方式。</p>
+                <h1 data-i18n="case_studies.hero.title">Global Success Stories – Powered by LottoBridge</h1>
+                <p data-i18n="case_studies.hero.description">通过我们的一站式解决方案，多个国家已成功搭建本地彩票业务。查看我们的真实案例，了解平台能力与合作方式。</p>
                 
                 <div class="case-hero-buttons">
-                    <a href="#case-showcase" class="btn btn-primary">查看案例</a>
-                    <a href="contact.html" class="btn btn-outline">提交合作需求</a>
+                    <a href="#case-showcase" class="btn btn-primary" data-i18n="case_studies.hero.btn_view_cases">查看案例</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="case_studies.hero.btn_submit_request">提交合作需求</a>
                 </div>
             </div>
         </section>
@@ -840,44 +840,44 @@
             <div class="container">
                 <div class="filter-container">
                     <div class="filter-group">
-                        <label for="region">地区</label>
+                        <label for="region" data-i18n="case_studies.filters.region">地区</label>
                         <select id="region">
-                            <option value="">全部地区</option>
-                            <option value="asia">亚洲</option>
-                            <option value="africa">非洲</option>
-                            <option value="europe">欧洲</option>
-                            <option value="america">美洲</option>
-                            <option value="middle-east">中东</option>
+                            <option value="" data-i18n="case_studies.filters.all_regions">全部地区</option>
+                            <option value="asia" data-i18n="case_studies.filters.asia">亚洲</option>
+                            <option value="africa" data-i18n="case_studies.filters.africa">非洲</option>
+                            <option value="europe" data-i18n="case_studies.filters.europe">欧洲</option>
+                            <option value="america" data-i18n="case_studies.filters.america">美洲</option>
+                            <option value="middle-east" data-i18n="case_studies.filters.middle_east">中东</option>
                         </select>
                     </div>
                     
                     <div class="filter-group">
-                        <label for="type">项目类型</label>
+                        <label for="type" data-i18n="case_studies.filters.project_type">项目类型</label>
                         <select id="type">
-                            <option value="">全部类型</option>
-                            <option value="system">系统搭建</option>
-                            <option value="hardware">终端部署</option>
-                            <option value="printing">票券印刷</option>
-                            <option value="consulting">咨询合作</option>
+                            <option value="" data-i18n="case_studies.filters.all_types">全部类型</option>
+                            <option value="system" data-i18n="case_studies.filters.system_setup">系统搭建</option>
+                            <option value="hardware" data-i18n="case_studies.filters.terminal_deployment">终端部署</option>
+                            <option value="printing" data-i18n="case_studies.filters.ticket_printing">票券印刷</option>
+                            <option value="consulting" data-i18n="case_studies.filters.consulting">咨询合作</option>
                         </select>
                     </div>
                     
                     <div class="filter-group">
-                        <label for="service">服务内容</label>
+                        <label for="service" data-i18n="case_studies.filters.service_content">服务内容</label>
                         <select id="service">
-                            <option value="">全部服务</option>
-                            <option value="research">市场调研</option>
-                            <option value="software">软件系统</option>
-                            <option value="hardware">硬件设备</option>
-                            <option value="game">游戏设计</option>
-                            <option value="operation">运营支持</option>
+                            <option value="" data-i18n="case_studies.filters.all_services">全部服务</option>
+                            <option value="research" data-i18n="case_studies.filters.market_research">市场调研</option>
+                            <option value="software" data-i18n="case_studies.filters.software_system">软件系统</option>
+                            <option value="hardware" data-i18n="case_studies.filters.hardware_equipment">硬件设备</option>
+                            <option value="game" data-i18n="case_studies.filters.game_design">游戏设计</option>
+                            <option value="operation" data-i18n="case_studies.filters.operation_support">运营支持</option>
                         </select>
                     </div>
                     
                     <div class="filter-group">
-                        <label for="year">年份</label>
+                        <label for="year" data-i18n="case_studies.filters.year">年份</label>
                         <select id="year">
-                            <option value="">全部年份</option>
+                            <option value="" data-i18n="case_studies.filters.all_years">全部年份</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
                             <option value="2023">2023</option>
@@ -887,8 +887,8 @@
                 </div>
                 
                 <div class="filter-actions">
-                    <button class="btn btn-secondary btn-sm">重置筛选</button>
-                    <button class="btn btn-primary btn-sm">应用筛选</button>
+                    <button class="btn btn-secondary btn-sm" data-i18n="case_studies.filters.reset">重置筛选</button>
+                    <button class="btn btn-primary btn-sm" data-i18n="case_studies.filters.apply">应用筛选</button>
                 </div>
             </div>
         </section>
@@ -907,27 +907,27 @@
                                 <span>柬埔寨</span>
                                 <span>2023-2024</span>
                             </div>
-                            <h3>彩票系统本地化合作</h3>
-                            <span class="case-type">系统搭建 + 终端部署</span>
+                            <h3 data-i18n="case_studies.cases.cambodia.title">彩票系统本地化合作</h3>
+                            <span class="case-type" data-i18n="case_studies.cases.cambodia.type">系统搭建 + 终端部署</span>
                             
                             <div class="case-features">
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>全票种销售系统定制 + 本地终端部署 + CRM模块培训</span>
+                                    <span data-i18n="case_studies.cases.cambodia.feature1">全票种销售系统定制 + 本地终端部署 + CRM模块培训</span>
                                 </div>
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>支持柬语系统界面与安卓终端导入</span>
+                                    <span data-i18n="case_studies.cases.cambodia.feature2">支持柬语系统界面与安卓终端导入</span>
                                 </div>
                             </div>
                             
-                            <div class="case-testimonial">
+                            <div class="case-testimonial" data-i18n="case_studies.cases.cambodia.testimonial">
                                 "本地销售网络迅速上线，共部署 POS 端超 1,200 台，提升年销售额预计 2200万美元，增长超42%"
                             </div>
                             
                             <div class="case-buttons">
-                                <a href="case-detail.html" class="btn btn-primary btn-sm">查看详情</a>
-                                <a href="#" class="btn btn-secondary btn-sm">下载简报</a>
+                                <a href="case-detail.html" class="btn btn-primary btn-sm" data-i18n="case_studies.cases.view_details">查看详情</a>
+                                <a href="#" class="btn btn-secondary btn-sm" data-i18n="case_studies.cases.download_brief">下载简报</a>
                             </div>
                         </div>
                     </div>
@@ -942,21 +942,21 @@
                                 <span>乌干达</span>
                                 <span>2024</span>
                             </div>
-                            <h3>即开票项目快速部署</h3>
-                            <span class="case-type">票券印刷 + 物流出口</span>
+                            <h3 data-i18n="case_studies.cases.uganda.title">即开票项目快速部署</h3>
+                            <span class="case-type" data-i18n="case_studies.cases.uganda.type">票券印刷 + 物流出口</span>
                             
                             <div class="case-features">
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>彩票品类咨询 + 安全票面设计 + 即开票印刷</span>
+                                    <span data-i18n="case_studies.cases.uganda.feature1">彩票品类咨询 + 安全票面设计 + 即开票印刷</span>
                                 </div>
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>提供10款定制票种，全部通过地方政府审查</span>
+                                    <span data-i18n="case_studies.cases.uganda.feature2">提供10款定制票种，全部通过地方政府审查</span>
                                 </div>
                             </div>
                             
-                            <div class="case-testimonial">
+                            <div class="case-testimonial" data-i18n="case_studies.cases.uganda.testimonial">
                                 "项目周期仅4个月，票面满意度调查达92%，热敏纸与印刷品成功通过税务认证，快速落地销售"
                             </div>
                             
@@ -977,21 +977,21 @@
                                 <span>巴西</span>
                                 <span>2024</span>
                             </div>
-                            <h3>战略顾问与系统预研</h3>
-                            <span class="case-type">咨询合作 + 市场调研</span>
+                            <h3 data-i18n="case_studies.cases.brazil.title">战略顾问与系统预研</h3>
+                            <span class="case-type" data-i18n="case_studies.cases.brazil.type">咨询合作 + 市场调研</span>
                             
                             <div class="case-features">
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>市场准入政策分析 + AI调研 + 线上彩票系统规划</span>
+                                    <span data-i18n="case_studies.cases.brazil.feature1">市场准入政策分析 + AI调研 + 线上彩票系统规划</span>
                                 </div>
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>提供4轮政策研讨+本地专家对接+白皮书支持</span>
+                                    <span data-i18n="case_studies.cases.brazil.feature2">提供4轮政策研讨+本地专家对接+白皮书支持</span>
                                 </div>
                             </div>
                             
-                            <div class="case-testimonial">
+                            <div class="case-testimonial" data-i18n="case_studies.cases.brazil.testimonial">
                                 "协助客户制定3年发展路径，助力战略投资方向确认"
                             </div>
                             
@@ -1012,21 +1012,21 @@
                                 <span>乌兹别克斯坦</span>
                                 <span>2024</span>
                             </div>
-                            <h3>国家彩票即开票系统部署</h3>
-                            <span class="case-type">系统搭建 + 票券印刷</span>
+                            <h3 data-i18n="case_studies.cases.uzbekistan.title">国家彩票即开票系统部署</h3>
+                            <span class="case-type" data-i18n="case_studies.cases.uzbekistan.type">系统搭建 + 票券印刷</span>
                             
                             <div class="case-features">
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>省级试点，年印量预计 2,000万张</span>
+                                    <span data-i18n="case_studies.cases.uzbekistan.feature1">省级试点，年印量预计 2,000万张</span>
                                 </div>
                                 <div class="case-feature">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>调研报告 + CRM系统 + 安全票券设计 + 热敏纸出口</span>
+                                    <span data-i18n="case_studies.cases.uzbekistan.feature2">调研报告 + CRM系统 + 安全票券设计 + 热敏纸出口</span>
                                 </div>
                             </div>
                             
-                            <div class="case-testimonial">
+                            <div class="case-testimonial" data-i18n="case_studies.cases.uzbekistan.testimonial">
                                 "平台帮助我们从策略分析到系统上线，仅用5个月，非常高效"
                             </div>
                             
@@ -1043,11 +1043,11 @@
         <!-- CTA区域 -->
         <section class="case-cta">
             <div class="container">
-                <h2>成为我们的下一位成功客户</h2>
-                <p>无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案</p>
+                <h2 data-i18n="case_studies.cta.title">成为我们的下一位成功客户</h2>
+                <p data-i18n="case_studies.cta.description">无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案</p>
                 <div class="case-cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">提交合作需求</a>
-                    <a href="#" class="btn btn-outline">下载案例集</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="case_studies.cta.contact_btn">提交合作需求</a>
+                    <a href="#" class="btn btn-outline" data-i18n="case_studies.cta.download_btn">下载案例集</a>
                 </div>
             </div>
         </section>
@@ -1058,8 +1058,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>LottoBridge</h3>
-                    <p>全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1069,39 +1069,39 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3>产品服务</h3>
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="#">彩票系统服务</a></li>
-                        <li><a href="#">终端设备服务</a></li>
-                        <li><a href="#">游戏设计与开发</a></li>
-                        <li><a href="#">票券印刷服务</a></li>
-                        <li><a href="#">市场调研服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="#" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.market_research">市场调研服务</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>资源中心</h3>
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
                     <ul>
-                        <li><a href="#">案例研究</a></li>
-                        <li><a href="#">白皮书下载</a></li>
-                        <li><a href="#">行业报告</a></li>
-                        <li><a href="#">博客与新闻</a></li>
-                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="#" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">常见问题</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>联系我们</h3>
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
-                        <li><i class="fas fa-phone"></i> +86 10 8888 8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
+                        <li><i class="fas fa-envelope"></i> <span data-i18n="footer.contact.email">info@lottobridge.com</span></li>
+                        <li><i class="fas fa-phone"></i> <span data-i18n="footer.contact.phone">+86 10 8888 8888</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.contact.address">北京市朝阳区建国路88号</span></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 LottoBridge. 保留所有权利。 | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+                <p>&copy; 2023 <span data-i18n="footer.copyright.company">LottoBridge</span>. <span data-i18n="footer.copyright.rights">保留所有权利。</span> | <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a> | <a href="#" data-i18n="footer.copyright.terms">使用条款</a></p>
             </div>
         </div>
     </footer>

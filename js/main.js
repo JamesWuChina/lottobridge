@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 移动端菜单切换
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mainNav = document.querySelector('.main-nav');
+    const mainNav = document.querySelector('#mainNav');
     
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', function() {
@@ -12,13 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 语言切换功能
-    const languageSwitcher = document.getElementById('language-switcher');
-    if (languageSwitcher) {
-        languageSwitcher.addEventListener('change', function() {
-            // 实际项目中这里应该处理语言切换逻辑
-            console.log('切换语言至:', this.value);
-        });
+    // 初始化多语言支持
+    if (window.i18n) {
+        // 多语言系统已在i18n.js中初始化
+        console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
     }
     
     // 平滑滚动
