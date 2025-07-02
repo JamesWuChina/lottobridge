@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page.title">LottoBridge | 全球彩票出海一站式解决方案平台</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 多语言支持脚本 -->
-    <script src="js/languages.js"></script>
     <style>
         /* 基础样式 */
         :root {
@@ -1377,6 +1375,7 @@
     </footer>
     
     <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -1399,6 +1398,20 @@
                 header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
             } else {
                 header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
+            }
+        });
+        
+        // 多语言功能初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化I18nManager
+            const i18nManager = new I18nManager();
+            
+            // 绑定语言选择器事件
+            const languageSelect = document.getElementById('languageSelector');
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    i18nManager.changeLanguage(this.value);
+                });
             }
         });
     </script>

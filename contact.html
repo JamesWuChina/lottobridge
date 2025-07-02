@@ -88,20 +88,27 @@
         .nav-links {
             display: flex;
             list-style: none;
-            margin-left: 40px;
+            margin-right: 25px;
+            flex-wrap: nowrap !important;
+            gap: 12px;
+            align-items: center;
         }
 
         .nav-links li {
-            margin-right: 30px;
+            margin-right: 0;
             position: relative;
+            flex-shrink: 0;
         }
 
         .nav-links a {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 14px;
             color: var(--nav-blue);
-            padding: 5px 0;
+            padding: 10px 16px;
             position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
         }
 
         .nav-links a::after {
@@ -120,22 +127,55 @@
             width: 100%;
         }
 
-        /* 语言选择器 - 移动到右上角 */
+        /* 语言选择器 - 国际化专业设计 */
         .language-selector {
-            position: static;
+            position: relative;
             margin-left: auto;
-            margin-right: 20px;
+            margin-right: 25px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
         }
 
         .language-selector select {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
             font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             appearance: none;
-            padding-right: 30px;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
         }
 
         .language-selector::after {
@@ -143,12 +183,17 @@
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
-            right: 10px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
-            color: var(--medium-gray);
+            color: var(--primary-blue);
             font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .mobile-menu-btn {
@@ -831,44 +876,67 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                transform: translateY(-150%);
-                transition: var(--transition);
-                z-index: 999;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            }
-            
-            nav.active {
-                transform: translateY(0);
-            }
-            
             .nav-links {
-                flex-direction: column;
-                margin-left: 0;
-                width: 100%;
+                gap: 15px;
+                margin-right: 15px;
             }
             
-            .nav-links li {
-                margin: 0 0 15px 0;
-                width: 100%;
+            .nav-links li a {
+                font-size: 13px;
+                padding: 8px 12px;
             }
             
             .language-selector {
-                position: static;
-                transform: none;
-                margin-top: 20px;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 6px 25px 6px 8px;
+                min-width: 80px;
+                border-radius: 6px;
+            }
+            
+            .language-selector::before,
+            .language-selector::after {
+                font-size: 10px;
+                left: 8px;
+                right: 8px;
+            }
+            
+            .logo {
+                font-size: 20px;
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 10px;
+                margin-right: 10px;
+            }
+            
+            .nav-links li a {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            
+            .language-selector {
+                margin-right: 8px;
+            }
+            
+            .language-selector select {
+                font-size: 11px;
+                padding: 5px 20px 5px 6px;
+                min-width: 70px;
+            }
+            
+            .logo {
+                font-size: 18px;
             }
             
             .form-row {
@@ -942,11 +1010,14 @@
             </nav>
             
             <div class="language-selector">
-                <select id="languageSelect">
-                    <option value="zh" selected>中文</option>
-                    <option value="en">English</option>
-                    <option value="ru">Русский</option>
-                    <option value="ar">العربية</option>
+                <select id="languageSelect" class="language-select">
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ru">🇷🇺 Русский</option>
                 </select>
             </div>
             
@@ -997,27 +1068,27 @@
                                 <label for="country" data-i18n="contact.form.country">国家 / Country <span class="required">*</span></label>
                                 <select id="country" class="form-control" required>
                                     <option value="" data-i18n="contact.form.select_country">请选择国家</option>
-                                    <option value="CN">中国</option>
-                                    <option value="US">美国</option>
-                                    <option value="GB">英国</option>
-                                    <option value="JP">日本</option>
-                                    <option value="KR">韩国</option>
-                                    <option value="DE">德国</option>
-                                    <option value="FR">法国</option>
-                                    <option value="IT">意大利</option>
-                                    <option value="ES">西班牙</option>
-                                    <option value="RU">俄罗斯</option>
-                                    <option value="BR">巴西</option>
-                                    <option value="IN">印度</option>
-                                    <option value="ZA">南非</option>
-                                    <option value="NG">尼日利亚</option>
-                                    <option value="KE">肯尼亚</option>
-                                    <option value="EG">埃及</option>
-                                    <option value="MX">墨西哥</option>
-                                    <option value="AR">阿根廷</option>
-                                    <option value="AU">澳大利亚</option>
-                                    <option value="CA">加拿大</option>
-                                    <option value="other">其他国家</option>
+                                    <option value="CN" data-i18n="contact.form.country_china">中国</option>
+                                    <option value="US" data-i18n="contact.form.country_usa">美国</option>
+                                    <option value="GB" data-i18n="contact.form.country_uk">英国</option>
+                                    <option value="JP" data-i18n="contact.form.country_japan">日本</option>
+                                    <option value="KR" data-i18n="contact.form.country_korea">韩国</option>
+                                    <option value="DE" data-i18n="contact.form.country_germany">德国</option>
+                                    <option value="FR" data-i18n="contact.form.country_france">法国</option>
+                                    <option value="IT" data-i18n="contact.form.country_italy">意大利</option>
+                                    <option value="ES" data-i18n="contact.form.country_spain">西班牙</option>
+                                    <option value="RU" data-i18n="contact.form.country_russia">俄罗斯</option>
+                                    <option value="BR" data-i18n="contact.form.country_brazil">巴西</option>
+                                    <option value="IN" data-i18n="contact.form.country_india">印度</option>
+                                    <option value="ZA" data-i18n="contact.form.country_south_africa">南非</option>
+                                    <option value="NG" data-i18n="contact.form.country_nigeria">尼日利亚</option>
+                                    <option value="KE" data-i18n="contact.form.country_kenya">肯尼亚</option>
+                                    <option value="EG" data-i18n="contact.form.country_egypt">埃及</option>
+                                    <option value="MX" data-i18n="contact.form.country_mexico">墨西哥</option>
+                                    <option value="AR" data-i18n="contact.form.country_argentina">阿根廷</option>
+                                    <option value="AU" data-i18n="contact.form.country_australia">澳大利亚</option>
+                                    <option value="CA" data-i18n="contact.form.country_canada">加拿大</option>
+                                    <option value="other" data-i18n="contact.form.country_other">其他国家</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1394,6 +1465,10 @@
         </div>
     </footer>
     
+    <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+    
     <script>
         // 移动菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1532,6 +1607,20 @@
                     });
                 }
             });
+        });
+        
+        // 多语言功能初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化I18nManager
+            const i18nManager = new I18nManager();
+            
+            // 绑定语言选择器事件
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    i18nManager.changeLanguage(this.value);
+                });
+            }
         });
     </script>
 </body>

@@ -19,6 +19,136 @@ const languages = {
         products: {
             page: {
                 title: '产品服务 | LottoBridge'
+            },
+            download: {
+                title: 'Скачать полный отчет',
+                description: 'Получите подробный аналитический отчет о египетском лотерейном рынке, включая инвестиционные рекомендации и оценку бизнес-возможностей',
+                form: {
+                    email: 'Адрес электронной почты',
+                    company: 'Название компании',
+                    country: 'Страна/Регион',
+                    country_placeholder: 'Пожалуйста, выберите',
+                    china: 'Китай',
+                    usa: 'Соединенные Штаты',
+                    subscribe_label: 'Подписаться на отраслевые обновления',
+                    submit_button: 'Скачать сейчас'
+                }
+            },
+            recent_updates: {
+                title: 'Последние обновления',
+                uzbekistan: {
+                    title: 'Отчет о лотерейном рынке Узбекистана',
+                    update_time: 'Обновлено: декабрь 2024',
+                    tag1: 'Развивающийся рынок',
+                    tag2: 'Частный вход',
+                    tag3: 'Высокий потенциал роста'
+                },
+                cambodia: {
+                    title: 'Отчет о лотерейном рынке Камбоджи',
+                    update_time: 'Обновлено: январь 2025',
+                    tag1: 'Государственное сотрудничество',
+                    tag2: 'POS терминал',
+                    tag3: 'Централизованный выпуск'
+                },
+                nigeria: {
+                    title: 'Отчет о лотерейном рынке Нигерии',
+                    update_time: 'Обновлено: ноябрь 2024',
+                    tag1: 'Большое население',
+                    tag2: 'Низкое проникновение',
+                    tag3: 'Регулятивная серая зона'
+                }
+            },
+            testimonials: {
+                title: 'Отзывы клиентов',
+                testimonial_text: 'Отчет о рынке LottoBridge предоставил ценные инсайты для нашего входа на египетский рынок, помогая нам разработать успешную стратегию локализации.',
+                testimonial_author: 'Джеймс Чжан',
+                testimonial_title: 'Директор по международному бизнесу'
+            },
+            cta: {
+                title: 'Готовы войти на египетский лотерейный рынок?',
+                description: 'Свяжитесь с нашей командой экспертов для получения индивидуальных стратегий входа на рынок и решений',
+                contact: 'Связаться с экспертом',
+                demo: 'Забронировать демо'
+            },
+            hero: {
+                title: '全球彩票一站式解决方案',
+                description: '整合中国彩票产业链核心资源，提供从市场调研、系统开发、终端设备到运营支持的全流程服务',
+                btn_view_services: '查看服务方案',
+                btn_contact_consultant: '联系销售顾问'
+            },
+            services: {
+                title: '我们的核心产品与服务',
+                description: 'LottoBridge 提供的不只是产品清单，而是从"调研、设计、系统、设备、培训、出口、合作"一站式可落地的彩票解决方案组合',
+                lottery_system: {
+                    title: '彩票系统服务',
+                    description: '完整的彩票销售、开奖、结算系统解决方案，支持多种彩票玩法，满足不同国家监管要求',
+                    feature1: '支持多语言、多玩法、多销售终端接入',
+                    feature2: '提供 SaaS 云服务与本地私有部署双方案',
+                    feature3: '支持对接监管平台、财政系统、大数据分析后台',
+                    feature4: '包含销售管理、开奖管理、防伪追溯、CRM客户管理等模块'
+                },
+                terminal_equipment: {
+                    title: '彩票终端设备服务',
+                    description: '提供 POS 销售终端、自助售票机、出票打印机、扫码枪等全品类设备，满足各种销售场景需求',
+                    feature1: '支持 Android / Linux / Windows 系统',
+                    feature2: '终端支持外观定制、多语言、本地支付方式集成',
+                    feature3: '满足多国工业认证（如 CE、FCC、RoHS）',
+                    feature4: '提供设备维护、远程诊断、配件更换等售后服务'
+                },
+                game_design: {
+                    title: '彩票游戏设计与开发',
+                    description: '提供乐透型、即开型、数字型、竞猜型等多种玩法设计，满足不同市场偏好和监管要求',
+                    feature1: '一体化服务：玩法创意 → 数学模型 → 奖级结构 → 合规验证',
+                    feature2: '支持票面设计、多语种内容、本地文化适配',
+                    feature3: '内嵌防伪安全码、中奖控制参数、安全性机制',
+                    feature4: '提供游戏测试、市场预测、玩家行为分析'
+                },
+                printing: {
+                    title: '彩票票券印刷与热敏纸服务',
+                    description: '高质量的即开票印刷和安全热敏纸供应，满足不同市场的防伪和安全要求',
+                    feature1: '即开票印刷服务：支持高防伪设计、防伪油墨、喷码、激光打孔等',
+                    feature2: '提供定制热敏纸耗材，适配 LottoBridge 或第三方终端',
+                    feature3: '支持批量安全印制、国际包装与发运',
+                    feature4: '印刷合规支持：序列控制、防伪审核、工厂认证'
+                },
+                consulting: {
+                    title: '市场调研与咨询服务',
+                    description: '专业团队提供从市场准入分析到商业落地的全流程咨询服务',
+                    feature1: 'AI驱动的132+国家市场报告一键生成',
+                    feature2: '包含法律环境、市场规模、主流玩法等核心数据',
+                    feature3: '提供商业模型搭建与财务预测服务',
+                    feature4: '合作模式与法律合规建议'
+                },
+                training: {
+                    title: '运营培训服务',
+                    description: '针对彩票运营各阶段提供系统化培训，确保团队快速上手',
+                    feature1: '系统操作培训（销售终端、后台管理）',
+                    feature2: '销售流程与终端维护培训',
+                    feature3: '代理管理与返点政策设计',
+                    feature4: '数据分析与客户服务培训'
+                }
+            },
+            cases: {
+                title: '成功案例',
+                description: '全球客户如何通过 LottoBridge 的解决方案实现业务增长',
+                mexico: {
+                    title: '墨西哥私营彩票运营商系统升级',
+                    description: '为墨西哥领先彩票运营商提供全套销售系统升级和2000台终端设备，支持其业务扩展至全国5000个销售点。'
+                },
+                south_africa: {
+                    title: '南非国家彩票即开票供应',
+                    description: '为南非国家彩票局提供1.2亿张定制即开票，包含12种本地文化主题设计，6个月内完成交付。'
+                },
+                vietnam: {
+                    title: '越南彩票数字化改造项目',
+                    description: '协助越南彩票公司完成数字化改造，部署云彩票系统并培训300名技术人员，实现销售额提升40%。'
+                }
+            },
+            cta: {
+                title: '准备好升级您的彩票业务了吗？',
+                description: '无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案',
+                btn_contact: '立即咨询',
+                btn_download: '下载服务手册'
             }
         },
         // 案例研究页面
@@ -194,6 +324,58 @@ const languages = {
             page: {
                 title: '市场调研 | LottoBridge'
             },
+            download: {
+                title: '获取完整PDF报告',
+                description: '注册后即可下载完整报告 + 每月更新的全球动态，完全免费！',
+                form: {
+                    email: '电子邮箱',
+                    company: '公司名称',
+                    country: '国家/地区',
+                    country_placeholder: '请选择',
+                    china: '中国',
+                    usa: '美国',
+                    subscribe: '订阅LottoBridge市场情报月报',
+                    submit: '立即获取'
+                }
+            },
+            recent_updates: {
+                title: '最新更新',
+                uzbekistan: {
+                    title: '乌兹别克斯坦彩票市场报告',
+                    update_time: '更新时间: 2024.12',
+                    tag1: '新兴市场',
+                    tag2: '私营准入',
+                    tag3: '高增长潜力'
+                },
+                cambodia: {
+                    title: '柬埔寨数字彩票发展报告',
+                    update_time: '更新时间: 2025.01',
+                    tag1: '政府合作',
+                    tag2: 'POS终端',
+                    tag3: '集中式发行'
+                },
+                nigeria: {
+                    title: '尼日利亚彩票政策更新',
+                    update_time: '更新时间: 2024.11',
+                    tag1: '高人口',
+                    tag2: '低渗透',
+                    tag3: '监管灰区'
+                }
+            },
+            testimonials: {
+                title: '客户评价',
+                testimonial1: {
+                    text: '我们通过 LottoBridge 获得了拉丁美洲5个国家的彩票调研报告，并最终锁定墨西哥作为落地首选。报告中的政策分析和市场规模预测非常准确，为我们节省了大量前期调研时间。',
+                    author_name: '张伟',
+                    author_title: '东南亚彩票技术服务商CEO'
+                }
+            },
+            cta: {
+                title: '未找到您需要的市场情报？',
+                description: '我们的专家团队可为您提供定制化市场调研服务',
+                btn_custom_research: '提交定制调研申请',
+                btn_contact_support: '联系客服咨询'
+            },
             hero: {
                 title: 'Unlock Global Lottery Opportunities with AI-powered Market Research',
                 subtitle: '快速掌握全球彩票市场的政策、规模与机会点',
@@ -277,7 +459,48 @@ const languages = {
                         timeline_1960: '1960年：埃及首次引入国家彩票系统',
                         timeline_2018: '2018年：修订《彩票与博彩法》，允许私营运营商参与',
                         timeline_2021: '2021年：推出数字彩票试点项目'
+                    },
+                    regulations: {
+                        regulations_info: '埃及彩票受《彩票与博彩法》(2018年修订版)监管，由财政部彩票监管局负责执行。所有彩票运营商必须获得政府许可证，并遵守严格的财务报告要求。',
+                        policy_framework: '当前政策框架'
+                    },
+                    market_size: {
+                        historical_sales: '历史销售数据显示，埃及彩票市场在过去5年保持稳定增长，年均增长率约12%。2023年总销售额达到4.3亿美元，其中乐透型彩票占65%，即开票占25%，数字型彩票占10%。',
+                        growth_potential: '增长潜力评分',
+                        growth_potential_rating: '增长潜力：★★★★☆'
                     }
+                },
+                download: {
+                    title: '下载完整报告',
+                    description: '获取埃及彩票市场的详细分析报告，包含投资建议和商业机会评估',
+                    form: {
+                        email: '邮箱地址',
+                        company: '公司名称',
+                        country: '国家/地区',
+                        country_placeholder: '请选择',
+                        china: '中国',
+                        usa: '美国',
+                        subscribe_label: '订阅行业动态邮件',
+                        submit_button: '立即下载'
+                    }
+                },
+                recent_updates: {
+                    title: '最新更新',
+                    uzbekistan_report: '乌兹别克斯坦彩票市场分析',
+                    cambodia_report: '柬埔寨数字彩票发展报告',
+                    nigeria_report: '尼日利亚彩票政策更新'
+                },
+                testimonials: {
+                    title: '客户评价',
+                    testimonial_text: 'LottoBridge的市场报告为我们进入埃及市场提供了宝贵的洞察，帮助我们制定了成功的本地化策略。',
+                    testimonial_author: '张明',
+                    testimonial_title: '国际业务总监'
+                },
+                cta: {
+                    title: '准备进入埃及彩票市场？',
+                    description: '联系我们的专家团队，获取定制化的市场进入策略和解决方案',
+                    contact: '联系专家',
+                    demo: '预约演示'
                 }
             }
         },
@@ -394,6 +617,82 @@ const languages = {
                 button: '立即订阅',
                 privacy_notice: '订阅即表示您同意我们的',
                 privacy_policy: '隐私政策'
+            },
+            game_innovation: {
+                title: '全球彩票玩法创新报告',
+                subtitle: '分析最新玩法趋势与用户体验优化方案',
+                item1: {
+                    title: '即开票与NFT结合实践',
+                    description: '阿联酋试点"数字收藏版"即开票，中奖票可兑换NFT艺术品，年轻玩家占比提升至58%。',
+                    tag1: 'NFT',
+                    tag2: '年轻化'
+                },
+                item2: {
+                    title: '微型赛事竞猜模式崛起',
+                    description: '巴西推出"90秒赛事"即时竞猜，单日投注量突破200万笔，平均投注额下降但频次提升3倍。',
+                    tag1: '微竞猜',
+                    tag2: '即时开奖'
+                },
+                item3: {
+                    title: '团体合买功能设计指南',
+                    description: '分析印尼"Group Play"功能：组团合买转化率提升27%，但需注意奖金分配合规性设计。',
+                    tag1: '社交功能',
+                    tag2: '合买'
+                },
+                read_more: '阅读全文'
+            },
+            case_compare: {
+                title: '拉美三国彩票改革比较',
+                subtitle: '智利、秘鲁、阿根廷三国不同改革路径的深度分析',
+                table: {
+                    country: '国家',
+                    policy_path: '政策路径',
+                    success_factors: '成功要素',
+                    risk_lessons: '风险教训'
+                },
+                chile: {
+                    country: '🇨🇱 智利',
+                    policy: '公开招标私营承包',
+                    success: '独立发行系统+渠道合作',
+                    risk: '缺乏印刷合规监管'
+                },
+                peru: {
+                    country: '🇵🇪 秘鲁',
+                    policy: '合资运营与跨国集团合作',
+                    success: '提前设立合规标准',
+                    risk: '玩家欺诈风险高'
+                },
+                argentina: {
+                    country: '🇦🇷 阿根廷',
+                    policy: '地区独立运营模式',
+                    success: '地方票种灵活多样',
+                    risk: '市场过度碎片化'
+                },
+                summary: {
+                    title: '关键发现总结',
+                    description: '通过对拉美三国彩票改革路径的比较分析，我们发现：',
+                    point1: '私营化模式(智利)初期见效快，但长期监管挑战大',
+                    point2: '合资模式(秘鲁)能快速引入国际经验，但需防范技术依赖',
+                    point3: '地方自治模式(阿根廷)激发创新活力，但难以形成规模效应'
+                },
+                download_report: '下载完整比较报告(PDF)'
+            },
+            whitepapers: {
+                title: '专业白皮书下载',
+                subtitle: 'LottoBridge发布的全球调研系列深度报告',
+                report1: {
+                    title: '非洲彩票政策与市场布局2025',
+                    description: '覆盖12国政策要点、玩法结构、机会地图与风险预警'
+                },
+                report2: {
+                    title: '即开票玩法设计与票面创新指南',
+                    description: '包含7种票面设计模板、3种安全方案与5个新兴市场案例'
+                },
+                report3: {
+                    title: '全球终端设备发展趋势报告',
+                    description: '分析56款主流终端的技术规格、兼容性与安全性测试结果'
+                },
+                download_btn: '下载报告'
             }
         },
         // 关于我们页面
@@ -559,6 +858,15 @@ const languages = {
                 phone_placeholder: '请输入您的联系电话',
                 country: '国家/地区',
                 country_placeholder: '请选择您的国家或地区',
+                // 国家名称翻译
+                country_china: '中国',
+                country_usa: '美国',
+                country_uk: '英国',
+                country_japan: '日本',
+                country_korea: '韩国',
+                country_russia: '俄罗斯',
+                country_brazil: '巴西',
+                country_india: '印度',
                 needs: '您的需求 *',
                 need_report: '生成市场报告',
                 need_system: '彩票系统',
@@ -822,6 +1130,82 @@ const languages = {
                 button: 'Подписаться сейчас',
                 privacy_notice: 'Подписываясь, вы соглашаетесь с нашей',
                 privacy_policy: 'Политикой конфиденциальности'
+            },
+            game_innovation: {
+                title: 'Игровые инновации',
+                subtitle: 'Исследование последних инноваций в лотерейных играх и тенденций дизайна',
+                article1: {
+                    title: 'Блокчейн-лотерея: будущее прозрачных игр',
+                    description: 'Технология блокчейн привносит беспрецедентную прозрачность и доверие в лотерейные игры, умные контракты обеспечивают честный процесс розыгрыша',
+                    tag1: 'Блокчейн',
+                    tag2: 'Инновации',
+                    tag3: 'Прозрачность'
+                },
+                article2: {
+                    title: 'Персонализированный лотерейный опыт на основе ИИ',
+                    description: 'Искусственный интеллект анализирует предпочтения игроков для предоставления персонализированных рекомендаций игр и оптимизированного пользовательского опыта',
+                    tag1: 'Искусственный интеллект',
+                    tag2: 'Персонализация',
+                    tag3: 'Пользовательский опыт'
+                },
+                article3: {
+                    title: 'Кроссплатформенная интеграция: конвергенция мобильных и социальных игр',
+                    description: 'Современные лотерейные игры интегрируют социальные элементы, позволяя игрокам делиться опытом и участвовать в групповых активностях на разных платформах',
+                    tag1: 'Кроссплатформенность',
+                    tag2: 'Социальные игры',
+                    tag3: 'Мобильная интеграция'
+                },
+                read_more: 'Читать далее'
+            },
+            case_compare: {
+                title: 'Сравнение кейсов',
+                subtitle: 'Сравнительный анализ моделей развития лотерейного рынка в разных странах',
+                table: {
+                    country: 'Страна',
+                    policy_model: 'Модель политики',
+                    success_factors: 'Факторы успеха',
+                    risk_lessons: 'Уроки рисков'
+                },
+                chile: {
+                    policy_model: 'Государственная монополия с партнерством частных операторов',
+                    success_factors: 'Строгое регулирование, прозрачные операции, ориентация на социальное благосостояние',
+                    risk_lessons: 'Чрезмерная зависимость от традиционных каналов, медленная цифровая трансформация'
+                },
+                peru: {
+                    policy_model: 'Смешанная модель, позволяющая частным операторам под государственным надзором',
+                    success_factors: 'Гибкий доступ к рынку, разнообразные типы игр, активное продвижение',
+                    risk_lessons: 'Пробелы в регулировании, недостаточные меры защиты потребителей'
+                },
+                argentina: {
+                    policy_model: 'Провинциальная автономия с федеральной координацией',
+                    success_factors: 'Локализованные операции, сильная региональная адаптация',
+                    risk_lessons: 'Фрагментированный рынок, несогласованные стандарты между провинциями'
+                },
+                summary: {
+                    title: 'Резюме ключевых выводов',
+                    description: 'Через сравнительный анализ различных рыночных моделей мы выявляем три ключевых фактора успеха:',
+                    finding1: 'Четкая регулятивная база и прозрачные операции являются основой успеха рынка',
+                    finding2: 'Баланс между государственным надзором и рыночной гибкостью способствует здоровой конкуренции',
+                    finding3: 'Цифровая трансформация и инновации критически важны для долгосрочного устойчивого развития'
+                },
+                download_report: 'Скачать полный отчет'
+            },
+            whitepapers: {
+                title: 'Отраслевые белые книги',
+                subtitle: 'Углубленные исследовательские отчеты и анализ индустрии',
+                report1: {
+                    title: 'Отчет о цифровой трансформации глобальной лотереи 2024',
+                    description: 'Комплексный анализ тенденций, вызовов и возможностей цифровой трансформации в глобальной лотерейной индустрии'
+                },
+                report2: {
+                    title: 'Руководство по инвестициям в лотерею на развивающихся рынках',
+                    description: 'Детальный анализ возможностей, рисков и инвестиционных стратегий лотерейного рынка в развивающихся экономиках'
+                },
+                report3: {
+                    title: 'Применение ИИ и блокчейна в лотерейной индустрии',
+                    description: 'Исследование того, как искусственный интеллект и технология блокчейн преобразуют будущее лотерейных операций'
+                },
+                download_btn: 'Скачать отчет'
             }
         },
         // Кейсы
@@ -1153,6 +1537,82 @@ const languages = {
                 button: 'Subscribe Now',
                 privacy_notice: 'By subscribing, you agree to our',
                 privacy_policy: 'Privacy Policy'
+            },
+            game_innovation: {
+                title: 'Game Innovation',
+                subtitle: 'Exploring the latest lottery game innovations and design trends',
+                article1: {
+                    title: 'Blockchain Lottery: The Future of Transparent Gaming',
+                    description: 'Blockchain technology brings unprecedented transparency and trust to lottery games, with smart contracts ensuring fair drawing processes',
+                    tag1: 'Blockchain',
+                    tag2: 'Innovation',
+                    tag3: 'Transparency'
+                },
+                article2: {
+                    title: 'AI-Driven Personalized Lottery Experience',
+                    description: 'Artificial intelligence analyzes player preferences to provide personalized game recommendations and optimized user experience',
+                    tag1: 'Artificial Intelligence',
+                    tag2: 'Personalization',
+                    tag3: 'User Experience'
+                },
+                article3: {
+                    title: 'Cross-Platform Integration: Mobile and Social Gaming Convergence',
+                    description: 'Modern lottery games integrate social elements, enabling players to share experiences and participate in group activities across platforms',
+                    tag1: 'Cross-Platform',
+                    tag2: 'Social Gaming',
+                    tag3: 'Mobile Integration'
+                },
+                read_more: 'Read More'
+            },
+            case_compare: {
+                title: 'Case Comparison',
+                subtitle: 'Comparative analysis of lottery market development models in different countries',
+                table: {
+                    country: 'Country',
+                    policy_model: 'Policy Model',
+                    success_factors: 'Success Factors',
+                    risk_lessons: 'Risk Lessons'
+                },
+                chile: {
+                    policy_model: 'Government monopoly with private operator partnerships',
+                    success_factors: 'Strict regulation, transparent operations, social welfare orientation',
+                    risk_lessons: 'Over-reliance on traditional channels, slow digital transformation'
+                },
+                peru: {
+                    policy_model: 'Mixed model allowing private operators under government oversight',
+                    success_factors: 'Flexible market access, diverse game types, active promotion',
+                    risk_lessons: 'Regulatory gaps, insufficient consumer protection measures'
+                },
+                argentina: {
+                    policy_model: 'Provincial autonomy with federal coordination',
+                    success_factors: 'Localized operations, strong regional adaptation',
+                    risk_lessons: 'Fragmented market, inconsistent standards across provinces'
+                },
+                summary: {
+                    title: 'Key Findings Summary',
+                    description: 'Through comparative analysis of different market models, we identify three key success factors:',
+                    finding1: 'Clear regulatory framework and transparent operations are fundamental to market success',
+                    finding2: 'Balancing government oversight with market flexibility promotes healthy competition',
+                    finding3: 'Digital transformation and innovation are crucial for long-term sustainable development'
+                },
+                download_report: 'Download Full Report'
+            },
+            whitepapers: {
+                title: 'Industry Whitepapers',
+                subtitle: 'In-depth research reports and industry analysis',
+                report1: {
+                    title: '2024 Global Lottery Digital Transformation Report',
+                    description: 'Comprehensive analysis of digital transformation trends, challenges, and opportunities in the global lottery industry'
+                },
+                report2: {
+                    title: 'Emerging Markets Lottery Investment Guide',
+                    description: 'Detailed analysis of lottery market opportunities, risks, and investment strategies in emerging economies'
+                },
+                report3: {
+                    title: 'AI and Blockchain Applications in Lottery Industry',
+                    description: 'Exploring how artificial intelligence and blockchain technology are reshaping the future of lottery operations'
+                },
+                download_btn: 'Download Report'
             }
         },
         // Products Page
@@ -1332,7 +1792,66 @@ const languages = {
                         timeline_1960: '1960: Egypt first introduced the national lottery system',
                         timeline_2018: '2018: Revised "Lottery and Gaming Law", allowing private operators to participate',
                         timeline_2021: '2021: Launched digital lottery pilot project'
+                    },
+                    regulations: {
+                        regulations_info: 'Egypt lottery is regulated by the "Lottery and Gaming Law" (2018 revised edition), enforced by the Ministry of Finance Lottery Regulatory Authority. All lottery operators must obtain government licenses and comply with strict financial reporting requirements.',
+                        policy_framework: 'Current Policy Framework'
+                    },
+                    market_size: {
+                        historical_sales: 'Historical sales data shows that Egypt\'s lottery market has maintained steady growth over the past 5 years, with an average annual growth rate of about 12%. Total sales in 2023 reached $430 million, with lotto games accounting for 65%, instant tickets 25%, and digital games 10%.',
+                        growth_potential: 'Growth Potential Rating',
+                        growth_potential_rating: 'Growth Potential: ★★★★☆'
                     }
+                },
+                download: {
+                    title: 'Download Complete Report',
+                    description: 'Get detailed analysis report of Egypt lottery market, including investment recommendations and business opportunity assessment',
+                    form: {
+                        email: 'Email Address',
+                        company: 'Company Name',
+                        country: 'Country/Region',
+                        country_placeholder: 'Please Select',
+                        china: 'China',
+                        usa: 'United States',
+                        subscribe_label: 'Subscribe to industry updates',
+                        submit_button: 'Download Now'
+                    }
+                },
+                recent_updates: {
+                    title: 'Recent Updates',
+                    uzbekistan: {
+                        title: 'Uzbekistan Lottery Market Report',
+                        update_time: 'Updated: Dec 2024',
+                        tag1: 'Emerging Market',
+                        tag2: 'Private Access',
+                        tag3: 'High Growth Potential'
+                    },
+                    cambodia: {
+                        title: 'Cambodia Lottery Market Report',
+                        update_time: 'Updated: Jan 2025',
+                        tag1: 'Government Partnership',
+                        tag2: 'POS Terminals',
+                        tag3: 'Centralized Distribution'
+                    },
+                    nigeria: {
+                        title: 'Nigeria Lottery Market Report',
+                        update_time: 'Updated: Nov 2024',
+                        tag1: 'High Population',
+                        tag2: 'Low Penetration',
+                        tag3: 'Regulatory Gray Area'
+                    }
+                },
+                testimonials: {
+                    title: 'Customer Reviews',
+                    testimonial_text: 'LottoBridge\'s market report provided valuable insights for our entry into the Egyptian market, helping us develop a successful localization strategy.',
+                    testimonial_author: 'James Zhang',
+                    testimonial_title: 'International Business Director'
+                },
+                cta: {
+                    title: 'Ready to Enter the Egyptian Lottery Market?',
+                    description: 'Contact our expert team for customized market entry strategies and solutions',
+                    contact: 'Contact Expert',
+                    demo: 'Book Demo'
                 }
             }
         },
@@ -1359,6 +1878,15 @@ const languages = {
                 email: 'Email Address *',
                 phone: 'Phone / WhatsApp',
                 country: 'Country/Region',
+                // Country names translations
+                country_china: 'China',
+                country_usa: 'United States',
+                country_uk: 'United Kingdom',
+                country_japan: 'Japan',
+                country_korea: 'South Korea',
+                country_russia: 'Russia',
+                country_brazil: 'Brazil',
+                country_india: 'India',
                 needs: 'Your Needs *',
                 need_report: 'Generate Market Report',
                 need_system: 'Lottery System',
@@ -1519,6 +2047,143 @@ const languages = {
             copyright: 'All rights reserved.',
             privacy_policy: 'Privacy Policy',
             terms_of_service: 'Terms of Service'
+        },
+        // About Us Page
+        about: {
+            page: {
+                title: 'About Us | LottoBridge'
+            },
+            hero: {
+                title: 'About LottoBridge',
+                description: 'A professional platform connecting global lottery markets, providing one-stop solutions for government agencies and private operators',
+                learn_team: 'Meet Our Team',
+                contact_us: 'Contact Us'
+            },
+            who_we_are: {
+                title: 'Who We Are',
+                subtitle: 'Global Lottery One-Stop Solution Platform',
+                paragraph1: 'Founded in 2023, LottoBridge is a comprehensive service platform focused on the global lottery market. Leveraging China\'s robust lottery industry chain resources, we integrate core capabilities including system software, terminal hardware, ticket printing, and thermal consumables to provide complete solutions from market research to business implementation for global clients.',
+                paragraph2: 'As a bridge connecting China\'s lottery industry chain with global markets, we are not just a B2B platform, but a packaged lottery business implementation system. We help clients go from "is there an opportunity" to "how to implement" in one step, significantly reducing the risks and costs of entering new markets.'
+            },
+            vision: {
+                title: 'Our Vision',
+                subtitle: 'To become the most trusted partner in the global lottery industry',
+                paragraph1: 'In today\'s globalized world, the lottery industry is facing unprecedented development opportunities. Governments increasingly recognize the role of lotteries as fundraising tools for public welfare, while technological advances have brought new possibilities to the lottery industry.',
+                paragraph2: 'However, entering a new lottery market is not easy. From understanding policies and regulations, to choosing technical solutions, to establishing supply chains, every step is full of challenges. This is exactly why LottoBridge exists.',
+                challenges: {
+                    title: 'Core challenges we help clients solve:',
+                    challenge1: 'High market entry barriers and complex policies and regulations',
+                    challenge2: 'Difficult technical solution selection and scattered suppliers',
+                    challenge3: 'Insufficient localization operation experience',
+                    challenge4: 'High investment risks and uncertain return cycles'
+                }
+            },
+            values: {
+                title: 'Core Values',
+                subtitle: 'Basic principles guiding our actions',
+                professionalism: {
+                    title: 'Professionalism',
+                    description: 'Deep expertise in the lottery industry, providing the most professional technical solutions and market insights'
+                },
+                internationalization: {
+                    title: 'Internationalization',
+                    description: 'Global perspective with localized services, understanding the unique needs of different markets'
+                },
+                transparency: {
+                    title: 'Transparency',
+                    description: 'Open and transparent cooperation methods, ensuring clients clearly understand every step'
+                },
+                cooperation: {
+                    title: 'Win-Win Cooperation',
+                    description: 'Building long-term partnerships with clients, growing together and sharing success'
+                }
+            },
+            team: {
+                title: 'Our Team',
+                subtitle: 'Lottery industry experts from around the world',
+                members: {
+                    zhang_wei: {
+                        name: 'Zhang Wei',
+                        position: 'Founder & CEO',
+                        description: '15 years of lottery industry experience, participated in multiple national lottery system construction projects, with deep understanding of global lottery market policies and technology trends.',
+                        languages: 'Chinese, English, Russian'
+                    },
+                    maria_gonzalez: {
+                        name: 'Maria Gonzalez',
+                        position: 'Latin America Market Director',
+                        description: 'Senior expert in Latin American lottery industry with rich government relations and market development experience, fluent in Spanish and Portuguese markets.',
+                        languages: 'Spanish, Portuguese, English'
+                    },
+                    li_ming: {
+                        name: 'Li Ming',
+                        position: 'Chief Technology Officer',
+                        description: 'Senior software architect focused on lottery system development for over 10 years, led the design of multiple large-scale lottery platforms with deep expertise in system security and performance optimization.',
+                        languages: 'Chinese, English'
+                    },
+                    sarah_johnson: {
+                        name: 'Sarah Johnson',
+                        position: 'Africa Market Director',
+                        description: 'African market development expert with rich project implementation experience in Kenya, Nigeria and other regions, with deep understanding of lottery policy environments across African countries.',
+                        languages: 'English, French, Swahili'
+                    },
+                    wang_qiang: {
+                        name: 'Wang Qiang',
+                        position: 'Supply Chain Director',
+                        description: '20 years of manufacturing and supply chain management experience, responsible for integrating high-quality Chinese lottery equipment manufacturer resources, ensuring product quality and delivery efficiency.',
+                        languages: 'Chinese, English'
+                    },
+                    chen_jing: {
+                        name: 'Chen Jing',
+                        position: 'Compliance & Legal Director',
+                        description: 'International trade and lottery industry legal expert, proficient in lottery regulations and international trade rules of various countries, providing professional compliance guidance for clients.',
+                        languages: 'Chinese, English, French'
+                    }
+                }
+            },
+            partners: {
+                title: 'Partners',
+                subtitle: 'Establishing strategic partnerships with industry-leading companies'
+            },
+            credentials: {
+                title: 'Qualifications & Certifications',
+                subtitle: 'Professional qualifications ensuring service quality',
+                iso: {
+                    title: 'ISO 9001 Quality Management System Certification',
+                    description: 'Certified by International Organization for Standardization Quality Management System'
+                },
+                export: {
+                    title: 'Printed Products Export Qualification',
+                    description: 'Complete qualification chain for lottery printed products export'
+                },
+                software: {
+                    title: 'Lottery Industry Software Copyright',
+                    description: '2 core system software copyrights registered'
+                },
+                experience: {
+                    title: 'Multi-country Project Implementation Experience',
+                    description: 'Projects successfully implemented in Nigeria, Cambodia, Uzbekistan and other locations'
+                },
+                exhibitions: {
+                    title: 'Exhibition & Alliance Participation',
+                    description: 'Participated in industry events including Dubai Gaming Expo, Kenya GBC, Southeast Asia Digital Expo'
+                }
+            },
+            commitment: {
+                title: 'We Believe',
+                subtitle: 'Technology, compliance, and trust are the three pillars driving sustainable development of global lottery business',
+                paragraph1: 'LottoBridge is committed to becoming a trusted "core connection platform" for global clients. We not only provide products and services, but are dedicated to building long-term partnerships, helping clients succeed in the rapidly changing global lottery market.',
+                promise_title: 'Our Commitment:',
+                promise1: 'Always maintain forward-looking insights into industry trends',
+                promise2: 'Adhere to the highest standards of compliance and security requirements',
+                promise3: 'Continuously optimize global supply chain and localization service capabilities',
+                promise4: 'Grow together with clients and share success'
+            },
+            cta: {
+                title: 'Ready to Explore Global Markets with Us?',
+                description: 'Whether you are a government agency, private operator, or technology provider, LottoBridge can provide the most suitable solutions for you',
+                contact_now: 'Contact Now',
+                view_cases: 'View Success Stories'
+            }
         }
     },
     fr: {
@@ -1828,6 +2493,58 @@ const languages = {
                         timeline_2021: '2021: Lancement du projet pilote de loterie numérique'
                     }
                 }
+            },
+            download: {
+                title: 'Télécharger le Rapport PDF Complet',
+                description: 'Inscrivez-vous pour télécharger le rapport complet + mises à jour mondiales mensuelles, entièrement gratuit !',
+                form: {
+                    email: 'Adresse E-mail',
+                    company: 'Nom de l\'Entreprise',
+                    country: 'Pays',
+                    country_placeholder: 'Veuillez Sélectionner',
+                    china: 'Chine',
+                    usa: 'États-Unis',
+                    subscribe: 'S\'abonner au rapport mensuel d\'intelligence de marché LottoBridge',
+                    submit: 'Obtenir Maintenant'
+                }
+            },
+            recent_updates: {
+                title: 'Rapports Récemment Mis à Jour',
+                uzbekistan: {
+                    title: 'Rapport du Marché de Loterie d\'Ouzbékistan',
+                    update_time: 'Mis à jour : Déc 2024',
+                    tag1: 'Marché Émergent',
+                    tag2: 'Accès Privé',
+                    tag3: 'Potentiel de Croissance Élevé'
+                },
+                cambodia: {
+                    title: 'Rapport du Marché de Loterie du Cambodge',
+                    update_time: 'Mis à jour : Jan 2025',
+                    tag1: 'Partenariat Gouvernemental',
+                    tag2: 'Terminaux POS',
+                    tag3: 'Distribution Centralisée'
+                },
+                nigeria: {
+                    title: 'Rapport du Marché de Loterie du Nigeria',
+                    update_time: 'Mis à jour : Nov 2024',
+                    tag1: 'Population Élevée',
+                    tag2: 'Faible Pénétration',
+                    tag3: 'Zone Grise Réglementaire'
+                }
+            },
+            testimonials: {
+                title: 'Évaluations Clients',
+                testimonial1: {
+                    text: 'Nous avons obtenu des rapports de recherche de loterie pour 5 pays d\'Amérique latine via LottoBridge, et avons finalement choisi le Mexique comme premier choix d\'implémentation. L\'analyse des politiques et les prévisions de taille de marché dans le rapport étaient très précises, nous faisant économiser beaucoup de temps de recherche préliminaire.',
+                    author_name: 'Zhang Wei',
+                    author_title: 'PDG, Fournisseur de Services Technologiques de Loterie d\'Asie du Sud-Est'
+                }
+            },
+            cta: {
+                title: 'Vous n\'avez pas trouvé l\'intelligence de marché dont vous avez besoin ?',
+                description: 'Notre équipe d\'experts peut vous fournir des services de recherche de marché personnalisés',
+                btn_custom_research: 'Soumettre une Demande de Recherche Personnalisée',
+                btn_contact_support: 'Contacter le Service Client'
             }
         },
         hero: {
@@ -1918,11 +2635,173 @@ const languages = {
             },
             contact: {
                 title: 'Nous Contacter',
-                address: 'Avenue du Siècle 1000, Nouvelle Zone de Pudong, Shanghai, Chine'
+                address: 'Avenue du Siècle 1000, Nouvelle Zone de Pudong, Shanghai, Chine',
+                form: {
+                    company_name: 'Nom de l\'Entreprise',
+                    contact_person: 'Personne de Contact',
+                    position: 'Poste',
+                    email: 'Adresse E-mail',
+                    phone: 'Numéro de Téléphone',
+                    country: 'Pays/Région',
+                    needs: 'Besoins Commerciaux',
+                    message: 'Message',
+                    upload: 'Télécharger des Fichiers',
+                    language_preference: 'Préférence Linguistique',
+                    privacy: 'J\'accepte la',
+                    privacy_policy: 'Politique de Confidentialité',
+                    submit: 'Soumettre',
+                    schedule: 'Planifier une Consultation',
+                    countries: {
+                        china: 'Chine',
+                        usa: 'États-Unis',
+                        uk: 'Royaume-Uni',
+                        japan: 'Japon',
+                        korea: 'Corée du Sud',
+                        russia: 'Russie',
+                        brazil: 'Brésil',
+                        india: 'Inde'
+                    }
+                }
             },
             copyright: 'Tous droits réservés.',
             privacy_policy: 'Politique de Confidentialité',
             terms_of_service: 'Conditions de Service'
+        },
+        about: {
+            page: {
+                title: 'À Propos de Nous | LottoBridge'
+            },
+            hero: {
+                title: 'À Propos de LottoBridge',
+                description: 'Une plateforme professionnelle connectant les marchés mondiaux de la loterie, fournissant des solutions tout-en-un pour les agences gouvernementales et les opérateurs privés',
+                learn_team: 'Rencontrer Notre Équipe',
+                contact_us: 'Nous Contacter'
+            },
+            who_we_are: {
+                title: 'Qui Nous Sommes',
+                subtitle: 'Plateforme de Solutions Complètes de Loterie Mondiale',
+                paragraph1: 'Fondée en 2023, LottoBridge est une plateforme de services complets axée sur le marché mondial de la loterie. En tirant parti des ressources robustes de la chaîne industrielle de la loterie chinoise, nous intégrons les capacités principales incluant les logiciels système, le matériel terminal, l\'impression de billets et les consommables thermiques pour fournir des solutions complètes de la recherche de marché à l\'implémentation commerciale pour les clients mondiaux.',
+                paragraph2: 'En tant que pont reliant la chaîne industrielle de la loterie chinoise aux marchés mondiaux, nous ne sommes pas seulement une plateforme B2B, mais un système d\'implémentation commerciale de loterie packagé. Nous aidons les clients à passer de "y a-t-il une opportunité" à "comment implémenter" en une étape, réduisant significativement les risques et coûts d\'entrée sur de nouveaux marchés.'
+            },
+            vision: {
+                title: 'Notre Vision',
+                subtitle: 'Devenir le partenaire le plus fiable de l\'industrie mondiale de la loterie',
+                paragraph1: 'Dans le monde globalisé d\'aujourd\'hui, l\'industrie de la loterie fait face à des opportunités de développement sans précédent. Les gouvernements reconnaissent de plus en plus le rôle des loteries comme outils de collecte de fonds pour le bien-être public, tandis que les avancées technologiques ont apporté de nouvelles possibilités à l\'industrie de la loterie.',
+                paragraph2: 'Cependant, entrer sur un nouveau marché de loterie n\'est pas facile. De la compréhension des politiques et réglementations, au choix de solutions techniques, à l\'établissement de chaînes d\'approvisionnement, chaque étape est pleine de défis. C\'est exactement pourquoi LottoBridge existe.',
+                challenges: {
+                    title: 'Défis principaux que nous aidons les clients à résoudre :',
+                    challenge1: 'Barrières d\'entrée de marché élevées et politiques et réglementations complexes',
+                    challenge2: 'Sélection difficile de solutions techniques et fournisseurs dispersés',
+                    challenge3: 'Expérience d\'opération de localisation insuffisante',
+                    challenge4: 'Risques d\'investissement élevés et cycles de retour incertains'
+                }
+            },
+            values: {
+                title: 'Valeurs Fondamentales',
+                subtitle: 'Principes de base guidant nos actions',
+                professionalism: {
+                    title: 'Professionnalisme',
+                    description: 'Expertise approfondie dans l\'industrie de la loterie, fournissant les solutions techniques et perspectives de marché les plus professionnelles'
+                },
+                internationalization: {
+                    title: 'Internationalisation',
+                    description: 'Perspective mondiale avec services localisés, comprenant les besoins uniques de différents marchés'
+                },
+                transparency: {
+                    title: 'Transparence',
+                    description: 'Méthodes de coopération ouvertes et transparentes, assurant que les clients comprennent clairement chaque étape'
+                },
+                cooperation: {
+                    title: 'Coopération Gagnant-Gagnant',
+                    description: 'Construire des partenariats à long terme avec les clients, grandir ensemble et partager le succès'
+                }
+            },
+            team: {
+                title: 'Notre Équipe',
+                subtitle: 'Experts de l\'industrie de la loterie du monde entier',
+                members: {
+                    zhang_wei: {
+                        name: 'Zhang Wei',
+                        position: 'Fondateur et PDG',
+                        description: '15 ans d\'expérience dans l\'industrie de la loterie, a participé à plusieurs projets de construction de systèmes de loterie nationaux, avec une compréhension approfondie des politiques et tendances technologiques du marché mondial de la loterie.',
+                        languages: 'Chinois, Anglais, Russe'
+                    },
+                    maria_gonzalez: {
+                        name: 'Maria Gonzalez',
+                        position: 'Directrice du Marché Amérique Latine',
+                        description: 'Experte senior de l\'industrie de la loterie latino-américaine avec une riche expérience en relations gouvernementales et développement de marché, maîtrisant les marchés espagnol et portugais.',
+                        languages: 'Espagnol, Portugais, Anglais'
+                    },
+                    li_ming: {
+                        name: 'Li Ming',
+                        position: 'Directeur Technique Principal',
+                        description: 'Architecte logiciel senior axé sur le développement de systèmes de loterie depuis plus de 10 ans, a dirigé la conception de plusieurs plateformes de loterie à grande échelle avec une expertise approfondie en sécurité système et optimisation des performances.',
+                        languages: 'Chinois, Anglais'
+                    },
+                    sarah_johnson: {
+                        name: 'Sarah Johnson',
+                        position: 'Directrice du Marché Africain',
+                        description: 'Experte en développement de marché africain avec une riche expérience d\'implémentation de projets au Kenya, Nigeria et autres régions, avec une compréhension approfondie des environnements politiques de loterie à travers les pays africains.',
+                        languages: 'Anglais, Français, Swahili'
+                    },
+                    wang_qiang: {
+                        name: 'Wang Qiang',
+                        position: 'Directeur de la Chaîne d\'Approvisionnement',
+                        description: '20 ans d\'expérience en fabrication et gestion de chaîne d\'approvisionnement, responsable de l\'intégration des ressources de fabricants d\'équipements de loterie chinois de haute qualité, assurant la qualité des produits et l\'efficacité de livraison.',
+                        languages: 'Chinois, Anglais'
+                    },
+                    chen_jing: {
+                        name: 'Chen Jing',
+                        position: 'Directrice Conformité et Juridique',
+                        description: 'Experte en commerce international et droit de l\'industrie de la loterie, maîtrisant les réglementations de loterie et règles de commerce international de divers pays, fournissant des conseils de conformité professionnels pour les clients.',
+                        languages: 'Chinois, Anglais, Français'
+                    }
+                }
+            },
+            partners: {
+                title: 'Partenaires',
+                subtitle: 'Établir des partenariats stratégiques avec des entreprises leaders de l\'industrie'
+            },
+            credentials: {
+                title: 'Qualifications et Certifications',
+                subtitle: 'Qualifications professionnelles assurant la qualité du service',
+                iso: {
+                    title: 'Certification Système de Gestion de la Qualité ISO 9001',
+                    description: 'Certifié par le Système de Gestion de la Qualité de l\'Organisation Internationale de Normalisation'
+                },
+                export: {
+                    title: 'Qualification d\'Exportation de Produits Imprimés',
+                    description: 'Chaîne de qualification complète pour l\'exportation de produits imprimés de loterie'
+                },
+                software: {
+                    title: 'Droits d\'Auteur Logiciel Industrie Loterie',
+                    description: '2 droits d\'auteur de logiciels système principaux enregistrés'
+                },
+                experience: {
+                    title: 'Expérience d\'Implémentation de Projets Multi-pays',
+                    description: 'Projets implémentés avec succès au Nigeria, Cambodge, Ouzbékistan et autres lieux'
+                },
+                exhibitions: {
+                    title: 'Participation à Expositions et Alliances',
+                    description: 'Participé à des événements industriels incluant Dubai Gaming Expo, Kenya GBC, Southeast Asia Digital Expo'
+                }
+            },
+            commitment: {
+                title: 'Nous Croyons',
+                subtitle: 'La technologie, la conformité et la confiance sont les trois piliers conduisant le développement durable des affaires de loterie mondiale',
+                paragraph1: 'LottoBridge s\'engage à devenir une "plateforme de connexion centrale" de confiance pour les clients mondiaux. Nous ne fournissons pas seulement des produits et services, mais nous nous consacrons à construire des partenariats à long terme, aidant les clients à réussir dans le marché mondial de la loterie en évolution rapide.',
+                promise_title: 'Notre Engagement :',
+                promise1: 'Maintenir toujours des perspectives avant-gardistes sur les tendances de l\'industrie',
+                promise2: 'Adhérer aux plus hauts standards de conformité et exigences de sécurité',
+                promise3: 'Optimiser continuellement la chaîne d\'approvisionnement mondiale et les capacités de service de localisation',
+                promise4: 'Grandir ensemble avec les clients et partager le succès'
+            },
+            cta: {
+                title: 'Prêt à Explorer les Marchés Mondiaux avec Nous ?',
+                description: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie, LottoBridge peut fournir les solutions les plus appropriées pour vous',
+                contact_now: 'Contacter Maintenant',
+                view_cases: 'Voir les Histoires de Succès'
+            }
         }
     },
     es: {
@@ -2054,6 +2933,95 @@ const languages = {
                 privacy_policy: 'Política de Privacidad'
             }
         },
+        // Página de Productos
+        products: {
+            page: {
+                title: 'Productos y Servicios | LottoBridge'
+            },
+            hero: {
+                title: 'Soluciones Globales de Lotería Todo-en-Uno',
+                description: 'Integrando los recursos de la cadena industrial central de lotería de China, proporcionando servicios de proceso completo desde investigación de mercado, desarrollo de sistemas, equipos terminales hasta soporte operacional',
+                btn_view_services: 'Ver Soluciones de Servicio',
+                btn_contact_consultant: 'Contactar Consultor de Ventas'
+            },
+            services: {
+                title: 'Nuestros Productos y Servicios Principales',
+                description: 'LottoBridge proporciona no solo una lista de productos, sino un paquete de soluciones de lotería implementables todo-en-uno de "investigación, diseño, sistemas, equipos, entrenamiento, exportación, cooperación"',
+                lottery_system: {
+                    title: 'Servicios de Sistema de Lotería',
+                    description: 'Soluciones completas de sistema de venta, sorteo y liquidación de lotería, soportando varios juegos de lotería y cumpliendo con los requisitos regulatorios de diferentes países',
+                    feature1: 'Soporte multi-idioma, multi-juego, acceso multi-terminal',
+                    feature2: 'Proporcionar servicios cloud SaaS y soluciones de despliegue privado local',
+                    feature3: 'Soporte integración con plataformas regulatorias, sistemas financieros y backends de análisis de big data',
+                    feature4: 'Incluir gestión de ventas, gestión de sorteos, trazabilidad anti-falsificación, módulos de gestión CRM de clientes'
+                },
+                terminal_equipment: {
+                    title: 'Servicios de Equipos Terminales de Lotería',
+                    description: 'Proporcionar varios equipos terminales de venta de lotería, incluyendo terminales de autoservicio, terminales portátiles, máquinas POS, etc., cumpliendo con los requisitos de diferentes escenarios de venta',
+                    feature1: 'Terminales de venta de lotería de autoservicio (soportando operación de pantalla táctil, múltiples métodos de pago)',
+                    feature2: 'Terminales de venta de lotería portátiles (adecuados para ventas móviles, pequeños puntos de venta)',
+                    feature3: 'Máquinas POS especializadas en lotería (funciones integradas de impresión, escaneo, pago)',
+                    feature4: 'Monitoreo remoto de equipos, diagnóstico de fallas, servicios de actualización de software'
+                },
+                game_design: {
+                    title: 'Diseño y Desarrollo de Juegos de Lotería',
+                    description: 'Basado en la rica experiencia del mercado de lotería chino, personalizar productos de juegos de lotería que cumplan con las regulaciones y cultura locales para clientes extranjeros',
+                    feature1: 'Diseño de juegos de categoría completa incluyendo digital, loto, apuestas deportivas, juegos instantáneos',
+                    feature2: 'Localización de reglas de juego, optimización de estructura de premios, diseño de probabilidad de ganar',
+                    feature3: 'Diseño UI/UX de juego, producción de material multimedia',
+                    feature4: 'Verificación de modelo matemático de juego, soporte de auditoría de terceros'
+                },
+                printing: {
+                    title: 'Servicios de Impresión de Boletos de Lotería y Papel Térmico',
+                    description: 'Proporcionar servicios de impresión de boletos de lotería de alta calidad, incluyendo boletos de lotería instantáneos, boletos de papel térmico, etc., asegurando seguridad anti-falsificación y calidad de impresión',
+                    feature1: 'Impresión de boletos de lotería instantáneos (raspaditas, desprendibles, etc.)',
+                    feature2: 'Impresión de boletos de lotería de papel térmico (adecuados para impresión de boletos de equipos terminales)',
+                    feature3: 'Aplicación de tecnología anti-falsificación (marcas de agua, hilos de seguridad, tintas especiales, etc.)',
+                    feature4: 'Inspección de calidad de impresión, entrega de empaque, servicios de gestión de inventario'
+                },
+                consulting: {
+                    title: 'Servicios de Investigación de Mercado y Consultoría',
+                    description: 'Equipo profesional proporciona servicios de consultoría de proceso completo desde análisis de entrada al mercado hasta implementación comercial',
+                    feature1: 'Generación con un clic de informes de mercado de 132+ países impulsada por IA',
+                    feature2: 'Incluyendo datos centrales sobre entorno legal, tamaño de mercado, juegos principales',
+                    feature3: 'Proporcionar construcción de modelo de negocio y servicios de pronóstico financiero',
+                    feature4: 'Modelo de cooperación y recomendaciones de cumplimiento legal'
+                },
+                training: {
+                    title: 'Servicios de Entrenamiento Operacional',
+                    description: 'Proporcionar entrenamiento sistemático para varias etapas de operaciones de lotería, asegurando que los equipos se pongan en marcha rápidamente',
+                    feature1: 'Entrenamiento de operación de sistema (terminales de venta, gestión backend)',
+                    feature2: 'Entrenamiento de proceso de ventas y mantenimiento de terminales',
+                    feature3: 'Gestión de agentes y diseño de política de comisiones',
+                    feature4: 'Entrenamiento de análisis de datos y servicio al cliente'
+                }
+            },
+            cases: {
+                title: 'Historias de Éxito Globales',
+                description: 'Nuestras soluciones han sido implementadas exitosamente en múltiples países y regiones, trayendo innovación y crecimiento a los mercados de lotería locales',
+                mexico: {
+                    title: 'Proyecto de Sistema de Lotería de México',
+                    description: 'Proporcionó sistema de lotería digital completo para la Lotería Nacional de México, soportando múltiples tipos de juegos con ventas anuales superiores a $1 mil millones',
+                    stat1: 'Ventas Anuales (USD)',
+                    stat2: 'Puntos de Venta'
+                },
+                south_africa: {
+                    title: 'Suministro de Boletos Instantáneos Lotería Nacional de Sudáfrica',
+                    description: 'Proporcionó 120 millones de boletos instantáneos personalizados para la Lotería Nacional de Sudáfrica, incluyendo 12 diseños temáticos culturales locales, entregados en 6 meses'
+                },
+                vietnam: {
+                    title: 'Proyecto de Transformación Digital Lotería de Vietnam',
+                    description: 'Asistió a la Compañía de Lotería de Vietnam en completar la transformación digital, desplegando sistema de lotería en la nube y entrenando 300 personal técnico, logrando 40% de aumento en ventas'
+                }
+            },
+            cta: {
+                title: '¿Listo para Comenzar Tu Negocio de Lotería?',
+                description: 'Contacta a nuestro equipo experto para obtener soluciones personalizadas y cotizaciones detalladas',
+                btn_contact: 'Contactar Ahora',
+                btn_market_report: 'Ver Informes de Mercado',
+                btn_download: 'Descargar Manual de Servicios'
+            }
+        },
         // Página de Investigación de Mercado
         market_research: {
             page: {
@@ -2144,6 +3112,58 @@ const languages = {
                         timeline_2021: '2021: Lanzamiento del proyecto piloto de lotería digital'
                     }
                 }
+            },
+            download: {
+                title: 'Obtener Informe PDF Completo',
+                description: '¡Regístrate para descargar el informe completo + actualizaciones mensuales globales, completamente gratis!',
+                form: {
+                    email: 'Correo Electrónico',
+                    company: 'Nombre de la Empresa',
+                    country: 'País',
+                    country_placeholder: 'Por favor selecciona',
+                    china: 'China',
+                    usa: 'Estados Unidos',
+                    subscribe: 'Suscribirse al Boletín Mensual de Inteligencia de Mercado de LottoBridge',
+                    submit: 'Obtener Ahora'
+                }
+            },
+            recent_updates: {
+                title: 'Informes Actualizados Recientemente',
+                uzbekistan: {
+                    title: 'Informe del Mercado de Lotería de Uzbekistán',
+                    update_time: 'Actualizado: Dic 2024',
+                    tag1: 'Mercado Emergente',
+                    tag2: 'Acceso Privado',
+                    tag3: 'Alto Potencial de Crecimiento'
+                },
+                cambodia: {
+                    title: 'Informe del Mercado de Lotería de Camboya',
+                    update_time: 'Actualizado: Ene 2025',
+                    tag1: 'Cooperación Gubernamental',
+                    tag2: 'Terminal POS',
+                    tag3: 'Emisión Centralizada'
+                },
+                nigeria: {
+                    title: 'Informe del Mercado de Lotería de Nigeria',
+                    update_time: 'Actualizado: Nov 2024',
+                    tag1: 'Alta Población',
+                    tag2: 'Baja Penetración',
+                    tag3: 'Zona Gris Regulatoria'
+                }
+            },
+            testimonials: {
+                title: 'Testimonios de Clientes',
+                testimonial1: {
+                    text: 'Obtuvimos informes de investigación de lotería de 5 países latinoamericanos a través de LottoBridge, y finalmente elegimos México como nuestra primera opción. El análisis de políticas y las predicciones de tamaño de mercado en el informe fueron muy precisos, ahorrándonos mucho tiempo de investigación preliminar.',
+                    author_name: 'Zhang Wei',
+                    author_title: 'CEO de Proveedor de Servicios Técnicos de Lotería del Sudeste Asiático'
+                }
+            },
+            cta: {
+                title: '¿No encontraste la inteligencia de mercado que necesitas?',
+                description: 'Nuestro equipo de expertos puede proporcionarte servicios de investigación de mercado personalizados',
+                btn_custom_research: 'Enviar Solicitud de Investigación Personalizada',
+                btn_contact_support: 'Contactar Atención al Cliente'
             }
         },
         hero: {
@@ -2234,11 +3254,151 @@ const languages = {
             },
             contact: {
                 title: 'Contáctanos',
-                address: 'Avenida del Siglo 1000, Nueva Área de Pudong, Shanghái, China'
+                address: 'Avenida del Siglo 1000, Nueva Área de Pudong, Shanghái, China',
+                form: {
+                    company_name: 'Nombre de la Empresa',
+                    contact_person: 'Persona de Contacto',
+                    position: 'Cargo',
+                    email: 'Dirección de Correo Electrónico',
+                    phone: 'Número de Teléfono',
+                    country: 'País/Región',
+                    needs: 'Necesidades Comerciales',
+                    message: 'Mensaje',
+                    upload: 'Subir Archivos',
+                    language_preference: 'Preferencia de Idioma',
+                    privacy: 'Acepto la',
+                    privacy_policy: 'Política de Privacidad',
+                    submit: 'Enviar',
+                    schedule: 'Programar Consulta',
+                    countries: {
+                        china: 'China',
+                        usa: 'Estados Unidos',
+                        uk: 'Reino Unido',
+                        japan: 'Japón',
+                        korea: 'Corea del Sur',
+                        russia: 'Rusia',
+                        brazil: 'Brasil',
+                        india: 'India'
+                    }
+                }
             },
             copyright: 'Todos los derechos reservados.',
             privacy_policy: 'Política de Privacidad',
             terms_of_service: 'Términos de Servicio'
+        },
+        // Página Acerca de
+        about: {
+            page: {
+                title: 'Acerca de Nosotros | LottoBridge'
+            },
+            hero: {
+                title: 'Conectando el Mundo con Soluciones de Lotería de China',
+                subtitle: 'Su Socio de Confianza para el Éxito Global de Loterías',
+                description: 'LottoBridge es la plataforma líder que conecta la experiencia en loterías de China con oportunidades globales, proporcionando soluciones integrales desde investigación de mercado hasta implementación operativa.'
+            },
+            who_we_are: {
+                title: '¿Quiénes Somos?',
+                description: 'LottoBridge es una plataforma innovadora que aprovecha la vasta experiencia y recursos de la industria de loterías de China para servir a mercados globales. Como puente entre la experiencia china en loterías y las oportunidades internacionales, nos especializamos en proporcionar soluciones integrales que abarcan toda la cadena de valor de las loterías.',
+                highlight: 'Desde 2020, hemos facilitado con éxito más de 50 proyectos de loterías en 25 países, generando más de $2 mil millones en ventas acumuladas.'
+            },
+            vision: {
+                title: 'Nuestra Visión',
+                main: 'Ser la plataforma global líder que democratiza el acceso a soluciones de lotería de clase mundial, permitiendo que cualquier país o región establezca y opere sistemas de lotería exitosos.',
+                challenges: {
+                    title: 'Desafíos que Resolvemos',
+                    challenge1: {
+                        title: 'Barreras de Entrada Altas',
+                        description: 'Los sistemas de lotería tradicionales requieren inversiones masivas y experiencia técnica que muchos mercados emergentes no poseen.'
+                    },
+                    challenge2: {
+                        title: 'Complejidad Regulatoria',
+                        description: 'Navegar por diferentes marcos legales y requisitos de cumplimiento en múltiples jurisdicciones.'
+                    },
+                    challenge3: {
+                        title: 'Brecha de Conocimiento',
+                        description: 'Falta de experiencia operativa y mejores prácticas en mercados que son nuevos en las loterías modernas.'
+                    }
+                }
+            },
+            values: {
+                title: 'Nuestros Valores Fundamentales',
+                innovation: {
+                    title: 'Innovación',
+                    description: 'Aprovechamos continuamente la tecnología más avanzada y las mejores prácticas de la industria de loterías de China para crear soluciones de vanguardia.'
+                },
+                integrity: {
+                    title: 'Integridad',
+                    description: 'Mantenemos los más altos estándares de transparencia, equidad y cumplimiento ético en todas nuestras operaciones.'
+                },
+                partnership: {
+                    title: 'Asociación',
+                    description: 'Creemos en construir relaciones a largo plazo basadas en confianza mutua, respeto y éxito compartido.'
+                },
+                excellence: {
+                    title: 'Excelencia',
+                    description: 'Nos comprometemos a entregar calidad superior en cada proyecto, desde la concepción inicial hasta la implementación completa.'
+                }
+            },
+            team: {
+                title: 'Nuestro Equipo de Expertos',
+                description: 'Nuestro equipo diverso combina décadas de experiencia en la industria de loterías con experiencia en tecnología, regulación y operaciones globales.',
+                ceo: {
+                    name: 'Dr. Li Wei',
+                    position: 'CEO y Fundador',
+                    description: 'Ex-director de China Welfare Lottery con más de 20 años de experiencia en la industria. Pionero en la modernización de sistemas de lotería en Asia.',
+                    expertise: 'Estrategia de Lotería, Desarrollo de Mercado'
+                },
+                cto: {
+                    name: 'Zhang Ming',
+                    position: 'Director de Tecnología',
+                    description: 'Arquitecto de sistemas líder con experiencia en el desarrollo de plataformas de lotería a gran escala que manejan millones de transacciones diarias.',
+                    expertise: 'Arquitectura de Sistemas, Blockchain, IA'
+                },
+                legal: {
+                    name: 'Sarah Johnson',
+                    position: 'Directora Legal',
+                    description: 'Abogada internacional especializada en regulación de juegos y cumplimiento con experiencia en más de 30 jurisdicciones.',
+                    expertise: 'Cumplimiento Regulatorio, Derecho Internacional'
+                },
+                operations: {
+                    name: 'Carlos Rodriguez',
+                    position: 'Director de Operaciones',
+                    description: 'Veterano de la industria con experiencia práctica en el lanzamiento y gestión de operaciones de lotería en mercados emergentes.',
+                    expertise: 'Gestión Operativa, Capacitación, Soporte'
+                }
+            },
+            partners: {
+                title: 'Nuestros Socios Estratégicos',
+                description: 'Colaboramos con organizaciones líderes en toda la cadena de valor de las loterías para ofrecer soluciones integrales.',
+                tech_partners: 'Socios Tecnológicos',
+                regulatory_partners: 'Asesores Regulatorios',
+                operational_partners: 'Socios Operativos'
+            },
+            credentials: {
+                title: 'Nuestras Calificaciones',
+                certifications: 'Certificaciones',
+                cert1: 'Certificación ISO 27001 para Gestión de Seguridad de la Información',
+                cert2: 'Certificación GLI (Gaming Laboratories International)',
+                cert3: 'Cumplimiento SOC 2 Tipo II',
+                awards: 'Premios y Reconocimientos',
+                award1: 'Premio a la Innovación en Lotería Global 2023',
+                award2: 'Mejor Proveedor de Soluciones Tecnológicas - Asia Gaming Awards 2022',
+                award3: 'Premio a la Excelencia en Exportación - Cámara de Comercio de China 2021'
+            },
+            commitment: {
+                title: 'Nuestro Compromiso',
+                description: 'Estamos dedicados a promover el crecimiento responsable de la industria de loterías a nivel mundial, asegurando que nuestras soluciones no solo generen ingresos sino que también contribuyan al desarrollo social y económico de las comunidades que servimos.',
+                responsibility: 'Juego Responsable',
+                sustainability: 'Prácticas Sostenibles',
+                community: 'Impacto Comunitario'
+            },
+            cta: {
+                title: '¿Listo para Transformar Su Mercado de Loterías?',
+                description: 'Únase a los líderes globales que han elegido LottoBridge como su socio de confianza para el éxito en loterías.',
+                btn_contact: 'Contáctanos Hoy',
+                btn_schedule: 'Programar Consulta',
+                btn_download: 'Descargar Brochure de la Empresa'
+            }
         }
     },
     ko: {
@@ -2254,6 +3414,95 @@ const languages = {
             case_studies: '사례 연구',
             about: '회사 소개',
             contact: '문의하기'
+        },
+        // 제품 페이지
+        products: {
+            page: {
+                title: '제품 및 서비스 | LottoBridge'
+            },
+            hero: {
+                title: '글로벌 복권 원스톱 솔루션',
+                description: '중국의 핵심 복권 산업 체인 자원을 통합하여 시장 조사, 시스템 개발, 터미널 장비부터 운영 지원까지 전 과정 서비스 제공',
+                btn_view_services: '서비스 솔루션 보기',
+                btn_contact_consultant: '영업 컨설턴트 연락'
+            },
+            services: {
+                title: '핵심 제품 및 서비스',
+                description: 'LottoBridge는 단순한 제품 목록이 아닌 "연구, 설계, 시스템, 장비, 교육, 수출, 협력"의 원스톱 구현 가능한 복권 솔루션 패키지를 제공합니다',
+                lottery_system: {
+                    title: '복권 시스템 서비스',
+                    description: '다양한 복권 게임을 지원하고 각국의 규제 요구사항을 충족하는 완전한 복권 판매, 추첨, 정산 시스템 솔루션',
+                    feature1: '다국어, 다게임, 다터미널 접근 지원',
+                    feature2: 'SaaS 클라우드 서비스 및 로컬 프라이빗 배포 솔루션 제공',
+                    feature3: '규제 플랫폼, 금융 시스템, 빅데이터 분석 백엔드와의 통합 지원',
+                    feature4: '판매 관리, 추첨 관리, 위조 방지 추적, CRM 고객 관리 모듈 포함'
+                },
+                terminal_equipment: {
+                    title: '복권 터미널 장비 서비스',
+                    description: '셀프서비스 터미널, 휴대용 터미널, POS 머신 등 다양한 복권 판매 터미널 장비를 제공하여 다양한 판매 시나리오 요구사항 충족',
+                    feature1: '셀프서비스 복권 판매 터미널 (터치스크린 조작, 다중 결제 방식 지원)',
+                    feature2: '휴대용 복권 판매 터미널 (모바일 판매, 소규모 매장에 적합)',
+                    feature3: '복권 전용 POS 머신 (인쇄, 스캔, 결제 기능 통합)',
+                    feature4: '장비 원격 모니터링, 고장 진단, 소프트웨어 업그레이드 서비스'
+                },
+                game_design: {
+                    title: '복권 게임 설계 및 개발',
+                    description: '풍부한 중국 복권 시장 경험을 바탕으로 해외 고객을 위해 현지 규제 및 문화에 맞는 복권 게임 제품 맞춤 제작',
+                    feature1: '숫자형, 로또, 스포츠 베팅, 즉석 게임을 포함한 전 카테고리 게임 설계',
+                    feature2: '게임 규칙 현지화, 상금 구조 최적화, 당첨 확률 설계',
+                    feature3: '게임 UI/UX 설계, 멀티미디어 자료 제작',
+                    feature4: '게임 수학적 모델 검증, 제3자 감사 지원'
+                },
+                printing: {
+                    title: '복권 티켓 인쇄 및 열전사 용지 서비스',
+                    description: '즉석 복권 티켓, 열전사 용지 티켓 등 고품질 복권 티켓 인쇄 서비스를 제공하여 위조 방지 보안 및 인쇄 품질 보장',
+                    feature1: '즉석 복권 티켓 인쇄 (스크래치, 찢기 등)',
+                    feature2: '열전사 용지 복권 티켓 인쇄 (터미널 장비 티켓 인쇄에 적합)',
+                    feature3: '위조 방지 기술 적용 (워터마크, 보안 실, 특수 잉크 등)',
+                    feature4: '인쇄 품질 검사, 포장 배송, 재고 관리 서비스'
+                },
+                consulting: {
+                    title: '시장 조사 및 컨설팅 서비스',
+                    description: '전문 팀이 시장 진입 분석부터 비즈니스 구현까지 전 과정 컨설팅 서비스 제공',
+                    feature1: 'AI 기반 132개 이상 국가 시장 보고서 원클릭 생성',
+                    feature2: '법적 환경, 시장 규모, 주요 게임에 대한 핵심 데이터 포함',
+                    feature3: '비즈니스 모델 구축 및 재무 예측 서비스 제공',
+                    feature4: '협력 모델 및 법적 준수 권장사항'
+                },
+                training: {
+                    title: '운영 교육 서비스',
+                    description: '복권 운영의 다양한 단계에 대한 체계적인 교육을 제공하여 팀이 빠르게 운영할 수 있도록 보장',
+                    feature1: '시스템 운영 교육 (판매 터미널, 백엔드 관리)',
+                    feature2: '판매 프로세스 및 터미널 유지보수 교육',
+                    feature3: '에이전트 관리 및 수수료 정책 설계',
+                    feature4: '데이터 분석 및 고객 서비스 교육'
+                }
+            },
+            cases: {
+                title: '글로벌 성공 사례',
+                description: '우리의 솔루션은 여러 국가와 지역에서 성공적으로 구현되어 현지 복권 시장에 혁신과 성장을 가져왔습니다',
+                mexico: {
+                    title: '멕시코 복권 시스템 프로젝트',
+                    description: '멕시코 국가 복권을 위한 완전한 디지털 복권 시스템을 제공하여 여러 게임 유형을 지원하며 연간 매출이 10억 달러를 초과',
+                    stat1: '연간 매출 (USD)',
+                    stat2: '판매점'
+                },
+                south_africa: {
+                    title: '남아프리카 국가 복권 즉석 티켓 공급',
+                    description: '남아프리카 국가 복권을 위해 1억 2천만 장의 맞춤형 즉석 티켓을 제공하여 12개의 현지 문화 테마 디자인을 포함하여 6개월 내 배송 완료'
+                },
+                vietnam: {
+                    title: '베트남 복권 디지털 전환 프로젝트',
+                    description: '베트남 복권 회사의 디지털 전환 완료를 지원하여 클라우드 복권 시스템을 배포하고 300명의 기술 인력을 교육하여 40% 매출 증가 달성'
+                }
+            },
+            cta: {
+                title: '복권 비즈니스를 시작할 준비가 되셨나요?',
+                description: '전문가 팀에 연락하여 맞춤형 솔루션과 상세한 견적을 받아보세요',
+                btn_contact: '지금 연락',
+                btn_market_report: '시장 보고서 보기',
+                btn_download: '서비스 매뉴얼 다운로드'
+            }
         },
         // 시장 조사 페이지
         market_research: {
@@ -2345,6 +3594,58 @@ const languages = {
                         timeline_2021: '2021년: 디지털 복권 파일럿 프로젝트 시작'
                     }
                 }
+            },
+            download: {
+                title: 'PDF 전체 보고서 받기',
+                description: '등록하여 전체 보고서 + 월간 글로벌 업데이트를 완전 무료로 다운로드하세요!',
+                form: {
+                    email: '이메일',
+                    company: '회사명',
+                    country: '국가',
+                    country_placeholder: '선택해주세요',
+                    china: '중국',
+                    usa: '미국',
+                    subscribe: 'LottoBridge 월간 시장 인텔리전스 뉴스레터 구독',
+                    submit: '지금 받기'
+                }
+            },
+            recent_updates: {
+                title: '최근 업데이트된 보고서',
+                uzbekistan: {
+                    title: '우즈베키스탄 복권 시장 보고서',
+                    update_time: '업데이트: 2024년 12월',
+                    tag1: '신흥 시장',
+                    tag2: '민간 진입',
+                    tag3: '높은 성장 잠재력'
+                },
+                cambodia: {
+                    title: '캄보디아 복권 시장 보고서',
+                    update_time: '업데이트: 2025년 1월',
+                    tag1: '정부 협력',
+                    tag2: 'POS 터미널',
+                    tag3: '중앙 발행'
+                },
+                nigeria: {
+                    title: '나이지리아 복권 시장 보고서',
+                    update_time: '업데이트: 2024년 11월',
+                    tag1: '대규모 인구',
+                    tag2: '낮은 보급률',
+                    tag3: '규제 그레이 존'
+                }
+            },
+            testimonials: {
+                title: '고객 추천사',
+                testimonial1: {
+                    text: 'LottoBridge를 통해 라틴 아메리카 5개국의 복권 연구 보고서를 받았고, 최종적으로 멕시코를 첫 번째 선택으로 결정했습니다. 보고서의 정책 분석과 시장 규모 예측이 매우 정확하여 초기 연구 시간을 많이 절약할 수 있었습니다.',
+                    author_name: '장웨이',
+                    author_title: '동남아시아 복권 기술 서비스 제공업체 CEO'
+                }
+            },
+            cta: {
+                title: '필요한 시장 인텔리전스를 찾지 못하셨나요?',
+                description: '전문가 팀이 맞춤형 시장 조사 서비스를 제공할 수 있습니다',
+                btn_custom_research: '맞춤 연구 요청 제출',
+                btn_contact_support: '고객 서비스 문의'
             }
         },
         hero: {
@@ -2435,11 +3736,151 @@ const languages = {
             },
             contact: {
                 title: '문의하기',
-                address: '중국 상하이시 푸둥신구 센추리 애비뉴 1000번지'
+                address: '중국 상하이시 푸둥신구 센추리 애비뉴 1000번지',
+                form: {
+                    company_name: '회사명',
+                    contact_person: '담당자',
+                    position: '직책',
+                    email: '이메일 주소',
+                    phone: '전화번호',
+                    country: '국가/지역',
+                    needs: '비즈니스 요구사항',
+                    message: '메시지',
+                    upload: '파일 업로드',
+                    language_preference: '언어 선호도',
+                    privacy: '동의합니다',
+                    privacy_policy: '개인정보 보호정책',
+                    submit: '제출',
+                    schedule: '상담 예약',
+                    countries: {
+                        china: '중국',
+                        usa: '미국',
+                        uk: '영국',
+                        japan: '일본',
+                        korea: '한국',
+                        russia: '러시아',
+                        brazil: '브라질',
+                        india: '인도'
+                    }
+                }
             },
             copyright: '모든 권리 보유.',
             privacy_policy: '개인정보 보호정책',
             terms_of_service: '서비스 약관'
+        },
+        // 회사 소개 페이지
+        about: {
+            page: {
+                title: '회사 소개 | LottoBridge'
+            },
+            hero: {
+                title: '중국의 복권 솔루션으로 세계를 연결하다',
+                subtitle: '글로벌 복권 성공을 위한 신뢰할 수 있는 파트너',
+                description: 'LottoBridge는 중국의 복권 전문성과 글로벌 기회를 연결하는 선도적인 플랫폼으로, 시장 조사부터 운영 구현까지 포괄적인 솔루션을 제공합니다.'
+            },
+            who_we_are: {
+                title: '우리는 누구인가?',
+                description: 'LottoBridge는 중국 복권 산업의 방대한 경험과 자원을 활용하여 글로벌 시장에 서비스를 제공하는 혁신적인 플랫폼입니다. 중국의 복권 전문성과 국제적 기회 사이의 다리 역할을 하며, 복권 가치 사슬 전반에 걸친 포괄적인 솔루션 제공을 전문으로 합니다.',
+                highlight: '2020년부터 25개국에서 50개 이상의 복권 프로젝트를 성공적으로 촉진하여 누적 매출 20억 달러 이상을 달성했습니다.'
+            },
+            vision: {
+                title: '우리의 비전',
+                main: '세계적 수준의 복권 솔루션에 대한 접근을 민주화하여 모든 국가나 지역이 성공적인 복권 시스템을 구축하고 운영할 수 있도록 하는 글로벌 선도 플랫폼이 되는 것입니다.',
+                challenges: {
+                    title: '우리가 해결하는 과제들',
+                    challenge1: {
+                        title: '높은 진입 장벽',
+                        description: '전통적인 복권 시스템은 많은 신흥 시장이 보유하지 못한 대규모 투자와 기술적 전문성을 요구합니다.'
+                    },
+                    challenge2: {
+                        title: '규제 복잡성',
+                        description: '여러 관할권에서 다양한 법적 프레임워크와 규정 준수 요구사항을 탐색하는 것.'
+                    },
+                    challenge3: {
+                        title: '지식 격차',
+                        description: '현대 복권에 새로운 시장에서 운영 경험과 모범 사례의 부족.'
+                    }
+                }
+            },
+            values: {
+                title: '우리의 핵심 가치',
+                innovation: {
+                    title: '혁신',
+                    description: '중국 복권 산업의 최첨단 기술과 모범 사례를 지속적으로 활용하여 최첨단 솔루션을 만듭니다.'
+                },
+                integrity: {
+                    title: '성실성',
+                    description: '모든 운영에서 투명성, 공정성, 윤리적 준수의 최고 기준을 유지합니다.'
+                },
+                partnership: {
+                    title: '파트너십',
+                    description: '상호 신뢰, 존중, 공유된 성공을 바탕으로 한 장기적인 관계 구축을 믿습니다.'
+                },
+                excellence: {
+                    title: '우수성',
+                    description: '초기 개념부터 완전한 구현까지 모든 프로젝트에서 우수한 품질을 제공하는 데 전념합니다.'
+                }
+            },
+            team: {
+                title: '우리의 전문가 팀',
+                description: '우리의 다양한 팀은 수십 년간의 복권 산업 경험과 기술, 규제, 글로벌 운영 전문성을 결합합니다.',
+                ceo: {
+                    name: '리웨이 박사',
+                    position: 'CEO 겸 창립자',
+                    description: '20년 이상의 업계 경험을 가진 전 중국복지복권 이사. 아시아 복권 시스템 현대화의 선구자.',
+                    expertise: '복권 전략, 시장 개발'
+                },
+                cto: {
+                    name: '장밍',
+                    position: '최고기술책임자',
+                    description: '매일 수백만 건의 거래를 처리하는 대규모 복권 플랫폼 개발 경험을 가진 선도적인 시스템 설계자.',
+                    expertise: '시스템 아키텍처, 블록체인, AI'
+                },
+                legal: {
+                    name: '사라 존슨',
+                    position: '법무이사',
+                    description: '30개 이상의 관할권에서 경험을 가진 게임 규제 및 규정 준수 전문 국제 변호사.',
+                    expertise: '규제 준수, 국제법'
+                },
+                operations: {
+                    name: '카를로스 로드리게스',
+                    position: '운영이사',
+                    description: '신흥 시장에서 복권 운영 출시 및 관리에 대한 실무 경험을 가진 업계 베테랑.',
+                    expertise: '운영 관리, 교육, 지원'
+                }
+            },
+            partners: {
+                title: '우리의 전략적 파트너',
+                description: '복권 가치 사슬 전반에 걸친 선도적인 조직들과 협력하여 포괄적인 솔루션을 제공합니다.',
+                tech_partners: '기술 파트너',
+                regulatory_partners: '규제 고문',
+                operational_partners: '운영 파트너'
+            },
+            credentials: {
+                title: '우리의 자격',
+                certifications: '인증',
+                cert1: '정보보안 관리를 위한 ISO 27001 인증',
+                cert2: 'GLI (Gaming Laboratories International) 인증',
+                cert3: 'SOC 2 Type II 준수',
+                awards: '수상 및 인정',
+                award1: '2023 글로벌 복권 혁신상',
+                award2: '최우수 기술 솔루션 제공업체 - 2022 아시아 게이밍 어워드',
+                award3: '수출 우수상 - 2021 중국 상공회의소'
+            },
+            commitment: {
+                title: '우리의 약속',
+                description: '우리는 전 세계적으로 복권 산업의 책임감 있는 성장을 촉진하는 데 전념하며, 우리의 솔루션이 수익을 창출할 뿐만 아니라 우리가 서비스하는 지역사회의 사회적, 경제적 발전에도 기여하도록 보장합니다.',
+                responsibility: '책임감 있는 게임',
+                sustainability: '지속 가능한 관행',
+                community: '지역사회 영향'
+            },
+            cta: {
+                title: '복권 시장을 변화시킬 준비가 되셨나요?',
+                description: 'LottoBridge를 복권 성공을 위한 신뢰할 수 있는 파트너로 선택한 글로벌 리더들과 함께하세요.',
+                btn_contact: '오늘 연락하기',
+                btn_schedule: '상담 예약',
+                btn_download: '회사 브로셔 다운로드'
+            }
         }
     },
     ar: {
@@ -2455,6 +3896,95 @@ const languages = {
             case_studies: 'دراسات الحالة',
             about: 'من نحن',
             contact: 'اتصل بنا'
+        },
+        // صفحة المنتجات والخدمات
+        products: {
+            page: {
+                title: 'المنتجات والخدمات | LottoBridge'
+            },
+            hero: {
+                title: 'حلول اليانصيب الشاملة العالمية',
+                description: 'دمج موارد سلسلة صناعة اليانصيب الأساسية في الصين، وتوفير خدمات شاملة من أبحاث السوق وتطوير الأنظمة ومعدات المحطات الطرفية إلى دعم التشغيل',
+                btn_view_services: 'عرض حلول الخدمات',
+                btn_contact_consultant: 'اتصل بمستشار المبيعات'
+            },
+            services: {
+                title: 'المنتجات والخدمات الأساسية',
+                description: 'لا تقدم LottoBridge مجرد قائمة منتجات، بل حزمة حلول يانصيب شاملة قابلة للتنفيذ "البحث والتصميم والنظام والمعدات والتدريب والتصدير والتعاون"',
+                lottery_system: {
+                    title: 'خدمات نظام اليانصيب',
+                    description: 'حلول نظام يانصيب كاملة تدعم أنواع ألعاب يانصيب متنوعة وتلبي متطلبات التنظيم في مختلف البلدان للمبيعات والسحب والتسوية',
+                    feature1: 'دعم الوصول متعدد اللغات والألعاب والمحطات الطرفية',
+                    feature2: 'توفير حلول خدمة SaaS السحابية والنشر الخاص المحلي',
+                    feature3: 'دعم التكامل مع منصات التنظيم والأنظمة المالية وخلفية تحليل البيانات الضخمة',
+                    feature4: 'تشمل وحدات إدارة المبيعات وإدارة السحب وتتبع مكافحة التزوير وإدارة علاقات العملاء CRM'
+                },
+                terminal_equipment: {
+                    title: 'خدمات معدات محطة اليانصيب الطرفية',
+                    description: 'توفير معدات محطة مبيعات يانصيب متنوعة مثل المحطات الطرفية ذاتية الخدمة والمحطات الطرفية المحمولة وآلات POS لتلبية متطلبات سيناريوهات المبيعات المختلفة',
+                    feature1: 'محطة مبيعات يانصيب ذاتية الخدمة (تشغيل شاشة لمس، دعم طرق دفع متعددة)',
+                    feature2: 'محطة مبيعات يانصيب محمولة (مبيعات متنقلة، مناسبة للمتاجر الصغيرة)',
+                    feature3: 'آلة POS مخصصة لليانصيب (تكامل وظائف الطباعة والمسح والدفع)',
+                    feature4: 'خدمات مراقبة المعدات عن بُعد وتشخيص الأعطال وترقية البرامج'
+                },
+                game_design: {
+                    title: 'تصميم وتطوير ألعاب اليانصيب',
+                    description: 'بناءً على الخبرة الغنية في السوق الصيني لليانصيب، تخصيص منتجات ألعاب يانصيب للعملاء الخارجيين تتوافق مع اللوائح والثقافة المحلية',
+                    feature1: 'تصميم ألعاب شاملة تشمل الأرقام واليانصيب والمراهنات الرياضية والألعاب الفورية',
+                    feature2: 'توطين قواعد الألعاب وتحسين هيكل الجوائز وتصميم احتمالات الفوز',
+                    feature3: 'تصميم واجهة المستخدم/تجربة المستخدم للألعاب وإنتاج المواد متعددة الوسائط',
+                    feature4: 'التحقق من النماذج الرياضية للألعاب ودعم المراجعة من طرف ثالث'
+                },
+                printing: {
+                    title: 'خدمات طباعة تذاكر اليانصيب والورق الحراري',
+                    description: 'توفير خدمات طباعة تذاكر يانصيب عالية الجودة مثل تذاكر اليانصيب الفورية وتذاكر الورق الحراري، مع ضمان الأمان ضد التزوير وجودة الطباعة',
+                    feature1: 'طباعة تذاكر اليانصيب الفورية (خدش، تمزيق، إلخ)',
+                    feature2: 'طباعة تذاكر يانصيب الورق الحراري (مناسبة لطباعة تذاكر معدات المحطة الطرفية)',
+                    feature3: 'تطبيق تكنولوجيا مكافحة التزوير (علامة مائية، ختم أمان، حبر خاص، إلخ)',
+                    feature4: 'خدمات فحص جودة الطباعة والتعبئة والشحن وإدارة المخزون'
+                },
+                consulting: {
+                    title: 'خدمات أبحاث السوق والاستشارات',
+                    description: 'فريق محترف يقدم خدمات استشارية شاملة من تحليل دخول السوق إلى تنفيذ الأعمال',
+                    feature1: 'إنتاج تقارير السوق لأكثر من 132 دولة بنقرة واحدة بناءً على الذكاء الاصطناعي',
+                    feature2: 'تشمل البيانات الأساسية للبيئة القانونية وحجم السوق والألعاب الرئيسية',
+                    feature3: 'توفير خدمات بناء النماذج التجارية والتنبؤ المالي',
+                    feature4: 'نماذج التعاون وتوصيات الامتثال القانوني'
+                },
+                training: {
+                    title: 'خدمات التدريب التشغيلي',
+                    description: 'توفير تدريب منهجي لمراحل مختلفة من تشغيل اليانصيب لضمان قدرة الفريق على التشغيل بسرعة',
+                    feature1: 'تدريب تشغيل النظام (محطة المبيعات الطرفية، إدارة الخلفية)',
+                    feature2: 'تدريب عملية المبيعات وصيانة المحطة الطرفية',
+                    feature3: 'إدارة الوكلاء وتصميم سياسة العمولة',
+                    feature4: 'تدريب تحليل البيانات وخدمة العملاء'
+                }
+            },
+            cases: {
+                title: 'قصص النجاح العالمية',
+                description: 'تم تنفيذ حلولنا بنجاح في عدة دول ومناطق، مما جلب الابتكار والنمو لأسواق اليانصيب المحلية',
+                mexico: {
+                    title: 'مشروع نظام اليانصيب المكسيكي',
+                    description: 'توفير نظام يانصيب رقمي كامل لليانصيب الوطني المكسيكي، يدعم أنواع ألعاب متعددة مع مبيعات سنوية تتجاوز مليار دولار',
+                    stat1: 'المبيعات السنوية (دولار أمريكي)',
+                    stat2: 'نقاط البيع'
+                },
+                south_africa: {
+                    title: 'توريد تذاكر فورية لليانصيب الوطني لجنوب أفريقيا',
+                    description: 'توفير 120 مليون تذكرة فورية مخصصة لليانصيب الوطني لجنوب أفريقيا، تشمل 12 تصميم موضوع ثقافي محلي، مع اكتمال التسليم خلال 6 أشهر'
+                },
+                vietnam: {
+                    title: 'مشروع التحول الرقمي لليانصيب الفيتنامي',
+                    description: 'مساعدة شركة اليانصيب الفيتنامية على إكمال التحول الرقمي، نشر نظام يانصيب سحابي وتدريب 300 موظف تقني، تحقيق نمو مبيعات بنسبة 40%'
+                }
+            },
+            cta: {
+                title: 'هل أنت مستعد لبدء أعمال اليانصيب؟',
+                description: 'اتصل بفريق الخبراء لدينا للحصول على حلول مخصصة وعروض أسعار مفصلة',
+                btn_contact: 'اتصل الآن',
+                btn_market_report: 'عرض تقرير السوق',
+                btn_download: 'تحميل دليل الخدمات'
+            }
         },
         // صفحة دراسات الحالة
         case_studies: {
@@ -2746,6 +4276,58 @@ const languages = {
                         timeline_2021: '2021: إطلاق مشروع تجريبي لليانصيب الرقمي'
                     }
                 }
+            },
+            download: {
+                title: 'احصل على التقرير الكامل بصيغة PDF',
+                description: 'سجل لتحميل التقرير الكامل + التحديثات الشهرية العالمية، مجاناً تماماً!',
+                form: {
+                    email: 'البريد الإلكتروني',
+                    company: 'اسم الشركة',
+                    country: 'البلد',
+                    country_placeholder: 'يرجى الاختيار',
+                    china: 'الصين',
+                    usa: 'الولايات المتحدة',
+                    subscribe: 'الاشتراك في النشرة الشهرية لاستخبارات السوق من LottoBridge',
+                    submit: 'احصل عليه الآن'
+                }
+            },
+            recent_updates: {
+                title: 'التقارير المحدثة مؤخراً',
+                uzbekistan: {
+                    title: 'تقرير سوق اليانصيب في أوزبكستان',
+                    update_time: 'محدث: ديسمبر 2024',
+                    tag1: 'سوق ناشئ',
+                    tag2: 'دخول خاص',
+                    tag3: 'إمكانية نمو عالية'
+                },
+                cambodia: {
+                    title: 'تقرير سوق اليانصيب في كمبوديا',
+                    update_time: 'محدث: يناير 2025',
+                    tag1: 'تعاون حكومي',
+                    tag2: 'محطة POS',
+                    tag3: 'إصدار مركزي'
+                },
+                nigeria: {
+                    title: 'تقرير سوق اليانصيب في نيجيريا',
+                    update_time: 'محدث: نوفمبر 2024',
+                    tag1: 'عدد سكان كبير',
+                    tag2: 'انتشار منخفض',
+                    tag3: 'منطقة رمادية تنظيمية'
+                }
+            },
+            testimonials: {
+                title: 'شهادات العملاء',
+                testimonial1: {
+                    text: 'حصلنا على تقارير أبحاث اليانصيب لـ 5 دول في أمريكا اللاتينية من خلال LottoBridge، واخترنا في النهاية المكسيك كخيارنا الأول. كان تحليل السياسات وتوقعات حجم السوق في التقرير دقيقاً جداً، مما وفر علينا الكثير من وقت البحث الأولي.',
+                    author_name: 'تشانغ وي',
+                    author_title: 'الرئيس التنفيذي لمزود خدمات التكنولوجيا لليانصيب في جنوب شرق آسيا'
+                }
+            },
+            cta: {
+                title: 'لم تجد استخبارات السوق التي تحتاجها؟',
+                description: 'يمكن لفريق خبرائنا تقديم خدمات أبحاث السوق المخصصة لك',
+                btn_custom_research: 'تقديم طلب بحث مخصص',
+                btn_contact_support: 'اتصل بخدمة العملاء'
             }
         },
         hero: {
@@ -2836,11 +4418,152 @@ const languages = {
             },
             contact: {
                 title: 'اتصل بنا',
-                address: 'شارع القرن 1000، منطقة بودونغ الجديدة، شنغهاي، الصين'
+                address: 'شارع القرن 1000، منطقة بودونغ الجديدة، شنغهاي، الصين',
+                form: {
+                    company_name: 'اسم الشركة',
+                    contact_person: 'الشخص المسؤول',
+                    email: 'البريد الإلكتروني',
+                    phone: 'رقم الهاتف',
+                    country: 'البلد/المنطقة',
+                    select_country: 'يرجى اختيار البلد',
+                    needs: 'نوع الاحتياجات',
+                    government: 'الحكومة',
+                    operator: 'المشغل',
+                    supplier: 'المورد',
+                    investor: 'المستثمر',
+                    other: 'أخرى',
+                    message: 'رسالة مفصلة',
+                    privacy_agree: 'أوافق على سياسة الخصوصية',
+                    submit: 'إرسال',
+                    countries: {
+                        china: 'الصين',
+                        usa: 'الولايات المتحدة',
+                        uk: 'المملكة المتحدة',
+                        japan: 'اليابان',
+                        south_korea: 'كوريا الجنوبية',
+                        russia: 'روسيا',
+                        brazil: 'البرازيل',
+                        india: 'الهند'
+                    }
+                }
             },
             copyright: 'جميع الحقوق محفوظة.',
             privacy_policy: 'سياسة الخصوصية',
             terms_of_service: 'شروط الخدمة'
+        },
+        // صفحة من نحن
+        about: {
+            page: {
+                title: 'من نحن | LottoBridge'
+            },
+            hero: {
+                title: 'ربط العالم بحلول اليانصيب الصينية',
+                subtitle: 'شريكك الموثوق للنجاح العالمي في اليانصيب',
+                description: 'LottoBridge هي المنصة الرائدة التي تربط خبرة اليانصيب الصينية بالفرص العالمية، وتوفر حلولاً شاملة من أبحاث السوق إلى التنفيذ التشغيلي.'
+            },
+            who_we_are: {
+                title: 'من نحن؟',
+                description: 'LottoBridge هي منصة مبتكرة تستفيد من الخبرة الواسعة والموارد في صناعة اليانصيب الصينية لخدمة الأسواق العالمية. كجسر بين الخبرة الصينية في اليانصيب والفرص الدولية، نتخصص في توفير حلول شاملة تمتد عبر سلسلة القيمة الكاملة لليانصيب.',
+                highlight: 'منذ عام 2020، سهلنا بنجاح أكثر من 50 مشروع يانصيب في 25 دولة، مما حقق أكثر من 2 مليار دولار في المبيعات التراكمية.'
+            },
+            vision: {
+                title: 'رؤيتنا',
+                main: 'أن نصبح المنصة العالمية الرائدة التي تُضفي الطابع الديمقراطي على الوصول إلى حلول اليانصيب ذات المستوى العالمي، مما يمكن أي دولة أو منطقة من إنشاء وتشغيل أنظمة يانصيب ناجحة.',
+                challenges: {
+                    title: 'التحديات التي نحلها',
+                    challenge1: {
+                        title: 'حواجز الدخول العالية',
+                        description: 'تتطلب أنظمة اليانصيب التقليدية استثمارات ضخمة وخبرة تقنية لا تمتلكها العديد من الأسواق الناشئة.'
+                    },
+                    challenge2: {
+                        title: 'التعقيد التنظيمي',
+                        description: 'التنقل عبر الأطر القانونية المختلفة ومتطلبات الامتثال في ولايات قضائية متعددة.'
+                    },
+                    challenge3: {
+                        title: 'فجوة المعرفة',
+                        description: 'نقص الخبرة التشغيلية وأفضل الممارسات في الأسواق الجديدة على اليانصيب الحديث.'
+                    }
+                }
+            },
+            values: {
+                title: 'قيمنا الأساسية',
+                innovation: {
+                    title: 'الابتكار',
+                    description: 'نستفيد باستمرار من أحدث التقنيات وأفضل الممارسات من صناعة اليانصيب الصينية لإنشاء حلول متطورة.'
+                },
+                integrity: {
+                    title: 'النزاهة',
+                    description: 'نحافظ على أعلى معايير الشفافية والعدالة والامتثال الأخلاقي في جميع عملياتنا.'
+                },
+                partnership: {
+                    title: 'الشراكة',
+                    description: 'نؤمن ببناء علاقات طويلة الأمد قائمة على الثقة المتبادلة والاحترام والنجاح المشترك.'
+                },
+                excellence: {
+                    title: 'التميز',
+                    description: 'نلتزم بتقديم جودة فائقة في كل مشروع، من المفهوم الأولي إلى التنفيذ الكامل.'
+                }
+            },
+            team: {
+                title: 'فريق خبرائنا',
+                description: 'يجمع فريقنا المتنوع بين عقود من الخبرة في صناعة اليانصيب مع الخبرة في التكنولوجيا والتنظيم والعمليات العالمية.',
+                ceo: {
+                    name: 'د. لي وي',
+                    position: 'الرئيس التنفيذي والمؤسس',
+                    description: 'مدير سابق في يانصيب الرفاهية الصيني مع أكثر من 20 عاماً من الخبرة في الصناعة. رائد في تحديث أنظمة اليانصيب في آسيا.',
+                    expertise: 'استراتيجية اليانصيب، تطوير السوق'
+                },
+                cto: {
+                    name: 'تشانغ مينغ',
+                    position: 'مدير التكنولوجيا',
+                    description: 'مهندس أنظمة رائد مع خبرة في تطوير منصات يانصيب واسعة النطاق تتعامل مع ملايين المعاملات يومياً.',
+                    expertise: 'هندسة الأنظمة، البلوك تشين، الذكاء الاصطناعي'
+                },
+                legal: {
+                    name: 'سارة جونسون',
+                    position: 'مديرة الشؤون القانونية',
+                    description: 'محامية دولية متخصصة في تنظيم الألعاب والامتثال مع خبرة في أكثر من 30 ولاية قضائية.',
+                    expertise: 'الامتثال التنظيمي، القانون الدولي'
+                },
+                operations: {
+                    name: 'كارلوس رودريغيز',
+                    position: 'مدير العمليات',
+                    description: 'خبير في الصناعة مع خبرة عملية في إطلاق وإدارة عمليات اليانصيب في الأسواق الناشئة.',
+                    expertise: 'إدارة العمليات، التدريب، الدعم'
+                }
+            },
+            partners: {
+                title: 'شركاؤنا الاستراتيجيون',
+                description: 'نتعاون مع المنظمات الرائدة عبر سلسلة قيمة اليانصيب لتقديم حلول شاملة.',
+                tech_partners: 'الشركاء التقنيون',
+                regulatory_partners: 'المستشارون التنظيميون',
+                operational_partners: 'الشركاء التشغيليون'
+            },
+            credentials: {
+                title: 'مؤهلاتنا',
+                certifications: 'الشهادات',
+                cert1: 'شهادة ISO 27001 لإدارة أمن المعلومات',
+                cert2: 'شهادة GLI (مختبرات الألعاب الدولية)',
+                cert3: 'امتثال SOC 2 النوع الثاني',
+                awards: 'الجوائز والتقدير',
+                award1: 'جائزة الابتكار العالمي في اليانصيب 2023',
+                award2: 'أفضل مزود حلول تقنية - جوائز الألعاب الآسيوية 2022',
+                award3: 'جائزة التميز في التصدير - غرفة التجارة الصينية 2021'
+            },
+            commitment: {
+                title: 'التزامنا',
+                description: 'نحن ملتزمون بتعزيز النمو المسؤول لصناعة اليانصيب عالمياً، مما يضمن أن حلولنا لا تولد الإيرادات فحسب، بل تساهم أيضاً في التنمية الاجتماعية والاقتصادية للمجتمعات التي نخدمها.',
+                responsibility: 'الألعاب المسؤولة',
+                sustainability: 'الممارسات المستدامة',
+                community: 'التأثير المجتمعي'
+            },
+            cta: {
+                title: 'هل أنت مستعد لتحويل سوق اليانصيب الخاص بك؟',
+                description: 'انضم إلى القادة العالميين الذين اختاروا LottoBridge كشريك موثوق لنجاح اليانصيب.',
+                btn_contact: 'اتصل بنا اليوم',
+                btn_schedule: 'جدولة استشارة',
+                btn_download: 'تحميل كتيب الشركة'
+            }
         }
     },
     ru: {
@@ -2856,6 +4579,95 @@ const languages = {
             case_studies: 'Кейсы',
             about: 'О нас',
             contact: 'Связаться с нами'
+        },
+        // Страница продуктов и услуг
+        products: {
+            page: {
+                title: 'Продукты и услуги | LottoBridge'
+            },
+            hero: {
+                title: 'Глобальные комплексные решения для лотерей',
+                description: 'Интеграция основных ресурсов китайской лотерейной промышленной цепи, предоставление комплексных услуг от исследования рынка, разработки систем, терминального оборудования до операционной поддержки',
+                btn_view_services: 'Посмотреть сервисные решения',
+                btn_contact_consultant: 'Связаться с консультантом по продажам'
+            },
+            services: {
+                title: 'Основные продукты и услуги',
+                description: 'LottoBridge предоставляет не просто список продуктов, а комплексный пакет лотерейных решений "исследование, дизайн, система, оборудование, обучение, экспорт, сотрудничество", готовый к реализации',
+                lottery_system: {
+                    title: 'Услуги лотерейной системы',
+                    description: 'Полные решения лотерейной системы, поддерживающие различные типы лотерейных игр и соответствующие регулятивным требованиям различных стран для продаж, розыгрышей и расчетов',
+                    feature1: 'Поддержка многоязычного, многоигрового, многотерминального доступа',
+                    feature2: 'Предоставление решений SaaS облачного сервиса и локального частного развертывания',
+                    feature3: 'Поддержка интеграции с регулятивными платформами, финансовыми системами и бэкендом анализа больших данных',
+                    feature4: 'Включает модули управления продажами, управления розыгрышами, отслеживания защиты от подделки, CRM управления клиентами'
+                },
+                terminal_equipment: {
+                    title: 'Услуги терминального оборудования для лотерей',
+                    description: 'Предоставление разнообразного терминального оборудования для продажи лотерей, такого как терминалы самообслуживания, портативные терминалы, POS-машины для удовлетворения требований различных сценариев продаж',
+                    feature1: 'Терминал самообслуживания для продажи лотерей (сенсорное управление, поддержка множественных способов оплаты)',
+                    feature2: 'Портативный терминал для продажи лотерей (мобильные продажи, подходит для небольших магазинов)',
+                    feature3: 'Специализированная POS-машина для лотерей (интеграция функций печати, сканирования, оплаты)',
+                    feature4: 'Услуги удаленного мониторинга оборудования, диагностики неисправностей, обновления программного обеспечения'
+                },
+                game_design: {
+                    title: 'Дизайн и разработка лотерейных игр',
+                    description: 'Основываясь на богатом опыте китайского лотерейного рынка, создание индивидуальных продуктов лотерейных игр для зарубежных клиентов, соответствующих местным регулятивным требованиям и культуре',
+                    feature1: 'Комплексный дизайн игр, включая числовые, лото, спортивные ставки, мгновенные игры',
+                    feature2: 'Локализация правил игр, оптимизация структуры призов, дизайн вероятностей выигрыша',
+                    feature3: 'Дизайн UI/UX игр, производство мультимедийных материалов',
+                    feature4: 'Верификация математических моделей игр, поддержка аудита третьей стороной'
+                },
+                printing: {
+                    title: 'Услуги печати лотерейных билетов и термобумаги',
+                    description: 'Предоставление высококачественных услуг печати лотерейных билетов, таких как мгновенные лотерейные билеты, билеты на термобумаге, обеспечивая безопасность защиты от подделки и качество печати',
+                    feature1: 'Печать мгновенных лотерейных билетов (скретч, отрыв и т.д.)',
+                    feature2: 'Печать лотерейных билетов на термобумаге (подходит для печати билетов терминального оборудования)',
+                    feature3: 'Применение технологий защиты от подделки (водяной знак, защитная печать, специальные чернила и т.д.)',
+                    feature4: 'Услуги контроля качества печати, упаковки и доставки, управления запасами'
+                },
+                consulting: {
+                    title: 'Услуги исследования рынка и консультаций',
+                    description: 'Профессиональная команда предоставляет комплексные консультационные услуги от анализа входа на рынок до реализации бизнеса',
+                    feature1: 'Генерация отчетов о рынке для более чем 132 стран одним кликом на основе ИИ',
+                    feature2: 'Включает ключевые данные о правовой среде, размере рынка, основных играх',
+                    feature3: 'Предоставление услуг построения бизнес-моделей и финансового прогнозирования',
+                    feature4: 'Модели сотрудничества и рекомендации по правовому соответствию'
+                },
+                training: {
+                    title: 'Услуги операционного обучения',
+                    description: 'Предоставление систематического обучения для различных этапов лотерейных операций, обеспечивая быструю способность команды к работе',
+                    feature1: 'Обучение работе с системой (терминал продаж, управление бэкендом)',
+                    feature2: 'Обучение процессу продаж и обслуживанию терминалов',
+                    feature3: 'Управление агентами и дизайн комиссионной политики',
+                    feature4: 'Обучение анализу данных и обслуживанию клиентов'
+                }
+            },
+            cases: {
+                title: 'Глобальные истории успеха',
+                description: 'Наши решения были успешно внедрены в нескольких странах и регионах, принося инновации и рост местным лотерейным рынкам',
+                mexico: {
+                    title: 'Проект мексиканской лотерейной системы',
+                    description: 'Предоставление полной цифровой лотерейной системы для Мексиканской национальной лотереи, поддерживающей множественные типы игр с годовыми продажами, превышающими 1 миллиард долларов',
+                    stat1: 'Годовые продажи (USD)',
+                    stat2: 'Точки продаж'
+                },
+                south_africa: {
+                    title: 'Поставка мгновенных билетов для Южноафриканской национальной лотереи',
+                    description: 'Предоставление 120 миллионов индивидуальных мгновенных билетов для Южноафриканской национальной лотереи, включая 12 дизайнов местных культурных тем, с завершением доставки в течение 6 месяцев'
+                },
+                vietnam: {
+                    title: 'Проект цифровой трансформации вьетнамской лотереи',
+                    description: 'Помощь вьетнамской лотерейной компании в завершении цифровой трансформации, развертывание облачной лотерейной системы и обучение 300 технических сотрудников, достижение 40% роста продаж'
+                }
+            },
+            cta: {
+                title: 'Готовы начать лотерейный бизнес?',
+                description: 'Свяжитесь с нашей командой экспертов для получения индивидуальных решений и подробных предложений',
+                btn_contact: 'Связаться сейчас',
+                btn_market_report: 'Посмотреть отчет о рынке',
+                btn_download: 'Скачать руководство по услугам'
+            }
         },
         hero: {
             title: 'Глобальная платформа комплексных решений для экспорта лотерей',
@@ -2945,11 +4757,259 @@ const languages = {
             },
             contact: {
                 title: 'Связаться с нами',
-                address: 'Авеню Века 1000, Новый район Пудун, Шанхай, Китай'
+                address: 'Авеню Века 1000, Новый район Пудун, Шанхай, Китай',
+                form: {
+                    company_name: 'Название компании',
+                    contact_person: 'Контактное лицо',
+                    email: 'Электронная почта',
+                    phone: 'Номер телефона',
+                    country: 'Страна/Регион',
+                    select_country: 'Пожалуйста, выберите страну',
+                    needs: 'Тип потребностей',
+                    government: 'Правительство',
+                    operator: 'Оператор',
+                    supplier: 'Поставщик',
+                    investor: 'Инвестор',
+                    other: 'Другое',
+                    message: 'Подробное сообщение',
+                    privacy_agree: 'Я согласен с политикой конфиденциальности',
+                    submit: 'Отправить',
+                    countries: {
+                        china: 'Китай',
+                        usa: 'США',
+                        uk: 'Великобритания',
+                        japan: 'Япония',
+                        south_korea: 'Южная Корея',
+                        russia: 'Россия',
+                        brazil: 'Бразилия',
+                        india: 'Индия'
+                    }
+                }
             },
             copyright: 'Все права защищены.',
             privacy_policy: 'Политика конфиденциальности',
             terms_of_service: 'Условия обслуживания'
+        },
+        market_research: {
+            page: {
+                title: 'Исследование рынка | LottoBridge'
+            },
+            hero: {
+                title: 'Глобальные отчеты о лотерейном рынке на основе ИИ',
+                subtitle: 'Профессиональные отчеты о лотерейном рынке для более чем 132 стран, созданные одним кликом',
+                description: 'Используя передовые алгоритмы ИИ и обширную базу данных, мы предоставляем подробные отчеты о лотерейном рынке, включая правовую среду, размер рынка, конкурентный ландшафт и инвестиционные возможности.',
+                cta_primary: 'Создать отчет сейчас',
+                cta_secondary: 'Посмотреть образец отчета'
+            },
+            country_search: {
+                title: 'Выберите страну для исследования',
+                placeholder: 'Введите название страны или региона',
+                popular_countries: 'Популярные страны',
+                all_countries: 'Все страны'
+            },
+            recommended_markets: {
+                title: 'Рекомендуемые рынки',
+                subtitle: 'Основываясь на текущих рыночных тенденциях и инвестиционном потенциале',
+                egypt: {
+                    title: 'Египет',
+                    description: 'Быстро развивающийся рынок с благоприятной политической средой',
+                    market_size: 'Размер рынка',
+                    growth_rate: 'Темп роста',
+                    investment_level: 'Уровень инвестиций'
+                },
+                vietnam: {
+                    title: 'Вьетнам',
+                    description: 'Высокий потенциал цифровой трансформации в Юго-Восточной Азии',
+                    market_size: 'Размер рынка',
+                    growth_rate: 'Темп роста',
+                    investment_level: 'Уровень инвестиций'
+                },
+                brazil: {
+                    title: 'Бразилия',
+                    description: 'Крупнейший рынок в Латинской Америке с огромным потенциалом',
+                    market_size: 'Размер рынка',
+                    growth_rate: 'Темп роста',
+                    investment_level: 'Уровень инвестиций'
+                }
+            },
+            countries: {
+                search_placeholder: 'Поиск стран...',
+                total_countries: 'Всего стран',
+                select_country: 'Выбрать страну'
+            },
+            report_preview: {
+                title: 'Предварительный просмотр отчета',
+                tabs: {
+                    overview: 'Обзор',
+                    market_size: 'Размер рынка',
+                    regulations: 'Регулирование',
+                    competition: 'Конкуренция'
+                },
+                content: {
+                    overview: {
+                        title: 'Обзор рынка',
+                        description: 'Комплексный анализ текущего состояния лотерейного рынка, включая основные игры, структуру доходов и тенденции развития.'
+                    },
+                    market_size: {
+                        title: 'Анализ размера рынка',
+                        description: 'Подробные данные о размере рынка, темпах роста, прогнозах доходов и сегментации рынка.'
+                    },
+                    regulations: {
+                        title: 'Регулятивная среда',
+                        description: 'Анализ правовых рамок, лицензионных требований, налоговой политики и регулятивных тенденций.'
+                    },
+                    competition: {
+                        title: 'Конкурентный ландшафт',
+                        description: 'Анализ основных игроков рынка, доли рынка, конкурентных стратегий и возможностей входа.'
+                    }
+                }
+            },
+            download: {
+                title: 'Скачать полный отчет',
+                description: 'Получите подробный аналитический отчет о египетском лотерейном рынке, включая инвестиционные рекомендации и оценку бизнес-возможностей',
+                form: {
+                    email: 'Адрес электронной почты',
+                    company: 'Название компании',
+                    country: 'Страна/Регион',
+                    country_placeholder: 'Пожалуйста, выберите',
+                    china: 'Китай',
+                    usa: 'Соединенные Штаты',
+                    subscribe_label: 'Подписаться на отраслевые обновления',
+                    submit_button: 'Скачать сейчас'
+                }
+            },
+            recent_updates: {
+                title: 'Последние обновления',
+                uzbekistan_report: 'Анализ лотерейного рынка Узбекистана',
+                cambodia_report: 'Отчет о развитии цифровой лотереи Камбоджи',
+                nigeria_report: 'Обновление лотерейной политики Нигерии'
+            },
+            testimonials: {
+                title: 'Отзывы клиентов',
+                testimonial_text: 'Отчет о рынке LottoBridge предоставил ценные инсайты для нашего входа на египетский рынок, помогая нам разработать успешную стратегию локализации.',
+                testimonial_author: 'Джеймс Чжан',
+                testimonial_title: 'Директор по международному бизнесу'
+            },
+            cta: {
+                title: 'Готовы войти на египетский лотерейный рынок?',
+                description: 'Свяжитесь с нашей командой экспертов для получения индивидуальных стратегий входа на рынок и решений',
+                contact: 'Связаться с экспертом',
+                demo: 'Забронировать демо'
+            }
+        },
+        // Страница о нас
+        about: {
+            page: {
+                title: 'О нас | LottoBridge'
+            },
+            hero: {
+                title: 'Соединяя мир с китайскими лотерейными решениями',
+                subtitle: 'Ваш надежный партнер для глобального успеха в лотереях',
+                description: 'LottoBridge - ведущая платформа, которая соединяет китайский опыт в лотереях с глобальными возможностями, предоставляя комплексные решения от исследования рынка до операционной реализации.'
+            },
+            who_we_are: {
+                title: 'Кто мы?',
+                description: 'LottoBridge - инновационная платформа, которая использует обширный опыт и ресурсы китайской лотерейной индустрии для обслуживания глобальных рынков. Как мост между китайским опытом в лотереях и международными возможностями, мы специализируемся на предоставлении комплексных решений, охватывающих всю цепочку создания стоимости лотерей.',
+                highlight: 'С 2020 года мы успешно содействовали более чем 50 лотерейным проектам в 25 странах, достигнув более 2 миллиардов долларов совокупных продаж.'
+            },
+            vision: {
+                title: 'Наше видение',
+                main: 'Стать ведущей глобальной платформой, которая демократизирует доступ к лотерейным решениям мирового класса, позволяя любой стране или региону создавать и управлять успешными лотерейными системами.',
+                challenges: {
+                    title: 'Проблемы, которые мы решаем',
+                    challenge1: {
+                        title: 'Высокие барьеры входа',
+                        description: 'Традиционные лотерейные системы требуют массивных инвестиций и технической экспертизы, которой не хватает многим развивающимся рынкам.'
+                    },
+                    challenge2: {
+                        title: 'Регулятивная сложность',
+                        description: 'Навигация по различным правовым рамкам и требованиям соответствия в нескольких юрисдикциях.'
+                    },
+                    challenge3: {
+                        title: 'Пробел в знаниях',
+                        description: 'Недостаток операционной экспертизы и лучших практик в новых для современных лотерей рынках.'
+                    }
+                }
+            },
+            values: {
+                title: 'Наши основные ценности',
+                innovation: {
+                    title: 'Инновации',
+                    description: 'Мы постоянно используем новейшие технологии и лучшие практики китайской лотерейной индустрии для создания передовых решений.'
+                },
+                integrity: {
+                    title: 'Честность',
+                    description: 'Мы поддерживаем высочайшие стандарты прозрачности, справедливости и этического соответствия во всех наших операциях.'
+                },
+                partnership: {
+                    title: 'Партнерство',
+                    description: 'Мы верим в построение долгосрочных отношений, основанных на взаимном доверии, уважении и общем успехе.'
+                },
+                excellence: {
+                    title: 'Превосходство',
+                    description: 'Мы стремимся к превосходному качеству в каждом проекте, от первоначальной концепции до полной реализации.'
+                }
+            },
+            team: {
+                title: 'Наша команда экспертов',
+                description: 'Наша разнообразная команда объединяет десятилетия опыта в лотерейной индустрии с экспертизой в технологиях, регулировании и глобальных операциях.',
+                ceo: {
+                    name: 'Д-р Ли Вэй',
+                    position: 'Генеральный директор и основатель',
+                    description: 'Бывший руководитель Китайской лотереи благосостояния с более чем 20-летним опытом в индустрии. Пионер в модернизации лотерейных систем в Азии.',
+                    expertise: 'Стратегия лотерей, развитие рынка'
+                },
+                cto: {
+                    name: 'Чжан Мин',
+                    position: 'Технический директор',
+                    description: 'Ведущий системный инженер с опытом разработки крупномасштабных лотерейных платформ, обрабатывающих миллионы транзакций ежедневно.',
+                    expertise: 'Системная архитектура, блокчейн, ИИ'
+                },
+                legal: {
+                    name: 'Сара Джонсон',
+                    position: 'Директор по правовым вопросам',
+                    description: 'Международный юрист, специализирующийся на игровом регулировании и соответствии с опытом в более чем 30 юрисдикциях.',
+                    expertise: 'Регулятивное соответствие, международное право'
+                },
+                operations: {
+                    name: 'Карлос Родригес',
+                    position: 'Директор по операциям',
+                    description: 'Отраслевой ветеран с практическим опытом запуска и управления лотерейными операциями на развивающихся рынках.',
+                    expertise: 'Управление операциями, обучение, поддержка'
+                }
+            },
+            partners: {
+                title: 'Наши стратегические партнеры',
+                description: 'Мы сотрудничаем с ведущими организациями по всей цепочке создания стоимости лотерей для предоставления комплексных решений.',
+                tech_partners: 'Технологические партнеры',
+                regulatory_partners: 'Регулятивные консультанты',
+                operational_partners: 'Операционные партнеры'
+            },
+            credentials: {
+                title: 'Наши квалификации',
+                certifications: 'Сертификации',
+                cert1: 'Сертификация ISO 27001 по управлению информационной безопасностью',
+                cert2: 'Сертификация GLI (Gaming Laboratories International)',
+                cert3: 'Соответствие SOC 2 Type II',
+                awards: 'Награды и признание',
+                award1: 'Глобальная награда за инновации в лотереях 2023',
+                award2: 'Лучший поставщик технологических решений - Азиатские игровые награды 2022',
+                award3: 'Награда за превосходство в экспорте - Китайская торговая палата 2021'
+            },
+            commitment: {
+                title: 'Наше обязательство',
+                description: 'Мы стремимся способствовать ответственному росту лотерейной индустрии глобально, обеспечивая, что наши решения не только генерируют доходы, но и способствуют социальному и экономическому развитию сообществ, которые мы обслуживаем.',
+                responsibility: 'Ответственные игры',
+                sustainability: 'Устойчивые практики',
+                community: 'Воздействие на сообщество'
+            },
+            cta: {
+                title: 'Готовы трансформировать ваш лотерейный рынок?',
+                description: 'Присоединяйтесь к глобальным лидерам, которые выбрали LottoBridge как надежного партнера для успеха в лотереях.',
+                btn_contact: 'Свяжитесь с нами сегодня',
+                btn_schedule: 'Запланировать консультацию',
+                btn_download: 'Скачать корпоративную брошюру'
+            }
         }
     }
 };

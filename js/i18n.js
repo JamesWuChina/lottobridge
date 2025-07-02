@@ -316,5 +316,22 @@ class I18nManager {
     }
 }
 
-// 创建全局实例
-window.i18n = new I18nManager();
+// 当DOM加载完成且languages数据可用时创建全局实例
+function initializeI18n() {
+    if (typeof window.languages !== 'undefined' && window.languages) {
+        window.i18n = new I18nManager(window.languages);
+        console.log('I18n initialized successfully');
+        return true;
+    }
+    return false;
+}
+
+// 尝试立即初始化
+if (!initializeI18n()) {
+    // 如果languages还没加载，等待DOM加载完成后再试
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!window.i18n) {
+            setTimeout(initializeI18n, 100); // 给languages.js一点时间加载
+        }
+    });
+}

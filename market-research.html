@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="market_research.page.title">市场调研 | LottoBridge</title>
-    <!-- 多语言支持脚本 -->
-    <script src="js/languages.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* 基础样式 - 与首页保持一致 */
@@ -91,20 +89,27 @@
         .nav-links {
             display: flex;
             list-style: none;
-            margin-left: 40px;
+            margin-right: 25px;
+            flex-wrap: nowrap !important;
+            gap: 12px;
+            align-items: center;
         }
 
         .nav-links li {
-            margin-right: 30px;
+            margin-right: 0;
             position: relative;
+            flex-shrink: 0;
         }
 
         .nav-links a {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 14px;
             color: var(--nav-blue);
-            padding: 5px 0;
+            padding: 10px 16px;
             position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
         }
 
         .nav-links a::after {
@@ -123,22 +128,55 @@
             width: 100%;
         }
 
-        /* 语言选择器 - 移动到右上角 */
+        /* 语言选择器 - 国际化专业设计 */
         .language-selector {
-            position: static;
+            position: relative;
             margin-left: auto;
-            margin-right: 20px;
+            margin-right: 25px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
         }
 
         .language-selector select {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
             font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             appearance: none;
-            padding-right: 30px;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
         }
 
         .language-selector::after {
@@ -146,12 +184,17 @@
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
-            right: 10px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
-            color: var(--medium-gray);
+            color: var(--primary-blue);
             font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .mobile-menu-btn {
@@ -782,44 +825,67 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                transform: translateY(-150%);
-                transition: var(--transition);
-                z-index: 999;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            }
-            
-            nav.active {
-                transform: translateY(0);
-            }
-            
             .nav-links {
-                flex-direction: column;
-                margin-left: 0;
-                width: 100%;
+                gap: 15px;
+                margin-right: 15px;
             }
             
-            .nav-links li {
-                margin: 0 0 15px 0;
-                width: 100%;
+            .nav-links li a {
+                font-size: 13px;
+                padding: 8px 12px;
             }
             
             .language-selector {
-                position: static;
-                transform: none;
-                margin-top: 20px;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 6px 25px 6px 8px;
+                min-width: 80px;
+                border-radius: 6px;
+            }
+            
+            .language-selector::before,
+            .language-selector::after {
+                font-size: 10px;
+                left: 8px;
+                right: 8px;
+            }
+            
+            .logo {
+                font-size: 20px;
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 10px;
+                margin-right: 10px;
+            }
+            
+            .nav-links li a {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            
+            .language-selector {
+                margin-right: 8px;
+            }
+            
+            .language-selector select {
+                font-size: 11px;
+                padding: 5px 20px 5px 6px;
+                min-width: 70px;
+            }
+            
+            .logo {
+                font-size: 18px;
             }
             
             .mi-hero-buttons,
@@ -907,11 +973,14 @@
             </nav>
             
             <div class="language-selector">
-                <select>
-                    <option value="zh" selected>中文</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="en">🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
                 </select>
             </div>
             
@@ -926,10 +995,8 @@
         <!-- Hero区域 -->
         <section class="mi-hero">
             <div class="container mi-hero-content">
-                <h1>
-                    <span data-i18n="market_research.hero.title">Unlock Global Lottery Opportunities with AI-powered Market Research</span>
-                    <span data-i18n="market_research.hero.subtitle">快速掌握全球彩票市场的政策、规模与机会点</span>
-                </h1>
+                <h1 data-i18n="market_research.hero.title">Unlock Global Lottery Opportunities with AI-powered Market Research</h1>
+                <h2 data-i18n="market_research.hero.subtitle">快速掌握全球彩票市场的政策、规模与机会点</h2>
                 <p data-i18n="market_research.hero.description">由 LottoBridge AI 驱动的全球市场情报系统，为您提供一站式国家级彩票数据洞察，助您做出明智的市场决策</p>
                 
                 <div class="mi-hero-buttons">
@@ -1126,31 +1193,31 @@
                 
                 <div class="report-content">
                     <div class="report-section">
-                        <h3><i class="fas fa-gavel"></i> 主要监管机构</h3>
-                        <p>埃及彩票市场由财政部下属的国家彩票局统一监管，下设省级监管机构。所有彩票运营商必须获得国家彩票局颁发的牌照。</p>
+                        <h3><i class="fas fa-gavel"></i> <span data-i18n="market_research.report_preview.content.regulations.main_authority">主要监管机构</span></h3>
+                        <p data-i18n="market_research.report_preview.content.regulations.authority_description">埃及彩票市场由财政部下属的国家彩票局统一监管，下设省级监管机构。所有彩票运营商必须获得国家彩票局颁发的牌照。</p>
                     </div>
                     
                     <div class="report-section">
-                        <h3><i class="fas fa-file-contract"></i> 当前政策框架</h3>
-                        <p>埃及实行中央集权式的彩票管理模式，但近年来逐步向私营企业开放部分业务。外资企业可通过与本地企业合资的方式进入市场，外资持股比例不得超过49%。</p>
+                        <h3><i class="fas fa-file-contract"></i> <span data-i18n="market_research.report_preview.content.regulations.policy_framework">当前政策框架</span></h3>
+                        <p data-i18n="market_research.report_preview.content.regulations.framework_description">埃及实行中央集权式的彩票管理模式，但近年来逐步向私营企业开放部分业务。外资企业可通过与本地企业合资的方式进入市场，外资持股比例不得超过49%。</p>
                     </div>
                 </div>
                 
                 <div class="report-content">
                     <div class="report-section">
-                        <h3><i class="fas fa-chart-bar"></i> 历史销售额数据</h3>
-                        <div class="data-chart">销售额增长图表 (2018-2023)</div>
-                        <p>埃及彩票市场在过去5年保持年均8%的增长率，2023年总销售额达到4.3亿美元。传统零售渠道占比75%，数字渠道增长迅速。</p>
+                        <h3><i class="fas fa-chart-bar"></i> <span data-i18n="market_research.report_preview.content.market_size.historical_data">历史销售额数据</span></h3>
+                        <div class="data-chart" data-i18n="market_research.report_preview.content.market_size.chart_title">销售额增长图表 (2018-2023)</div>
+                        <p data-i18n="market_research.report_preview.content.market_size.growth_description">埃及彩票市场在过去5年保持年均8%的增长率，2023年总销售额达到4.3亿美元。传统零售渠道占比75%，数字渠道增长迅速。</p>
                     </div>
                     
                     <div class="report-section">
-                        <h3><i class="fas fa-bolt"></i> 增长潜力评分</h3>
-                        <div class="data-chart">AI模型评分图表</div>
-                        <p>LottoBridge AI模型对埃及市场的评分：</p>
-                        <p>市场规模：★★★☆☆</p>
-                        <p>增长潜力：★★★★☆</p>
-                        <p>政策稳定性：★★★☆☆</p>
-                        <p>数字化机会：★★★★☆</p>
+                        <h3><i class="fas fa-bolt"></i> <span data-i18n="market_research.report_preview.content.market_size.growth_potential">增长潜力评分</span></h3>
+                        <div class="data-chart" data-i18n="market_research.report_preview.content.market_size.ai_chart_title">AI模型评分图表</div>
+                        <p data-i18n="market_research.report_preview.content.market_size.ai_scoring_intro">LottoBridge AI模型对埃及市场的评分：</p>
+                        <p data-i18n="market_research.report_preview.content.market_size.market_scale_rating">市场规模：★★★☆☆</p>
+                        <p data-i18n="market_research.report_preview.content.market_size.growth_potential_rating">增长潜力：★★★★☆</p>
+                        <p data-i18n="market_research.report_preview.content.market_size.policy_stability_rating">政策稳定性：★★★☆☆</p>
+                        <p data-i18n="market_research.report_preview.content.market_size.digital_opportunity_rating">数字化机会：★★★★☆</p>
                     </div>
                 </div>
                 
@@ -1162,36 +1229,36 @@
         <section class="download-section">
             <div class="container">
                 <div class="download-card">
-                    <h2>获取完整PDF报告</h2>
-                    <p>注册后即可下载完整报告 + 每月更新的全球动态，完全免费！</p>
+                    <h2 data-i18n="market_research.download.title">获取完整PDF报告</h2>
+                    <p data-i18n="market_research.download.description">注册后即可下载完整报告 + 每月更新的全球动态，完全免费！</p>
                     
                     <form class="download-form">
                         <div class="form-group">
-                            <label for="email">电子邮箱</label>
+                            <label for="email" data-i18n="market_research.download.form.email">电子邮箱</label>
                             <input type="email" id="email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="company">公司名称</label>
+                            <label for="company" data-i18n="market_research.download.form.company">公司名称</label>
                             <input type="text" id="company">
                         </div>
                         
                         <div class="form-group">
-                            <label for="country">所在国家</label>
+                            <label for="country" data-i18n="market_research.download.form.country">所在国家</label>
                             <select id="country" required>
-                                <option value="">请选择</option>
-                                <option value="china">中国</option>
-                                <option value="usa">美国</option>
+                                <option value="" data-i18n="market_research.download.form.country_placeholder">请选择</option>
+                                <option value="china" data-i18n="market_research.download.form.china">中国</option>
+                                <option value="usa" data-i18n="market_research.download.form.usa">美国</option>
                                 <!-- 更多国家选项 -->
                             </select>
                         </div>
                         
                         <div class="checkbox-group">
                             <input type="checkbox" id="subscribe" checked>
-                            <label for="subscribe">订阅LottoBridge市场情报月报</label>
+                            <label for="subscribe" data-i18n="market_research.download.form.subscribe">订阅LottoBridge市场情报月报</label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">立即获取</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="market_research.download.form.submit">立即获取</button>
                     </form>
                 </div>
             </div>
@@ -1200,42 +1267,42 @@
         <!-- 最近更新区域 -->
         <section class="recent-updates">
             <div class="container">
-                <h2 class="section-title">最近更新报告</h2>
+                <h2 class="section-title" data-i18n="market_research.recent_updates.title">最近更新报告</h2>
                 
                 <div class="updates-grid">
                     <div class="update-card">
-                        <h4>乌兹别克斯坦彩票市场报告</h4>
+                        <h4 data-i18n="market_research.recent_updates.uzbekistan.title">乌兹别克斯坦彩票市场报告</h4>
                         <div class="update-meta">
-                            <span>更新时间: 2024.12</span>
+                            <span data-i18n="market_research.recent_updates.uzbekistan.update_time">更新时间: 2024.12</span>
                         </div>
                         <div class="update-tags">
-                            <span class="tag">新兴市场</span>
-                            <span class="tag">私营准入</span>
-                            <span class="tag">高增长潜力</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag1">新兴市场</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag2">私营准入</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag3">高增长潜力</span>
                         </div>
                     </div>
                     
                     <div class="update-card">
-                        <h4>柬埔寨彩票市场报告</h4>
+                        <h4 data-i18n="market_research.recent_updates.cambodia.title">柬埔寨彩票市场报告</h4>
                         <div class="update-meta">
-                            <span>更新时间: 2025.01</span>
+                            <span data-i18n="market_research.recent_updates.cambodia.update_time">更新时间: 2025.01</span>
                         </div>
                         <div class="update-tags">
-                            <span class="tag">政府合作</span>
-                            <span class="tag">POS终端</span>
-                            <span class="tag">集中式发行</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag1">政府合作</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag2">POS终端</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag3">集中式发行</span>
                         </div>
                     </div>
                     
                     <div class="update-card">
-                        <h4>尼日利亚彩票市场报告</h4>
+                        <h4 data-i18n="market_research.recent_updates.nigeria.title">尼日利亚彩票市场报告</h4>
                         <div class="update-meta">
-                            <span>更新时间: 2024.11</span>
+                            <span data-i18n="market_research.recent_updates.nigeria.update_time">更新时间: 2024.11</span>
                         </div>
                         <div class="update-tags">
-                            <span class="tag">高人口</span>
-                            <span class="tag">低渗透</span>
-                            <span class="tag">监管灰区</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag1">高人口</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag2">低渗透</span>
+                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag3">监管灰区</span>
                         </div>
                     </div>
                 </div>
@@ -1245,11 +1312,11 @@
         <!-- 客户评价区域 -->
         <section class="testimonials">
             <div class="container">
-                <h2 class="section-title">客户评价</h2>
+                <h2 class="section-title" data-i18n="market_research.testimonials.title">客户评价</h2>
                 
                 <div class="testimonial-slider">
                     <div class="testimonial-card">
-                        <div class="testimonial-text">
+                        <div class="testimonial-text" data-i18n="market_research.testimonials.testimonial1.text">
                             "我们通过 LottoBridge 获得了拉丁美洲5个国家的彩票调研报告，并最终锁定墨西哥作为落地首选。报告中的政策分析和市场规模预测非常准确，为我们节省了大量前期调研时间。"
                         </div>
                         <div class="testimonial-author">
@@ -1257,8 +1324,8 @@
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="author-info">
-                                <h4>张伟</h4>
-                                <p>东南亚彩票技术服务商CEO</p>
+                                <h4 data-i18n="market_research.testimonials.testimonial1.author_name">张伟</h4>
+                                <p data-i18n="market_research.testimonials.testimonial1.author_title">东南亚彩票技术服务商CEO</p>
                             </div>
                         </div>
                     </div>
@@ -1269,11 +1336,11 @@
         <!-- CTA区域 -->
         <section class="cta-section">
             <div class="container">
-                <h2>未找到您需要的市场情报？</h2>
-                <p>我们的专家团队可为您提供定制化市场调研服务</p>
+                <h2 data-i18n="market_research.cta.title">未找到您需要的市场情报？</h2>
+                <p data-i18n="market_research.cta.description">我们的专家团队可为您提供定制化市场调研服务</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">提交定制调研申请</a>
-                    <a href="#" class="btn btn-outline">联系客服咨询</a>
+                    <a href="#" class="btn btn-primary" data-i18n="market_research.cta.btn_custom_research">提交定制调研申请</a>
+                    <a href="#" class="btn btn-outline" data-i18n="market_research.cta.btn_contact_support">联系客服咨询</a>
                 </div>
             </div>
         </section>
@@ -1285,7 +1352,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>LottoBridge</h3>
-                    <p>全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1295,39 +1362,39 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3>产品服务</h3>
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="market-research.html">市场调研与咨询</a></li>
-                        <li><a href="products.html">彩票系统解决方案</a></li>
-                        <li><a href="products.html">终端设备供应</a></li>
-                        <li><a href="products.html">游戏设计与开发</a></li>
-                        <li><a href="products.html">票券印刷服务</a></li>
+                        <li><a href="market-research.html" data-i18n="footer.products.market_research">市场调研与咨询</a></li>
+                        <li><a href="products.html" data-i18n="footer.products.lottery_system">彩票系统解决方案</a></li>
+                        <li><a href="products.html" data-i18n="footer.products.terminal_equipment">终端设备供应</a></li>
+                        <li><a href="products.html" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="products.html" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>资源中心</h3>
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
                     <ul>
-                        <li><a href="market-research.html">行业报告</a></li>
-                        <li><a href="case-studies.html">案例研究</a></li>
-                        <li><a href="insights.html">白皮书下载</a></li>
-                        <li><a href="insights.html">博客与新闻</a></li>
-                        <li><a href="contact.html">常见问题</a></li>
+                        <li><a href="market-research.html" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="case-studies.html" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="insights.html" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="insights.html" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="contact.html" data-i18n="footer.resources.faq">常见问题</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>联系我们</h3>
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
                         <li><i class="fas fa-phone"></i> +86 10 8888 8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.contact.address">北京市朝阳区建国路88号</span></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 LottoBridge. 保留所有权利。 | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+                <p><span data-i18n="footer.copyright">&copy; 2023 LottoBridge. 保留所有权利。</span> | <a href="#" data-i18n="footer.privacy_policy">隐私政策</a> | <a href="#" data-i18n="footer.terms_of_service">使用条款</a></p>
             </div>
         </div>
     </footer>
@@ -1374,6 +1441,44 @@
     </script>
     
     <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
     <script src="js/i18n.js"></script>
+    <script>
+        // 初始化多语言支持
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待i18n实例准备就绪
+            function initializeLanguageSupport() {
+                if (window.i18n) {
+                    console.log('Initializing language support...');
+                    
+                    // 手动触发语言应用，确保页面正确显示
+                    const currentLang = window.i18n.getCurrentLanguage();
+                    window.i18n.applyLanguage(currentLang);
+                    
+                    // 绑定语言选择器事件
+                    const languageSelector = document.querySelector('.language-selector select');
+                    if (languageSelector) {
+                        languageSelector.value = currentLang;
+                        
+                        // 添加事件监听器
+                        languageSelector.addEventListener('change', function(e) {
+                            const selectedLanguage = e.target.value;
+                            console.log('Language changed to:', selectedLanguage);
+                            window.i18n.changeLanguage(selectedLanguage);
+                        });
+                        
+                        console.log('Language selector initialized with:', currentLang);
+                    } else {
+                        console.warn('Language selector not found');
+                    }
+                } else {
+                    console.warn('i18n instance not ready, retrying...');
+                    setTimeout(initializeLanguageSupport, 200);
+                }
+            }
+            
+            initializeLanguageSupport();
+        });
+    </script>
 </body>
 </html>

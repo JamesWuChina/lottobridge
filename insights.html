@@ -88,19 +88,25 @@
         .nav-links {
             display: flex;
             list-style: none;
-            margin-left: 40px;
+            margin-right: 30px;
+            flex-wrap: nowrap !important;
+            gap: 20px;
+            align-items: center;
         }
 
         .nav-links li {
-            margin-right: 30px;
+            flex-shrink: 0;
             position: relative;
         }
 
         .nav-links a {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 15px;
             color: var(--nav-blue);
-            padding: 5px 0;
+            padding: 10px 15px;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
             position: relative;
         }
 
@@ -122,33 +128,73 @@
 
         /* 语言选择器 - 移动到右上角 */
         .language-selector {
-            position: static;
-            margin-left: auto;
-            margin-right: 20px;
+            position: relative;
+            margin: 0 20px 0 auto;
         }
 
-        .language-selector select {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
+        .language-selector::before {
+            content: '🌐';
+            font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+            font-weight: 400;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
             font-size: 14px;
-            cursor: pointer;
-            appearance: none;
-            padding-right: 30px;
+            z-index: 1;
+            pointer-events: none;
         }
 
         .language-selector::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+            content: '▼';
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 400;
             position: absolute;
-            right: 10px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 10px;
+            z-index: 1;
             pointer-events: none;
-            color: var(--medium-gray);
-            font-size: 12px;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,255,0.95));
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            color: var(--primary-blue);
+            min-width: 100px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.5px;
+        }
+
+        .language-selector select:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+            border-color: var(--primary-red);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .language-selector::after {
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .mobile-menu-btn {
@@ -835,44 +881,41 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                transform: translateY(-150%);
-                transition: var(--transition);
-                z-index: 999;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            }
-            
-            nav.active {
-                transform: translateY(0);
-            }
-            
             .nav-links {
-                flex-direction: column;
-                margin-left: 0;
-                width: 100%;
+                gap: 15px;
+                margin-right: 15px;
             }
             
-            .nav-links li {
-                margin: 0 0 15px 0;
-                width: 100%;
+            .nav-links li a {
+                font-size: 13px;
+                padding: 8px 12px;
             }
             
             .language-selector {
-                position: static;
-                transform: none;
-                margin-top: 20px;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 6px 25px 6px 8px;
+                min-width: 80px;
+                border-radius: 6px;
+            }
+            
+            .language-selector::before,
+            .language-selector::after {
+                font-size: 10px;
+                left: 8px;
+                right: 8px;
+            }
+            
+            .logo {
+                font-size: 20px;
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: none;
             }
             
             .hero-buttons {
@@ -909,6 +952,37 @@
             .compare-table {
                 display: block;
                 overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 8px;
+                margin-right: 8px;
+            }
+            
+            .nav-links li a {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+            
+            .language-selector {
+                margin-right: 5px;
+            }
+            
+            .language-selector select {
+                font-size: 10px;
+                padding: 4px 20px 4px 6px;
+                min-width: 70px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
             }
         }
 
@@ -959,11 +1033,14 @@
             </nav>
             
             <div class="language-selector">
-                <select>
-                    <option value="zh" selected>中文</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ru">🇷🇺 Русский</option>
                 </select>
             </div>
             
@@ -982,8 +1059,8 @@
                 <p data-i18n="insights.hero.description">提供专业、持续更新的全球彩票行业情报，覆盖政策法规、技术趋势、市场动态、玩法创新等内容</p>
                 
                 <div class="hero-buttons">
-                    <a href="#trends" class="btn btn-primary" data-i18n="insights.hero.view_trends">查看趋势报告</a>
-                    <a href="#subscribe" class="btn btn-outline" data-i18n="insights.hero.subscribe">订阅行业简报</a>
+                    <a href="#trends" class="btn btn-primary" data-i18n="insights.hero.btn_view_trends">查看趋势报告</a>
+                    <a href="#subscribe" class="btn btn-outline" data-i18n="insights.hero.btn_subscribe">订阅行业简报</a>
                 </div>
             </div>
         </section>
@@ -991,13 +1068,12 @@
         <!-- 内容分类导航 -->
         <section class="insights-nav">
             <div class="container insights-nav-container">
-                <div class="insights-nav-item active" data-target="trends" data-i18n="insights.nav.policy_tracking">📜 法规政策追踪</div>
-                <div class="insights-nav-item" data-target="reports" data-i18n="insights.nav.market_reports">📈 市场趋势报告</div>
-                <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav.tech_trends">🧠 技术趋势</div>
-                <div class="insights-nav-item" data-target="games" data-i18n="insights.nav.game_innovation">🎮 玩法创新</div>
-                <div class="insights-nav-item" data-target="cases" data-i18n="insights.nav.case_analysis">🧩 案例解构</div>
-                <div class="insights-nav-item" data-target="whitepapers" data-i18n="insights.nav.whitepapers">📊 白皮书</div>
-                <div class="insights-nav-item" data-target="videos" data-i18n="insights.nav.video_lectures">🎥 视频讲座</div>
+                <div class="insights-nav-item active" data-target="trends" data-i18n="insights.nav_categories.policy_tracking">📜 法规政策追踪</div>
+                <div class="insights-nav-item" data-target="reports" data-i18n="insights.nav_categories.market_trends">📈 市场趋势报告</div>
+                <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav_categories.tech_trends">🧠 技术趋势分析</div>
+                <div class="insights-nav-item" data-target="games" data-i18n="insights.nav_categories.case_studies">🧩 案例研究</div>
+                <div class="insights-nav-item" data-target="whitepapers" data-i18n="insights.nav_categories.industry_reports">📊 行业报告</div>
+                <div class="insights-nav-item" data-target="videos" data-i18n="insights.nav_categories.webinars">🎥 视频讲座</div>
             </div>
         </section>
         
@@ -1005,20 +1081,20 @@
         <section class="trends-section" id="trends">
             <div class="container">
                 <div class="section-title">
-                    <h2 data-i18n="insights.trends.title">2025全球彩票行业五大趋势前瞻</h2>
+                    <h2 data-i18n="insights.trends.card_title">2025全球彩票行业五大趋势前瞻</h2>
                     <p data-i18n="insights.trends.subtitle">LottoBridge 行业研究团队基于132个国家市场数据的最新分析</p>
                 </div>
                 
                 <div class="trend-card">
-                    <h3 data-i18n="insights.trends.card_title">全球彩票行业正在经历深刻变革</h3>
+                    <h3 data-i18n="insights.trends.card_description">全球彩票行业正在经历深刻变革</h3>
                     <div class="trend-list">
                         <div class="trend-item">
                             <div class="trend-icon">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <div class="trend-content">
-                                <h4 data-i18n="insights.trends.item1.title">即开型彩票回暖</h4>
-                                <p data-i18n="insights.trends.item1.description">亚洲与中东市场线下零售回潮，推动即开票销售增长，预计2025年同比增长18%。越南、沙特等市场表现尤为突出。</p>
+                                <h4 data-i18n="insights.trends.trend1.title">数字化转型加速</h4>
+                                <p data-i18n="insights.trends.trend1.description">移动端销售占比将超过60%，云彩票系统成为主流选择</p>
                             </div>
                         </div>
                         
@@ -1027,8 +1103,8 @@
                                 <i class="fas fa-robot"></i>
                             </div>
                             <div class="trend-content">
-                                <h4 data-i18n="insights.trends.item2.title">AI技术赋能运营</h4>
-                                <p data-i18n="insights.trends.item2.description">从选号算法、客户识别到智能客服全面应用，AI渗透率已达行业领先企业的76%。预测模型准确率提升40%。</p>
+                                <h4 data-i18n="insights.trends.trend2.title">监管合规要求提升</h4>
+                                <p data-i18n="insights.trends.trend2.description">各国加强反洗钱、数据保护等合规要求，技术门槛显著提高</p>
                             </div>
                         </div>
                         
@@ -1037,8 +1113,8 @@
                                 <i class="fas fa-balance-scale"></i>
                             </div>
                             <div class="trend-content">
-                                <h4 data-i18n="insights.trends.item3.title">"合规+开放"并进</h4>
-                                <p data-i18n="insights.trends.item3.description">多个非洲国家修法，允许私营/联营运营新模式，2024年新增12个开放市场。尼日利亚、肯尼亚政策突破显著。</p>
+                                <h4 data-i18n="insights.trends.trend3.title">AI技术深度应用</h4>
+                                <p data-i18n="insights.trends.trend3.description">人工智能在风险控制、客户分析、游戏设计等领域广泛应用</p>
                             </div>
                         </div>
                         
@@ -1047,8 +1123,8 @@
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div class="trend-content">
-                                <h4 data-i18n="insights.trends.item4.title">移动终端取代传统</h4>
-                                <p data-i18n="insights.trends.item4.description">中南美及东南亚大量部署 Android 自助终端，传统POS终端采购量下降37%。巴西、菲律宾转型最快。</p>
+                                <h4 data-i18n="insights.trends.trend4.title">跨境合作增多</h4>
+                                <p data-i18n="insights.trends.trend4.description">国际彩票联盟、跨国运营商合作模式日益成熟</p>
                             </div>
                         </div>
                         
@@ -1057,8 +1133,8 @@
                                 <i class="fas fa-dice"></i>
                             </div>
                             <div class="trend-content">
-                                <h4 data-i18n="insights.trends.item5.title">玩法融合创新加速</h4>
-                                <p data-i18n="insights.trends.item5.description">即开×竞猜、乐透×NFT 等玩法成为年轻化趋势试点，玩家平均年龄下降5.2岁。韩国、阿联酋试点效果显著。</p>
+                                <h4 data-i18n="insights.trends.trend5.title">可持续发展重视</h4>
+                                <p data-i18n="insights.trends.trend5.description">ESG理念融入彩票运营，绿色彩票、社会责任成为关键词</p>
                             </div>
                         </div>
                     </div>
@@ -1071,7 +1147,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2 data-i18n="insights.policy.title">全球彩票政策追踪</h2>
-                    <p data-i18n="insights.policy.subtitle">实时更新各国彩票法律、监管变化与风险分析</p>
+                    <p data-i18n="insights.policy.subtitle">实时跟踪全球彩票政策法规变化</p>
                 </div>
                 
                 <div class="policy-timeline">
@@ -1079,8 +1155,8 @@
                         <div class="policy-date">2025年5月</div>
                         <div class="policy-content">
                             <span class="country-flag">🇳🇬</span>
-                            <strong data-i18n="insights.policy.item1.title">尼日利亚国家彩票法修订草案发布</strong>
-                            <p data-i18n="insights.policy.item1.description">拟开放外国企业参股私营发行机构，要求系统与安全合规双认证。预计2025Q4实施，将带动西非市场投资热潮。</p>
+                            <strong data-i18n="insights.policy.nigeria.title">尼日利亚新彩票法案通过</strong>
+                            <p data-i18n="insights.policy.nigeria.description">允许私营运营商参与，预计市场规模增长300%</p>
                             <div class="article-tags">
                                 <span class="tag">非洲市场</span>
                                 <span class="tag">政策解读</span>
@@ -1092,8 +1168,8 @@
                         <div class="policy-date">2025年4月</div>
                         <div class="policy-content">
                             <span class="country-flag">🇹🇭</span>
-                            <strong data-i18n="insights.policy.item2.title">泰国政府发布彩票数字化白皮书</strong>
-                            <p data-i18n="insights.policy.item2.description">预计2026年上线全国统一在线彩票平台，将采用区块链技术确保交易透明。私营运营商可申请系统对接资质。</p>
+                            <strong data-i18n="insights.policy.thailand.title">泰国数字彩票试点启动</strong>
+                            <p data-i18n="insights.policy.thailand.description">首批5个省份开始数字彩票销售试点项目</p>
                             <div class="article-tags">
                                 <span class="tag">东南亚</span>
                                 <span class="tag">数字化</span>
@@ -1105,8 +1181,8 @@
                         <div class="policy-date">2025年3月</div>
                         <div class="policy-content">
                             <span class="country-flag">🇨🇴</span>
-                            <strong data-i18n="insights.policy.item3.title">哥伦比亚修订彩票税收政策</strong>
-                            <p data-i18n="insights.policy.item3.description">私营运营商税率从20%降至15%，但要求将2%收入投入社会责任项目。预计将吸引国际运营商进入市场。</p>
+                            <strong data-i18n="insights.policy.colombia.title">哥伦比亚修订彩票税收政策</strong>
+                            <p data-i18n="insights.policy.colombia.description">降低彩票税率至15%，刺激市场增长</p>
                             <div class="article-tags">
                                 <span class="tag">拉美市场</span>
                                 <span class="tag">财税政策</span>
@@ -1118,8 +1194,8 @@
                         <div class="policy-date">2025年2月</div>
                         <div class="policy-content">
                             <span class="country-flag">🇵🇰</span>
-                            <strong data-i18n="insights.policy.item4.title">巴基斯坦批准省级彩票运营权下放</strong>
-                            <p data-i18n="insights.policy.item4.description">允许各省自主选择运营商，需满足中央技术标准。信德省已启动招标，预计带动5亿美元设备采购需求。</p>
+                            <strong data-i18n="insights.policy.pakistan.title">巴基斯坦彩票合法化进程</strong>
+                            <p data-i18n="insights.policy.pakistan.description">议会正在审议彩票合法化法案，预计年内通过</p>
                             <div class="article-tags">
                                 <span class="tag">南亚</span>
                                 <span class="tag">地方政策</span>
@@ -1134,8 +1210,8 @@
         <section class="webinars-section" id="tech">
             <div class="container">
                 <div class="section-title">
-                    <h2 data-i18n="insights.tech.title">AI+彩票：全球主流应用路径与模型拆解</h2>
-                    <p data-i18n="insights.tech.subtitle">深度分析人工智能技术在彩票行业的创新应用</p>
+                    <h2 data-i18n="insights.tech_trends.title">技术趋势</h2>
+                    <p data-i18n="insights.tech_trends.subtitle">探索彩票行业最新技术应用与创新</p>
                 </div>
                 
                 <div class="articles-grid">
@@ -1148,14 +1224,14 @@
                                 <span>技术趋势</span>
                                 <span>2025-05-15</span>
                             </div>
-                            <h3 data-i18n="insights.tech.item1.title">客户行为预测模型</h3>
-                            <p data-i18n="insights.tech.item1.description">构建"购买偏好+中奖频次"识别画像，提升营销精准度达40%。墨西哥运营商应用后ARPU值提升22%。</p>
+                            <h3 data-i18n="insights.tech_trends.ai_prediction.title">AI在客户行为预测中的应用</h3>
+                            <p data-i18n="insights.tech_trends.ai_prediction.description">机器学习算法帮助运营商更好地理解客户需求，提升销售转化率</p>
                             <div class="article-tags">
                                 <span class="tag">AI应用</span>
                                 <span class="tag">精准营销</span>
                             </div>
                             <div class="article-link">
-                                <span data-i18n="insights.read_more">阅读全文</span> <i class="fas fa-arrow-right"></i>
+                                <span data-i18n="insights.tech_trends.read_more">阅读全文</span> <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
@@ -1169,14 +1245,14 @@
                                 <span>安全技术</span>
                                 <span>2025-04-28</span>
                             </div>
-                            <h3 data-i18n="insights.tech.item2.title">防伪逻辑演进路径</h3>
-                            <p data-i18n="insights.tech.item2.description">从传统票面加密 → 图像溯源 → 区块链记录的技术升级路径。南非新系统伪造率下降至0.003%。</p>
+                            <h3 data-i18n="insights.tech_trends.anti_counterfeiting.title">区块链防伪技术突破</h3>
+                            <p data-i18n="insights.tech_trends.anti_counterfeiting.description">基于区块链的彩票防伪系统，确保开奖过程透明可信</p>
                             <div class="article-tags">
                                 <span class="tag">防伪技术</span>
                                 <span class="tag">区块链</span>
                             </div>
                             <div class="article-link">
-                                阅读全文 <i class="fas fa-arrow-right"></i>
+                                <span data-i18n="insights.game_innovation.read_more">阅读全文</span> <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
@@ -1190,8 +1266,8 @@
                                 <span>产品创新</span>
                                 <span>2025-04-10</span>
                             </div>
-                            <h3 data-i18n="insights.tech.item3.title">玩法设计智能化实践</h3>
-                            <p data-i18n="insights.tech.item3.description">自动生成奖级组合+风险控制建议，缩短新玩法开发周期60%。已应用于乌兹别克斯坦12款新票种设计。</p>
+                            <h3 data-i18n="insights.tech_trends.intelligent_design.title">智能游戏设计平台</h3>
+                            <p data-i18n="insights.tech_trends.intelligent_design.description">AI驱动的游戏设计工具，快速生成符合本地化需求的彩票游戏</p>
                             <div class="article-tags">
                                 <span class="tag">AI设计</span>
                                 <span class="tag">玩法创新</span>
@@ -1209,8 +1285,8 @@
         <section class="reports-section" id="games">
             <div class="container">
                 <div class="section-title">
-                    <h2>全球彩票玩法创新报告</h2>
-                    <p>分析最新玩法趋势与用户体验优化方案</p>
+                    <h2 data-i18n="insights.game_innovation.title">全球彩票玩法创新报告</h2>
+                    <p data-i18n="insights.game_innovation.subtitle">分析最新玩法趋势与用户体验优化方案</p>
                 </div>
                 
                 <div class="articles-grid">
@@ -1223,11 +1299,11 @@
                                 <span>玩法设计</span>
                                 <span>2025-03-22</span>
                             </div>
-                            <h3>即开票与NFT结合实践</h3>
-                            <p>阿联酋试点"数字收藏版"即开票，中奖票可兑换NFT艺术品，年轻玩家占比提升至58%。</p>
+                            <h3 data-i18n="insights.game_innovation.item1.title">即开票与NFT结合实践</h3>
+                            <p data-i18n="insights.game_innovation.item1.description">阿联酋试点"数字收藏版"即开票，中奖票可兑换NFT艺术品，年轻玩家占比提升至58%。</p>
                             <div class="article-tags">
-                                <span class="tag">NFT</span>
-                                <span class="tag">年轻化</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item1.tag1">NFT</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item1.tag2">年轻化</span>
                             </div>
                             <div class="article-link">
                                 阅读全文 <i class="fas fa-arrow-right"></i>
@@ -1244,11 +1320,11 @@
                                 <span>体育竞猜</span>
                                 <span>2025-03-15</span>
                             </div>
-                            <h3>微型赛事竞猜模式崛起</h3>
-                            <p>巴西推出"90秒赛事"即时竞猜，单日投注量突破200万笔，平均投注额下降但频次提升3倍。</p>
+                            <h3 data-i18n="insights.game_innovation.item2.title">微型赛事竞猜模式崛起</h3>
+                            <p data-i18n="insights.game_innovation.item2.description">巴西推出"90秒赛事"即时竞猜，单日投注量突破200万笔，平均投注额下降但频次提升3倍。</p>
                             <div class="article-tags">
-                                <span class="tag">微竞猜</span>
-                                <span class="tag">即时开奖</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item2.tag1">微竞猜</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item2.tag2">即时开奖</span>
                             </div>
                             <div class="article-link">
                                 阅读全文 <i class="fas fa-arrow-right"></i>
@@ -1265,11 +1341,11 @@
                                 <span>社交玩法</span>
                                 <span>2025-02-28</span>
                             </div>
-                            <h3>团体合买功能设计指南</h3>
-                            <p>分析印尼"Group Play"功能：组团合买转化率提升27%，但需注意奖金分配合规性设计。</p>
+                            <h3 data-i18n="insights.game_innovation.item3.title">团体合买功能设计指南</h3>
+                            <p data-i18n="insights.game_innovation.item3.description">分析印尼"Group Play"功能：组团合买转化率提升27%，但需注意奖金分配合规性设计。</p>
                             <div class="article-tags">
-                                <span class="tag">社交功能</span>
-                                <span class="tag">合买</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item3.tag1">社交功能</span>
+                                <span class="tag" data-i18n="insights.game_innovation.item3.tag2">合买</span>
                             </div>
                             <div class="article-link">
                                 阅读全文 <i class="fas fa-arrow-right"></i>
@@ -1284,52 +1360,52 @@
         <section class="case-compare" id="cases">
             <div class="container">
                 <div class="section-title">
-                    <h2>拉美三国彩票改革比较</h2>
-                    <p>智利、秘鲁、阿根廷三国不同改革路径的深度分析</p>
+                    <h2 data-i18n="insights.case_compare.title">拉美三国彩票改革比较</h2>
+                    <p data-i18n="insights.case_compare.subtitle">智利、秘鲁、阿根廷三国不同改革路径的深度分析</p>
                 </div>
                 
                 <table class="compare-table">
                     <thead>
                         <tr>
-                            <th>国家</th>
-                            <th>政策路径</th>
-                            <th>成功要素</th>
-                            <th>风险教训</th>
+                            <th data-i18n="insights.case_compare.table.country">国家</th>
+                            <th data-i18n="insights.case_compare.table.policy_path">政策路径</th>
+                            <th data-i18n="insights.case_compare.table.success_factors">成功要素</th>
+                            <th data-i18n="insights.case_compare.table.risk_lessons">风险教训</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>🇨🇱 智利</td>
-                            <td>公开招标私营承包</td>
-                            <td class="good-practice">独立发行系统+渠道合作</td>
-                            <td class="bad-practice">缺乏印刷合规监管</td>
+                            <td data-i18n="insights.case_compare.chile.country">🇨🇱 智利</td>
+                            <td data-i18n="insights.case_compare.chile.policy">公开招标私营承包</td>
+                            <td class="good-practice" data-i18n="insights.case_compare.chile.success">独立发行系统+渠道合作</td>
+                            <td class="bad-practice" data-i18n="insights.case_compare.chile.risk">缺乏印刷合规监管</td>
                         </tr>
                         <tr>
-                            <td>🇵🇪 秘鲁</td>
-                            <td>合资运营与跨国集团合作</td>
-                            <td class="good-practice">提前设立合规标准</td>
-                            <td class="bad-practice">玩家欺诈风险高</td>
+                            <td data-i18n="insights.case_compare.peru.country">🇵🇪 秘鲁</td>
+                            <td data-i18n="insights.case_compare.peru.policy">合资运营与跨国集团合作</td>
+                            <td class="good-practice" data-i18n="insights.case_compare.peru.success">提前设立合规标准</td>
+                            <td class="bad-practice" data-i18n="insights.case_compare.peru.risk">玩家欺诈风险高</td>
                         </tr>
                         <tr>
-                            <td>🇦🇷 阿根廷</td>
-                            <td>地区独立运营模式</td>
-                            <td class="good-practice">地方票种灵活多样</td>
-                            <td class="bad-practice">市场过度碎片化</td>
+                            <td data-i18n="insights.case_compare.argentina.country">🇦🇷 阿根廷</td>
+                            <td data-i18n="insights.case_compare.argentina.policy">地区独立运营模式</td>
+                            <td class="good-practice" data-i18n="insights.case_compare.argentina.success">地方票种灵活多样</td>
+                            <td class="bad-practice" data-i18n="insights.case_compare.argentina.risk">市场过度碎片化</td>
                         </tr>
                     </tbody>
                 </table>
                 
                 <div class="article-card" style="margin-top: 40px;">
                     <div class="article-content">
-                        <h3>关键发现总结</h3>
-                        <p>通过对拉美三国彩票改革路径的比较分析，我们发现：</p>
+                        <h3 data-i18n="insights.case_compare.summary.title">关键发现总结</h3>
+                        <p data-i18n="insights.case_compare.summary.description">通过对拉美三国彩票改革路径的比较分析，我们发现：</p>
                         <ul style="margin: 15px 0 20px 20px;">
-                            <li style="margin-bottom: 10px;">私营化模式(智利)初期见效快，但长期监管挑战大</li>
-                            <li style="margin-bottom: 10px;">合资模式(秘鲁)能快速引入国际经验，但需防范技术依赖</li>
-                            <li>地方自治模式(阿根廷)激发创新活力，但难以形成规模效应</li>
+                            <li style="margin-bottom: 10px;" data-i18n="insights.case_compare.summary.point1">私营化模式(智利)初期见效快，但长期监管挑战大</li>
+                            <li style="margin-bottom: 10px;" data-i18n="insights.case_compare.summary.point2">合资模式(秘鲁)能快速引入国际经验，但需防范技术依赖</li>
+                            <li data-i18n="insights.case_compare.summary.point3">地方自治模式(阿根廷)激发创新活力，但难以形成规模效应</li>
                         </ul>
                         <div class="article-link">
-                            下载完整比较报告(PDF) <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="insights.case_compare.download_report">下载完整比较报告(PDF)</span> <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -1340,8 +1416,8 @@
         <section class="reports-section" id="whitepapers">
             <div class="container">
                 <div class="section-title">
-                    <h2>专业白皮书下载</h2>
-                    <p>LottoBridge发布的全球调研系列深度报告</p>
+                    <h2 data-i18n="insights.whitepapers.title">专业白皮书下载</h2>
+                    <p data-i18n="insights.whitepapers.subtitle">LottoBridge发布的全球调研系列深度报告</p>
                 </div>
                 
                 <div class="reports-grid">
@@ -1350,14 +1426,14 @@
                             <i class="fas fa-file-pdf"></i>
                         </div>
                         <div class="report-content">
-                            <h3>非洲彩票政策与市场布局2025</h3>
+                            <h3 data-i18n="insights.whitepapers.report1.title">非洲彩票政策与市场布局2025</h3>
                             <div class="report-meta">
                                 <span>PDF / PPT</span>
                                 <span>15MB</span>
                             </div>
-                            <p class="report-desc">覆盖12国政策要点、玩法结构、机会地图与风险预警</p>
+                            <p class="report-desc" data-i18n="insights.whitepapers.report1.description">覆盖12国政策要点、玩法结构、机会地图与风险预警</p>
                             <a href="#" class="download-btn">
-                                <i class="fas fa-download"></i> 下载报告
+                                <i class="fas fa-download"></i> <span data-i18n="insights.whitepapers.download_btn">下载报告</span>
                             </a>
                         </div>
                     </div>
@@ -1367,14 +1443,14 @@
                             <i class="fas fa-scroll"></i>
                         </div>
                         <div class="report-content">
-                            <h3>即开票玩法设计与票面创新指南</h3>
+                            <h3 data-i18n="insights.whitepapers.report2.title">即开票玩法设计与票面创新指南</h3>
                             <div class="report-meta">
                                 <span>PDF</span>
                                 <span>8MB</span>
                             </div>
-                            <p class="report-desc">包含7种票面设计模板、3种安全方案与5个新兴市场案例</p>
+                            <p class="report-desc" data-i18n="insights.whitepapers.report2.description">包含7种票面设计模板、3种安全方案与5个新兴市场案例</p>
                             <a href="#" class="download-btn">
-                                <i class="fas fa-download"></i> 下载报告
+                                <i class="fas fa-download"></i> <span data-i18n="insights.whitepapers.download_btn">下载报告</span>
                             </a>
                         </div>
                     </div>
@@ -1384,12 +1460,12 @@
                             <i class="fas fa-laptop"></i>
                         </div>
                         <div class="report-content">
-                            <h3>全球终端设备发展趋势报告</h3>
+                            <h3 data-i18n="insights.whitepapers.report3.title">全球终端设备发展趋势报告</h3>
                             <div class="report-meta">
                                 <span>PDF / 网页</span>
                                 <span>22MB</span>
                             </div>
-                            <p class="report-desc">分析56款主流终端的技术规格、兼容性与安全性测试结果</p>
+                            <p class="report-desc" data-i18n="insights.whitepapers.report3.description">分析56款主流终端的技术规格、兼容性与安全性测试结果</p>
                             <a href="#" class="download-btn">
                                 <i class="fas fa-download"></i> 下载报告
                             </a>
@@ -1605,6 +1681,27 @@
                 this.querySelector('input').value = '';
             });
         }
+    </script>
+    
+    <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化多语言管理器
+            if (typeof I18nManager !== 'undefined' && typeof window.languages !== 'undefined') {
+                window.i18n = new I18nManager();
+                window.i18n.init();
+                
+                // 绑定语言选择器事件
+                const languageSelector = document.getElementById('languageSelector');
+                if (languageSelector) {
+                    languageSelector.addEventListener('change', function() {
+                        window.i18n.changeLanguage(this.value);
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>

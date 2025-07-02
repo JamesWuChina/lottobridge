@@ -86,19 +86,25 @@
         .nav-links {
             display: flex;
             list-style: none;
-            margin-left: 40px;
+            margin-right: 30px;
+            flex-wrap: nowrap !important;
+            gap: 20px;
+            align-items: center;
         }
 
         .nav-links li {
-            margin-right: 30px;
+            flex-shrink: 0;
             position: relative;
         }
 
         .nav-links a {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 15px;
             color: var(--nav-blue);
-            padding: 5px 0;
+            padding: 10px 15px;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
             position: relative;
         }
 
@@ -120,33 +126,73 @@
 
         /* 语言选择器 - 移动到右上角 */
         .language-selector {
-            position: static;
-            margin-left: auto;
-            margin-right: 20px;
+            position: relative;
+            margin: 0 20px 0 auto;
         }
 
-        .language-selector select {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
+        .language-selector::before {
+            content: '🌐';
+            font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+            font-weight: 400;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
             font-size: 14px;
-            cursor: pointer;
-            appearance: none;
-            padding-right: 30px;
+            z-index: 1;
+            pointer-events: none;
         }
 
         .language-selector::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+            content: '▼';
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 400;
             position: absolute;
-            right: 10px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 10px;
+            z-index: 1;
             pointer-events: none;
-            color: var(--medium-gray);
-            font-size: 12px;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,255,0.95));
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            color: var(--primary-blue);
+            min-width: 100px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.5px;
+        }
+
+        .language-selector select:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+            border-color: var(--primary-red);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .language-selector::after {
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .mobile-menu-btn {
@@ -543,44 +589,41 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                transform: translateY(-150%);
-                transition: var(--transition);
-                z-index: 999;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            }
-            
-            nav.active {
-                transform: translateY(0);
-            }
-            
             .nav-links {
-                flex-direction: column;
-                margin-left: 0;
-                width: 100%;
+                gap: 15px;
+                margin-right: 15px;
             }
             
-            .nav-links li {
-                margin: 0 0 15px 0;
-                width: 100%;
+            .nav-links li a {
+                font-size: 13px;
+                padding: 8px 12px;
             }
             
             .language-selector {
-                position: static;
-                transform: none;
-                margin-top: 20px;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 6px 25px 6px 8px;
+                min-width: 80px;
+                border-radius: 6px;
+            }
+            
+            .language-selector::before,
+            .language-selector::after {
+                font-size: 10px;
+                left: 8px;
+                right: 8px;
+            }
+            
+            .logo {
+                font-size: 20px;
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: none;
             }
             
             .hero-buttons,
@@ -599,6 +642,38 @@
             
             .solutions-hero p {
                 font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 8px;
+                margin-right: 8px;
+            }
+            
+            .nav-links li a {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+            
+            .language-selector {
+                margin-right: 5px;
+            }
+            
+            .language-selector select {
+                font-size: 10px;
+                padding: 4px 20px 4px 6px;
+                min-width: 70px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            .hero-buttons,
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
             }
         }
 
@@ -656,11 +731,14 @@
             </nav>
             
             <div class="language-selector">
-                <select>
-                    <option value="zh" selected>中文</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="en">🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
                 </select>
             </div>
             
@@ -1150,6 +1228,10 @@
         </div>
     </footer>
     
+    <!-- 多语言支持脚本 -->
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+    
     <script>
         // 移动菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1170,6 +1252,23 @@
                 header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
             } else {
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+        
+        // 多语言功能初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化多语言支持
+            if (typeof I18nManager !== 'undefined' && typeof window.languages !== 'undefined') {
+                window.i18n = new I18nManager();
+                window.i18n.init();
+                
+                // 绑定语言选择器事件
+                const languageSelector = document.getElementById('languageSelector');
+                if (languageSelector) {
+                    languageSelector.addEventListener('change', function() {
+                        window.i18n.changeLanguage(this.value);
+                    });
+                }
             }
         });
     </script>
