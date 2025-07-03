@@ -1,4 +1,13 @@
-// 多语言系统主文件 - 兼容浏览器版本
+// 多语言系统主文件
+// 导入所有语言包
+import zh from './zh.js';
+import en from './en.js';
+import fr from './fr.js';
+import es from './es.js';
+import ko from './ko.js';
+import ar from './ar.js';
+import ru from './ru.js';
+
 // 语言配置
 const languageConfig = {
     zh: {
@@ -6,49 +15,49 @@ const languageConfig = {
         nativeName: '中文',
         flag: '🇨🇳',
         direction: 'ltr',
-        data: window.zh || {}
+        data: zh
     },
     en: {
         name: 'English',
         nativeName: 'English',
         flag: '🇺🇸',
         direction: 'ltr',
-        data: window.en || {}
+        data: en
     },
     fr: {
         name: 'Français',
         nativeName: 'Français',
         flag: '🇫🇷',
         direction: 'ltr',
-        data: window.fr || {}
+        data: fr
     },
     es: {
         name: 'Español',
         nativeName: 'Español',
         flag: '🇪🇸',
         direction: 'ltr',
-        data: window.es || {}
+        data: es
     },
     ko: {
         name: '한국어',
         nativeName: '한국어',
         flag: '🇰🇷',
         direction: 'ltr',
-        data: window.ko || {}
+        data: ko
     },
     ar: {
         name: 'العربية',
         nativeName: 'العربية',
         flag: '🇸🇦',
         direction: 'rtl',
-        data: window.ar || {}
+        data: ar
     },
     ru: {
         name: 'Русский',
         nativeName: 'Русский',
         flag: '🇷🇺',
         direction: 'ltr',
-        data: window.ru || {}
+        data: ru
     }
 };
 
@@ -191,16 +200,16 @@ const i18n = {
 };
 
 // 导出到全局对象
-window.i18n = i18n;
-window.languageConfig = languageConfig;
+if (typeof window !== 'undefined') {
+    window.i18n = i18n;
+    window.languageConfig = languageConfig;
+}
 
-// 兼容旧版本
-window.languages = {
-    zh: languageConfig.zh.data,
-    en: languageConfig.en.data,
-    fr: languageConfig.fr.data,
-    es: languageConfig.es.data,
-    ko: languageConfig.ko.data,
-    ar: languageConfig.ar.data,
-    ru: languageConfig.ru.data
-};
+// 模块导出
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = i18n;
+} else if (typeof exports !== 'undefined') {
+    exports.i18n = i18n;
+}
+
+export default i18n; 

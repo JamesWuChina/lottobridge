@@ -974,7 +974,7 @@
             
             <div class="language-selector">
                 <select id="languageSelector">
-                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="zh">🇨🇳 中文 (CN)</option>
                     <option value="en">🇺🇸 English (US)</option>
                     <option value="fr">🇫🇷 Français (FR)</option>
                     <option value="es">🇪🇸 Español (ES)</option>
@@ -1351,7 +1351,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>LottoBridge</h3>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
                     <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -1364,41 +1364,56 @@
                 <div class="footer-col">
                     <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="market-research.html" data-i18n="footer.products.market_research">市场调研与咨询</a></li>
-                        <li><a href="products.html" data-i18n="footer.products.lottery_system">彩票系统解决方案</a></li>
-                        <li><a href="products.html" data-i18n="footer.products.terminal_equipment">终端设备供应</a></li>
-                        <li><a href="products.html" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
-                        <li><a href="products.html" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="#" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.market_research">市场调研服务</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3 data-i18n="footer.resources.title">资源中心</h3>
                     <ul>
-                        <li><a href="market-research.html" data-i18n="footer.resources.industry_reports">行业报告</a></li>
-                        <li><a href="case-studies.html" data-i18n="footer.resources.case_studies">案例研究</a></li>
-                        <li><a href="insights.html" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
-                        <li><a href="insights.html" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
-                        <li><a href="contact.html" data-i18n="footer.resources.faq">常见问题</a></li>
+                        <li><a href="#" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="#" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">常见问题</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3 data-i18n="footer.contact.title">联系我们</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
-                        <li><i class="fas fa-phone"></i> +86 10 8888 8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.contact.address">北京市朝阳区建国路88号</span></li>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +8615110134225</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p><span data-i18n="footer.copyright">&copy; 2023 LottoBridge. 保留所有权利。</span> | <a href="#" data-i18n="footer.privacy_policy">隐私政策</a> | <a href="#" data-i18n="footer.terms_of_service">使用条款</a></p>
+                <p>
+                    <span data-i18n="footer.copyright.company">&copy; 2023 LottoBridge</span>.
+                    <span data-i18n="footer.copyright.rights">保留所有权利。</span>
+                    | <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a>
+                    | <a href="#" data-i18n="footer.copyright.terms">使用条款</a>
+                </p>
             </div>
         </div>
     </footer>
     
+    <!-- 多语言支持脚本 -->
+    <script src="js/languages/zh.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
     <script>
         // 移动菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1437,47 +1452,34 @@
                 this.classList.add('active');
                 // 这里可以添加实际筛选逻辑
             });
- });
-    </script>
-    
-    <!-- 多语言支持脚本 -->
-    <script src="js/languages.js"></script>
-    <script src="js/i18n.js"></script>
-    <script>
-        // 初始化多语言支持
+        });
+        
+        // 多语言功能初始化
         document.addEventListener('DOMContentLoaded', function() {
-            // 等待i18n实例准备就绪
-            function initializeLanguageSupport() {
-                if (window.i18n) {
-                    console.log('Initializing language support...');
-                    
-                    // 手动触发语言应用，确保页面正确显示
-                    const currentLang = window.i18n.getCurrentLanguage();
-                    window.i18n.applyLanguage(currentLang);
+            // 等待i18n系统初始化完成
+            function initLanguageSelector() {
+                if (window.i18nManager) {
+                    console.log('多语言系统已初始化，当前语言:', window.i18nManager.getCurrentLanguage());
                     
                     // 绑定语言选择器事件
                     const languageSelector = document.querySelector('.language-selector select');
                     if (languageSelector) {
-                        languageSelector.value = currentLang;
+                        // 设置当前语言
+                        languageSelector.value = window.i18nManager.getCurrentLanguage();
                         
-                        // 添加事件监听器
                         languageSelector.addEventListener('change', function(e) {
                             const selectedLanguage = e.target.value;
                             console.log('Language changed to:', selectedLanguage);
-                            window.i18n.changeLanguage(selectedLanguage);
+                            window.i18nManager.setLanguage(selectedLanguage);
                         });
-                        
-                        console.log('Language selector initialized with:', currentLang);
-                    } else {
-                        console.warn('Language selector not found');
                     }
                 } else {
-                    console.warn('i18n instance not ready, retrying...');
-                    setTimeout(initializeLanguageSupport, 200);
+                    // 如果i18n还没初始化，等待一下再试
+                    setTimeout(initLanguageSelector, 100);
                 }
             }
             
-            initializeLanguageSupport();
+            initLanguageSelector();
         });
     </script>
 </body>
