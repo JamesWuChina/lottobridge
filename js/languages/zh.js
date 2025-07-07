@@ -158,56 +158,163 @@ const zh = {
     },
     // 首页横幅
     hero: {
-        title: '全球彩票出海一站式解决方案平台',
-        subtitle: '依托中国强大的彩票产业链资源，整合系统软件、终端硬件、票券印刷、热敏耗材等核心能力，帮助各国政府机构、私营运营商快速进入彩票市场',
-        cta_primary: 'AI生成市场调研报告',
-        cta_secondary: '联系我们的顾问'
+        title: '一站式全球彩票出海解决平台',
+        subtitle: '从市场调研到系统搭建、终端供应与票券印制，全流程 AI 驱动支持市场落地',
+        cta_primary: '📊 获取国家市场报告',
+        cta_secondary: '📞 定制本地化解决方案',
+        support_text: '提供7种语言支持，服务覆盖50+国家和地区'
     },
     // 特色服务
     features: {
         title: '我们能为您做什么',
         subtitle: 'LottoBridge不只是一个B2B平台，更是一个打包式的彩票商业落地系统，帮助客户从"有没有机会"到"如何落地"一步到位',
-        consulting: {
-            title: '前期咨询与市场规划',
-            description: 'AI全球市场调研引擎一键生成100+国家彩票政策、市场规模、风险分析等专业报告'
+        learn_more: '了解详情',
+        market_research: {
+            title: '市场调研',
+            description: 'AI驱动的全球彩票市场分析，提供政策法规、市场规模、竞争格局等专业报告'
         },
-        products: {
-            title: '产品与技术服务',
-            description: '全彩彩票系统服务、终端设备供应链、彩票游戏设计与开发、票券印刷与热敏纸服务'
+        system_development: {
+            title: '系统搭建',
+            description: '完整的彩票销售、开奖、结算系统，支持多种玩法，满足国际监管要求'
         },
-        support: {
-            title: '运营支持与落地服务',
-            description: '培训与运营辅导、供需撮合与订单管理、出口与合规支持、战略合作伙伴匹配'
+        terminal_equipment: {
+            title: '终端设备',
+            description: '高性能彩票终端机、自助售票机、移动销售设备，适应各种销售场景'
+        },
+        lottery_printing: {
+            title: '彩票印制',
+            description: '安全防伪的即开票印刷服务，符合国际安全标准，支持定制化设计'
+        },
+        thermal_supplies: {
+            title: '热敏耗材',
+            description: '高品质热敏纸、碳带等耗材供应，确保打印质量和设备稳定运行'
+        },
+        maintenance_service: {
+            title: '运维服务',
+            description: '7×24小时技术支持，远程监控，定期维护，确保系统稳定运行'
+        },
+        training_support: {
+            title: '培训支持',
+            description: '专业的操作培训、管理培训和技术培训，助力团队快速上手'
         }
     },
     // 解决方案
     solutions: {
-        title: '我们的核心解决方案',
-        subtitle: '针对不同市场需求的定制化产品与服务',
-        software: {
-            title: '彩票系统软件',
-            description: '完整的彩票销售、开奖、结算系统，支持多种彩票玩法，满足不同国家监管要求'
+        title: '我们的一站式服务能力',
+        subtitle: 'LottoBridge提供从调研到落地的全流程交付能力，确保您的彩票业务成功启航',
+        market_research: {
+            title: '市场调研与可行性评估',
+            description: '结合AI与专家分析，提供落地前的商业判断支持'
         },
-        hardware: {
-            title: '终端硬件设备',
-            description: '高性能彩票终端机、自助售票机、移动销售设备，适应各种销售场景'
+        system_solution: {
+            title: '彩票系统解决方案',
+            description: '提供数字彩票、即开票、竞猜、视频票等系统搭建与部署'
         },
-        printing: {
-            title: '票券印刷服务',
-            description: '安全防伪的即开票印刷，符合国际安全标准，支持定制化设计'
+        terminal_deployment: {
+            title: '多终端设备部署',
+            description: '支持手持机、自助机、兑奖终端等多形态接入'
+        },
+        printing_supply: {
+            title: '彩票印制与耗材供应',
+            description: '满足不同玩法的印刷、防伪与热敏纸等全流程支持'
+        },
+        maintenance_compliance: {
+            title: '运维与监管合规支持',
+            description: '远程系统维护、数据审计与监管接口接入'
+        },
+        training_delivery: {
+            title: '启动培训与本地化交付',
+            description: '面向运营方与销售终端提供完整培训体系'
         },
         learn_more: '了解更多'
     },
-    // 全球覆盖
+    // 市场调研报告精选
+    market_reports: {
+        title: '全球彩票市场情报报告',
+        subtitle: '基于AI驱动的市场分析，为您提供最新的全球彩票市场洞察',
+        view_report: '查看报告',
+        reports: {
+            egypt: {
+                title: '埃及彩票市场深度分析',
+                date: '2024年1月',
+                highlights: ['市场规模4.3亿美元', '年增长率8%', '数字化转型机会']
+            },
+            mexico: {
+                title: '墨西哥彩票市场机会评估',
+                date: '2024年2月',
+                highlights: ['私营准入政策', '12.5亿美元市场', '体育竞猜增长']
+            },
+            philippines: {
+                title: '菲律宾彩票市场前景报告',
+                date: '2024年3月',
+                highlights: ['高增长潜力', '8.7亿美元规模', '电子游戏兴起']
+            }
+        }
+    },
+    // 合作案例精选
+    case_studies: {
+        title: '合作案例精选',
+        subtitle: '真实的成功案例，展示LottoBridge如何帮助客户实现彩票业务落地',
+        view_details: '查看详情',
+        cases: {
+            nigeria: {
+                title: '尼日利亚国家彩票系统项目',
+                client_type: '政府机构',
+                scope: '全国覆盖',
+                description: '为尼日利亚政府提供完整的彩票系统解决方案，包括系统开发、终端部署、运营培训等全流程服务。',
+                deliverables: ['彩票系统开发', '1000台终端部署', '运营团队培训', '合规咨询服务']
+            },
+            cambodia: {
+                title: '柬埔寨私营彩票运营项目',
+                client_type: '私营运营商',
+                scope: '区域试点',
+                description: '协助柬埔寨私营运营商快速启动彩票业务，从市场调研到系统上线仅用时3个月。',
+                deliverables: ['市场可行性分析', '系统定制开发', '印刷服务对接', '本地化培训']
+            }
+        }
+    },
+    // 全球服务数据图
     global: {
-        title: '全球市场覆盖',
-        subtitle: '我们的解决方案已在全球多个国家和地区成功落地',
+        title: '全球服务数据',
+        subtitle: 'LottoBridge在全球市场的服务覆盖和业务数据展示',
+        stats: {
+            countries: {
+                number: '50+',
+                label: '服务国家',
+                description: '覆盖全球主要彩票市场'
+            },
+            languages: {
+                number: '12',
+                label: '支持语言',
+                description: '多语言本地化服务'
+            },
+            projects: {
+                number: '200+',
+                label: '覆盖项目',
+                description: '成功交付的彩票项目'
+            },
+            users: {
+                number: '1000万+',
+                label: '终端用户',
+                description: '服务的彩票玩家数量'
+            }
+        },
         regions: {
-            latin_america: '拉丁美洲',
-            africa: '非洲',
-            southeast_asia: '东南亚',
-            central_eastern_europe: '中东欧',
-            middle_east: '中东'
+            asia_pacific: {
+                name: '亚太地区',
+                count: '18个国家',
+                description: '包括东南亚、南亚等主要市场'
+            },
+            africa: {
+                name: '非洲地区',
+                count: '15个国家',
+                description: '覆盖东非、西非、南非等区域'
+            },
+            latin_america: {
+                name: '拉丁美洲',
+                count: '12个国家',
+                description: '墨西哥、巴西等重点市场'
+            }
         }
     },
     // 客户评价
@@ -980,4 +1087,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = zh;
 } else {
     window.zh = zh;
-} 
+}

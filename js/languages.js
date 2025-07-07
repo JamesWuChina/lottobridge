@@ -6,7 +6,15 @@ const languageConfig = {
         nativeName: '中文',
         flag: '🇨🇳',
         direction: 'ltr',
-        data: window.zh || {}
+        data: window.zh || {
+            // 首页横幅
+            hero: {
+                title: '一站式全球彩票出海解决平台',
+                subtitle: '从市场调研到系统搭建、终端供应与票券印制，全流程 AI 驱动支持市场落地',
+                cta_primary: '立即咨询',
+                cta_secondary: '了解更多'
+            }
+        }
     },
     en: {
         name: 'English',

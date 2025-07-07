@@ -160,8 +160,8 @@ const fr = {
     hero: {
         title: 'Plateforme de Solutions Complètes pour l\'Industrie Mondiale de la Loterie',
         subtitle: 'Exploitant les ressources puissantes de la chaîne industrielle de loterie de la Chine, intégrant les capacités de base en logiciels système, matériel terminal, impression de billets et consommables thermiques pour aider les agences gouvernementales et opérateurs privés du monde entier à entrer rapidement sur le marché de la loterie',
-        cta_primary: 'Rapport de Recherche de Marché IA',
-        cta_secondary: 'Contacter Nos Consultants'
+        cta_primary: 'Obtenir une Solution Personnalisée',
+        cta_secondary: 'Voir les Rapports de Marché'
     },
     // Features
     features: {
@@ -198,16 +198,93 @@ const fr = {
         },
         learn_more: 'En Savoir Plus'
     },
-    // Global Coverage
+    // Rapports de Recherche de Marché en Vedette
+    market_reports: {
+        title: 'Rapports d\'Intelligence de Marché de Loterie Mondiale',
+        subtitle: 'Analyse de marché pilotée par IA fournissant les dernières perspectives du marché mondial de la loterie',
+        view_report: 'Voir le Rapport',
+        reports: {
+            egypt: {
+                title: 'Analyse Approfondie du Marché de Loterie Égyptien',
+                date: 'Janvier 2024',
+                highlights: ['Taille du Marché 430M$', 'Croissance Annuelle 8%', 'Opportunité de Transformation Numérique']
+            },
+            mexico: {
+                title: 'Évaluation des Opportunités du Marché de Loterie Mexicain',
+                date: 'Février 2024',
+                highlights: ['Politique d\'Accès Privé', 'Marché 1,25B$', 'Croissance des Paris Sportifs']
+            },
+            philippines: {
+                title: 'Rapport de Perspectives du Marché de Loterie Philippin',
+                date: 'Mars 2024',
+                highlights: ['Potentiel de Croissance Élevé', 'Taille du Marché 870M$', 'Montée des Jeux Électroniques']
+            }
+        }
+    },
+    // Études de Cas en Vedette
+    case_studies: {
+        title: 'Études de Cas en Vedette',
+        subtitle: 'Histoires de succès réelles montrant comment LottoBridge aide les clients à réaliser l\'implémentation d\'entreprises de loterie',
+        view_details: 'Voir les Détails',
+        cases: {
+            nigeria: {
+                title: 'Projet de Système de Loterie Nationale du Nigeria',
+                client_type: 'Agence Gouvernementale',
+                scope: 'Couverture Nationale',
+                description: 'Fourni une solution complète de système de loterie pour le gouvernement nigérian, incluant le développement de système, le déploiement de terminaux, la formation opérationnelle et les services de processus complet.',
+                deliverables: ['Développement de Système de Loterie', 'Déploiement de 1000 Terminaux', 'Formation d\'Équipe Opérationnelle', 'Services de Conseil en Conformité']
+            },
+            cambodia: {
+                title: 'Projet d\'Opération de Loterie Privée du Cambodge',
+                client_type: 'Opérateur Privé',
+                scope: 'Pilote Régional',
+                description: 'Assisté l\'opérateur privé cambodgien à lancer rapidement l\'entreprise de loterie, de la recherche de marché au lancement du système en seulement 3 mois.',
+                deliverables: ['Analyse de Faisabilité de Marché', 'Développement de Système Personnalisé', 'Intégration de Services d\'Impression', 'Formation de Localisation']
+            }
+        }
+    },
+    // Carte de Données de Service Mondial
     global: {
-        title: 'Couverture du Marché Mondial',
-        subtitle: 'Nos solutions ont été implémentées avec succès dans plusieurs pays et régions du monde',
+        title: 'Données de Service Mondial',
+        subtitle: 'Couverture de service LottoBridge et affichage de données commerciales sur les marchés mondiaux',
+        stats: {
+            countries: {
+                number: '50+',
+                label: 'Pays de Service',
+                description: 'Couvrant les principaux marchés de loterie mondiaux'
+            },
+            languages: {
+                number: '12',
+                label: 'Langues Supportées',
+                description: 'Services de localisation multilingues'
+            },
+            projects: {
+                number: '200+',
+                label: 'Projets Couverts',
+                description: 'Projets de loterie livrés avec succès'
+            },
+            users: {
+                number: '10M+',
+                label: 'Utilisateurs Finaux',
+                description: 'Nombre de joueurs de loterie servis'
+            }
+        },
         regions: {
-            latin_america: 'Amérique Latine',
-            africa: 'Afrique',
-            southeast_asia: 'Asie du Sud-Est',
-            central_eastern_europe: 'Europe Centrale et Orientale',
-            middle_east: 'Moyen-Orient'
+            asia_pacific: {
+                name: 'Asie-Pacifique',
+                count: '18 Pays',
+                description: 'Y compris l\'Asie du Sud-Est, l\'Asie du Sud et d\'autres marchés majeurs'
+            },
+            africa: {
+                name: 'Afrique',
+                count: '15 Pays',
+                description: 'Couvrant l\'Afrique de l\'Est, l\'Afrique de l\'Ouest, l\'Afrique du Sud et d\'autres régions'
+            },
+            latin_america: {
+                name: 'Amérique Latine',
+                count: '12 Pays',
+                description: 'Marchés clés incluant le Mexique, le Brésil et d\'autres'
+            }
         }
     },
     // Testimonials
@@ -220,10 +297,10 @@ const fr = {
     },
     // Call to Action
     cta: {
-        title: 'Prêt à Entrer sur le Marché Mondial de la Loterie ?',
+        title: 'Prêt à Explorer le Marché Mondial ?',
         subtitle: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie, LottoBridge peut vous fournir la solution la plus adaptée',
-        contact_now: 'Contacter Maintenant',
-        book_demo: 'Réserver une Démo'
+        contact_now: 'Contacter un Consultant Maintenant',
+        book_demo: 'Télécharger le Manuel de Service'
     },
     // Footer
     footer: {
@@ -980,4 +1057,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = fr;
 } else {
     window.fr = fr;
-} 
+}

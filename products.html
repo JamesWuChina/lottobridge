@@ -286,6 +286,39 @@
             color: var(--primary-blue);
         }
 
+        /* 快速锚点导航栏 */
+        .product-anchor-nav {
+            background-color: var(--white);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .anchor-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .anchor-links a {
+            font-weight: 600;
+            color: var(--nav-blue);
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .anchor-links a:hover,
+        .anchor-links a.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
         /* 服务模块区域 */
         .services-section {
             padding: 80px 0;
@@ -311,68 +344,109 @@
             margin: 0 auto;
         }
 
-        .service-cards {
+        .product-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        .service-card {
+        .product-card {
             background-color: var(--white);
-            border-radius: var(--border-radius);
-            padding: 30px;
+            border-radius: 12px;
+            overflow: hidden;
             box-shadow: var(--shadow);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-gray), #e9ecef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
-            border-top: 4px solid var(--primary-blue);
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
         }
 
-        .service-icon {
-            font-size: 40px;
+        .product-placeholder {
+            font-size: 48px;
             color: var(--primary-blue);
-            margin-bottom: 20px;
+            opacity: 0.6;
         }
 
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
             color: var(--nav-blue);
+            line-height: 1.3;
         }
 
-        .service-card p {
+        .product-card .product-description {
             color: var(--medium-gray);
             margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .service-features {
+        .product-features {
             margin-bottom: 25px;
         }
 
-        .feature-item {
+        .product-features li {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 10px;
-        }
-
-        .feature-item i {
-            color: var(--primary-blue);
-            margin-right: 10px;
-            margin-top: 3px;
-        }
-
-        .service-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .btn-sm {
-            padding: 10px 20px;
+            margin-bottom: 8px;
             font-size: 14px;
+            color: var(--nav-blue);
+        }
+
+        .product-features li::before {
+            content: '✓';
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 1px;
+        }
+
+        .product-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-button:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-2px);
         }
 
         /* 技术规格区域 */
@@ -489,6 +563,60 @@
             gap: 20px;
         }
 
+        /* 底部CTA引导区域 */
+        .cta-bottom {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .cta-bottom h3 {
+            font-size: 32px;
+            color: var(--nav-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .cta-bottom p {
+            font-size: 18px;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-bottom .btn {
+             padding: 15px 40px;
+             font-size: 16px;
+             font-weight: 600;
+         }
+
+         /* 产品分类样式 */
+         .product-category {
+             margin-bottom: 80px;
+         }
+
+         .category-title {
+             font-size: 28px;
+             font-weight: 600;
+             color: var(--nav-blue);
+             margin-bottom: 40px;
+             text-align: center;
+             position: relative;
+         }
+
+         .category-title::after {
+             content: '';
+             position: absolute;
+             bottom: -10px;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 60px;
+             height: 3px;
+             background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+             border-radius: 2px;
+         }
+
         /* 页脚 */
         footer {
             background-color: var(--nav-blue);
@@ -583,8 +711,18 @@
                 font-size: 32px;
             }
             
-            .service-cards {
+            .product-cards {
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .anchor-links {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            
+            .anchor-links a {
+                padding: 8px 16px;
+                font-size: 14px;
             }
         }
 
@@ -675,6 +813,28 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            
+            .product-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .anchor-links {
+                justify-content: center;
+            }
+            
+            .anchor-links a {
+                flex: 1;
+                text-align: center;
+                min-width: 80px;
+            }
+            
+            .cta-bottom h3 {
+                font-size: 24px;
+            }
+            
+            .cta-bottom p {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -753,15 +913,27 @@
         <!-- Hero区域 -->
         <section class="solutions-hero">
             <div class="container solutions-hero-content">
-                <h1 data-i18n="products.hero.title">全球彩票一站式解决方案</h1>
-                <p data-i18n="products.hero.description">整合中国彩票产业链核心资源，提供从市场调研、系统开发、终端设备到运营支持的全流程服务</p>
+                <h1 data-i18n="products.hero.title">产品中心</h1>
+                <p data-i18n="products.hero.description">一站式覆盖全球彩票系统与硬件供应链</p>
                 
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary" data-i18n="products.hero.btn_view_services">查看服务方案</a>
-                    <a href="contact.html" class="btn btn-outline" data-i18n="products.hero.btn_contact_consultant">联系销售顾问</a>
+                    <a href="#systems" class="btn btn-primary" data-i18n="products.hero.btn_view_services">查看产品方案</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="products.hero.btn_contact">联系我们</a>
                 </div>
             </div>
         </section>
+
+        <!-- 快速锚点导航栏 -->
+        <nav class="product-anchor-nav">
+            <div class="container">
+                <div class="anchor-links">
+                    <a href="#systems" data-i18n="products.nav.systems">系统类</a>
+                    <a href="#terminals" data-i18n="products.nav.terminals">终端设备</a>
+                    <a href="#printing" data-i18n="products.nav.printing">印刷与耗材</a>
+                    <a href="#services" data-i18n="products.nav.services">运维服务</a>
+                </div>
+            </div>
+        </nav>
         
         <!-- 服务模块区域 -->
         <section class="services-section" id="services">
@@ -771,337 +943,219 @@
                     <p data-i18n="products.services.description">LottoBridge 提供的不只是产品清单，而是从"调研、设计、系统、设备、培训、出口、合作"一站式可落地的彩票解决方案组合</p>
                 </div>
                 
-                <div class="service-cards">
-                    <!-- 彩票系统服务 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 data-i18n="products.services.lottery_system.title">彩票系统服务</h3>
-                        <p data-i18n="products.services.lottery_system.description">完整的彩票销售、开奖、结算系统解决方案，支持多种彩票玩法，满足不同国家监管要求</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.lottery_system.feature1">支持多语言、多玩法、多销售终端接入</span>
+                <!-- 系统类产品 -->
+                <div id="systems" class="product-category">
+                    <h3 class="category-title">系统类产品</h3>
+                    <div class="product-cards">
+                        <!-- 数字彩票系统 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-digital-lottery.png" alt="数字彩票系统" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.lottery_system.feature2">提供 SaaS 云服务与本地私有部署双方案</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.lottery_system.feature3">支持对接监管平台、财政系统、大数据分析后台</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.lottery_system.feature4">包含销售管理、开奖管理、防伪追溯、CRM客户管理等模块</span>
+                            <div class="product-content">
+                                <h3>数字彩票系统 (Digital Lottery System)</h3>
+                                <p class="product-description">完整的数字彩票销售、开奖、结算解决方案</p>
+                                <ul class="product-features">
+                                    <li>多玩法支持（乐透型、数字型、竞猜型）</li>
+                                    <li>云端部署与本地化部署双模式</li>
+                                    <li>实时监管对接与数据分析</li>
+                                </ul>
+                                <a href="/product/digital-lottery-system.html" class="product-button">了解详情</a>
                             </div>
                         </div>
                         
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.lottery_system.tech_specs.title">技术规格</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-server"></i>
-                                    <span data-i18n="products.services.lottery_system.tech_specs.server">支持 Windows/Linux 服务器</span>
+                        <!-- 即开票系统 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-instant-ticket.png" alt="即开票系统" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-ticket-alt"></i>
                                 </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-database"></i>
-                                    <span data-i18n="products.services.lottery_system.tech_specs.database">MySQL/SQL Server/Oracle 数据库</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span data-i18n="products.services.lottery_system.tech_specs.security">256位SSL加密通信</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-sync-alt"></i>
-                                    <span data-i18n="products.services.lottery_system.tech_specs.availability">99.9% 系统可用性</span>
-                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>即开票系统 (Instant Ticket System)</h3>
+                                <p class="product-description">专业的即开票销售与管理系统</p>
+                                <ul class="product-features">
+                                    <li>票券库存管理与追溯</li>
+                                    <li>多层防伪验证机制</li>
+                                    <li>实时销售数据统计</li>
+                                </ul>
+                                <a href="/product/instant-ticket-system.html" class="product-button">了解详情</a>
                             </div>
                         </div>
                         
-                        <div class="service-buttons">
-                            <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="products.services.lottery_system.btn_get_docs">获取技术文档</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.lottery_system.btn_consult">咨询系统方案</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 终端设备服务 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cash-register"></i>
-                        </div>
-                        <h3 data-i18n="products.services.terminal_equipment.title">彩票终端设备服务</h3>
-                        <p data-i18n="products.services.terminal_equipment.description">提供 POS 销售终端、自助售票机、出票打印机、扫码枪等全品类设备，满足各种销售场景需求</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.terminal_equipment.feature1">支持 Android / Linux / Windows 系统</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.terminal_equipment.feature2">终端支持外观定制、多语言、本地支付方式集成</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.terminal_equipment.feature3">满足多国工业认证（如 CE、FCC、RoHS）</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.terminal_equipment.feature4">提供设备维护、远程诊断、配件更换等售后服务</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.terminal_equipment.tech_specs.title">设备参数</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-microchip"></i>
-                                    <span data-i18n="products.services.terminal_equipment.tech_specs.processor">高性能处理器，4GB+内存</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-touchscreen"></i>
-                                    <span data-i18n="products.services.terminal_equipment.tech_specs.screen">10-15英寸触摸屏</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-print"></i>
-                                    <span data-i18n="products.services.terminal_equipment.tech_specs.printer">高速热敏打印，80mm/58mm纸宽</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-bolt"></i>
-                                    <span data-i18n="products.services.terminal_equipment.tech_specs.power">支持断电保护，UPS可选</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-buttons">
-                            <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="products.services.terminal_equipment.btn_view_catalog">查看设备图册</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.terminal_equipment.btn_get_quote">获取报价单</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 游戏设计与开发 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <h3 data-i18n="products.services.game_design.title">彩票游戏设计与开发</h3>
-                        <p data-i18n="products.services.game_design.description">提供乐透型、即开型、数字型、竞猜型等多种玩法设计，满足不同市场偏好和监管要求</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.game_design.feature1">一体化服务：玩法创意 → 数学模型 → 奖级结构 → 合规验证</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.game_design.feature2">支持票面设计、多语种内容、本地文化适配</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.game_design.feature3">内嵌防伪安全码、中奖控制参数、安全性机制</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.game_design.feature4">提供游戏测试、市场预测、玩家行为分析</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.game_design.tech_specs.title">游戏类型</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-dice"></i>
-                                    <span data-i18n="products.services.game_design.tech_specs.lottery">乐透型（6/49、5/90等）</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-scroll"></i>
-                                    <span data-i18n="products.services.game_design.tech_specs.scratch_off">即开票（Scratch-off）</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-dice-d20"></i>
-                                    <span data-i18n="products.services.game_design.tech_specs.digital">数字型（3D/4D/5D）</span>
-                                </div>
-                                <div class="spec-item">
+                        <!-- 竞猜型系统 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-sports-betting.png" alt="竞猜型系统" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
                                     <i class="fas fa-trophy"></i>
-                                    <span data-i18n="products.services.game_design.tech_specs.sports_betting">体育竞猜（Sports Betting）</span>
                                 </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>竞猜型系统 (Sports Betting System)</h3>
+                                <p class="product-description">体育赛事竞猜与投注管理平台</p>
+                                <ul class="product-features">
+                                    <li>实时赛事数据接入</li>
+                                    <li>动态赔率计算引擎</li>
+                                    <li>风险控制与合规监管</li>
+                                </ul>
+                                <a href="/product/sports-betting-system.html" class="product-button">了解详情</a>
                             </div>
                         </div>
                         
-                        <div class="service-buttons">
-                            <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="products.services.game_design.btn_view_cases">查看游戏案例</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.game_design.btn_consult">咨询游戏设计</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 票券印刷服务 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-print"></i>
-                        </div>
-                        <h3 data-i18n="products.services.printing.title">彩票票券印刷与热敏纸服务</h3>
-                        <p data-i18n="products.services.printing.description">高质量的即开票印刷和安全热敏纸供应，满足不同市场的防伪和安全要求</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.printing.feature1">即开票印刷服务：支持高防伪设计、防伪油墨、喷码、激光打孔等</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.printing.feature2">提供定制热敏纸耗材，适配 LottoBridge 或第三方终端</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.printing.feature3">支持批量安全印制、国际包装与发运</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.printing.feature4">印刷合规支持：序列控制、防伪审核、工厂认证</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.printing.tech_specs.title">印刷规格</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-ruler-combined"></i>
-                                    <span data-i18n="products.services.printing.tech_specs.size">标准尺寸：80mm/58mm宽</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-paint-roller"></i>
-                                    <span data-i18n="products.services.printing.tech_specs.ink">UV/水性油墨可选</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span data-i18n="products.services.printing.tech_specs.security">10+防伪技术</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-boxes"></i>
-                                    <span data-i18n="products.services.printing.tech_specs.moq">MOQ: 50,000卷</span>
+                        <!-- 视频票系统 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-video-lottery.png" alt="视频票系统" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-video"></i>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="service-buttons">
-                            <a href="#" class="btn btn-primary btn-sm" data-i18n="products.services.printing.btn_get_samples">获取样品</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.printing.btn_consult">咨询印刷方案</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 市场调研与咨询服务 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 data-i18n="products.services.consulting.title">市场调研与咨询服务</h3>
-                        <p data-i18n="products.services.consulting.description">专业团队提供从市场准入分析到商业落地的全流程咨询服务</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.consulting.feature1">AI驱动的132+国家市场报告一键生成</span>
+                            <div class="product-content">
+                                <h3>视频票系统 (Video Lottery System)</h3>
+                                <p class="product-description">互动式视频彩票游戏平台</p>
+                                <ul class="product-features">
+                                    <li>多样化游戏机制设计</li>
+                                    <li>高清视频渲染引擎</li>
+                                    <li>安全随机数生成算法</li>
+                                </ul>
+                                <a href="/product/video-lottery-system.html" class="product-button">了解详情</a>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.consulting.feature2">包含法律环境、市场规模、主流玩法等核心数据</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.consulting.feature3">提供商业模型搭建与财务预测服务</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.consulting.feature4">合作模式与法律合规建议</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.consulting.tech_specs.title">服务内容</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-file-alt"></i>
-                                    <span data-i18n="products.services.consulting.tech_specs.business_plan">商业计划书编制</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-search-dollar"></i>
-                                    <span data-i18n="products.services.consulting.tech_specs.market_analysis">市场可行性分析</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span data-i18n="products.services.consulting.tech_specs.partner_review">合作方背景审查</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-passport"></i>
-                                    <span data-i18n="products.services.consulting.tech_specs.license_support">牌照申请支持</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-buttons">
-                            <a href="#" class="btn btn-primary btn-sm" data-i18n="products.services.consulting.btn_view_samples">查看报告样本</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.consulting.btn_book_consultant">预约咨询顾问</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 运营培训服务 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 data-i18n="products.services.training.title">运营培训服务</h3>
-                        <p data-i18n="products.services.training.description">针对彩票运营各阶段提供系统化培训，确保团队快速上手</p>
-                        
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.training.feature1">系统操作培训（销售终端、后台管理）</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.training.feature2">销售流程与终端维护培训</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.training.feature3">代理管理与返点政策设计</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span data-i18n="products.services.training.feature4">数据分析与客户服务培训</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-specs">
-                            <h4 data-i18n="products.services.training.tech_specs.title">培训形式</h4>
-                            <div class="specs-grid">
-                                <div class="spec-item">
-                                    <i class="fas fa-laptop"></i>
-                                    <span data-i18n="products.services.training.tech_specs.online_platform">在线课程平台</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                    <span data-i18n="products.services.training.tech_specs.on_site_training">现场培训</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-book"></i>
-                                    <span data-i18n="products.services.training.tech_specs.local_materials">本地语言教材</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-headset"></i>
-                                    <span data-i18n="products.services.training.tech_specs.tech_support">7×24技术支持</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-buttons">
-                            <a href="#" class="btn btn-primary btn-sm" data-i18n="products.services.training.btn_view_outline">查看培训大纲</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="products.services.training.btn_book_trainer">预约培训师</a>
                         </div>
                     </div>
                 </div>
+                    
+                <!-- 终端设备类产品 -->
+                <div id="terminals" class="product-category">
+                    <h3 class="category-title">终端设备类</h3>
+                    <div class="product-cards">
+                        <!-- 彩票终端设备 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-terminals.png" alt="彩票终端设备" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-cash-register"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>彩票终端设备 (Lottery Terminals)</h3>
+                                <p class="product-description">全品类彩票销售终端设备解决方案</p>
+                                <ul class="product-features">
+                                    <li>手持、桌面、自助、兑奖多种形态</li>
+                                    <li>支持多系统平台与定制化</li>
+                                    <li>国际认证与全球售后服务</li>
+                                </ul>
+                                <a href="/product/terminals.html" class="product-button">了解详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- 印刷与耗材类产品 -->
+                <div id="printing" class="product-category">
+                    <h3 class="category-title">印刷与耗材类</h3>
+                    <div class="product-cards">
+                        <!-- 印刷服务 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-printing.png" alt="印刷服务" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-print"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>印刷服务 (Printing Services)</h3>
+                                <p class="product-description">专业的彩票印刷与防伪解决方案</p>
+                                <ul class="product-features">
+                                    <li>即开票与揭开票印制</li>
+                                    <li>多层防伪技术应用</li>
+                                    <li>国际标准认证与质量保证</li>
+                                </ul>
+                                <a href="/product/printing.html" class="product-button">了解详情</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 热敏耗材 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-thermal.png" alt="热敏耗材" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-scroll"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>热敏耗材 (Thermal Consumables)</h3>
+                                <p class="product-description">高品质安全热敏纸供应链服务</p>
+                                <ul class="product-features">
+                                    <li>标准与高端规格可选</li>
+                                    <li>全球设备兼容性</li>
+                                    <li>供应链管理与物流服务</li>
+                                </ul>
+                                <a href="/product/thermal.html" class="product-button">了解详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- 运维与支持服务类产品 -->
+                <div id="services" class="product-category">
+                    <h3 class="category-title">运维与支持服务类</h3>
+                    <div class="product-cards">
+                        <!-- 运维服务 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-operations.png" alt="运维服务" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>运维服务 (Operations Services)</h3>
+                                <p class="product-description">专业的彩票系统运维与技术支持</p>
+                                <ul class="product-features">
+                                    <li>7×24小时技术支持</li>
+                                    <li>系统监控与故障处理</li>
+                                    <li>定期维护与性能优化</li>
+                                </ul>
+                                <a href="/product/operations.html" class="product-button">了解详情</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 培训服务 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/assets/images/product-training.png" alt="培训服务" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="product-placeholder" style="display:none;">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>培训服务 (Training Services)</h3>
+                                <p class="product-description">全方位的彩票运营培训解决方案</p>
+                                <ul class="product-features">
+                                    <li>系统操作与维护培训</li>
+                                    <li>现场与在线培训结合</li>
+                                    <li>本地化培训材料</li>
+                                </ul>
+                                <a href="/product/training.html" class="product-button">了解详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 底部CTA引导 -->
+        <section class="cta-bottom">
+            <div class="container">
+                <h3>找不到您需要的产品？</h3>
+                <p>我们提供定制化解决方案，覆盖全球多样化彩票需求</p>
+                <a href="/contact.html" class="btn btn-primary">联系我们定制</a>
             </div>
         </section>
         

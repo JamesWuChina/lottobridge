@@ -301,6 +301,49 @@
             color: var(--primary-blue);
         }
 
+        /* 筛选模块 */
+        .report-filter {
+            background: white;
+            padding: 40px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .report-filter .container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .report-filter label {
+            font-weight: 600;
+            color: var(--nav-blue);
+            margin-right: 0.5rem;
+        }
+        
+        .report-filter select {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: white;
+            color: var(--nav-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+        
+        .report-filter select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1);
+        }
+        
+        .report-filter select:hover {
+            border-color: var(--primary-blue);
+        }
+
         /* 国家搜索区域 */
         .country-search {
             padding: 60px 0;
@@ -364,82 +407,101 @@
             font-size: 14px;
         }
 
-        /* 国家卡片区域 */
-        .country-cards {
-            padding: 40px 0;
+        /* 报告展示卡片区域 */
+        .reports-section {
+            padding: 80px 0;
             background-color: var(--light-gray);
         }
 
-        .country-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+            font-weight: 700;
         }
 
-        .country-card {
-            background-color: var(--white);
-            border-radius: var(--border-radius);
-            padding: 25px;
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .report-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid #e9ecef;
         }
 
-        .country-card:hover {
+        .report-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        .country-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+        .report-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .country-flag {
-            font-size: 24px;
-            margin-right: 15px;
+        .report-card h3 {
+            color: var(--primary-blue);
+            margin: 1.5rem 1.5rem 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
-        .country-name h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .country-name p {
-            font-size: 14px;
-            color: var(--medium-gray);
-        }
-
-        .country-info {
-            margin-bottom: 20px;
-        }
-
-        .info-item {
-            display: flex;
-            margin-bottom: 10px;
-        }
-
-        .info-item .label {
-            font-weight: 500;
-            min-width: 120px;
-        }
-
-        .info-item .value {
+        .report-card .summary {
             color: var(--nav-blue);
+            margin: 0 1.5rem 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
-        .country-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+        .report-card .key-points {
+            list-style: none;
+            padding: 0;
+            margin: 0 1.5rem 1.5rem;
         }
 
-        .btn-sm {
-            padding: 8px 15px;
-            font-size: 14px;
-            min-width: auto;
+        .report-card .key-points li {
+             color: var(--nav-blue);
+             margin-bottom: 0.5rem;
+             font-size: 0.9rem;
+             padding-left: 0;
+         }
+         
+         .report-card .key-points li::before {
+             content: "✓";
+             color: #28a745;
+             font-weight: bold;
+             margin-right: 0.5rem;
+         }
+
+        .report-card .button {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            width: calc(100% - 3rem);
+            text-align: center;
+            box-sizing: border-box;
+            margin: 0 1.5rem 1.5rem;
+        }
+
+        .report-card .button:hover {
+            background: var(--primary-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         /* 报告预览区域 */
@@ -702,6 +764,82 @@
             color: var(--medium-gray);
         }
 
+        /* AI报告能力模块 */
+        .ai-powered-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .ai-powered-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .ai-powered-section p {
+            font-size: 1.2rem;
+            color: var(--nav-blue);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .ai-powered-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+        
+        /* 页面底部CTA转化区 */
+        .cta-bottom {
+            background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-bottom h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-bottom p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .cta-bottom .button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-bottom .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background: #f8f9fa;
+        }
+
         /* CTA区域 */
         .cta-section {
             padding: 80px 0;
@@ -816,11 +954,15 @@
         /* 响应式设计 */
         @media (max-width: 992px) {
             .mi-hero h1 {
-                font-size: 36px;
+                font-size: 3rem;
             }
             
-            .mi-hero h1 span {
-                font-size: 24px;
+            .mi-hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .reports-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -861,6 +1003,44 @@
             .mobile-menu-btn {
                 display: none;
             }
+            
+            .mi-hero {
+                padding: 80px 0;
+            }
+
+            .mi-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .mi-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .filter-card {
+                padding: 25px;
+            }
+
+            .filter-controls {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .filter-button {
+                justify-self: center;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .reports-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .report-card-content {
+                padding: 1.5rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -899,26 +1079,39 @@
             }
             
             .mi-hero h1 {
-                font-size: 32px;
+                font-size: 2rem;
             }
             
-            .mi-hero h1 span {
-                font-size: 20px;
+            .mi-hero .subtitle {
+                font-size: 1rem;
             }
             
-            .mi-hero p {
-                font-size: 16px;
+            .filter-card {
+                padding: 20px;
             }
             
-            .report-tabs {
-                overflow-x: auto;
-                white-space: nowrap;
-                padding-bottom: 5px;
+            .filter-title {
+                font-size: 1.2rem;
             }
             
-            .report-tab {
-                padding: 10px 15px;
-                font-size: 14px;
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .ai-powered-section h2 {
+                font-size: 2rem;
+            }
+            
+            .ai-powered-section p {
+                font-size: 1rem;
+            }
+            
+            .cta-bottom h3 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-bottom p {
+                font-size: 1rem;
             }
         }
 
@@ -935,7 +1128,7 @@
                 font-size: 18px;
             }
             
-            .country-grid,
+            .reports-grid,
             .updates-grid {
                 grid-template-columns: 1fr;
             }
@@ -992,356 +1185,212 @@
     
     <!-- 市场调研页面内容 -->
     <main class="market-intelligence">
-        <!-- Hero区域 -->
+        <!-- 页面头部 hero 区 -->
         <section class="mi-hero">
-            <div class="container mi-hero-content">
-                <h1 data-i18n="market_research.hero.title">Unlock Global Lottery Opportunities with AI-powered Market Research</h1>
-                <h2 data-i18n="market_research.hero.subtitle">快速掌握全球彩票市场的政策、规模与机会点</h2>
-                <p data-i18n="market_research.hero.description">由 LottoBridge AI 驱动的全球市场情报系统，为您提供一站式国家级彩票数据洞察，助您做出明智的市场决策</p>
-                
-                <div class="mi-hero-buttons">
-                    <a href="#country-search" class="btn btn-primary" data-i18n="market_research.hero.btn_select_country">选择国家</a>
-                    <a href="contact.html" class="btn btn-outline" data-i18n="market_research.hero.btn_generate_report">生成报告</a>
-                    <a href="contact.html" class="btn btn-outline" data-i18n="market_research.hero.btn_view_sample">查看示例报告</a>
+            <div class="container">
+                <div class="mi-hero-content">
+                    <h1 data-i18n="market_research.hero.title">全球彩票市场调研</h1>
+                    <p class="subtitle" data-i18n="market_research.hero.description">基于AI与专家数据模型，洞察全球各国彩票市场政策、基础设施、玩法偏好与投资机会</p>
                 </div>
             </div>
         </section>
         
-        <!-- 国家搜索区域 -->
-        <section class="country-search" id="country-search">
+        <!-- 筛选模块 - 重新设计 -->
+        <section class="report-filter">
             <div class="container">
-                <div class="search-container">
-                    <div class="search-box">
-                        <input type="text" placeholder="搜索国家或地区..." data-i18n-placeholder="market_research.country_search.placeholder">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    
-                    <div class="search-filters">
-                        <div class="filter-btn active" data-i18n="market_research.country_search.filter_all">全部</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_asia">亚洲</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_europe">欧洲</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_africa">非洲</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_america">美洲</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_english">英语国家</div>
-                        <div class="filter-btn" data-i18n="market_research.country_search.filter_emerging">新兴市场</div>
-                    </div>
-                    
-                    <div class="country-coverage" data-i18n="market_research.country_search.coverage">
-                        当前已覆盖 132 个国家和地区
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 国家卡片区域 -->
-        <section class="country-cards">
-            <div class="container">
-                <h2 class="section-title" data-i18n="market_research.recommended_markets.title">推荐市场</h2>
-                
-                <div class="country-grid">
-                    <!-- 国家卡片1 -->
-                    <div class="country-card">
-                        <div class="country-header">
-                            <div class="country-flag">🇪🇬</div>
-                            <div class="country-name">
-                                <h3 data-i18n="market_research.countries.egypt.name">埃及 Egypt</h3>
-                                <p data-i18n="market_research.countries.egypt.description">北非最大彩票市场</p>
-                            </div>
-                        </div>
-                        
-                        <div class="country-info">
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
-                                <div class="value" data-i18n="market_research.countries.egypt.market_status">合法运营</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
-                                <div class="value" data-i18n="market_research.countries.egypt.lottery_types">乐透型、即开票、数字型</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
-                                <div class="value" data-i18n="market_research.countries.egypt.annual_sales">约 4.3 亿美元</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
-                                <div class="value" data-i18n="market_research.countries.egypt.main_structure">国家彩票局</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
-                                <div class="value" data-i18n="market_research.countries.egypt.typical_games">6/49、4D、Scratch-off</div>
-                            </div>
-                        </div>
-                        
-                        <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 国家卡片2 -->
-                    <div class="country-card">
-                        <div class="country-header">
-                            <div class="country-flag">🇲🇽</div>
-                            <div class="country-name">
-                                <h3 data-i18n="market_research.countries.mexico.name">墨西哥 Mexico</h3>
-                                <p data-i18n="market_research.countries.mexico.description">拉丁美洲领先市场</p>
-                            </div>
-                        </div>
-                        
-                        <div class="country-info">
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
-                                <div class="value" data-i18n="market_research.countries.mexico.market_status">私营准入</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
-                                <div class="value" data-i18n="market_research.countries.mexico.lottery_types">乐透型、体育竞猜</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
-                                <div class="value" data-i18n="market_research.countries.mexico.annual_sales">约 12.5 亿美元</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
-                                <div class="value" data-i18n="market_research.countries.mexico.main_structure">合作运营商</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
-                                <div class="value" data-i18n="market_research.countries.mexico.typical_games">Melate、Chispazo</div>
-                            </div>
-                        </div>
-                        
-                        <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
-                        </div>
-                    </div>
-                    
-                    <!-- 国家卡片3 -->
-                    <div class="country-card">
-                        <div class="country-header">
-                            <div class="country-flag">🇵🇭</div>
-                            <div class="country-name">
-                                <h3 data-i18n="market_research.countries.philippines.name">菲律宾 Philippines</h3>
-                                <p data-i18n="market_research.countries.philippines.description">东南亚高增长市场</p>
-                            </div>
-                        </div>
-                        
-                        <div class="country-info">
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.market_status">市场状态:</div>
-                                <div class="value" data-i18n="market_research.countries.philippines.market_status">私营准入</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.lottery_types">彩票品类:</div>
-                                <div class="value" data-i18n="market_research.countries.philippines.lottery_types">乐透型、即开票、电子游戏</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.annual_sales">年销售额估算:</div>
-                                <div class="value" data-i18n="market_research.countries.philippines.annual_sales">约 8.7 亿美元</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.main_structure">主体结构:</div>
-                                <div class="value" data-i18n="market_research.countries.philippines.main_structure">私营独立运营</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="label" data-i18n="market_research.countries.labels.typical_games">典型玩法:</div>
-                                <div class="value" data-i18n="market_research.countries.philippines.typical_games">Ultra Lotto 6/58</div>
-                            </div>
-                        </div>
-                        
-                        <div class="country-buttons">
-                            <a href="#report-preview" class="btn-sm btn-primary" data-i18n="market_research.countries.buttons.view_details">查看详情</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.download_report">下载报告</a>
-                            <a href="contact.html" class="btn-sm btn-outline" data-i18n="market_research.countries.buttons.book_consultation">预约咨询</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 报告预览区域 -->
-        <section class="report-preview" id="report-preview">
-            <div class="container">
-                <h2 class="section-title" data-i18n="market_research.report_preview.title">埃及彩票市场深度报告</h2>
-                
-                <div class="report-tabs">
-                    <div class="report-tab active" data-i18n="market_research.report_preview.tabs.overview">国家概况</div>
-                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.regulations">法规与监管</div>
-                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.market_size">市场规模</div>
-                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.product_structure">产品结构</div>
-                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.key_players">主要参与者</div>
-                    <div class="report-tab" data-i18n="market_research.report_preview.tabs.business_opportunities">商业机会</div>
-                </div>
-                
-                <div class="report-content active">
-                    <div class="report-section">
-                        <h3><i class="fas fa-globe-africa"></i> <span data-i18n="market_research.report_preview.content.overview.title">国家概况</span></h3>
-                        <p data-i18n="market_research.report_preview.content.overview.demographics">埃及是阿拉伯世界人口最多的国家，拥有超过1亿人口，其中约60%的人口年龄在30岁以下。互联网普及率达65%，移动支付使用率快速增长。</p>
-                        <p data-i18n="market_research.report_preview.content.overview.history">彩票在埃及有着悠久历史，最早可追溯到20世纪60年代。2018年修订的《彩票与博彩法》为市场现代化奠定了基础。</p>
-                    </div>
-                    
-                    <div class="report-section">
-                        <h3><i class="fas fa-landmark"></i> <span data-i18n="market_research.report_preview.content.overview.legal_development">彩票法制发展进程</span></h3>
-                        <p data-i18n="market_research.report_preview.content.overview.timeline_1960">1960年：埃及首次引入国家彩票系统</p>
-                        <p data-i18n="market_research.report_preview.content.overview.timeline_2018">2018年：修订《彩票与博彩法》，允许私营运营商参与</p>
-                        <p data-i18n="market_research.report_preview.content.overview.timeline_2021">2021年：推出数字彩票试点项目</p>
-                    </div>
-                </div>
-                
-                <div class="report-content">
-                    <div class="report-section">
-                        <h3><i class="fas fa-gavel"></i> <span data-i18n="market_research.report_preview.content.regulations.main_authority">主要监管机构</span></h3>
-                        <p data-i18n="market_research.report_preview.content.regulations.authority_description">埃及彩票市场由财政部下属的国家彩票局统一监管，下设省级监管机构。所有彩票运营商必须获得国家彩票局颁发的牌照。</p>
-                    </div>
-                    
-                    <div class="report-section">
-                        <h3><i class="fas fa-file-contract"></i> <span data-i18n="market_research.report_preview.content.regulations.policy_framework">当前政策框架</span></h3>
-                        <p data-i18n="market_research.report_preview.content.regulations.framework_description">埃及实行中央集权式的彩票管理模式，但近年来逐步向私营企业开放部分业务。外资企业可通过与本地企业合资的方式进入市场，外资持股比例不得超过49%。</p>
-                    </div>
-                </div>
-                
-                <div class="report-content">
-                    <div class="report-section">
-                        <h3><i class="fas fa-chart-bar"></i> <span data-i18n="market_research.report_preview.content.market_size.historical_data">历史销售额数据</span></h3>
-                        <div class="data-chart" data-i18n="market_research.report_preview.content.market_size.chart_title">销售额增长图表 (2018-2023)</div>
-                        <p data-i18n="market_research.report_preview.content.market_size.growth_description">埃及彩票市场在过去5年保持年均8%的增长率，2023年总销售额达到4.3亿美元。传统零售渠道占比75%，数字渠道增长迅速。</p>
-                    </div>
-                    
-                    <div class="report-section">
-                        <h3><i class="fas fa-bolt"></i> <span data-i18n="market_research.report_preview.content.market_size.growth_potential">增长潜力评分</span></h3>
-                        <div class="data-chart" data-i18n="market_research.report_preview.content.market_size.ai_chart_title">AI模型评分图表</div>
-                        <p data-i18n="market_research.report_preview.content.market_size.ai_scoring_intro">LottoBridge AI模型对埃及市场的评分：</p>
-                        <p data-i18n="market_research.report_preview.content.market_size.market_scale_rating">市场规模：★★★☆☆</p>
-                        <p data-i18n="market_research.report_preview.content.market_size.growth_potential_rating">增长潜力：★★★★☆</p>
-                        <p data-i18n="market_research.report_preview.content.market_size.policy_stability_rating">政策稳定性：★★★☆☆</p>
-                        <p data-i18n="market_research.report_preview.content.market_size.digital_opportunity_rating">数字化机会：★★★★☆</p>
-                    </div>
-                </div>
-                
-                <!-- 其他标签内容... -->
-            </div>
-        </section>
-        
-        <!-- 注册下载区域 -->
-        <section class="download-section">
-            <div class="container">
-                <div class="download-card">
-                    <h2 data-i18n="market_research.download.title">获取完整PDF报告</h2>
-                    <p data-i18n="market_research.download.description">注册后即可下载完整报告 + 每月更新的全球动态，完全免费！</p>
-                    
-                    <form class="download-form">
-                        <div class="form-group">
-                            <label for="email" data-i18n="market_research.download.form.email">电子邮箱</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company" data-i18n="market_research.download.form.company">公司名称</label>
-                            <input type="text" id="company">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="country" data-i18n="market_research.download.form.country">所在国家</label>
-                            <select id="country" required>
-                                <option value="" data-i18n="market_research.download.form.country_placeholder">请选择</option>
-                                <option value="china" data-i18n="market_research.download.form.china">中国</option>
-                                <option value="usa" data-i18n="market_research.download.form.usa">美国</option>
-                                <!-- 更多国家选项 -->
+                <div class="filter-card">
+                    <h2 class="filter-title">
+                        <span>🔍</span>
+                        <span data-i18n="market_research.filter.title">智能筛选</span>
+                    </h2>
+                    <div class="filter-controls">
+                        <div class="filter-group">
+                            <label for="region-select">
+                                <span>🌐</span>
+                                <span data-i18n="market_research.filter.region_label">地区选择</span>
+                            </label>
+                            <select id="region-select" data-i18n-options="market_research.filter.region_options">
+                                <option value="all" data-i18n="market_research.filter.region_all">全部地区</option>
+                                <option value="asia" data-i18n="market_research.filter.region_asia">亚洲</option>
+                                <option value="africa" data-i18n="market_research.filter.region_africa">非洲</option>
+                                <option value="europe" data-i18n="market_research.filter.region_europe">欧洲</option>
+                                <option value="americas" data-i18n="market_research.filter.region_latin_america">美洲</option>
                             </select>
                         </div>
                         
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="subscribe" checked>
-                            <label for="subscribe" data-i18n="market_research.download.form.subscribe">订阅LottoBridge市场情报月报</label>
+                        <div class="filter-group">
+                            <label for="game-type-select">
+                                <span>🎮</span>
+                                <span data-i18n="market_research.filter.game_type_label">玩法类型</span>
+                            </label>
+                            <select id="game-type-select" data-i18n-options="market_research.filter.game_type_options">
+                                <option value="all" data-i18n="market_research.filter.game_type_all">全部玩法</option>
+                                <option value="traditional" data-i18n="market_research.filter.game_type_number">传统彩票</option>
+                                <option value="instant" data-i18n="market_research.filter.game_type_instant">即开票</option>
+                                <option value="sports" data-i18n="market_research.filter.game_type_sports">体育彩票</option>
+                                <option value="digital" data-i18n="market_research.filter.game_type_video">数字彩票</option>
+                            </select>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" data-i18n="market_research.download.form.submit">立即获取</button>
-                    </form>
+                        <button class="filter-button" onclick="filterReports()">
+                            <span>🔍</span>
+                            <span data-i18n="market_research.filter.search">筛选</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- 最近更新区域 -->
-        <section class="recent-updates">
+        <!-- 报告展示卡片区域 -->
+        <section class="reports-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="market_research.recent_updates.title">最近更新报告</h2>
+                <h2 class="section-title" data-i18n="market_research.reports.title">AI生成国家市场报告</h2>
                 
-                <div class="updates-grid">
-                    <div class="update-card">
-                        <h4 data-i18n="market_research.recent_updates.uzbekistan.title">乌兹别克斯坦彩票市场报告</h4>
-                        <div class="update-meta">
-                            <span data-i18n="market_research.recent_updates.uzbekistan.update_time">更新时间: 2024.12</span>
+                <div class="reports-grid">
+                    <!-- 报告卡片1 - 乌兹别克斯坦 -->
+                    <article class="report-card" data-region="asia" data-game-type="traditional">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-uzbekistan.jpg" alt="乌兹别克斯坦市场" data-i18n-alt="market_research.reports.uzbekistan.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/uz.png" alt="乌兹别克斯坦国旗">
                         </div>
-                        <div class="update-tags">
-                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag1">新兴市场</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag2">私营准入</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.uzbekistan.tag3">高增长潜力</span>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.uzbekistan.title">乌兹别克斯坦彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.uzbekistan.summary">涵盖政策监管、玩法分布、用户画像、运营成本与本地合作建议，基于AI模型生成。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.uzbekistan.point1">法规与许可机制</li>
+                                <li data-i18n="market_research.reports.uzbekistan.point2">用户习惯与支付行为</li>
+                                <li data-i18n="market_research.reports.uzbekistan.point3">热门游戏与市场空白</li>
+                            </ul>
+                            <a href="/report/uzbekistan.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.uzbekistan.button">查看详情</span>
+                            </a>
                         </div>
-                    </div>
+                    </article>
                     
-                    <div class="update-card">
-                        <h4 data-i18n="market_research.recent_updates.cambodia.title">柬埔寨彩票市场报告</h4>
-                        <div class="update-meta">
-                            <span data-i18n="market_research.recent_updates.cambodia.update_time">更新时间: 2025.01</span>
+                    <!-- 报告卡片2 - 尼日利亚 -->
+                    <article class="report-card" data-region="africa" data-game-type="digital">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-nigeria.jpg" alt="尼日利亚市场" data-i18n-alt="market_research.reports.nigeria.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/ng.png" alt="尼日利亚国旗">
                         </div>
-                        <div class="update-tags">
-                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag1">政府合作</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag2">POS终端</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.cambodia.tag3">集中式发行</span>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.nigeria.title">尼日利亚彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.nigeria.summary">非洲最大经济体的彩票市场分析，包含移动支付普及率、监管环境与增长机会评估。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.nigeria.point1">移动支付生态系统</li>
+                                <li data-i18n="market_research.reports.nigeria.point2">年轻人口红利分析</li>
+                                <li data-i18n="market_research.reports.nigeria.point3">州级监管差异对比</li>
+                            </ul>
+                            <a href="/report/nigeria.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.nigeria.button">查看详情</span>
+                            </a>
                         </div>
-                    </div>
+                    </article>
                     
-                    <div class="update-card">
-                        <h4 data-i18n="market_research.recent_updates.nigeria.title">尼日利亚彩票市场报告</h4>
-                        <div class="update-meta">
-                            <span data-i18n="market_research.recent_updates.nigeria.update_time">更新时间: 2024.11</span>
+                    <!-- 报告卡片3 - 越南 -->
+                    <article class="report-card" data-region="asia" data-game-type="sports">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-vietnam.jpg" alt="越南市场" data-i18n-alt="market_research.reports.vietnam.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/vn.png" alt="越南国旗">
                         </div>
-                        <div class="update-tags">
-                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag1">高人口</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag2">低渗透</span>
-                            <span class="tag" data-i18n="market_research.recent_updates.nigeria.tag3">监管灰区</span>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.vietnam.title">越南彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.vietnam.summary">东南亚快速增长市场，重点分析数字化转型趋势、政府政策支持与外资准入条件。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.vietnam.point1">数字彩票发展路径</li>
+                                <li data-i18n="market_research.reports.vietnam.point2">外资合作政策解读</li>
+                                <li data-i18n="market_research.reports.vietnam.point3">区域竞争格局分析</li>
+                            </ul>
+                            <a href="/report/vietnam.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.vietnam.button">查看详情</span>
+                            </a>
                         </div>
-                    </div>
+                    </article>
+                    
+                    <!-- 报告卡片4 - 墨西哥 -->
+                    <article class="report-card" data-region="americas" data-game-type="traditional">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-mexico.jpg" alt="墨西哥市场" data-i18n-alt="market_research.reports.mexico.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/mx.png" alt="墨西哥国旗">
+                        </div>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.mexico.title">墨西哥彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.mexico.summary">拉美第二大经济体彩票市场深度调研，涵盖联邦与州级双重监管体系及跨境运营机会。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.mexico.point1">联邦与州级监管框架</li>
+                                <li data-i18n="market_research.reports.mexico.point2">体育博彩融合趋势</li>
+                                <li data-i18n="market_research.reports.mexico.point3">美墨边境市场特色</li>
+                            </ul>
+                            <a href="/report/mexico.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.mexico.button">查看详情</span>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- 报告卡片5 - 菲律宾 -->
+                    <article class="report-card" data-region="asia" data-game-type="digital">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-philippines.jpg" alt="菲律宾市场" data-i18n-alt="market_research.reports.philippines.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/ph.png" alt="菲律宾国旗">
+                        </div>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.philippines.title">菲律宾彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.philippines.summary">群岛国家的独特彩票生态，分析PCSO垄断模式、私营运营商机会与海外菲律宾人市场。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.philippines.point1">PCSO运营模式解析</li>
+                                <li data-i18n="market_research.reports.philippines.point2">海外菲律宾人市场</li>
+                                <li data-i18n="market_research.reports.philippines.point3">岛屿分布运营挑战</li>
+                            </ul>
+                            <a href="/report/philippines.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.philippines.button">查看详情</span>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- 报告卡片6 - 肯尼亚 -->
+                    <article class="report-card" data-region="africa" data-game-type="digital">
+                        <div class="report-card-header">
+                            <img src="/assets/images/report-kenya.jpg" alt="肯尼亚市场" data-i18n-alt="market_research.reports.kenya.image_alt">
+                            <img class="country-flag" src="https://flagcdn.com/w40/ke.png" alt="肯尼亚国旗">
+                        </div>
+                        <div class="report-card-content">
+                            <h3 data-i18n="market_research.reports.kenya.title">肯尼亚彩票市场概览</h3>
+                            <p class="summary" data-i18n="market_research.reports.kenya.summary">东非科技创新中心的彩票市场机遇，重点关注M-Pesa支付生态与移动优先的用户行为。</p>
+                            <ul class="key-points">
+                                <li data-i18n="market_research.reports.kenya.point1">M-Pesa支付生态整合</li>
+                                <li data-i18n="market_research.reports.kenya.point2">移动优先用户行为</li>
+                                <li data-i18n="market_research.reports.kenya.point3">东非区域辐射潜力</li>
+                            </ul>
+                            <a href="/report/kenya.html" class="button">
+                                <span>📝</span>
+                                <span data-i18n="market_research.reports.kenya.button">查看详情</span>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
         
-        <!-- 客户评价区域 -->
-        <section class="testimonials">
+        <!-- AI报告能力模块 -->
+        <section class="ai-powered-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="market_research.testimonials.title">客户评价</h2>
-                
-                <div class="testimonial-slider">
-                    <div class="testimonial-card">
-                        <div class="testimonial-text" data-i18n="market_research.testimonials.testimonial1.text">
-                            "我们通过 LottoBridge 获得了拉丁美洲5个国家的彩票调研报告，并最终锁定墨西哥作为落地首选。报告中的政策分析和市场规模预测非常准确，为我们节省了大量前期调研时间。"
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4 data-i18n="market_research.testimonials.testimonial1.author_name">张伟</h4>
-                                <p data-i18n="market_research.testimonials.testimonial1.author_title">东南亚彩票技术服务商CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 data-i18n="market_research.ai_powered.title">AI驱动的彩票市场情报系统</h2>
+                <p data-i18n="market_research.ai_powered.description">通过多模态大模型（如 GPT-4o / DeepSeek）与全球数据模板融合，系统可自动生成结构化国家报告，支持自定义格式、专题与商业深度。</p>
+                <img src="/assets/images/ai-report-structure.png" alt="AI报告结构示意图" data-i18n-alt="market_research.ai_powered.image_alt">
             </div>
         </section>
         
-        <!-- CTA区域 -->
-        <section class="cta-section">
+        <!-- 页面底部 CTA 转化区 -->
+        <section class="cta-bottom">
             <div class="container">
-                <h2 data-i18n="market_research.cta.title">未找到您需要的市场情报？</h2>
-                <p data-i18n="market_research.cta.description">我们的专家团队可为您提供定制化市场调研服务</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary" data-i18n="market_research.cta.btn_custom_research">提交定制调研申请</a>
-                    <a href="#" class="btn btn-outline" data-i18n="market_research.cta.btn_contact_support">联系客服咨询</a>
-                </div>
+                <h3 data-i18n="market_research.cta_bottom.title">需要更深入的国家报告？</h3>
+                <p data-i18n="market_research.cta_bottom.description">我们支持 AI 定制报告、专家快速分析与本地合作咨询，助您精准决策市场进入方案。</p>
+                <a href="/contact.html" class="button" data-i18n="market_research.cta_bottom.button">联系我们获取定制报告</a>
             </div>
         </section>
     </main>
@@ -1415,6 +1464,41 @@
     <script src="js/languages.js"></script>
     <script src="js/i18n.js"></script>
     <script>
+        // 筛选功能
+        function filterReports() {
+            const regionSelect = document.getElementById('region-select');
+            const gameTypeSelect = document.getElementById('game-type-select');
+            const selectedRegion = regionSelect.value;
+            const selectedGameType = gameTypeSelect.value;
+            
+            const reportCards = document.querySelectorAll('.report-card');
+            
+            reportCards.forEach(card => {
+                const cardRegion = card.getAttribute('data-region');
+                const cardGameType = card.getAttribute('data-game-type');
+                
+                const regionMatch = selectedRegion === 'all' || cardRegion === selectedRegion;
+                const gameTypeMatch = selectedGameType === 'all' || cardGameType === selectedGameType;
+                
+                if (regionMatch && gameTypeMatch) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // 添加淡入动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+        
         // 移动菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');

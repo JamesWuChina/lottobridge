@@ -158,56 +158,163 @@ const en = {
     },
     // Hero Section
     hero: {
-        title: 'Global Lottery One-Stop Solution Platform',
-        subtitle: 'Leveraging China\'s powerful lottery industry chain resources, integrating core capabilities in system software, terminal hardware, ticket printing, and thermal consumables to help government agencies and private operators worldwide quickly enter the lottery market',
-        cta_primary: 'AI Market Research Report',
-        cta_secondary: 'Contact Our Consultants'
+        title: 'One-Stop Global Lottery Overseas Solution Platform',
+        subtitle: 'From market research to system construction, terminal supply and ticket printing, full-process AI-driven support for market landing',
+        cta_primary: 'Get Custom Solution',
+        cta_secondary: 'View Market Reports',
+        support_text: 'Supporting 7 languages, serving 50+ countries and regions'
     },
     // Features
     features: {
         title: 'What We Can Do For You',
         subtitle: 'LottoBridge is not just a B2B platform, but a packaged lottery business landing system that helps clients go from "is there an opportunity" to "how to implement" in one step',
-        consulting: {
-            title: 'Pre-consultation & Market Planning',
-            description: 'AI global market research engine generates professional reports on lottery policies, market size, risk analysis for 100+ countries with one click'
+        learn_more: 'Learn More',
+        market_research: {
+            title: 'Market Research',
+            description: 'AI-driven global lottery market analysis, providing policy regulations, market size, competitive landscape and professional reports'
         },
-        products: {
-            title: 'Products & Technical Services',
-            description: 'Complete lottery system services, terminal equipment supply chain, lottery game design and development, ticket printing and thermal paper services'
+        system_development: {
+            title: 'System Development',
+            description: 'Complete lottery sales, drawing, and settlement systems supporting multiple game types and meeting international regulatory requirements'
         },
-        support: {
-            title: 'Operational Support & Landing Services',
-            description: 'Training and operational guidance, supply-demand matching and order management, export and compliance support, strategic partner matching'
+        terminal_equipment: {
+            title: 'Terminal Equipment',
+            description: 'High-performance lottery terminals, self-service ticket machines, mobile sales devices adapted to various sales scenarios'
+        },
+        lottery_printing: {
+            title: 'Lottery Printing',
+            description: 'Secure anti-counterfeit instant ticket printing services, compliant with international security standards, supporting customized design'
+        },
+        thermal_supplies: {
+            title: 'Thermal Supplies',
+            description: 'High-quality thermal paper, ribbon and other consumables supply, ensuring print quality and stable equipment operation'
+        },
+        maintenance_service: {
+            title: 'Maintenance Service',
+            description: '7×24 hours technical support, remote monitoring, regular maintenance, ensuring stable system operation'
+        },
+        training_support: {
+            title: 'Training Support',
+            description: 'Professional operation training, management training and technical training, helping teams get started quickly'
         }
     },
     // Solutions
     solutions: {
-        title: 'Our Core Solutions',
-        subtitle: 'Customized products and services for different market needs',
-        software: {
-            title: 'Lottery System Software',
-            description: 'Complete lottery sales, drawing, and settlement systems supporting multiple lottery games and meeting different national regulatory requirements'
+        title: 'Our One-Stop Service Capabilities',
+        subtitle: 'LottoBridge provides end-to-end delivery capabilities from research to implementation, ensuring your lottery business success',
+        learn_more: 'Learn More',
+        market_research: {
+            title: 'Market Research & Feasibility Assessment',
+            description: 'Combining AI and expert analysis to provide business judgment support before implementation'
         },
-        hardware: {
-            title: 'Terminal Hardware Equipment',
-            description: 'High-performance lottery terminals, self-service ticket machines, mobile sales devices adapted to various sales scenarios'
+        system_solution: {
+            title: 'Lottery System Solutions',
+            description: 'Providing digital lottery, instant ticket, betting, video lottery system construction and deployment'
         },
-        printing: {
-            title: 'Ticket Printing Services',
-            description: 'Secure anti-counterfeit instant ticket printing, compliant with international security standards, supporting customized design'
+        terminal_deployment: {
+            title: 'Multi-Terminal Equipment Deployment',
+            description: 'Supporting handheld devices, self-service machines, redemption terminals and other multi-form access'
         },
-        learn_more: 'Learn More'
+        printing_supply: {
+            title: 'Lottery Printing & Consumables Supply',
+            description: 'Meeting printing, anti-counterfeiting and thermal paper support for different game types'
+        },
+        maintenance_compliance: {
+            title: 'Maintenance & Regulatory Compliance Support',
+            description: 'Remote system maintenance, data auditing and regulatory interface integration'
+        },
+        training_delivery: {
+            title: 'Launch Training & Localized Delivery',
+            description: 'Providing complete training systems for operators and sales terminals'
+        }
     },
-    // Global Coverage
+    // Market Research Report Highlights
+    market_reports: {
+        title: 'Global Lottery Market Intelligence Reports',
+        subtitle: 'AI-driven market analysis providing the latest global lottery market insights',
+        view_report: 'View Report',
+        reports: {
+            egypt: {
+                title: 'Egypt Lottery Market Deep Analysis',
+                date: 'January 2024',
+                highlights: ['$430M Market Size', '8% Annual Growth', 'Digital Transformation Opportunity']
+            },
+            mexico: {
+                title: 'Mexico Lottery Market Opportunity Assessment',
+                date: 'February 2024',
+                highlights: ['Private Access Policy', '$1.25B Market', 'Sports Betting Growth']
+            },
+            philippines: {
+                title: 'Philippines Lottery Market Outlook Report',
+                date: 'March 2024',
+                highlights: ['High Growth Potential', '$870M Market Size', 'E-games Rising']
+            }
+        }
+    },
+    // Case Studies Highlights
+    case_studies: {
+        title: 'Featured Case Studies',
+        subtitle: 'Real success stories showing how LottoBridge helps clients achieve lottery business implementation',
+        view_details: 'View Details',
+        cases: {
+            nigeria: {
+                title: 'Nigeria National Lottery System Project',
+                client_type: 'Government Agency',
+                scope: 'Nationwide Coverage',
+                description: 'Provided complete lottery system solution for Nigerian government, including system development, terminal deployment, operational training and full-process services.',
+                deliverables: ['Lottery System Development', '1000 Terminal Deployment', 'Operations Team Training', 'Compliance Consulting Services']
+            },
+            cambodia: {
+                title: 'Cambodia Private Lottery Operation Project',
+                client_type: 'Private Operator',
+                scope: 'Regional Pilot',
+                description: 'Assisted Cambodian private operator to quickly launch lottery business, from market research to system launch in just 3 months.',
+                deliverables: ['Market Feasibility Analysis', 'Custom System Development', 'Printing Service Integration', 'Localization Training']
+            }
+        }
+    },
+    // Global Service Data Map
     global: {
-        title: 'Global Market Coverage',
-        subtitle: 'Our solutions have been successfully implemented in multiple countries and regions worldwide',
+        title: 'Global Service Data',
+        subtitle: 'LottoBridge service coverage and business data display in global markets',
+        stats: {
+            countries: {
+                number: '50+',
+                label: 'Service Countries',
+                description: 'Covering major lottery markets worldwide'
+            },
+            languages: {
+                number: '12',
+                label: 'Supported Languages',
+                description: 'Multi-language localization services'
+            },
+            projects: {
+                number: '200+',
+                label: 'Covered Projects',
+                description: 'Successfully delivered lottery projects'
+            },
+            users: {
+                number: '10M+',
+                label: 'End Users',
+                description: 'Number of lottery players served'
+            }
+        },
         regions: {
-            latin_america: 'Latin America',
-            africa: 'Africa',
-            southeast_asia: 'Southeast Asia',
-            central_eastern_europe: 'Central & Eastern Europe',
-            middle_east: 'Middle East'
+            asia_pacific: {
+                name: 'Asia Pacific',
+                count: '18 Countries',
+                description: 'Including Southeast Asia, South Asia and other major markets'
+            },
+            africa: {
+                name: 'Africa',
+                count: '15 Countries',
+                description: 'Covering East Africa, West Africa, South Africa and other regions'
+            },
+            latin_america: {
+                name: 'Latin America',
+                count: '12 Countries',
+                description: 'Key markets including Mexico, Brazil and others'
+            }
         }
     },
     // Testimonials
@@ -220,10 +327,10 @@ const en = {
     },
     // Call to Action
     cta: {
-        title: 'Ready to Enter the Global Lottery Market?',
+        title: 'Ready to Explore the Global Market?',
         subtitle: 'Whether you are a government agency, private operator, or technology provider, LottoBridge can provide you with the most suitable solution',
-        contact_now: 'Contact Now',
-        book_demo: 'Book Demo'
+        contact_now: 'Contact Consultant Now',
+        book_demo: 'Download Service Handbook'
     },
     // Footer
     footer: {
@@ -980,4 +1087,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = en;
 } else {
     window.en = en;
-} 
+}

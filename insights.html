@@ -211,9 +211,9 @@
 
         /* Hero区域 */
         .insights-hero {
-            background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
-            color: var(--white);
-            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: var(--nav-blue);
+            padding: 100px 0 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -226,27 +226,29 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-            opacity: 0.1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:%231a3e8c;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23e63946;stop-opacity:0.1" /></linearGradient></defs><rect width="1000" height="300" fill="url(%23grad)" /></svg>') no-repeat center center/cover;
+            opacity: 0.3;
         }
 
         .insights-hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .insights-hero h1 {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
+            color: var(--primary-blue);
         }
 
         .insights-hero p {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 30px;
-            opacity: 0.9;
+            color: var(--medium-gray);
+            font-weight: 400;
         }
 
         .btn {
@@ -288,20 +290,23 @@
             margin-top: 40px;
         }
 
-        /* 内容分类导航 */
+        /* 标签导航分类 */
         .insights-nav {
             background-color: var(--white);
             box-shadow: var(--shadow);
             position: sticky;
             top: 70px;
             z-index: 999;
+            border-bottom: 1px solid #e9ecef;
         }
 
         .insights-nav-container {
             display: flex;
+            justify-content: center;
             overflow-x: auto;
-            padding: 15px 0;
+            padding: 20px 0;
             scrollbar-width: none;
+            gap: 40px;
         }
 
         .insights-nav-container::-webkit-scrollbar {
@@ -309,19 +314,28 @@
         }
 
         .insights-nav-item {
-            padding: 8px 20px;
+            padding: 12px 24px;
             white-space: nowrap;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 16px;
             color: var(--medium-gray);
-            border-bottom: 2px solid transparent;
+            border: 2px solid transparent;
+            border-radius: 25px;
             transition: var(--transition);
             cursor: pointer;
+            background-color: transparent;
         }
 
-        .insights-nav-item.active,
+        .insights-nav-item.active {
+            color: var(--white);
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
         .insights-nav-item:hover {
             color: var(--primary-blue);
-            border-bottom-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            background-color: rgba(26, 62, 140, 0.05);
         }
 
         /* 内容区域通用样式 */
@@ -448,90 +462,98 @@
             font-size: 20px;
         }
 
-        /* 文章卡片 */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .article-card {
+        /* 洞察内容区域 */
+        .insights-content {
+            padding: 60px 0;
             background-color: var(--white);
-            border-radius: var(--border-radius);
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: var(--transition);
+            border: 1px solid #f1f3f4;
         }
 
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .insight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .article-image {
-            height: 200px;
+        .insight-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
             background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-size: 60px;
         }
 
-        .article-content {
+        .insight-card-content {
             padding: 25px;
         }
 
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 14px;
-            color: var(--medium-gray);
-        }
-
-        .article-content h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+        .insight-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
             color: var(--nav-blue);
+            line-height: 1.4;
         }
 
-        .article-content p {
+        .insight-card .meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--medium-gray);
+        }
+
+        .insight-card .meta .category {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .insight-card .summary {
             color: var(--medium-gray);
             margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 15px;
         }
 
-        .article-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background-color: var(--light-gray);
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            color: var(--primary-blue);
-        }
-
-        .article-link {
+        .insight-card .readmore {
             display: inline-flex;
             align-items: center;
             color: var(--primary-blue);
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: var(--transition);
         }
 
-        .article-link i {
+        .insight-card .readmore:hover {
+            color: var(--primary-red);
+        }
+
+        .insight-card .readmore::after {
+            content: ' →';
             margin-left: 5px;
             transition: var(--transition);
         }
 
-        .article-link:hover i {
-            transform: translateX(5px);
+        .insight-card .readmore:hover::after {
+            transform: translateX(3px);
         }
 
         /* 案例比较区域 */
@@ -744,41 +766,100 @@
             transform: translateX(5px);
         }
 
-        /* 订阅区域 */
-        .subscribe-section {
+        /* 推荐阅读区域 */
+        .related-insights {
+            padding: 50px 0;
+            background-color: var(--light-gray);
+        }
+
+        .related-insights h4 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--nav-blue);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .related-insights ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .related-insights li {
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .related-insights li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-insights a {
+            color: var(--nav-blue);
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .related-insights a::after {
+            content: '→';
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .related-insights a:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* 底部CTA引导 */
+        .cta-insight {
             padding: 80px 0;
             background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
             color: var(--white);
             text-align: center;
         }
 
-        .subscribe-form {
+        .cta-insight h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-insight p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
             max-width: 600px;
-            margin: 30px auto 0;
-            display: flex;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .subscribe-form input {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: var(--border-radius) 0 0 var(--border-radius);
-            font-size: 16px;
-        }
-
-        .subscribe-form button {
-            padding: 15px 30px;
+        .cta-insight .button {
+            display: inline-block;
+            padding: 15px 40px;
             background-color: var(--primary-red);
             color: var(--white);
-            border: none;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            text-decoration: none;
+            border-radius: 30px;
             font-weight: 600;
-            cursor: pointer;
+            font-size: 16px;
             transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
         }
 
-        .subscribe-form button:hover {
+        .cta-insight .button:hover {
             background-color: #d62c3b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
         }
 
         /* 页脚 */
@@ -1068,76 +1149,71 @@
         <!-- 内容分类导航 -->
         <section class="insights-nav">
             <div class="container insights-nav-container">
-                <div class="insights-nav-item active" data-target="trends" data-i18n="insights.nav_categories.policy_tracking">📜 法规政策追踪</div>
-                <div class="insights-nav-item" data-target="reports" data-i18n="insights.nav_categories.market_trends">📈 市场趋势报告</div>
-                <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav_categories.tech_trends">🧠 技术趋势分析</div>
-                <div class="insights-nav-item" data-target="games" data-i18n="insights.nav_categories.case_studies">🧩 案例研究</div>
-                <div class="insights-nav-item" data-target="whitepapers" data-i18n="insights.nav_categories.industry_reports">📊 行业报告</div>
-                <div class="insights-nav-item" data-target="videos" data-i18n="insights.nav_categories.webinars">🎥 视频讲座</div>
+                <div class="insights-nav-item active" data-target="policy" data-i18n="insights.nav_categories.policy_tracking">政策动态</div>
+                <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav_categories.tech_trends">技术趋势</div>
+                <div class="insights-nav-item" data-target="market" data-i18n="insights.nav_categories.market_opportunities">市场机会</div>
             </div>
         </section>
         
-        <!-- 趋势导读区域 -->
-        <section class="trends-section" id="trends">
+        <!-- 洞察内容区域 -->
+        <section class="insights-content" id="insights-main">
             <div class="container">
                 <div class="section-title">
-                    <h2 data-i18n="insights.trends.card_title">2025全球彩票行业五大趋势前瞻</h2>
-                    <p data-i18n="insights.trends.subtitle">LottoBridge 行业研究团队基于132个国家市场数据的最新分析</p>
+                    <h2>行业洞察</h2>
+                    <p>全球彩票行业趋势分析与专业见解</p>
                 </div>
                 
-                <div class="trend-card">
-                    <h3 data-i18n="insights.trends.card_description">全球彩票行业正在经历深刻变革</h3>
-                    <div class="trend-list">
-                        <div class="trend-item">
-                            <div class="trend-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="trend-content">
-                                <h4 data-i18n="insights.trends.trend1.title">数字化转型加速</h4>
-                                <p data-i18n="insights.trends.trend1.description">移动端销售占比将超过60%，云彩票系统成为主流选择</p>
-                            </div>
-                        </div>
-                        
-                        <div class="trend-item">
-                            <div class="trend-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="trend-content">
-                                <h4 data-i18n="insights.trends.trend2.title">监管合规要求提升</h4>
-                                <p data-i18n="insights.trends.trend2.description">各国加强反洗钱、数据保护等合规要求，技术门槛显著提高</p>
-                            </div>
-                        </div>
-                        
-                        <div class="trend-item">
-                            <div class="trend-icon">
-                                <i class="fas fa-balance-scale"></i>
-                            </div>
-                            <div class="trend-content">
-                                <h4 data-i18n="insights.trends.trend3.title">AI技术深度应用</h4>
-                                <p data-i18n="insights.trends.trend3.description">人工智能在风险控制、客户分析、游戏设计等领域广泛应用</p>
-                            </div>
-                        </div>
-                        
-                        <div class="trend-item">
-                            <div class="trend-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="trend-content">
-                                <h4 data-i18n="insights.trends.trend4.title">跨境合作增多</h4>
-                                <p data-i18n="insights.trends.trend4.description">国际彩票联盟、跨国运营商合作模式日益成熟</p>
-                            </div>
-                        </div>
-                        
-                        <div class="trend-item">
-                            <div class="trend-icon">
-                                <i class="fas fa-dice"></i>
-                            </div>
-                            <div class="trend-content">
-                                <h4 data-i18n="insights.trends.trend5.title">可持续发展重视</h4>
-                                <p data-i18n="insights.trends.trend5.description">ESG理念融入彩票运营，绿色彩票、社会责任成为关键词</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="insights-grid">
+                    <!-- 政策动态类文章 -->
+                    <article class="insight-card" data-category="policy">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="2025年东南亚Keno游戏潜力分析">
+                        <h3>2025年东南亚Keno游戏潜力分析</h3>
+                        <p class="meta">政策动态 · 2025-05-15 · LottoBridge研究院</p>
+                        <p class="summary">泰国、越南等国政策松动，Keno游戏有望成为数字彩票突破口，预计市场规模增长300%。</p>
+                        <a href="/insight/southeast-asia-keno.html" class="readmore">阅读全文 →</a>
+                    </article>
+                    
+                    <article class="insight-card" data-category="policy">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="非洲数字彩票发展机会分析">
+                        <h3>非洲数字彩票发展机会分析</h3>
+                        <p class="meta">政策动态 · 2025-05-10 · 市场研究部</p>
+                        <p class="summary">尼日利亚新法案通过，肯尼亚移动支付普及，非洲数字彩票市场迎来黄金发展期。</p>
+                        <a href="/insight/africa-digital.html" class="readmore">阅读全文 →</a>
+                    </article>
+                    
+                    <!-- 技术趋势类文章 -->
+                    <article class="insight-card" data-category="tech">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="AI驱动的彩票风控系统升级">
+                        <h3>AI驱动的彩票风控系统升级</h3>
+                        <p class="meta">技术趋势 · 2025-05-08 · 技术创新部</p>
+                        <p class="summary">机器学习算法在反欺诈、异常检测方面表现优异，误报率降低85%，检测精度提升40%。</p>
+                        <a href="/insight/ai-risk-control.html" class="readmore">阅读全文 →</a>
+                    </article>
+                    
+                    <article class="insight-card" data-category="tech">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="区块链彩票透明度解决方案">
+                        <h3>区块链彩票透明度解决方案</h3>
+                        <p class="meta">技术趋势 · 2025-05-05 · 区块链实验室</p>
+                        <p class="summary">基于智能合约的开奖系统确保公正性，玩家信任度提升60%，监管合规成本降低30%。</p>
+                        <a href="/insight/blockchain-transparency.html" class="readmore">阅读全文 →</a>
+                    </article>
+                    
+                    <!-- 市场机会类文章 -->
+                    <article class="insight-card" data-category="market">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="日本即开票产品设计趋势">
+                        <h3>日本即开票产品设计趋势</h3>
+                        <p class="meta">市场机会 · 2025-05-03 · 产品设计部</p>
+                        <p class="summary">动漫IP联名、限量收藏版设计成为主流，年轻用户占比从25%提升至45%。</p>
+                        <a href="/insight/japan-scratch.html" class="readmore">阅读全文 →</a>
+                    </article>
+                    
+                    <article class="insight-card" data-category="market">
+                        <img src="/assets/images/insight-placeholder.jpg" alt="拉美市场数字化转型机遇">
+                        <h3>拉美市场数字化转型机遇</h3>
+                        <p class="meta">市场机会 · 2025-04-28 · 国际业务部</p>
+                        <p class="summary">巴西、墨西哥移动支付普及率超70%，为数字彩票发展提供基础设施支撑。</p>
+                        <a href="/insight/latam-digital-transformation.html" class="readmore">阅读全文 →</a>
+                    </article>
                 </div>
             </div>
         </section>
@@ -1356,211 +1432,26 @@
             </div>
         </section>
         
-        <!-- 案例比较区域 -->
-        <section class="case-compare" id="cases">
+        <!-- 推荐阅读区域 -->
+        <section class="related-insights">
             <div class="container">
-                <div class="section-title">
-                    <h2 data-i18n="insights.case_compare.title">拉美三国彩票改革比较</h2>
-                    <p data-i18n="insights.case_compare.subtitle">智利、秘鲁、阿根廷三国不同改革路径的深度分析</p>
-                </div>
-                
-                <table class="compare-table">
-                    <thead>
-                        <tr>
-                            <th data-i18n="insights.case_compare.table.country">国家</th>
-                            <th data-i18n="insights.case_compare.table.policy_path">政策路径</th>
-                            <th data-i18n="insights.case_compare.table.success_factors">成功要素</th>
-                            <th data-i18n="insights.case_compare.table.risk_lessons">风险教训</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-i18n="insights.case_compare.chile.country">🇨🇱 智利</td>
-                            <td data-i18n="insights.case_compare.chile.policy">公开招标私营承包</td>
-                            <td class="good-practice" data-i18n="insights.case_compare.chile.success">独立发行系统+渠道合作</td>
-                            <td class="bad-practice" data-i18n="insights.case_compare.chile.risk">缺乏印刷合规监管</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="insights.case_compare.peru.country">🇵🇪 秘鲁</td>
-                            <td data-i18n="insights.case_compare.peru.policy">合资运营与跨国集团合作</td>
-                            <td class="good-practice" data-i18n="insights.case_compare.peru.success">提前设立合规标准</td>
-                            <td class="bad-practice" data-i18n="insights.case_compare.peru.risk">玩家欺诈风险高</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="insights.case_compare.argentina.country">🇦🇷 阿根廷</td>
-                            <td data-i18n="insights.case_compare.argentina.policy">地区独立运营模式</td>
-                            <td class="good-practice" data-i18n="insights.case_compare.argentina.success">地方票种灵活多样</td>
-                            <td class="bad-practice" data-i18n="insights.case_compare.argentina.risk">市场过度碎片化</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="article-card" style="margin-top: 40px;">
-                    <div class="article-content">
-                        <h3 data-i18n="insights.case_compare.summary.title">关键发现总结</h3>
-                        <p data-i18n="insights.case_compare.summary.description">通过对拉美三国彩票改革路径的比较分析，我们发现：</p>
-                        <ul style="margin: 15px 0 20px 20px;">
-                            <li style="margin-bottom: 10px;" data-i18n="insights.case_compare.summary.point1">私营化模式(智利)初期见效快，但长期监管挑战大</li>
-                            <li style="margin-bottom: 10px;" data-i18n="insights.case_compare.summary.point2">合资模式(秘鲁)能快速引入国际经验，但需防范技术依赖</li>
-                            <li data-i18n="insights.case_compare.summary.point3">地方自治模式(阿根廷)激发创新活力，但难以形成规模效应</li>
-                        </ul>
-                        <div class="article-link">
-                            <span data-i18n="insights.case_compare.download_report">下载完整比较报告(PDF)</span> <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
+                <h4>你可能感兴趣</h4>
+                <ul>
+                    <li><a href="/insight/africa-digital.html">非洲数字彩票发展机会分析</a></li>
+                    <li><a href="/insight/japan-scratch.html">日本即开票产品设计趋势</a></li>
+                    <li><a href="/insight/blockchain-transparency.html">区块链彩票透明度解决方案</a></li>
+                    <li><a href="/insight/latam-digital-transformation.html">拉美市场数字化转型机遇</a></li>
+                    <li><a href="/insight/ai-risk-control.html">AI驱动的彩票风控系统升级</a></li>
+                </ul>
             </div>
         </section>
         
-        <!-- 白皮书区域 -->
-        <section class="reports-section" id="whitepapers">
+        <!-- 页面底部 CTA 引导 -->
+        <section class="cta-insight">
             <div class="container">
-                <div class="section-title">
-                    <h2 data-i18n="insights.whitepapers.title">专业白皮书下载</h2>
-                    <p data-i18n="insights.whitepapers.subtitle">LottoBridge发布的全球调研系列深度报告</p>
-                </div>
-                
-                <div class="reports-grid">
-                    <div class="report-card">
-                        <div class="report-cover">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="report-content">
-                            <h3 data-i18n="insights.whitepapers.report1.title">非洲彩票政策与市场布局2025</h3>
-                            <div class="report-meta">
-                                <span>PDF / PPT</span>
-                                <span>15MB</span>
-                            </div>
-                            <p class="report-desc" data-i18n="insights.whitepapers.report1.description">覆盖12国政策要点、玩法结构、机会地图与风险预警</p>
-                            <a href="#" class="download-btn">
-                                <i class="fas fa-download"></i> <span data-i18n="insights.whitepapers.download_btn">下载报告</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="report-card">
-                        <div class="report-cover">
-                            <i class="fas fa-scroll"></i>
-                        </div>
-                        <div class="report-content">
-                            <h3 data-i18n="insights.whitepapers.report2.title">即开票玩法设计与票面创新指南</h3>
-                            <div class="report-meta">
-                                <span>PDF</span>
-                                <span>8MB</span>
-                            </div>
-                            <p class="report-desc" data-i18n="insights.whitepapers.report2.description">包含7种票面设计模板、3种安全方案与5个新兴市场案例</p>
-                            <a href="#" class="download-btn">
-                                <i class="fas fa-download"></i> <span data-i18n="insights.whitepapers.download_btn">下载报告</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="report-card">
-                        <div class="report-cover">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <div class="report-content">
-                            <h3 data-i18n="insights.whitepapers.report3.title">全球终端设备发展趋势报告</h3>
-                            <div class="report-meta">
-                                <span>PDF / 网页</span>
-                                <span>22MB</span>
-                            </div>
-                            <p class="report-desc" data-i18n="insights.whitepapers.report3.description">分析56款主流终端的技术规格、兼容性与安全性测试结果</p>
-                            <a href="#" class="download-btn">
-                                <i class="fas fa-download"></i> 下载报告
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 视频讲座区域 -->
-        <section class="webinars-section" id="videos">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-i18n="insights.videos.title">视频讲座与行业对话</h2>
-                    <p data-i18n="insights.videos.subtitle">通过视频了解全球彩票行业最新动态</p>
-                </div>
-                
-                <div class="webinars-grid">
-                    <div class="webinar-card">
-                        <div class="webinar-video">
-                            <i class="fas fa-video"></i>
-                            <div class="play-icon">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="webinar-content">
-                            <div class="webinar-meta">
-                                <span>访谈</span>
-                                <span>45分钟</span>
-                            </div>
-                            <h3 data-i18n="insights.videos.item1.title">对话肯尼亚国家彩票局负责人</h3>
-                            <p class="webinar-desc" data-i18n="insights.videos.item1.description">解读东非彩票市场开放政策与外资合作机会</p>
-                            <a href="#" class="watch-btn">
-                                <span data-i18n="insights.videos.watch">观看视频</span> <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="webinar-card">
-                        <div class="webinar-video">
-                            <i class="fas fa-users"></i>
-                            <div class="play-icon">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="webinar-content">
-                            <div class="webinar-meta">
-                                <span>论坛</span>
-                                <span>120分钟</span>
-                            </div>
-                            <h3 data-i18n="insights.videos.item2.title">2025亚洲彩票趋势论坛回顾</h3>
-                            <p class="webinar-desc" data-i18n="insights.videos.item2.description">6国专家讨论数字化、年轻化与合规平衡</p>
-                            <a href="#" class="watch-btn">
-                                <span data-i18n="insights.videos.watch">观看视频</span> <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="webinar-card">
-                        <div class="webinar-video">
-                            <i class="fas fa-cogs"></i>
-                            <div class="play-icon">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="webinar-content">
-                            <div class="webinar-meta">
-                                <span>流程解读</span>
-                                <span>30分钟</span>
-                            </div>
-                            <h3 data-i18n="insights.videos.item3.title">选材+票面+培训一站式流程</h3>
-                            <p class="webinar-desc" data-i18n="insights.videos.item3.description">展示乌兹别克斯坦项目全流程服务案例</p>
-                            <a href="#" class="watch-btn">
-                                <span data-i18n="insights.videos.watch">观看视频</span> <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 订阅区域 -->
-        <section class="subscribe-section" id="subscribe">
-            <div class="container">
-                <h2 data-i18n="insights.subscribe.title">订阅全球彩票行业简报</h2>
-                <p data-i18n="insights.subscribe.description">每月获取最新政策解读、市场数据与趋势分析，注册后可下载全部白皮书</p>
-                
-                <form class="subscribe-form">
-                    <input type="email" data-i18n-placeholder="insights.subscribe.email_placeholder" placeholder="输入您的邮箱地址" required>
-                    <button type="submit" data-i18n="insights.subscribe.button">立即订阅</button>
-                </form>
-                
-                <p style="margin-top: 20px; opacity: 0.8;">
-                    <span data-i18n="insights.subscribe.privacy_notice">订阅即表示您同意我们的</span> <a href="#" style="color: var(--white); text-decoration: underline;" data-i18n="insights.subscribe.privacy_policy">隐私政策</a>
-                </p>
+                <h3>获取更多彩票行业研究</h3>
+                <p>立即订阅行业洞察，获取每周最新趋势、市场动态与解决方案建议。</p>
+                <a href="/contact.html" class="button">联系我们</a>
             </div>
         </section>
     </main>
