@@ -8,6 +8,7 @@ const en = {
     nav: {
         home: 'Home',
         market_research: 'Market Research',
+        market_details: 'Market Details',
         products: 'Products & Services',
         insights: 'Industry Insights',
         case_studies: 'Case Studies',
@@ -1078,6 +1079,848 @@ const en = {
             rights: 'All rights reserved.',
             privacy: 'Privacy Policy',
             terms: 'Terms of Use'
+        }
+    },
+    // Market Details Page
+    market_details: {
+        page: {
+            title: 'Market Details | LottoBridge'
+        },
+        hero: {
+            title: 'Global Lottery Market Deep Analysis',
+            subtitle: 'Deep dive into global lottery industry development trends, market opportunities and challenges, providing professional data support for your business decisions'
+        },
+        stats: {
+            market_size: 'Global Market Size',
+            growth_rate: 'Annual Growth Rate',
+            countries: 'Coverage Countries',
+            digital_penetration: 'Digital Penetration Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'The global lottery market is undergoing unprecedented digital transformation, migrating from traditional physical sales to online platforms. The rapid growth of emerging markets, continuous optimization of regulatory environments, and ongoing technological innovation are bringing tremendous development opportunities for industry participants.',
+            trends: 'Innovative models such as mobile lottery purchasing, blockchain technology applications, and AI customer service are reshaping the industry landscape, creating new value growth points for operators and investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Continuously Growing Digital Lottery Market'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            regional: {
+                title: 'Regional Market Analysis',
+                description: 'Lottery market development levels vary significantly across different regions, with North American and European markets being relatively mature, while Asia-Pacific and African regions have huge growth potential.',
+                feature1: 'North American market has the highest digitalization level',
+                feature2: 'Asia-Pacific region has the fastest growth',
+                feature3: 'European regulatory environment is most comprehensive'
+            },
+            demographic: {
+                title: 'User Group Analysis',
+                description: 'Young user groups are becoming the main force in the lottery market, with higher requirements for digital experience and convenience.',
+                feature1: '25-45 age group is the main user demographic',
+                feature2: 'Mobile usage rate exceeds 70%',
+                feature3: 'Social lottery purchasing trend is evident'
+            },
+            technology: {
+                title: 'Technology Trend Analysis',
+                description: 'New technologies such as artificial intelligence, blockchain, and cloud computing are deeply changing the operational models and service experiences of the lottery industry.',
+                feature1: 'AI customer service adoption rate exceeds 60%',
+                feature2: 'Blockchain technology applications growing',
+                feature3: 'Cloud-native architecture becoming mainstream'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key market opportunities to achieve business growth',
+            mobile: {
+                title: 'Mobile Opportunities',
+                description: 'Mobile lottery purchasing demand continues to grow, providing operators with huge market space and user acquisition opportunities.'
+            },
+            emerging: {
+                title: 'Emerging Markets',
+                description: 'Lottery demand in emerging markets such as Southeast Asia and Africa is growing rapidly, providing expansion opportunities for international operators.'
+            },
+            ai: {
+                title: 'AI Technology Applications',
+                description: 'Artificial intelligence has broad prospects in user service, risk control, marketing promotion and other aspects.'
+            },
+            blockchain: {
+                title: 'Blockchain Technology',
+                description: 'The application of blockchain technology in lottery transparency and security brings new development opportunities to the industry.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            regulation: {
+                title: 'Regulatory Compliance',
+                description: 'Regulatory requirements vary significantly across different countries and regions, with high compliance costs requiring professional legal and technical support.'
+            },
+            security: {
+                title: 'Security Risks',
+                description: 'Cybersecurity threats are becoming increasingly complex, requiring continuous investment in security technology and talent to protect user funds and data security.'
+            },
+            competition: {
+                title: 'Fierce Competition',
+                description: 'There are many market participants with fierce competition, requiring differentiated strategies and continuous innovation capabilities.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you address market challenges and seize development opportunities',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide multi-country regulatory compliance solutions to ensure your business operates legally worldwide.'
+            },
+            security: {
+                title: 'Security Protection',
+                description: 'Adopt bank-level security technology to provide comprehensive network security and data protection services.'
+            },
+            innovation: {
+                title: 'Technology Innovation',
+                description: 'Continuously invest in R&D to provide you with cutting-edge technology solutions and product innovation.'
+            }
+        },
+        cta: {
+            title: 'Start Your Global Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    // Uzbekistan Market Report
+    uzbekistan: {
+        page: {
+            title: 'Uzbekistan Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Uzbekistan Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in the largest economy in Central Asia'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'Uzbekistan, as the largest economy in Central Asia, has made significant progress in digital transformation in recent years. The government actively promotes modernization reforms, creating favorable conditions for the development of the lottery industry.',
+            trends: 'With the popularization of mobile internet and the increase of young population, the digital lottery market shows a rapid growth trend. The improvement of government regulatory framework provides stable policy environment for international investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Digital Transformation Drives Lottery Market Growth'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'Uzbekistan has a young population structure, with the 25-45 age group accounting for 45% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'High proportion of young population with great consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 80%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 5G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Uzbekistan\'s lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 6-12 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 15% and VAT rate of 15%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Uzbekistan\'s lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 25%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide bilingual services in Uzbek and Russian, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Uzbekistan market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Uzbekistan\'s regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide bilingual interface and customer service support in Uzbek and Russian to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Uzbekistan Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    // Nigeria Market Report
+    nigeria: {
+        page: {
+            title: 'Nigeria Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Nigeria Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in Africa\'s largest economy'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'Nigeria, as Africa\'s largest economy, has a huge population base and rapidly growing digital economy. The popularization of mobile internet provides huge market space for the development of the lottery industry.',
+            trends: 'With the increase of young population and the popularization of mobile payment, the digital lottery market shows explosive growth trend. The government is actively promoting digital transformation, creating favorable conditions for the development of the lottery industry.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Mobile Internet Drives Rapid Lottery Market Growth'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'Nigeria has a young population structure, with the 18-35 age group accounting for more than 60% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'Extremely high proportion of young population with huge consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 70%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 4G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Nigeria\'s lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 8-15 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 30% and VAT rate of 7.5%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Nigeria\'s lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 35%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide multilingual services in English and local languages, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Nigeria market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Nigeria\'s regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide multilingual interface and customer service support in English and local languages to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Nigeria Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    
+    // Vietnam Market Report
+    vietnam: {
+        page: {
+            title: 'Vietnam Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Vietnam Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in Southeast Asia\'s emerging economy'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'Vietnam, as one of the most dynamic emerging economies in Southeast Asia, has made significant progress in digital transformation in recent years. The government actively promotes modernization reforms, creating favorable conditions for the development of the lottery industry.',
+            trends: 'With the popularization of mobile internet and the increase of young population, the digital lottery market shows rapid growth trend. The improvement of government regulatory framework provides stable policy environment for international investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Digital Transformation Drives Lottery Market Growth'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'Vietnam has a young population structure, with the 25-45 age group accounting for more than 50% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'High proportion of young population with great consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 75%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 4G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Vietnam\'s lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 6-12 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 20% and VAT rate of 10%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Vietnam\'s lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 30%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide bilingual services in Vietnamese and English, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Vietnam market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Vietnam\'s regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide bilingual interface and customer service support in Vietnamese and English to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Vietnam Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    
+    // Mexico Market Report
+    mexico: {
+        page: {
+            title: 'Mexico Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Mexico Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in Latin America\'s second largest economy'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'Mexico, as Latin America\'s second largest economy, has a mature market system and stable regulatory environment. The government invests heavily in digital transformation, providing good infrastructure for the development of the lottery industry.',
+            trends: 'With the popularization of mobile internet and the increase of young population, the digital lottery market shows rapid growth trend. The improvement of government regulatory framework provides stable policy environment for international investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Mature Market Digital Transformation Acceleration'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'Mexico has a young population structure, with the 25-45 age group accounting for more than 40% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'High proportion of young population with great consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 85%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 4G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Mexico\'s lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 8-15 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 30% and VAT rate of 16%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Mexico\'s lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 20%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide bilingual services in Spanish and English, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Mexico market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Mexico\'s regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide bilingual interface and customer service support in Spanish and English to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Mexico Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    
+    // Philippines Market Report
+    philippines: {
+        page: {
+            title: 'Philippines Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Philippines Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in Southeast Asia\'s emerging economy'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'The Philippines, as one of the most dynamic emerging economies in Southeast Asia, has made significant progress in digital transformation in recent years. The government actively promotes modernization reforms, creating favorable conditions for the development of the lottery industry.',
+            trends: 'With the popularization of mobile internet and the increase of young population, the digital lottery market shows rapid growth trend. The improvement of government regulatory framework provides stable policy environment for international investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Digital Transformation Drives Lottery Market Growth'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'The Philippines has a young population structure, with the 25-45 age group accounting for more than 55% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'High proportion of young population with great consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 80%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 4G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Philippines\' lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 6-12 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 25% and VAT rate of 12%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Philippines\' lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 35%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide bilingual services in Filipino and English, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Philippines market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Philippines\' regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide bilingual interface and customer service support in Filipino and English to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Philippines Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
+        }
+    },
+    
+    // Kenya Market Report
+    kenya: {
+        page: {
+            title: 'Kenya Lottery Market Report | LottoBridge'
+        },
+        hero: {
+            title: 'Kenya Lottery Market Report',
+            subtitle: 'In-depth analysis of development opportunities, regulatory environment and investment prospects in East Africa\'s most dynamic economy'
+        },
+        stats: {
+            population: 'Population Size',
+            gdp: 'GDP Total',
+            growth: 'Economic Growth Rate',
+            urbanization: 'Urbanization Rate'
+        },
+        overview: {
+            title: 'Market Overview',
+            description: 'Kenya, as East Africa\'s most dynamic economy, has made significant progress in digital transformation in recent years. The government actively promotes modernization reforms, creating favorable conditions for the development of the lottery industry.',
+            trends: 'With the popularization of mobile internet and the increase of young population, the digital lottery market shows rapid growth trend. The improvement of government regulatory framework provides stable policy environment for international investors.',
+            visual_title: 'Market Trends',
+            visual_subtitle: 'Mobile Payment Leadership Drives Lottery Market Growth'
+        },
+        analysis: {
+            title: 'Deep Market Analysis',
+            subtitle: 'Based on the latest data and industry research, providing comprehensive market insights',
+            demographic: {
+                title: 'Demographic Analysis',
+                description: 'Kenya has a young population structure, with the 25-45 age group accounting for more than 60% of the total population, providing a huge potential user base for the lottery market.',
+                feature1: 'High proportion of young population with great consumption potential',
+                feature2: 'Rapid increase in mobile internet penetration rate',
+                feature3: 'Accelerated urbanization process with obvious consumption upgrade'
+            },
+            technology: {
+                title: 'Technology Development Analysis',
+                description: 'The rapid development of mobile internet technology provides a good technical foundation for digital lottery, with smartphone penetration rate exceeding 70%.',
+                feature1: 'Perfect mobile payment infrastructure',
+                feature2: 'Expanding 4G network coverage',
+                feature3: 'Mature digital identity authentication system'
+            },
+            economic: {
+                title: 'Economic Environment Analysis',
+                description: 'Stable economic growth and continuously improving business environment provide a good economic foundation for the development of the lottery industry.',
+                feature1: 'Continuous GDP growth and improved consumption capacity',
+                feature2: 'Continuously optimized foreign investment policies',
+                feature3: 'Deepening financial system reforms'
+            }
+        },
+        regulatory: {
+            title: 'Regulatory Environment Analysis',
+            subtitle: 'Understanding the regulatory framework and policy orientation of Kenya\'s lottery industry',
+            license: {
+                title: 'License Application',
+                description: 'The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 6-12 months.'
+            },
+            tax: {
+                title: 'Tax Policy',
+                description: 'The lottery industry enjoys preferential tax policies, with corporate income tax rate of 30% and VAT rate of 16%, providing support for industry development.'
+            },
+            compliance: {
+                title: 'Compliance Requirements',
+                description: 'Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection.'
+            }
+        },
+        opportunities: {
+            title: 'Market Opportunities',
+            subtitle: 'Identify and seize key opportunities in Kenya\'s lottery market',
+            mobile: {
+                title: 'Mobile Lottery',
+                description: 'High mobile internet penetration rate, huge potential in mobile lottery market, expected annual growth rate of 40%.'
+            },
+            games: {
+                title: 'Game Innovation',
+                description: 'Strong demand for innovative game play among young users, providing broad space for game design and development.'
+            },
+            retail: {
+                title: 'Retail Network',
+                description: 'Traditional retail channels still have development space, with promising prospects for online and offline combined sales models.'
+            },
+            ai: {
+                title: 'AI Technology',
+                description: 'Broad prospects for artificial intelligence applications in user service, risk control and other aspects.'
+            }
+        },
+        challenges: {
+            title: 'Market Challenges',
+            subtitle: 'Understand the main challenges facing the industry and develop corresponding response strategies',
+            language: {
+                title: 'Language Localization',
+                description: 'Need to provide bilingual services in Swahili and English, with high localization requirements.'
+            },
+            security: {
+                title: 'Cybersecurity',
+                description: 'Need to establish a cybersecurity system that meets local standards to protect user data security.'
+            },
+            partnership: {
+                title: 'Partnerships',
+                description: 'Need to establish cooperative relationships with local financial institutions and payment service providers.'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge Solutions',
+            subtitle: 'We provide comprehensive technical support and services to help you succeed in the Kenya market',
+            compliance: {
+                title: 'Compliance Support',
+                description: 'Provide system solutions that meet Kenya\'s regulatory requirements to ensure legal business operations.'
+            },
+            localization: {
+                title: 'Localization Services',
+                description: 'Provide bilingual interface and customer service support in Swahili and English to ensure user experience.'
+            },
+            partnership: {
+                title: 'Partnership Network',
+                description: 'Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions.'
+            }
+        },
+        cta: {
+            title: 'Start Your Kenya Lottery Business Journey',
+            subtitle: 'Contact us for professional market analysis and customized solutions',
+            contact: 'Contact Now',
+            cases: 'View Cases'
         }
     }
 };

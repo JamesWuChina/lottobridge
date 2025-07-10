@@ -8,6 +8,7 @@ const zh = {
     nav: {
         home: '首页',
         market_research: '市场调研',
+        market_details: '市场详情',
         products: '产品服务',
         insights: '行业洞察',
         case_studies: '合作案例',
@@ -1078,6 +1079,848 @@ const zh = {
             rights: '保留所有权利。',
             privacy: '隐私政策',
             terms: '使用条款'
+        }
+    },
+    // 市场详情页面
+    market_details: {
+        page: {
+            title: '市场详情 | LottoBridge'
+        },
+        hero: {
+            title: '全球彩票市场深度分析',
+            subtitle: '深入了解全球彩票行业的发展趋势、市场机遇与挑战，为您的业务决策提供专业数据支持'
+        },
+        stats: {
+            market_size: '全球市场规模',
+            growth_rate: '年增长率',
+            countries: '覆盖国家',
+            digital_penetration: '数字化渗透率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '全球彩票市场正经历前所未有的数字化转型，从传统实体销售向在线平台迁移。新兴市场的快速增长、监管环境的不断优化，以及技术的持续创新，为行业参与者带来了巨大的发展机遇。',
+            trends: '移动端购彩、区块链技术应用、人工智能客服等创新模式正在重塑行业格局，为运营商和投资者创造了新的价值增长点。',
+            visual_title: '市场趋势',
+            visual_subtitle: '持续增长的数字彩票市场'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            regional: {
+                title: '区域市场分析',
+                description: '不同地区的彩票市场发展水平差异显著，北美和欧洲市场相对成熟，而亚太和非洲地区增长潜力巨大。',
+                feature1: '北美市场数字化程度最高',
+                feature2: '亚太地区增长最快',
+                feature3: '欧洲监管环境最完善'
+            },
+            demographic: {
+                title: '用户群体分析',
+                description: '年轻用户群体正在成为彩票市场的主力军，他们对数字化体验和便捷性有更高要求。',
+                feature1: '25-45岁为主要用户群体',
+                feature2: '移动端使用率超过70%',
+                feature3: '社交化购彩趋势明显'
+            },
+            technology: {
+                title: '技术趋势分析',
+                description: '人工智能、区块链、云计算等新技术正在深度改变彩票行业的运营模式和服务体验。',
+                feature1: 'AI客服普及率超过60%',
+                feature2: '区块链技术应用增长',
+                feature3: '云原生架构成为主流'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握关键市场机遇，实现业务增长',
+            mobile: {
+                title: '移动端机遇',
+                description: '移动端购彩需求持续增长，为运营商提供了巨大的市场空间和用户获取机会。'
+            },
+            emerging: {
+                title: '新兴市场',
+                description: '东南亚、非洲等新兴市场的彩票需求快速增长，为国际运营商提供了扩张机会。'
+            },
+            ai: {
+                title: 'AI技术应用',
+                description: '人工智能在用户服务、风险控制、营销推广等方面的应用前景广阔。'
+            },
+            blockchain: {
+                title: '区块链技术',
+                description: '区块链技术在彩票透明度和安全性方面的应用，为行业带来新的发展机遇。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            regulation: {
+                title: '监管合规',
+                description: '不同国家和地区的监管要求差异较大，合规成本高，需要专业的法律和技术支持。'
+            },
+            security: {
+                title: '安全风险',
+                description: '网络安全威胁日益复杂，需要持续投入安全技术和人才，保障用户资金和数据安全。'
+            },
+            competition: {
+                title: '竞争激烈',
+                description: '市场参与者众多，竞争激烈，需要差异化策略和持续创新能力。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您应对市场挑战，把握发展机遇',
+            compliance: {
+                title: '合规支持',
+                description: '提供多国监管合规解决方案，确保您的业务在全球范围内合法运营。'
+            },
+            security: {
+                title: '安全保障',
+                description: '采用银行级安全技术，提供全方位的网络安全和数据保护服务。'
+            },
+            innovation: {
+                title: '技术创新',
+                description: '持续投入研发，为您提供最前沿的技术解决方案和产品创新。'
+            }
+        },
+        cta: {
+            title: '开启您的全球彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    // 乌兹别克斯坦市场报告
+    uzbekistan: {
+        page: {
+            title: '乌兹别克斯坦彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '乌兹别克斯坦彩票市场报告',
+            subtitle: '深入分析中亚最大经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '乌兹别克斯坦作为中亚地区最大的经济体，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
+            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
+            visual_title: '市场趋势',
+            visual_subtitle: '数字化转型推动彩票市场增长'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '乌兹别克斯坦拥有年轻的人口结构，25-45岁年龄段占总人口的45%，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例高，消费潜力大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过80%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '5G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解乌兹别克斯坦彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为15%，增值税率为15%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握乌兹别克斯坦彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达25%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供乌兹别克语和俄语的双语服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在乌兹别克斯坦市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合乌兹别克斯坦监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供乌兹别克语和俄语的双语界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的乌兹别克斯坦彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    // 尼日利亚市场报告
+    nigeria: {
+        page: {
+            title: '尼日利亚彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '尼日利亚彩票市场报告',
+            subtitle: '深入分析非洲最大经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '尼日利亚作为非洲最大的经济体，拥有庞大的人口基数和快速增长的数字经济。移动互联网的普及为彩票行业的发展提供了巨大的市场空间。',
+            trends: '随着年轻人口的增加和移动支付的普及，数字彩票市场呈现出爆发式增长的趋势。政府正在积极推动数字化转型，为彩票行业的发展创造了有利条件。',
+            visual_title: '市场趋势',
+            visual_subtitle: '移动互联网推动彩票市场快速增长'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '尼日利亚拥有年轻的人口结构，18-35岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例极高，消费潜力巨大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '4G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解尼日利亚彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为7.5%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握尼日利亚彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达35%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供英语和当地语言的多语种服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在尼日利亚市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合尼日利亚监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供英语和当地语言的多语种界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的尼日利亚彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    
+    // 越南市场报告
+    vietnam: {
+        page: {
+            title: '越南彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '越南彩票市场报告',
+            subtitle: '深入分析东南亚新兴经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '越南作为东南亚地区最具活力的新兴经济体之一，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
+            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
+            visual_title: '市场趋势',
+            visual_subtitle: '数字化转型推动彩票市场增长'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '越南拥有年轻的人口结构，25-45岁年龄段占总人口的50%以上，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例高，消费潜力大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过75%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '4G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解越南彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为20%，增值税率为10%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握越南彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达30%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供越南语和英语的双语服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在越南市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合越南监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供越南语和英语的双语界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的越南彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    
+    // 墨西哥市场报告
+    mexico: {
+        page: {
+            title: '墨西哥彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '墨西哥彩票市场报告',
+            subtitle: '深入分析拉丁美洲第二大经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '墨西哥作为拉丁美洲第二大经济体，拥有成熟的市场体系和稳定的监管环境。政府在数字化转型方面投入巨大，为彩票行业的发展提供了良好的基础设施。',
+            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
+            visual_title: '市场趋势',
+            visual_subtitle: '成熟市场数字化转型加速'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '墨西哥拥有年轻的人口结构，25-45岁年龄段占总人口的40%以上，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例高，消费潜力大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过85%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '4G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解墨西哥彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握墨西哥彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达20%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供西班牙语和英语的双语服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在墨西哥市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合墨西哥监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供西班牙语和英语的双语界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的墨西哥彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    
+    // 菲律宾市场报告
+    philippines: {
+        page: {
+            title: '菲律宾彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '菲律宾彩票市场报告',
+            subtitle: '深入分析东南亚新兴经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '菲律宾作为东南亚地区最具活力的新兴经济体之一，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
+            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
+            visual_title: '市场趋势',
+            visual_subtitle: '数字化转型推动彩票市场增长'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '菲律宾拥有年轻的人口结构，25-45岁年龄段占总人口的55%以上，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例高，消费潜力大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过80%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '4G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解菲律宾彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为25%，增值税率为12%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握菲律宾彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达35%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供菲律宾语和英语的双语服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在菲律宾市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合菲律宾监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供菲律宾语和英语的双语界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的菲律宾彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
+        }
+    },
+    
+    // 肯尼亚市场报告
+    kenya: {
+        page: {
+            title: '肯尼亚彩票市场报告 | LottoBridge'
+        },
+        hero: {
+            title: '肯尼亚彩票市场报告',
+            subtitle: '深入分析东非地区最具活力的经济体彩票市场的发展机遇、监管环境与投资前景'
+        },
+        stats: {
+            population: '人口规模',
+            gdp: 'GDP总量',
+            growth: '经济增长率',
+            urbanization: '城市化率'
+        },
+        overview: {
+            title: '市场概览',
+            description: '肯尼亚作为东非地区最具活力的经济体，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
+            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
+            visual_title: '市场趋势',
+            visual_subtitle: '移动支付领先推动彩票市场增长'
+        },
+        analysis: {
+            title: '深度市场分析',
+            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
+            demographic: {
+                title: '人口结构分析',
+                description: '肯尼亚拥有年轻的人口结构，25-45岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。',
+                feature1: '年轻人口比例高，消费潜力大',
+                feature2: '移动互联网普及率快速提升',
+                feature3: '城市化进程加速，消费升级明显'
+            },
+            technology: {
+                title: '技术发展分析',
+                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。',
+                feature1: '移动支付基础设施完善',
+                feature2: '4G网络覆盖范围扩大',
+                feature3: '数字身份认证系统成熟'
+            },
+            economic: {
+                title: '经济环境分析',
+                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
+                feature1: 'GDP持续增长，消费能力提升',
+                feature2: '外商投资政策不断优化',
+                feature3: '金融体系改革深化'
+            }
+        },
+        regulatory: {
+            title: '监管环境分析',
+            subtitle: '了解肯尼亚彩票行业的监管框架和政策导向',
+            license: {
+                title: '牌照申请',
+                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
+            },
+            tax: {
+                title: '税收政策',
+                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。'
+            },
+            compliance: {
+                title: '合规要求',
+                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
+            }
+        },
+        opportunities: {
+            title: '市场机遇',
+            subtitle: '识别并把握肯尼亚彩票市场的关键机遇',
+            mobile: {
+                title: '移动彩票',
+                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达40%。'
+            },
+            games: {
+                title: '游戏创新',
+                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
+            },
+            retail: {
+                title: '零售网络',
+                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
+            },
+            ai: {
+                title: 'AI技术',
+                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
+            }
+        },
+        challenges: {
+            title: '市场挑战',
+            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
+            language: {
+                title: '语言本地化',
+                description: '需要提供斯瓦希里语和英语的双语服务，本地化要求较高。'
+            },
+            security: {
+                title: '网络安全',
+                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
+            },
+            partnership: {
+                title: '合作伙伴',
+                description: '需要与当地金融机构和支付服务商建立合作关系。'
+            }
+        },
+        solutions: {
+            title: 'LottoBridge解决方案',
+            subtitle: '我们提供全方位的技术支持和服务，帮助您在肯尼亚市场取得成功',
+            compliance: {
+                title: '合规支持',
+                description: '提供符合肯尼亚监管要求的系统解决方案，确保业务合法运营。'
+            },
+            localization: {
+                title: '本地化服务',
+                description: '提供斯瓦希里语和英语的双语界面和客服支持，确保用户体验。'
+            },
+            partnership: {
+                title: '合作伙伴网络',
+                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
+            }
+        },
+        cta: {
+            title: '开启您的肯尼亚彩票业务之旅',
+            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
+            contact: '立即咨询',
+            cases: '查看案例'
         }
     }
 };
