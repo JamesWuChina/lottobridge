@@ -810,6 +810,211 @@ const es = {
             view_details: 'Ver Detalles',
             download_brief: 'Descargar Resumen'
         },
+        // Nuevas traducciones para páginas de detalles de casos
+        cambodia: {
+            page_title: 'Localización del Sistema de Lotería Nacional de Camboya | LottoBridge',
+            title: 'Localización del Sistema de Lotería de Camboya',
+            description: 'Personalización completa del sistema de venta de boletos + despliegue local de terminales + capacitación del módulo CRM, soporte de interfaz en jemer e integración de terminales Android',
+            slogan: 'Localización impulsada, empoderando la transformación digital de la industria de lotería de Camboya',
+            country: 'País:',
+            country_name: 'Camboya',
+            client_type: 'Tipo de Cliente:',
+            client_type_value: 'Agencia Gubernamental',
+            period: 'Período del Proyecto:',
+            period_value: '2023-2024',
+            scope: 'Alcance del Servicio:',
+            scope_value: 'Configuración del Sistema, Despliegue de Terminales, Capacitación CRM, Localización',
+            result: 'Resultados Clave:',
+            result_value: 'Más de 1200 terminales POS desplegados, crecimiento de ventas del 42%',
+            highlight1: {
+                title: 'Sistema Completo de Venta de Boletos',
+                desc: 'Desarrollo personalizado que soporta múltiples tipos de lotería'
+            },
+            highlight2: {
+                title: 'Despliegue Local de Terminales',
+                desc: 'Despliegue nacional de 1200 terminales POS'
+            },
+            highlight3: {
+                title: 'Interfaz del Sistema en Jemer',
+                desc: 'Interfaz de usuario completamente localizada en jemer'
+            },
+            highlight4: {
+                title: 'Crecimiento Significativo de Ventas',
+                desc: 'Crecimiento de ventas del 42%, aumento anual de ventas esperado de $22M'
+            },
+            testimonial: '"La red de ventas local se lanzó rápidamente, más de 1200 terminales POS desplegados, aumento anual de ventas esperado de $22M, crecimiento de más del 42%"',
+            client: 'Director Técnico de la Oficina Nacional de Lotería de Camboya',
+            delivery_title: 'Contenido de Entrega y Proceso de Servicio',
+            delivery1: {
+                title: 'Investigación de Mercado',
+                desc: 'Análisis profundo de las políticas del mercado de lotería de Camboya y necesidades de usuarios'
+            },
+            delivery2: {
+                title: 'Personalización del Sistema',
+                desc: 'Desarrollo personalizado del sistema completo de gestión de venta de boletos'
+            },
+            delivery3: {
+                title: 'Despliegue de Terminales',
+                desc: 'Despliegue nacional de 1200 terminales POS'
+            },
+            delivery4: {
+                title: 'Capacitación CRM',
+                desc: 'Capacitación del módulo CRM y soporte operativo para equipos de clientes'
+            }
+        },
+        uganda: {
+            page_title: 'Despliegue Rápido del Proyecto de Boletos Instantáneos de Uganda | LottoBridge',
+            title: 'Despliegue Rápido del Proyecto de Boletos Instantáneos de Uganda',
+            description: 'Consultoría de categorías de lotería + diseño seguro de boletos + impresión de boletos instantáneos, proporcionando 10 tipos de boletos personalizados, todos aprobados por el gobierno local',
+            slogan: 'Despliegue rápido, cumplimiento seguro, empoderando el ecosistema de lotería de Uganda',
+            country: 'País:',
+            country_name: 'Uganda',
+            client_type: 'Tipo de Cliente:',
+            client_type_value: 'Agencia Gubernamental',
+            period: 'Período del Proyecto:',
+            period_value: '2024',
+            scope: 'Alcance del Servicio:',
+            scope_value: 'Impresión de Boletos, Exportación Logística, Diseño Seguro, Consultoría de Cumplimiento',
+            result: 'Resultados Clave:',
+            result_value: 'Proyecto completado en solo 4 meses, tasa de satisfacción de boletos del 92%',
+            highlight1: {
+                title: 'Impresión de Boletos Instantáneos',
+                desc: 'Proporcionados 10 tipos de boletos personalizados, todos aprobados por el gobierno local'
+            },
+            highlight2: {
+                title: 'Diseño Seguro de Boletos',
+                desc: 'Papel térmico y productos impresos pasaron exitosamente la certificación fiscal'
+            },
+            highlight3: {
+                title: 'Despliegue Rápido',
+                desc: 'Proyecto completado en solo 4 meses, entrada rápida al mercado'
+            },
+            highlight4: {
+                title: 'Alta Satisfacción',
+                desc: 'Tasa de satisfacción de boletos del 92%, excelentes comentarios de usuarios'
+            },
+            testimonial: '"Proyecto completado en solo 4 meses, tasa de satisfacción de boletos del 92%, papel térmico y productos impresos pasaron exitosamente la certificación fiscal, entrada rápida al mercado"',
+            client: 'Director de la Oficina Nacional de Lotería de Uganda',
+            delivery_title: 'Contenido de Entrega y Proceso de Servicio',
+            delivery1: {
+                title: 'Investigación de Mercado',
+                desc: 'Análisis profundo de las políticas del mercado de lotería de Uganda y necesidades de usuarios'
+            },
+            delivery2: {
+                title: 'Diseño de Boletos',
+                desc: 'Diseño personalizado de 10 tipos de boletos seguros, conformes con regulaciones locales'
+            },
+            delivery3: {
+                title: 'Impresión de Boletos',
+                desc: 'Impresión de alta calidad, pasó la certificación fiscal'
+            },
+            delivery4: {
+                title: 'Exportación Logística',
+                desc: 'Entrega logística rápida, asegurando entrega oportuna'
+            }
+        },
+        brazil: {
+            page_title: 'Consultoría Estratégica y Pre-investigación del Sistema de Brasil | LottoBridge',
+            title: 'Consultoría Estratégica y Pre-investigación del Sistema de Brasil',
+            description: 'Análisis de política de acceso al mercado + investigación IA + planificación del sistema de lotería en línea, proporcionando 4 rondas de discusiones políticas + conexiones de expertos locales + soporte de libro blanco',
+            slogan: 'Consultoría estratégica, empoderando la innovación de la industria de lotería de Brasil',
+            country: 'País:',
+            country_name: 'Brasil',
+            client_type: 'Tipo de Cliente:',
+            client_type_value: 'Operador Privado',
+            period: 'Período del Proyecto:',
+            period_value: '2024',
+            scope: 'Alcance del Servicio:',
+            scope_value: 'Cooperación de Consultoría, Investigación de Mercado, Análisis de Política, Planificación de Sistema',
+            result: 'Resultados Clave:',
+            result_value: 'Ayudó al cliente a desarrollar un camino de desarrollo de 3 años, confirmación de la dirección de inversión estratégica',
+            highlight1: {
+                title: 'Análisis de Acceso al Mercado',
+                desc: 'Análisis profundo de las políticas de acceso al mercado de lotería de Brasil y requisitos regulatorios'
+            },
+            highlight2: {
+                title: 'Innovación de Investigación IA',
+                desc: 'Uso de tecnología IA para investigación de mercado y análisis de datos'
+            },
+            highlight3: {
+                title: 'Planificación de Sistema',
+                desc: 'Diseño de arquitectura del sistema de lotería en línea y planificación de hoja de ruta técnica'
+            },
+            highlight4: {
+                title: 'Conexiones de Expertos',
+                desc: 'Proporcionadas 4 rondas de discusiones políticas + conexiones de expertos locales + soporte de libro blanco'
+            },
+            testimonial: '"Ayudó al cliente a desarrollar un camino de desarrollo de 3 años, confirmación de la dirección de inversión estratégica"',
+            client: 'Director Estratégico del Operador de Lotería Privado de Brasil',
+            delivery_title: 'Contenido de Entrega y Proceso de Servicio',
+            delivery1: {
+                title: 'Investigación de Mercado',
+                desc: 'Análisis profundo de las políticas del mercado de lotería de Brasil y necesidades de usuarios'
+            },
+            delivery2: {
+                title: 'Investigación IA',
+                desc: 'Uso de tecnología IA para análisis de datos de mercado'
+            },
+            delivery3: {
+                title: 'Planificación de Sistema',
+                desc: 'Diseño de arquitectura del sistema de lotería en línea'
+            },
+            delivery4: {
+                title: 'Discusiones Políticas',
+                desc: 'Proporcionadas 4 rondas de discusiones políticas + conexiones de expertos locales'
+            }
+        },
+        uzbekistan: {
+            page_title: 'Despliegue del Sistema de Boletos Instantáneos de la Lotería Nacional de Uzbekistán | LottoBridge',
+            title: 'Despliegue del Sistema de Boletos Instantáneos de la Lotería Nacional de Uzbekistán',
+            description: 'Piloto provincial, volumen de impresión anual esperado de 20 millones de boletos, reporte de investigación + sistema CRM + diseño seguro de boletos + exportación de papel térmico',
+            slogan: 'Modernización impulsada, empoderando la transformación digital de la industria de lotería de Asia Central',
+            country: 'País:',
+            country_name: 'Uzbekistán',
+            client_type: 'Tipo de Cliente:',
+            client_type_value: 'Agencia Gubernamental',
+            period: 'Período del Proyecto:',
+            period_value: '2024',
+            scope: 'Alcance del Servicio:',
+            scope_value: 'Configuración del Sistema, Impresión de Boletos, Sistema CRM, Exportación de Papel Térmico',
+            result: 'Resultados Clave:',
+            result_value: 'Piloto provincial, volumen de impresión anual esperado de 20 millones de boletos, completado en solo 5 meses',
+            highlight1: {
+                title: 'Piloto Provincial',
+                desc: 'Proyecto piloto lanzado exitosamente a nivel provincial'
+            },
+            highlight2: {
+                title: 'Impresión a Gran Escala',
+                desc: 'Volumen de impresión anual esperado de 20 millones de boletos, satisfaciendo la demanda del mercado'
+            },
+            highlight3: {
+                title: 'Sistema CRM',
+                desc: 'Desarrollo personalizado del sistema de gestión de relaciones con clientes'
+            },
+            highlight4: {
+                title: 'Entrega Eficiente',
+                desc: 'Desde análisis estratégico hasta lanzamiento del sistema, completado en solo 5 meses'
+            },
+            testimonial: '"La plataforma nos ayudó desde el análisis estratégico hasta el lanzamiento del sistema en solo 5 meses, muy eficiente"',
+            client: 'Director Técnico de la Oficina Nacional de Lotería de Uzbekistán',
+            delivery_title: 'Contenido de Entrega y Proceso de Servicio',
+            delivery1: {
+                title: 'Investigación de Mercado',
+                desc: 'Análisis profundo de las políticas del mercado de lotería de Uzbekistán y necesidades de usuarios'
+            },
+            delivery2: {
+                title: 'Sistema CRM',
+                desc: 'Desarrollo personalizado del sistema de gestión de relaciones con clientes'
+            },
+            delivery3: {
+                title: 'Diseño Seguro',
+                desc: 'Diseño seguro de boletos, conforme a estándares internacionales'
+            },
+            delivery4: {
+                title: 'Exportación de Papel Térmico',
+                desc: 'Suministro de exportación de materiales de papel térmico de alta calidad'
+            }
+        },
         cta: {
             title: '¿Listo para Comenzar tu Proyecto de Lotería?',
             description: 'Contáctanos para discutir tus requisitos específicos y obtener una solución personalizada',
@@ -972,12 +1177,16 @@ const es = {
             privacy: 'Política de Privacidad',
             terms: 'Términos de Uso'
         }
+    },
+    case_studies: {
+        title: "Estudios de Caso",
+        subtitle: "Selección de éxitos globales",
+        mexico: {
+            title: "Transformación Digital de Lotería en México",
+            type: "Expansión de Mercado",
+            scope: "A nivel nacional",
+            description: "Ayudó al cliente mexicano a lograr la transformación digital y aumentar la cuota de mercado.",
+            deliverable1: "Plataforma digital personalizada"
+        }
     }
-};
-
-// Export Spanish language pack
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = es;
-} else {
-    window.es = es;
-} 
+}

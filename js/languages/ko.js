@@ -810,6 +810,211 @@ const ko = {
             view_details: '상세 보기',
             download_brief: '요약 다운로드'
         },
+        // 새로운 사례 상세 페이지 번역
+        cambodia: {
+            page_title: '캄보디아 국가 복권 시스템 현지화 협력 | LottoBridge',
+            title: '캄보디아 복권 시스템 현지화 협력',
+            description: '전체 티켓 판매 시스템 맞춤 + 현지 터미널 배포 + CRM 모듈 교육, 크메르어 시스템 인터페이스 및 안드로이드 터미널 통합 지원',
+            slogan: '현지화 주도, 캄보디아 복권 산업 디지털 전환 역량 강화',
+            country: '국가:',
+            country_name: '캄보디아',
+            client_type: '고객 유형:',
+            client_type_value: '정부 기관',
+            period: '프로젝트 기간:',
+            period_value: '2023-2024',
+            scope: '서비스 범위:',
+            scope_value: '시스템 구축, 터미널 배포, CRM 교육, 현지화',
+            result: '주요 성과:',
+            result_value: '1,200개 이상의 POS 터미널 배포, 매출 42% 증가',
+            highlight1: {
+                title: '전체 티켓 판매 시스템',
+                desc: '다양한 복권 유형을 지원하는 맞춤형 개발'
+            },
+            highlight2: {
+                title: '현지 터미널 배포',
+                desc: '전국에 1,200개의 POS 터미널 배포'
+            },
+            highlight3: {
+                title: '크메르어 시스템 인터페이스',
+                desc: '크메르어로 완전히 현지화된 사용자 인터페이스'
+            },
+            highlight4: {
+                title: '매출 대폭 증가',
+                desc: '매출 42% 증가, 연간 매출 증가 예상 2,200만 달러'
+            },
+            testimonial: '"현지 판매 네트워크가 빠르게 출시되어 1,200개 이상의 POS 터미널이 배포되었고, 연간 매출 증가 예상 2,200만 달러, 42% 이상 증가"',
+            client: '캄보디아 국가 복권국 기술 이사',
+            delivery_title: '인도 내용 및 서비스 프로세스',
+            delivery1: {
+                title: '시장 조사',
+                desc: '캄보디아 복권 시장 정책 및 사용자 요구사항 심층 분석'
+            },
+            delivery2: {
+                title: '시스템 맞춤',
+                desc: '전체 티켓 판매 관리 시스템의 맞춤형 개발'
+            },
+            delivery3: {
+                title: '터미널 배포',
+                desc: '전국에 1,200개의 POS 터미널 배포'
+            },
+            delivery4: {
+                title: 'CRM 교육',
+                desc: '고객 팀을 위한 CRM 모듈 교육 및 운영 지원'
+            }
+        },
+        uganda: {
+            page_title: '우간다 즉석 복권 프로젝트 신속 배포 | LottoBridge',
+            title: '우간다 즉석 복권 프로젝트 신속 배포',
+            description: '복권 카테고리 컨설팅 + 안전한 티켓 디자인 + 즉석 복권 인쇄, 10가지 맞춤형 티켓 유형 제공, 모두 지방 정부 승인',
+            slogan: '신속 배포, 안전한 규정 준수, 우간다 복권 생태계 역량 강화',
+            country: '국가:',
+            country_name: '우간다',
+            client_type: '고객 유형:',
+            client_type_value: '정부 기관',
+            period: '프로젝트 기간:',
+            period_value: '2024',
+            scope: '서비스 범위:',
+            scope_value: '티켓 인쇄, 물류 수출, 안전 디자인, 규정 준수 컨설팅',
+            result: '주요 성과:',
+            result_value: '프로젝트 기간 단 4개월, 티켓 만족도 조사 92%',
+            highlight1: {
+                title: '즉석 복권 인쇄',
+                desc: '10가지 맞춤형 티켓 유형 제공, 모두 지방 정부 승인'
+            },
+            highlight2: {
+                title: '안전한 티켓 디자인',
+                desc: '열전지 및 인쇄 제품이 세금 인증을 성공적으로 통과'
+            },
+            highlight3: {
+                title: '신속 배포',
+                desc: '프로젝트 기간 단 4개월, 빠른 시장 진입'
+            },
+            highlight4: {
+                title: '높은 만족도',
+                desc: '티켓 만족도 조사 92%, 우수한 사용자 피드백'
+            },
+            testimonial: '"프로젝트 기간 단 4개월, 티켓 만족도 조사 92%, 열전지 및 인쇄 제품이 세금 인증을 성공적으로 통과, 빠른 시장 진입"',
+            client: '우간다 국가 복권국 이사',
+            delivery_title: '인도 내용 및 서비스 프로세스',
+            delivery1: {
+                title: '시장 조사',
+                desc: '우간다 복권 시장 정책 및 사용자 요구사항 심층 분석'
+            },
+            delivery2: {
+                title: '티켓 디자인',
+                desc: '지방 규정을 준수하는 10가지 안전한 티켓 유형의 맞춤형 디자인'
+            },
+            delivery3: {
+                title: '티켓 인쇄',
+                desc: '고품질 인쇄, 세금 인증 통과'
+            },
+            delivery4: {
+                title: '물류 수출',
+                desc: '빠른 물류 배송, 적시 인도 보장'
+            }
+        },
+        brazil: {
+            page_title: '브라질 전략 컨설팅 및 시스템 사전 연구 | LottoBridge',
+            title: '브라질 전략 컨설팅 및 시스템 사전 연구',
+            description: '시장 진입 정책 분석 + AI 조사 + 온라인 복권 시스템 계획, 4라운드 정책 토론 + 현지 전문가 연결 + 백서 지원 제공',
+            slogan: '전략 컨설팅, 브라질 복권 산업 혁신 역량 강화',
+            country: '국가:',
+            country_name: '브라질',
+            client_type: '고객 유형:',
+            client_type_value: '민간 운영사',
+            period: '프로젝트 기간:',
+            period_value: '2024',
+            scope: '서비스 범위:',
+            scope_value: '컨설팅 협력, 시장 조사, 정책 분석, 시스템 계획',
+            result: '주요 성과:',
+            result_value: '고객의 3년 개발 경로 수립 지원, 전략적 투자 방향 확인',
+            highlight1: {
+                title: '시장 진입 분석',
+                desc: '브라질 복권 시장 진입 정책 및 규제 요구사항 심층 분석'
+            },
+            highlight2: {
+                title: 'AI 조사 혁신',
+                desc: '시장 조사 및 데이터 분석을 위한 AI 기술 활용'
+            },
+            highlight3: {
+                title: '시스템 계획',
+                desc: '온라인 복권 시스템 아키텍처 설계 및 기술 로드맵 계획'
+            },
+            highlight4: {
+                title: '전문가 연결',
+                desc: '4라운드 정책 토론 + 현지 전문가 연결 + 백서 지원 제공'
+            },
+            testimonial: '"고객의 3년 개발 경로 수립 지원, 전략적 투자 방향 확인"',
+            client: '브라질 민간 복권 운영사 전략 이사',
+            delivery_title: '인도 내용 및 서비스 프로세스',
+            delivery1: {
+                title: '시장 조사',
+                desc: '브라질 복권 시장 정책 및 사용자 요구사항 심층 분석'
+            },
+            delivery2: {
+                title: 'AI 조사',
+                desc: '시장 데이터 분석을 위한 AI 기술 활용'
+            },
+            delivery3: {
+                title: '시스템 계획',
+                desc: '온라인 복권 시스템 아키텍처 설계'
+            },
+            delivery4: {
+                title: '정책 토론',
+                desc: '4라운드 정책 토론 + 현지 전문가 연결 제공'
+            }
+        },
+        uzbekistan: {
+            page_title: '우즈베키스탄 국가 복권 즉석 복권 시스템 배포 | LottoBridge',
+            title: '우즈베키스탄 국가 복권 즉석 복권 시스템 배포',
+            description: '지방 시범, 연간 인쇄량 예상 2,000만 장, 조사 보고서 + CRM 시스템 + 안전한 티켓 디자인 + 열전지 수출',
+            slogan: '현대화 주도, 중앙아시아 복권 산업 디지털 전환 역량 강화',
+            country: '국가:',
+            country_name: '우즈베키스탄',
+            client_type: '고객 유형:',
+            client_type_value: '정부 기관',
+            period: '프로젝트 기간:',
+            period_value: '2024',
+            scope: '서비스 범위:',
+            scope_value: '시스템 구축, 티켓 인쇄, CRM 시스템, 열전지 수출',
+            result: '주요 성과:',
+            result_value: '지방 시범, 연간 인쇄량 예상 2,000만 장, 단 5개월 만에 완료',
+            highlight1: {
+                title: '지방 시범',
+                desc: '지방 수준에서 성공적으로 시범 프로젝트 출시'
+            },
+            highlight2: {
+                title: '대규모 인쇄',
+                desc: '연간 인쇄량 예상 2,000만 장, 시장 수요 충족'
+            },
+            highlight3: {
+                title: 'CRM 시스템',
+                desc: '고객 관계 관리 시스템의 맞춤형 개발'
+            },
+            highlight4: {
+                title: '효율적인 인도',
+                desc: '전략 분석부터 시스템 출시까지, 단 5개월 만에 완료'
+            },
+            testimonial: '"플랫폼이 전략 분석부터 시스템 출시까지 단 5개월 만에 도움을 주었고, 매우 효율적이었습니다"',
+            client: '우즈베키스탄 국가 복권국 기술 이사',
+            delivery_title: '인도 내용 및 서비스 프로세스',
+            delivery1: {
+                title: '시장 조사',
+                desc: '우즈베키스탄 복권 시장 정책 및 사용자 요구사항 심층 분석'
+            },
+            delivery2: {
+                title: 'CRM 시스템',
+                desc: '고객 관계 관리 시스템의 맞춤형 개발'
+            },
+            delivery3: {
+                title: '안전 디자인',
+                desc: '국제 표준을 준수하는 안전한 티켓 디자인'
+            },
+            delivery4: {
+                title: '열전지 수출',
+                desc: '고품질 열전지 재료 수출 공급'
+            }
+        },
         cta: {
             title: '복권 프로젝트를 시작할 준비가 되셨나요?',
             description: '특정 요구사항을 논의하고 맞춤형 솔루션을 얻기 위해 저희에게 연락하세요',
@@ -971,8 +1176,44 @@ const ko = {
             rights: '모든 권리 보유.',
             privacy: '개인정보 보호정책',
             terms: '이용약관'
-        }
-    }
+        },
+        // 새로운 푸터 번역 키
+        company: 'LottoBridge',
+        rights: '모든 권리 보유',
+        privacy: '개인정보 보호정책',
+        terms: '이용약관'
+    },
+    market_reports: {
+        mexico: {
+            title: "멕시코 시장 보고서",
+            date: "2023년 12월",
+            tag1: "디지털화",
+            tag2: "규제",
+        },
+        kenya: {
+            title: "케냐 시장 보고서",
+            date: "2023년 11월",
+            tag1: "성장",
+            tag2: "혁신",
+        },
+        philippines: {
+            title: "필리핀 시장 보고서",
+            date: "2023년 10월",
+            tag1: "복권",
+            tag2: "정책",
+        },
+    },
+    case_studies: {
+        title: "사례 연구",
+        subtitle: "글로벌 성공 사례 선정",
+        mexico: {
+            title: "멕시코 디지털 복권 혁신",
+            type: "시장 확장",
+            scope: "전국 규모",
+            description: "멕시코 고객의 디지털 전환과 시장 점유율 확대를 지원했습니다.",
+            deliverable1: "맞춤형 디지털 플랫폼",
+        },
+    },
 };
 
 // Export Korean language pack

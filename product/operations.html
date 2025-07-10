@@ -3,280 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>运维与合规服务 - LottoBridge</title>
+    <title data-i18n="operations.title">彩票运营服务 - LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="../index.html">LottoBridge</a>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">LottoBridge</span>
+                    </a>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">首页</a></li>
-                        <li><a href="../products.html">产品</a></li>
-                        <li><a href="../case-studies.html">案例</a></li>
-                        <li><a href="../insights.html">洞察</a></li>
-                        <li><a href="../about.html">关于</a></li>
-                        <li><a href="../contact.html">联系</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
+                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
+                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
+                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
+                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
+                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
+                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-        <div class="container">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner product-hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">运维与合规服务</h1>
-                <p class="hero-subtitle">专业的彩票系统运维管理与合规保障服务，确保系统稳定运行和监管合规</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">99.9%</span>
-                        <span class="stat-label">系统可用性</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">监控服务</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">合规标准</span>
-                    </div>
+                <h1 class="hero-title" data-i18n="operations.hero.title">彩票运营服务解决方案</h1>
+                <p class="hero-subtitle" data-i18n="operations.hero.subtitle">全流程运营支持，助力彩票项目高效落地</p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary" data-i18n="operations.hero.viewServices">查看服务</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="operations.hero.contact">咨询方案</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-placeholder hero-image">
+                    <span class="placeholder-text" data-i18n="operations.hero.imageText">运营服务展示</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Remote Management -->
-    <section class="feature-section">
+    <!-- 模块一：运营服务内容 -->
+    <section class="operations-services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">远程管理与监控</h2>
-                <p class="section-subtitle">全方位的远程运维管理，实时监控系统状态</p>
+                <h2 class="section-title" data-i18n="operations.services.title">运营服务内容</h2>
+                <p class="section-subtitle" data-i18n="operations.services.subtitle">覆盖项目全周期，保障高效运营</p>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">系统监控</h3>
-                    <p class="feature-description">实时监控系统性能、资源使用率、网络状态等关键指标，及时发现和处理异常</p>
+                    <h3 data-i18n="operations.services.launch.title">项目启动支持</h3>
+                    <p data-i18n="operations.services.launch.desc">需求分析、方案设计、团队组建</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">安全管理</h3>
-                    <p class="feature-description">远程安全配置管理、访问控制、防火墙策略更新等安全运维操作</p>
+                    <h3 data-i18n="operations.services.implementation.title">系统部署实施</h3>
+                    <p data-i18n="operations.services.implementation.desc">环境搭建、系统集成、上线调试</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.7 6.3A1 1 0 0 0 13 5H5A2 2 0 0 0 3 7V17A2 2 0 0 0 5 19H19A2 2 0 0 0 21 17V11A1 1 0 0 0 19.7 9.3L14.7 6.3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">告警通知</h3>
-                    <p class="feature-description">智能告警系统，多渠道通知机制，确保运维团队第一时间响应问题</p>
+                    <h3 data-i18n="operations.services.training.title">培训与支持</h3>
+                    <p data-i18n="operations.services.training.desc">用户培训、技术支持、知识转移</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="operations.services.optimization.title">运营优化</h3>
+                    <p data-i18n="operations.services.optimization.desc">流程优化、数据分析、持续改进</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Log Audit -->
-    <section class="feature-section bg-light">
+    <!-- 模块二：运营优势与保障 -->
+    <section class="operations-advantages-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">日志审计与分析</h2>
-                <p class="section-subtitle">全面的日志记录和审计分析，满足监管要求</p>
+                <h2 class="section-title" data-i18n="operations.advantages.title">运营优势与保障</h2>
+                <p class="section-subtitle" data-i18n="operations.advantages.subtitle">专业团队，保障项目成功</p>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6A2 2 0 0 0 4 4V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">操作日志</h3>
-                    <p class="feature-description">记录所有系统操作、用户行为、交易流程等关键操作的详细日志</p>
+                    <h3 data-i18n="operations.advantages.experience.title">丰富项目经验</h3>
+                    <p data-i18n="operations.advantages.experience.desc">多年行业经验，服务全球客户</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">审计分析</h3>
-                    <p class="feature-description">智能日志分析，异常行为检测，生成合规审计报告</p>
+                    <h3 data-i18n="operations.advantages.team.title">专业运营团队</h3>
+                    <p data-i18n="operations.advantages.team.desc">多学科团队，协同高效</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 16V8A2 2 0 0 0 19 6H5A2 2 0 0 0 3 8V16A2 2 0 0 0 5 18H19A2 2 0 0 0 21 16Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M7 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M7 14H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">合规报告</h3>
-                    <p class="feature-description">自动生成符合监管要求的审计报告，支持多种格式导出</p>
+                    <h3 data-i18n="operations.advantages.security.title">安全合规保障</h3>
+                    <p data-i18n="operations.advantages.security.desc">严格遵循行业标准与法规</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Backup Recovery -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">备份与恢复</h2>
-                <p class="section-subtitle">完善的数据备份策略和快速恢复机制</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 15V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">自动备份</h3>
-                    <p class="feature-description">定时自动备份系统数据、配置文件、数据库等关键信息</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 15V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17 8L12 3L7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">快速恢复</h3>
-                    <p class="feature-description">支持系统快速恢复，最小化业务中断时间，确保服务连续性</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 21V13H7V21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M7 13L12 8L17 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">异地备份</h3>
-                    <p class="feature-description">多地备份策略，确保数据安全性和可靠性，防范灾难性风险</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compliance Overview -->
-    <section class="feature-section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">等保合规概述</h2>
-                <p class="section-subtitle">全面的等级保护合规服务，确保系统安全合规</p>
-            </div>
-            <div class="compliance-grid">
-                <div class="compliance-card">
-                    <div class="compliance-level">等保二级</div>
-                    <h3 class="compliance-title">基础防护</h3>
-                    <ul class="compliance-features">
-                        <li>身份鉴别与访问控制</li>
-                        <li>安全审计与日志管理</li>
-                        <li>数据完整性保护</li>
-                        <li>恶意代码防范</li>
-                    </ul>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-level">等保三级</div>
-                    <h3 class="compliance-title">监管防护</h3>
-                    <ul class="compliance-features">
-                        <li>入侵防范与检测</li>
-                        <li>数据备份与恢复</li>
-                        <li>安全管理制度</li>
-                        <li>应急响应机制</li>
-                    </ul>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-level">等保四级</div>
-                    <h3 class="compliance-title">强制防护</h3>
-                    <ul class="compliance-features">
-                        <li>结构化保护</li>
-                        <li>安全域隔离</li>
-                        <li>可信验证机制</li>
-                        <li>安全管理中心</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Highlights -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">服务亮点</h2>
-                <p class="section-subtitle">专业的运维团队和完善的服务体系</p>
-            </div>
-            <div class="highlight-grid">
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="highlight-title">7×24小时服务</h3>
-                    <p class="highlight-description">全天候运维监控和技术支持</p>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 21V5A2 2 0 0 0 14 3H10A2 2 0 0 0 8 5V21L12 19L16 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="highlight-title">专业认证</h3>
-                    <p class="highlight-description">团队具备相关专业资质和认证</p>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="highlight-title">SLA保障</h3>
-                    <p class="highlight-description">明确的服务等级协议和质量保证</p>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="highlight-title">云端管理</h3>
-                    <p class="highlight-description">基于云平台的统一运维管理</p>
+                    <h3 data-i18n="operations.advantages.support.title">全程支持服务</h3>
+                    <p data-i18n="operations.advantages.support.desc">7×24小时响应，快速解决问题</p>
                 </div>
             </div>
         </div>
@@ -286,16 +160,50 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">专业运维，安全合规</h2>
-                <p class="cta-description">让我们为您的彩票系统提供专业的运维保障服务</p>
-                <div class="cta-buttons">
-                    <a href="../contact.html" class="btn btn-primary">联系我们</a>
-                    <a href="../case-studies.html" class="btn btn-secondary">查看案例</a>
+                <h2 class="cta-title" data-i18n="operations.cta.title">开启高效彩票运营之旅</h2>
+                <p class="cta-subtitle" data-i18n="operations.cta.subtitle">联系我们，获取专业的彩票运营服务方案</p>
+                <div class="cta-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="operations.cta.contact">立即咨询</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="operations.cta.products">查看其他产品</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="../js/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LottoBridge</h3>
+                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <p>Email: info@lottobridge.com</p>
+                    <p>Tel: +86 400-888-8888</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.services">服务</h4>
+                    <ul>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script>
+        // 初始化国际化
+        document.addEventListener('DOMContentLoaded', function() {
+            initI18n();
+        });
+    </script>
 </body>
 </html>

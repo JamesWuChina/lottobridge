@@ -249,7 +249,19 @@ const en = {
                 title: 'Philippines Lottery Market Outlook Report',
                 date: 'March 2024',
                 highlights: ['High Growth Potential', '$870M Market Size', 'E-games Rising']
-            }
+            },
+            kenya: {
+                title: 'Kenya Market Report',
+                date: 'November 2023',
+                tag1: 'Growth',
+                tag2: 'Innovation',
+            },
+            philippines: {
+                title: 'Philippines Market Report',
+                date: 'October 2023',
+                tag1: 'Lottery',
+                tag2: 'Policy',
+            },
         }
     },
     // Case Studies Highlights
@@ -271,7 +283,14 @@ const en = {
                 scope: 'Regional Pilot',
                 description: 'Assisted Cambodian private operator to quickly launch lottery business, from market research to system launch in just 3 months.',
                 deliverables: ['Market Feasibility Analysis', 'Custom System Development', 'Printing Service Integration', 'Localization Training']
-            }
+            },
+            mexico: {
+                title: 'Mexico Digital Lottery Transformation',
+                type: 'Market Expansion',
+                scope: 'Nationwide',
+                description: 'Helped Mexican client achieve digital transformation and increase market share.',
+                deliverable1: 'Customized Digital Platform',
+            },
         }
     },
     // Global Service Data Map
@@ -918,6 +937,211 @@ const en = {
             view_details: 'View Details',
             download_brief: 'Download Brief'
         },
+        // New case detail page translations
+        cambodia: {
+            page_title: 'Cambodia National Lottery System Localization | LottoBridge',
+            title: 'Cambodia Lottery System Localization',
+            description: 'Full ticket sales system customization + local terminal deployment + CRM module training, supporting Khmer system interface and Android terminal integration',
+            slogan: 'Localization-driven, empowering Cambodia lottery industry digital transformation',
+            country: 'Country:',
+            country_name: 'Cambodia',
+            client_type: 'Client Type:',
+            client_type_value: 'Government Agency',
+            period: 'Project Period:',
+            period_value: '2023-2024',
+            scope: 'Service Scope:',
+            scope_value: 'System Setup, Terminal Deployment, CRM Training, Localization',
+            result: 'Key Results:',
+            result_value: 'Deployed over 1,200 POS terminals, 42% sales growth',
+            highlight1: {
+                title: 'Full Ticket Sales System',
+                desc: 'Custom development supporting multiple lottery types'
+            },
+            highlight2: {
+                title: 'Local Terminal Deployment',
+                desc: 'Nationwide deployment of 1,200 POS terminals'
+            },
+            highlight3: {
+                title: 'Khmer System Interface',
+                desc: 'Fully localized Khmer user interface'
+            },
+            highlight4: {
+                title: 'Significant Sales Growth',
+                desc: '42% sales growth, expected annual sales increase of $22M'
+            },
+            testimonial: '"Local sales network launched quickly, deployed over 1,200 POS terminals, expected annual sales increase of $22M, growth over 42%"',
+            client: 'Cambodia National Lottery Bureau Technical Director',
+            delivery_title: 'Delivery Content and Service Process',
+            delivery1: {
+                title: 'Market Research',
+                desc: 'In-depth analysis of Cambodia lottery market policies and user needs'
+            },
+            delivery2: {
+                title: 'System Customization',
+                desc: 'Custom development of full ticket sales management system'
+            },
+            delivery3: {
+                title: 'Terminal Deployment',
+                desc: 'Nationwide deployment of 1,200 POS terminals'
+            },
+            delivery4: {
+                title: 'CRM Training',
+                desc: 'CRM module training and operational support for client teams'
+            }
+        },
+        uganda: {
+            page_title: 'Uganda Instant Ticket Project Rapid Deployment | LottoBridge',
+            title: 'Uganda Instant Ticket Project Rapid Deployment',
+            description: 'Lottery category consultation + secure ticket design + instant ticket printing, providing 10 customized ticket types, all approved by local government',
+            slogan: 'Rapid deployment, secure compliance, empowering Uganda lottery ecosystem',
+            country: 'Country:',
+            country_name: 'Uganda',
+            client_type: 'Client Type:',
+            client_type_value: 'Government Agency',
+            period: 'Project Period:',
+            period_value: '2024',
+            scope: 'Service Scope:',
+            scope_value: 'Ticket Printing, Logistics Export, Security Design, Compliance Consulting',
+            result: 'Key Results:',
+            result_value: 'Project completed in only 4 months, 92% ticket satisfaction rate',
+            highlight1: {
+                title: 'Instant Ticket Printing',
+                desc: 'Provided 10 customized ticket types, all approved by local government'
+            },
+            highlight2: {
+                title: 'Secure Ticket Design',
+                desc: 'Thermal paper and printed products successfully passed tax certification'
+            },
+            highlight3: {
+                title: 'Rapid Deployment',
+                desc: 'Project completed in only 4 months, rapid market entry'
+            },
+            highlight4: {
+                title: 'High Satisfaction',
+                desc: '92% ticket satisfaction rate, excellent user feedback'
+            },
+            testimonial: '"Project completed in only 4 months, 92% ticket satisfaction rate, thermal paper and printed products successfully passed tax certification, rapid market entry"',
+            client: 'Uganda National Lottery Bureau Director',
+            delivery_title: 'Delivery Content and Service Process',
+            delivery1: {
+                title: 'Market Research',
+                desc: 'In-depth analysis of Uganda lottery market policies and user needs'
+            },
+            delivery2: {
+                title: 'Ticket Design',
+                desc: 'Custom design of 10 secure ticket types, compliant with local regulations'
+            },
+            delivery3: {
+                title: 'Ticket Printing',
+                desc: 'High-quality printing, passed tax certification'
+            },
+            delivery4: {
+                title: 'Logistics Export',
+                desc: 'Fast logistics delivery, ensuring timely delivery'
+            }
+        },
+        brazil: {
+            page_title: 'Brazil Strategic Consulting and System Pre-research | LottoBridge',
+            title: 'Brazil Strategic Consulting and System Pre-research',
+            description: 'Market access policy analysis + AI research + online lottery system planning, providing 4 rounds of policy discussions + local expert connections + whitepaper support',
+            slogan: 'Strategic consulting, empowering Brazil lottery industry innovation',
+            country: 'Country:',
+            country_name: 'Brazil',
+            client_type: 'Client Type:',
+            client_type_value: 'Private Operator',
+            period: 'Project Period:',
+            period_value: '2024',
+            scope: 'Service Scope:',
+            scope_value: 'Consulting Cooperation, Market Research, Policy Analysis, System Planning',
+            result: 'Key Results:',
+            result_value: 'Assisted client in developing 3-year development path, strategic investment direction confirmation',
+            highlight1: {
+                title: 'Market Access Analysis',
+                desc: 'In-depth analysis of Brazil lottery market access policies and regulatory requirements'
+            },
+            highlight2: {
+                title: 'AI Research Innovation',
+                desc: 'Using AI technology for market research and data analysis'
+            },
+            highlight3: {
+                title: 'System Planning',
+                desc: 'Online lottery system architecture design and technical roadmap planning'
+            },
+            highlight4: {
+                title: 'Expert Connections',
+                desc: 'Provided 4 rounds of policy discussions + local expert connections + whitepaper support'
+            },
+            testimonial: '"Assisted client in developing 3-year development path, strategic investment direction confirmation"',
+            client: 'Brazil Private Lottery Operator Strategic Director',
+            delivery_title: 'Delivery Content and Service Process',
+            delivery1: {
+                title: 'Market Research',
+                desc: 'In-depth analysis of Brazil lottery market policies and user needs'
+            },
+            delivery2: {
+                title: 'AI Research',
+                desc: 'Using AI technology for market data analysis'
+            },
+            delivery3: {
+                title: 'System Planning',
+                desc: 'Online lottery system architecture design'
+            },
+            delivery4: {
+                title: 'Policy Discussions',
+                desc: 'Provided 4 rounds of policy discussions + local expert connections'
+            }
+        },
+        uzbekistan: {
+            page_title: 'Uzbekistan National Lottery Instant Ticket System Deployment | LottoBridge',
+            title: 'Uzbekistan National Lottery Instant Ticket System Deployment',
+            description: 'Provincial pilot, expected annual printing volume of 20 million tickets, research report + CRM system + secure ticket design + thermal paper export',
+            slogan: 'Modernization-driven, empowering Central Asia lottery industry digital transformation',
+            country: 'Country:',
+            country_name: 'Uzbekistan',
+            client_type: 'Client Type:',
+            client_type_value: 'Government Agency',
+            period: 'Project Period:',
+            period_value: '2024',
+            scope: 'Service Scope:',
+            scope_value: 'System Setup, Ticket Printing, CRM System, Thermal Paper Export',
+            result: 'Key Results:',
+            result_value: 'Provincial pilot, expected annual printing volume of 20 million tickets, completed in only 5 months',
+            highlight1: {
+                title: 'Provincial Pilot',
+                desc: 'Successfully launched pilot project at provincial level'
+            },
+            highlight2: {
+                title: 'Large-scale Printing',
+                desc: 'Expected annual printing volume of 20 million tickets, meeting market demand'
+            },
+            highlight3: {
+                title: 'CRM System',
+                desc: 'Custom development of customer relationship management system'
+            },
+            highlight4: {
+                title: 'Efficient Delivery',
+                desc: 'From strategy analysis to system launch, completed in only 5 months'
+            },
+            testimonial: '"Platform helped us from strategy analysis to system launch in only 5 months, very efficient"',
+            client: 'Uzbekistan National Lottery Bureau Technical Director',
+            delivery_title: 'Delivery Content and Service Process',
+            delivery1: {
+                title: 'Market Research',
+                desc: 'In-depth analysis of Uzbekistan lottery market policies and user needs'
+            },
+            delivery2: {
+                title: 'CRM System',
+                desc: 'Custom development of customer relationship management system'
+            },
+            delivery3: {
+                title: 'Security Design',
+                desc: 'Secure ticket design, compliant with international standards'
+            },
+            delivery4: {
+                title: 'Thermal Paper Export',
+                desc: 'High-quality thermal paper material export supply'
+            }
+        },
         cta: {
             title: 'Ready to Start Your Lottery Project?',
             description: 'Contact us to discuss your specific requirements and get a customized solution',
@@ -1079,7 +1303,12 @@ const en = {
             rights: 'All rights reserved.',
             privacy: 'Privacy Policy',
             terms: 'Terms of Use'
-        }
+        },
+        // New footer translation keys
+        company: 'LottoBridge',
+        rights: 'All rights reserved',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Use'
     },
     // Market Details Page
     market_details: {

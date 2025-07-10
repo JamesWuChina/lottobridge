@@ -3,394 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>培训与落地支持 - LottoBridge</title>
+    <title data-i18n="training.title">专业培训服务 - LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="../index.html">LottoBridge</a>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">LottoBridge</span>
+                    </a>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">首页</a></li>
-                        <li><a href="../products.html">产品</a></li>
-                        <li><a href="../case-studies.html">案例</a></li>
-                        <li><a href="../insights.html">洞察</a></li>
-                        <li><a href="../about.html">关于</a></li>
-                        <li><a href="../contact.html">联系</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
+                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
+                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
+                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
+                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
+                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
+                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-        <div class="container">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner product-hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">培训与落地支持</h1>
-                <p class="hero-subtitle">全方位的培训服务和落地支持，确保系统顺利部署和高效运营</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">支持语言</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">培训学员</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">满意度</span>
-                    </div>
+                <h1 class="hero-title" data-i18n="training.hero.title">专业彩票培训服务</h1>
+                <p class="hero-subtitle" data-i18n="training.hero.subtitle">全面的培训体系，助力彩票行业专业人才培养</p>
+                <div class="hero-actions">
+                    <a href="#courses" class="btn btn-primary" data-i18n="training.hero.viewCourses">查看课程</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="training.hero.contact">咨询培训</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-placeholder hero-image">
+                    <span class="placeholder-text" data-i18n="training.hero.imageText">培训服务视觉图</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Language Support -->
-    <section class="feature-section">
+    <!-- 模块一：培训课程体系 -->
+    <section class="training-courses-section" id="courses">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">多语言支持</h2>
-                <p class="section-subtitle">覆盖全球主要语言，满足国际化培训需求</p>
+                <h2 class="section-title" data-i18n="training.courses.title">专业培训课程体系</h2>
+                <p class="section-subtitle" data-i18n="training.courses.subtitle">覆盖彩票行业全链条，满足不同岗位培训需求</p>
             </div>
-            <div class="language-grid">
-                <div class="language-category">
-                    <h3 class="category-title">亚洲语言</h3>
-                    <div class="language-list">
-                        <div class="language-item">
-                            <div class="language-flag">🇨🇳</div>
-                            <span class="language-name">中文（简体/繁体）</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇯🇵</div>
-                            <span class="language-name">日语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇰🇷</div>
-                            <span class="language-name">韩语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇹🇭</div>
-                            <span class="language-name">泰语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇻🇳</div>
-                            <span class="language-name">越南语</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="language-category">
-                    <h3 class="category-title">欧洲语言</h3>
-                    <div class="language-list">
-                        <div class="language-item">
-                            <div class="language-flag">🇺🇸</div>
-                            <span class="language-name">英语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇪🇸</div>
-                            <span class="language-name">西班牙语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇫🇷</div>
-                            <span class="language-name">法语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇩🇪</div>
-                            <span class="language-name">德语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇷🇺</div>
-                            <span class="language-name">俄语</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="language-category">
-                    <h3 class="category-title">其他语言</h3>
-                    <div class="language-list">
-                        <div class="language-item">
-                            <div class="language-flag">🇸🇦</div>
-                            <span class="language-name">阿拉伯语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇵🇹</div>
-                            <span class="language-name">葡萄牙语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇮🇹</div>
-                            <span class="language-name">意大利语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇳🇱</div>
-                            <span class="language-name">荷兰语</span>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-flag">🇮🇳</div>
-                            <span class="language-name">印地语</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Training Content -->
-    <section class="feature-section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">培训内容体系</h2>
-                <p class="section-subtitle">全面的培训课程，覆盖系统各个方面</p>
-            </div>
-            <div class="training-modules">
-                <div class="training-module">
-                    <div class="module-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 3H8A4 4 0 0 1 12 7A4 4 0 0 1 16 3H22V19A2 2 0 0 1 20 21H16A4 4 0 0 0 12 17A4 4 0 0 0 8 21H4A2 2 0 0 1 2 19V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="module-title">基础理论培训</h3>
-                    <ul class="module-content">
-                        <li>彩票行业概述与法规</li>
-                        <li>系统架构与技术原理</li>
-                        <li>安全机制与风险控制</li>
-                        <li>国际标准与最佳实践</li>
+                    <h3 data-i18n="training.courses.management.title">彩票运营管理</h3>
+                    <p class="course-description" data-i18n="training.courses.management.desc">系统运营、风险控制、合规管理</p>
+                    <div class="course-details">
+                        <div class="course-duration">
+                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
+                            <span class="duration-value">5天</span>
+                        </div>
+                        <div class="course-level">
+                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
+                            <span class="level-value" data-i18n="training.courses.management.level">中高级管理</span>
+                        </div>
+                    </div>
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.management.topic1">• 彩票系统架构设计</li>
+                        <li data-i18n="training.courses.management.topic2">• 运营流程优化</li>
+                        <li data-i18n="training.courses.management.topic3">• 风险控制策略</li>
+                        <li data-i18n="training.courses.management.topic4">• 合规监管要求</li>
                     </ul>
                 </div>
-                <div class="training-module">
-                    <div class="module-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 21L12 17L16 21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="module-title">系统操作培训</h3>
-                    <ul class="module-content">
-                        <li>系统安装与配置</li>
-                        <li>日常操作与管理</li>
-                        <li>用户权限管理</li>
-                        <li>数据备份与恢复</li>
+                    <h3 data-i18n="training.courses.technical.title">技术开发培训</h3>
+                    <p class="course-description" data-i18n="training.courses.technical.desc">系统开发、接口集成、安全防护</p>
+                    <div class="course-details">
+                        <div class="course-duration">
+                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
+                            <span class="duration-value">7天</span>
+                        </div>
+                        <div class="course-level">
+                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
+                            <span class="level-value" data-i18n="training.courses.technical.level">技术开发</span>
+                        </div>
+                    </div>
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.technical.topic1">• 彩票系统架构</li>
+                        <li data-i18n="training.courses.technical.topic2">• API接口开发</li>
+                        <li data-i18n="training.courses.technical.topic3">• 安全防护技术</li>
+                        <li data-i18n="training.courses.technical.topic4">• 性能优化</li>
                     </ul>
                 </div>
-                <div class="training-module">
-                    <div class="module-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="module-title">技术维护培训</h3>
-                    <ul class="module-content">
-                        <li>故障诊断与排除</li>
-                        <li>性能监控与优化</li>
-                        <li>系统升级与维护</li>
-                        <li>应急响应处理</li>
+                    <h3 data-i18n="training.courses.sales.title">销售服务培训</h3>
+                    <p class="course-description" data-i18n="training.courses.sales.desc">销售技巧、客户服务、设备操作</p>
+                    <div class="course-details">
+                        <div class="course-duration">
+                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
+                            <span class="duration-value">3天</span>
+                        </div>
+                        <div class="course-level">
+                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
+                            <span class="level-value" data-i18n="training.courses.sales.level">一线销售</span>
+                        </div>
+                    </div>
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.sales.topic1">• 彩票产品知识</li>
+                        <li data-i18n="training.courses.sales.topic2">• 销售技巧提升</li>
+                        <li data-i18n="training.courses.sales.topic3">• 设备操作培训</li>
+                        <li data-i18n="training.courses.sales.topic4">• 客户服务标准</li>
                     </ul>
                 </div>
-                <div class="training-module">
-                    <div class="module-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 4H18A2 2 0 0 1 20 6V18A2 2 0 0 1 18 20H6A2 2 0 0 1 4 18V6A2 2 0 0 1 6 4H8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="currentColor" stroke-width="2"/>
-                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="module-title">合规管理培训</h3>
-                    <ul class="module-content">
-                        <li>监管要求与合规标准</li>
-                        <li>审计流程与报告</li>
-                        <li>风险评估与控制</li>
-                        <li>法律法规更新</li>
+                    <h3 data-i18n="training.courses.maintenance.title">维护保养培训</h3>
+                    <p class="course-description" data-i18n="training.courses.maintenance.desc">设备维护、故障排除、预防保养</p>
+                    <div class="course-details">
+                        <div class="course-duration">
+                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
+                            <span class="duration-value">4天</span>
+                        </div>
+                        <div class="course-level">
+                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
+                            <span class="level-value" data-i18n="training.courses.maintenance.level">技术维护</span>
+                        </div>
+                    </div>
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.maintenance.topic1">• 设备结构原理</li>
+                        <li data-i18n="training.courses.maintenance.topic2">• 日常维护保养</li>
+                        <li data-i18n="training.courses.maintenance.topic3">• 故障诊断排除</li>
+                        <li data-i18n="training.courses.maintenance.topic4">• 预防性维护</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Delivery Methods -->
-    <section class="feature-section">
+    <!-- 模块二：培训方式与特色 -->
+    <section class="training-methods-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">交付方式</h2>
-                <p class="section-subtitle">灵活的培训交付方式，满足不同需求</p>
+                <h2 class="section-title" data-i18n="training.methods.title">培训方式与特色</h2>
+                <p class="section-subtitle" data-i18n="training.methods.subtitle">多种培训方式，满足不同学习需求</p>
             </div>
-            <div class="delivery-methods">
-                <div class="delivery-method">
+            <div class="methods-grid">
+                <div class="method-card">
                     <div class="method-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 21L12 17L16 21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="method-title">线上培训</h3>
-                    <div class="method-features">
-                        <div class="feature-item">
-                            <span class="feature-label">直播课程</span>
-                            <span class="feature-value">实时互动教学</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">录播课程</span>
-                            <span class="feature-value">随时回看学习</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">在线考试</span>
-                            <span class="feature-value">学习效果评估</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">技术支持</span>
-                            <span class="feature-value">远程协助指导</span>
-                        </div>
-                    </div>
+                    <h3 data-i18n="training.methods.online.title">在线培训</h3>
+                    <p data-i18n="training.methods.online.desc">灵活的学习时间，随时随地学习</p>
+                    <ul class="method-features">
+                        <li data-i18n="training.methods.online.feature1">• 24/7在线学习</li>
+                        <li data-i18n="training.methods.online.feature2">• 互动式课程</li>
+                        <li data-i18n="training.methods.online.feature3">• 进度跟踪</li>
+                        <li data-i18n="training.methods.online.feature4">• 证书认证</li>
+                    </ul>
                 </div>
-                <div class="delivery-method">
+                
+                <div class="method-card">
                     <div class="method-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 21V13H7V21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M7 13L12 8L17 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="2"/>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <h3 class="method-title">线下培训</h3>
-                    <div class="method-features">
-                        <div class="feature-item">
-                            <span class="feature-label">现场教学</span>
-                            <span class="feature-value">面对面指导</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">实操演练</span>
-                            <span class="feature-value">真实环境练习</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">团队建设</span>
-                            <span class="feature-value">增强团队协作</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">定制课程</span>
-                            <span class="feature-value">针对性培训</span>
-                        </div>
+                    <h3 data-i18n="training.methods.offline.title">现场培训</h3>
+                    <p data-i18n="training.methods.offline.desc">面对面教学，实践操作指导</p>
+                    <ul class="method-features">
+                        <li data-i18n="training.methods.offline.feature1">• 专业讲师授课</li>
+                        <li data-i18n="training.methods.offline.feature2">• 实操演练</li>
+                        <li data-i18n="training.methods.offline.feature3">• 即时答疑</li>
+                        <li data-i18n="training.methods.offline.feature4">• 团队协作</li>
+                    </ul>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
+                    <h3 data-i18n="training.methods.hybrid.title">混合式培训</h3>
+                    <p data-i18n="training.methods.hybrid.desc">线上线下结合，最佳学习效果</p>
+                    <ul class="method-features">
+                        <li data-i18n="training.methods.hybrid.feature1">• 理论在线学习</li>
+                        <li data-i18n="training.methods.hybrid.feature2">• 实践现场指导</li>
+                        <li data-i18n="training.methods.hybrid.feature3">• 灵活时间安排</li>
+                        <li data-i18n="training.methods.hybrid.feature4">• 个性化学习</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Implementation Support -->
-    <section class="feature-section bg-light">
+    <!-- 模块三：培训师资与认证 -->
+    <section class="training-faculty-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">落地支持服务</h2>
-                <p class="section-subtitle">全程陪伴式支持，确保项目成功落地</p>
+                <h2 class="section-title" data-i18n="training.faculty.title">专业师资与认证</h2>
+                <p class="section-subtitle" data-i18n="training.faculty.subtitle">资深专家团队，权威认证体系</p>
             </div>
-            <div class="support-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.7 6.3A1 1 0 0 0 13 5H5A2 2 0 0 0 3 7V17A2 2 0 0 0 5 19H19A2 2 0 0 0 21 17V11A1 1 0 0 0 19.7 9.3L14.7 6.3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">项目启动</h3>
-                        <p class="timeline-description">需求分析、方案设计、团队组建、计划制定</p>
-                    </div>
+                    <h3 data-i18n="training.faculty.experts.title">资深专家团队</h3>
+                    <p data-i18n="training.faculty.experts.desc">行业资深专家，丰富实践经验</p>
+                    <ul class="faculty-features">
+                        <li data-i18n="training.faculty.experts.feature1">• 10+年行业经验</li>
+                        <li data-i18n="training.faculty.experts.feature2">• 国际认证资质</li>
+                        <li data-i18n="training.faculty.experts.feature3">• 实战案例分享</li>
+                        <li data-i18n="training.faculty.experts.feature4">• 持续专业发展</li>
+                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
                         </svg>
                     </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">系统部署</h3>
-                        <p class="timeline-description">环境搭建、系统安装、配置调试、集成测试</p>
-                    </div>
+                    <h3 data-i18n="training.faculty.certification.title">权威认证体系</h3>
+                    <p data-i18n="training.faculty.certification.desc">国际认可的专业认证</p>
+                    <ul class="faculty-features">
+                        <li data-i18n="training.faculty.certification.feature1">• WLA认证培训师</li>
+                        <li data-i18n="training.faculty.certification.feature2">• ISO标准培训</li>
+                        <li data-i18n="training.faculty.certification.feature3">• 行业专业认证</li>
+                        <li data-i18n="training.faculty.certification.feature4">• 持续教育学分</li>
+                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 4H18A2 2 0 0 1 20 6V18A2 2 0 0 1 18 20H6A2 2 0 0 1 4 18V6A2 2 0 0 1 6 4H8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="currentColor" stroke-width="2"/>
+                
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">培训实施</h3>
-                        <p class="timeline-description">理论培训、实操训练、考核认证、技能提升</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">上线运营</h3>
-                        <p class="timeline-description">系统上线、运营监控、问题处理、持续优化</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Training Advantages -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">培训优势</h2>
-                <p class="section-subtitle">专业的培训团队和丰富的实践经验</p>
-            </div>
-            <div class="advantage-grid">
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 21V5A2 2 0 0 0 14 3H10A2 2 0 0 0 8 5V21L12 19L16 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="advantage-title">专业认证</h3>
-                    <p class="advantage-description">培训师具备国际认证资质，拥有丰富的行业经验</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 14S9.5 16 12 16S16 14 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 9H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 9H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="advantage-title">个性化定制</h3>
-                    <p class="advantage-description">根据客户需求定制培训内容，确保培训效果最大化</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="advantage-title">持续支持</h3>
-                    <p class="advantage-description">提供长期技术支持和知识更新，确保团队能力持续提升</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="advantage-title">效果保证</h3>
-                    <p class="advantage-description">建立完善的培训评估体系，确保培训质量和效果</p>
+                    <h3 data-i18n="training.faculty.support.title">持续支持服务</h3>
+                    <p data-i18n="training.faculty.support.desc">培训后持续技术支持</p>
+                    <ul class="faculty-features">
+                        <li data-i18n="training.faculty.support.feature1">• 在线答疑平台</li>
+                        <li data-i18n="training.faculty.support.feature2">• 定期技术更新</li>
+                        <li data-i18n="training.faculty.support.feature3">• 实践指导服务</li>
+                        <li data-i18n="training.faculty.support.feature4">• 学习资源库</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -400,16 +298,50 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">专业培训，成功落地</h2>
-                <p class="cta-description">让我们为您的团队提供专业的培训和落地支持服务</p>
-                <div class="cta-buttons">
-                    <a href="../contact.html" class="btn btn-primary">联系我们</a>
-                    <a href="../case-studies.html" class="btn btn-secondary">查看案例</a>
+                <h2 class="cta-title" data-i18n="training.cta.title">开始您的专业培训</h2>
+                <p class="cta-subtitle" data-i18n="training.cta.subtitle">联系我们，获取专业的彩票行业培训服务</p>
+                <div class="cta-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="training.cta.contact">立即咨询</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="training.cta.products">查看其他产品</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="../js/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LottoBridge</h3>
+                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <p>Email: info@lottobridge.com</p>
+                    <p>Tel: +86 400-888-8888</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.services">服务</h4>
+                    <ul>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script>
+        // 初始化国际化
+        document.addEventListener('DOMContentLoaded', function() {
+            initI18n();
+        });
+    </script>
 </body>
 </html>

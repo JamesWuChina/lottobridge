@@ -14,6 +14,61 @@ const fr = {
         about: 'À Propos de Nous',
         contact: 'Nous Contacter'
     },
+    // 市场调研报告精选
+    market_reports: {
+        title: 'Rapports d\'Intelligence du Marché Mondial de Loterie',
+        subtitle: 'Analyse de marché pilotée par IA, vous fournissant les derniers insights du marché mondial de loterie',
+        view_report: 'Voir le Rapport',
+        mexico: {
+            title: 'Rapport sur le Marché de Loterie Mexicain',
+            date: 'Janvier 2024',
+            tag1: 'Politique Amicale',
+            tag2: 'Croissance du Marché'
+        },
+        kenya: {
+            title: 'Rapport sur le Marché de Loterie du Kenya',
+            date: 'Février 2024',
+            tag1: 'Paiement Mobile',
+            tag2: 'Utilisateurs Jeunes'
+        },
+        philippines: {
+            title: 'Rapport sur le Marché de Loterie Philippin',
+            date: 'Mars 2024',
+            tag1: 'Croissance en Ligne',
+            tag2: 'Réglementation Complète'
+        }
+    },
+    // 合作案例精选
+    case_studies: {
+        title: 'Sélection de Cas de Coopération',
+        subtitle: 'Cas de succès réels, montrant comment LottoBridge aide les clients à réaliser l\'atterrissage commercial de loterie',
+        view_details: 'Voir les Détails',
+        mexico: {
+            title: 'Transformation Numérique de Loterie Nationale Mexicaine',
+            type: 'Agence Gouvernementale',
+            scope: 'Déploiement National',
+            description: 'Fourni au gouvernement mexicain un système complet de loterie numérique, incluant la plateforme de vente en ligne, l\'application mobile et le déploiement du réseau de terminaux national',
+            deliverable1: 'Développement de Système',
+            deliverable2: 'Déploiement de Terminaux',
+            deliverable3: 'Support Opérationnel'
+        },
+        kenya: {
+            title: 'Construction de Plateforme de Loterie Mobile du Kenya',
+            type: 'Opérateur Privé',
+            scope: 'Mobile First',
+            description: 'Solution de loterie mobile basée sur le système de paiement M-Pesa, réalisant une pénétration rapide du marché et une croissance des utilisateurs',
+            deliverable1: 'Application Mobile',
+            deliverable2: 'Intégration de Paiement',
+            deliverable3: 'Promotion de Marché'
+        }
+    },
+    // Hero Section
+    hero: {
+        title: 'Plateforme de Solutions Complètes pour l\'Industrie Mondiale de la Loterie',
+        subtitle: 'Exploitant les ressources puissantes de la chaîne industrielle de loterie de la Chine, intégrant les capacités de base en logiciels système, matériel terminal, impression de billets et consommables thermiques pour aider les agences gouvernementales et opérateurs privés du monde entier à entrer rapidement sur le marché de la loterie',
+        cta_primary: 'Obtenir une Solution Personnalisée',
+        cta_secondary: 'Voir les Rapports de Marché'
+    },
     // Page À Propos
     about: {
         page: {
@@ -154,185 +209,6 @@ const fr = {
             description: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie',
             contact_now: 'Contacter maintenant',
             view_cases: 'Voir les cas de succès'
-        }
-    },
-    // Hero Section
-    hero: {
-        title: 'Plateforme de Solutions Complètes pour l\'Industrie Mondiale de la Loterie',
-        subtitle: 'Exploitant les ressources puissantes de la chaîne industrielle de loterie de la Chine, intégrant les capacités de base en logiciels système, matériel terminal, impression de billets et consommables thermiques pour aider les agences gouvernementales et opérateurs privés du monde entier à entrer rapidement sur le marché de la loterie',
-        cta_primary: 'Obtenir une Solution Personnalisée',
-        cta_secondary: 'Voir les Rapports de Marché'
-    },
-    // Features
-    features: {
-        title: 'Ce Que Nous Pouvons Faire Pour Vous',
-        subtitle: 'LottoBridge n\'est pas seulement une plateforme B2B, mais un système d\'atterrissage commercial de loterie emballé qui aide les clients à passer de "y a-t-il une opportunité" à "comment implémenter" en une étape',
-        consulting: {
-            title: 'Pré-consultation et Planification de Marché',
-            description: 'Moteur de recherche de marché mondial IA génère des rapports professionnels sur les politiques de loterie, la taille du marché, l\'analyse des risques pour 100+ pays en un clic'
-        },
-        products: {
-            title: 'Produits et Services Techniques',
-            description: 'Services complets de système de loterie, chaîne d\'approvisionnement d\'équipements terminaux, conception et développement de jeux de loterie, services d\'impression de billets et papier thermique'
-        },
-        support: {
-            title: 'Support Opérationnel et Services d\'Atterrissage',
-            description: 'Formation et orientation opérationnelle, appariement offre-demande et gestion des commandes, support d\'exportation et de conformité, appariement de partenaires stratégiques'
-        }
-    },
-    // Solutions
-    solutions: {
-        title: 'Nos Solutions Principales',
-        subtitle: 'Produits et services personnalisés pour différents besoins de marché',
-        software: {
-            title: 'Logiciel de Système de Loterie',
-            description: 'Systèmes complets de vente, tirage et règlement de loterie supportant plusieurs jeux de loterie et répondant aux exigences réglementaires de différents pays'
-        },
-        hardware: {
-            title: 'Équipement Matériel Terminal',
-            description: 'Terminaux de loterie haute performance, machines de billets en libre-service, appareils de vente mobile adaptés à divers scénarios de vente'
-        },
-        printing: {
-            title: 'Services d\'Impression de Billets',
-            description: 'Impression de billets instantanés anti-contrefaçon sécurisée, conforme aux normes de sécurité internationales, supportant la conception personnalisée'
-        },
-        learn_more: 'En Savoir Plus'
-    },
-    // Rapports de Recherche de Marché en Vedette
-    market_reports: {
-        title: 'Rapports d\'Intelligence de Marché de Loterie Mondiale',
-        subtitle: 'Analyse de marché pilotée par IA fournissant les dernières perspectives du marché mondial de la loterie',
-        view_report: 'Voir le Rapport',
-        reports: {
-            egypt: {
-                title: 'Analyse Approfondie du Marché de Loterie Égyptien',
-                date: 'Janvier 2024',
-                highlights: ['Taille du Marché 430M$', 'Croissance Annuelle 8%', 'Opportunité de Transformation Numérique']
-            },
-            mexico: {
-                title: 'Évaluation des Opportunités du Marché de Loterie Mexicain',
-                date: 'Février 2024',
-                highlights: ['Politique d\'Accès Privé', 'Marché 1,25B$', 'Croissance des Paris Sportifs']
-            },
-            philippines: {
-                title: 'Rapport de Perspectives du Marché de Loterie Philippin',
-                date: 'Mars 2024',
-                highlights: ['Potentiel de Croissance Élevé', 'Taille du Marché 870M$', 'Montée des Jeux Électroniques']
-            }
-        }
-    },
-    // Études de Cas en Vedette
-    case_studies: {
-        title: 'Études de Cas en Vedette',
-        subtitle: 'Histoires de succès réelles montrant comment LottoBridge aide les clients à réaliser l\'implémentation d\'entreprises de loterie',
-        view_details: 'Voir les Détails',
-        cases: {
-            nigeria: {
-                title: 'Projet de Système de Loterie Nationale du Nigeria',
-                client_type: 'Agence Gouvernementale',
-                scope: 'Couverture Nationale',
-                description: 'Fourni une solution complète de système de loterie pour le gouvernement nigérian, incluant le développement de système, le déploiement de terminaux, la formation opérationnelle et les services de processus complet.',
-                deliverables: ['Développement de Système de Loterie', 'Déploiement de 1000 Terminaux', 'Formation d\'Équipe Opérationnelle', 'Services de Conseil en Conformité']
-            },
-            cambodia: {
-                title: 'Projet d\'Opération de Loterie Privée du Cambodge',
-                client_type: 'Opérateur Privé',
-                scope: 'Pilote Régional',
-                description: 'Assisté l\'opérateur privé cambodgien à lancer rapidement l\'entreprise de loterie, de la recherche de marché au lancement du système en seulement 3 mois.',
-                deliverables: ['Analyse de Faisabilité de Marché', 'Développement de Système Personnalisé', 'Intégration de Services d\'Impression', 'Formation de Localisation']
-            }
-        }
-    },
-    // Carte de Données de Service Mondial
-    global: {
-        title: 'Données de Service Mondial',
-        subtitle: 'Couverture de service LottoBridge et affichage de données commerciales sur les marchés mondiaux',
-        stats: {
-            countries: {
-                number: '50+',
-                label: 'Pays de Service',
-                description: 'Couvrant les principaux marchés de loterie mondiaux'
-            },
-            languages: {
-                number: '12',
-                label: 'Langues Supportées',
-                description: 'Services de localisation multilingues'
-            },
-            projects: {
-                number: '200+',
-                label: 'Projets Couverts',
-                description: 'Projets de loterie livrés avec succès'
-            },
-            users: {
-                number: '10M+',
-                label: 'Utilisateurs Finaux',
-                description: 'Nombre de joueurs de loterie servis'
-            }
-        },
-        regions: {
-            asia_pacific: {
-                name: 'Asie-Pacifique',
-                count: '18 Pays',
-                description: 'Y compris l\'Asie du Sud-Est, l\'Asie du Sud et d\'autres marchés majeurs'
-            },
-            africa: {
-                name: 'Afrique',
-                count: '15 Pays',
-                description: 'Couvrant l\'Afrique de l\'Est, l\'Afrique de l\'Ouest, l\'Afrique du Sud et d\'autres régions'
-            },
-            latin_america: {
-                name: 'Amérique Latine',
-                count: '12 Pays',
-                description: 'Marchés clés incluant le Mexique, le Brésil et d\'autres'
-            }
-        }
-    },
-    // Testimonials
-    testimonials: {
-        title: 'Témoignages Clients',
-        subtitle: 'Écoutez ce que nos partenaires disent des services LottoBridge',
-        quote: 'LottoBridge nous a fourni une solution complète de système de loterie, de la recherche de marché à l\'implémentation du système en seulement 3 mois. Leur équipe professionnelle et service tout-en-un ont considérablement réduit nos risques opérationnels.',
-        author_name: 'Carlos Mendez',
-        author_title: 'PDG, Opérateur de Loterie Mexicain'
-    },
-    // Call to Action
-    cta: {
-        title: 'Prêt à Explorer le Marché Mondial ?',
-        subtitle: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie, LottoBridge peut vous fournir la solution la plus adaptée',
-        contact_now: 'Contacter un Consultant Maintenant',
-        book_demo: 'Télécharger le Manuel de Service'
-    },
-    // Footer
-    footer: {
-        company: {
-            name: 'LottoBridge',
-            description: 'Plateforme de solutions tout-en-un pour l\'industrie mondiale des loteries, exploitant les ressources puissantes de la chaîne d\'approvisionnement chinoise pour aider les clients du monde entier à entrer rapidement sur le marché des loteries.'
-        },
-        products: {
-            title: 'Produits et Services',
-            lottery_system: 'Solutions de Systèmes de Loterie',
-            terminal_equipment: 'Fourniture d\'Équipements Terminaux',
-            game_design: 'Conception et Développement de Jeux',
-            printing_service: 'Services d\'Impression de Billets',
-            market_research: 'Études de Marché et Conseil'
-        },
-        resources: {
-            title: 'Centre de Ressources',
-            case_studies: 'Études de Cas',
-            whitepapers: 'Téléchargements de Livres Blancs',
-            industry_reports: 'Rapports de l\'Industrie',
-            blog_news: 'Blog et Actualités',
-            faq: 'FAQ'
-        },
-        contact: {
-            title: 'Contactez-nous',
-            address: 'No.88 Jianguo Road, District de Chaoyang, Beijing'
-        },
-        copyright: {
-            company: '© 2023 LottoBridge',
-            rights: 'Tous droits réservés.',
-            privacy: 'Politique de Confidentialité',
-            terms: 'Conditions d\'Utilisation'
         }
     },
     // Page d'Études de Marché
@@ -887,6 +763,211 @@ const fr = {
             view_details: 'Voir les Détails',
             download_brief: 'Télécharger le Résumé'
         },
+        // Nouvelles traductions pour les pages de détails des cas
+        cambodia: {
+            page_title: 'Localisation du Système de Loterie Nationale du Cambodge | LottoBridge',
+            title: 'Localisation du Système de Loterie du Cambodge',
+            description: 'Personnalisation complète du système de vente de billets + déploiement local de terminaux + formation du module CRM, support de l\'interface en khmer et intégration de terminaux Android',
+            slogan: 'Localisation pilotée, autonomisation de la transformation numérique de l\'industrie de la loterie du Cambodge',
+            country: 'Pays:',
+            country_name: 'Cambodge',
+            client_type: 'Type de Client:',
+            client_type_value: 'Agence Gouvernementale',
+            period: 'Période du Projet:',
+            period_value: '2023-2024',
+            scope: "À l'échelle nationale",
+            scope_value: 'Configuration du Système, Déploiement de Terminaux, Formation CRM, Localisation',
+            result: 'Résultats Clés:',
+            result_value: 'Plus de 1200 terminaux POS déployés, croissance des ventes de 42%',
+            highlight1: {
+                title: 'Système Complet de Vente de Billets',
+                desc: 'Développement personnalisé supportant plusieurs types de loterie'
+            },
+            highlight2: {
+                title: 'Déploiement Local de Terminaux',
+                desc: 'Déploiement national de 1200 terminaux POS'
+            },
+            highlight3: {
+                title: 'Interface Système en Khmer',
+                desc: 'Interface utilisateur entièrement localisée en khmer'
+            },
+            highlight4: {
+                title: 'Croissance Significative des Ventes',
+                desc: 'Croissance des ventes de 42%, augmentation annuelle des ventes attendue de 22M$'
+            },
+            testimonial: '"Le réseau de vente local a été rapidement lancé, plus de 1200 terminaux POS déployés, augmentation annuelle des ventes attendue de 22M$, croissance de plus de 42%"',
+            client: 'Directeur Technique du Bureau National de Loterie du Cambodge',
+            delivery_title: 'Contenu de Livraison et Processus de Service',
+            delivery1: {
+                title: 'Étude de Marché',
+                desc: 'Analyse approfondie des politiques du marché de la loterie du Cambodge et des besoins des utilisateurs'
+            },
+            delivery2: {
+                title: 'Personnalisation du Système',
+                desc: 'Développement personnalisé du système complet de gestion des ventes de billets'
+            },
+            delivery3: {
+                title: 'Déploiement de Terminaux',
+                desc: 'Déploiement national de 1200 terminaux POS'
+            },
+            delivery4: {
+                title: 'Formation CRM',
+                desc: 'Formation du module CRM et support opérationnel pour les équipes clients'
+            }
+        },
+        uganda: {
+            page_title: 'Déploiement Rapide du Projet de Billets Instantanés de l\'Ouganda | LottoBridge',
+            title: 'Déploiement Rapide du Projet de Billets Instantanés de l\'Ouganda',
+            description: 'Consultation sur les catégories de loterie + conception sécurisée de billets + impression de billets instantanés, fourniture de 10 types de billets personnalisés, tous approuvés par le gouvernement local',
+            slogan: 'Déploiement rapide, conformité sécurisée, autonomisation de l\'écosystème de loterie de l\'Ouganda',
+            country: 'Pays:',
+            country_name: 'Ouganda',
+            client_type: 'Type de Client:',
+            client_type_value: 'Agence Gouvernementale',
+            period: 'Période du Projet:',
+            period_value: '2024',
+            scope: "À l'échelle nationale",
+            scope_value: 'Impression de Billets, Export Logistique, Conception Sécurisée, Consultation de Conformité',
+            result: 'Résultats Clés:',
+            result_value: 'Projet terminé en seulement 4 mois, taux de satisfaction des billets de 92%',
+            highlight1: {
+                title: 'Impression de Billets Instantanés',
+                desc: 'Fourni 10 types de billets personnalisés, tous approuvés par le gouvernement local'
+            },
+            highlight2: {
+                title: 'Conception Sécurisée de Billets',
+                desc: 'Papier thermique et produits imprimés ont réussi la certification fiscale'
+            },
+            highlight3: {
+                title: 'Déploiement Rapide',
+                desc: 'Projet terminé en seulement 4 mois, entrée rapide sur le marché'
+            },
+            highlight4: {
+                title: 'Haute Satisfaction',
+                desc: 'Taux de satisfaction des billets de 92%, excellents retours utilisateurs'
+            },
+            testimonial: '"Projet terminé en seulement 4 mois, taux de satisfaction des billets de 92%, papier thermique et produits imprimés ont réussi la certification fiscale, entrée rapide sur le marché"',
+            client: 'Directeur du Bureau National de Loterie de l\'Ouganda',
+            delivery_title: 'Contenu de Livraison et Processus de Service',
+            delivery1: {
+                title: 'Étude de Marché',
+                desc: 'Analyse approfondie des politiques du marché de la loterie de l\'Ouganda et des besoins des utilisateurs'
+            },
+            delivery2: {
+                title: 'Conception de Billets',
+                desc: 'Conception personnalisée de 10 types de billets sécurisés, conformes aux réglementations locales'
+            },
+            delivery3: {
+                title: 'Impression de Billets',
+                desc: 'Impression de haute qualité, a réussi la certification fiscale'
+            },
+            delivery4: {
+                title: 'Export Logistique',
+                desc: 'Livraison logistique rapide, assurant une livraison en temps opportun'
+            }
+        },
+        brazil: {
+            page_title: 'Consultation Stratégique et Pré-recherche Système du Brésil | LottoBridge',
+            title: 'Consultation Stratégique et Pré-recherche Système du Brésil',
+            description: 'Analyse de la politique d\'accès au marché + recherche IA + planification du système de loterie en ligne, fourniture de 4 tours de discussions politiques + connexions d\'experts locaux + support de livre blanc',
+            slogan: 'Consultation stratégique, autonomisation de l\'innovation de l\'industrie de la loterie du Brésil',
+            country: 'Pays:',
+            country_name: 'Brésil',
+            client_type: 'Type de Client:',
+            client_type_value: 'Opérateur Privé',
+            period: 'Période du Projet:',
+            period_value: '2024',
+            scope: "À l'échelle nationale",
+            scope_value: 'Coopération de Consultation, Étude de Marché, Analyse de Politique, Planification de Système',
+            result: 'Résultats Clés:',
+            result_value: 'Aidé le client à développer un chemin de développement de 3 ans, confirmation de la direction d\'investissement stratégique',
+            highlight1: {
+                title: 'Analyse d\'Accès au Marché',
+                desc: 'Analyse approfondie des politiques d\'accès au marché de la loterie du Brésil et des exigences réglementaires'
+            },
+            highlight2: {
+                title: 'Innovation de Recherche IA',
+                desc: 'Utilisation de la technologie IA pour l\'étude de marché et l\'analyse de données'
+            },
+            highlight3: {
+                title: 'Planification de Système',
+                desc: 'Conception d\'architecture du système de loterie en ligne et planification de la feuille de route technique'
+            },
+            highlight4: {
+                title: 'Connexions d\'Experts',
+                desc: 'Fourni 4 tours de discussions politiques + connexions d\'experts locaux + support de livre blanc'
+            },
+            testimonial: '"Aidé le client à développer un chemin de développement de 3 ans, confirmation de la direction d\'investissement stratégique"',
+            client: 'Directeur Stratégique de l\'Opérateur de Loterie Privé du Brésil',
+            delivery_title: 'Contenu de Livraison et Processus de Service',
+            delivery1: {
+                title: 'Étude de Marché',
+                desc: 'Analyse approfondie des politiques du marché de la loterie du Brésil et des besoins des utilisateurs'
+            },
+            delivery2: {
+                title: 'Recherche IA',
+                desc: 'Utilisation de la technologie IA pour l\'analyse des données de marché'
+            },
+            delivery3: {
+                title: 'Planification de Système',
+                desc: 'Conception d\'architecture du système de loterie en ligne'
+            },
+            delivery4: {
+                title: 'Discussions Politiques',
+                desc: 'Fourni 4 tours de discussions politiques + connexions d\'experts locaux'
+            }
+        },
+        uzbekistan: {
+            page_title: 'Déploiement du Système de Billets Instantanés de la Loterie Nationale d\'Ouzbékistan | LottoBridge',
+            title: 'Déploiement du Système de Billets Instantanés de la Loterie Nationale d\'Ouzbékistan',
+            description: 'Pilote provincial, volume d\'impression annuel prévu de 20 millions de billets, rapport d\'étude + système CRM + conception sécurisée de billets + export de papier thermique',
+            slogan: 'Modernisation pilotée, autonomisation de la transformation numérique de l\'industrie de la loterie d\'Asie centrale',
+            country: 'Pays:',
+            country_name: 'Ouzbékistan',
+            client_type: 'Type de Client:',
+            client_type_value: 'Agence Gouvernementale',
+            period: 'Période du Projet:',
+            period_value: '2024',
+            scope: "À l'échelle nationale",
+            scope_value: 'Configuration du Système, Impression de Billets, Système CRM, Export de Papier Thermique',
+            result: 'Résultats Clés:',
+            result_value: 'Pilote provincial, volume d\'impression annuel prévu de 20 millions de billets, terminé en seulement 5 mois',
+            highlight1: {
+                title: 'Pilote Provincial',
+                desc: 'Projet pilote lancé avec succès au niveau provincial'
+            },
+            highlight2: {
+                title: 'Impression à Grande Échelle',
+                desc: 'Volume d\'impression annuel prévu de 20 millions de billets, satisfaisant la demande du marché'
+            },
+            highlight3: {
+                title: 'Système CRM',
+                desc: 'Développement personnalisé du système de gestion de la relation client'
+            },
+            highlight4: {
+                title: 'Livraison Efficace',
+                desc: 'De l\'analyse stratégique au lancement du système, terminé en seulement 5 mois'
+            },
+            testimonial: '"La plateforme nous a aidés de l\'analyse stratégique au lancement du système en seulement 5 mois, très efficace"',
+            client: 'Directeur Technique du Bureau National de Loterie d\'Ouzbékistan',
+            delivery_title: 'Contenu de Livraison et Processus de Service',
+            delivery1: {
+                title: 'Étude de Marché',
+                desc: 'Analyse approfondie des politiques du marché de la loterie d\'Ouzbékistan et des besoins des utilisateurs'
+            },
+            delivery2: {
+                title: 'Système CRM',
+                desc: 'Développement personnalisé du système de gestion de la relation client'
+            },
+            delivery3: {
+                title: 'Conception Sécurisée',
+                desc: 'Conception sécurisée de billets, conforme aux normes internationales'
+            },
+            delivery4: {
+                title: 'Export de Papier Thermique',
+                desc: 'Approvisionnement d\'exportation de matériaux de papier thermique de haute qualité'
+            }
+        },
         cta: {
             title: 'Prêt à Commencer Votre Projet de Loterie?',
             description: 'Contactez-nous pour discuter de vos exigences spécifiques et obtenir une solution personnalisée',
@@ -1017,37 +1098,46 @@ const fr = {
             view_cases: 'Voir les Cas de Succès'
         }
     },
+    // 行动号召
+    cta: {
+        title: 'Prêt à entrer sur le marché mondial de la loterie?',
+        subtitle: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie, LottoBridge peut vous fournir la solution la plus adaptée',
+        contact_now: 'Consulter Maintenant',
+        book_demo: 'Réserver une Démonstration',
+        contact_consultant: 'Contacter le Consultant Maintenant',
+        download_handbook: 'Télécharger le Manuel de Service'
+    },
     // Pied de Page
     footer: {
         company: {
-            name: 'LottoBridge',
-            description: 'Plateforme de solution tout-en-un pour l\'exportation mondiale de loterie, tirant parti des puissantes ressources de la chaîne d\'industrie de loterie chinoise pour aider les clients mondiaux à entrer rapidement sur le marché de la loterie.'
+            name: "LottoBridge",
+            description: "Plateforme de solutions tout-en-un pour l'industrie mondiale des loteries, exploitant les ressources puissantes de la chaîne d'approvisionnement chinoise pour aider les clients du monde entier à entrer rapidement sur le marché des loteries."
         },
         products: {
-            title: 'Produits et Services',
-            lottery_system: 'Services de Système de Loterie',
-            terminal_equipment: 'Services d\'Équipement Terminal',
-            game_design: 'Conception et Développement de Jeux',
-            printing_service: 'Services d\'Impression de Billets',
-            market_research: 'Services d\'Études de Marché'
+            title: "Produits et Services",
+            lottery_system: "Solutions de Systèmes de Loterie",
+            terminal_equipment: "Services d'Équipement Terminal",
+            game_design: "Conception et Développement de Jeux",
+            printing_service: "Services d'Impression de Billets",
+            market_research: "Services d'Études de Marché"
         },
         resources: {
-            title: 'Centre de Ressources',
-            case_studies: 'Études de Cas',
-            whitepapers: 'Téléchargements de Livres Blancs',
-            industry_reports: 'Rapports de l\'Industrie',
-            blog_news: 'Blog et Actualités',
-            faq: 'FAQ'
+            title: "Centre de Ressources",
+            case_studies: "Études de Cas",
+            whitepapers: "Téléchargements de Livres Blancs",
+            industry_reports: "Rapports de l'Industrie",
+            blog_news: "Blog et Actualités",
+            faq: "FAQ"
         },
         contact: {
-            title: 'Nous Contacter',
-            address: 'Beijing Chaoyang District Jianguo Road No. 88'
+            title: "Nous Contacter",
+            address: "Beijing Chaoyang District Jianguo Road No. 88"
         },
         copyright: {
-            company: '© 2023 LottoBridge',
-            rights: 'Tous droits réservés.',
-            privacy: 'Politique de Confidentialité',
-            terms: 'Conditions d\'Utilisation'
+            company: "© 2023 LottoBridge",
+            rights: "Tous droits réservés.",
+            privacy: "Politique de Confidentialité",
+            terms: "Conditions d'Utilisation"
         }
     }
 };
