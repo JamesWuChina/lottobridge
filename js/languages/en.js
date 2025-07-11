@@ -230,10 +230,1154 @@ const en = {
         }
     },
     // Market Research Report Highlights
+    // Digital Lottery System
+    digital: {
+        title: 'Digital Lottery System Solution - LottoBridge',
+        hero: {
+            title: 'Digital Lottery System Solution',
+            subtitle: 'Integrated approach to building gameplay, security, compliance, and delivery capabilities to help you quickly deploy modern lottery systems',
+            getSolution: 'Get Custom Solution',
+            viewProducts: 'View Other Products',
+            imageText: 'Digital Lottery System Visual'
+        },
+        gameTypes: {
+            title: 'Core Game Support',
+            subtitle: 'Support for global mainstream lottery games to meet different market needs',
+            lotto: {
+                icon: 'Lotto Icon',
+                title: 'Classic Lotto Games',
+                desc: 'Support for 5/35, 6/45 and other classic lotto games, suitable for mature markets in Europe and North America',
+                example1: 'European EuroMillions',
+                example2: 'US Powerball'
+            },
+            number: {
+                icon: 'Number Icon',
+                title: 'Number Arrangement Games',
+                desc: '3D, 4D and other number arrangement games, popular in Asian markets',
+                example1: 'Singapore 4D',
+                example2: 'Malaysia Magnum'
+            },
+            daily: {
+                icon: 'Calendar Icon',
+                title: 'Daily Draw Games',
+                desc: 'Fixed daily draw times to increase user participation frequency and stickiness',
+                example1: 'Daily Pick',
+                example2: 'Cash 3'
+            },
+            fast: {
+                icon: 'Fast Icon',
+                title: 'High Frequency Games',
+                desc: 'Draws every 5-15 minutes to meet fast-paced market demands',
+                example1: 'Keno',
+                example2: 'Quick Draw'
+            }
+        },
+        systemFeatures: {
+            title: 'System Architecture & Feature Highlights',
+            subtitle: 'Comprehensive coverage of all lottery operation aspects, ensuring system stability and reliability',
+            sales: {
+                title: 'Lottery Sales Management',
+                desc: 'Site management, pool allocation, limit control, comprehensive sales process management',
+                item1: '✓ Multi-level agent management',
+                item2: '✓ Real-time sales monitoring',
+                item3: '✓ Smart limit setting'
+            },
+            draw: {
+                title: 'Draw Management',
+                desc: 'Draw data generation, process approval, notarization interface, ensuring fair and transparent draws',
+                item1: '✓ Random number generation algorithms',
+                item2: '✓ Multi-level approval process',
+                item3: '✓ Third-party notarization integration'
+            },
+            prize: {
+                title: 'Prize Management',
+                desc: 'Prize rules, blacklist mechanism, risk control, ensuring fund security',
+                item1: '✓ Automatic prize verification',
+                item2: '✓ Anti-money laundering detection',
+                item3: '✓ Large prize review process'
+            },
+            finance: {
+                title: 'Financial Management',
+                desc: 'Fund flow, commission settlement, financial reports, complete financial system',
+                item1: '✓ Real-time fund monitoring',
+                item2: '✓ Automatic commission settlement',
+                item3: '✓ Multi-dimensional financial reports'
+            },
+            risk: {
+                title: 'Risk Management',
+                desc: 'Anomaly detection, risk warning, compliance monitoring, comprehensive risk control',
+                item1: '✓ Intelligent anomaly detection',
+                item2: '✓ Real-time risk warning',
+                item3: '✓ Compliance monitoring'
+            },
+            analytics: {
+                title: 'Data Analytics',
+                desc: 'Sales analysis, user behavior, market trends, data-driven decision making',
+                item1: '✓ Real-time data dashboard',
+                item2: '✓ User behavior analysis',
+                item3: '✓ Predictive analytics'
+            }
+        },
+        techArchitecture: {
+            title: 'Technical Architecture & Security',
+            subtitle: 'Using microservices architecture to ensure high system availability and security',
+            microservices: {
+                title: 'Microservices Architecture',
+                desc: 'Modular design, independent deployment, easy to scale and maintain',
+                item1: '• Service decoupling',
+                item2: '• Independent scaling',
+                item3: '• Fault isolation'
+            },
+            security: {
+                title: 'Security Protection',
+                desc: 'Multi-layer security protection to ensure data and system security',
+                item1: '• Data encryption',
+                item2: '• Identity authentication',
+                item3: '• Access control'
+            },
+            highAvailability: {
+                title: 'High Availability',
+                desc: '99.9% system availability, ensuring business continuity',
+                item1: '• Load balancing',
+                item2: '• Failover',
+                item3: '• Auto recovery'
+            }
+        },
+        cta: {
+            title: 'Start Your Digital Lottery System Project',
+            subtitle: 'Contact us to get professional digital lottery system solutions',
+            contact: 'Contact Now',
+            products: 'View Other Products'
+        }
+    },
+
+    // Sports Betting System
+    sports: {
+        title: 'Sports Betting System - LottoBridge',
+        hero: {
+            title: 'Sports Betting System Solution',
+            subtitle: 'Multi-channel sports betting platform, secure compliance, flexible customization',
+            viewFeatures: 'System Highlights',
+            contact: 'Consult Solution',
+            imageText: 'Sports Betting System Display'
+        },
+        features: {
+            title: 'Core Feature Highlights',
+            subtitle: 'Support for multiple game types, flexible adaptation to global markets',
+            odds: {
+                title: 'Diverse Odds Engine',
+                desc: 'Support for fixed odds, floating odds, Asian handicap and other modes'
+            },
+            live: {
+                title: 'Real-time Event Data',
+                desc: 'Integrated global mainstream event data sources, real-time updates'
+            },
+            security: {
+                title: 'Security & Compliance',
+                desc: 'Multi-layered risk control and compliance system, ensuring fund and data security'
+            },
+            custom: {
+                title: 'Flexible Customization',
+                desc: 'Support for multiple languages, currencies, and multi-channel access'
+            }
+        },
+        cta: {
+            title: 'Start Your New Sports Betting Experience',
+            subtitle: 'Contact us to get professional sports betting system solutions',
+            contact: 'Contact Now',
+            products: 'View Other Products'
+        }
+    },
+
+    // Terminals
+    terminals: {
+        title: 'Lottery Terminal Equipment - LottoBridge',
+        hero: {
+            title: 'Lottery Terminal Equipment Solution',
+            subtitle: 'Diversified terminal equipment to meet different sales scenario needs',
+            viewProducts: 'View Equipment',
+            contact: 'Consult Solution',
+            imageText: 'Terminal Equipment Display'
+        },
+        types: {
+            title: 'Terminal Equipment Types',
+            subtitle: 'Covering retail, mobile, self-service and other application scenarios',
+            retail: {
+                title: 'Retail Terminal',
+                desc: 'Suitable for lottery sales outlets, supporting multiple ticket types'
+            },
+            mobile: {
+                title: 'Mobile Terminal',
+                desc: 'Portable design, suitable for mobile sales and outdoor scenarios'
+            },
+            kiosk: {
+                title: 'Self-Service Terminal',
+                desc: 'Self-service ticket purchasing and redemption, enhancing user experience'
+            }
+        },
+        features: {
+            title: 'Equipment Feature Highlights',
+            subtitle: 'Intelligent design, ensuring efficient operation',
+            printing: {
+                title: 'High-Speed Printing',
+                desc: 'Support for thermal, dot matrix and other printing methods'
+            },
+            security: {
+                title: 'Security Protection',
+                desc: 'Multi-layer encryption, ensuring data and transaction security'
+            },
+            connectivity: {
+                title: 'Multiple Connections',
+                desc: 'Support for wired, wireless, 4G/5G and other communication methods'
+            }
+        },
+        cta: {
+            title: 'Start Smart Terminal New Experience',
+            subtitle: 'Contact us to get professional lottery terminal equipment solutions',
+            contact: 'Contact Now',
+            products: 'View Other Products'
+        }
+    },
+
+    // Products & Services Page
+    products: {
+        page: {
+            title: 'Products & Services | LottoBridge'
+        },
+        hero: {
+            title: 'Product Center',
+            description: 'One-stop coverage of global lottery systems and hardware supply chain',
+            btn_view_services: 'View Product Solutions',
+            btn_contact: 'Contact Us'
+        },
+        nav: {
+            systems: 'Systems',
+            terminals: 'Terminals',
+            printing: 'Printing',
+            services: 'Services'
+        },
+        services: {
+            title: 'Our Core Products & Services',
+            description: 'LottoBridge provides not just a product catalog, but a one-stop implementable lottery solution package from "research, design, systems, equipment, training, export, cooperation"'
+        },
+        cases: {
+            title: 'Success Stories',
+            description: 'How global clients achieve business growth through LottoBridge solutions',
+            mexico: {
+                title: 'Mexico Private Lottery Operator System Upgrade',
+                description: 'Provided comprehensive sales system upgrade and 2,000 terminal equipment for leading Mexican lottery operator, supporting business expansion to 5,000 sales points nationwide.'
+            },
+            south_africa: {
+                title: 'South Africa National Lottery Instant Ticket Supply',
+                description: 'Supplied 120 million customized instant tickets for South Africa National Lottery Bureau, featuring 12 local cultural themed designs, delivered within 6 months.'
+            },
+            vietnam: {
+                title: 'Vietnam Lottery Digital Transformation Project',
+                description: 'Assisted Vietnam Lottery Company in completing digital transformation, deploying cloud lottery systems and training 300 technical personnel, achieving 40% sales increase.'
+            }
+        },
+        cta: {
+            title: 'Ready to Upgrade Your Lottery Business?',
+            description: 'Whether you are a government agency, private operator, or technology provider, LottoBridge can provide the most suitable solutions for you',
+            btn_contact: 'Contact Now',
+            btn_download: 'Download Service Manual'
+        }
+    },
+
+    // Industry Insights Page
+    insights: {
+        page: {
+            title: 'Industry Insights | LottoBridge'
+        },
+        hero: {
+            title: 'Global Lottery Industry Trends Analysis & Professional Insights',
+            description: 'Providing professional, continuously updated global lottery industry intelligence, covering policy regulations, technology trends, market dynamics, and game innovations',
+            btn_view_trends: 'View Trend Reports',
+            btn_subscribe: 'Subscribe to Industry Brief'
+        },
+        nav_categories: {
+            policy_tracking: '📜 Policy & Regulation Tracking',
+            market_trends: '📈 Market Trend Reports',
+            tech_trends: '🧠 Technology Trend Analysis',
+            case_studies: '🧩 Case Studies',
+            industry_reports: '📊 Industry Reports',
+            webinars: '🎥 Video Webinars'
+        },
+        content: {
+            title: 'Industry Insights',
+            subtitle: 'Global lottery industry trends analysis and professional insights'
+        },
+        categories: {
+            policy: 'Policy Updates',
+            tech: 'Technology Trends',
+            market: 'Market Trends',
+            innovation: 'Game Innovation'
+        },
+        articles: {
+            keno: {
+                title: 'Southeast Asia Keno Game Potential Analysis 2025',
+                summary: 'Policy relaxation in Thailand and Vietnam makes Keno games a potential breakthrough for digital lottery, with market size expected to grow 300%.'
+            },
+            africa: {
+                title: 'Africa Digital Lottery Development Opportunities Analysis',
+                summary: 'With Nigeria\'s new bill passed and Kenya\'s mobile payment adoption, Africa\'s digital lottery market is entering a golden period.'
+            },
+            ai: {
+                title: 'AI-Driven Lottery Risk Control System Upgrade',
+                summary: 'Machine learning algorithms excel in anti-fraud and anomaly detection, reducing false positives by 85% and improving accuracy by 40%.'
+            },
+            blockchain: {
+                title: 'Blockchain Lottery Transparency Solutions',
+                summary: 'Blockchain-based draw processes ensure fairness and transparency of every draw, significantly improving user trust.'
+            },
+            latam: {
+                title: 'Latin America Lottery Market Digitalization Progress',
+                summary: 'Digital lottery sales ratio in Mexico, Brazil and other countries is rapidly increasing, expected to reach 60% by 2025.'
+            },
+            japan: {
+                title: 'Japan Instant Ticket Market Innovation Analysis',
+                summary: 'Japan launches NFT-integrated instant ticket products, significantly increasing young user participation and providing new ideas for global markets.'
+            }
+        },
+        read_more: 'Read More'
+    },
+
+    // Printing Services Page
+    printing: {
+        page: {
+            title: 'Professional Lottery Printing Solutions | LottoBridge'
+        },
+        hero: {
+            title: 'World-Class Lottery Printing Solutions',
+            description: 'Using international top printing technology and multi-security printing processes, providing safe and reliable printing services for global lottery operators',
+            btn_services: 'View Service Capabilities',
+            btn_quality: 'Quality Assurance'
+        },
+        services: {
+            title: 'Core Printing Service Capabilities',
+            description: 'From traditional instant tickets to digital lottery, providing comprehensive professional printing solutions',
+            specifications: 'Technical Specifications',
+            instant_tickets: {
+                title: 'Instant Ticket Printing',
+                description: 'Scratch card and tear-off ticket professional printing, supporting complex pattern design and multiple security technologies',
+                feature1: '8-color offset + 2-color spot color process',
+                feature2: 'UV optical variable security coating technology',
+                feature3: 'Micro text + rainbow printing',
+                feature4: 'Eco-friendly water-based scratch coating',
+                feature5: 'Batch production monthly capacity 5 million sheets',
+                specs: 'Paper: 250-400g/m² | Size: 50×80mm to 150×200mm | Precision: ±0.1mm'
+            },
+            thermal_tickets: {
+                title: 'Thermal Ticket Printing',
+                description: 'Digital lottery thermal paper rolls, supporting high-speed printing and barcode recognition, guaranteed 10+ years preservation',
+                feature1: 'German imported thermal coating',
+                feature2: 'Water, oil and alcohol resistant formula',
+                feature3: 'High-density QR code printing',
+                feature4: 'Special background security design',
+                feature5: 'Continuous production seamless splicing',
+                specs: 'Paper: 55-120g/m² | Roll width: 57-110mm | Length: 30-500 meters'
+            },
+            security_printing: {
+                title: 'Security Anti-counterfeiting Printing',
+                description: 'Bank-grade security printing technology, multiple anti-counterfeiting measures, ensuring lottery security and authority',
+                feature1: 'Holographic hot stamping security labels',
+                feature2: 'Security thread embedding technology',
+                feature3: 'UV fluorescent security ink',
+                feature4: 'Infrared transmission security pattern',
+                feature5: 'Serial number encryption management',
+                specs: 'Security level: Bank grade | Detection method: UV + infrared + magnifying glass'
+            },
+            custom_design: {
+                title: 'Customized Design Services',
+                description: 'Professional design team providing localized creative design, integrating cultural elements and brand characteristics',
+                feature1: 'Local cultural element integration',
+                feature2: 'Brand visual identity design',
+                feature3: 'Multi-language version adaptation',
+                feature4: 'Festival theme customization',
+                feature5: '3D effect preview',
+                specs: 'Design cycle: 5-10 working days | Revisions: 3 free revisions | Format: AI/PDF'
+            }
+        },
+        process: {
+            title: 'Advanced Production Process',
+            description: 'Strictly following ISO 12647 international printing standards, ensuring quality of every lottery ticket',
+            design: {
+                title: 'Creative Design & Review',
+                description: 'Professional designer creation, multiple reviews ensuring design meets brand positioning and regulatory requirements',
+                step1: 'Requirement analysis & concept design',
+                step2: 'Color matching & layout design',
+                step3: 'Security element integration design',
+                step4: 'Customer confirmation & revision'
+            },
+            prepress: {
+                title: 'Prepress Processing',
+                description: 'High-precision plate making technology, ensuring printing image clarity and color reproduction',
+                step1: 'High-resolution scanning input',
+                step2: 'Color management & correction',
+                step3: 'CTP direct plate making technology',
+                step4: 'Printing plate quality inspection'
+            },
+            printing: {
+                title: 'Precision Printing Production',
+                description: 'German Heidelberg printing press, 8-color + spot color one-time forming, error control within ±0.1mm',
+                step1: 'Constant temperature and humidity environment control',
+                step2: 'Online density real-time monitoring',
+                step3: 'Register accuracy automatic adjustment',
+                step4: 'Spot color ink precise color matching'
+            },
+            finishing: {
+                title: 'Post-processing',
+                description: 'Security coating, die-cutting forming, quality inspection packaging, strict quality control in every process',
+                step1: 'UV/water-based coating treatment',
+                step2: 'Precision die-cutting forming',
+                step3: 'Security label attachment',
+                step4: 'Automatic counting packaging'
+            },
+            quality: {
+                title: 'Quality Testing Certification',
+                description: 'Multiple quality inspection processes, ensuring each batch meets international standards and customer requirements',
+                step1: 'First piece inspection confirmation',
+                step2: 'Batch sampling verification',
+                step3: 'Security effect testing',
+                step4: 'Quality inspection report issuance'
+            },
+            delivery: {
+                title: 'Safe Packaging & Delivery',
+                description: 'Professional packaging and full tracking, ensuring products safely reach customer designated locations',
+                step1: 'Moisture and pressure-proof packaging',
+                step2: 'Serial number record management',
+                step3: 'Professional logistics delivery',
+                step4: 'Delivery confirmation acceptance'
+            }
+        },
+        quality: {
+            title: 'International Quality Assurance System',
+            description: 'Passing multiple international certifications, establishing comprehensive quality management system',
+            metrics: {
+                accuracy: {
+                    title: 'Product Qualification Rate',
+                    description: 'Strict quality inspection ensuring ultra-high qualification rate'
+                },
+                precision: {
+                    title: 'Register Accuracy',
+                    description: 'German equipment ensuring precise registration'
+                },
+                durability: {
+                    title: 'Preservation Period',
+                    description: 'Quality materials ensuring long-term preservation'
+                },
+                capacity: {
+                    title: 'Monthly Production Sheets',
+                    description: 'Large-scale production meeting demands'
+                }
+            },
+            certifications: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: 'Quality management system certification'
+                },
+                fsc: {
+                    title: 'FSC Forest Certification',
+                    description: 'Sustainable forest management certification'
+                },
+                security: {
+                    title: 'Security Printing Certification',
+                    description: 'Government authorized security printing qualification'
+                },
+                environmental: {
+                    title: 'Environmental Standard Certification',
+                    description: 'EU environmental material standards'
+                }
+            }
+        },
+        cases: {
+            title: 'Global Success Cases',
+            description: 'Providing professional printing services for 50+ countries globally, cumulative printing of over 1 billion lottery tickets',
+            mexico: {
+                title: 'Mexico National Lottery Project',
+                description: 'Providing 50 million instant ticket printing services for Mexico National Lottery Bureau',
+                volume: 'Print quantity: 50 million sheets',
+                duration: 'Completion cycle: 45 days',
+                varieties: 'Ticket types: 12 varieties'
+            },
+            nigeria: {
+                title: 'Nigeria Scratch Card Project',
+                description: 'Local cultural theme design, monthly production capacity reaching 8 million sheets',
+                themes: 'Cultural themes: 8 series',
+                languages: 'Language versions: 3 types',
+                security: 'Security level: Bank grade'
+            },
+            vietnam: {
+                title: 'Vietnam Thermal Ticket Roll Project',
+                description: 'High-density QR code printing, supporting national digital lottery system',
+                specification: 'Specification: 80mm×80mm',
+                monthly: 'Monthly supply: 2 million meters',
+                quality: 'Quality grade: Bank grade'
+            }
+        },
+        cta: {
+            title: 'Start Your Professional Printing Project',
+            description: 'Contact our expert team to get customized printing solutions',
+            btn_contact: 'Contact Now',
+            btn_products: 'View Other Products'
+        }
+    },
+
+    // Thermal Consumables Page
+    thermal: {
+        page: {
+            title: 'Professional Thermal Consumables Solutions | LottoBridge'
+        },
+        hero: {
+            title: 'Professional Thermal Consumables Supply Solutions',
+            description: 'German imported materials, Japanese manufacturing technology, providing high-quality thermal paper rolls and ribbon consumables for global lottery terminal equipment',
+            btn_products: 'View Product Series',
+            btn_compatibility: 'Device Compatibility'
+        },
+        products: {
+            title: 'Professional Thermal Consumables Product Series',
+            description: 'Covering all specification needs of lottery industry, ensuring high-quality printing effects and long-term preservation',
+            specifications: {
+                parameter: 'Parameter',
+                value: 'Specification',
+                width: 'Width',
+                length: 'Length',
+                weight: 'Paper Weight',
+                core_diameter: 'Core Diameter',
+                shelf_life: 'Shelf Life',
+                colors: 'Colors',
+                activation_temp: 'Activation Temperature',
+                applications: 'Applications',
+                width_range: 'Width Range',
+                length_range: 'Length Range',
+                coating_options: 'Coating Options',
+                production_time: 'Production Time',
+                min_order: 'Minimum Order'
+            },
+            features: {
+                title: 'Product Features'
+            },
+            standard_series: {
+                title: 'Standard Series Thermal Paper',
+                description: 'Suitable for general lottery terminal equipment, with excellent print clarity and cost-effectiveness',
+                feature1: 'High-definition printing',
+                feature2: 'Water and oil resistant',
+                feature3: 'Long-term stable preservation',
+                feature4: 'Cost-effectiveness optimization'
+            },
+            premium_series: {
+                title: 'Premium Series Thermal Paper',
+                description: 'Bank-grade quality, ultra-long preservation period, suitable for high-end self-service terminals and important ticket printing',
+                feature1: 'Bank-grade quality standards',
+                feature2: 'Anti-fading technology',
+                feature3: 'Anti-static treatment',
+                feature4: 'Ultra-long preservation period'
+            },
+            color_series: {
+                title: 'Color Thermal Paper Series',
+                description: 'Multi-color thermal printing technology, supporting two-color and three-color printing, enhancing ticket visual effects',
+                colors: 'Black/Red/Blue',
+                applications: 'Important tickets, lottery',
+                feature1: 'Multi-color synchronous printing',
+                feature2: 'High color saturation',
+                feature3: 'Anti-counterfeiting application support',
+                feature4: 'Visual effect enhancement'
+            },
+            custom_series: {
+                title: 'Custom Series Products',
+                description: 'Customized production according to customer special needs, supporting special specifications, coatings and functional requirements',
+                coating_options: 'Standard/Waterproof/Chemical resistant',
+                production_time: '15-30 days',
+                min_order: '1000 rolls',
+                feature1: 'Fully customizable',
+                feature2: 'Special functional coatings',
+                feature3: 'Brand logo printing',
+                feature4: 'Technical support services'
+            }
+        },
+        compatibility: {
+            title: 'Comprehensive Device Compatibility Guarantee',
+            description: 'Perfect compatibility with global mainstream lottery terminal equipment, ensuring stable and reliable printing effects',
+            desktop_terminals: {
+                title: 'Desktop Terminal Equipment',
+                description: 'Compatible with mainstream desktop lottery sales terminals',
+                brand1: 'Epson TM series',
+                brand2: 'Star TSP series',
+                brand3: 'Citizen CT series',
+                brand4: 'Other mainstream brands'
+            },
+            mobile_terminals: {
+                title: 'Mobile Terminal Equipment',
+                description: 'Supporting portable and handheld printing devices',
+                brand1: 'Zebra mobile printers',
+                brand2: 'Honeywell portable',
+                brand3: 'Brother handheld terminals',
+                brand4: 'Custom mobile devices'
+            },
+            kiosk_terminals: {
+                title: 'Self-service Terminal Equipment',
+                description: 'Compatible with various self-service terminal printing modules',
+                brand1: 'Custom printing modules',
+                brand2: 'Fujitsu self-service devices',
+                brand3: 'NCR Kiosk series',
+                brand4: 'Custom self-service terminals'
+            },
+            pos_systems: {
+                title: 'POS Cash Register Systems',
+                description: 'Suitable for lottery sales point cash register systems',
+                brand1: 'UnionPay POS terminals',
+                brand2: 'Newland cash registers',
+                brand3: 'SanMi POS devices',
+                brand4: 'Overseas POS brands'
+            }
+        },
+        quality: {
+            title: 'International Quality Standard Certification',
+            description: 'Strict production according to international standards, passing multiple authoritative certifications, ensuring product quality',
+            standards: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: 'Quality management system certification',
+                    item1: 'Full process quality control',
+                    item2: 'Continuous improvement mechanism',
+                    item3: 'Customer satisfaction guarantee'
+                },
+                environmental: {
+                    title: 'Environmental Certification',
+                    description: 'Green environmental material certification',
+                    item1: 'FSC forest management certification',
+                    item2: 'EU RoHS certification',
+                    item3: 'Non-toxic environmental materials'
+                },
+                food_safety: {
+                    title: 'Food Grade Safety',
+                    description: 'Food contact material safety certification',
+                    item1: 'FDA US Food and Drug Administration certification',
+                    item2: 'EU food contact materials',
+                    item3: 'BPA-free formula'
+                },
+                testing: {
+                    title: 'Professional Testing',
+                    description: 'Professional laboratory testing certification',
+                    item1: 'SGS third-party testing',
+                    item2: 'German TUV certification',
+                    item3: 'Multiple performance tests'
+                }
+            }
+        },
+        supply_chain: {
+            title: 'Global Supply Chain Management System',
+            description: 'Establishing comprehensive global supply chain network, ensuring timely delivery and sufficient inventory',
+            production: {
+                title: 'Production Manufacturing',
+                description: 'German technology, Asian manufacturing base'
+            },
+            storage: {
+                title: 'Warehouse Management',
+                description: 'Global multi-location warehouse centers'
+            },
+            logistics: {
+                title: 'Logistics Distribution',
+                description: 'Rapid response distribution network'
+            },
+            service: {
+                title: 'After-sales Service',
+                description: '7×24 technical support'
+            },
+            global_network: {
+                title: 'Global Network Coverage',
+                description: 'Establishing warehouse and service outlets in major global regions',
+                region1: 'Asia-Pacific: China, Japan, Singapore',
+                region2: 'Europe: Germany, Netherlands',
+                region3: 'Americas: USA, Mexico',
+                region4: 'Africa: South Africa, Kenya'
+            },
+            delivery_time: {
+                title: 'Fast Delivery Guarantee',
+                description: 'Establishing rapid response mechanism, ensuring timely customer demand fulfillment',
+                regular: 'Regular orders: 3-7 working days',
+                urgent: 'Urgent orders: 24-48 hours',
+                custom: 'Custom products: 15-30 working days',
+                tracking: 'Full logistics tracking service'
+            },
+            inventory: {
+                title: 'Intelligent Inventory Management',
+                description: 'Using advanced inventory management system, ensuring sufficient inventory',
+                prediction: 'AI demand prediction model',
+                monitoring: 'Real-time inventory monitoring',
+                safety: 'Safety stock guarantee',
+                reporting: 'Inventory report analysis'
+            }
+        },
+        cta: {
+            title: 'Start Your Thermal Consumables Procurement',
+            description: 'Contact our professional team to get the most suitable thermal consumables solutions',
+            btn_contact: 'Contact Now',
+            btn_products: 'View Other Products'
+        }
+    },
+
+    // Operations Services Page
+    operations: {
+        page: {
+            title: 'Lottery Operations Management Solutions | LottoBridge'
+        },
+        hero: {
+            title: 'Global Lottery Operations Management Solutions',
+            description: 'From project planning to operational optimization, providing full lifecycle professional services to help lottery projects achieve successful implementation and sustainable development',
+            btn_services: 'View Service System',
+            btn_methodology: 'Operations Methodology'
+        },
+        services: {
+            title: 'Comprehensive Operations Service System',
+            description: 'Based on global best practices, providing professional end-to-end service solutions for lottery operators',
+            strategic_planning: {
+                title: 'Strategic Planning Consulting',
+                description: 'In-depth market analysis and business model design, formulating lottery development strategies with local characteristics',
+                feature1: 'Market opportunity assessment analysis',
+                feature2: 'Competitor in-depth research',
+                feature3: 'Business model innovation design',
+                feature4: 'ROI prediction modeling',
+                feature5: 'Risk assessment and control strategy'
+            },
+            project_implementation: {
+                title: 'Project Implementation Management',
+                description: 'Professional project management team ensuring lottery projects are implemented on time and with quality',
+                feature1: 'Project milestone management',
+                feature2: 'Resource coordination and allocation',
+                feature3: 'Quality control and acceptance',
+                feature4: 'Risk monitoring and response',
+                feature5: 'Change management and optimization'
+            },
+            team_building: {
+                title: 'Team Building and Development',
+                description: 'Establishing professional operations teams, providing comprehensive training and capability enhancement services',
+                feature1: 'Organizational structure design optimization',
+                feature2: 'Talent recruitment and selection',
+                feature3: 'Skills training system construction',
+                feature4: 'Performance evaluation mechanism design',
+                feature5: 'Team culture building guidance'
+            },
+            operations_optimization: {
+                title: 'Operations Optimization Enhancement',
+                description: 'Continuously monitoring operational data, identifying optimization opportunities, improving operational efficiency and user experience',
+                feature1: 'Operational data analysis mining',
+                feature2: 'Business process optimization reorganization',
+                feature3: 'User experience improvement enhancement',
+                feature4: 'Cost control and efficiency improvement',
+                feature5: 'Innovative product and service design'
+            },
+            compliance_management: {
+                title: 'Compliance Risk Management',
+                description: 'Establishing comprehensive compliance system, ensuring operational activities comply with legal and regulatory requirements',
+                feature1: 'Regulatory policy interpretation analysis',
+                feature2: 'Compliance system construction consulting',
+                feature3: 'Risk identification and assessment',
+                feature4: 'Internal control system design implementation',
+                feature5: 'Audit supervision and rectification'
+            },
+            ongoing_support: {
+                title: 'Ongoing Support Services',
+                description: 'Providing 7×24 technical support and operational consulting, ensuring business continuous stable operation',
+                feature1: '7×24 technical hotline',
+                feature2: 'Remote diagnosis and troubleshooting',
+                feature3: 'Regular inspection and maintenance',
+                feature4: 'Operational consulting and advice',
+                feature5: 'Upgrade and update service support'
+            }
+        },
+        process: {
+            title: 'Professional Implementation Process',
+            description: 'Based on international best practices, establishing standardized project implementation process, ensuring project success',
+            analysis: {
+                title: 'Requirement Analysis Research',
+                description: 'In-depth understanding of customer needs and market environment',
+                step1: 'Business requirement sorting',
+                step2: 'Market environment analysis',
+                step3: 'Technical feasibility assessment',
+                step4: 'Investment return analysis'
+            },
+            design: {
+                title: 'Solution Design Planning',
+                description: 'Formulating detailed implementation solutions and plans',
+                step1: 'Overall architecture design',
+                step2: 'Implementation plan formulation',
+                step3: 'Resource allocation planning',
+                step4: 'Risk response contingency'
+            },
+            implementation: {
+                title: 'System Deployment Implementation',
+                description: 'Executing system deployment and integration according to plan',
+                step1: 'Environment setup configuration',
+                step2: 'System integration testing',
+                step3: 'Data migration verification',
+                step4: 'Security inspection certification'
+            },
+            training: {
+                title: 'Training Delivery Launch',
+                description: 'Comprehensive training and system official launch',
+                step1: 'User training implementation',
+                step2: 'Trial operation monitoring',
+                step3: 'Problem fixing optimization',
+                step4: 'Official launch release'
+            },
+            optimization: {
+                title: 'Operations Optimization Enhancement',
+                description: 'Continuous monitoring optimization and service enhancement',
+                step1: 'Operational data monitoring',
+                step2: 'Performance optimization adjustment',
+                step3: 'User feedback collection',
+                step4: 'Continuous improvement upgrade'
+            }
+        },
+        methodology: {
+            title: 'Professional Operations Methodology',
+            description: 'Based on years of practical experience, forming complete lottery operations management methodology system',
+            data_driven: {
+                title: 'Data-Driven Decision Making',
+                description: 'Establishing comprehensive data analysis system, guiding operational decisions based on data insights',
+                feature1: 'Real-time data monitoring dashboard',
+                feature2: 'User behavior analysis model',
+                feature3: 'Predictive analysis and early warning mechanism',
+                feature4: 'A/B testing and effect evaluation'
+            },
+            agile_operations: {
+                title: 'Agile Operations Management',
+                description: 'Adopting agile management methods, rapidly responding to market changes and user needs',
+                feature1: 'Rapid iteration and continuous improvement',
+                feature2: 'Cross-departmental collaboration mechanism',
+                feature3: 'User feedback rapid response',
+                feature4: 'Flexible resource allocation adjustment'
+            },
+            user_centric: {
+                title: 'User-Centric Design',
+                description: 'Taking user needs as core, designing and optimizing product and service experience',
+                feature1: 'User profiling and needs analysis',
+                feature2: 'User experience optimization design',
+                feature3: 'Multi-channel user reach',
+                feature4: 'Personalized service customization'
+            },
+            risk_management: {
+                title: 'Comprehensive Risk Management',
+                description: 'Establishing multi-level risk prevention and control system, ensuring business safe and stable operation',
+                feature1: 'Risk identification and assessment system',
+                feature2: 'Multi-level security protection mechanism',
+                feature3: 'Emergency response and recovery contingency',
+                feature4: 'Compliance monitoring and audit tracking'
+            },
+            innovation_driven: {
+                title: 'Innovation-Driven Development',
+                description: 'Continuous technological innovation and product innovation, maintaining market competitive advantage',
+                feature1: 'New technology research and application',
+                feature2: 'Product innovation and upgrade',
+                feature3: 'Business model innovation exploration',
+                feature4: 'Industry trend forward-looking analysis'
+            },
+            partnership: {
+                title: 'Ecosystem Cooperation Win-Win',
+                description: 'Building open cooperation ecosystem, achieving multi-party win-win development',
+                feature1: 'Strategic partnership relationships',
+                feature2: 'Supply chain collaborative optimization',
+                feature3: 'Technical standard development participation',
+                feature4: 'Industry resource integration sharing'
+            }
+        },
+        cases: {
+            title: 'Global Success Cases',
+            description: 'Successfully implementing lottery operations projects in 30+ countries globally, accumulating rich practical experience',
+            mexico: {
+                title: 'Mexico National Lottery Modernization',
+                subtitle: 'National lottery system upgrade transformation project',
+                description: 'Assisting Mexico National Lottery Bureau in completing national lottery system modernization upgrade, covering technical architecture reconstruction, operational process optimization, personnel training and other comprehensive services',
+                metric1: 'Project Cycle',
+                metric2: 'Efficiency Improvement',
+                metric3: 'System Availability'
+            },
+            nigeria: {
+                title: 'Nigeria Lottery Operations Launch',
+                subtitle: 'Building lottery operations system from scratch',
+                description: 'Providing comprehensive operational support for Nigeria Lottery Company, from market research, system construction to team development, successfully launching national lottery business',
+                metric1: 'Launch Cycle',
+                metric2: 'Training Personnel',
+                metric3: 'Market Coverage'
+            },
+            vietnam: {
+                title: 'Vietnam Digital Lottery Transformation',
+                subtitle: 'Traditional lottery to digital transformation upgrade',
+                description: 'Assisting Vietnam Lottery Company in completing digital transformation, establishing complete online lottery platform, achieving online and offline integrated operations',
+                metric1: 'Transformation Cycle',
+                metric2: 'Sales Growth',
+                metric3: 'User Satisfaction'
+            }
+        },
+        cta: {
+            title: 'Start Your Lottery Operations Journey',
+            description: 'Contact our professional team to get customized lottery operations solutions',
+            btn_contact: 'Contact Now',
+            btn_products: 'View Other Products'
+        }
+    },
+
+    // Training Services Page
+    training: {
+        page: {
+            title: 'Professional Lottery Training Education Services | LottoBridge'
+        },
+        hero: {
+            title: 'Global Leading Lottery Education Training System',
+            description: 'Professional certification training courses, international standard teaching system, cultivating lottery industry professionals, promoting healthy industry development',
+            btn_courses: 'View Course System',
+            btn_certification: 'Professional Certification'
+        },
+        courses: {
+            title: 'Professional Course System',
+            description: 'Building complete lottery industry knowledge system, from basic theory to practical application, meeting different levels of learning needs',
+            meta: {
+                duration: 'Course Duration',
+                level: 'Difficulty Level',
+                size: 'Class Size'
+            },
+            executive_leadership: {
+                title: 'Executive Leadership Course',
+                description: 'Strategic management and leadership enhancement course for senior management of lottery companies',
+                level: 'Advanced',
+                topic1: 'Lottery industry development trend analysis',
+                topic2: 'Strategic planning and business model innovation',
+                topic3: 'Risk management and compliance operations',
+                topic4: 'Digital transformation strategy',
+                topic5: 'International market development and cooperation'
+            },
+            technical_operations: {
+                title: 'Technical Operations Management',
+                description: 'Professional skills training in system architecture design, technical operations and security management',
+                level: 'Intermediate-Advanced',
+                topic1: 'Lottery system architecture design principles',
+                topic2: 'Database management and optimization',
+                topic3: 'Network security and protection technology',
+                topic4: 'System monitoring and troubleshooting',
+                topic5: 'Cloud platform deployment and management'
+            },
+            business_operations: {
+                title: 'Business Operations Management',
+                description: 'Professional training in lottery business process management, marketing and customer service',
+                level: 'Intermediate',
+                topic1: 'Lottery product design and management',
+                topic2: 'Channel management and partnership',
+                topic3: 'Marketing strategy and promotion',
+                topic4: 'Customer relationship management',
+                topic5: 'Data analysis and business intelligence'
+            },
+            compliance_security: {
+                title: 'Compliance Security Management',
+                description: 'Professional training in legal compliance, risk control and security management',
+                level: 'Advanced',
+                topic1: 'International lottery legal regulation interpretation',
+                topic2: 'Compliance system construction and management',
+                topic3: 'Risk identification and control strategy',
+                topic4: 'Anti-money laundering and fraud prevention',
+                topic5: 'Audit supervision and internal control system'
+            },
+            customer_service: {
+                title: 'Customer Service Training',
+                description: 'Professional skills enhancement training for frontline sales personnel and customer service',
+                level: 'Beginner-Intermediate',
+                topic1: 'Lottery product knowledge training',
+                topic2: 'Sales skills and communication art',
+                topic3: 'Customer relationship maintenance',
+                topic4: 'Complaint handling and crisis response',
+                topic5: 'Equipment operation and maintenance'
+            },
+            technical_maintenance: {
+                title: 'Technical Maintenance Training',
+                description: 'Professional training in equipment maintenance, fault diagnosis and technical support',
+                level: 'Intermediate',
+                topic1: 'Equipment structure principles and maintenance',
+                topic2: 'Fault diagnosis and troubleshooting techniques',
+                topic3: 'Preventive maintenance strategy',
+                topic4: 'Safe operation procedures',
+                topic5: 'Technical documentation management'
+            }
+        },
+        pathways: {
+            title: 'Professional Learning Pathways',
+            description: 'Designing complete learning growth paths for different career development directions',
+            management: {
+                title: 'Management Development Path',
+                description: 'Complete training system from basic management to senior management',
+                stage1: 'Junior Management: Team management basics',
+                stage2: 'Middle Management: Department operations management',
+                stage3: 'Senior Management: Strategic planning and decision making',
+                stage4: 'Executive Level: Corporate governance and leadership'
+            },
+            technical: {
+                title: 'Technical Development Path',
+                description: 'Professional growth path from technical specialist to technical expert',
+                stage1: 'Technical Foundation: System operation and maintenance',
+                stage2: 'Technical Advanced: System development and integration',
+                stage3: 'Technical Expert: Architecture design and optimization',
+                stage4: 'Technical Leader: Technical strategy and innovation'
+            },
+            business: {
+                title: 'Business Development Path',
+                description: 'Career development path from business specialist to business director',
+                stage1: 'Business Foundation: Product and market knowledge',
+                stage2: 'Business Specialist: Sales and customer service',
+                stage3: 'Business Supervisor: Channel management and expansion',
+                stage4: 'Business Director: Strategic planning and execution'
+            },
+            compliance: {
+                title: 'Compliance Development Path',
+                description: 'Professional development from compliance specialist to chief compliance officer',
+                stage1: 'Compliance Foundation: Regulatory policy understanding',
+                stage2: 'Compliance Specialist: System execution and monitoring',
+                stage3: 'Compliance Manager: System construction and management',
+                stage4: 'Chief Compliance Officer: Compliance strategy formulation'
+            }
+        },
+        modes: {
+            title: 'Diversified Learning Modes',
+            description: 'Combining online and offline, meeting different learning preferences and time arrangements',
+            classroom: {
+                title: 'Classroom Training',
+                description: 'Traditional classroom teaching mode, face-to-face interactive learning',
+                feature1: 'Professional instructor on-site teaching',
+                feature2: 'Real-time interactive Q&A',
+                feature3: 'Group discussion and practice',
+                feature4: 'Network synchronization and student exchange'
+            },
+            online: {
+                title: 'Online Learning',
+                description: 'Flexible and convenient online learning platform',
+                feature1: '24/7 anytime anywhere learning',
+                feature2: 'Multimedia interactive courseware',
+                feature3: 'Intelligent learning progress tracking',
+                feature4: 'Online examination and certification'
+            },
+            blended: {
+                title: 'Blended Learning',
+                description: 'Mixed learning mode combining online and offline',
+                feature1: 'Online theoretical preview',
+                feature2: 'Practical in-person guidance',
+                feature3: 'Project practical exercises',
+                feature4: 'Continuous tracking coaching'
+            },
+            corporate: {
+                title: 'Corporate Customization',
+                description: 'Training programs tailored specifically for enterprises',
+                feature1: 'Requirement research and solution design',
+                feature2: 'Exclusive course content customization',
+                feature3: 'Corporate internal training implementation',
+                feature4: 'Effect evaluation and improvement'
+            }
+        },
+        certification: {
+            title: 'International Professional Certification System',
+            description: 'Obtaining industry authoritative certification, enhancing personal career competitiveness',
+            lottery_professional: {
+                title: 'Lottery Professional Certification',
+                description: 'Basic professional certification for lottery industry practitioners',
+                requirement1: 'Complete basic course learning',
+                requirement2: 'Pass theoretical knowledge examination',
+                requirement3: 'Have 6+ months industry experience',
+                requirement4: 'Continuing education credit requirements'
+            },
+            technical_expert: {
+                title: 'Technical Expert Certification',
+                description: 'Advanced professional skills certification for technical personnel',
+                requirement1: 'Complete technical professional courses',
+                requirement2: 'Pass practical skills assessment',
+                requirement3: 'Have 2+ years technical experience',
+                requirement4: 'Submit technical project portfolio'
+            },
+            management_leader: {
+                title: 'Management Leader Certification',
+                description: 'Leadership and management capability certification for management personnel',
+                requirement1: 'Complete management course learning',
+                requirement2: 'Pass management case analysis',
+                requirement3: 'Have 3+ years management experience',
+                requirement4: '360-degree evaluation feedback'
+            },
+            compliance_officer: {
+                title: 'Compliance Officer Certification',
+                description: 'Professional qualification certification for compliance management personnel',
+                requirement1: 'Complete compliance professional courses',
+                requirement2: 'Pass regulatory knowledge examination',
+                requirement3: 'Have legal or compliance background',
+                requirement4: 'Continuing professional development requirements'
+            }
+        },
+        instructors: {
+            title: 'International Top Faculty Team',
+            description: 'Gathering global lottery industry top experts, providing most professional training guidance',
+            industry_experts: {
+                title: 'Industry Senior Experts',
+                description: 'Senior managers and technical experts from globally renowned lottery companies',
+                feature1: '20+ years industry experience',
+                feature2: 'Successful project practical experience',
+                feature3: 'Multi-country market operations experience',
+                feature4: 'Forward-looking trend insight capability'
+            },
+            academic_professors: {
+                title: 'Academic Authority Professors',
+                description: 'Academic experts from renowned business schools and research institutions',
+                feature1: 'PhD degree and professor qualification',
+                feature2: 'Rich teaching experience',
+                feature3: 'Cutting-edge theoretical research results',
+                feature4: 'International academic reputation'
+            },
+            legal_consultants: {
+                title: 'Legal Compliance Consultants',
+                description: 'Professional legal experts and compliance management consultants',
+                feature1: 'JD degree',
+                feature2: 'Lottery legal practice experience',
+                feature3: 'International regulation comparative research',
+                feature4: 'Compliance system construction expertise'
+            },
+            technical_architects: {
+                title: 'Technical Architects',
+                description: 'Top technical experts and system architects',
+                feature1: 'Master+ degree in computer science',
+                feature2: 'Large system architecture design experience',
+                feature3: 'Cutting-edge technology application practice',
+                feature4: 'Open source project contribution experience'
+            }
+        },
+        cta: {
+            title: 'Start Your Professional Growth Journey',
+            description: 'Contact our training consultants to develop personalized learning plans',
+            btn_contact: 'Contact Now',
+            btn_products: 'View Other Services'
+        }
+    },
+
     market_reports: {
         title: 'Global Lottery Market Intelligence Reports',
         subtitle: 'AI-driven market analysis providing the latest global lottery market insights',
         view_report: 'View Report',
+        // 直接在 market_reports 下定义各国报告，匹配HTML结构
+        egypt: {
+            title: 'Egypt Lottery Market Deep Analysis',
+            date: 'January 2024',
+            highlights: ['$430M Market Size', '8% Annual Growth', 'Digital Transformation Opportunity']
+        },
+        mexico: {
+            title: 'Mexico Lottery Market Report',
+            date: 'January 2024',
+            tag1: 'Policy-friendly',
+            tag2: 'Market Growth'
+        },
+        philippines: {
+            title: 'Philippines Lottery Market Report',
+            date: 'March 2024',
+            tag1: 'Online Growth',
+            tag2: 'Regulatory Improvement'
+        },
+        kenya: {
+            title: 'Kenya Lottery Market Report',
+            date: 'February 2024',
+            tag1: 'Mobile Payment',
+            tag2: 'Young Users'
+        },
         reports: {
             egypt: {
                 title: 'Egypt Lottery Market Deep Analysis',
@@ -243,25 +1387,23 @@ const en = {
             mexico: {
                 title: 'Mexico Lottery Market Opportunity Assessment',
                 date: 'February 2024',
-                highlights: ['Private Access Policy', '$1.25B Market', 'Sports Betting Growth']
+                highlights: ['Private Access Policy', '$1.25B Market', 'Sports Betting Growth'],
+                tag1: 'Policy-friendly',
+                tag2: 'Market Growth'
             },
             philippines: {
                 title: 'Philippines Lottery Market Outlook Report',
                 date: 'March 2024',
-                highlights: ['High Growth Potential', '$870M Market Size', 'E-games Rising']
+                highlights: ['High Growth Potential', '$870M Market Size', 'E-games Rising'],
+                tag1: 'Lottery',
+                tag2: 'Policy'
             },
             kenya: {
                 title: 'Kenya Market Report',
                 date: 'November 2023',
                 tag1: 'Growth',
-                tag2: 'Innovation',
-            },
-            philippines: {
-                title: 'Philippines Market Report',
-                date: 'October 2023',
-                tag1: 'Lottery',
-                tag2: 'Policy',
-            },
+                tag2: 'Innovation'
+            }
         }
     },
     // Case Studies Highlights
@@ -350,39 +1492,52 @@ const en = {
         title: 'Ready to Explore the Global Market?',
         subtitle: 'Whether you are a government agency, private operator, or technology provider, LottoBridge can provide you with the most suitable solution',
         contact_now: 'Contact Consultant Now',
-        book_demo: 'Download Service Handbook'
+        book_demo: 'Download Service Handbook',
+        contact_consultant: 'Contact Consultant',
+        download_handbook: 'Download Handbook'
     },
     // Footer
     footer: {
+        // Basic info
+        description: 'Global lottery overseas one-stop solution platform, providing professional technical support and services.',
+        quick_links: 'Quick Links',
+        services: 'Services',
+        contact: 'Contact',
+        rights: 'All rights reserved',
+        // Company info
         company: {
             name: 'LottoBridge',
             description: 'Global lottery industry one-stop solution platform, leveraging China\'s strong lottery industry chain resources to help clients worldwide quickly enter the lottery market.'
         },
+        // Products & Services
         products: {
             title: 'Products & Services',
-            lottery_system: 'Lottery System',
-            terminal_equipment: 'Terminal Equipment',
-            game_design: 'Game Design',
-            printing_service: 'Printing Services',
-            market_research: 'Market Research'
+            lottery_system: 'Lottery System Services',
+            terminal_equipment: 'Terminal Equipment Services',
+            game_design: 'Game Design & Development',
+            printing_service: 'Ticket Printing Services',
+            market_research: 'Market Research Services'
         },
+        // Resource Center
         resources: {
-            title: 'Resources',
+            title: 'Resource Center',
             case_studies: 'Case Studies',
-            whitepapers: 'Whitepapers',
+            whitepapers: 'Whitepaper Downloads',
             industry_reports: 'Industry Reports',
             blog_news: 'Blog & News',
             faq: 'FAQ'
         },
+        // Contact info
         contact: {
             title: 'Contact Us',
             address: 'No.88 Jianguo Road, Chaoyang District, Beijing'
         },
+        // Copyright info
         copyright: {
             company: '© 2023 LottoBridge',
             rights: 'All rights reserved.',
             privacy: 'Privacy Policy',
-            terms: 'Terms of Service'
+            terms: 'Terms of Use'
         }
     },
     // Market Research Page
@@ -555,7 +1710,14 @@ const en = {
             title: 'Global Lottery One-Stop Solutions',
             description: 'Integrating China\'s lottery industry chain core resources to provide end-to-end services from market research, system development, terminal equipment to operational support',
             btn_view_services: 'View Service Solutions',
-            btn_contact_consultant: 'Contact Sales Consultant'
+            btn_contact_consultant: 'Contact Sales Consultant',
+            btn_contact: 'Contact Us'
+        },
+        nav: {
+            systems: 'Systems',
+            terminals: 'Terminals',
+            printing: 'Printing',
+            services: 'Services'
         },
         services: {
             title: 'Our Core Products & Services',
@@ -686,6 +1848,241 @@ const en = {
             btn_download: 'Download Service Manual'
         }
     },
+    // Market Research Page
+    market_research: {
+        page: {
+            title: 'Market Research | LottoBridge'
+        },
+        hero: {
+            title: 'AI-Powered Global Lottery Market Research',
+            subtitle: 'Quickly grasp global lottery market policies, scale and opportunities',
+            description: 'LottoBridge AI-driven global market intelligence system providing one-stop national lottery data insights to help you make informed market decisions',
+            btn_select_country: 'Select Country',
+            btn_generate_report: 'Generate Report',
+            btn_view_sample: 'View Sample Report'
+        },
+        ai_powered: {
+            title: 'AI-Powered Market Analysis',
+            description: 'Leverage artificial intelligence technology to deeply analyze global lottery market data, providing accurate market insights and predictions'
+        },
+        filter: {
+            title: 'Filter Criteria',
+            region_label: 'Region',
+            region_all: 'All Regions',
+            region_asia: 'Asia',
+            region_africa: 'Africa',
+            region_europe: 'Europe',
+            region_latin_america: 'Latin America',
+            game_type_label: 'Game Type',
+            game_type_all: 'All Types',
+            game_type_number: 'Number Lottery',
+            game_type_instant: 'Instant Ticket',
+            game_type_sports: 'Sports Betting',
+            game_type_video: 'Video Lottery',
+            search: 'Search'
+        },
+        reports: {
+            title: 'Research Reports',
+            uzbekistan: {
+                title: 'Uzbekistan Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Uzbekistan lottery market',
+                point1: 'Market size expected to reach $250 million',
+                point2: 'Government supports private enterprise participation',
+                point3: 'Strong demand for digital transformation',
+                point4: 'Regulatory environment gradually improving',
+                button: 'View Details'
+            },
+            nigeria: {
+                title: 'Nigeria Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Nigeria lottery market',
+                point1: 'Africa\'s largest lottery market with over 200 million population',
+                point2: 'High mobile payment penetration, huge digital potential',
+                point3: 'Government strengthens regulation, market standardization accelerates',
+                button: 'View Details'
+            },
+            vietnam: {
+                title: 'Vietnam Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Vietnam lottery market',
+                point1: 'Fast-growing lottery market in Southeast Asia',
+                point2: 'High proportion of young population, strong digital acceptance',
+                point3: 'Government supports modernization of lottery industry',
+                button: 'View Details'
+            },
+            mexico: {
+                title: 'Mexico Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Mexico lottery market',
+                point1: 'One of the largest lottery markets in Latin America',
+                point2: 'Open policy for private enterprise participation',
+                point3: 'Sports betting market growing rapidly',
+                button: 'View Details'
+            },
+            philippines: {
+                title: 'Philippines Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Philippines lottery market',
+                point1: 'Important lottery market in Southeast Asia with over 100 million population',
+                point2: 'Online lottery and electronic games developing rapidly',
+                point3: 'Relatively well-developed regulatory policies, high market standardization',
+                button: 'View Details'
+            },
+            kenya: {
+                title: 'Kenya Lottery Market Analysis Report',
+                summary: 'Analysis of the current status, policy environment and business opportunities in Kenya lottery market',
+                point1: 'Leading lottery market in East Africa',
+                point2: 'Extremely high mobile payment penetration, M-Pesa widely used',
+                point3: 'High proportion of young population, strong digital acceptance',
+                button: 'View Details'
+            }
+        },
+        cta_bottom: {
+            title: 'Can\'t find the market intelligence you need?',
+            description: 'Our expert team can provide customized market research services',
+            button: 'Contact Expert'
+        }
+    },
+    
+    // About Page
+    about: {
+        page: {
+            title: 'About Us | LottoBridge'
+        },
+        hero: {
+            title: 'About LottoBridge',
+            description: 'A professional platform connecting global lottery markets, providing one-stop solutions for government agencies and private operators',
+            learn_team: 'Meet Our Team',
+            contact_us: 'Contact Us'
+        },
+        who_we_are: {
+            title: 'Who We Are',
+            subtitle: 'LottoBridge is an innovative platform driven by AI + full supply chain export + platform matching',
+            paragraph1: 'We connect China\'s high-quality lottery systems, equipment, printing and compliance service resources to help global lottery markets achieve one-stop deployment from "research" to "implementation". The platform integrates the core capabilities of China\'s lottery industry chain, including system software development, terminal hardware manufacturing, ticket security printing, thermal material supply and other key links.',
+            paragraph2: 'Different from traditional B2B trading models, LottoBridge provides a packaged lottery business implementation system, covering pre-consultation, product supply, operational support and localization services. Our goal is to enable every potential lottery market to easily connect with China\'s system power.',
+            paragraph3: 'Currently, we have helped government agencies and private operators from 15 countries successfully enter the lottery market, including emerging markets such as Mexico, South Africa, and Vietnam. In 2024, platform transaction volume exceeded $120 million, with a partner network covering 132 countries worldwide.'
+        },
+        vision: {
+            title: 'Our Vision',
+            subtitle: 'To enable every potential lottery market to easily connect with China\'s system power',
+            paragraph1: 'We believe that the global transformation of the lottery industry requires overcoming multiple barriers including culture, regulations, technology and operations. Under traditional models, operators in emerging markets often face the following challenges:',
+            challenge1: 'Lack of reliable market intelligence and access policy analysis',
+            challenge2: 'Difficulty in finding compliant and cost-effective technology suppliers',
+            challenge3: 'Insufficient local operational experience and missing training systems',
+            challenge4: 'Complex international logistics and compliance processes',
+            paragraph2: 'LottoBridge is a trusted bridge born to solve these problems. We not only provide tools and systems, but also deliver trust and possibilities, helping customers reduce trial and error costs and accelerate business success.'
+        },
+        values: {
+            title: 'Core Values',
+            subtitle: 'These principles guide every decision and action we take',
+            professional: {
+                title: 'Professional',
+                description: 'Deep expertise in the lottery industry chain, familiar with global system architecture, distribution processes and operational requirements, providing precise solutions'
+            },
+            international: {
+                title: 'International',
+                description: 'Team members with hands-on experience in Africa, Southeast Asia, Latin America and other regions, with strong cross-cultural communication and project management capabilities'
+            },
+            transparent: {
+                title: 'Transparent',
+                description: 'Visualized platform operations, standardized service processes, and clear auditable outputs to build long-term trust relationships'
+            },
+            cooperation: {
+                title: 'Cooperation',
+                description: 'Establish stable cooperation networks with global terminal manufacturing, printing, compliance consulting, and logistics institutions to achieve win-win results'
+            }
+        },
+        team: {
+            title: 'Our Team',
+            subtitle: 'An international professional team combining China\'s core lottery supply chain resources with global market implementation experience',
+            zhang_wei: {
+                name: 'Zhang Wei',
+                position: 'Founder & CEO',
+                description: 'Former Technical Director of China Welfare Lottery, 20 years of lottery system development experience, led 5 national lottery platform construction projects',
+                lang1: 'Chinese',
+                lang2: 'English'
+            },
+            maria: {
+                name: 'Maria Gonzalez',
+                position: 'International Business Director',
+                description: 'Latin American market expert, led lottery digitization projects in Mexico, Colombia and other countries',
+                lang1: 'Spanish',
+                lang2: 'English',
+                lang3: 'Portuguese'
+            },
+            li_ming: {
+                name: 'Li Ming',
+                position: 'Technical Director',
+                description: 'Lottery system security expert, led development of 3 provincial lottery sales systems, specializing in blockchain anti-counterfeiting technology',
+                lang1: 'Chinese',
+                lang2: 'English'
+            },
+            sarah: {
+                name: 'Sarah Johnson',
+                position: 'Africa Regional Manager',
+                description: 'African market pioneer, successfully implemented projects in Nigeria, Kenya and other countries, familiar with local policy environments',
+                lang1: 'English',
+                lang2: 'French',
+                lang3: 'Swahili'
+            },
+            wang_qiang: {
+                name: 'Wang Qiang',
+                position: 'Product Director',
+                description: 'Lottery game design expert, developed 50+ game types, specializing in integrating local culture into ticket design',
+                lang1: 'Chinese',
+                lang2: 'English'
+            },
+            chen_jing: {
+                name: 'Chen Jing',
+                position: 'Market Research Manager',
+                description: 'Data-driven analyst, established global lottery market database covering 100+ countries\' policies and market data',
+                lang1: 'Chinese',
+                lang2: 'English',
+                lang3: 'Japanese'
+            }
+        },
+        partners: {
+            title: 'Partner Network',
+            subtitle: 'Establishing long-term stable cooperation relationships with excellent global institutions'
+        },
+        credentials: {
+            title: 'Qualifications & Brand Endorsements',
+            subtitle: 'Our professional qualifications and industry recognition',
+            iso: {
+                title: 'Lottery System ISO Security Compliance Certification',
+                description: 'Passed ISO/IEC 27001 Information Security Management System certification'
+            },
+            printing: {
+                title: 'Instant Ticket Printing Export Qualification',
+                description: 'Partners are government-authorized printing enterprises, complying with international security standards'
+            },
+            software: {
+                title: 'Lottery Industry Software Copyright',
+                description: 'Registered 2 core system software copyrights'
+            },
+            experience: {
+                title: 'Multi-country Project Implementation Experience',
+                description: 'Projects in Nigeria, Cambodia, Uzbekistan and other locations have been successfully implemented'
+            },
+            exhibitions: {
+                title: 'Exhibition & Alliance Participation',
+                description: 'Participated in industry events including Dubai Gaming Expo, Kenya GBC, Southeast Asia Digital Expo'
+            }
+        },
+        commitment: {
+            title: 'We Believe',
+            subtitle: 'Technology, compliance and trust are the three pillars driving sustainable development of global lottery business',
+            paragraph1: 'LottoBridge is committed to becoming a "core connection platform" worthy of trust from global customers. We not only provide products and services, but also strive to build long-term partnerships to help customers succeed in the rapidly changing global lottery market.',
+            promise_title: 'Our Commitment:',
+            promise1: 'Always maintain forward-looking insights into industry trends',
+            promise2: 'Adhere to the highest standards of compliance and security requirements',
+            promise3: 'Continuously optimize global supply chain and localization service capabilities',
+            promise4: 'Grow together with customers and share success'
+        },
+        cta: {
+            title: 'Ready to Explore Global Markets with Us?',
+            description: 'Whether you are a government agency, private operator, or technology provider, LottoBridge can provide you with the most suitable solutions',
+            contact_now: 'Contact Now',
+            view_cases: 'View Success Stories'
+        }
+    },
+    
     // Insights Page
     insights: {
         page: {
@@ -868,10 +2265,33 @@ const en = {
             privacy_policy: 'Privacy Policy'
         }
     },
-    // Case Studies Page
+    // Case Studies Page  
     case_studies: {
         page: {
             title: 'Case Studies | LottoBridge'
+        },
+        // Homepage case studies section
+        title: 'Featured Case Studies',
+        subtitle: 'Real cooperation cases showing LottoBridge\'s successful practices in global markets',
+        view_details: 'View Details',
+        // Specific cases
+        mexico: {
+            title: 'Mexico National Lottery Digital Transformation',
+            type: 'Government Agency',
+            scope: 'Nationwide Deployment',
+            description: 'Provided complete digital lottery system for Mexican government, including online sales platform, mobile app and nationwide terminal network deployment',
+            deliverable1: 'System Development',
+            deliverable2: 'Terminal Deployment', 
+            deliverable3: 'Operations Support'
+        },
+        kenya: {
+            title: 'Kenya Mobile Lottery Platform Construction',
+            type: 'Private Operator',
+            scope: 'Mobile-first',
+            description: 'Mobile lottery solution based on M-Pesa payment system, achieved rapid market penetration and user growth',
+            deliverable1: 'Mobile App',
+            deliverable2: 'Payment Integration',
+            deliverable3: 'Market Promotion'
         },
         hero: {
             title: 'Global Lottery Success Stories',
@@ -1271,44 +2691,6 @@ const en = {
             get_advice: 'Get Expert Advice',
             view_cases: 'View Success Cases'
         }
-    },
-    // Footer
-    footer: {
-        company: {
-            name: 'LottoBridge',
-            description: 'Global lottery overseas one-stop solution platform, leveraging China\'s powerful lottery industry chain resources to help clients worldwide quickly enter the lottery market.'
-        },
-        products: {
-            title: 'Products & Services',
-            lottery_system: 'Lottery System Services',
-            terminal_equipment: 'Terminal Equipment Services',
-            game_design: 'Game Design & Development',
-            printing_service: 'Ticket Printing Services',
-            market_research: 'Market Research Services'
-        },
-        resources: {
-            title: 'Resource Center',
-            case_studies: 'Case Studies',
-            whitepapers: 'Whitepaper Downloads',
-            industry_reports: 'Industry Reports',
-            blog_news: 'Blog & News',
-            faq: 'FAQ'
-        },
-        contact: {
-            title: 'Contact Us',
-            address: 'Beijing Chaoyang District Jianguo Road No. 88'
-        },
-        copyright: {
-            company: '© 2023 LottoBridge',
-            rights: 'All rights reserved.',
-            privacy: 'Privacy Policy',
-            terms: 'Terms of Use'
-        },
-        // New footer translation keys
-        company: 'LottoBridge',
-        rights: 'All rights reserved',
-        privacy: 'Privacy Policy',
-        terms: 'Terms of Use'
     },
     // Market Details Page
     market_details: {
@@ -2150,6 +3532,308 @@ const en = {
             subtitle: 'Contact us for professional market analysis and customized solutions',
             contact: 'Contact Now',
             cases: 'View Cases'
+        }
+    },
+    // Instant Ticket System
+    instant: {
+        title: "Instant Ticket System Solutions - LottoBridge",
+        hero: {
+            title: "Instant Ticket System Solutions",
+            subtitle: "Complete end-to-end management from printing to redemption, building secure, efficient, and traceable instant ticket operations",
+            btn_sample: "Get Sample Tickets",
+            btn_customize: "Customize Local Solutions",
+            imageText: "Instant Ticket System Visual"
+        },
+        printing: {
+            title: "International Standard Ticket Printing System",
+            subtitle: "Supporting scratch-off, security film, and anti-counterfeit ink types with automated production lines ensuring unique, traceable ticket sequences",
+            scratch: {
+                title: "Scratch-off Tickets",
+                desc: "Traditional scratch-off design with multi-layer printing and anti-counterfeit technology"
+            },
+            security: {
+                title: "Security Film Tickets",
+                desc: "Advanced security film coverage providing enhanced anti-counterfeit protection"
+            },
+            antiCounterfeit: {
+                title: "Anti-Counterfeit Ink Technology",
+                desc: "Special inks and printing processes ensuring ticket authenticity verification"
+            },
+            process: {
+                title: "Printing Process Flow",
+                design: {
+                    title: "Design",
+                    desc: "Ticket design and anti-counterfeit element planning"
+                },
+                template: {
+                    title: "Template",
+                    desc: "Printing template creation and color proofing"
+                },
+                printing: {
+                    title: "Printing",
+                    desc: "High-precision printing and quality control"
+                },
+                lamination: {
+                    title: "Lamination",
+                    desc: "Security film coverage and heat pressing treatment"
+                },
+                cutting: {
+                    title: "Cutting",
+                    desc: "Precise cutting and sorting packaging"
+                },
+                packaging: {
+                    title: "Secure Packaging",
+                    desc: "Tamper-proof packaging and logistics distribution"
+                }
+            }
+        },
+        warehouse: {
+            title: "Sophisticated Ticket Warehouse and Transfer Management System",
+            subtitle: "Distinguishing production and sales warehouses, supporting multi-level warehouses, transfer authorization, and real-time monitoring",
+            production: {
+                title: "Production Warehouse Management",
+                desc: "Storage, quality inspection, and dispatch management of finished tickets",
+                item1: "✓ Ticket batch traceability",
+                item2: "✓ Quality inspection records",
+                item3: "✓ Inventory alert mechanism"
+            },
+            sales: {
+                title: "Sales Warehouse Management",
+                desc: "Ticket distribution and inventory control for sales channels",
+                item1: "✓ Channel ticket pool allocation",
+                item2: "✓ Real-time inventory monitoring",
+                item3: "✓ Automatic replenishment alerts"
+            },
+            transfer: {
+                title: "Transfer Authorization Control",
+                desc: "Multi-level permission management ensuring secure and compliant ticket transfers",
+                item1: "✓ Hierarchical approval process",
+                item2: "✓ Transfer record tracking",
+                item3: "✓ Abnormal behavior alerts"
+            }
+        },
+        redemption: {
+            title: "Smart Redemption Process and Risk Control",
+            subtitle: "AI-assisted fake ticket identification, anti-money laundering monitoring, judicial system integration, and compliance audit modules",
+            flow: {
+                step1: {
+                    title: "Ticket Recognition",
+                    desc: "AI image recognition to verify ticket authenticity"
+                },
+                step2: {
+                    title: "Security Code Verification",
+                    desc: "Multi-algorithm verification of security code validity"
+                },
+                step3: {
+                    title: "Redemption Record",
+                    desc: "Record redemption information and user identity"
+                },
+                step4: {
+                    title: "Blacklist Screening",
+                    desc: "Check if user is on blacklist"
+                },
+                step5: {
+                    title: "Automatic Payout",
+                    desc: "Automatic payout completion after verification"
+                }
+            },
+            ai: {
+                title: "AI Fake Ticket Detection",
+                desc: "Deep learning algorithms to identify counterfeit tickets"
+            },
+            aml: {
+                title: "Anti-Money Laundering Monitoring",
+                desc: "Real-time monitoring of abnormal redemption behavior patterns"
+            },
+            legal: {
+                title: "Judicial System Integration",
+                desc: "Real-time integration with law enforcement databases"
+            }
+        },
+        samples: {
+            title: "Supporting Diverse Ticket Face Designs",
+            subtitle: "Multi-language ticket samples and multiple gameplay structures to meet different market needs",
+            scratch: {
+                title: "Classic Scratch Cards",
+                desc: "Traditional scratch-off design supporting multiple prize configurations",
+                imageText: "Scratch Card Sample"
+            },
+            symbol: {
+                title: "Lucky Symbol Tickets",
+                desc: "Symbol matching gameplay, simple and easy to understand",
+                imageText: "Lucky Symbol Ticket Sample"
+            },
+            numbers: {
+                title: "Number Combination Tickets",
+                desc: "Number matching gameplay with multiple winning ways",
+                imageText: "Number Combination Ticket Sample"
+            }
+        },
+        highlights: {
+            title: "System Core Highlights",
+            subtitle: "Comprehensive protection for secure and efficient instant ticket system operations",
+            standards: {
+                title: "International Printing Standards",
+                desc: "Compliant with WLA and other international standards, ensuring product quality"
+            },
+            traceability: {
+                title: "Full Process Traceability",
+                desc: "Complete traceability management from printing to redemption"
+            },
+            blacklist: {
+                title: "Blacklist Redemption Blocking",
+                desc: "Real-time blacklist checking to prevent risk users"
+            },
+            security: {
+                title: "Security Code Verification Algorithm",
+                desc: "Multiple encryption algorithms ensuring ticket security"
+            },
+            warehouse: {
+                title: "Multi-level Warehouse Transfer Mechanism",
+                desc: "Flexible warehouse management and transfer control"
+            },
+            reporting: {
+                title: "Data Reporting and Audit Export",
+                desc: "Complete data reporting and audit functionality"
+            }
+        },
+        cta: {
+            title: "Let Us Design Your Next Instant Ticket",
+            subtitle: "Professional instant ticket system solutions to help you enter the market quickly",
+            btn_sample: "Get Sample Tickets",
+            btn_contact: "Contact Business Consultant"
+        }
+    },
+    // Video Lottery System
+    video: {
+        title: "Video Lottery System Solutions - LottoBridge",
+        hero: {
+            title: "Video Lottery System Solutions",
+            subtitle: "Innovative video lottery systems combining entertainment with compliance, enhancing user experience",
+            viewFeatures: "System Highlights",
+            contact: "Consult Solutions",
+            imageText: "Video Lottery System Display"
+        },
+        features: {
+            title: "Core Feature Highlights",
+            subtitle: "Innovative gameplay, secure compliance, flexible deployment",
+            games: {
+                title: "Diverse Games",
+                desc: "Support multiple video lottery games to meet different market needs"
+            },
+            security: {
+                title: "Secure Compliance",
+                desc: "Strictly follow industry standards to ensure data and fund security"
+            },
+            analytics: {
+                title: "Data Analytics",
+                desc: "Real-time data analysis to assist operational decisions"
+            },
+            custom: {
+                title: "Flexible Customization",
+                desc: "Support multi-language, multi-currency, multi-channel integration"
+            }
+        },
+        gaming: {
+            title: "Rich Game Types",
+            subtitle: "Diverse video lottery games to meet different player needs",
+            keno: {
+                title: "Video Keno",
+                desc: "High-frequency draws, quick betting, real-time draw animations"
+            },
+            bingo: {
+                title: "Video Bingo",
+                desc: "Classic bingo games with enhanced video interactive elements"
+            },
+            scratch: {
+                title: "Video Scratch Cards",
+                desc: "Digital scratch card games with enhanced animation effects"
+            },
+            instant: {
+                title: "Instant Games",
+                desc: "Quick draw video games with instant results"
+            }
+        },
+        technology: {
+            title: "Leading Technology Architecture",
+            subtitle: "Based on modern cloud-native architecture ensuring stable and efficient systems",
+            rng: {
+                title: "Random Number Generation",
+                desc: "Hardware random number generators ensuring game fairness"
+            },
+            stream: {
+                title: "Video Stream Processing",
+                desc: "High-performance video stream processing for smooth gaming experience"
+            },
+            realtime: {
+                title: "Real-time Interaction",
+                desc: "Millisecond response for true real-time gaming experience"
+            },
+            cdn: {
+                title: "Global CDN",
+                desc: "Global content delivery network ensuring worldwide user experience"
+            }
+        },
+        compliance: {
+            title: "Compliance & Regulation",
+            subtitle: "Strictly follow international standards ensuring compliant system operations",
+            glI: {
+                title: "GLI Certification",
+                desc: "GLI Gaming Laboratories International certification ensuring game fairness"
+            },
+            rtp: {
+                title: "RTP Control",
+                desc: "Strict return to player rate control meeting regulatory requirements"
+            },
+            audit: {
+                title: "Audit Trail",
+                desc: "Complete audit logs supporting regulatory inspections"
+            },
+            responsible: {
+                title: "Responsible Gaming",
+                desc: "Built-in player protection mechanisms preventing problem gambling"
+            }
+        },
+        cta: {
+            title: "Start Your Video Lottery Experience",
+            subtitle: "Contact us for professional video lottery system solutions",
+            contact: "Contact Now",
+            products: "View Other Products"
+        }
+    },
+    // Printing System
+    printing: {
+        title: "Lottery Printing Service Solutions - LottoBridge",
+        hero: {
+            title: "Professional Lottery Printing Services",
+            subtitle: "International standard printing processes, multiple security features, supporting global multi-language customization",
+            viewServices: "View Services",
+            viewSamples: "Sample Display",
+            imageText: "Lottery Printing Process Display"
+        },
+        cta: {
+            title: "Start Your Lottery Printing Project",
+            subtitle: "Contact us for professional lottery printing solutions",
+            contact: "Contact Now",
+            products: "View Other Products"
+        }
+    },
+
+    // Thermal System
+    thermal: {
+        title: "Thermal Consumables Solutions - LottoBridge",
+        hero: {
+            title: "Professional Thermal Consumables Supply",
+            subtitle: "High-quality thermal paper rolls, compatible with various lottery terminal devices, stable supply guarantee",
+            viewProducts: "View Products",
+            checkCompatibility: "Compatibility Check",
+            imageText: "Thermal Consumables Product Display"
+        },
+        cta: {
+            title: "Start Your Thermal Consumables Solution",
+            subtitle: "Contact us for professional thermal consumables supply solutions",
+            contact: "Contact Now",
+            products: "View Other Products"
         }
     }
 };

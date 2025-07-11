@@ -3,9 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="thermal.title">热敏耗材解决方案 - LottoBridge</title>
+    <title data-i18n="thermal.page.title">专业热敏耗材解决方案 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 专业高端样式优化 */
+        .hero-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><rect x="100" y="50" width="40" height="60" rx="5" fill="url(%23grad1)"/><rect x="800" y="80" width="30" height="40" rx="3" fill="url(%23grad1)"/><rect x="500" y="200" width="35" height="50" rx="4" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0f172a, #e63946);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .product-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0f172a, #e63946);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .spec-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .spec-table th {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .compatibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .compatibility-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .compatibility-card:hover {
+            border-color: #0f172a;
+            transform: translateY(-5px);
+        }
+
+        .device-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0f172a, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        .quality-standards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .standard-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid #cbd5e1;
+        }
+
+        .standard-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0f172a, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto 15px;
+        }
+
+        .supply-chain-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flow-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .flow-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0f172a, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .supply-chain-flow {
+                flex-direction: column;
+            }
+            .flow-step:not(:last-child)::after {
+                content: '↓';
+                right: auto;
+                top: auto;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -40,270 +245,441 @@
     </header>
 
     <!-- Hero Banner Section -->
-    <section class="hero-banner product-hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-i18n="thermal.hero.title">专业热敏耗材供应</h1>
-                <p class="hero-subtitle" data-i18n="thermal.hero.subtitle">高品质热敏纸卷，适配各类彩票终端设备，稳定供货保障</p>
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title" data-i18n="thermal.hero.title">专业热敏耗材供应解决方案</h1>
+                <p class="hero-subtitle" data-i18n="thermal.hero.description">德国进口材料，日本制造工艺，为全球彩票终端设备提供高品质热敏纸卷与碳带耗材</p>
                 <div class="hero-actions">
-                    <a href="#products" class="btn btn-primary" data-i18n="thermal.hero.viewProducts">查看产品</a>
-                    <a href="#compatibility" class="btn btn-outline" data-i18n="thermal.hero.checkCompatibility">适配查询</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="image-placeholder hero-image">
-                    <span class="placeholder-text" data-i18n="thermal.hero.imageText">热敏耗材产品展示</span>
+                    <a href="#products" class="btn btn-primary" data-i18n="thermal.hero.btn_products">查看产品系列</a>
+                    <a href="#compatibility" class="btn btn-outline" data-i18n="thermal.hero.btn_compatibility">设备兼容性</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块一：产品规格系列 -->
-    <section class="thermal-specs-section" id="products">
+    <!-- 产品系列展示 -->
+    <section class="section" id="products">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="thermal.specs.title">热敏纸规格系列</h2>
-                <p class="section-subtitle" data-i18n="thermal.specs.subtitle">多种规格选择，满足不同设备和应用需求</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="thermal.products.title">专业热敏耗材产品系列</h2>
+                <p class="section-subtitle" data-i18n="thermal.products.description">覆盖彩票行业全规格需求，确保高品质打印效果与长期保存</p>
             </div>
-            <div class="specs-categories">
-                <div class="spec-category">
-                    <h3 data-i18n="thermal.specs.standard.title">标准规格系列</h3>
-                    <div class="specs-grid">
-                        <div class="spec-card">
-                            <div class="spec-icon">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
-                                </svg>
-                            </div>
-                            <h4>57mm×40mm</h4>
-                            <div class="spec-details">
-                                <p><strong data-i18n="thermal.specs.weight">纸张重量:</strong> 55g/m²</p>
-                                <p><strong data-i18n="thermal.specs.coreDiameter">卷芯直径:</strong> 12mm</p>
-                                <p><strong data-i18n="thermal.specs.outerDiameter">外径:</strong> 40mm</p>
-                                <p><strong data-i18n="thermal.specs.length">长度:</strong> 30米</p>
-                                <p><strong data-i18n="thermal.specs.compatibleDevices">适用设备:</strong> <span data-i18n="thermal.specs.handheld">手持终端、小型POS</span></p>
-                            </div>
-                            <div class="spec-features">
-                                <ul>
-                                    <li data-i18n="thermal.specs.features.highQuality">• 高清晰度打印</li>
-                                    <li data-i18n="thermal.specs.features.waterproof">• 防水防油污</li>
-                                    <li data-i18n="thermal.specs.features.stable">• 长期保存稳定</li>
-                                    <li data-i18n="thermal.specs.features.eco">• 环保材质</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="spec-card">
-                            <div class="spec-icon">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
-                                </svg>
-                            </div>
-                            <h4>80mm×80mm</h4>
-                            <div class="spec-details">
-                                <p><strong data-i18n="thermal.specs.weight">纸张重量:</strong> 80g/m²</p>
-                                <p><strong data-i18n="thermal.specs.coreDiameter">卷芯直径:</strong> 12mm</p>
-                                <p><strong data-i18n="thermal.specs.outerDiameter">外径:</strong> 80mm</p>
-                                <p><strong data-i18n="thermal.specs.length">长度:</strong> 80米</p>
-                                <p><strong data-i18n="thermal.specs.compatibleDevices">适用设备:</strong> <span data-i18n="thermal.specs.desktop">桌面终端、收银机</span></p>
-                            </div>
-                            <div class="spec-features">
-                                <ul>
-                                    <li data-i18n="thermal.specs.features.standard">• 标准彩票打印</li>
-                                    <li data-i18n="thermal.specs.features.imageQuality">• 优异的图像质量</li>
-                                    <li data-i18n="thermal.specs.features.fastPrint">• 快速打印响应</li>
-                                    <li data-i18n="thermal.specs.features.costEffective">• 成本效益优化</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="spec-card">
-                            <div class="spec-icon">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
-                                </svg>
-                            </div>
-                            <h4>110mm×40mm</h4>
-                            <div class="spec-details">
-                                <p><strong data-i18n="thermal.specs.weight">纸张重量:</strong> 65g/m²</p>
-                                <p><strong data-i18n="thermal.specs.coreDiameter">卷芯直径:</strong> 25mm</p>
-                                <p><strong data-i18n="thermal.specs.outerDiameter">外径:</strong> 40mm</p>
-                                <p><strong data-i18n="thermal.specs.length">长度:</strong> 25米</p>
-                                <p><strong data-i18n="thermal.specs.compatibleDevices">适用设备:</strong> <span data-i18n="thermal.specs.wideFormat">宽幅打印机</span></p>
-                            </div>
-                            <div class="spec-features">
-                                <ul>
-                                    <li data-i18n="thermal.specs.features.wideFormat">• 宽幅打印支持</li>
-                                    <li data-i18n="thermal.specs.features.multiLine">• 多行信息显示</li>
-                                    <li data-i18n="thermal.specs.features.highSpeed">• 高速连续打印</li>
-                                    <li data-i18n="thermal.specs.features.professional">• 专业级质量</li>
-                                </ul>
-                            </div>
-                        </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3 data-i18n="thermal.products.standard_series.title">标准系列热敏纸</h3>
+                    <p data-i18n="thermal.products.standard_series.description">适用于一般彩票终端设备，具备优异的打印清晰度和成本效益</p>
+                    
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="thermal.products.specifications.parameter">参数</th>
+                                <th data-i18n="thermal.products.specifications.value">规格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.width">宽度</td>
+                                <td>57mm / 80mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.length">长度</td>
+                                <td>30-80米</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.weight">纸张重量</td>
+                                <td>55-80g/m²</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.core_diameter">卷芯直径</td>
+                                <td>12mm / 25mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.shelf_life">保存期限</td>
+                                <td>5年+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="product-features">
+                        <h4 data-i18n="thermal.products.features.title">产品特性</h4>
+                        <ul>
+                            <li data-i18n="thermal.products.standard_series.feature1"><i class="fas fa-check"></i> 高清晰度打印</li>
+                            <li data-i18n="thermal.products.standard_series.feature2"><i class="fas fa-check"></i> 防水防油污</li>
+                            <li data-i18n="thermal.products.standard_series.feature3"><i class="fas fa-check"></i> 长期保存稳定</li>
+                            <li data-i18n="thermal.products.standard_series.feature4"><i class="fas fa-check"></i> 成本效益优化</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="spec-category">
-                    <h3 data-i18n="thermal.specs.premium.title">高端规格系列</h3>
-                    <div class="specs-grid">
-                        <div class="spec-card premium">
-                            <div class="spec-icon">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/>
-                                </svg>
-                            </div>
-                            <h4>80mm×120mm 高级版</h4>
-                            <div class="spec-details">
-                                <p><strong data-i18n="thermal.specs.weight">纸张重量:</strong> 120g/m²</p>
-                                <p><strong data-i18n="thermal.specs.coreDiameter">卷芯直径:</strong> 25mm</p>
-                                <p><strong data-i18n="thermal.specs.outerDiameter">外径:</strong> 120mm</p>
-                                <p><strong data-i18n="thermal.specs.length">长度:</strong> 150米</p>
-                                <p><strong data-i18n="thermal.specs.compatibleDevices">适用设备:</strong> <span data-i18n="thermal.specs.highEnd">高端自助终端</span></p>
-                            </div>
-                            <div class="spec-features">
-                                <ul>
-                                    <li data-i18n="thermal.specs.features.longLife">• 超长使用寿命</li>
-                                    <li data-i18n="thermal.specs.features.fadeResistant">• 防褪色技术</li>
-                                    <li data-i18n="thermal.specs.features.antiStatic">• 抗静电处理</li>
-                                    <li data-i18n="thermal.specs.features.bankGrade">• 银行级品质</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="spec-card premium">
-                            <div class="spec-icon">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#f59e0b"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="thermal.specs.custom.title">定制规格系列</h4>
-                            <div class="spec-details">
-                                <p><strong data-i18n="thermal.specs.custom.widthRange">宽度范围:</strong> 30-220mm</p>
-                                <p><strong data-i18n="thermal.specs.custom.lengthRange">长度范围:</strong> 10-500米</p>
-                                <p><strong data-i18n="thermal.specs.custom.weightRange">纸张重量:</strong> 48-150g/m²</p>
-                                <p><strong data-i18n="thermal.specs.custom.coreRange">卷芯直径:</strong> 6-76mm</p>
-                                <p><strong data-i18n="thermal.specs.custom.service">定制服务:</strong> <span data-i18n="thermal.specs.custom.onDemand">按需生产</span></p>
-                            </div>
-                            <div class="spec-features">
-                                <ul>
-                                    <li data-i18n="thermal.specs.features.fullyCustom">• 完全定制化</li>
-                                    <li data-i18n="thermal.specs.features.specialCoating">• 特殊涂层可选</li>
-                                    <li data-i18n="thermal.specs.features.brandPrinting">• 品牌标识印刷</li>
-                                    <li data-i18n="thermal.specs.features.technicalSupport">• 专业技术支持</li>
-                                </ul>
-                            </div>
-                        </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-i18n="thermal.products.premium_series.title">高端系列热敏纸</h3>
+                    <p data-i18n="thermal.products.premium_series.description">银行级品质，超长保存期，适用于高端自助终端和重要票据打印</p>
+                    
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="thermal.products.specifications.parameter">参数</th>
+                                <th data-i18n="thermal.products.specifications.value">规格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.width">宽度</td>
+                                <td>80mm / 110mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.length">长度</td>
+                                <td>80-200米</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.weight">纸张重量</td>
+                                <td>80-120g/m²</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.core_diameter">卷芯直径</td>
+                                <td>25mm / 76mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.shelf_life">保存期限</td>
+                                <td>10年+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="product-features">
+                        <h4 data-i18n="thermal.products.features.title">产品特性</h4>
+                        <ul>
+                            <li data-i18n="thermal.products.premium_series.feature1"><i class="fas fa-check"></i> 银行级品质标准</li>
+                            <li data-i18n="thermal.products.premium_series.feature2"><i class="fas fa-check"></i> 防褪色技术</li>
+                            <li data-i18n="thermal.products.premium_series.feature3"><i class="fas fa-check"></i> 抗静电处理</li>
+                            <li data-i18n="thermal.products.premium_series.feature4"><i class="fas fa-check"></i> 超长保存期</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-i18n="thermal.products.color_series.title">彩色热敏纸系列</h3>
+                    <p data-i18n="thermal.products.color_series.description">多色热敏打印技术，支持双色、三色打印，提升票据视觉效果</p>
+                    
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="thermal.products.specifications.parameter">参数</th>
+                                <th data-i18n="thermal.products.specifications.value">规格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.colors">颜色</td>
+                                <td data-i18n="thermal.products.color_series.colors">黑/红/蓝</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.width">宽度</td>
+                                <td>80mm / 110mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.activation_temp">显色温度</td>
+                                <td>70-85°C</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.applications">应用场景</td>
+                                <td data-i18n="thermal.products.color_series.applications">重要票据、彩票</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.shelf_life">保存期限</td>
+                                <td>7年+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="product-features">
+                        <h4 data-i18n="thermal.products.features.title">产品特性</h4>
+                        <ul>
+                            <li data-i18n="thermal.products.color_series.feature1"><i class="fas fa-check"></i> 多色同步打印</li>
+                            <li data-i18n="thermal.products.color_series.feature2"><i class="fas fa-check"></i> 色彩饱和度高</li>
+                            <li data-i18n="thermal.products.color_series.feature3"><i class="fas fa-check"></i> 防伪应用支持</li>
+                            <li data-i18n="thermal.products.color_series.feature4"><i class="fas fa-check"></i> 视觉效果提升</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 data-i18n="thermal.products.custom_series.title">定制系列产品</h3>
+                    <p data-i18n="thermal.products.custom_series.description">根据客户特殊需求定制生产，支持特殊规格、涂层和功能要求</p>
+                    
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="thermal.products.specifications.parameter">参数</th>
+                                <th data-i18n="thermal.products.specifications.value">规格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.width_range">宽度范围</td>
+                                <td>30-220mm</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.length_range">长度范围</td>
+                                <td>10-500米</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.coating_options">涂层选项</td>
+                                <td data-i18n="thermal.products.custom_series.coating_options">标准/防水/防化学</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.production_time">生产周期</td>
+                                <td data-i18n="thermal.products.custom_series.production_time">15-30天</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thermal.products.specifications.min_order">最小订量</td>
+                                <td data-i18n="thermal.products.custom_series.min_order">1000卷</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="product-features">
+                        <h4 data-i18n="thermal.products.features.title">产品特性</h4>
+                        <ul>
+                            <li data-i18n="thermal.products.custom_series.feature1"><i class="fas fa-check"></i> 完全定制化</li>
+                            <li data-i18n="thermal.products.custom_series.feature2"><i class="fas fa-check"></i> 特殊功能涂层</li>
+                            <li data-i18n="thermal.products.custom_series.feature3"><i class="fas fa-check"></i> 品牌标识印刷</li>
+                            <li data-i18n="thermal.products.custom_series.feature4"><i class="fas fa-check"></i> 技术支持服务</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块二：设备适配兼容性 -->
-    <section class="compatibility-section" id="compatibility">
+    <!-- 设备兼容性 -->
+    <section class="section bg-light" id="compatibility">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="thermal.compatibility.title">设备适配兼容性</h2>
-                <p class="section-subtitle" data-i18n="thermal.compatibility.subtitle">广泛的设备兼容性，支持主流彩票终端设备</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="thermal.compatibility.title">全面设备兼容性保证</h2>
+                <p class="section-subtitle" data-i18n="thermal.compatibility.description">与全球主流彩票终端设备完美兼容，确保稳定可靠的打印效果</p>
             </div>
+
             <div class="compatibility-grid">
                 <div class="compatibility-card">
                     <div class="device-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-desktop"></i>
                     </div>
-                    <h3 data-i18n="thermal.compatibility.handheld.title">手持终端设备</h3>
-                    <p data-i18n="thermal.compatibility.handheld.desc">支持各类手持彩票销售终端</p>
-                    <ul class="compatibility-list">
-                        <li data-i18n="thermal.compatibility.handheld.feature1">• 便携式设计</li>
-                        <li data-i18n="thermal.compatibility.handheld.feature2">• 快速打印响应</li>
-                        <li data-i18n="thermal.compatibility.handheld.feature3">• 低功耗设计</li>
-                        <li data-i18n="thermal.compatibility.handheld.feature4">• 无线连接支持</li>
+                    <h3 data-i18n="thermal.compatibility.desktop_terminals.title">桌面终端设备</h3>
+                    <p data-i18n="thermal.compatibility.desktop_terminals.description">适配主流桌面型彩票销售终端</p>
+                    <ul class="device-list">
+                        <li data-i18n="thermal.compatibility.desktop_terminals.brand1">• Epson TM系列</li>
+                        <li data-i18n="thermal.compatibility.desktop_terminals.brand2">• Star TSP系列</li>
+                        <li data-i18n="thermal.compatibility.desktop_terminals.brand3">• Citizen CT系列</li>
+                        <li data-i18n="thermal.compatibility.desktop_terminals.brand4">• 其他主流品牌</li>
                     </ul>
                 </div>
+
                 <div class="compatibility-card">
                     <div class="device-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 data-i18n="thermal.compatibility.desktop.title">桌面终端设备</h3>
-                    <p data-i18n="thermal.compatibility.desktop.desc">适用于彩票销售点和服务中心</p>
-                    <ul class="compatibility-list">
-                        <li data-i18n="thermal.compatibility.desktop.feature1">• 大容量纸卷</li>
-                        <li data-i18n="thermal.compatibility.desktop.feature2">• 高速连续打印</li>
-                        <li data-i18n="thermal.compatibility.desktop.feature3">• 网络连接稳定</li>
-                        <li data-i18n="thermal.compatibility.desktop.feature4">• 专业级性能</li>
+                    <h3 data-i18n="thermal.compatibility.mobile_terminals.title">移动终端设备</h3>
+                    <p data-i18n="thermal.compatibility.mobile_terminals.description">支持便携式和手持型打印设备</p>
+                    <ul class="device-list">
+                        <li data-i18n="thermal.compatibility.mobile_terminals.brand1">• Zebra移动打印机</li>
+                        <li data-i18n="thermal.compatibility.mobile_terminals.brand2">• Honeywell便携式</li>
+                        <li data-i18n="thermal.compatibility.mobile_terminals.brand3">• Brother手持终端</li>
+                        <li data-i18n="thermal.compatibility.mobile_terminals.brand4">• 定制移动设备</li>
                     </ul>
                 </div>
+
                 <div class="compatibility-card">
                     <div class="device-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-tv"></i>
                     </div>
-                    <h3 data-i18n="thermal.compatibility.kiosk.title">自助终端设备</h3>
-                    <p data-i18n="thermal.compatibility.kiosk.desc">大型自助彩票销售终端</p>
-                    <ul class="compatibility-list">
-                        <li data-i18n="thermal.compatibility.kiosk.feature1">• 超大容量设计</li>
-                        <li data-i18n="thermal.compatibility.kiosk.feature2">• 24/7稳定运行</li>
-                        <li data-i18n="thermal.compatibility.kiosk.feature3">• 多种票型支持</li>
-                        <li data-i18n="thermal.compatibility.kiosk.feature4">• 远程监控管理</li>
+                    <h3 data-i18n="thermal.compatibility.kiosk_terminals.title">自助终端设备</h3>
+                    <p data-i18n="thermal.compatibility.kiosk_terminals.description">兼容各类自助服务终端打印模块</p>
+                    <ul class="device-list">
+                        <li data-i18n="thermal.compatibility.kiosk_terminals.brand1">• Custom打印模块</li>
+                        <li data-i18n="thermal.compatibility.kiosk_terminals.brand2">• Fujitsu自助设备</li>
+                        <li data-i18n="thermal.compatibility.kiosk_terminals.brand3">• NCR Kiosk系列</li>
+                        <li data-i18n="thermal.compatibility.kiosk_terminals.brand4">• 定制自助终端</li>
+                    </ul>
+                </div>
+
+                <div class="compatibility-card">
+                    <div class="device-icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3 data-i18n="thermal.compatibility.pos_systems.title">POS收银系统</h3>
+                    <p data-i18n="thermal.compatibility.pos_systems.description">适用于彩票销售点收银系统</p>
+                    <ul class="device-list">
+                        <li data-i18n="thermal.compatibility.pos_systems.brand1">• 银联POS终端</li>
+                        <li data-i18n="thermal.compatibility.pos_systems.brand2">• 新大陆收银机</li>
+                        <li data-i18n="thermal.compatibility.pos_systems.brand3">• 商米POS设备</li>
+                        <li data-i18n="thermal.compatibility.pos_systems.brand4">• 海外POS品牌</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块三：质量保证与售后服务 -->
-    <section class="quality-service-section">
+    <!-- 质量标准认证 -->
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="thermal.quality.title">质量保证与售后服务</h2>
-                <p class="section-subtitle" data-i18n="thermal.quality.subtitle">严格的质量控制体系，完善的售后服务保障</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="thermal.quality.title">国际质量标准认证</h2>
+                <p class="section-subtitle" data-i18n="thermal.quality.description">严格按照国际标准生产，通过多项权威认证，确保产品品质</p>
             </div>
-            <div class="quality-grid">
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+
+            <div class="quality-standards">
+                <div class="standard-card">
+                    <div class="standard-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <h3 data-i18n="thermal.quality.control.title">质量控制</h3>
-                    <p data-i18n="thermal.quality.control.desc">每批次产品经过严格质量检测</p>
-                    <ul class="quality-list">
-                        <li data-i18n="thermal.quality.control.item1">• 纸张厚度检测</li>
-                        <li data-i18n="thermal.quality.control.item2">• 打印效果测试</li>
-                        <li data-i18n="thermal.quality.control.item3">• 耐久性验证</li>
-                        <li data-i18n="thermal.quality.control.item4">• 环保标准检测</li>
+                    <h4 data-i18n="thermal.quality.standards.iso.title">ISO 9001:2015</h4>
+                    <p data-i18n="thermal.quality.standards.iso.description">质量管理体系认证</p>
+                    <ul>
+                        <li data-i18n="thermal.quality.standards.iso.item1">• 全流程质量控制</li>
+                        <li data-i18n="thermal.quality.standards.iso.item2">• 持续改进机制</li>
+                        <li data-i18n="thermal.quality.standards.iso.item3">• 客户满意度保障</li>
                     </ul>
                 </div>
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
-                        </svg>
+
+                <div class="standard-card">
+                    <div class="standard-icon">
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <h3 data-i18n="thermal.quality.warranty.title">质量保证</h3>
-                    <p data-i18n="thermal.quality.warranty.desc">提供全面的质量保证承诺</p>
-                    <ul class="quality-list">
-                        <li data-i18n="thermal.quality.warranty.item1">• 12个月质量保证</li>
-                        <li data-i18n="thermal.quality.warranty.item2">• 免费更换服务</li>
-                        <li data-i18n="thermal.quality.warranty.item3">• 技术咨询支持</li>
-                        <li data-i18n="thermal.quality.warranty.item4">• 快速响应机制</li>
+                    <h4 data-i18n="thermal.quality.standards.environmental.title">环保认证</h4>
+                    <p data-i18n="thermal.quality.standards.environmental.description">绿色环保材料认证</p>
+                    <ul>
+                        <li data-i18n="thermal.quality.standards.environmental.item1">• FSC森林管理认证</li>
+                        <li data-i18n="thermal.quality.standards.environmental.item2">• 欧盟RoHS认证</li>
+                        <li data-i18n="thermal.quality.standards.environmental.item3">• 无毒环保材料</li>
                     </ul>
                 </div>
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="standard-card">
+                    <div class="standard-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 data-i18n="thermal.quality.service.title">售后服务</h3>
-                    <p data-i18n="thermal.quality.service.desc">专业的售后服务团队</p>
-                    <ul class="quality-list">
-                        <li data-i18n="thermal.quality.service.item1">• 7×24小时技术支持</li>
-                        <li data-i18n="thermal.quality.service.item2">• 现场安装调试</li>
-                        <li data-i18n="thermal.quality.service.item3">• 定期维护保养</li>
-                        <li data-i18n="thermal.quality.service.item4">• 培训服务提供</li>
+                    <h4 data-i18n="thermal.quality.standards.food_safety.title">食品级安全</h4>
+                    <p data-i18n="thermal.quality.standards.food_safety.description">食品接触材料安全认证</p>
+                    <ul>
+                        <li data-i18n="thermal.quality.standards.food_safety.item1">• FDA美国食品药监认证</li>
+                        <li data-i18n="thermal.quality.standards.food_safety.item2">• 欧盟食品接触材料</li>
+                        <li data-i18n="thermal.quality.standards.food_safety.item3">• 无双酚A配方</li>
+                    </ul>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4 data-i18n="thermal.quality.standards.testing.title">专业检测</h4>
+                    <p data-i18n="thermal.quality.standards.testing.description">专业实验室检测认证</p>
+                    <ul>
+                        <li data-i18n="thermal.quality.standards.testing.item1">• SGS第三方检测</li>
+                        <li data-i18n="thermal.quality.standards.testing.item2">• 德国TUV认证</li>
+                        <li data-i18n="thermal.quality.standards.testing.item3">• 多项性能测试</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 供应链管理 -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="thermal.supply_chain.title">全球供应链管理体系</h2>
+                <p class="section-subtitle" data-i18n="thermal.supply_chain.description">建立完善的全球供应链网络，确保及时交付和库存充足</p>
+            </div>
+
+            <div class="supply-chain-flow">
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.production.title">生产制造</h3>
+                    <p data-i18n="thermal.supply_chain.production.description">德国技术，亚洲制造基地</p>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.storage.title">仓储管理</h3>
+                    <p data-i18n="thermal.supply_chain.storage.description">全球多地仓储中心</p>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.logistics.title">物流配送</h3>
+                    <p data-i18n="thermal.supply_chain.logistics.description">快速响应配送网络</p>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.service.title">售后服务</h3>
+                    <p data-i18n="thermal.supply_chain.service.description">7×24技术支持</p>
+                </div>
+            </div>
+
+            <div class="product-grid" style="margin-top: 60px;">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.global_network.title">全球网络覆盖</h3>
+                    <p data-i18n="thermal.supply_chain.global_network.description">在全球主要地区建立仓储和服务网点</p>
+                    <ul>
+                        <li data-i18n="thermal.supply_chain.global_network.region1">• 亚太地区: 中国、日本、新加坡</li>
+                        <li data-i18n="thermal.supply_chain.global_network.region2">• 欧洲地区: 德国、荷兰</li>
+                        <li data-i18n="thermal.supply_chain.global_network.region3">• 美洲地区: 美国、墨西哥</li>
+                        <li data-i18n="thermal.supply_chain.global_network.region4">• 非洲地区: 南非、肯尼亚</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.delivery_time.title">快速交付保障</h3>
+                    <p data-i18n="thermal.supply_chain.delivery_time.description">建立快速响应机制，确保客户需求及时满足</p>
+                    <ul>
+                        <li data-i18n="thermal.supply_chain.delivery_time.regular">• 常规订单: 3-7个工作日</li>
+                        <li data-i18n="thermal.supply_chain.delivery_time.urgent">• 紧急订单: 24-48小时</li>
+                        <li data-i18n="thermal.supply_chain.delivery_time.custom">• 定制产品: 15-30个工作日</li>
+                        <li data-i18n="thermal.supply_chain.delivery_time.tracking">• 全程物流追踪服务</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="thermal.supply_chain.inventory.title">智能库存管理</h3>
+                    <p data-i18n="thermal.supply_chain.inventory.description">采用先进的库存管理系统，确保库存充足</p>
+                    <ul>
+                        <li data-i18n="thermal.supply_chain.inventory.prediction">• AI预测需求模型</li>
+                        <li data-i18n="thermal.supply_chain.inventory.monitoring">• 实时库存监控</li>
+                        <li data-i18n="thermal.supply_chain.inventory.safety">• 安全库存保障</li>
+                        <li data-i18n="thermal.supply_chain.inventory.reporting">• 库存报告分析</li>
                     </ul>
                 </div>
             </div>
@@ -311,14 +687,14 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title" data-i18n="thermal.cta.title">开始您的热敏耗材解决方案</h2>
-                <p class="cta-subtitle" data-i18n="thermal.cta.subtitle">联系我们，获取专业的热敏耗材供应方案</p>
-                <div class="cta-actions">
-                    <a href="../contact.html" class="btn btn-primary" data-i18n="thermal.cta.contact">立即咨询</a>
-                    <a href="../products.html" class="btn btn-outline" data-i18n="thermal.cta.products">查看其他产品</a>
+            <div class="text-center">
+                <h2 class="section-title" data-i18n="thermal.cta.title">开始您的热敏耗材采购</h2>
+                <p class="section-subtitle" data-i18n="thermal.cta.description">联系我们的专业团队，获取最适合的热敏耗材解决方案</p>
+                <div class="hero-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="thermal.cta.btn_contact">立即咨询</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="thermal.cta.btn_products">查看其他产品</a>
                 </div>
             </div>
         </div>
@@ -329,16 +705,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
                     <p>Email: info@lottobridge.com</p>
                     <p>Tel: +86 400-888-8888</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
                     <ul>
                         <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
                         <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
@@ -347,16 +723,30 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="../js/languages/zh.js"></script>
+    <script src="../js/languages/en.js"></script>
+    <script src="../js/languages/fr.js"></script>
+    <script src="../js/languages/es.js"></script>
+    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ru.js"></script>
+    <script src="../js/languages.js"></script>
     <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         // 初始化国际化
         document.addEventListener('DOMContentLoaded', function() {
-            initI18n();
+            if (window.i18n) {
+                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
+            } else {
+                console.warn('多语言系统未初始化');
+            }
         });
     </script>
 </body>

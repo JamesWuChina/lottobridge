@@ -1176,12 +1176,7 @@ const ar = {
             rights: 'جميع الحقوق محفوظة.',
             privacy: 'سياسة الخصوصية',
             terms: 'شروط الاستخدام'
-        },
-        // مفاتيح ترجمة التذييل الجديدة
-        company: 'LottoBridge',
-        rights: 'جميع الحقوق محفوظة',
-        privacy: 'سياسة الخصوصية',
-        terms: 'شروط الاستخدام'
+        }
     },
     market_reports: {
         mexico: {

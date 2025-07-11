@@ -1176,12 +1176,7 @@ const ko = {
             rights: '모든 권리 보유.',
             privacy: '개인정보 보호정책',
             terms: '이용약관'
-        },
-        // 새로운 푸터 번역 키
-        company: 'LottoBridge',
-        rights: '모든 권리 보유',
-        privacy: '개인정보 보호정책',
-        terms: '이용약관'
+        }
     },
     market_reports: {
         mexico: {

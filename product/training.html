@@ -3,9 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="training.title">专业培训服务 - LottoBridge</title>
+    <title data-i18n="training.page.title">专业彩票培训教育服务 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 专业高端样式优化 */
+        .hero-banner {
+            background: linear-gradient(135deg, #7c2d12 0%, #dc2626 50%, #b91c1c 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><path d="M100,80 Q120,60 140,80 T180,80" stroke="url(%23grad1)" stroke-width="3" fill="none"/><path d="M800,100 Q820,80 840,100 T880,100" stroke="url(%23grad1)" stroke-width="3" fill="none"/><path d="M500,220 Q520,200 540,220 T580,220" stroke="url(%23grad1)" stroke-width="3" fill="none"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c2d12, #e63946);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .course-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7c2d12, #e63946);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #7c2d12;
+            margin-bottom: 5px;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .training-pathway {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .pathway-card {
+            background: linear-gradient(135deg, #fef2f2, #fecaca);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #fca5a5;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pathway-card:hover {
+            transform: translateY(-5px);
+            border-color: #7c2d12;
+        }
+
+        .pathway-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #7c2d12, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .certification-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7c2d12, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .cert-badge::after {
+            content: '✓';
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 25px;
+            height: 25px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .instructor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .instructor-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .instructor-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7c2d12, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+
+        .learning-modes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .mode-card {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .mode-card:hover {
+            border-color: #7c2d12;
+            transform: translateY(-5px);
+        }
+
+        .mode-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #7c2d12, #e63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
+        }
+
+        @media (max-width: 768px) {
+            .learning-modes {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -40,254 +302,483 @@
     </header>
 
     <!-- Hero Banner Section -->
-    <section class="hero-banner product-hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-i18n="training.hero.title">专业彩票培训服务</h1>
-                <p class="hero-subtitle" data-i18n="training.hero.subtitle">全面的培训体系，助力彩票行业专业人才培养</p>
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title" data-i18n="training.hero.title">全球领先的彩票教育培训体系</h1>
+                <p class="hero-subtitle" data-i18n="training.hero.description">专业认证培训课程，国际标准教学体系，培养彩票行业专业人才，推动行业健康发展</p>
                 <div class="hero-actions">
-                    <a href="#courses" class="btn btn-primary" data-i18n="training.hero.viewCourses">查看课程</a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="training.hero.contact">咨询培训</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="image-placeholder hero-image">
-                    <span class="placeholder-text" data-i18n="training.hero.imageText">培训服务视觉图</span>
+                    <a href="#courses" class="btn btn-primary" data-i18n="training.hero.btn_courses">查看课程体系</a>
+                    <a href="#certification" class="btn btn-outline" data-i18n="training.hero.btn_certification">专业认证</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块一：培训课程体系 -->
-    <section class="training-courses-section" id="courses">
+    <!-- 专业课程体系 -->
+    <section class="section" id="courses">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="training.courses.title">专业培训课程体系</h2>
-                <p class="section-subtitle" data-i18n="training.courses.subtitle">覆盖彩票行业全链条，满足不同岗位培训需求</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="training.courses.title">专业课程体系</h2>
+                <p class="section-subtitle" data-i18n="training.courses.description">构建完整的彩票行业知识体系，从基础理论到实战应用，满足不同层次的学习需求</p>
             </div>
-            <div class="courses-grid">
+
+            <div class="course-grid">
                 <div class="course-card">
                     <div class="course-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 data-i18n="training.courses.management.title">彩票运营管理</h3>
-                    <p class="course-description" data-i18n="training.courses.management.desc">系统运营、风险控制、合规管理</p>
-                    <div class="course-details">
-                        <div class="course-duration">
-                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
-                            <span class="duration-value">5天</span>
+                    <h3 data-i18n="training.courses.executive_leadership.title">高管领导力课程</h3>
+                    <p data-i18n="training.courses.executive_leadership.description">针对彩票公司高级管理人员的战略管理与领导力提升课程</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">5天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
                         </div>
-                        <div class="course-level">
-                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
-                            <span class="level-value" data-i18n="training.courses.management.level">中高级管理</span>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.executive_leadership.level">高级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">20人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
                         </div>
                     </div>
+
                     <ul class="course-topics">
-                        <li data-i18n="training.courses.management.topic1">• 彩票系统架构设计</li>
-                        <li data-i18n="training.courses.management.topic2">• 运营流程优化</li>
-                        <li data-i18n="training.courses.management.topic3">• 风险控制策略</li>
-                        <li data-i18n="training.courses.management.topic4">• 合规监管要求</li>
+                        <li data-i18n="training.courses.executive_leadership.topic1"><i class="fas fa-check"></i> 彩票行业发展趋势分析</li>
+                        <li data-i18n="training.courses.executive_leadership.topic2"><i class="fas fa-check"></i> 战略规划与商业模式创新</li>
+                        <li data-i18n="training.courses.executive_leadership.topic3"><i class="fas fa-check"></i> 风险管理与合规运营</li>
+                        <li data-i18n="training.courses.executive_leadership.topic4"><i class="fas fa-check"></i> 数字化转型策略</li>
+                        <li data-i18n="training.courses.executive_leadership.topic5"><i class="fas fa-check"></i> 国际市场开拓与合作</li>
                     </ul>
                 </div>
-                
+
                 <div class="course-card">
                     <div class="course-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <h3 data-i18n="training.courses.technical.title">技术开发培训</h3>
-                    <p class="course-description" data-i18n="training.courses.technical.desc">系统开发、接口集成、安全防护</p>
-                    <div class="course-details">
-                        <div class="course-duration">
-                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
-                            <span class="duration-value">7天</span>
+                    <h3 data-i18n="training.courses.technical_operations.title">技术运营管理</h3>
+                    <p data-i18n="training.courses.technical_operations.description">系统架构设计、技术运维与安全管理的专业技能培训</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">7天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
                         </div>
-                        <div class="course-level">
-                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
-                            <span class="level-value" data-i18n="training.courses.technical.level">技术开发</span>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.technical_operations.level">中高级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">25人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
                         </div>
                     </div>
+
                     <ul class="course-topics">
-                        <li data-i18n="training.courses.technical.topic1">• 彩票系统架构</li>
-                        <li data-i18n="training.courses.technical.topic2">• API接口开发</li>
-                        <li data-i18n="training.courses.technical.topic3">• 安全防护技术</li>
-                        <li data-i18n="training.courses.technical.topic4">• 性能优化</li>
+                        <li data-i18n="training.courses.technical_operations.topic1"><i class="fas fa-check"></i> 彩票系统架构设计原理</li>
+                        <li data-i18n="training.courses.technical_operations.topic2"><i class="fas fa-check"></i> 数据库管理与优化</li>
+                        <li data-i18n="training.courses.technical_operations.topic3"><i class="fas fa-check"></i> 网络安全与防护技术</li>
+                        <li data-i18n="training.courses.technical_operations.topic4"><i class="fas fa-check"></i> 系统监控与故障排除</li>
+                        <li data-i18n="training.courses.technical_operations.topic5"><i class="fas fa-check"></i> 云平台部署与管理</li>
                     </ul>
                 </div>
-                
+
                 <div class="course-card">
                     <div class="course-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3 data-i18n="training.courses.sales.title">销售服务培训</h3>
-                    <p class="course-description" data-i18n="training.courses.sales.desc">销售技巧、客户服务、设备操作</p>
-                    <div class="course-details">
-                        <div class="course-duration">
-                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
-                            <span class="duration-value">3天</span>
+                    <h3 data-i18n="training.courses.business_operations.title">业务运营管理</h3>
+                    <p data-i18n="training.courses.business_operations.description">彩票业务流程管理、市场营销与客户服务专业培训</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">6天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
                         </div>
-                        <div class="course-level">
-                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
-                            <span class="level-value" data-i18n="training.courses.sales.level">一线销售</span>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.business_operations.level">中级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">30人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
                         </div>
                     </div>
+
                     <ul class="course-topics">
-                        <li data-i18n="training.courses.sales.topic1">• 彩票产品知识</li>
-                        <li data-i18n="training.courses.sales.topic2">• 销售技巧提升</li>
-                        <li data-i18n="training.courses.sales.topic3">• 设备操作培训</li>
-                        <li data-i18n="training.courses.sales.topic4">• 客户服务标准</li>
+                        <li data-i18n="training.courses.business_operations.topic1"><i class="fas fa-check"></i> 彩票产品设计与管理</li>
+                        <li data-i18n="training.courses.business_operations.topic2"><i class="fas fa-check"></i> 渠道管理与合作伙伴关系</li>
+                        <li data-i18n="training.courses.business_operations.topic3"><i class="fas fa-check"></i> 市场营销策略与推广</li>
+                        <li data-i18n="training.courses.business_operations.topic4"><i class="fas fa-check"></i> 客户关系管理</li>
+                        <li data-i18n="training.courses.business_operations.topic5"><i class="fas fa-check"></i> 数据分析与商业智能</li>
                     </ul>
                 </div>
-                
+
                 <div class="course-card">
                     <div class="course-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 data-i18n="training.courses.maintenance.title">维护保养培训</h3>
-                    <p class="course-description" data-i18n="training.courses.maintenance.desc">设备维护、故障排除、预防保养</p>
-                    <div class="course-details">
-                        <div class="course-duration">
-                            <span class="duration-label" data-i18n="training.courses.duration">培训时长:</span>
-                            <span class="duration-value">4天</span>
+                    <h3 data-i18n="training.courses.compliance_security.title">合规安全管理</h3>
+                    <p data-i18n="training.courses.compliance_security.description">法律法规遵循、风险控制与安全管理专业培训</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">4天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
                         </div>
-                        <div class="course-level">
-                            <span class="level-label" data-i18n="training.courses.level">适用级别:</span>
-                            <span class="level-value" data-i18n="training.courses.maintenance.level">技术维护</span>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.compliance_security.level">高级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">15人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
                         </div>
                     </div>
+
                     <ul class="course-topics">
-                        <li data-i18n="training.courses.maintenance.topic1">• 设备结构原理</li>
-                        <li data-i18n="training.courses.maintenance.topic2">• 日常维护保养</li>
-                        <li data-i18n="training.courses.maintenance.topic3">• 故障诊断排除</li>
-                        <li data-i18n="training.courses.maintenance.topic4">• 预防性维护</li>
+                        <li data-i18n="training.courses.compliance_security.topic1"><i class="fas fa-check"></i> 国际彩票法律法规解读</li>
+                        <li data-i18n="training.courses.compliance_security.topic2"><i class="fas fa-check"></i> 合规体系建设与管理</li>
+                        <li data-i18n="training.courses.compliance_security.topic3"><i class="fas fa-check"></i> 风险识别与控制策略</li>
+                        <li data-i18n="training.courses.compliance_security.topic4"><i class="fas fa-check"></i> 反洗钱与防欺诈</li>
+                        <li data-i18n="training.courses.compliance_security.topic5"><i class="fas fa-check"></i> 审计监督与内控制度</li>
+                    </ul>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="training.courses.customer_service.title">客户服务培训</h3>
+                    <p data-i18n="training.courses.customer_service.description">一线销售人员与客户服务专业技能提升培训</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">3天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.customer_service.level">初中级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">40人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
+                        </div>
+                    </div>
+
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.customer_service.topic1"><i class="fas fa-check"></i> 彩票产品知识培训</li>
+                        <li data-i18n="training.courses.customer_service.topic2"><i class="fas fa-check"></i> 销售技巧与沟通艺术</li>
+                        <li data-i18n="training.courses.customer_service.topic3"><i class="fas fa-check"></i> 客户关系维护</li>
+                        <li data-i18n="training.courses.customer_service.topic4"><i class="fas fa-check"></i> 投诉处理与危机应对</li>
+                        <li data-i18n="training.courses.customer_service.topic5"><i class="fas fa-check"></i> 设备操作与维护</li>
+                    </ul>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 data-i18n="training.courses.technical_maintenance.title">技术维护培训</h3>
+                    <p data-i18n="training.courses.technical_maintenance.description">设备维护、故障诊断与技术支持专业培训</p>
+                    
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">4天</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.duration">课程时长</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value" data-i18n="training.courses.technical_maintenance.level">中级</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.level">难度等级</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-value">20人</div>
+                            <div class="meta-label" data-i18n="training.courses.meta.size">班级规模</div>
+                        </div>
+                    </div>
+
+                    <ul class="course-topics">
+                        <li data-i18n="training.courses.technical_maintenance.topic1"><i class="fas fa-check"></i> 设备结构原理与维护</li>
+                        <li data-i18n="training.courses.technical_maintenance.topic2"><i class="fas fa-check"></i> 故障诊断与排除技巧</li>
+                        <li data-i18n="training.courses.technical_maintenance.topic3"><i class="fas fa-check"></i> 预防性维护策略</li>
+                        <li data-i18n="training.courses.technical_maintenance.topic4"><i class="fas fa-check"></i> 安全操作规程</li>
+                        <li data-i18n="training.courses.technical_maintenance.topic5"><i class="fas fa-check"></i> 技术文档管理</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块二：培训方式与特色 -->
-    <section class="training-methods-section">
+    <!-- 学习路径 -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="training.methods.title">培训方式与特色</h2>
-                <p class="section-subtitle" data-i18n="training.methods.subtitle">多种培训方式，满足不同学习需求</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="training.pathways.title">专业学习路径</h2>
+                <p class="section-subtitle" data-i18n="training.pathways.description">针对不同职业发展方向，设计完整的学习成长路径</p>
             </div>
-            <div class="methods-grid">
-                <div class="method-card">
-                    <div class="method-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
-                        </svg>
+
+            <div class="training-pathway">
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3 data-i18n="training.methods.online.title">在线培训</h3>
-                    <p data-i18n="training.methods.online.desc">灵活的学习时间，随时随地学习</p>
-                    <ul class="method-features">
-                        <li data-i18n="training.methods.online.feature1">• 24/7在线学习</li>
-                        <li data-i18n="training.methods.online.feature2">• 互动式课程</li>
-                        <li data-i18n="training.methods.online.feature3">• 进度跟踪</li>
-                        <li data-i18n="training.methods.online.feature4">• 证书认证</li>
+                    <h3 data-i18n="training.pathways.management.title">管理发展路径</h3>
+                    <p data-i18n="training.pathways.management.description">从基层管理到高级管理的完整培养体系</p>
+                    <ul>
+                        <li data-i18n="training.pathways.management.stage1">• 初级管理：团队管理基础</li>
+                        <li data-i18n="training.pathways.management.stage2">• 中级管理：部门运营管理</li>
+                        <li data-i18n="training.pathways.management.stage3">• 高级管理：战略规划与决策</li>
+                        <li data-i18n="training.pathways.management.stage4">• 执行层：企业治理与领导力</li>
                     </ul>
                 </div>
-                
-                <div class="method-card">
-                    <div class="method-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb"/>
-                        </svg>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 data-i18n="training.methods.offline.title">现场培训</h3>
-                    <p data-i18n="training.methods.offline.desc">面对面教学，实践操作指导</p>
-                    <ul class="method-features">
-                        <li data-i18n="training.methods.offline.feature1">• 专业讲师授课</li>
-                        <li data-i18n="training.methods.offline.feature2">• 实操演练</li>
-                        <li data-i18n="training.methods.offline.feature3">• 即时答疑</li>
-                        <li data-i18n="training.methods.offline.feature4">• 团队协作</li>
+                    <h3 data-i18n="training.pathways.technical.title">技术发展路径</h3>
+                    <p data-i18n="training.pathways.technical.description">从技术专员到技术专家的专业成长路径</p>
+                    <ul>
+                        <li data-i18n="training.pathways.technical.stage1">• 技术基础：系统操作与维护</li>
+                        <li data-i18n="training.pathways.technical.stage2">• 技术进阶：系统开发与集成</li>
+                        <li data-i18n="training.pathways.technical.stage3">• 技术专家：架构设计与优化</li>
+                        <li data-i18n="training.pathways.technical.stage4">• 技术领军：技术战略与创新</li>
                     </ul>
                 </div>
-                
-                <div class="method-card">
-                    <div class="method-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 data-i18n="training.methods.hybrid.title">混合式培训</h3>
-                    <p data-i18n="training.methods.hybrid.desc">线上线下结合，最佳学习效果</p>
-                    <ul class="method-features">
-                        <li data-i18n="training.methods.hybrid.feature1">• 理论在线学习</li>
-                        <li data-i18n="training.methods.hybrid.feature2">• 实践现场指导</li>
-                        <li data-i18n="training.methods.hybrid.feature3">• 灵活时间安排</li>
-                        <li data-i18n="training.methods.hybrid.feature4">• 个性化学习</li>
+                    <h3 data-i18n="training.pathways.business.title">业务发展路径</h3>
+                    <p data-i18n="training.pathways.business.description">从业务专员到业务总监的职业发展路径</p>
+                    <ul>
+                        <li data-i18n="training.pathways.business.stage1">• 业务基础：产品与市场认知</li>
+                        <li data-i18n="training.pathways.business.stage2">• 业务专员：销售与客户服务</li>
+                        <li data-i18n="training.pathways.business.stage3">• 业务主管：渠道管理与拓展</li>
+                        <li data-i18n="training.pathways.business.stage4">• 业务总监：战略规划与执行</li>
+                    </ul>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="training.pathways.compliance.title">合规发展路径</h3>
+                    <p data-i18n="training.pathways.compliance.description">从合规专员到首席合规官的专业发展</p>
+                    <ul>
+                        <li data-i18n="training.pathways.compliance.stage1">• 合规基础：法规政策理解</li>
+                        <li data-i18n="training.pathways.compliance.stage2">• 合规专员：制度执行与监控</li>
+                        <li data-i18n="training.pathways.compliance.stage3">• 合规经理：体系建设与管理</li>
+                        <li data-i18n="training.pathways.compliance.stage4">• 首席合规官：合规战略制定</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块三：培训师资与认证 -->
-    <section class="training-faculty-section">
+    <!-- 多样化学习模式 -->
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="training.faculty.title">专业师资与认证</h2>
-                <p class="section-subtitle" data-i18n="training.faculty.subtitle">资深专家团队，权威认证体系</p>
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="training.modes.title">多样化学习模式</h2>
+                <p class="section-subtitle" data-i18n="training.modes.description">线上线下结合，满足不同学习偏好与时间安排</p>
             </div>
-            <div class="faculty-grid">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+
+            <div class="learning-modes">
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h3 data-i18n="training.faculty.experts.title">资深专家团队</h3>
-                    <p data-i18n="training.faculty.experts.desc">行业资深专家，丰富实践经验</p>
-                    <ul class="faculty-features">
-                        <li data-i18n="training.faculty.experts.feature1">• 10+年行业经验</li>
-                        <li data-i18n="training.faculty.experts.feature2">• 国际认证资质</li>
-                        <li data-i18n="training.faculty.experts.feature3">• 实战案例分享</li>
-                        <li data-i18n="training.faculty.experts.feature4">• 持续专业发展</li>
+                    <h3 data-i18n="training.modes.classroom.title">面授培训</h3>
+                    <p data-i18n="training.modes.classroom.description">传统课堂教学模式，面对面互动学习</p>
+                    <ul>
+                        <li data-i18n="training.modes.classroom.feature1">• 专业讲师现场授课</li>
+                        <li data-i18n="training.modes.classroom.feature2">• 实时互动答疑</li>
+                        <li data-i18n="training.modes.classroom.feature3">• 小组讨论与实践</li>
+                        <li data-i18n="training.modes.classroom.feature4">• 网络同步与学员交流</li>
                     </ul>
                 </div>
-                
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
-                        </svg>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-laptop"></i>
                     </div>
-                    <h3 data-i18n="training.faculty.certification.title">权威认证体系</h3>
-                    <p data-i18n="training.faculty.certification.desc">国际认可的专业认证</p>
-                    <ul class="faculty-features">
-                        <li data-i18n="training.faculty.certification.feature1">• WLA认证培训师</li>
-                        <li data-i18n="training.faculty.certification.feature2">• ISO标准培训</li>
-                        <li data-i18n="training.faculty.certification.feature3">• 行业专业认证</li>
-                        <li data-i18n="training.faculty.certification.feature4">• 持续教育学分</li>
+                    <h3 data-i18n="training.modes.online.title">在线学习</h3>
+                    <p data-i18n="training.modes.online.description">灵活便捷的在线学习平台</p>
+                    <ul>
+                        <li data-i18n="training.modes.online.feature1">• 24/7随时随地学习</li>
+                        <li data-i18n="training.modes.online.feature2">• 多媒体互动课件</li>
+                        <li data-i18n="training.modes.online.feature3">• 学习进度智能跟踪</li>
+                        <li data-i18n="training.modes.online.feature4">• 在线考试与认证</li>
                     </ul>
                 </div>
-                
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-users-cog"></i>
                     </div>
-                    <h3 data-i18n="training.faculty.support.title">持续支持服务</h3>
-                    <p data-i18n="training.faculty.support.desc">培训后持续技术支持</p>
-                    <ul class="faculty-features">
-                        <li data-i18n="training.faculty.support.feature1">• 在线答疑平台</li>
-                        <li data-i18n="training.faculty.support.feature2">• 定期技术更新</li>
-                        <li data-i18n="training.faculty.support.feature3">• 实践指导服务</li>
-                        <li data-i18n="training.faculty.support.feature4">• 学习资源库</li>
+                    <h3 data-i18n="training.modes.blended.title">混合学习</h3>
+                    <p data-i18n="training.modes.blended.description">线上线下相结合的混合学习模式</p>
+                    <ul>
+                        <li data-i18n="training.modes.blended.feature1">• 理论在线预习</li>
+                        <li data-i18n="training.modes.blended.feature2">• 实践面授指导</li>
+                        <li data-i18n="training.modes.blended.feature3">• 项目实战演练</li>
+                        <li data-i18n="training.modes.blended.feature4">• 持续跟踪辅导</li>
+                    </ul>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 data-i18n="training.modes.corporate.title">企业定制</h3>
+                    <p data-i18n="training.modes.corporate.description">专为企业量身定制的培训方案</p>
+                    <ul>
+                        <li data-i18n="training.modes.corporate.feature1">• 需求调研与方案设计</li>
+                        <li data-i18n="training.modes.corporate.feature2">• 专属课程内容定制</li>
+                        <li data-i18n="training.modes.corporate.feature3">• 企业内训实施</li>
+                        <li data-i18n="training.modes.corporate.feature4">• 效果评估与改进</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业认证体系 -->
+    <section class="section bg-light" id="certification">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="training.certification.title">国际专业认证体系</h2>
+                <p class="section-subtitle" data-i18n="training.certification.description">获得行业权威认证，提升个人职业竞争力</p>
+            </div>
+
+            <div class="certification-grid">
+                <div class="certification-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 data-i18n="training.certification.lottery_professional.title">彩票专业人员认证</h3>
+                    <p data-i18n="training.certification.lottery_professional.description">面向彩票行业从业人员的基础专业认证</p>
+                    <ul>
+                        <li data-i18n="training.certification.lottery_professional.requirement1">• 完成基础课程学习</li>
+                        <li data-i18n="training.certification.lottery_professional.requirement2">• 通过理论知识考试</li>
+                        <li data-i18n="training.certification.lottery_professional.requirement3">• 具备6个月以上行业经验</li>
+                        <li data-i18n="training.certification.lottery_professional.requirement4">• 持续教育学分要求</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-i18n="training.certification.technical_expert.title">技术专家认证</h3>
+                    <p data-i18n="training.certification.technical_expert.description">面向技术人员的高级专业技能认证</p>
+                    <ul>
+                        <li data-i18n="training.certification.technical_expert.requirement1">• 完成技术专业课程</li>
+                        <li data-i18n="training.certification.technical_expert.requirement2">• 通过实践技能考核</li>
+                        <li data-i18n="training.certification.technical_expert.requirement3">• 具备2年以上技术经验</li>
+                        <li data-i18n="training.certification.technical_expert.requirement4">• 提交技术项目作品</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 data-i18n="training.certification.management_leader.title">管理领导者认证</h3>
+                    <p data-i18n="training.certification.management_leader.description">面向管理人员的领导力与管理能力认证</p>
+                    <ul>
+                        <li data-i18n="training.certification.management_leader.requirement1">• 完成管理课程学习</li>
+                        <li data-i18n="training.certification.management_leader.requirement2">• 通过管理案例分析</li>
+                        <li data-i18n="training.certification.management_leader.requirement3">• 具备3年以上管理经验</li>
+                        <li data-i18n="training.certification.management_leader.requirement4">• 360度评估反馈</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="training.certification.compliance_officer.title">合规官认证</h3>
+                    <p data-i18n="training.certification.compliance_officer.description">面向合规管理人员的专业资质认证</p>
+                    <ul>
+                        <li data-i18n="training.certification.compliance_officer.requirement1">• 完成合规专业课程</li>
+                        <li data-i18n="training.certification.compliance_officer.requirement2">• 通过法规知识考试</li>
+                        <li data-i18n="training.certification.compliance_officer.requirement3">• 具备法律或合规背景</li>
+                        <li data-i18n="training.certification.compliance_officer.requirement4">• 持续专业发展要求</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 师资团队 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="training.instructors.title">国际顶尖师资团队</h2>
+                <p class="section-subtitle" data-i18n="training.instructors.description">汇聚全球彩票行业顶尖专家，提供最专业的培训指导</p>
+            </div>
+
+            <div class="instructor-grid">
+                <div class="instructor-card">
+                    <div class="instructor-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 data-i18n="training.instructors.industry_experts.title">行业资深专家</h3>
+                    <p data-i18n="training.instructors.industry_experts.description">来自全球知名彩票公司的资深管理者与技术专家</p>
+                    <ul>
+                        <li data-i18n="training.instructors.industry_experts.feature1">• 20年以上行业经验</li>
+                        <li data-i18n="training.instructors.industry_experts.feature2">• 成功项目实战经验</li>
+                        <li data-i18n="training.instructors.industry_experts.feature3">• 多国市场运营经验</li>
+                        <li data-i18n="training.instructors.industry_experts.feature4">• 前沿趋势洞察能力</li>
+                    </ul>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-avatar">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 data-i18n="training.instructors.academic_professors.title">学术权威教授</h3>
+                    <p data-i18n="training.instructors.academic_professors.description">来自知名商学院与研究机构的学术专家</p>
+                    <ul>
+                        <li data-i18n="training.instructors.academic_professors.feature1">• 博士学位与教授资质</li>
+                        <li data-i18n="training.instructors.academic_professors.feature2">• 丰富的教学经验</li>
+                        <li data-i18n="training.instructors.academic_professors.feature3">• 前沿理论研究成果</li>
+                        <li data-i18n="training.instructors.academic_professors.feature4">• 国际学术声誉</li>
+                    </ul>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-avatar">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 data-i18n="training.instructors.legal_consultants.title">法律合规顾问</h3>
+                    <p data-i18n="training.instructors.legal_consultants.description">专业的法律专家与合规管理顾问</p>
+                    <ul>
+                        <li data-i18n="training.instructors.legal_consultants.feature1">• 法学博士学位</li>
+                        <li data-i18n="training.instructors.legal_consultants.feature2">• 彩票法律实务经验</li>
+                        <li data-i18n="training.instructors.legal_consultants.feature3">• 国际法规比较研究</li>
+                        <li data-i18n="training.instructors.legal_consultants.feature4">• 合规体系建设专长</li>
+                    </ul>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-avatar">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 data-i18n="training.instructors.technical_architects.title">技术架构师</h3>
+                    <p data-i18n="training.instructors.technical_architects.description">顶尖的技术专家与系统架构师</p>
+                    <ul>
+                        <li data-i18n="training.instructors.technical_architects.feature1">• 计算机科学硕士以上学历</li>
+                        <li data-i18n="training.instructors.technical_architects.feature2">• 大型系统架构设计经验</li>
+                        <li data-i18n="training.instructors.technical_architects.feature3">• 前沿技术应用实践</li>
+                        <li data-i18n="training.instructors.technical_architects.feature4">• 开源项目贡献经历</li>
                     </ul>
                 </div>
             </div>
@@ -295,14 +786,14 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title" data-i18n="training.cta.title">开始您的专业培训</h2>
-                <p class="cta-subtitle" data-i18n="training.cta.subtitle">联系我们，获取专业的彩票行业培训服务</p>
-                <div class="cta-actions">
-                    <a href="../contact.html" class="btn btn-primary" data-i18n="training.cta.contact">立即咨询</a>
-                    <a href="../products.html" class="btn btn-outline" data-i18n="training.cta.products">查看其他产品</a>
+            <div class="text-center">
+                <h2 class="section-title" data-i18n="training.cta.title">开启您的专业成长之旅</h2>
+                <p class="section-subtitle" data-i18n="training.cta.description">联系我们的培训顾问，制定个性化学习计划</p>
+                <div class="hero-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="training.cta.btn_contact">立即咨询</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="training.cta.btn_products">查看其他服务</a>
                 </div>
             </div>
         </div>
@@ -313,16 +804,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
                     <p>Email: info@lottobridge.com</p>
                     <p>Tel: +86 400-888-8888</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
                     <ul>
                         <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
                         <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
@@ -331,16 +822,30 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="../js/languages/zh.js"></script>
+    <script src="../js/languages/en.js"></script>
+    <script src="../js/languages/fr.js"></script>
+    <script src="../js/languages/es.js"></script>
+    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ru.js"></script>
+    <script src="../js/languages.js"></script>
     <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         // 初始化国际化
         document.addEventListener('DOMContentLoaded', function() {
-            initI18n();
+            if (window.i18n) {
+                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
+            } else {
+                console.warn('多语言系统未初始化');
+            }
         });
     </script>
 </body>

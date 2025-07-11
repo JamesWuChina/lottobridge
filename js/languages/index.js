@@ -1,12 +1,10 @@
 // 多语言系统主文件
-// 导入所有语言包
-import zh from './zh.js';
-import en from './en.js';
-import fr from './fr.js';
-import es from './es.js';
-import ko from './ko.js';
-import ar from './ar.js';
-import ru from './ru.js';
+// 等待所有语言包加载完成后初始化
+
+// 检查语言包是否已加载
+function checkLanguagePacksLoaded() {
+    return typeof window.zh !== 'undefined' && typeof window.en !== 'undefined';
+}
 
 // 语言配置
 const languageConfig = {
@@ -15,49 +13,14 @@ const languageConfig = {
         nativeName: '中文',
         flag: '🇨🇳',
         direction: 'ltr',
-        data: zh
+        getData: () => window.zh || {}
     },
     en: {
         name: 'English',
         nativeName: 'English',
         flag: '🇺🇸',
         direction: 'ltr',
-        data: en
-    },
-    fr: {
-        name: 'Français',
-        nativeName: 'Français',
-        flag: '🇫🇷',
-        direction: 'ltr',
-        data: fr
-    },
-    es: {
-        name: 'Español',
-        nativeName: 'Español',
-        flag: '🇪🇸',
-        direction: 'ltr',
-        data: es
-    },
-    ko: {
-        name: '한국어',
-        nativeName: '한국어',
-        flag: '🇰🇷',
-        direction: 'ltr',
-        data: ko
-    },
-    ar: {
-        name: 'العربية',
-        nativeName: 'العربية',
-        flag: '🇸🇦',
-        direction: 'rtl',
-        data: ar
-    },
-    ru: {
-        name: 'Русский',
-        nativeName: 'Русский',
-        flag: '🇷🇺',
-        direction: 'ltr',
-        data: ru
+        getData: () => window.en || {}
     }
 };
 
@@ -81,7 +44,11 @@ function setLanguage(langCode) {
 // 获取语言数据
 function getLanguageData(langCode = null) {
     const currentLang = langCode || getCurrentLanguage();
-    return languageConfig[currentLang]?.data || languageConfig[defaultLanguage].data;
+    const config = languageConfig[currentLang];
+    if (config && config.getData) {
+        return config.getData();
+    }
+    return languageConfig[defaultLanguage].getData();
 }
 
 // 获取语言配置
@@ -94,7 +61,10 @@ function getLanguageConfig(langCode = null) {
 function getAvailableLanguages() {
     return Object.keys(languageConfig).map(code => ({
         code,
-        ...languageConfig[code]
+        name: languageConfig[code].name,
+        nativeName: languageConfig[code].nativeName,
+        flag: languageConfig[code].flag,
+        direction: languageConfig[code].direction
     }));
 }
 
@@ -118,6 +88,12 @@ function translate(key, langCode = null) {
 
 // 初始化语言系统
 function initLanguageSystem() {
+    if (!checkLanguagePacksLoaded()) {
+        console.warn('Language packs not loaded yet, retrying...');
+        setTimeout(initLanguageSystem, 100);
+        return;
+    }
+    
     const currentLang = getCurrentLanguage();
     const config = getLanguageConfig(currentLang);
     
@@ -127,12 +103,14 @@ function initLanguageSystem() {
     
     // 更新页面标题
     const title = translate('page.title', currentLang);
-    if (title) {
+    if (title && title !== 'page.title') {
         document.title = title;
     }
     
     // 更新所有带有 data-i18n 属性的元素
     updatePageContent(currentLang);
+    
+    console.log('多语言系统已初始化，当前语言:', currentLang);
 }
 
 // 更新页面内容
@@ -167,7 +145,7 @@ function switchLanguage(langCode) {
         
         // 更新页面标题
         const title = translate('page.title', langCode);
-        if (title) {
+        if (title && title !== 'page.title') {
             document.title = title;
         }
         
@@ -205,11 +183,9 @@ if (typeof window !== 'undefined') {
     window.languageConfig = languageConfig;
 }
 
-// 模块导出
+// 模块导出（兼容性）
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = i18n;
 } else if (typeof exports !== 'undefined') {
     exports.i18n = i18n;
-}
-
-export default i18n; 
+} 

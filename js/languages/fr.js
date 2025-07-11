@@ -15,6 +15,1126 @@ const fr = {
         contact: 'Nous Contacter'
     },
     // 市场调研报告精选
+    // Système de Loterie Numérique
+    digital: {
+        title: 'Solution de Système de Loterie Numérique - LottoBridge',
+        hero: {
+            title: 'Solution de Système de Loterie Numérique',
+            subtitle: 'Approche intégrée pour construire des capacités de jeu, de sécurité, de conformité et de livraison pour vous aider à déployer rapidement des systèmes de loterie modernes',
+            getSolution: 'Obtenir une Solution Personnalisée',
+            viewProducts: 'Voir Autres Produits',
+            imageText: 'Visuel du Système de Loterie Numérique'
+        },
+        gameTypes: {
+            title: 'Support de Jeux Principaux',
+            subtitle: 'Support pour les jeux de loterie grand public mondiaux pour répondre aux différents besoins du marché',
+            lotto: {
+                icon: 'Icône Loto',
+                title: 'Jeux de Loto Classiques',
+                desc: 'Support pour 5/35, 6/45 et autres jeux de loto classiques, adaptés aux marchés matures d\'Europe et d\'Amérique du Nord',
+                example1: 'EuroMillions Européen',
+                example2: 'Powerball US'
+            },
+            number: {
+                icon: 'Icône Numéro',
+                title: 'Jeux d\'Arrangement de Numéros',
+                desc: '3D, 4D et autres jeux d\'arrangement de numéros, populaires sur les marchés asiatiques',
+                example1: 'Singapore 4D',
+                example2: 'Malaysia Magnum'
+            },
+            daily: {
+                icon: 'Icône Calendrier',
+                title: 'Jeux de Tirage Quotidien',
+                desc: 'Horaires de tirage quotidiens fixes pour augmenter la fréquence de participation et la fidélité des utilisateurs',
+                example1: 'Daily Pick',
+                example2: 'Cash 3'
+            },
+            fast: {
+                icon: 'Icône Rapide',
+                title: 'Jeux à Haute Fréquence',
+                desc: 'Tirages toutes les 5-15 minutes pour répondre aux demandes du marché rapide',
+                example1: 'Keno',
+                example2: 'Quick Draw'
+            }
+        },
+        systemFeatures: {
+            title: 'Architecture du Système et Points Forts',
+            subtitle: 'Couverture complète de tous les aspects des opérations de loterie, garantissant la stabilité et la fiabilité du système',
+            sales: {
+                title: 'Gestion des Ventes de Loterie',
+                desc: 'Gestion des sites, allocation des pools, contrôle des limites, gestion complète du processus de vente',
+                item1: '✓ Gestion d\'agents multi-niveaux',
+                item2: '✓ Surveillance des ventes en temps réel',
+                item3: '✓ Paramétrage intelligent des limites'
+            },
+            draw: {
+                title: 'Gestion des Tirages',
+                desc: 'Génération de données de tirage, approbation de processus, interface de notarisation, garantissant des tirages équitables et transparents',
+                item1: '✓ Algorithmes de génération de nombres aléatoires',
+                item2: '✓ Processus d\'approbation multi-niveaux',
+                item3: '✓ Intégration de notarisation tierce'
+            },
+            prize: {
+                title: 'Gestion des Prix',
+                desc: 'Règles de prix, mécanisme de liste noire, contrôle des risques, garantissant la sécurité des fonds',
+                item1: '✓ Vérification automatique des prix',
+                item2: '✓ Détection anti-blanchiment',
+                item3: '✓ Processus de révision des gros lots'
+            },
+            finance: {
+                title: 'Gestion Financière',
+                desc: 'Flux de fonds, règlement des commissions, rapports financiers, système financier complet',
+                item1: '✓ Surveillance des fonds en temps réel',
+                item2: '✓ Règlement automatique des commissions',
+                item3: '✓ Rapports financiers multi-dimensionnels'
+            },
+            risk: {
+                title: 'Gestion des Risques',
+                desc: 'Détection d\'anomalies, avertissement de risques, surveillance de la conformité, contrôle des risques complet',
+                item1: '✓ Détection intelligente d\'anomalies',
+                item2: '✓ Avertissement de risques en temps réel',
+                item3: '✓ Surveillance de la conformité'
+            },
+            analytics: {
+                title: 'Analyse des Données',
+                desc: 'Analyse des ventes, comportement des utilisateurs, tendances du marché, prise de décision basée sur les données',
+                item1: '✓ Tableau de bord de données en temps réel',
+                item2: '✓ Analyse du comportement des utilisateurs',
+                item3: '✓ Analyse prédictive'
+            }
+        },
+        techArchitecture: {
+            title: 'Architecture Technique et Sécurité',
+            subtitle: 'Utilisation d\'une architecture de microservices pour garantir une haute disponibilité et sécurité du système',
+            microservices: {
+                title: 'Architecture de Microservices',
+                desc: 'Conception modulaire, déploiement indépendant, facile à faire évoluer et à maintenir',
+                item1: '• Découplage des services',
+                item2: '• Mise à l\'échelle indépendante',
+                item3: '• Isolation des pannes'
+            },
+            security: {
+                title: 'Protection de Sécurité',
+                desc: 'Protection de sécurité multi-couches pour garantir la sécurité des données et du système',
+                item1: '• Chiffrement des données',
+                item2: '• Authentification d\'identité',
+                item3: '• Contrôle d\'accès'
+            },
+            highAvailability: {
+                title: 'Haute Disponibilité',
+                desc: '99.9% de disponibilité du système, garantissant la continuité des affaires',
+                item1: '• Équilibrage de charge',
+                item2: '• Basculement',
+                item3: '• Récupération automatique'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Projet de Système de Loterie Numérique',
+            subtitle: 'Contactez-nous pour obtenir des solutions professionnelles de système de loterie numérique',
+            contact: 'Contactez Maintenant',
+            products: 'Voir Autres Produits'
+        }
+    },
+
+    // Système de Paris Sportifs
+    sports: {
+        title: 'Système de Paris Sportifs - LottoBridge',
+        hero: {
+            title: 'Solution de Système de Paris Sportifs',
+            subtitle: 'Plateforme de paris sportifs multi-canaux, conformité sécurisée, personnalisation flexible',
+            viewFeatures: 'Points Forts du Système',
+            contact: 'Consulter Solution',
+            imageText: 'Affichage du Système de Paris Sportifs'
+        },
+        features: {
+            title: 'Points Forts des Fonctionnalités Principales',
+            subtitle: 'Support pour plusieurs types de jeux, adaptation flexible aux marchés mondiaux',
+            odds: {
+                title: 'Moteur de Cotes Diversifié',
+                desc: 'Support pour les cotes fixes, cotes flottantes, handicap asiatique et autres modes'
+            },
+            live: {
+                title: 'Données d\'Événements en Temps Réel',
+                desc: 'Sources de données d\'événements grand public mondiales intégrées, mises à jour en temps réel'
+            },
+            security: {
+                title: 'Sécurité et Conformité',
+                desc: 'Système de contrôle des risques et de conformité multi-niveaux, garantissant la sécurité des fonds et des données'
+            },
+            custom: {
+                title: 'Personnalisation Flexible',
+                desc: 'Support pour plusieurs langues, devises et accès multi-canaux'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Nouvelle Expérience de Paris Sportifs',
+            subtitle: 'Contactez-nous pour obtenir des solutions professionnelles de système de paris sportifs',
+            contact: 'Contactez Maintenant',
+            products: 'Voir Autres Produits'
+        }
+    },
+
+    // Terminaux
+    terminals: {
+        title: 'Équipements Terminaux de Loterie - LottoBridge',
+        hero: {
+            title: 'Solution d\'Équipements Terminaux de Loterie',
+            subtitle: 'Équipements terminaux diversifiés pour répondre aux besoins de différents scénarios de vente',
+            viewProducts: 'Voir Équipements',
+            contact: 'Consulter Solution',
+            imageText: 'Affichage des Équipements Terminaux'
+        },
+        types: {
+            title: 'Types d\'Équipements Terminaux',
+            subtitle: 'Couvrant les scénarios d\'application de vente au détail, mobile, libre-service et autres',
+            retail: {
+                title: 'Terminal de Vente au Détail',
+                desc: 'Adapté aux points de vente de loterie, supportant plusieurs types de billets'
+            },
+            mobile: {
+                title: 'Terminal Mobile',
+                desc: 'Design portable, adapté aux ventes mobiles et aux scénarios extérieurs'
+            },
+            kiosk: {
+                title: 'Terminal Libre-Service',
+                desc: 'Achat et échange de billets en libre-service, améliorant l\'expérience utilisateur'
+            }
+        },
+        features: {
+            title: 'Points Forts des Fonctionnalités des Équipements',
+            subtitle: 'Design intelligent, garantissant un fonctionnement efficace',
+            printing: {
+                title: 'Impression Haute Vitesse',
+                desc: 'Support pour les méthodes d\'impression thermique, matricielle et autres'
+            },
+            security: {
+                title: 'Protection de Sécurité',
+                desc: 'Chiffrement multi-couches, garantissant la sécurité des données et des transactions'
+            },
+            connectivity: {
+                title: 'Connexions Multiples',
+                desc: 'Support pour les méthodes de communication filaires, sans fil, 4G/5G et autres'
+            }
+        },
+        cta: {
+            title: 'Commencez Une Nouvelle Expérience de Terminal Intelligent',
+            subtitle: 'Contactez-nous pour obtenir des solutions professionnelles d\'équipements terminaux de loterie',
+            contact: 'Contactez Maintenant',
+            products: 'Voir Autres Produits'
+        }
+    },
+
+    // Page Produits et Services
+    products: {
+        page: {
+            title: 'Produits et Services | LottoBridge'
+        },
+        hero: {
+            title: 'Centre de Produits',
+            description: 'Couverture complète des systèmes de loterie mondiaux et de la chaîne d\'approvisionnement matérielle',
+            btn_view_services: 'Voir les Solutions Produits',
+            btn_contact: 'Nous Contacter'
+        },
+        nav: {
+            systems: 'Systèmes',
+            terminals: 'Terminaux',
+            printing: 'Impression',
+            services: 'Services'
+        },
+        services: {
+            title: 'Nos Produits et Services Principaux',
+            description: 'LottoBridge fournit non seulement un catalogue de produits, mais un package de solutions de loterie implémentables tout-en-un de "recherche, conception, systèmes, équipement, formation, export, coopération"'
+        },
+        cases: {
+            title: 'Histoires de Succès',
+            description: 'Comment les clients mondiaux atteignent la croissance commerciale grâce aux solutions LottoBridge',
+            mexico: {
+                title: 'Mise à Niveau du Système d\'Opérateur de Loterie Privé au Mexique',
+                description: 'Fourni une mise à niveau complète du système de vente et 2 000 équipements terminaux pour l\'opérateur de loterie mexicain leader, soutenant l\'expansion commerciale vers 5 000 points de vente à l\'échelle nationale.'
+            },
+            south_africa: {
+                title: 'Approvisionnement en Billets Instantanés de la Loterie Nationale d\'Afrique du Sud',
+                description: 'Fourni 120 millions de billets instantanés personnalisés pour le Bureau de la Loterie Nationale d\'Afrique du Sud, avec 12 designs à thème culturel local, livrés dans les 6 mois.'
+            },
+            vietnam: {
+                title: 'Projet de Transformation Numérique de la Loterie du Vietnam',
+                description: 'Assisté la Compagnie de Loterie du Vietnam dans l\'achèvement de la transformation numérique, déployé des systèmes de loterie cloud et formé 300 techniciens, réalisant une augmentation des ventes de 40%.'
+            }
+        },
+        cta: {
+            title: 'Prêt à Mettre à Niveau Votre Entreprise de Loterie?',
+            description: 'Que vous soyez une agence gouvernementale, un opérateur privé ou un fournisseur de technologie, LottoBridge peut fournir les solutions les plus adaptées pour vous',
+            btn_contact: 'Contactez Maintenant',
+            btn_download: 'Télécharger le Manuel de Service'
+        }
+    },
+
+    // Page Perspectives Industrielles
+    insights: {
+        page: {
+            title: 'Perspectives Industrielles | LottoBridge'
+        },
+        hero: {
+            title: 'Analyse des Tendances de l\'Industrie Mondiale de la Loterie et Perspectives Professionnelles',
+            description: 'Fournissant une intelligence industrielle professionnelle et continuellement mise à jour, couvrant les réglementations politiques, les tendances technologiques, la dynamique du marché et les innovations de jeu',
+            btn_view_trends: 'Voir les Rapports de Tendance',
+            btn_subscribe: 'S\'abonner au Bulletin Industriel'
+        },
+        nav_categories: {
+            policy_tracking: '📜 Suivi des Politiques et Réglementations',
+            market_trends: '📈 Rapports de Tendances du Marché',
+            tech_trends: '🧠 Analyse des Tendances Technologiques',
+            case_studies: '🧩 Études de Cas',
+            industry_reports: '📊 Rapports Industriels',
+            webinars: '🎥 Webinaires Vidéo'
+        },
+        content: {
+            title: 'Perspectives Industrielles',
+            subtitle: 'Analyse des tendances de l\'industrie mondiale de la loterie et perspectives professionnelles'
+        },
+        categories: {
+            policy: 'Mises à Jour Politiques',
+            tech: 'Tendances Technologiques',
+            market: 'Tendances du Marché',
+            innovation: 'Innovation de Jeu'
+        },
+        articles: {
+            keno: {
+                title: 'Analyse du Potentiel des Jeux Keno en Asie du Sud-Est 2025',
+                summary: 'L\'assouplissement des politiques en Thaïlande et au Vietnam fait des jeux Keno une percée potentielle pour la loterie numérique, avec une taille de marché attendue de croître de 300%.'
+            },
+            africa: {
+                title: 'Analyse des Opportunités de Développement de la Loterie Numérique en Afrique',
+                summary: 'Avec l\'adoption du nouveau projet de loi du Nigeria et des paiements mobiles au Kenya, le marché de la loterie numérique africaine entre dans une période dorée.'
+            },
+            ai: {
+                title: 'Mise à Niveau du Système de Contrôle des Risques de Loterie Pilotée par IA',
+                summary: 'Les algorithmes d\'apprentissage automatique excellent dans la détection anti-fraude et d\'anomalies, réduisant les faux positifs de 85% et améliorant la précision de 40%.'
+            },
+            blockchain: {
+                title: 'Solutions de Transparence de Loterie Blockchain',
+                summary: 'Les processus de tirage basés sur la blockchain garantissent l\'équité et la transparence de chaque tirage, améliorant significativement la confiance des utilisateurs.'
+            },
+            latam: {
+                title: 'Progrès de la Numérisation du Marché de la Loterie en Amérique Latine',
+                summary: 'Le ratio des ventes de loterie numérique au Mexique, au Brésil et dans d\'autres pays augmente rapidement, attendu d\'atteindre 60% d\'ici 2025.'
+            },
+            japan: {
+                title: 'Analyse de l\'Innovation du Marché des Billets Instantanés au Japon',
+                summary: 'Le Japon lance des produits de billets instantanés intégrés NFT, augmentant significativement la participation des jeunes utilisateurs et fournissant de nouvelles idées pour les marchés mondiaux.'
+            }
+        },
+        read_more: 'Lire Plus'
+    },
+
+    // Page Services d'Impression
+    printing: {
+        page: {
+            title: 'Solutions d\'Impression de Loterie Professionnelles | LottoBridge'
+        },
+        hero: {
+            title: 'Solutions d\'Impression de Loterie de Classe Mondiale',
+            description: 'Utilisant la technologie d\'impression internationale de pointe et les processus d\'impression multi-sécurité, fournissant des services d\'impression sûrs et fiables pour les opérateurs de loterie mondiaux',
+            btn_services: 'Voir les Capacités de Service',
+            btn_quality: 'Assurance Qualité'
+        },
+        services: {
+            title: 'Capacités de Service d\'Impression Principales',
+            description: 'Des billets instantanés traditionnels à la loterie numérique, fournissant des solutions d\'impression professionnelles complètes',
+            specifications: 'Spécifications Techniques',
+            instant_tickets: {
+                title: 'Impression de Billets Instantanés',
+                description: 'Impression professionnelle de cartes à gratter et billets détachables, supportant la conception de motifs complexes et technologies de sécurité multiples',
+                feature1: 'Processus offset 8 couleurs + 2 couleurs tons directs',
+                feature2: 'Technologie de revêtement de sécurité optique variable UV',
+                feature3: 'Micro-texte + impression arc-en-ciel',
+                feature4: 'Revêtement à gratter à base d\'eau écologique',
+                feature5: 'Production en lots capacité mensuelle 5 millions de feuilles',
+                specs: 'Papier: 250-400g/m² | Taille: 50×80mm à 150×200mm | Précision: ±0.1mm'
+            },
+            thermal_tickets: {
+                title: 'Impression de Billets Thermiques',
+                description: 'Rouleaux de papier thermique de loterie numérique, supportant l\'impression haute vitesse et reconnaissance de codes-barres, garantie de conservation 10+ ans',
+                feature1: 'Revêtement thermique importé d\'Allemagne',
+                feature2: 'Formule résistante à l\'eau, huile et alcool',
+                feature3: 'Impression de codes QR haute densité',
+                feature4: 'Conception de sécurité de fond spécial',
+                feature5: 'Production continue épissure sans couture',
+                specs: 'Papier: 55-120g/m² | Largeur de rouleau: 57-110mm | Longueur: 30-500 mètres'
+            },
+            security_printing: {
+                title: 'Impression Anti-contrefaçon de Sécurité',
+                description: 'Technologie d\'impression de sécurité de niveau bancaire, mesures anti-contrefaçon multiples, assurant la sécurité et l\'autorité de la loterie',
+                feature1: 'Étiquettes de sécurité holographiques à chaud',
+                feature2: 'Technologie d\'incorporation de fil de sécurité',
+                feature3: 'Encre de sécurité fluorescente UV',
+                feature4: 'Motif de sécurité de transmission infrarouge',
+                feature5: 'Gestion de cryptage de numéro de série',
+                specs: 'Niveau de sécurité: Niveau bancaire | Méthode de détection: UV + infrarouge + loupe'
+            },
+            custom_design: {
+                title: 'Services de Conception Personnalisés',
+                description: 'Équipe de conception professionnelle fournissant une conception créative localisée, intégrant des éléments culturels et caractéristiques de marque',
+                feature1: 'Intégration d\'éléments culturels locaux',
+                feature2: 'Conception d\'identité visuelle de marque',
+                feature3: 'Adaptation de version multilingue',
+                feature4: 'Personnalisation de thème de festival',
+                feature5: 'Aperçu d\'effet 3D',
+                specs: 'Cycle de conception: 5-10 jours ouvrables | Révisions: 3 révisions gratuites | Format: AI/PDF'
+            }
+        },
+        process: {
+            title: 'Processus de Production Avancé',
+            description: 'Suivant strictement les normes d\'impression internationales ISO 12647, assurant la qualité de chaque billet de loterie',
+            design: {
+                title: 'Conception Créative et Révision',
+                description: 'Création de concepteur professionnel, révisions multiples assurant que la conception répond au positionnement de marque et aux exigences réglementaires',
+                step1: 'Analyse des exigences et conception conceptuelle',
+                step2: 'Correspondance des couleurs et conception de mise en page',
+                step3: 'Conception d\'intégration d\'éléments de sécurité',
+                step4: 'Confirmation client et révision'
+            },
+            prepress: {
+                title: 'Traitement de Prépresse',
+                description: 'Technologie de fabrication de plaques haute précision, assurant la clarté d\'image d\'impression et la reproduction des couleurs',
+                step1: 'Entrée de numérisation haute résolution',
+                step2: 'Gestion des couleurs et correction',
+                step3: 'Technologie de fabrication de plaques directes CTP',
+                step4: 'Inspection de qualité de plaque d\'impression'
+            },
+            printing: {
+                title: 'Production d\'Impression de Précision',
+                description: 'Presse d\'impression Heidelberg allemande, 8 couleurs + couleur directe formation en une fois, contrôle d\'erreur dans ±0.1mm',
+                step1: 'Contrôle d\'environnement à température et humidité constantes',
+                step2: 'Surveillance de densité en ligne en temps réel',
+                step3: 'Ajustement automatique de précision de registre',
+                step4: 'Correspondance de couleur précise d\'encre couleur directe'
+            },
+            finishing: {
+                title: 'Post-traitement',
+                description: 'Revêtement de sécurité, formage de découpe, emballage d\'inspection de qualité, contrôle de qualité strict dans chaque processus',
+                step1: 'Traitement de revêtement UV/à base d\'eau',
+                step2: 'Formage de découpe de précision',
+                step3: 'Fixation d\'étiquette de sécurité',
+                step4: 'Emballage de comptage automatique'
+            },
+            quality: {
+                title: 'Certification de Test de Qualité',
+                description: 'Processus d\'inspection de qualité multiples, assurant que chaque lot répond aux normes internationales et aux exigences des clients',
+                step1: 'Confirmation d\'inspection de première pièce',
+                step2: 'Vérification d\'échantillonnage de lot',
+                step3: 'Test d\'effet de sécurité',
+                step4: 'Émission de rapport d\'inspection de qualité'
+            },
+            delivery: {
+                title: 'Emballage et Livraison Sécurisés',
+                description: 'Emballage professionnel et suivi complet, assurant que les produits atteignent en toute sécurité les emplacements désignés par les clients',
+                step1: 'Emballage résistant à l\'humidité et à la pression',
+                step2: 'Gestion d\'enregistrement de numéro de série',
+                step3: 'Livraison logistique professionnelle',
+                step4: 'Acceptation de confirmation de livraison'
+            }
+        },
+        quality: {
+            title: 'Système d\'Assurance Qualité International',
+            description: 'Passant de multiples certifications internationales, établissant un système de gestion de la qualité complet',
+            metrics: {
+                accuracy: {
+                    title: 'Taux de Qualification du Produit',
+                    description: 'Inspection de qualité stricte assurant un taux de qualification ultra-élevé'
+                },
+                precision: {
+                    title: 'Précision de Registre',
+                    description: 'Équipement allemand assurant un registre précis'
+                },
+                durability: {
+                    title: 'Période de Conservation',
+                    description: 'Matériaux de qualité assurant une conservation à long terme'
+                },
+                capacity: {
+                    title: 'Feuilles de Production Mensuelle',
+                    description: 'Production à grande échelle répondant aux demandes'
+                }
+            },
+            certifications: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: 'Certification de système de gestion de la qualité'
+                },
+                fsc: {
+                    title: 'Certification Forestière FSC',
+                    description: 'Certification de gestion forestière durable'
+                },
+                security: {
+                    title: 'Certification d\'Impression de Sécurité',
+                    description: 'Qualification d\'impression de sécurité autorisée par le gouvernement'
+                },
+                environmental: {
+                    title: 'Certification de Norme Environnementale',
+                    description: 'Normes de matériaux environnementaux de l\'UE'
+                }
+            }
+        },
+        cases: {
+            title: 'Cas de Succès Mondiaux',
+            description: 'Fournissant des services d\'impression professionnels pour 50+ pays mondialement, impression cumulative de plus de 1 milliard de billets de loterie',
+            mexico: {
+                title: 'Projet de Loterie Nationale du Mexique',
+                description: 'Fournissant 50 millions de services d\'impression de billets instantanés pour le Bureau de Loterie Nationale du Mexique',
+                volume: 'Quantité d\'impression: 50 millions de feuilles',
+                duration: 'Cycle d\'achèvement: 45 jours',
+                varieties: 'Types de billets: 12 variétés'
+            },
+            nigeria: {
+                title: 'Projet de Cartes à Gratter du Nigéria',
+                description: 'Conception de thème culturel local, capacité de production mensuelle atteignant 8 millions de feuilles',
+                themes: 'Thèmes culturels: 8 séries',
+                languages: 'Versions linguistiques: 3 types',
+                security: 'Niveau de sécurité: Niveau bancaire'
+            },
+            vietnam: {
+                title: 'Projet de Rouleau de Billets Thermiques du Vietnam',
+                description: 'Impression de codes QR haute densité, supportant le système de loterie numérique national',
+                specification: 'Spécification: 80mm×80mm',
+                monthly: 'Approvisionnement mensuel: 2 millions de mètres',
+                quality: 'Grade de qualité: Niveau bancaire'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Projet d\'Impression Professionnel',
+            description: 'Contactez notre équipe d\'experts pour obtenir des solutions d\'impression personnalisées',
+            btn_contact: 'Contactez Maintenant',
+            btn_products: 'Voir Autres Produits'
+        }
+    },
+
+    // Page Consommables Thermiques
+    thermal: {
+        page: {
+            title: 'Solutions Consommables Thermiques Professionnelles | LottoBridge'
+        },
+        hero: {
+            title: 'Solutions d\'Approvisionnement en Consommables Thermiques Professionnelles',
+            description: 'Matériaux importés d\'Allemagne, technologie de fabrication japonaise, fournissant des rouleaux de papier thermique et consommables de ruban de haute qualité pour l\'équipement de terminal de loterie mondial',
+            btn_products: 'Voir Série de Produits',
+            btn_compatibility: 'Compatibilité des Appareils'
+        },
+        products: {
+            title: 'Série de Produits Consommables Thermiques Professionnels',
+            description: 'Couvrant tous les besoins de spécifications de l\'industrie de la loterie, assurant des effets d\'impression de haute qualité et une conservation à long terme',
+            specifications: {
+                parameter: 'Paramètre',
+                value: 'Spécification',
+                width: 'Largeur',
+                length: 'Longueur',
+                weight: 'Poids du Papier',
+                core_diameter: 'Diamètre du Noyau',
+                shelf_life: 'Durée de Conservation',
+                colors: 'Couleurs',
+                activation_temp: 'Température d\'Activation',
+                applications: 'Applications',
+                width_range: 'Plage de Largeur',
+                length_range: 'Plage de Longueur',
+                coating_options: 'Options de Revêtement',
+                production_time: 'Temps de Production',
+                min_order: 'Commande Minimum'
+            },
+            features: {
+                title: 'Caractéristiques du Produit'
+            },
+            standard_series: {
+                title: 'Papier Thermique Série Standard',
+                description: 'Adapté à l\'équipement de terminal de loterie général, avec une excellente clarté d\'impression et un rapport coût-efficacité',
+                feature1: 'Impression haute définition',
+                feature2: 'Résistant à l\'eau et aux huiles',
+                feature3: 'Conservation stable à long terme',
+                feature4: 'Optimisation du rapport coût-efficacité'
+            },
+            premium_series: {
+                title: 'Papier Thermique Série Premium',
+                description: 'Qualité de niveau bancaire, période de conservation ultra-longue, adapté aux terminaux libre-service haut de gamme et impression de billets importants',
+                feature1: 'Normes de qualité de niveau bancaire',
+                feature2: 'Technologie anti-décoloration',
+                feature3: 'Traitement antistatique',
+                feature4: 'Période de conservation ultra-longue'
+            },
+            color_series: {
+                title: 'Série de Papier Thermique Couleur',
+                description: 'Technologie d\'impression thermique multicolore, supportant l\'impression à deux et trois couleurs, améliorant les effets visuels des billets',
+                colors: 'Noir/Rouge/Bleu',
+                applications: 'Billets importants, loterie',
+                feature1: 'Impression synchrone multicolore',
+                feature2: 'Saturation de couleur élevée',
+                feature3: 'Support d\'application anti-contrefaçon',
+                feature4: 'Amélioration de l\'effet visuel'
+            },
+            custom_series: {
+                title: 'Produits Série Personnalisés',
+                description: 'Production personnalisée selon les besoins spéciaux des clients, supportant des spécifications spéciales, revêtements et exigences fonctionnelles',
+                coating_options: 'Standard/Imperméable/Résistant chimique',
+                production_time: '15-30 jours',
+                min_order: '1000 rouleaux',
+                feature1: 'Entièrement personnalisable',
+                feature2: 'Revêtements fonctionnels spéciaux',
+                feature3: 'Impression de logo de marque',
+                feature4: 'Services de support technique'
+            }
+        },
+        compatibility: {
+            title: 'Garantie de Compatibilité d\'Appareil Complète',
+            description: 'Compatibilité parfaite avec l\'équipement de terminal de loterie principal mondial, assurant des effets d\'impression stables et fiables',
+            desktop_terminals: {
+                title: 'Équipement de Terminal de Bureau',
+                description: 'Compatible avec les terminaux de vente de loterie de bureau principaux',
+                brand1: 'Série Epson TM',
+                brand2: 'Série Star TSP',
+                brand3: 'Série Citizen CT',
+                brand4: 'Autres marques principales'
+            },
+            mobile_terminals: {
+                title: 'Équipement de Terminal Mobile',
+                description: 'Supportant les appareils d\'impression portables et de poche',
+                brand1: 'Imprimantes mobiles Zebra',
+                brand2: 'Honeywell portable',
+                brand3: 'Terminaux de poche Brother',
+                brand4: 'Appareils mobiles personnalisés'
+            },
+            kiosk_terminals: {
+                title: 'Équipement de Terminal Libre-service',
+                description: 'Compatible avec divers modules d\'impression de terminal libre-service',
+                brand1: 'Modules d\'impression personnalisés',
+                brand2: 'Appareils libre-service Fujitsu',
+                brand3: 'Série NCR Kiosk',
+                brand4: 'Terminaux libre-service personnalisés'
+            },
+            pos_systems: {
+                title: 'Systèmes de Caisse POS',
+                description: 'Adapté aux systèmes de caisse des points de vente de loterie',
+                brand1: 'Terminaux POS UnionPay',
+                brand2: 'Caisses enregistreuses Newland',
+                brand3: 'Appareils POS SanMi',
+                brand4: 'Marques POS étrangères'
+            }
+        },
+        quality: {
+            title: 'Certification de Norme de Qualité Internationale',
+            description: 'Production stricte selon les normes internationales, passant de multiples certifications faisant autorité, assurant la qualité du produit',
+            standards: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: 'Certification de système de gestion de la qualité',
+                    item1: 'Contrôle de qualité de processus complet',
+                    item2: 'Mécanisme d\'amélioration continue',
+                    item3: 'Garantie de satisfaction client'
+                },
+                environmental: {
+                    title: 'Certification Environnementale',
+                    description: 'Certification de matériau environnemental vert',
+                    item1: 'Certification de gestion forestière FSC',
+                    item2: 'Certification RoHS de l\'UE',
+                    item3: 'Matériaux environnementaux non toxiques'
+                },
+                food_safety: {
+                    title: 'Sécurité de Qualité Alimentaire',
+                    description: 'Certification de sécurité de matériau de contact alimentaire',
+                    item1: 'Certification de l\'Administration des Aliments et Drogues FDA des États-Unis',
+                    item2: 'Matériaux de contact alimentaire de l\'UE',
+                    item3: 'Formule sans BPA'
+                },
+                testing: {
+                    title: 'Test Professionnel',
+                    description: 'Certification de test de laboratoire professionnel',
+                    item1: 'Test tiers SGS',
+                    item2: 'Certification TUV allemande',
+                    item3: 'Tests de performance multiples'
+                }
+            }
+        },
+        supply_chain: {
+            title: 'Système de Gestion de Chaîne d\'Approvisionnement Mondial',
+            description: 'Établissant un réseau de chaîne d\'approvisionnement mondial complet, assurant une livraison en temps opportun et un inventaire suffisant',
+            production: {
+                title: 'Fabrication de Production',
+                description: 'Technologie allemande, base de fabrication asiatique'
+            },
+            storage: {
+                title: 'Gestion d\'Entrepôt',
+                description: 'Centres d\'entrepôt multi-emplacements mondiaux'
+            },
+            logistics: {
+                title: 'Distribution Logistique',
+                description: 'Réseau de distribution de réponse rapide'
+            },
+            service: {
+                title: 'Service Après-vente',
+                description: 'Support technique 7×24'
+            },
+            global_network: {
+                title: 'Couverture de Réseau Mondial',
+                description: 'Établissement d\'entrepôts et points de service dans les principales régions mondiales',
+                region1: 'Asie-Pacifique: Chine, Japon, Singapour',
+                region2: 'Europe: Allemagne, Pays-Bas',
+                region3: 'Amériques: États-Unis, Mexique',
+                region4: 'Afrique: Afrique du Sud, Kenya'
+            },
+            delivery_time: {
+                title: 'Garantie de Livraison Rapide',
+                description: 'Établissement d\'un mécanisme de réponse rapide, assurant la satisfaction opportune de la demande client',
+                regular: 'Commandes régulières: 3-7 jours ouvrables',
+                urgent: 'Commandes urgentes: 24-48 heures',
+                custom: 'Produits personnalisés: 15-30 jours ouvrables',
+                tracking: 'Service de suivi logistique complet'
+            },
+            inventory: {
+                title: 'Gestion d\'Inventaire Intelligente',
+                description: 'Utilisant un système de gestion d\'inventaire avancé, assurant un inventaire suffisant',
+                prediction: 'Modèle de prédiction de demande IA',
+                monitoring: 'Surveillance d\'inventaire en temps réel',
+                safety: 'Garantie de stock de sécurité',
+                reporting: 'Analyse de rapport d\'inventaire'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Approvisionnement en Consommables Thermiques',
+            description: 'Contactez notre équipe professionnelle pour obtenir les solutions de consommables thermiques les plus adaptées',
+            btn_contact: 'Contactez Maintenant',
+            btn_products: 'Voir Autres Produits'
+        }
+    },
+
+    // Page Services d'Opérations
+    operations: {
+        page: {
+            title: 'Solutions de Gestion d\'Opérations de Loterie | LottoBridge'
+        },
+        hero: {
+            title: 'Solutions de Gestion d\'Opérations de Loterie Mondiales',
+            description: 'De la planification de projet à l\'optimisation opérationnelle, fournissant des services professionnels de cycle de vie complet pour aider les projets de loterie à atteindre une mise en œuvre réussie et un développement durable',
+            btn_services: 'Voir Système de Service',
+            btn_methodology: 'Méthodologie d\'Opérations'
+        },
+        services: {
+            title: 'Système de Service d\'Opérations Complet',
+            description: 'Basé sur les meilleures pratiques mondiales, fournissant des solutions de service de bout en bout professionnelles pour les opérateurs de loterie',
+            strategic_planning: {
+                title: 'Conseil en Planification Stratégique',
+                description: 'Analyse de marché approfondie et conception de modèle d\'affaires, formulant des stratégies de développement de loterie avec des caractéristiques locales',
+                feature1: 'Analyse d\'évaluation d\'opportunité de marché',
+                feature2: 'Recherche approfondie des concurrents',
+                feature3: 'Conception d\'innovation de modèle d\'affaires',
+                feature4: 'Modélisation de prédiction de ROI',
+                feature5: 'Stratégie d\'évaluation et de contrôle des risques'
+            },
+            project_implementation: {
+                title: 'Gestion de Mise en Œuvre de Projet',
+                description: 'Équipe de gestion de projet professionnelle assurant que les projets de loterie sont mis en œuvre à temps et avec qualité',
+                feature1: 'Gestion d\'étapes de projet',
+                feature2: 'Coordination et allocation de ressources',
+                feature3: 'Contrôle de qualité et acceptation',
+                feature4: 'Surveillance et réponse aux risques',
+                feature5: 'Gestion de changement et optimisation'
+            },
+            team_building: {
+                title: 'Développement d\'Équipe',
+                description: 'Établissement d\'équipes d\'opérations professionnelles, fournissant des services complets de formation et d\'amélioration des capacités',
+                feature1: 'Optimisation de conception de structure organisationnelle',
+                feature2: 'Recrutement et sélection de talents',
+                feature3: 'Construction de système de formation des compétences',
+                feature4: 'Conception de mécanisme d\'évaluation de performance',
+                feature5: 'Orientation de construction de culture d\'équipe'
+            },
+            operations_optimization: {
+                title: 'Amélioration d\'Optimisation d\'Opérations',
+                description: 'Surveillance continue des données opérationnelles, identification d\'opportunités d\'optimisation, amélioration de l\'efficacité opérationnelle et de l\'expérience utilisateur',
+                feature1: 'Analyse et extraction de données opérationnelles',
+                feature2: 'Optimisation et réorganisation de processus d\'affaires',
+                feature3: 'Amélioration et amélioration de l\'expérience utilisateur',
+                feature4: 'Contrôle des coûts et amélioration de l\'efficacité',
+                feature5: 'Conception de produits et services innovants'
+            },
+            compliance_management: {
+                title: 'Gestion de Risque de Conformité',
+                description: 'Établissement d\'un système de conformité complet, assurant que les activités opérationnelles respectent les exigences légales et réglementaires',
+                feature1: 'Analyse d\'interprétation de politique réglementaire',
+                feature2: 'Conseil en construction de système de conformité',
+                feature3: 'Identification et évaluation des risques',
+                feature4: 'Conception et mise en œuvre de système de contrôle interne',
+                feature5: 'Supervision d\'audit et rectification'
+            },
+            ongoing_support: {
+                title: 'Services de Support Continu',
+                description: 'Fournissant un support technique 7×24 et un conseil opérationnel, assurant une opération stable continue de l\'entreprise',
+                feature1: 'Hotline technique 7×24',
+                feature2: 'Diagnostic à distance et dépannage',
+                feature3: 'Inspection et maintenance régulières',
+                feature4: 'Conseil et conseils opérationnels',
+                feature5: 'Support de service de mise à niveau et mise à jour'
+            }
+        },
+        process: {
+            title: 'Processus de Mise en Œuvre Professionnel',
+            description: 'Basé sur les meilleures pratiques internationales, établissant un processus de mise en œuvre de projet standardisé, assurant le succès du projet',
+            analysis: {
+                title: 'Recherche d\'Analyse d\'Exigence',
+                description: 'Compréhension approfondie des besoins clients et de l\'environnement de marché',
+                step1: 'Tri des exigences d\'affaires',
+                step2: 'Analyse de l\'environnement de marché',
+                step3: 'Évaluation de faisabilité technique',
+                step4: 'Analyse de retour d\'investissement'
+            },
+            design: {
+                title: 'Planification de Conception de Solution',
+                description: 'Formulation de solutions et plans de mise en œuvre détaillés',
+                step1: 'Conception d\'architecture globale',
+                step2: 'Formulation de plan de mise en œuvre',
+                step3: 'Planification d\'allocation de ressources',
+                step4: 'Contingence de réponse aux risques'
+            },
+            implementation: {
+                title: 'Mise en Œuvre de Déploiement de Système',
+                description: 'Exécution de déploiement et intégration de système selon le plan',
+                step1: 'Configuration de configuration d\'environnement',
+                step2: 'Test d\'intégration de système',
+                step3: 'Vérification de migration de données',
+                step4: 'Certification d\'inspection de sécurité'
+            },
+            training: {
+                title: 'Lancement de Livraison de Formation',
+                description: 'Formation complète et lancement officiel de système',
+                step1: 'Mise en œuvre de formation utilisateur',
+                step2: 'Surveillance d\'opération d\'essai',
+                step3: 'Optimisation de correction de problème',
+                step4: 'Libération de lancement officiel'
+            },
+            optimization: {
+                title: 'Amélioration d\'Optimisation d\'Opérations',
+                description: 'Optimisation de surveillance continue et amélioration de service',
+                step1: 'Surveillance de données opérationnelles',
+                step2: 'Ajustement d\'optimisation de performance',
+                step3: 'Collection de rétroaction utilisateur',
+                step4: 'Mise à niveau d\'amélioration continue'
+            }
+        },
+        methodology: {
+            title: 'Méthodologie d\'Opérations Professionnelle',
+            description: 'Basé sur des années d\'expérience pratique, formant un système de méthodologie de gestion d\'opérations de loterie complet',
+            data_driven: {
+                title: 'Prise de Décision Pilotée par les Données',
+                description: 'Établissement d\'un système d\'analyse de données complet, guidant les décisions opérationnelles basées sur les insights de données',
+                feature1: 'Tableau de bord de surveillance de données en temps réel',
+                feature2: 'Modèle d\'analyse de comportement utilisateur',
+                feature3: 'Analyse prédictive et mécanisme d\'alerte précoce',
+                feature4: 'Test A/B et évaluation d\'effet'
+            },
+            agile_operations: {
+                title: 'Gestion d\'Opérations Agile',
+                description: 'Adoption de méthodes de gestion agile, répondant rapidement aux changements de marché et aux besoins utilisateur',
+                feature1: 'Itération rapide et amélioration continue',
+                feature2: 'Mécanisme de collaboration inter-départementale',
+                feature3: 'Réponse rapide aux retours utilisateur',
+                feature4: 'Ajustement d\'allocation de ressources flexible'
+            },
+            user_centric: {
+                title: 'Conception Centrée sur l\'Utilisateur',
+                description: 'Prenant les besoins utilisateur comme cœur, concevant et optimisant l\'expérience produit et service',
+                feature1: 'Profilage utilisateur et analyse des besoins',
+                feature2: 'Conception d\'optimisation d\'expérience utilisateur',
+                feature3: 'Portée utilisateur multi-canal',
+                feature4: 'Personnalisation de service personnalisé'
+            },
+            risk_management: {
+                title: 'Gestion de Risque Complète',
+                description: 'Établissement d\'un système de prévention et contrôle de risque multi-niveau, assurant une opération d\'affaires sûre et stable',
+                feature1: 'Système d\'identification et évaluation de risque',
+                feature2: 'Mécanisme de protection de sécurité multi-niveau',
+                feature3: 'Contingence de réponse d\'urgence et récupération',
+                feature4: 'Surveillance de conformité et suivi d\'audit'
+            },
+            innovation_driven: {
+                title: 'Développement Piloté par l\'Innovation',
+                description: 'Innovation technologique continue et innovation produit, maintenant l\'avantage concurrentiel du marché',
+                feature1: 'Recherche et application de nouvelles technologies',
+                feature2: 'Innovation et mise à niveau de produit',
+                feature3: 'Exploration d\'innovation de modèle d\'affaires',
+                feature4: 'Analyse prospective de tendance de l\'industrie'
+            },
+            partnership: {
+                title: 'Coopération d\'Écosystème Gagnant-Gagnant',
+                description: 'Construction d\'un écosystème de coopération ouvert, réalisant un développement gagnant-gagnant multi-partie',
+                feature1: 'Relations de partenariat stratégique',
+                feature2: 'Optimisation collaborative de chaîne d\'approvisionnement',
+                feature3: 'Participation au développement de normes techniques',
+                feature4: 'Intégration et partage de ressources de l\'industrie'
+            }
+        },
+        cases: {
+            title: 'Cas de Succès Mondiaux',
+            description: 'Mise en œuvre réussie de projets d\'opérations de loterie dans 30+ pays mondialement, accumulant une riche expérience pratique',
+            mexico: {
+                title: 'Modernisation de Loterie Nationale du Mexique',
+                subtitle: 'Projet de transformation de mise à niveau de système de loterie national',
+                description: 'Assistance au Bureau de Loterie Nationale du Mexique pour compléter la mise à niveau de modernisation du système de loterie national, couvrant la reconstruction d\'architecture technique, l\'optimisation de processus opérationnel, la formation du personnel et d\'autres services complets',
+                metric1: 'Cycle de Projet',
+                metric2: 'Amélioration d\'Efficacité',
+                metric3: 'Disponibilité du Système'
+            },
+            nigeria: {
+                title: 'Lancement d\'Opérations de Loterie du Nigéria',
+                subtitle: 'Construction de système d\'opérations de loterie à partir de zéro',
+                description: 'Fournissant un support opérationnel complet pour la Compagnie de Loterie du Nigéria, de la recherche de marché, construction de système au développement d\'équipe, lançant avec succès l\'activité de loterie nationale',
+                metric1: 'Cycle de Lancement',
+                metric2: 'Personnel de Formation',
+                metric3: 'Couverture de Marché'
+            },
+            vietnam: {
+                title: 'Transformation de Loterie Numérique du Vietnam',
+                subtitle: 'Mise à niveau de transformation de loterie traditionnelle vers numérique',
+                description: 'Assistance à la Compagnie de Loterie du Vietnam pour compléter la transformation numérique, établissant une plateforme de loterie en ligne complète, réalisant des opérations intégrées en ligne et hors ligne',
+                metric1: 'Cycle de Transformation',
+                metric2: 'Croissance des Ventes',
+                metric3: 'Satisfaction Utilisateur'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Voyage d\'Opérations de Loterie',
+            description: 'Contactez notre équipe professionnelle pour obtenir des solutions d\'opérations de loterie personnalisées',
+            btn_contact: 'Contactez Maintenant',
+            btn_products: 'Voir Autres Produits'
+        }
+    },
+
+    // Page Services de Formation
+    training: {
+        page: {
+            title: 'Services d\'Éducation et Formation de Loterie Professionnels | LottoBridge'
+        },
+        hero: {
+            title: 'Système d\'Éducation et Formation de Loterie Leader Mondial',
+            description: 'Cours de formation de certification professionnelle, système d\'enseignement de norme internationale, cultivant des professionnels de l\'industrie de la loterie, promouvant le développement sain de l\'industrie',
+            btn_courses: 'Voir Système de Cours',
+            btn_certification: 'Certification Professionnelle'
+        },
+        courses: {
+            title: 'Système de Cours Professionnel',
+            description: 'Construction d\'un système de connaissances complet de l\'industrie de la loterie, de la théorie de base à l\'application pratique, répondant aux besoins d\'apprentissage de différents niveaux',
+            meta: {
+                duration: 'Durée du Cours',
+                level: 'Niveau de Difficulté',
+                size: 'Taille de Classe'
+            },
+            executive_leadership: {
+                title: 'Cours de Leadership Exécutif',
+                description: 'Cours de gestion stratégique et d\'amélioration du leadership pour la haute direction des compagnies de loterie',
+                level: 'Avancé',
+                topic1: 'Analyse de tendance de développement de l\'industrie de la loterie',
+                topic2: 'Planification stratégique et innovation de modèle d\'affaires',
+                topic3: 'Gestion de risque et opérations de conformité',
+                topic4: 'Stratégie de transformation numérique',
+                topic5: 'Développement de marché international et coopération'
+            },
+            technical_operations: {
+                title: 'Gestion d\'Opérations Techniques',
+                description: 'Formation de compétences professionnelles en conception d\'architecture de système, opérations techniques et gestion de sécurité',
+                level: 'Intermédiaire-Avancé',
+                topic1: 'Principes de conception d\'architecture de système de loterie',
+                topic2: 'Gestion et optimisation de base de données',
+                topic3: 'Sécurité réseau et technologie de protection',
+                topic4: 'Surveillance de système et dépannage',
+                topic5: 'Déploiement et gestion de plateforme cloud'
+            },
+            business_operations: {
+                title: 'Gestion d\'Opérations d\'Affaires',
+                description: 'Formation professionnelle en gestion de processus d\'affaires de loterie, marketing et service client',
+                level: 'Intermédiaire',
+                topic1: 'Conception et gestion de produit de loterie',
+                topic2: 'Gestion de canal et partenariat',
+                topic3: 'Stratégie marketing et promotion',
+                topic4: 'Gestion de relation client',
+                topic5: 'Analyse de données et intelligence d\'affaires'
+            },
+            compliance_security: {
+                title: 'Gestion de Sécurité de Conformité',
+                description: 'Formation professionnelle en conformité légale, contrôle de risque et gestion de sécurité',
+                level: 'Avancé',
+                topic1: 'Interprétation de réglementation légale de loterie internationale',
+                topic2: 'Construction et gestion de système de conformité',
+                topic3: 'Stratégie d\'identification et de contrôle de risque',
+                topic4: 'Anti-blanchiment d\'argent et prévention de fraude',
+                topic5: 'Supervision d\'audit et système de contrôle interne'
+            },
+            customer_service: {
+                title: 'Formation de Service Client',
+                description: 'Formation d\'amélioration de compétences professionnelles pour le personnel de vente de première ligne et service client',
+                level: 'Débutant-Intermédiaire',
+                topic1: 'Formation de connaissance de produit de loterie',
+                topic2: 'Compétences de vente et art de communication',
+                topic3: 'Maintenance de relation client',
+                topic4: 'Traitement de plainte et réponse de crise',
+                topic5: 'Opération et maintenance d\'équipement'
+            },
+            technical_maintenance: {
+                title: 'Formation de Maintenance Technique',
+                description: 'Formation professionnelle en maintenance d\'équipement, diagnostic de panne et support technique',
+                level: 'Intermédiaire',
+                topic1: 'Principes de structure d\'équipement et maintenance',
+                topic2: 'Techniques de diagnostic et dépannage de panne',
+                topic3: 'Stratégie de maintenance préventive',
+                topic4: 'Procédures d\'opération sécurisée',
+                topic5: 'Gestion de documentation technique'
+            }
+        },
+        pathways: {
+            title: 'Chemins d\'Apprentissage Professionnels',
+            description: 'Conception de chemins de croissance d\'apprentissage complets pour différentes directions de développement de carrière',
+            management: {
+                title: 'Chemin de Développement de Gestion',
+                description: 'Système de formation complet de la gestion de base à la gestion senior',
+                stage1: 'Gestion Junior: Bases de gestion d\'équipe',
+                stage2: 'Gestion Intermédiaire: Gestion d\'opérations de département',
+                stage3: 'Gestion Senior: Planification stratégique et prise de décision',
+                stage4: 'Niveau Exécutif: Gouvernance d\'entreprise et leadership'
+            },
+            technical: {
+                title: 'Chemin de Développement Technique',
+                description: 'Chemin de croissance professionnelle du spécialiste technique à l\'expert technique',
+                stage1: 'Fondation Technique: Opération et maintenance de système',
+                stage2: 'Technique Avancée: Développement et intégration de système',
+                stage3: 'Expert Technique: Conception et optimisation d\'architecture',
+                stage4: 'Leader Technique: Stratégie technique et innovation'
+            },
+            business: {
+                title: 'Chemin de Développement d\'Affaires',
+                description: 'Chemin de développement de carrière du spécialiste d\'affaires au directeur d\'affaires',
+                stage1: 'Fondation d\'Affaires: Connaissance de produit et marché',
+                stage2: 'Spécialiste d\'Affaires: Vente et service client',
+                stage3: 'Superviseur d\'Affaires: Gestion et expansion de canal',
+                stage4: 'Directeur d\'Affaires: Planification stratégique et exécution'
+            },
+            compliance: {
+                title: 'Chemin de Développement de Conformité',
+                description: 'Développement professionnel du spécialiste de conformité au directeur de conformité en chef',
+                stage1: 'Fondation de Conformité: Compréhension de politique réglementaire',
+                stage2: 'Spécialiste de Conformité: Exécution et surveillance de système',
+                stage3: 'Gestionnaire de Conformité: Construction et gestion de système',
+                stage4: 'Directeur de Conformité en Chef: Formulation de stratégie de conformité'
+            }
+        },
+        modes: {
+            title: 'Modes d\'Apprentissage Diversifiés',
+            description: 'Combinant en ligne et hors ligne, répondant aux différentes préférences d\'apprentissage et arrangements de temps',
+            classroom: {
+                title: 'Formation en Classe',
+                description: 'Mode d\'enseignement en classe traditionnel, apprentissage interactif face à face',
+                feature1: 'Enseignement sur site d\'instructeur professionnel',
+                feature2: 'Q&R interactive en temps réel',
+                feature3: 'Discussion de groupe et pratique',
+                feature4: 'Synchronisation réseau et échange d\'étudiants'
+            },
+            online: {
+                title: 'Apprentissage en Ligne',
+                description: 'Plateforme d\'apprentissage en ligne flexible et pratique',
+                feature1: 'Apprentissage 24/7 n\'importe où n\'importe quand',
+                feature2: 'Matériel de cours interactif multimédia',
+                feature3: 'Suivi intelligent de progrès d\'apprentissage',
+                feature4: 'Examen et certification en ligne'
+            },
+            blended: {
+                title: 'Apprentissage Mixte',
+                description: 'Mode d\'apprentissage mixte combinant en ligne et hors ligne',
+                feature1: 'Aperçu théorique en ligne',
+                feature2: 'Orientation pratique en personne',
+                feature3: 'Exercices pratiques de projet',
+                feature4: 'Coaching de suivi continu'
+            },
+            corporate: {
+                title: 'Personnalisation d\'Entreprise',
+                description: 'Programmes de formation spécialement conçus pour les entreprises',
+                feature1: 'Recherche d\'exigence et conception de solution',
+                feature2: 'Personnalisation de contenu de cours exclusif',
+                feature3: 'Mise en œuvre de formation interne d\'entreprise',
+                feature4: 'Évaluation d\'effet et amélioration'
+            }
+        },
+        certification: {
+            title: 'Système de Certification Professionnelle International',
+            description: 'Obtention de certification faisant autorité de l\'industrie, amélioration de la compétitivité de carrière personnelle',
+            lottery_professional: {
+                title: 'Certification de Professionnel de Loterie',
+                description: 'Certification professionnelle de base pour les praticiens de l\'industrie de la loterie',
+                requirement1: 'Compléter l\'apprentissage de cours de base',
+                requirement2: 'Passer l\'examen de connaissances théoriques',
+                requirement3: 'Avoir 6+ mois d\'expérience de l\'industrie',
+                requirement4: 'Exigences de crédit d\'éducation continue'
+            },
+            technical_expert: {
+                title: 'Certification d\'Expert Technique',
+                description: 'Certification de compétences professionnelles avancées pour le personnel technique',
+                requirement1: 'Compléter les cours professionnels techniques',
+                requirement2: 'Passer l\'évaluation de compétences pratiques',
+                requirement3: 'Avoir 2+ ans d\'expérience technique',
+                requirement4: 'Soumettre un portfolio de projet technique'
+            },
+            management_leader: {
+                title: 'Certification de Leader de Gestion',
+                description: 'Certification de capacité de leadership et de gestion pour le personnel de gestion',
+                requirement1: 'Compléter l\'apprentissage de cours de gestion',
+                requirement2: 'Passer l\'analyse de cas de gestion',
+                requirement3: 'Avoir 3+ ans d\'expérience de gestion',
+                requirement4: 'Retour d\'évaluation à 360 degrés'
+            },
+            compliance_officer: {
+                title: 'Certification d\'Agent de Conformité',
+                description: 'Certification de qualification professionnelle pour le personnel de gestion de conformité',
+                requirement1: 'Compléter les cours professionnels de conformité',
+                requirement2: 'Passer l\'examen de connaissance réglementaire',
+                requirement3: 'Avoir un contexte légal ou de conformité',
+                requirement4: 'Exigences de développement professionnel continu'
+            }
+        },
+        instructors: {
+            title: 'Équipe de Faculté de Premier Plan International',
+            description: 'Rassemblant les meilleurs experts de l\'industrie de la loterie mondiale, fournissant les conseils de formation les plus professionnels',
+            industry_experts: {
+                title: 'Experts Senior de l\'Industrie',
+                description: 'Gestionnaires senior et experts techniques de compagnies de loterie renommées mondialement',
+                feature1: '20+ ans d\'expérience de l\'industrie',
+                feature2: 'Expérience pratique de projet réussi',
+                feature3: 'Expérience d\'opérations de marché multi-pays',
+                feature4: 'Capacité d\'insight de tendance prospective'
+            },
+            academic_professors: {
+                title: 'Professeurs d\'Autorité Académique',
+                description: 'Experts académiques d\'écoles de commerce renommées et institutions de recherche',
+                feature1: 'Diplôme de doctorat et qualification de professeur',
+                feature2: 'Riche expérience d\'enseignement',
+                feature3: 'Résultats de recherche théorique de pointe',
+                feature4: 'Réputation académique internationale'
+            },
+            legal_consultants: {
+                title: 'Consultants de Conformité Légale',
+                description: 'Experts légaux professionnels et consultants de gestion de conformité',
+                feature1: 'Diplôme de droit',
+                feature2: 'Expérience pratique légale de loterie',
+                feature3: 'Recherche comparative de réglementation internationale',
+                feature4: 'Expertise en construction de système de conformité'
+            },
+            technical_architects: {
+                title: 'Architectes Techniques',
+                description: 'Experts techniques de premier plan et architectes de système',
+                feature1: 'Maîtrise+ en informatique',
+                feature2: 'Expérience de conception d\'architecture de système large',
+                feature3: 'Pratique d\'application de technologie de pointe',
+                feature4: 'Expérience de contribution de projet open source'
+            }
+        },
+        cta: {
+            title: 'Commencez Votre Voyage de Croissance Professionnelle',
+            description: 'Contactez nos consultants de formation pour développer des plans d\'apprentissage personnalisés',
+            btn_contact: 'Contactez Maintenant',
+            btn_products: 'Voir Autres Services'
+        }
+    },
+
     market_reports: {
         title: 'Rapports d\'Intelligence du Marché Mondial de Loterie',
         subtitle: 'Analyse de marché pilotée par IA, vous fournissant les derniers insights du marché mondial de loterie',
@@ -381,7 +1501,14 @@ const fr = {
             title: 'Solutions Tout-en-Un pour la Loterie Mondiale',
             description: 'Intégrant les ressources centrales de la chaîne d\'approvisionnement chinoise de loterie pour fournir des services de bout en bout de la recherche de marché, du développement de systèmes, de l\'équipement terminal au support opérationnel',
             btn_view_services: 'Voir les Solutions de Service',
-            btn_contact_consultant: 'Contacter le Consultant Commercial'
+            btn_contact_consultant: 'Contacter le Consultant Commercial',
+            btn_contact: 'Nous Contacter'
+        },
+        nav: {
+            systems: 'Systèmes',
+            terminals: 'Terminaux',
+            printing: 'Impression',
+            services: 'Services'
         },
         services: {
             title: 'Nos Produits et Services Principaux',
@@ -1138,6 +2265,273 @@ const fr = {
             rights: "Tous droits réservés.",
             privacy: "Politique de Confidentialité",
             terms: "Conditions d'Utilisation"
+        }
+    },
+    // Instant Ticket System
+    instant: {
+        title: "Solutions de Système de Tickets Instantanés - LottoBridge",
+        hero: {
+            title: "Solutions de Système de Tickets Instantanés",
+            subtitle: "Gestion complète de bout en bout de l'impression à l'échange, construisant des opérations de tickets instantanés sécurisées, efficaces et traçables",
+            btn_sample: "Obtenir des Échantillons",
+            btn_customize: "Personnaliser les Solutions Locales",
+            imageText: "Visuel du Système de Tickets Instantanés"
+        },
+        printing: {
+            title: "Système d'Impression de Tickets aux Standards Internationaux",
+            subtitle: "Prenant en charge les types à gratter, film de sécurité et encre anti-contrefaçon avec des lignes de production automatisées garantissant des séquences de tickets uniques et traçables",
+            scratch: {
+                title: "Tickets à Gratter",
+                desc: "Design traditionnel à gratter avec impression multicouche et technologie anti-contrefaçon"
+            },
+            security: {
+                title: "Tickets Film de Sécurité",
+                desc: "Couverture avancée de film de sécurité offrant une protection anti-contrefaçon renforcée"
+            },
+            antiCounterfeit: {
+                title: "Technologie d'Encre Anti-Contrefaçon",
+                desc: "Encres spéciales et processus d'impression garantissant la vérification d'authenticité des tickets"
+            },
+            process: {
+                title: "Flux de Processus d'Impression",
+                design: {
+                    title: "Conception",
+                    desc: "Conception de tickets et planification des éléments anti-contrefaçon"
+                },
+                template: {
+                    title: "Modèle",
+                    desc: "Création de modèles d'impression et épreuvage couleur"
+                },
+                printing: {
+                    title: "Impression",
+                    desc: "Impression haute précision et contrôle qualité"
+                },
+                lamination: {
+                    title: "Lamination",
+                    desc: "Couverture de film de sécurité et traitement par pressage à chaud"
+                },
+                cutting: {
+                    title: "Découpe",
+                    desc: "Découpe précise et emballage de tri"
+                },
+                packaging: {
+                    title: "Emballage Sécurisé",
+                    desc: "Emballage anti-effraction et distribution logistique"
+                }
+            }
+        },
+        warehouse: {
+            title: "Système Sophistiqué de Gestion d'Entrepôt et de Transfert de Tickets",
+            subtitle: "Distinguant les entrepôts de production et de vente, prenant en charge les entrepôts multiniveaux, l'autorisation de transfert et la surveillance en temps réel",
+            production: {
+                title: "Gestion d'Entrepôt de Production",
+                desc: "Stockage, inspection qualité et gestion d'expédition des tickets finis",
+                item1: "✓ Traçabilité des lots de tickets",
+                item2: "✓ Enregistrements d'inspection qualité",
+                item3: "✓ Mécanisme d'alerte d'inventaire"
+            },
+            sales: {
+                title: "Gestion d'Entrepôt de Vente",
+                desc: "Distribution de tickets et contrôle d'inventaire pour les canaux de vente",
+                item1: "✓ Allocation de pool de tickets par canal",
+                item2: "✓ Surveillance d'inventaire en temps réel",
+                item3: "✓ Alertes de réapprovisionnement automatique"
+            },
+            transfer: {
+                title: "Contrôle d'Autorisation de Transfert",
+                desc: "Gestion de permissions multiniveaux garantissant des transferts de tickets sécurisés et conformes",
+                item1: "✓ Processus d'approbation hiérarchique",
+                item2: "✓ Suivi des enregistrements de transfert",
+                item3: "✓ Alertes de comportement anormal"
+            }
+        },
+        redemption: {
+            title: "Processus d'Échange Intelligent et Contrôle des Risques",
+            subtitle: "Identification de faux tickets assistée par IA, surveillance anti-blanchiment, intégration du système judiciaire et modules d'audit de conformité",
+            flow: {
+                step1: {
+                    title: "Reconnaissance de Tickets",
+                    desc: "Reconnaissance d'image IA pour vérifier l'authenticité des tickets"
+                },
+                step2: {
+                    title: "Vérification du Code de Sécurité",
+                    desc: "Vérification multi-algorithme de la validité du code de sécurité"
+                },
+                step3: {
+                    title: "Enregistrement d'Échange",
+                    desc: "Enregistrer les informations d'échange et l'identité de l'utilisateur"
+                },
+                step4: {
+                    title: "Filtrage Liste Noire",
+                    desc: "Vérifier si l'utilisateur est sur la liste noire"
+                },
+                step5: {
+                    title: "Paiement Automatique",
+                    desc: "Achèvement automatique du paiement après vérification"
+                }
+            },
+            ai: {
+                title: "Détection IA de Faux Tickets",
+                desc: "Algorithmes d'apprentissage profond pour identifier les tickets contrefaits"
+            },
+            aml: {
+                title: "Surveillance Anti-Blanchiment",
+                desc: "Surveillance en temps réel des modèles de comportement d'échange anormal"
+            },
+            legal: {
+                title: "Intégration du Système Judiciaire",
+                desc: "Intégration en temps réel avec les bases de données des forces de l'ordre"
+            }
+        },
+        samples: {
+            title: "Prise en Charge de Designs de Face de Tickets Diversifiés",
+            subtitle: "Échantillons de tickets multilingues et structures de jeu multiples pour répondre aux différents besoins du marché",
+            scratch: {
+                title: "Cartes à Gratter Classiques",
+                desc: "Design traditionnel à gratter prenant en charge plusieurs configurations de prix",
+                imageText: "Échantillon de Carte à Gratter"
+            },
+            symbol: {
+                title: "Tickets Symbole Porte-Bonheur",
+                desc: "Jeu de correspondance de symboles, simple et facile à comprendre",
+                imageText: "Échantillon de Ticket Symbole Porte-Bonheur"
+            },
+            numbers: {
+                title: "Tickets Combinaison de Nombres",
+                desc: "Jeu de correspondance de nombres avec plusieurs façons de gagner",
+                imageText: "Échantillon de Ticket Combinaison de Nombres"
+            }
+        },
+        highlights: {
+            title: "Points Forts du Système",
+            subtitle: "Protection complète pour des opérations de système de tickets instantanés sécurisées et efficaces",
+            standards: {
+                title: "Standards d'Impression Internationaux",
+                desc: "Conforme aux standards WLA et autres standards internationaux, garantissant la qualité du produit"
+            },
+            traceability: {
+                title: "Traçabilité du Processus Complet",
+                desc: "Gestion de traçabilité complète de l'impression à l'échange"
+            },
+            blacklist: {
+                title: "Blocage d'Échange Liste Noire",
+                desc: "Vérification de liste noire en temps réel pour prévenir les utilisateurs à risque"
+            },
+            security: {
+                title: "Algorithme de Vérification du Code de Sécurité",
+                desc: "Algorithmes de chiffrement multiples garantissant la sécurité des tickets"
+            },
+            warehouse: {
+                title: "Mécanisme de Transfert d'Entrepôt Multiniveau",
+                desc: "Gestion d'entrepôt flexible et contrôle de transfert"
+            },
+            reporting: {
+                title: "Rapport de Données et Export d'Audit",
+                desc: "Fonctionnalité complète de rapport de données et d'audit"
+            }
+        },
+        cta: {
+            title: "Laissez-nous Concevoir Votre Prochain Ticket Instantané",
+            subtitle: "Solutions professionnelles de système de tickets instantanés pour vous aider à entrer rapidement sur le marché",
+            btn_sample: "Obtenir des Échantillons",
+            btn_contact: "Contacter un Consultant Commercial"
+        }
+    },
+    // Video Lottery System
+    video: {
+        title: "Solutions de Système de Loterie Vidéo - LottoBridge",
+        hero: {
+            title: "Solutions de Système de Loterie Vidéo",
+            subtitle: "Systèmes de loterie vidéo innovants alliant divertissement et conformité, améliorant l'expérience utilisateur",
+            viewFeatures: "Points Forts du Système",
+            contact: "Consulter les Solutions",
+            imageText: "Affichage du Système de Loterie Vidéo"
+        },
+        features: {
+            title: "Points Forts des Fonctionnalités Principales",
+            subtitle: "Jeu innovant, conformité sécurisée, déploiement flexible",
+            games: {
+                title: "Jeux Diversifiés",
+                desc: "Prend en charge plusieurs jeux de loterie vidéo pour répondre aux différents besoins du marché"
+            },
+            security: {
+                title: "Conformité Sécurisée",
+                desc: "Respecte strictement les normes de l'industrie pour assurer la sécurité des données et des fonds"
+            },
+            analytics: {
+                title: "Analyse de Données",
+                desc: "Analyse de données en temps réel pour aider les décisions opérationnelles"
+            },
+            custom: {
+                title: "Personnalisation Flexible",
+                desc: "Prend en charge l'intégration multilingue, multi-devises, multi-canaux"
+            }
+        },
+        gaming: {
+            title: "Types de Jeux Riches",
+            subtitle: "Jeux de loterie vidéo diversifiés pour répondre aux différents besoins des joueurs",
+            keno: {
+                title: "Keno Vidéo",
+                desc: "Tirages haute fréquence, paris rapides, animations de tirage en temps réel"
+            },
+            bingo: {
+                title: "Bingo Vidéo",
+                desc: "Jeux de bingo classiques avec éléments interactifs vidéo améliorés"
+            },
+            scratch: {
+                title: "Cartes à Gratter Vidéo",
+                desc: "Jeux de cartes à gratter numériques avec effets d'animation améliorés"
+            },
+            instant: {
+                title: "Jeux Instantanés",
+                desc: "Jeux vidéo à tirage rapide avec résultats instantanés"
+            }
+        },
+        technology: {
+            title: "Architecture Technologique de Pointe",
+            subtitle: "Basée sur une architecture cloud-native moderne garantissant des systèmes stables et efficaces",
+            rng: {
+                title: "Génération de Nombres Aléatoires",
+                desc: "Générateurs de nombres aléatoires matériels garantissant l'équité du jeu"
+            },
+            stream: {
+                title: "Traitement de Flux Vidéo",
+                desc: "Traitement de flux vidéo haute performance pour une expérience de jeu fluide"
+            },
+            realtime: {
+                title: "Interaction Temps Réel",
+                desc: "Réponse en millisecondes pour une véritable expérience de jeu en temps réel"
+            },
+            cdn: {
+                title: "CDN Global",
+                desc: "Réseau de distribution de contenu mondial garantissant l'expérience utilisateur mondiale"
+            }
+        },
+        compliance: {
+            title: "Conformité et Réglementation",
+            subtitle: "Respecte strictement les normes internationales garantissant des opérations système conformes",
+            glI: {
+                title: "Certification GLI",
+                desc: "Certification GLI Gaming Laboratories International garantissant l'équité du jeu"
+            },
+            rtp: {
+                title: "Contrôle RTP",
+                desc: "Contrôle strict du taux de retour au joueur répondant aux exigences réglementaires"
+            },
+            audit: {
+                title: "Piste d'Audit",
+                desc: "Journaux d'audit complets supportant les inspections réglementaires"
+            },
+            responsible: {
+                title: "Jeu Responsable",
+                desc: "Mécanismes de protection des joueurs intégrés prévenant les problèmes de jeu"
+            }
+        },
+        cta: {
+            title: "Commencez Votre Expérience de Loterie Vidéo",
+            subtitle: "Contactez-nous pour des solutions professionnelles de système de loterie vidéo",
+            contact: "Contactez Maintenant",
+            products: "Voir Autres Produits"
         }
     }
 };

@@ -232,10 +232,1154 @@ const zh = {
         learn_more: '了解更多'
     },
     // 市场调研报告精选
+    // 数字彩票系统
+    digital: {
+        title: '数字彩票系统解决方案 - LottoBridge',
+        hero: {
+            title: '数字彩票系统解决方案',
+            subtitle: '一体化构建玩法、安全、合规与落地交付能力，助您快速部署现代化彩票系统',
+            getSolution: '获取定制方案',
+            viewProducts: '查看其他产品',
+            imageText: '数字彩票系统视觉图'
+        },
+        gameTypes: {
+            title: '核心玩法支持',
+            subtitle: '支持全球主流彩票玩法，满足不同市场需求',
+            lotto: {
+                icon: '乐透图标',
+                title: '经典乐透玩法',
+                desc: '支持5/35、6/45等经典乐透玩法，适用于欧洲、北美等成熟市场',
+                example1: '欧洲EuroMillions',
+                example2: '美国Powerball'
+            },
+            number: {
+                icon: '数字图标',
+                title: '数字排列玩法',
+                desc: '3D、4D等数字排列玩法，在亚洲市场广受欢迎',
+                example1: '新加坡4D',
+                example2: '马来西亚Magnum'
+            },
+            daily: {
+                icon: '日历图标',
+                title: '每日开奖玩法',
+                desc: '每日固定时间开奖，提高用户参与频次和粘性',
+                example1: 'Daily Pick',
+                example2: 'Cash 3'
+            },
+            fast: {
+                icon: '快速图标',
+                title: '高频次玩法',
+                desc: '每5-15分钟开奖一次，满足快节奏市场需求',
+                example1: 'Keno',
+                example2: 'Quick Draw'
+            }
+        },
+        systemFeatures: {
+            title: '系统架构与功能亮点',
+            subtitle: '全面覆盖彩票运营各环节，保障系统稳定可靠',
+            sales: {
+                title: '彩票销售管理',
+                desc: '站点管理、票池分配、限额控制，全面管控销售流程',
+                item1: '✓ 多级代理商管理',
+                item2: '✓ 实时销售监控',
+                item3: '✓ 智能限额设置'
+            },
+            draw: {
+                title: '开奖管理',
+                desc: '开奖数据生成、流程审批、公证接口，确保开奖公正透明',
+                item1: '✓ 随机数生成算法',
+                item2: '✓ 多重审批流程',
+                item3: '✓ 第三方公证对接'
+            },
+            prize: {
+                title: '兑奖管理',
+                desc: '兑奖规则、黑名单机制、风险控制，保障资金安全',
+                item1: '✓ 自动兑奖验证',
+                item2: '✓ 反洗钱检测',
+                item3: '✓ 大奖审核流程'
+            },
+            finance: {
+                title: '财务管理',
+                desc: '资金流水、佣金结算、财务报表，完整的财务体系',
+                item1: '✓ 实时资金监控',
+                item2: '✓ 自动佣金结算',
+                item3: '✓ 多维度财务报表'
+            },
+            risk: {
+                title: '风险管理',
+                desc: '异常检测、风险预警、合规监控，全方位风险管控',
+                item1: '✓ 智能异常检测',
+                item2: '✓ 实时风险预警',
+                item3: '✓ 合规性监控'
+            },
+            analytics: {
+                title: '数据分析',
+                desc: '销售分析、用户行为、市场趋势，数据驱动决策',
+                item1: '✓ 实时数据看板',
+                item2: '✓ 用户行为分析',
+                item3: '✓ 预测性分析'
+            }
+        },
+        techArchitecture: {
+            title: '技术架构与安全',
+            subtitle: '采用微服务架构，确保系统高可用性和安全性',
+            microservices: {
+                title: '微服务架构',
+                desc: '模块化设计，独立部署，易于扩展和维护',
+                item1: '• 服务解耦',
+                item2: '• 独立扩展',
+                item3: '• 故障隔离'
+            },
+            security: {
+                title: '安全防护',
+                desc: '多层次安全防护，确保数据和系统安全',
+                item1: '• 数据加密',
+                item2: '• 身份认证',
+                item3: '• 访问控制'
+            },
+            highAvailability: {
+                title: '高可用性',
+                desc: '99.9%系统可用性，确保业务连续性',
+                item1: '• 负载均衡',
+                item2: '• 故障转移',
+                item3: '• 自动恢复'
+            }
+        },
+        cta: {
+            title: '开始您的数字彩票系统项目',
+            subtitle: '联系我们，获取专业的数字彩票系统解决方案',
+            contact: '立即咨询',
+            products: '查看其他产品'
+        }
+    },
+
+    // 体育博彩系统
+    sports: {
+        title: '体育博彩系统 - LottoBridge',
+        hero: {
+            title: '体育博彩系统解决方案',
+            subtitle: '全渠道体育博彩平台，安全合规，灵活定制',
+            viewFeatures: '系统亮点',
+            contact: '咨询方案',
+            imageText: '体育博彩系统展示'
+        },
+        features: {
+            title: '核心功能亮点',
+            subtitle: '支持多种玩法，灵活适配全球市场',
+            odds: {
+                title: '多样赔率引擎',
+                desc: '支持固定赔率、浮动赔率、亚洲盘等多种模式'
+            },
+            live: {
+                title: '实时赛事数据',
+                desc: '集成全球主流赛事数据源，实时更新'
+            },
+            security: {
+                title: '安全合规',
+                desc: '多重风控与合规体系，保障资金与数据安全'
+            },
+            custom: {
+                title: '灵活定制',
+                desc: '支持多语言、多币种、多渠道接入'
+            }
+        },
+        cta: {
+            title: '开启体育博彩新体验',
+            subtitle: '联系我们，获取专业的体育博彩系统解决方案',
+            contact: '立即咨询',
+            products: '查看其他产品'
+        }
+    },
+
+    // 终端设备
+    terminals: {
+        title: '彩票终端设备 - LottoBridge',
+        hero: {
+            title: '彩票终端设备解决方案',
+            subtitle: '多样化终端设备，满足不同销售场景需求',
+            viewProducts: '查看设备',
+            contact: '咨询方案',
+            imageText: '终端设备展示'
+        },
+        types: {
+            title: '终端设备类型',
+            subtitle: '覆盖零售、移动、自助等多种应用场景',
+            retail: {
+                title: '零售终端',
+                desc: '适用于彩票销售网点，支持多种票种销售'
+            },
+            mobile: {
+                title: '移动终端',
+                desc: '便携式设计，适合流动销售和户外场景'
+            },
+            kiosk: {
+                title: '自助终端',
+                desc: '自助购票、兑奖，提升用户体验'
+            }
+        },
+        features: {
+            title: '设备功能亮点',
+            subtitle: '智能化设计，保障高效运营',
+            printing: {
+                title: '高速打印',
+                desc: '支持热敏、针式等多种打印方式'
+            },
+            security: {
+                title: '安全防护',
+                desc: '多重加密，保障数据与交易安全'
+            },
+            connectivity: {
+                title: '多种连接',
+                desc: '支持有线、无线、4G/5G等多种通讯方式'
+            }
+        },
+        cta: {
+            title: '开启智能终端新体验',
+            subtitle: '联系我们，获取专业的彩票终端设备解决方案',
+            contact: '立即咨询',
+            products: '查看其他产品'
+        }
+    },
+
+    // 产品服务页面
+    products: {
+        page: {
+            title: '产品服务 | LottoBridge'
+        },
+        hero: {
+            title: '产品中心',
+            description: '一站式覆盖全球彩票系统与硬件供应链',
+            btn_view_services: '查看产品方案',
+            btn_contact: '联系我们'
+        },
+        nav: {
+            systems: '系统',
+            terminals: '终端',
+            printing: '印刷',
+            services: '服务'
+        },
+        services: {
+            title: '我们的核心产品与服务',
+            description: 'LottoBridge 提供的不只是产品清单，而是从"调研、设计、系统、设备、培训、出口、合作"一站式可落地的彩票解决方案组合'
+        },
+        cases: {
+            title: '成功案例',
+            description: '全球客户如何通过 LottoBridge 的解决方案实现业务增长',
+            mexico: {
+                title: '墨西哥私营彩票运营商系统升级',
+                description: '为墨西哥领先彩票运营商提供全套销售系统升级和2000台终端设备，支持其业务扩展至全国5000个销售点。'
+            },
+            south_africa: {
+                title: '南非国家彩票即开票供应',
+                description: '为南非国家彩票局提供1.2亿张定制即开票，包含12种本地文化主题设计，6个月内完成交付。'
+            },
+            vietnam: {
+                title: '越南彩票数字化改造项目',
+                description: '协助越南彩票公司完成数字化改造，部署云彩票系统并培训300名技术人员，实现销售额提升40%。'
+            }
+        },
+        cta: {
+            title: '准备好升级您的彩票业务了吗？',
+            description: '无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案',
+            btn_contact: '立即咨询',
+            btn_download: '下载服务手册'
+        }
+    },
+
+    // 行业洞察页面
+    insights: {
+        page: {
+            title: '行业洞察 | LottoBridge'
+        },
+        hero: {
+            title: '全球彩票行业趋势分析与专业见解',
+            description: '提供专业、持续更新的全球彩票行业情报，覆盖政策法规、技术趋势、市场动态、玩法创新等内容',
+            btn_view_trends: '查看趋势报告',
+            btn_subscribe: '订阅行业简报'
+        },
+        nav_categories: {
+            policy_tracking: '📜 法规政策追踪',
+            market_trends: '📈 市场趋势报告',
+            tech_trends: '🧠 技术趋势分析',
+            case_studies: '🧩 案例研究',
+            industry_reports: '📊 行业报告',
+            webinars: '🎥 视频讲座'
+        },
+        content: {
+            title: '行业洞察',
+            subtitle: '全球彩票行业趋势分析与专业见解'
+        },
+        categories: {
+            policy: '政策动态',
+            tech: '技术趋势',
+            market: '市场趋势',
+            innovation: '玩法创新'
+        },
+        articles: {
+            keno: {
+                title: '2025年东南亚Keno游戏潜力分析',
+                summary: '泰国、越南等国政策松动，Keno游戏有望成为数字彩票突破口，预计市场规模增长300%。'
+            },
+            africa: {
+                title: '非洲数字彩票发展机会分析',
+                summary: '尼日利亚新法案通过，肯尼亚移动支付普及，非洲数字彩票市场迎来黄金发展期。'
+            },
+            ai: {
+                title: 'AI驱动的彩票风控系统升级',
+                summary: '机器学习算法在反欺诈、异常检测方面表现优异，误报率降低85%，检测精度提升40%。'
+            },
+            blockchain: {
+                title: '区块链彩票透明度解决方案',
+                summary: '基于区块链的开奖流程，确保每次开奖的公正性和透明度，用户信任度提升显著。'
+            },
+            latam: {
+                title: '拉美彩票市场数字化进程',
+                summary: '墨西哥、巴西等国数字彩票销售占比快速提升，预计2025年将达到60%。'
+            },
+            japan: {
+                title: '日本即开票市场创新分析',
+                summary: '日本推出NFT结合的即开票产品，年轻用户参与度大幅提升，为全球市场提供新思路。'
+            }
+        },
+        read_more: '阅读全文'
+    },
+
+    // 印刷服务页面
+    printing: {
+        page: {
+            title: '专业彩票印刷服务解决方案 | LottoBridge'
+        },
+        hero: {
+            title: '世界级彩票印刷解决方案',
+            description: '采用国际顶尖印刷技术与多重防伪工艺，为全球彩票运营商提供安全可靠的印刷服务',
+            btn_services: '查看服务能力',
+            btn_quality: '质量保证'
+        },
+        services: {
+            title: '核心印刷服务能力',
+            description: '从传统即开票到数字化彩票，提供全方位专业印刷解决方案',
+            specifications: '技术规格',
+            instant_tickets: {
+                title: '即开型彩票印刷',
+                description: '刮刮乐、撕开式彩票专业印刷，支持复杂图案设计与多重防伪技术',
+                feature1: '8色胶印+2色专色工艺',
+                feature2: 'UV光变防伪涂层技术',
+                feature3: '微缩文字+彩虹印刷',
+                feature4: '环保水性刮刮涂层',
+                feature5: '批量生产月产能500万张',
+                specs: '纸张: 250-400g/m² | 尺寸: 50×80mm至150×200mm | 精度: ±0.1mm'
+            },
+            thermal_tickets: {
+                title: '热敏彩票印刷',
+                description: '数字彩票热敏纸卷，支持高速打印与条码识别，保证10年以上保存期',
+                feature1: '德国进口热敏涂层',
+                feature2: '防水防油防酒精配方',
+                feature3: '高密度二维码打印',
+                feature4: '特殊底纹防伪设计',
+                feature5: '连续生产无缝拼接',
+                specs: '纸张: 55-120g/m² | 卷宽: 57-110mm | 长度: 30-500米'
+            },
+            security_printing: {
+                title: '安全防伪印刷',
+                description: '银行级安全印刷技术，多重防伪措施，确保彩票安全性与权威性',
+                feature1: '全息烫印防伪标签',
+                feature2: '安全线内埋技术',
+                feature3: '紫外荧光防伪油墨',
+                feature4: '红外透射防伪图案',
+                feature5: '序列号加密管理',
+                specs: '防伪级别: 银行级 | 检测方式: 紫外线+红外线+放大镜'
+            },
+            custom_design: {
+                title: '定制化设计服务',
+                description: '专业设计团队提供本地化创意设计，融合文化元素与品牌特色',
+                feature1: '本土文化元素融入',
+                feature2: '品牌视觉识别设计',
+                feature3: '多语言版本适配',
+                feature4: '节庆主题定制',
+                feature5: '3D效果图预览',
+                specs: '设计周期: 5-10个工作日 | 修改次数: 免费3次 | 格式: AI/PDF'
+            }
+        },
+        process: {
+            title: '先进生产工艺流程',
+            description: '严格按照ISO 12647国际印刷标准，确保每一张彩票的品质',
+            design: {
+                title: '创意设计与审核',
+                description: '专业设计师创作，多轮审核确保设计符合品牌定位与法规要求',
+                step1: '需求分析与概念设计',
+                step2: '色彩搭配与版面布局',
+                step3: '防伪元素集成设计',
+                step4: '客户确认与修订'
+            },
+            prepress: {
+                title: '印前制版处理',
+                description: '高精度制版技术，确保印刷图像清晰度与色彩还原度',
+                step1: '高分辨率扫描输入',
+                step2: '色彩管理与校正',
+                step3: 'CTP直接制版技术',
+                step4: '印版质量检测'
+            },
+            printing: {
+                title: '精密印刷生产',
+                description: '德国海德堡印刷机，8色+专色一次成型，误差控制在±0.1mm',
+                step1: '环境恒温恒湿控制',
+                step2: '在线密度实时监控',
+                step3: '套准精度自动调节',
+                step4: '专色配墨精准调色'
+            },
+            finishing: {
+                title: '后道工艺处理',
+                description: '防伪涂层、模切成型、质检包装，每道工序严格控制品质',
+                step1: 'UV/水性涂层处理',
+                step2: '精密模切成型',
+                step3: '防伪标签贴附',
+                step4: '自动计数包装'
+            },
+            quality: {
+                title: '质量检测认证',
+                description: '多重质检流程，确保每批产品符合国际标准与客户要求',
+                step1: '首件检测确认',
+                step2: '批量抽检验证',
+                step3: '防伪效果测试',
+                step4: '质检报告出具'
+            },
+            delivery: {
+                title: '安全包装配送',
+                description: '专业包装与全程追踪，确保产品安全到达客户指定地点',
+                step1: '防潮防压包装',
+                step2: '序列号记录管理',
+                step3: '专业物流配送',
+                step4: '到货确认验收'
+            }
+        },
+        quality: {
+            title: '国际质量保证体系',
+            description: '通过多项国际认证，建立完善的质量管理体系',
+            metrics: {
+                accuracy: {
+                    title: '产品合格率',
+                    description: '严格质检确保超高合格率'
+                },
+                precision: {
+                    title: '套准精度',
+                    description: '德国设备保证精密套准'
+                },
+                durability: {
+                    title: '保存期限',
+                    description: '优质材料确保长期保存'
+                },
+                capacity: {
+                    title: '月产能张数',
+                    description: '大规模生产满足需求'
+                }
+            },
+            certifications: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: '质量管理体系认证'
+                },
+                fsc: {
+                    title: 'FSC森林认证',
+                    description: '可持续森林管理认证'
+                },
+                security: {
+                    title: '安全印刷认证',
+                    description: '政府授权安全印刷资质'
+                },
+                environmental: {
+                    title: '环保标准认证',
+                    description: '欧盟环保材料标准'
+                }
+            }
+        },
+        cases: {
+            title: '全球成功案例',
+            description: '为全球50+国家提供专业印刷服务，累计印制彩票超过10亿张',
+            mexico: {
+                title: '墨西哥国家彩票项目',
+                description: '为墨西哥国家彩票局提供5000万张即开票印刷服务',
+                volume: '印刷数量: 5000万张',
+                duration: '完成周期: 45天',
+                varieties: '票种: 12个品种'
+            },
+            nigeria: {
+                title: '尼日利亚刮刮乐项目',
+                description: '本土文化主题设计，月产能达到800万张',
+                themes: '文化主题: 8个系列',
+                languages: '语言版本: 3种',
+                security: '防伪级别: 银行级'
+            },
+            vietnam: {
+                title: '越南热敏票卷项目',
+                description: '高密度二维码打印，支持全国数字彩票系统',
+                specification: '规格: 80mm×80mm',
+                monthly: '月供应: 200万米',
+                quality: '质量等级: 银行级'
+            }
+        },
+        cta: {
+            title: '开始您的专业印刷项目',
+            description: '联系我们的专家团队，获取定制化印刷解决方案',
+            btn_contact: '立即咨询',
+            btn_products: '查看其他产品'
+        }
+    },
+
+    // 热敏耗材页面
+    thermal: {
+        page: {
+            title: '专业热敏耗材解决方案 | LottoBridge'
+        },
+        hero: {
+            title: '专业热敏耗材供应解决方案',
+            description: '德国进口材料，日本制造工艺，为全球彩票终端设备提供高品质热敏纸卷与碳带耗材',
+            btn_products: '查看产品系列',
+            btn_compatibility: '设备兼容性'
+        },
+        products: {
+            title: '专业热敏耗材产品系列',
+            description: '覆盖彩票行业全规格需求，确保高品质打印效果与长期保存',
+            specifications: {
+                parameter: '参数',
+                value: '规格',
+                width: '宽度',
+                length: '长度',
+                weight: '纸张重量',
+                core_diameter: '卷芯直径',
+                shelf_life: '保存期限',
+                colors: '颜色',
+                activation_temp: '显色温度',
+                applications: '应用场景',
+                width_range: '宽度范围',
+                length_range: '长度范围',
+                coating_options: '涂层选项',
+                production_time: '生产周期',
+                min_order: '最小订量'
+            },
+            features: {
+                title: '产品特性'
+            },
+            standard_series: {
+                title: '标准系列热敏纸',
+                description: '适用于一般彩票终端设备，具备优异的打印清晰度和成本效益',
+                feature1: '高清晰度打印',
+                feature2: '防水防油污',
+                feature3: '长期保存稳定',
+                feature4: '成本效益优化'
+            },
+            premium_series: {
+                title: '高端系列热敏纸',
+                description: '银行级品质，超长保存期，适用于高端自助终端和重要票据打印',
+                feature1: '银行级品质标准',
+                feature2: '防褪色技术',
+                feature3: '抗静电处理',
+                feature4: '超长保存期'
+            },
+            color_series: {
+                title: '彩色热敏纸系列',
+                description: '多色热敏打印技术，支持双色、三色打印，提升票据视觉效果',
+                colors: '黑/红/蓝',
+                applications: '重要票据、彩票',
+                feature1: '多色同步打印',
+                feature2: '色彩饱和度高',
+                feature3: '防伪应用支持',
+                feature4: '视觉效果提升'
+            },
+            custom_series: {
+                title: '定制系列产品',
+                description: '根据客户特殊需求定制生产，支持特殊规格、涂层和功能要求',
+                coating_options: '标准/防水/防化学',
+                production_time: '15-30天',
+                min_order: '1000卷',
+                feature1: '完全定制化',
+                feature2: '特殊功能涂层',
+                feature3: '品牌标识印刷',
+                feature4: '技术支持服务'
+            }
+        },
+        compatibility: {
+            title: '全面设备兼容性保证',
+            description: '与全球主流彩票终端设备完美兼容，确保稳定可靠的打印效果',
+            desktop_terminals: {
+                title: '桌面终端设备',
+                description: '适配主流桌面型彩票销售终端',
+                brand1: 'Epson TM系列',
+                brand2: 'Star TSP系列',
+                brand3: 'Citizen CT系列',
+                brand4: '其他主流品牌'
+            },
+            mobile_terminals: {
+                title: '移动终端设备',
+                description: '支持便携式和手持型打印设备',
+                brand1: 'Zebra移动打印机',
+                brand2: 'Honeywell便携式',
+                brand3: 'Brother手持终端',
+                brand4: '定制移动设备'
+            },
+            kiosk_terminals: {
+                title: '自助终端设备',
+                description: '兼容各类自助服务终端打印模块',
+                brand1: 'Custom打印模块',
+                brand2: 'Fujitsu自助设备',
+                brand3: 'NCR Kiosk系列',
+                brand4: '定制自助终端'
+            },
+            pos_systems: {
+                title: 'POS收银系统',
+                description: '适用于彩票销售点收银系统',
+                brand1: '银联POS终端',
+                brand2: '新大陆收银机',
+                brand3: '商米POS设备',
+                brand4: '海外POS品牌'
+            }
+        },
+        quality: {
+            title: '国际质量标准认证',
+            description: '严格按照国际标准生产，通过多项权威认证，确保产品品质',
+            standards: {
+                iso: {
+                    title: 'ISO 9001:2015',
+                    description: '质量管理体系认证',
+                    item1: '全流程质量控制',
+                    item2: '持续改进机制',
+                    item3: '客户满意度保障'
+                },
+                environmental: {
+                    title: '环保认证',
+                    description: '绿色环保材料认证',
+                    item1: 'FSC森林管理认证',
+                    item2: '欧盟RoHS认证',
+                    item3: '无毒环保材料'
+                },
+                food_safety: {
+                    title: '食品级安全',
+                    description: '食品接触材料安全认证',
+                    item1: 'FDA美国食品药监认证',
+                    item2: '欧盟食品接触材料',
+                    item3: '无双酚A配方'
+                },
+                testing: {
+                    title: '专业检测',
+                    description: '专业实验室检测认证',
+                    item1: 'SGS第三方检测',
+                    item2: '德国TUV认证',
+                    item3: '多项性能测试'
+                }
+            }
+        },
+        supply_chain: {
+            title: '全球供应链管理体系',
+            description: '建立完善的全球供应链网络，确保及时交付和库存充足',
+            production: {
+                title: '生产制造',
+                description: '德国技术，亚洲制造基地'
+            },
+            storage: {
+                title: '仓储管理',
+                description: '全球多地仓储中心'
+            },
+            logistics: {
+                title: '物流配送',
+                description: '快速响应配送网络'
+            },
+            service: {
+                title: '售后服务',
+                description: '7×24技术支持'
+            },
+            global_network: {
+                title: '全球网络覆盖',
+                description: '在全球主要地区建立仓储和服务网点',
+                region1: '亚太地区: 中国、日本、新加坡',
+                region2: '欧洲地区: 德国、荷兰',
+                region3: '美洲地区: 美国、墨西哥',
+                region4: '非洲地区: 南非、肯尼亚'
+            },
+            delivery_time: {
+                title: '快速交付保障',
+                description: '建立快速响应机制，确保客户需求及时满足',
+                regular: '常规订单: 3-7个工作日',
+                urgent: '紧急订单: 24-48小时',
+                custom: '定制产品: 15-30个工作日',
+                tracking: '全程物流追踪服务'
+            },
+            inventory: {
+                title: '智能库存管理',
+                description: '采用先进的库存管理系统，确保库存充足',
+                prediction: 'AI预测需求模型',
+                monitoring: '实时库存监控',
+                safety: '安全库存保障',
+                reporting: '库存报告分析'
+            }
+        },
+        cta: {
+            title: '开始您的热敏耗材采购',
+            description: '联系我们的专业团队，获取最适合的热敏耗材解决方案',
+            btn_contact: '立即咨询',
+            btn_products: '查看其他产品'
+        }
+    },
+
+    // 运营服务页面
+    operations: {
+        page: {
+            title: '彩票运营管理解决方案 | LottoBridge'
+        },
+        hero: {
+            title: '全球彩票运营管理解决方案',
+            description: '从项目策划到运营优化，提供全生命周期专业服务，助力彩票项目成功实施与持续发展',
+            btn_services: '查看服务体系',
+            btn_methodology: '运营方法论'
+        },
+        services: {
+            title: '全方位运营服务体系',
+            description: '基于全球最佳实践，为彩票运营商提供专业的端到端服务解决方案',
+            strategic_planning: {
+                title: '战略规划咨询',
+                description: '深度市场分析与商业模式设计，制定符合本地特色的彩票发展战略',
+                feature1: '市场机会评估分析',
+                feature2: '竞争对手深度调研',
+                feature3: '商业模式创新设计',
+                feature4: '投资回报率预测建模',
+                feature5: '风险评估与控制策略'
+            },
+            project_implementation: {
+                title: '项目实施管理',
+                description: '专业的项目管理团队，确保彩票项目按时按质顺利落地实施',
+                feature1: '项目里程碑管理',
+                feature2: '资源协调与配置',
+                feature3: '质量控制与验收',
+                feature4: '风险监控与应对',
+                feature5: '变更管理与优化'
+            },
+            team_building: {
+                title: '团队建设培养',
+                description: '建立专业运营团队，提供全方位培训与能力提升服务',
+                feature1: '组织架构设计优化',
+                feature2: '人才招聘与选拔',
+                feature3: '技能培训体系建设',
+                feature4: '绩效考核机制设计',
+                feature5: '团队文化建设指导'
+            },
+            operations_optimization: {
+                title: '运营优化提升',
+                description: '持续监控运营数据，识别优化机会，提升运营效率与用户体验',
+                feature1: '运营数据分析挖掘',
+                feature2: '业务流程优化重组',
+                feature3: '用户体验改进提升',
+                feature4: '成本控制与效率提升',
+                feature5: '创新产品与服务设计'
+            },
+            compliance_management: {
+                title: '合规风控管理',
+                description: '建立完善的合规体系，确保运营活动符合法律法规要求',
+                feature1: '法规政策解读分析',
+                feature2: '合规体系建设咨询',
+                feature3: '风险识别与评估',
+                feature4: '内控制度设计实施',
+                feature5: '审计监督与整改'
+            },
+            ongoing_support: {
+                title: '持续支持服务',
+                description: '提供7×24小时技术支持与运营咨询，确保业务持续稳定运行',
+                feature1: '7×24小时技术热线',
+                feature2: '远程诊断与故障排除',
+                feature3: '定期巡检与维护',
+                feature4: '运营咨询与建议',
+                feature5: '升级更新服务支持'
+            }
+        },
+        process: {
+            title: '专业实施流程',
+            description: '基于国际最佳实践，建立标准化项目实施流程，确保项目成功落地',
+            analysis: {
+                title: '需求分析调研',
+                description: '深入了解客户需求与市场环境',
+                step1: '业务需求梳理',
+                step2: '市场环境分析',
+                step3: '技术可行性评估',
+                step4: '投资收益分析'
+            },
+            design: {
+                title: '方案设计规划',
+                description: '制定详细的实施方案与计划',
+                step1: '整体架构设计',
+                step2: '实施计划制定',
+                step3: '资源配置规划',
+                step4: '风险应对预案'
+            },
+            implementation: {
+                title: '系统部署实施',
+                description: '按计划执行系统部署与集成',
+                step1: '环境搭建配置',
+                step2: '系统集成测试',
+                step3: '数据迁移验证',
+                step4: '安全检测认证'
+            },
+            training: {
+                title: '培训交付上线',
+                description: '全面培训与系统正式上线',
+                step1: '用户培训实施',
+                step2: '试运行监控',
+                step3: '问题修复优化',
+                step4: '正式上线发布'
+            },
+            optimization: {
+                title: '运营优化提升',
+                description: '持续监控优化与服务提升',
+                step1: '运营数据监控',
+                step2: '性能优化调整',
+                step3: '用户反馈收集',
+                step4: '持续改进升级'
+            }
+        },
+        methodology: {
+            title: '专业运营方法论',
+            description: '基于多年实践经验，形成完整的彩票运营管理方法论体系',
+            data_driven: {
+                title: '数据驱动决策',
+                description: '建立完善的数据分析体系，基于数据洞察指导运营决策',
+                feature1: '实时数据监控仪表板',
+                feature2: '用户行为分析模型',
+                feature3: '预测分析与预警机制',
+                feature4: 'A/B测试与效果评估'
+            },
+            agile_operations: {
+                title: '敏捷运营管理',
+                description: '采用敏捷管理方法，快速响应市场变化与用户需求',
+                feature1: '快速迭代与持续改进',
+                feature2: '跨部门协作机制',
+                feature3: '用户反馈快速响应',
+                feature4: '灵活的资源配置调整'
+            },
+            user_centric: {
+                title: '用户中心设计',
+                description: '以用户需求为核心，设计优化产品与服务体验',
+                feature1: '用户画像与需求分析',
+                feature2: '用户体验优化设计',
+                feature3: '多渠道用户触达',
+                feature4: '个性化服务定制'
+            },
+            risk_management: {
+                title: '全面风险管控',
+                description: '建立多层次风险防控体系，确保业务安全稳定运行',
+                feature1: '风险识别与评估体系',
+                feature2: '多层次安全防护机制',
+                feature3: '应急响应与恢复预案',
+                feature4: '合规监控与审计追踪'
+            },
+            innovation_driven: {
+                title: '创新驱动发展',
+                description: '持续技术创新与产品创新，保持市场竞争优势',
+                feature1: '新技术研究与应用',
+                feature2: '产品创新与升级',
+                feature3: '商业模式创新探索',
+                feature4: '行业趋势前瞻分析'
+            },
+            partnership: {
+                title: '生态合作共赢',
+                description: '构建开放的合作生态，实现多方共赢发展',
+                feature1: '战略合作伙伴关系',
+                feature2: '供应链协同优化',
+                feature3: '技术标准制定参与',
+                feature4: '行业资源整合共享'
+            }
+        },
+        cases: {
+            title: '全球成功案例',
+            description: '在全球30+国家成功实施彩票运营项目，积累丰富的实战经验',
+            mexico: {
+                title: '墨西哥国家彩票现代化',
+                subtitle: '全国彩票系统升级改造项目',
+                description: '协助墨西哥国家彩票局完成全国彩票系统现代化升级，涵盖技术架构重构、运营流程优化、人员培训等全方面服务',
+                metric1: '项目周期',
+                metric2: '效率提升',
+                metric3: '系统可用性'
+            },
+            nigeria: {
+                title: '尼日利亚彩票运营启动',
+                subtitle: '从零开始建设彩票运营体系',
+                description: '为尼日利亚彩票公司提供全方位运营支持，从市场调研、系统建设到团队培养，成功启动全国彩票业务',
+                metric1: '启动周期',
+                metric2: '培训人员',
+                metric3: '市场覆盖率'
+            },
+            vietnam: {
+                title: '越南数字彩票转型',
+                subtitle: '传统彩票向数字化转型升级',
+                description: '协助越南彩票公司完成数字化转型，建立完整的在线彩票平台，实现线上线下一体化运营',
+                metric1: '转型周期',
+                metric2: '销售增长',
+                metric3: '用户满意度'
+            }
+        },
+        cta: {
+            title: '开启您的彩票运营之旅',
+            description: '联系我们的专业团队，获取定制化的彩票运营解决方案',
+            btn_contact: '立即咨询',
+            btn_products: '查看其他产品'
+        }
+    },
+
+    // 培训服务页面
+    training: {
+        page: {
+            title: '专业彩票培训教育服务 | LottoBridge'
+        },
+        hero: {
+            title: '全球领先的彩票教育培训体系',
+            description: '专业认证培训课程，国际标准教学体系，培养彩票行业专业人才，推动行业健康发展',
+            btn_courses: '查看课程体系',
+            btn_certification: '专业认证'
+        },
+        courses: {
+            title: '专业课程体系',
+            description: '构建完整的彩票行业知识体系，从基础理论到实战应用，满足不同层次的学习需求',
+            meta: {
+                duration: '课程时长',
+                level: '难度等级',
+                size: '班级规模'
+            },
+            executive_leadership: {
+                title: '高管领导力课程',
+                description: '针对彩票公司高级管理人员的战略管理与领导力提升课程',
+                level: '高级',
+                topic1: '彩票行业发展趋势分析',
+                topic2: '战略规划与商业模式创新',
+                topic3: '风险管理与合规运营',
+                topic4: '数字化转型策略',
+                topic5: '国际市场开拓与合作'
+            },
+            technical_operations: {
+                title: '技术运营管理',
+                description: '系统架构设计、技术运维与安全管理的专业技能培训',
+                level: '中高级',
+                topic1: '彩票系统架构设计原理',
+                topic2: '数据库管理与优化',
+                topic3: '网络安全与防护技术',
+                topic4: '系统监控与故障排除',
+                topic5: '云平台部署与管理'
+            },
+            business_operations: {
+                title: '业务运营管理',
+                description: '彩票业务流程管理、市场营销与客户服务专业培训',
+                level: '中级',
+                topic1: '彩票产品设计与管理',
+                topic2: '渠道管理与合作伙伴关系',
+                topic3: '市场营销策略与推广',
+                topic4: '客户关系管理',
+                topic5: '数据分析与商业智能'
+            },
+            compliance_security: {
+                title: '合规安全管理',
+                description: '法律法规遵循、风险控制与安全管理专业培训',
+                level: '高级',
+                topic1: '国际彩票法律法规解读',
+                topic2: '合规体系建设与管理',
+                topic3: '风险识别与控制策略',
+                topic4: '反洗钱与防欺诈',
+                topic5: '审计监督与内控制度'
+            },
+            customer_service: {
+                title: '客户服务培训',
+                description: '一线销售人员与客户服务专业技能提升培训',
+                level: '初中级',
+                topic1: '彩票产品知识培训',
+                topic2: '销售技巧与沟通艺术',
+                topic3: '客户关系维护',
+                topic4: '投诉处理与危机应对',
+                topic5: '设备操作与维护'
+            },
+            technical_maintenance: {
+                title: '技术维护培训',
+                description: '设备维护、故障诊断与技术支持专业培训',
+                level: '中级',
+                topic1: '设备结构原理与维护',
+                topic2: '故障诊断与排除技巧',
+                topic3: '预防性维护策略',
+                topic4: '安全操作规程',
+                topic5: '技术文档管理'
+            }
+        },
+        pathways: {
+            title: '专业学习路径',
+            description: '针对不同职业发展方向，设计完整的学习成长路径',
+            management: {
+                title: '管理发展路径',
+                description: '从基层管理到高级管理的完整培养体系',
+                stage1: '初级管理：团队管理基础',
+                stage2: '中级管理：部门运营管理',
+                stage3: '高级管理：战略规划与决策',
+                stage4: '执行层：企业治理与领导力'
+            },
+            technical: {
+                title: '技术发展路径',
+                description: '从技术专员到技术专家的专业成长路径',
+                stage1: '技术基础：系统操作与维护',
+                stage2: '技术进阶：系统开发与集成',
+                stage3: '技术专家：架构设计与优化',
+                stage4: '技术领军：技术战略与创新'
+            },
+            business: {
+                title: '业务发展路径',
+                description: '从业务专员到业务总监的职业发展路径',
+                stage1: '业务基础：产品与市场认知',
+                stage2: '业务专员：销售与客户服务',
+                stage3: '业务主管：渠道管理与拓展',
+                stage4: '业务总监：战略规划与执行'
+            },
+            compliance: {
+                title: '合规发展路径',
+                description: '从合规专员到首席合规官的专业发展',
+                stage1: '合规基础：法规政策理解',
+                stage2: '合规专员：制度执行与监控',
+                stage3: '合规经理：体系建设与管理',
+                stage4: '首席合规官：合规战略制定'
+            }
+        },
+        modes: {
+            title: '多样化学习模式',
+            description: '线上线下结合，满足不同学习偏好与时间安排',
+            classroom: {
+                title: '面授培训',
+                description: '传统课堂教学模式，面对面互动学习',
+                feature1: '专业讲师现场授课',
+                feature2: '实时互动答疑',
+                feature3: '小组讨论与实践',
+                feature4: '网络同步与学员交流'
+            },
+            online: {
+                title: '在线学习',
+                description: '灵活便捷的在线学习平台',
+                feature1: '24/7随时随地学习',
+                feature2: '多媒体互动课件',
+                feature3: '学习进度智能跟踪',
+                feature4: '在线考试与认证'
+            },
+            blended: {
+                title: '混合学习',
+                description: '线上线下相结合的混合学习模式',
+                feature1: '理论在线预习',
+                feature2: '实践面授指导',
+                feature3: '项目实战演练',
+                feature4: '持续跟踪辅导'
+            },
+            corporate: {
+                title: '企业定制',
+                description: '专为企业量身定制的培训方案',
+                feature1: '需求调研与方案设计',
+                feature2: '专属课程内容定制',
+                feature3: '企业内训实施',
+                feature4: '效果评估与改进'
+            }
+        },
+        certification: {
+            title: '国际专业认证体系',
+            description: '获得行业权威认证，提升个人职业竞争力',
+            lottery_professional: {
+                title: '彩票专业人员认证',
+                description: '面向彩票行业从业人员的基础专业认证',
+                requirement1: '完成基础课程学习',
+                requirement2: '通过理论知识考试',
+                requirement3: '具备6个月以上行业经验',
+                requirement4: '持续教育学分要求'
+            },
+            technical_expert: {
+                title: '技术专家认证',
+                description: '面向技术人员的高级专业技能认证',
+                requirement1: '完成技术专业课程',
+                requirement2: '通过实践技能考核',
+                requirement3: '具备2年以上技术经验',
+                requirement4: '提交技术项目作品'
+            },
+            management_leader: {
+                title: '管理领导者认证',
+                description: '面向管理人员的领导力与管理能力认证',
+                requirement1: '完成管理课程学习',
+                requirement2: '通过管理案例分析',
+                requirement3: '具备3年以上管理经验',
+                requirement4: '360度评估反馈'
+            },
+            compliance_officer: {
+                title: '合规官认证',
+                description: '面向合规管理人员的专业资质认证',
+                requirement1: '完成合规专业课程',
+                requirement2: '通过法规知识考试',
+                requirement3: '具备法律或合规背景',
+                requirement4: '持续专业发展要求'
+            }
+        },
+        instructors: {
+            title: '国际顶尖师资团队',
+            description: '汇聚全球彩票行业顶尖专家，提供最专业的培训指导',
+            industry_experts: {
+                title: '行业资深专家',
+                description: '来自全球知名彩票公司的资深管理者与技术专家',
+                feature1: '20年以上行业经验',
+                feature2: '成功项目实战经验',
+                feature3: '多国市场运营经验',
+                feature4: '前沿趋势洞察能力'
+            },
+            academic_professors: {
+                title: '学术权威教授',
+                description: '来自知名商学院与研究机构的学术专家',
+                feature1: '博士学位与教授资质',
+                feature2: '丰富的教学经验',
+                feature3: '前沿理论研究成果',
+                feature4: '国际学术声誉'
+            },
+            legal_consultants: {
+                title: '法律合规顾问',
+                description: '专业的法律专家与合规管理顾问',
+                feature1: '法学博士学位',
+                feature2: '彩票法律实务经验',
+                feature3: '国际法规比较研究',
+                feature4: '合规体系建设专长'
+            },
+            technical_architects: {
+                title: '技术架构师',
+                description: '顶尖的技术专家与系统架构师',
+                feature1: '计算机科学硕士以上学历',
+                feature2: '大型系统架构设计经验',
+                feature3: '前沿技术应用实践',
+                feature4: '开源项目贡献经历'
+            }
+        },
+        cta: {
+            title: '开启您的专业成长之旅',
+            description: '联系我们的培训顾问，制定个性化学习计划',
+            btn_contact: '立即咨询',
+            btn_products: '查看其他服务'
+        }
+    },
+
     market_reports: {
         title: '全球彩票市场情报报告',
         subtitle: '基于AI驱动的市场分析，为您提供最新的全球彩票市场洞察',
         view_report: '查看报告',
+        // 直接在 market_reports 下定义各国报告，匹配HTML结构
+        egypt: {
+            title: '埃及彩票市场深度分析',
+            date: '2024年1月',
+            highlights: ['市场规模4.3亿美元', '年增长率8%', '数字化转型机会']
+        },
+        mexico: {
+            title: '墨西哥彩票市场报告',
+            date: '2024年1月',
+            tag1: '政策友好',
+            tag2: '市场增长'
+        },
+        philippines: {
+            title: '菲律宾彩票市场报告',
+            date: '2024年3月',
+            tag1: '在线增长',
+            tag2: '监管完善'
+        },
+        kenya: {
+            title: '肯尼亚彩票市场报告',
+            date: '2024年2月',
+            tag1: '移动支付',
+            tag2: '年轻用户'
+        },
         reports: {
             egypt: {
                 title: '埃及彩票市场深度分析',
@@ -245,21 +1389,25 @@ const zh = {
             mexico: {
                 title: '墨西哥彩票市场机会评估',
                 date: '2024年2月',
-                highlights: ['私营准入政策', '12.5亿美元市场', '体育竞猜增长']
+                highlights: ['私营准入政策', '12.5亿美元市场', '体育竞猜增长'],
+                tag1: '政策友好',
+                tag2: '市场增长'
             },
             philippines: {
                 title: '菲律宾彩票市场前景报告',
                 date: '2024年3月',
-                highlights: ['高增长潜力', '8.7亿美元规模', '电子游戏兴起']
+                highlights: ['高增长潜力', '8.7亿美元规模', '电子游戏兴起'],
+                tag1: '在线增长',
+                tag2: '监管完善'
             },
             kenya: {
                 title: '肯尼亚市场报告',
                 date: '2023年11月',
                 tag1: '增长',
-                tag2: '创新',
-            },
+                tag2: '创新'
+            }
         }
-    },
+      },
     // 合作案例精选
     case_studies: {
         title: '合作案例精选',
@@ -346,39 +1494,52 @@ const zh = {
         title: '准备好进入全球彩票市场了吗？',
         subtitle: '无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案',
         contact_now: '立即咨询',
-        book_demo: '预约演示'
+        book_demo: '预约演示',
+        contact_consultant: '联系顾问',
+        download_handbook: '下载手册'
     },
     // 页脚
     footer: {
+        // 基础信息
+        description: '全球彩票出海一站式解决方案平台，为您提供专业的技术支持和服务。',
+        quick_links: '快速链接',
+        services: '服务',
+        contact: '联系方式',
+        rights: '保留所有权利',
+        // 公司信息
         company: {
             name: 'LottoBridge',
             description: '全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。'
         },
+        // 产品服务
         products: {
             title: '产品服务',
-            lottery_system: '彩票系统',
-            terminal_equipment: '终端设备',
-            game_design: '游戏设计',
-            printing_service: '印刷服务',
-            market_research: '市场调研'
+            lottery_system: '彩票系统服务',
+            terminal_equipment: '终端设备服务',
+            game_design: '游戏设计与开发',
+            printing_service: '票券印刷服务',
+            market_research: '市场调研服务'
         },
+        // 资源中心
         resources: {
-            title: '资源',
+            title: '资源中心',
             case_studies: '案例研究',
-            whitepapers: '白皮书',
+            whitepapers: '白皮书下载',
             industry_reports: '行业报告',
             blog_news: '博客与新闻',
             faq: '常见问题'
         },
+        // 联系信息
         contact: {
             title: '联系我们',
             address: '北京市朝阳区建国路88号'
         },
+        // 版权信息
         copyright: {
             company: '© 2023 LottoBridge',
             rights: '保留所有权利。',
             privacy: '隐私政策',
-            terms: '服务条款'
+            terms: '使用条款'
         }
     },
     // 市场调研页面
@@ -387,12 +1548,16 @@ const zh = {
             title: '市场调研 | LottoBridge'
         },
         hero: {
-            title: 'Unlock Global Lottery Opportunities with AI-powered Market Research',
+            title: 'AI驱动的全球彩票市场研究',
             subtitle: '快速掌握全球彩票市场的政策、规模与机会点',
             description: '由 LottoBridge AI 驱动的全球市场情报系统，为您提供一站式国家级彩票数据洞察，助您做出明智的市场决策',
             btn_select_country: '选择国家',
             btn_generate_report: '生成报告',
             btn_view_sample: '查看示例报告'
+        },
+        ai_powered: {
+            title: 'AI驱动的市场分析',
+            description: '利用人工智能技术深度分析全球彩票市场数据，提供准确的市场洞察和预测'
         },
         country_search: {
             placeholder: '搜索国家或地区...',
@@ -404,6 +1569,22 @@ const zh = {
             filter_english: '英语国家',
             filter_emerging: '新兴市场',
             coverage: '当前已覆盖 132 个国家和地区'
+        },
+        filter: {
+            title: '筛选条件',
+            region_label: '地区',
+            region_all: '全部地区',
+            region_asia: '亚洲',
+            region_africa: '非洲',
+            region_europe: '欧洲',
+            region_latin_america: '拉丁美洲',
+            game_type_label: '游戏类型',
+            game_type_all: '全部类型',
+            game_type_number: '数字彩票',
+            game_type_instant: '即开票',
+            game_type_sports: '体育竞猜',
+            game_type_video: '视频彩票',
+            search: '搜索'
         },
         recommended_markets: {
             title: '推荐市场'
@@ -527,6 +1708,63 @@ const zh = {
                 tag3: '监管灰区'
             }
         },
+        reports: {
+            title: '研究报告',
+            uzbekistan: {
+                title: '乌兹别克斯坦彩票市场分析报告',
+                summary: '分析乌兹别克斯坦彩票市场的发展现状、政策环境和商业机会',
+                point1: '市场规模预计达到2.5亿美元',
+                point2: '政府支持私营企业参与',
+                point3: '数字化转型需求强烈',
+                point4: '监管环境逐步完善',
+                button: '查看详情'
+            },
+            nigeria: {
+                title: '尼日利亚彩票市场分析报告',
+                summary: '分析尼日利亚彩票市场的发展现状、政策环境和商业机会',
+                point1: '非洲最大彩票市场，人口超过2亿',
+                point2: '移动支付普及率高，数字化潜力巨大',
+                point3: '政府加强监管，市场规范化进程加快',
+                button: '查看详情'
+            },
+            vietnam: {
+                title: '越南彩票市场分析报告',
+                summary: '分析越南彩票市场的发展现状、政策环境和商业机会',
+                point1: '东南亚快速增长的彩票市场',
+                point2: '年轻人口占比高，数字化接受度强',
+                point3: '政府支持彩票业现代化发展',
+                button: '查看详情'
+            },
+            mexico: {
+                title: '墨西哥彩票市场分析报告',
+                summary: '分析墨西哥彩票市场的发展现状、政策环境和商业机会',
+                point1: '拉丁美洲最大彩票市场之一',
+                point2: '私营企业参与政策开放',
+                point3: '体育竞猜市场增长迅速',
+                button: '查看详情'
+            },
+            philippines: {
+                title: '菲律宾彩票市场分析报告',
+                summary: '分析菲律宾彩票市场的发展现状、政策环境和商业机会',
+                point1: '东南亚重要彩票市场，人口超过1亿',
+                point2: '在线彩票和电子游戏快速发展',
+                point3: '监管政策相对完善，市场规范化程度高',
+                button: '查看详情'
+            },
+            kenya: {
+                title: '肯尼亚彩票市场分析报告',
+                summary: '分析肯尼亚彩票市场的发展现状、政策环境和商业机会',
+                point1: '东非地区领先的彩票市场',
+                point2: '移动支付普及率极高，M-Pesa广泛应用',
+                point3: '年轻人口占比大，数字化接受度强',
+                button: '查看详情'
+            }
+        },
+        cta_bottom: {
+            title: '未找到您需要的市场情报？',
+            description: '我们的专家团队可为您提供定制化市场调研服务',
+            button: '联系专家'
+        },
         testimonials: {
             title: '客户评价',
             testimonial1: {
@@ -551,7 +1789,14 @@ const zh = {
             title: '全球彩票一站式解决方案',
             description: '整合中国彩票产业链核心资源，提供从市场调研、系统开发、终端设备到运营支持的全流程服务',
             btn_view_services: '查看服务方案',
-            btn_contact_consultant: '联系销售顾问'
+            btn_contact_consultant: '联系销售顾问',
+            btn_contact: '联系我们'
+        },
+        nav: {
+            systems: '系统',
+            terminals: '终端',
+            printing: '印刷',
+            services: '服务'
         },
         services: {
             title: '我们的核心产品与服务',
@@ -682,1473 +1927,6 @@ const zh = {
             btn_download: '下载服务手册'
         }
     },
-    // 行业洞察页面
-    insights: {
-        page: {
-            title: '行业洞察 | LottoBridge'
-        },
-        hero: {
-            title: '全球彩票行业趋势分析与专业见解',
-            description: '提供专业、持续更新的全球彩票行业情报，覆盖政策法规、技术趋势、市场动态、玩法创新等内容',
-            btn_view_trends: '查看趋势报告',
-            btn_subscribe: '订阅行业简报'
-        },
-        nav_categories: {
-            policy_tracking: '📜 法规政策追踪',
-            market_trends: '📈 市场趋势报告',
-            tech_trends: '🧠 技术趋势分析',
-            case_studies: '🧩 案例研究',
-            industry_reports: '📊 行业报告',
-            webinars: '🎥 视频讲座'
-        },
-        trends: {
-            card_title: '2025全球彩票行业五大趋势前瞻',
-            subtitle: 'LottoBridge 行业研究团队基于132个国家市场数据的最新分析',
-            card_description: '全球彩票行业正在经历深刻变革',
-            trend1: {
-                title: '数字化转型加速',
-                description: '移动端销售占比将超过60%，云彩票系统成为主流选择'
-            },
-            trend2: {
-                title: '监管合规要求提升',
-                description: '各国加强反洗钱、数据保护等合规要求，技术门槛显著提高'
-            },
-            trend3: {
-                title: 'AI技术深度应用',
-                description: '人工智能在风险控制、客户分析、游戏设计等领域广泛应用'
-            },
-            trend4: {
-                title: '跨境合作增多',
-                description: '国际彩票联盟、跨国运营商合作模式日益成熟'
-            },
-            trend5: {
-                title: '可持续发展重视',
-                description: 'ESG理念融入彩票运营，绿色彩票、社会责任成为关键词'
-            }
-        },
-        policy: {
-            title: '全球彩票政策追踪',
-            subtitle: '实时跟踪全球彩票政策法规变化',
-            nigeria: {
-                title: '尼日利亚新彩票法案通过',
-                description: '允许私营运营商参与，预计市场规模增长300%'
-            },
-            thailand: {
-                title: '泰国数字彩票试点启动',
-                description: '首批5个省份开始数字彩票销售试点项目'
-            },
-            colombia: {
-                title: '哥伦比亚修订彩票税收政策',
-                description: '降低彩票税率至15%，刺激市场增长'
-            },
-            pakistan: {
-                title: '巴基斯坦彩票合法化进程',
-                description: '议会正在审议彩票合法化法案，预计年内通过'
-            }
-        },
-        tech_trends: {
-            title: '技术趋势',
-            subtitle: '探索彩票行业最新技术应用与创新',
-            ai_prediction: {
-                title: 'AI在客户行为预测中的应用',
-                description: '机器学习算法帮助运营商更好地理解客户需求，提升销售转化率'
-            },
-            anti_counterfeiting: {
-                title: '区块链防伪技术突破',
-                description: '基于区块链的彩票防伪系统，确保开奖过程透明可信'
-            },
-            intelligent_design: {
-                title: '智能游戏设计平台',
-                description: 'AI驱动的游戏设计工具，快速生成符合本地化需求的彩票游戏'
-            },
-            read_more: '阅读全文'
-        },
-        game_innovation: {
-            title: '全球彩票玩法创新报告',
-            subtitle: '分析最新玩法趋势与用户体验优化方案',
-            item1: {
-                title: '即开票与NFT结合实践',
-                description: '阿联酋试点"数字收藏版"即开票，中奖票可兑换NFT艺术品，年轻玩家占比提升至58%。',
-                tag1: 'NFT',
-                tag2: '年轻化'
-            },
-            item2: {
-                title: '微型赛事竞猜模式崛起',
-                description: '巴西推出"90秒赛事"即时竞猜，单日投注量突破200万笔，平均投注额下降但频次提升3倍。',
-                tag1: '微竞猜',
-                tag2: '即时开奖'
-            },
-            item3: {
-                title: '团体合买功能设计指南',
-                description: '分析印尼"Group Play"功能：组团合买转化率提升27%，但需注意奖金分配合规性设计。',
-                tag1: '社交功能',
-                tag2: '合买'
-            },
-            read_more: '阅读全文'
-        },
-        case_compare: {
-            title: '拉美三国彩票改革比较',
-            subtitle: '智利、秘鲁、阿根廷三国不同改革路径的深度分析',
-            table: {
-                country: '国家',
-                policy_path: '政策路径',
-                success_factors: '成功要素',
-                risk_lessons: '风险教训'
-            },
-            chile: {
-                country: '🇨🇱 智利',
-                policy: '公开招标私营承包',
-                success: '独立发行系统+渠道合作',
-                risk: '缺乏印刷合规监管'
-            },
-            peru: {
-                country: '🇵🇪 秘鲁',
-                policy: '合资运营与跨国集团合作',
-                success: '提前设立合规标准',
-                risk: '玩家欺诈风险高'
-            },
-            argentina: {
-                country: '🇦🇷 阿根廷',
-                policy: '地区独立运营模式',
-                success: '地方票种灵活多样',
-                risk: '市场过度碎片化'
-            },
-            summary: {
-                title: '关键发现总结',
-                description: '通过对拉美三国彩票改革路径的比较分析，我们发现：',
-                point1: '私营化模式(智利)初期见效快，但长期监管挑战大',
-                point2: '合资模式(秘鲁)能快速引入国际经验，但需防范技术依赖',
-                point3: '地方自治模式(阿根廷)激发创新活力，但难以形成规模效应'
-            },
-            download_report: '下载完整比较报告(PDF)'
-        },
-        whitepapers: {
-            title: '专业白皮书下载',
-            subtitle: 'LottoBridge发布的全球调研系列深度报告',
-            report1: {
-                title: '非洲彩票政策与市场布局2025',
-                description: '覆盖12国政策要点、玩法结构、机会地图与风险预警'
-            },
-            report2: {
-                title: '即开票玩法设计与票面创新指南',
-                description: '包含7种票面设计模板、3种安全方案与5个新兴市场案例'
-            },
-            report3: {
-                title: '全球终端设备发展趋势报告',
-                description: '分析56款主流终端的技术规格、兼容性与安全性测试结果'
-            },
-            download_btn: '下载报告'
-        },
-        videos: {
-            title: '视频讲座与行业对话',
-            subtitle: '通过视频了解全球彩票行业最新动态',
-            item1: {
-                title: '对话肯尼亚国家彩票局负责人',
-                description: '解读东非彩票市场开放政策与外资合作机会'
-            },
-            item2: {
-                title: '2025亚洲彩票趋势论坛回顾',
-                description: '6国专家讨论数字化、年轻化与合规平衡'
-            },
-            item3: {
-                title: '欧洲彩票技术创新研讨会',
-                description: '欧洲彩票行业最新区块链与AI应用'
-            },
-            watch: '观看视频'
-        },
-        subscribe: {
-            title: '订阅行业简报',
-            description: '获取最新全球彩票行业洞察与趋势报告，直接发送至您的邮箱',
-            button: '立即订阅',
-            privacy_notice: '订阅即表示您同意我们的',
-            privacy_policy: '隐私政策'
-        }
-    },
-    // 案例研究页面
-    case_studies: {
-        page: {
-            title: '案例研究 | LottoBridge'
-        },
-        hero: {
-            title: '全球彩票成功案例',
-            description: '探索我们全球彩票项目的真实实施案例和成功故事',
-            btn_view_cases: '查看所有案例',
-            btn_submit_request: '提交项目需求'
-        },
-        filters: {
-            region: '地区',
-            all_regions: '所有地区',
-            asia: '亚洲',
-            africa: '非洲',
-            europe: '欧洲',
-            america: '美洲',
-            middle_east: '中东',
-            project_type: '项目类型',
-            all_types: '所有类型',
-            system_setup: '系统搭建',
-            terminal_deployment: '终端部署',
-            ticket_printing: '票务印刷',
-            consulting: '咨询服务',
-            service_content: '服务内容',
-            all_services: '所有服务',
-            market_research: '市场调研',
-            software_system: '软件系统',
-            hardware_equipment: '硬件设备',
-            game_design: '游戏设计',
-            operation_support: '运营支持',
-            year: '年份',
-            all_years: '所有年份',
-            reset: '重置',
-            apply: '应用'
-        },
-        cases: {
-            cambodia: {
-                title: '柬埔寨国家彩票系统',
-                type: '系统搭建与终端部署',
-                feature1: '集中式彩票管理系统',
-                feature2: '全国部署500+台POS终端',
-                testimonial: 'LottoBridge帮助我们在短短6个月内建立了现代化彩票系统。'
-            },
-            uganda: {
-                title: '乌干达彩票数字化转型',
-                type: '数字系统与移动集成',
-                feature1: '移动彩票平台开发',
-                feature2: '实时销售监控系统',
-                testimonial: '数字化转型在第一年就使我们的销售额增长了150%。'
-            },
-            brazil: {
-                title: '巴西区域彩票网络',
-                type: '多区域系统集成',
-                feature1: '多区域彩票网络搭建',
-                feature2: '先进的安全和合规功能',
-                testimonial: 'LottoBridge在监管合规方面的专业知识非常宝贵。'
-            },
-            uzbekistan: {
-                title: '乌兹别克斯坦彩票现代化',
-                type: '遗留系统现代化',
-                feature1: '遗留系统迁移和升级',
-                feature2: '员工培训和运营支持',
-                testimonial: '现代化项目按时按预算完成。'
-            },
-            view_details: '查看详情',
-            download_brief: '下载简介'
-        },
-        // 新增案例详情页翻译
-        cambodia: {
-            page_title: '柬埔寨国家彩票系统本地化合作 | LottoBridge',
-            title: '柬埔寨彩票系统本地化合作',
-            description: '全票种销售系统定制 + 本地终端部署 + CRM模块培训，支持柬语系统界面与安卓终端导入',
-            slogan: '本地化驱动，赋能柬埔寨彩票行业数字化转型',
-            country: '国家：',
-            country_name: '柬埔寨',
-            client_type: '客户类型：',
-            client_type_value: '政府机构',
-            period: '项目周期：',
-            period_value: '2023-2024',
-            scope: '服务范围：',
-            scope_value: '系统搭建、终端部署、CRM培训、本地化定制',
-            result: '主要成果：',
-            result_value: '部署POS端超1,200台，年销售额增长42%',
-            highlight1: {
-                title: '全票种销售系统',
-                desc: '定制开发支持多种彩票类型的销售管理系统'
-            },
-            highlight2: {
-                title: '本地终端部署',
-                desc: '全国范围内部署1200台POS终端设备'
-            },
-            highlight3: {
-                title: '柬语系统界面',
-                desc: '完全本地化的柬语用户界面，提升用户体验'
-            },
-            highlight4: {
-                title: '销售增长显著',
-                desc: '年销售额增长42%，提升年销售额预计2200万美元'
-            },
-            testimonial: '"本地销售网络迅速上线，共部署 POS 端超 1,200 台，提升年销售额预计 2200万美元，增长超42%"',
-            client: '柬埔寨国家彩票局技术总监',
-            delivery_title: '交付内容与服务流程',
-            delivery1: {
-                title: '市场调研',
-                desc: '深入分析柬埔寨彩票市场政策与用户需求'
-            },
-            delivery2: {
-                title: '系统定制',
-                desc: '定制开发全票种销售管理系统'
-            },
-            delivery3: {
-                title: '终端部署',
-                desc: '全国范围内部署1200台POS终端'
-            },
-            delivery4: {
-                title: 'CRM培训',
-                desc: '为客户团队提供CRM模块培训与运维支持'
-            }
-        },
-        uganda: {
-            page_title: '乌干达即开票项目快速部署 | LottoBridge',
-            title: '乌干达即开票项目快速部署',
-            description: '彩票品类咨询 + 安全票面设计 + 即开票印刷，提供10款定制票种，全部通过地方政府审查',
-            slogan: '快速部署，安全合规，赋能乌干达彩票新生态',
-            country: '国家：',
-            country_name: '乌干达',
-            client_type: '客户类型：',
-            client_type_value: '政府机构',
-            period: '项目周期：',
-            period_value: '2024',
-            scope: '服务范围：',
-            scope_value: '票券印刷、物流出口、安全设计、合规咨询',
-            result: '主要成果：',
-            result_value: '项目周期仅4个月，票面满意度调查达92%',
-            highlight1: {
-                title: '即开票印刷',
-                desc: '提供10款定制票种，全部通过地方政府审查'
-            },
-            highlight2: {
-                title: '安全票面设计',
-                desc: '热敏纸与印刷品成功通过税务认证'
-            },
-            highlight3: {
-                title: '快速部署',
-                desc: '项目周期仅4个月，快速落地销售'
-            },
-            highlight4: {
-                title: '高满意度',
-                desc: '票面满意度调查达92%，用户反馈良好'
-            },
-            testimonial: '"项目周期仅4个月，票面满意度调查达92%，热敏纸与印刷品成功通过税务认证，快速落地销售"',
-            client: '乌干达国家彩票局负责人',
-            delivery_title: '交付内容与服务流程',
-            delivery1: {
-                title: '市场调研',
-                desc: '深入分析乌干达彩票市场政策与用户需求'
-            },
-            delivery2: {
-                title: '票面设计',
-                desc: '定制设计10款安全票面，符合当地法规'
-            },
-            delivery3: {
-                title: '票券印刷',
-                desc: '高质量印刷，通过税务认证'
-            },
-            delivery4: {
-                title: '物流出口',
-                desc: '快速物流配送，确保及时交付'
-            }
-        },
-        brazil: {
-            page_title: '巴西战略顾问与系统预研 | LottoBridge',
-            title: '巴西战略顾问与系统预研',
-            description: '市场准入政策分析 + AI调研 + 线上彩票系统规划，提供4轮政策研讨+本地专家对接+白皮书支持',
-            slogan: '战略咨询，助力巴西彩票行业创新发展',
-            country: '国家：',
-            country_name: '巴西',
-            client_type: '客户类型：',
-            client_type_value: '私营运营商',
-            period: '项目周期：',
-            period_value: '2024',
-            scope: '服务范围：',
-            scope_value: '咨询合作、市场调研、政策分析、系统规划',
-            result: '主要成果：',
-            result_value: '协助客户制定3年发展路径，助力战略投资方向确认',
-            highlight1: {
-                title: '市场准入分析',
-                desc: '深入分析巴西彩票市场准入政策与法规要求'
-            },
-            highlight2: {
-                title: 'AI调研创新',
-                desc: '运用AI技术进行市场调研与数据分析'
-            },
-            highlight3: {
-                title: '系统规划',
-                desc: '线上彩票系统架构设计与技术路线规划'
-            },
-            highlight4: {
-                title: '专家对接',
-                desc: '提供4轮政策研讨+本地专家对接+白皮书支持'
-            },
-            testimonial: '"协助客户制定3年发展路径，助力战略投资方向确认"',
-            client: '巴西私营彩票运营商战略总监',
-            delivery_title: '交付内容与服务流程',
-            delivery1: {
-                title: '市场调研',
-                desc: '深入分析巴西彩票市场政策与用户需求'
-            },
-            delivery2: {
-                title: 'AI调研',
-                desc: '运用AI技术进行市场数据分析'
-            },
-            delivery3: {
-                title: '系统规划',
-                desc: '线上彩票系统架构设计'
-            },
-            delivery4: {
-                title: '政策研讨',
-                desc: '提供4轮政策研讨+本地专家对接'
-            }
-        },
-        uzbekistan: {
-            page_title: '乌兹别克斯坦国家彩票即开票系统部署 | LottoBridge',
-            title: '乌兹别克斯坦国家彩票即开票系统部署',
-            description: '省级试点，年印量预计 2,000万张，调研报告 + CRM系统 + 安全票券设计 + 热敏纸出口',
-            slogan: '现代化驱动，赋能中亚彩票行业数字化转型',
-            country: '国家：',
-            country_name: '乌兹别克斯坦',
-            client_type: '客户类型：',
-            client_type_value: '政府机构',
-            period: '项目周期：',
-            period_value: '2024',
-            scope: '服务范围：',
-            scope_value: '系统搭建、票券印刷、CRM系统、热敏纸出口',
-            result: '主要成果：',
-            result_value: '省级试点，年印量预计2,000万张，仅用5个月完成',
-            highlight1: {
-                title: '省级试点',
-                desc: '成功在省级范围内开展试点项目'
-            },
-            highlight2: {
-                title: '大规模印刷',
-                desc: '年印量预计2,000万张，满足市场需求'
-            },
-            highlight3: {
-                title: 'CRM系统',
-                desc: '定制开发客户关系管理系统'
-            },
-            highlight4: {
-                title: '高效交付',
-                desc: '从策略分析到系统上线，仅用5个月'
-            },
-            testimonial: '"平台帮助我们从策略分析到系统上线，仅用5个月，非常高效"',
-            client: '乌兹别克斯坦国家彩票局技术总监',
-            delivery_title: '交付内容与服务流程',
-            delivery1: {
-                title: '市场调研',
-                desc: '深入分析乌兹别克斯坦彩票市场政策与用户需求'
-            },
-            delivery2: {
-                title: 'CRM系统',
-                desc: '定制开发客户关系管理系统'
-            },
-            delivery3: {
-                title: '安全设计',
-                desc: '安全票券设计，符合国际标准'
-            },
-            delivery4: {
-                title: '热敏纸出口',
-                desc: '高质量热敏纸材料出口供应'
-            }
-        },
-        cta: {
-            title: '准备开始您的彩票项目？',
-            description: '联系我们讨论您的具体需求并获得定制化解决方案',
-            contact_btn: '联系我们',
-            download_btn: '下载案例研究'
-        }
-    },
-    // 联系页面
-    contact: {
-        page: {
-            title: '联系我们 | LottoBridge'
-        },
-        hero: {
-            title: '联系我们',
-            description: '准备开启您的全球彩票业务？我们的专家团队随时为您提供专业咨询和定制化解决方案。',
-            btn_submit: '提交合作意向',
-            btn_direct: '直接联系我们'
-        },
-        form: {
-            title: '告诉我们您的需求',
-            description: '填写以下表单，我们的专家将在24小时内与您联系',
-            name: '姓名 / Name <span class="required">*</span>',
-            company: '公司 / Organization <span class="required">*</span>',
-            country: '国家 / Country <span class="required">*</span>',
-            select_country: '请选择国家',
-            country_china: '中国',
-            country_usa: '美国',
-            country_uk: '英国',
-            country_japan: '日本',
-            country_korea: '韩国',
-            country_germany: '德国',
-            country_france: '法国',
-            country_italy: '意大利',
-            country_spain: '西班牙',
-            country_russia: '俄罗斯',
-            country_brazil: '巴西',
-            country_india: '印度',
-            country_south_africa: '南非',
-            country_nigeria: '尼日利亚',
-            country_kenya: '肯尼亚',
-            country_egypt: '埃及',
-            country_mexico: '墨西哥',
-            country_argentina: '阿根廷',
-            country_australia: '澳大利亚',
-            country_canada: '加拿大',
-            country_other: '其他国家',
-            role_type: '角色类型 <span class="required">*</span>',
-            role_government: '政府',
-            role_operator: '运营商',
-            role_supplier: '供应商',
-            role_investor: '投资人',
-            role_other: '其他',
-            email: '联系邮箱 / Email <span class="required">*</span>',
-            phone: '电话 / WhatsApp',
-            needs: '您的需求 <span class="required">*</span>',
-            need_report: '生成市场报告',
-            need_system: '彩票系统',
-            need_printing: '印刷与终端采购',
-            need_compliance: '合规与落地',
-            need_other: '其他',
-            message: '补充信息',
-            upload: '上传附件',
-            upload_text: '拖放文件到此处或点击上传',
-            upload_format: '支持PDF/PPT/DOC等格式，最大10MB',
-            language_preference: '语言偏好',
-            lang_english: '英语',
-            lang_chinese: '中文',
-            lang_russian: '俄语',
-            lang_arabic: '阿拉伯语',
-            privacy: '我已阅读并同意<a href="#">隐私政策</a> <span class="required">*</span>',
-            submit: '提交合作意向',
-            schedule: '预约专家沟通',
-            footer: '提交表单即表示您同意我们根据隐私政策处理您的个人信息'
-        },
-        direct: {
-            title: '不想填写表单？',
-            description: '您也可以直接通过以下方式联系我们',
-            email: '邮箱',
-            send_email: '发送邮件',
-            send_message: '发送消息',
-            contact_us: '联系我们',
-            phone: '电话',
-            work_hours: '工作时间：UTC+8 09:00–18:00',
-            call: '拨打电话',
-            wechat: '微信',
-            scan_qr: '扫描二维码添加客服'
-        },
-        global: {
-            title: '我们服务全球 100+ 国家与地区',
-            description: 'LottoBridge 已在多个国家和地区成功实施项目',
-            africa: '非洲地区',
-            africa_desc: '我们在非洲多个国家设有代表处或合作伙伴，包括尼日利亚、肯尼亚、南非等',
-            manager: '区域经理: Sarah Johnson',
-            asia: '亚洲地区',
-            asia_desc: '覆盖东南亚、南亚及中东市场，包括越南、柬埔寨、菲律宾、阿联酋等',
-            manager_asia: '区域经理: David Chen',
-            latam: '拉丁美洲',
-            latam_desc: '服务墨西哥、巴西、哥伦比亚、阿根廷等拉美市场',
-            manager_latam: '区域经理: Maria Gonzalez'
-        },
-        resources: {
-            title: '快速下载资料',
-            description: '获取LottoBridge的产品与服务介绍资料',
-            platform_title: '平台服务简介',
-            platform_desc: '了解LottoBridge的核心服务与解决方案',
-            download_pdf: '下载PDF',
-            cases_title: '合作案例集',
-            cases_desc: '查看我们在全球的成功案例与客户评价',
-            download_ppt: '下载简报',
-            whitepaper_title: '白皮书',
-            whitepaper_desc: '全球彩票市场趋势与机会分析',
-            download_whitepaper: '下载白皮书'
-        },
-        ai: {
-            title: 'AI 问答助手',
-            description: '快速获取常见问题的答案',
-            assistant: 'LottoBridge AI 助手',
-            welcome: '您好！我是LottoBridge AI助手。今天我可以为您提供什么彩票业务帮助？',
-            send: '发送',
-            question1: '我在肯尼亚，可以申请哪类彩票牌照？',
-            question2: '我希望采购即开票终端，如何开始？',
-            question3: '贵公司在非洲有哪些成功案例？'
-        },
-        cta: {
-            title: '准备开始？',
-            description: '联系我们的专家获得个性化咨询和解决方案',
-            get_advice: '获取专家建议',
-            view_cases: '查看成功案例'
-        }
-    },
-    // 页脚
-    footer: {
-        company: {
-            name: 'LottoBridge',
-            description: '全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。'
-        },
-        products: {
-            title: '产品服务',
-            lottery_system: '彩票系统服务',
-            terminal_equipment: '终端设备服务',
-            game_design: '游戏设计与开发',
-            printing_service: '票券印刷服务',
-            market_research: '市场调研服务'
-        },
-        resources: {
-            title: '资源中心',
-            case_studies: '案例研究',
-            whitepapers: '白皮书下载',
-            industry_reports: '行业报告',
-            blog_news: '博客与新闻',
-            faq: '常见问题'
-        },
-        contact: {
-            title: '联系我们',
-            address: '北京市朝阳区建国路88号'
-        },
-        copyright: {
-            company: '© 2023 LottoBridge',
-            rights: '保留所有权利。',
-            privacy: '隐私政策',
-            terms: '使用条款'
-        },
-        // 新增footer翻译键
-        company: 'LottoBridge',
-        rights: '保留所有权利',
-        privacy: '隐私政策',
-        terms: '使用条款'
-    },
-    // 市场详情页面
-    market_details: {
-        page: {
-            title: '市场详情 | LottoBridge'
-        },
-        hero: {
-            title: '全球彩票市场深度分析',
-            subtitle: '深入了解全球彩票行业的发展趋势、市场机遇与挑战，为您的业务决策提供专业数据支持'
-        },
-        stats: {
-            market_size: '全球市场规模',
-            growth_rate: '年增长率',
-            countries: '覆盖国家',
-            digital_penetration: '数字化渗透率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '全球彩票市场正经历前所未有的数字化转型，从传统实体销售向在线平台迁移。新兴市场的快速增长、监管环境的不断优化，以及技术的持续创新，为行业参与者带来了巨大的发展机遇。',
-            trends: '移动端购彩、区块链技术应用、人工智能客服等创新模式正在重塑行业格局，为运营商和投资者创造了新的价值增长点。',
-            visual_title: '市场趋势',
-            visual_subtitle: '持续增长的数字彩票市场'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            regional: {
-                title: '区域市场分析',
-                description: '不同地区的彩票市场发展水平差异显著，北美和欧洲市场相对成熟，而亚太和非洲地区增长潜力巨大。',
-                feature1: '北美市场数字化程度最高',
-                feature2: '亚太地区增长最快',
-                feature3: '欧洲监管环境最完善'
-            },
-            demographic: {
-                title: '用户群体分析',
-                description: '年轻用户群体正在成为彩票市场的主力军，他们对数字化体验和便捷性有更高要求。',
-                feature1: '25-45岁为主要用户群体',
-                feature2: '移动端使用率超过70%',
-                feature3: '社交化购彩趋势明显'
-            },
-            technology: {
-                title: '技术趋势分析',
-                description: '人工智能、区块链、云计算等新技术正在深度改变彩票行业的运营模式和服务体验。',
-                feature1: 'AI客服普及率超过60%',
-                feature2: '区块链技术应用增长',
-                feature3: '云原生架构成为主流'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握关键市场机遇，实现业务增长',
-            mobile: {
-                title: '移动端机遇',
-                description: '移动端购彩需求持续增长，为运营商提供了巨大的市场空间和用户获取机会。'
-            },
-            emerging: {
-                title: '新兴市场',
-                description: '东南亚、非洲等新兴市场的彩票需求快速增长，为国际运营商提供了扩张机会。'
-            },
-            ai: {
-                title: 'AI技术应用',
-                description: '人工智能在用户服务、风险控制、营销推广等方面的应用前景广阔。'
-            },
-            blockchain: {
-                title: '区块链技术',
-                description: '区块链技术在彩票透明度和安全性方面的应用，为行业带来新的发展机遇。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            regulation: {
-                title: '监管合规',
-                description: '不同国家和地区的监管要求差异较大，合规成本高，需要专业的法律和技术支持。'
-            },
-            security: {
-                title: '安全风险',
-                description: '网络安全威胁日益复杂，需要持续投入安全技术和人才，保障用户资金和数据安全。'
-            },
-            competition: {
-                title: '竞争激烈',
-                description: '市场参与者众多，竞争激烈，需要差异化策略和持续创新能力。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您应对市场挑战，把握发展机遇',
-            compliance: {
-                title: '合规支持',
-                description: '提供多国监管合规解决方案，确保您的业务在全球范围内合法运营。'
-            },
-            security: {
-                title: '安全保障',
-                description: '采用银行级安全技术，提供全方位的网络安全和数据保护服务。'
-            },
-            innovation: {
-                title: '技术创新',
-                description: '持续投入研发，为您提供最前沿的技术解决方案和产品创新。'
-            }
-        },
-        cta: {
-            title: '开启您的全球彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    // 乌兹别克斯坦市场报告
-    uzbekistan: {
-        page: {
-            title: '乌兹别克斯坦彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '乌兹别克斯坦彩票市场报告',
-            subtitle: '深入分析中亚最大经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '乌兹别克斯坦作为中亚地区最大的经济体，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
-            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
-            visual_title: '市场趋势',
-            visual_subtitle: '数字化转型推动彩票市场增长'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '乌兹别克斯坦拥有年轻的人口结构，25-45岁年龄段占总人口的45%，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例高，消费潜力大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过80%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '5G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解乌兹别克斯坦彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为15%，增值税率为15%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握乌兹别克斯坦彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达25%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供乌兹别克语和俄语的双语服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在乌兹别克斯坦市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合乌兹别克斯坦监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供乌兹别克语和俄语的双语界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的乌兹别克斯坦彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    // 尼日利亚市场报告
-    nigeria: {
-        page: {
-            title: '尼日利亚彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '尼日利亚彩票市场报告',
-            subtitle: '深入分析非洲最大经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '尼日利亚作为非洲最大的经济体，拥有庞大的人口基数和快速增长的数字经济。移动互联网的普及为彩票行业的发展提供了巨大的市场空间。',
-            trends: '随着年轻人口的增加和移动支付的普及，数字彩票市场呈现出爆发式增长的趋势。政府正在积极推动数字化转型，为彩票行业的发展创造了有利条件。',
-            visual_title: '市场趋势',
-            visual_subtitle: '移动互联网推动彩票市场快速增长'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '尼日利亚拥有年轻的人口结构，18-35岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例极高，消费潜力巨大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '4G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解尼日利亚彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为7.5%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握尼日利亚彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达35%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供英语和当地语言的多语种服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在尼日利亚市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合尼日利亚监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供英语和当地语言的多语种界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的尼日利亚彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    
-    // 越南市场报告
-    vietnam: {
-        page: {
-            title: '越南彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '越南彩票市场报告',
-            subtitle: '深入分析东南亚新兴经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '越南作为东南亚地区最具活力的新兴经济体之一，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
-            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
-            visual_title: '市场趋势',
-            visual_subtitle: '数字化转型推动彩票市场增长'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '越南拥有年轻的人口结构，25-45岁年龄段占总人口的50%以上，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例高，消费潜力大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过75%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '4G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解越南彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为20%，增值税率为10%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握越南彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达30%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供越南语和英语的双语服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在越南市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合越南监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供越南语和英语的双语界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的越南彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    
-    // 墨西哥市场报告
-    mexico: {
-        page: {
-            title: '墨西哥彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '墨西哥彩票市场报告',
-            subtitle: '深入分析拉丁美洲第二大经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '墨西哥作为拉丁美洲第二大经济体，拥有成熟的市场体系和稳定的监管环境。政府在数字化转型方面投入巨大，为彩票行业的发展提供了良好的基础设施。',
-            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
-            visual_title: '市场趋势',
-            visual_subtitle: '成熟市场数字化转型加速'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '墨西哥拥有年轻的人口结构，25-45岁年龄段占总人口的40%以上，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例高，消费潜力大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过85%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '4G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解墨西哥彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握墨西哥彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达20%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供西班牙语和英语的双语服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在墨西哥市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合墨西哥监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供西班牙语和英语的双语界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的墨西哥彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    
-    // 菲律宾市场报告
-    philippines: {
-        page: {
-            title: '菲律宾彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '菲律宾彩票市场报告',
-            subtitle: '深入分析东南亚新兴经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '菲律宾作为东南亚地区最具活力的新兴经济体之一，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
-            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
-            visual_title: '市场趋势',
-            visual_subtitle: '数字化转型推动彩票市场增长'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '菲律宾拥有年轻的人口结构，25-45岁年龄段占总人口的55%以上，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例高，消费潜力大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过80%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '4G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解菲律宾彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为25%，增值税率为12%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握菲律宾彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达35%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供菲律宾语和英语的双语服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在菲律宾市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合菲律宾监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供菲律宾语和英语的双语界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的菲律宾彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    
-    // 肯尼亚市场报告
-    kenya: {
-        page: {
-            title: '肯尼亚彩票市场报告 | LottoBridge'
-        },
-        hero: {
-            title: '肯尼亚彩票市场报告',
-            subtitle: '深入分析东非地区最具活力的经济体彩票市场的发展机遇、监管环境与投资前景'
-        },
-        stats: {
-            population: '人口规模',
-            gdp: 'GDP总量',
-            growth: '经济增长率',
-            urbanization: '城市化率'
-        },
-        overview: {
-            title: '市场概览',
-            description: '肯尼亚作为东非地区最具活力的经济体，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。',
-            trends: '随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。',
-            visual_title: '市场趋势',
-            visual_subtitle: '移动支付领先推动彩票市场增长'
-        },
-        analysis: {
-            title: '深度市场分析',
-            subtitle: '基于最新数据和行业研究，为您提供全面的市场洞察',
-            demographic: {
-                title: '人口结构分析',
-                description: '肯尼亚拥有年轻的人口结构，25-45岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。',
-                feature1: '年轻人口比例高，消费潜力大',
-                feature2: '移动互联网普及率快速提升',
-                feature3: '城市化进程加速，消费升级明显'
-            },
-            technology: {
-                title: '技术发展分析',
-                description: '移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。',
-                feature1: '移动支付基础设施完善',
-                feature2: '4G网络覆盖范围扩大',
-                feature3: '数字身份认证系统成熟'
-            },
-            economic: {
-                title: '经济环境分析',
-                description: '稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。',
-                feature1: 'GDP持续增长，消费能力提升',
-                feature2: '外商投资政策不断优化',
-                feature3: '金融体系改革深化'
-            }
-        },
-        regulatory: {
-            title: '监管环境分析',
-            subtitle: '了解肯尼亚彩票行业的监管框架和政策导向',
-            license: {
-                title: '牌照申请',
-                description: '政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。'
-            },
-            tax: {
-                title: '税收政策',
-                description: '彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。'
-            },
-            compliance: {
-                title: '合规要求',
-                description: '要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。'
-            }
-        },
-        opportunities: {
-            title: '市场机遇',
-            subtitle: '识别并把握肯尼亚彩票市场的关键机遇',
-            mobile: {
-                title: '移动彩票',
-                description: '移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达40%。'
-            },
-            games: {
-                title: '游戏创新',
-                description: '年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。'
-            },
-            retail: {
-                title: '零售网络',
-                description: '传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。'
-            },
-            ai: {
-                title: 'AI技术',
-                description: '人工智能在用户服务、风险控制等方面的应用前景广阔。'
-            }
-        },
-        challenges: {
-            title: '市场挑战',
-            subtitle: '了解行业面临的主要挑战，制定相应的应对策略',
-            language: {
-                title: '语言本地化',
-                description: '需要提供斯瓦希里语和英语的双语服务，本地化要求较高。'
-            },
-            security: {
-                title: '网络安全',
-                description: '需要建立符合当地标准的网络安全体系，保障用户数据安全。'
-            },
-            partnership: {
-                title: '合作伙伴',
-                description: '需要与当地金融机构和支付服务商建立合作关系。'
-            }
-        },
-        solutions: {
-            title: 'LottoBridge解决方案',
-            subtitle: '我们提供全方位的技术支持和服务，帮助您在肯尼亚市场取得成功',
-            compliance: {
-                title: '合规支持',
-                description: '提供符合肯尼亚监管要求的系统解决方案，确保业务合法运营。'
-            },
-            localization: {
-                title: '本地化服务',
-                description: '提供斯瓦希里语和英语的双语界面和客服支持，确保用户体验。'
-            },
-            partnership: {
-                title: '合作伙伴网络',
-                description: '与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。'
-            }
-        },
-        cta: {
-            title: '开启您的肯尼亚彩票业务之旅',
-            subtitle: '联系我们，获取专业的市场分析和定制化解决方案',
-            contact: '立即咨询',
-            cases: '查看案例'
-        }
-    },
-    
     // 行业洞察页面
     insights: {
         page: {
@@ -2543,6 +2321,311 @@ const zh = {
         contact: '联系方式',
         services: '服务',
         rights: '保留所有权利'
+    },
+
+    // Instant Ticket System
+    instant: {
+        title: "即开票系统解决方案 - LottoBridge",
+        hero: {
+            title: "即开票系统解决方案",
+            subtitle: "从印制到兑奖全流程管理，构建安全、高效、可追溯的即开票运营体系",
+            btn_sample: "获取样票",
+            btn_customize: "定制本地化方案",
+            imageText: "即开票系统视觉图"
+        },
+        printing: {
+            title: "国际标准的票券印制体系",
+            subtitle: "支持揭开型、安全膜型、防伪油墨等多种票型，自动化生产线确保票序唯一、可追溯",
+            scratch: {
+                title: "揭开型票券",
+                desc: "传统刮开式设计，支持多层印刷和防伪技术"
+            },
+            security: {
+                title: "安全膜型票券",
+                desc: "高级安全膜覆盖，提供更强的防伪保护"
+            },
+            antiCounterfeit: {
+                title: "防伪油墨技术",
+                desc: "特殊油墨和印刷工艺，确保票券真伪识别"
+            },
+            process: {
+                title: "印制流程图",
+                design: {
+                    title: "设计",
+                    desc: "票面设计与防伪元素规划"
+                },
+                template: {
+                    title: "板样",
+                    desc: "制作印刷板样和校色"
+                },
+                printing: {
+                    title: "印刷",
+                    desc: "高精度印刷和质量控制"
+                },
+                lamination: {
+                    title: "覆膜",
+                    desc: "安全膜覆盖和热压处理"
+                },
+                cutting: {
+                    title: "切票",
+                    desc: "精确切割和分拣包装"
+                },
+                packaging: {
+                    title: "安全封装",
+                    desc: "防篡改包装和物流配送"
+                }
+            }
+        },
+        warehouse: {
+            title: "精细化的票库与调拨管理系统",
+            subtitle: "区分生产票库与销售票库，支持多级票库、调拨权限与实时监控",
+            production: {
+                title: "生产票库管理",
+                desc: "印制完成票券的存储、质检和出库管理",
+                item1: "✓ 票券批次追溯",
+                item2: "✓ 质量检验记录",
+                item3: "✓ 库存预警机制"
+            },
+            sales: {
+                title: "销售票库管理",
+                desc: "面向销售渠道的票券分配和库存控制",
+                item1: "✓ 渠道票池分配",
+                item2: "✓ 实时库存监控",
+                item3: "✓ 自动补货提醒"
+            },
+            transfer: {
+                title: "调拨权限控制",
+                desc: "多级权限管理，确保票券调拨安全合规",
+                item1: "✓ 分级审批流程",
+                item2: "✓ 调拨记录追踪",
+                item3: "✓ 异常行为预警"
+            }
+        },
+        redemption: {
+            title: "智能兑奖流程与风险控制",
+            subtitle: "AI辅助识别假票、防洗钱监测，接入司法系统与合规审计模块",
+            flow: {
+                step1: {
+                    title: "票样识别",
+                    desc: "AI图像识别验证票券真伪"
+                },
+                step2: {
+                    title: "安全码验证",
+                    desc: "多重算法验证安全码有效性"
+                },
+                step3: {
+                    title: "兑奖记录",
+                    desc: "记录兑奖信息和用户身份"
+                },
+                step4: {
+                    title: "黑名单拦截",
+                    desc: "检查用户是否在黑名单中"
+                },
+                step5: {
+                    title: "自动兑付",
+                    desc: "通过验证后自动完成兑付"
+                }
+            },
+            ai: {
+                title: "AI假票识别",
+                desc: "深度学习算法识别伪造票券"
+            },
+            aml: {
+                title: "防洗钱监测",
+                desc: "实时监控异常兑奖行为模式"
+            },
+            legal: {
+                title: "司法系统对接",
+                desc: "与执法部门数据库实时对接"
+            }
+        },
+        samples: {
+            title: "支持多样化票面设计",
+            subtitle: "多语言票样、多玩法结构，满足不同市场需求",
+            scratch: {
+                title: "经典刮刮卡",
+                desc: "传统刮开式设计，支持多种奖项设置",
+                imageText: "刮刮卡样票"
+            },
+            symbol: {
+                title: "幸运符号票",
+                desc: "符号匹配玩法，简单易懂",
+                imageText: "幸运符号票样"
+            },
+            numbers: {
+                title: "数字组合票",
+                desc: "数字匹配玩法，多种中奖方式",
+                imageText: "数字组合票样"
+            }
+        },
+        highlights: {
+            title: "系统核心亮点",
+            subtitle: "全方位保障即开票系统安全、高效运营",
+            standards: {
+                title: "国际印制标准",
+                desc: "符合WLA等国际标准，确保产品质量"
+            },
+            traceability: {
+                title: "全流程追溯",
+                desc: "从印制到兑奖全程可追溯管理"
+            },
+            blacklist: {
+                title: "黑名单兑奖阻断",
+                desc: "实时黑名单检查，防范风险用户"
+            },
+            security: {
+                title: "安全码验证算法",
+                desc: "多重加密算法保障票券安全"
+            },
+            warehouse: {
+                title: "多级票库调拨机制",
+                desc: "灵活的票库管理和调拨控制"
+            },
+            reporting: {
+                title: "数据报表与审计导出",
+                desc: "完整的数据报表和审计功能"
+            }
+        },
+        cta: {
+            title: "让我们为您设计下一张即开票",
+            subtitle: "专业的即开票系统解决方案，助您快速进入市场",
+            btn_sample: "获取样票",
+            btn_contact: "联系业务顾问"
+        }
+    },
+
+    // Video Lottery System
+    video: {
+        title: "视频彩票系统解决方案 - LottoBridge",
+        hero: {
+            title: "视频彩票系统解决方案",
+            subtitle: "创新型视频彩票系统，融合娱乐与合规，提升用户体验",
+            viewFeatures: "系统亮点",
+            contact: "咨询方案",
+            imageText: "视频彩票系统展示"
+        },
+        features: {
+            title: "核心功能亮点",
+            subtitle: "创新玩法，安全合规，灵活部署",
+            games: {
+                title: "多样化游戏",
+                desc: "支持多种视频彩票游戏，满足不同市场需求"
+            },
+            security: {
+                title: "安全合规",
+                desc: "严格遵循行业标准，保障数据与资金安全"
+            },
+            analytics: {
+                title: "数据分析",
+                desc: "实时数据分析，助力运营决策"
+            },
+            custom: {
+                title: "灵活定制",
+                desc: "支持多语言、多币种、多渠道接入"
+            }
+        },
+        gaming: {
+            title: "丰富的游戏类型",
+            subtitle: "多样化的视频彩票游戏，满足不同玩家需求",
+            keno: {
+                title: "视频基诺",
+                desc: "高频开奖，快速投注，实时开奖动画"
+            },
+            bingo: {
+                title: "视频宾果",
+                desc: "经典宾果游戏，增加视频互动元素"
+            },
+            scratch: {
+                title: "视频刮刮卡",
+                desc: "数字化刮刮卡游戏，提供更多动画效果"
+            },
+            instant: {
+                title: "即开游戏",
+                desc: "快速开奖，即时获得结果的视频游戏"
+            }
+        },
+        technology: {
+            title: "领先技术架构",
+            subtitle: "基于现代云原生架构，确保系统稳定高效",
+            rng: {
+                title: "随机数生成",
+                desc: "采用硬件随机数生成器，确保游戏公平性"
+            },
+            stream: {
+                title: "视频流处理",
+                desc: "高性能视频流处理，提供流畅的游戏体验"
+            },
+            realtime: {
+                title: "实时交互",
+                desc: "毫秒级响应，实现真正的实时游戏体验"
+            },
+            cdn: {
+                title: "全球CDN",
+                desc: "全球内容分发网络，确保世界各地的用户体验"
+            }
+        },
+        compliance: {
+            title: "合规与监管",
+            subtitle: "严格遵循国际标准，确保系统合规运营",
+            glI: {
+                title: "GLI认证",
+                desc: "通过GLI国际游戏实验室认证，确保游戏公平性"
+            },
+            rtp: {
+                title: "RTP控制",
+                desc: "严格的返奖率控制，符合监管要求"
+            },
+            audit: {
+                title: "审计追踪",
+                desc: "完整的审计日志，支持监管机构检查"
+            },
+            responsible: {
+                title: "负责任游戏",
+                desc: "内置玩家保护机制，防范问题赌博"
+            }
+        },
+        cta: {
+            title: "开启视频彩票新体验",
+            subtitle: "联系我们，获取专业的视频彩票系统解决方案",
+            contact: "立即咨询",
+            products: "查看其他产品"
+        }
+    },
+
+    // Printing System
+    printing: {
+        title: "彩票印刷服务解决方案 - LottoBridge",
+        hero: {
+            title: "专业彩票印刷服务",
+            subtitle: "国际标准印刷工艺，多重防伪技术，支持全球多语言定制",
+            viewServices: "查看服务",
+            viewSamples: "样品展示",
+            imageText: "彩票印刷工艺展示"
+        },
+        cta: {
+            title: "开始您的彩票印刷项目",
+            subtitle: "联系我们，获取专业的彩票印刷解决方案",
+            contact: "立即咨询",
+            products: "查看其他产品"
+        }
+    },
+
+    // Thermal System
+    thermal: {
+        title: "热敏耗材解决方案 - LottoBridge",
+        hero: {
+            title: "专业热敏耗材供应",
+            subtitle: "高品质热敏纸卷，适配各类彩票终端设备，稳定供货保障",
+            viewProducts: "查看产品",
+            checkCompatibility: "适配查询",
+            imageText: "热敏耗材产品展示"
+        },
+        cta: {
+            title: "开始您的热敏耗材解决方案",
+            subtitle: "联系我们，获取专业的热敏耗材供应方案",
+            contact: "立即咨询",
+            products: "查看其他产品"
+        }
     }
 };
 

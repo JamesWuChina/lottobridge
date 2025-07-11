@@ -8,433 +8,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 基础样式 */
-        :root {
-            --primary-blue: #1a3e8c;
-            --primary-red: #e63946;
-            --nav-blue: #1d3557; /* 导航栏文字颜色 */
-            --white: #ffffff;
-            --light-gray: #f8f9fa;
-            --medium-gray: #6c757d;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Microsoft YaHei', '微软雅黑', 'SimSun', '宋体';
-        }
-
-        body {
-            color: var(--nav-blue);
-            line-height: 1.7;
-            background-color: var(--white);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
-        }
-        
-        /* 多语言文本优化 */
-        [lang="en"] {
-            line-height: 1.6;
-            letter-spacing: 0.3px;
-        }
-        
-        [lang="fr"], [lang="es"] {
-            line-height: 1.65;
-            letter-spacing: 0.2px;
-        }
-        
-        [lang="ar"] {
-            direction: rtl;
-            text-align: right;
-            line-height: 1.8;
-        }
-        
-        [lang="ko"] {
-            line-height: 1.75;
-            letter-spacing: 0.1px;
-        }
-        
-        [lang="ru"] {
-            line-height: 1.7;
-            letter-spacing: 0.2px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* 导航栏样式 - 国际高端优化 */
-        .header {
-            background: rgba(255,255,255,0.85);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 6px 32px rgba(26,62,140,0.10), 0 1.5px 0 rgba(230,57,70,0.04);
-            border-bottom: 1.5px solid rgba(26,62,140,0.07);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: box-shadow 0.3s;
-        }
-        .header-container {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 18px 0 14px 0;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-right: 70px;
-        }
-        .logo-text {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: 2.5px;
-            text-shadow: 0 2px 8px rgba(26,62,140,0.08);
-            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-        }
-        .logo-lotto {
-            color: var(--primary-blue);
-        }
-        .logo-bridge {
-            color: var(--primary-red);
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin-right: 30px;
-            flex-wrap: nowrap !important;
-            gap: 10px;
-            align-items: center;
-        }
-        .nav-links li {
-            margin-right: 0;
-            position: relative;
-            flex-shrink: 0;
-        }
-        .nav-links a {
-            font-weight: 600;
-            font-size: 16px;
-            color: var(--nav-blue);
-            padding: 10px 18px;
-            border-radius: 18px;
-            position: relative;
-            white-space: nowrap;
-            display: block;
-            text-align: center;
-            transition: background 0.22s, color 0.22s, box-shadow 0.22s;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: linear-gradient(90deg, rgba(26,62,140,0.10) 0%, rgba(230,57,70,0.08) 100%);
-            color: var(--primary-blue);
-            box-shadow: 0 2px 8px rgba(26,62,140,0.07);
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 7px;
-            left: 20%;
-            width: 60%;
-            height: 2.5px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
-            border-radius: 2px;
-            opacity: 0;
-            transition: opacity 0.22s;
-        }
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            opacity: 1;
-        }
-        /* 语言选择器 - 国际高端优化 */
-        .language-selector {
-            position: relative;
-            margin-left: auto;
-            margin-right: 24px;
-        }
-        .language-selector::before {
-            content: '\f0ac';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--primary-blue);
-            font-size: 16px;
-            z-index: 2;
-            pointer-events: none;
-            filter: drop-shadow(0 1px 2px rgba(26,62,140,0.10));
-        }
-        .language-selector select {
-            padding: 12px 44px 12px 44px;
-            border: 2px solid rgba(26, 62, 140, 0.13);
-            border-radius: 28px;
-            background: rgba(255,255,255,0.92);
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            appearance: none;
-            color: var(--nav-blue);
-            min-width: 140px;
-            box-shadow: 0 4px 18px rgba(26, 62, 140, 0.10);
-            transition: all 0.22s;
-            letter-spacing: 0.4px;
-            outline: none;
-        }
-        .language-selector select:hover,
-        .language-selector select:focus {
-            border-color: var(--primary-blue);
-            background: linear-gradient(135deg, #f8faff 80%, #f1f3f7 100%);
-            box-shadow: 0 6px 24px rgba(26, 62, 140, 0.13);
-        }
-        .language-selector::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: var(--primary-blue);
-            font-size: 13px;
-            transition: transform 0.3s ease;
-        }
-        .language-selector:hover::after {
-            transform: translateY(-50%) rotate(180deg);
-        }
-        .mobile-menu-btn {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-            color: var(--nav-blue);
-            margin-left: 8px;
-            border-radius: 50%;
-            background: rgba(26,62,140,0.06);
-            padding: 6px 10px;
-            transition: background 0.2s;
-        }
-        .mobile-menu-btn:hover {
-            background: rgba(26,62,140,0.13);
-        }
-        /* 响应式设计优化 */
-        @media (max-width: 900px) {
-            .header-container {
-                padding: 10px 0;
-            }
-            .logo {
-                margin-right: 18px;
-            }
-            .logo-text {
-                font-size: 20px;
-            }
-            .nav-links {
-                gap: 0;
-            }
-        }
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 8px 0;
-            }
-            .logo {
-                margin-right: 10px;
-            }
-            .logo-text {
-                font-size: 18px;
-            }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100vw;
-                background: rgba(255,255,255,0.98);
-                box-shadow: 0 8px 32px rgba(26,62,140,0.13);
-                flex-direction: column;
-                padding: 18px 0 10px 0;
-                margin-right: 0;
-                gap: 0;
-                border-radius: 0 0 18px 18px;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .nav-links li {
-                width: 100%;
-                margin: 0;
-            }
-            .nav-links a {
-                padding: 14px 24px;
-                border-bottom: 1px solid #f1f3f4;
-                text-align: left;
-                font-size: 15px;
-            }
-            .nav-links a:last-child {
-                border-bottom: none;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .language-selector {
-                margin-right: 8px;
-            }
-            .language-selector select {
-                min-width: 100px;
-                padding: 8px 30px 8px 30px;
-                font-size: 13px;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 8px;
-            }
-            .logo-text {
-                font-size: 15px;
-            }
-            .language-selector select {
-                min-width: 80px;
-                padding: 6px 25px 6px 25px;
-                font-size: 12px;
-            }
-        }
-
-        /* 行业洞察页面专用样式 */
+        /* 行业洞察页面特有样式 */
         .insights-hero {
-            background: linear-gradient(120deg, #e9ecef 0%, #f8f9fa 60%, #e3eafc 100%);
-            color: var(--nav-blue);
-            padding: 90px 0 60px;
+            background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
+            color: var(--white);
+            padding: 120px 0 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
             margin-top: 70px;
         }
+
         .insights-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg width="1000" height="320" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%231a3e8c" stop-opacity="0.13"/><stop offset="1" stop-color="%23e63946" stop-opacity="0.10"/></linearGradient></defs><ellipse cx="800" cy="60" rx="120" ry="40" fill="url(%23g1)"/><ellipse cx="200" cy="80" rx="90" ry="30" fill="url(%23g1)"/><ellipse cx="500" cy="40" rx="60" ry="18" fill="url(%23g1)"/></svg>') no-repeat top center/cover;
-            opacity: 0.25;
-            z-index: 0;
-        }
-        .insights-hero::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 110px;
-            background: url('data:image/svg+xml;utf8,<svg width="1920" height="110" viewBox="0 0 1920 110" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C0 0 320 110 960 110C1600 110 1920 0 1920 0V110H0V0Z" fill="%231a3e8c" fill-opacity="0.07"/><path d="M0 0C0 0 320 80 960 80C1600 80 1920 0 1920 0V110H0V0Z" fill="%23e63946" fill-opacity="0.06"/></svg>') no-repeat bottom center/cover;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
             z-index: 1;
-            pointer-events: none;
         }
+
         .insights-hero-content {
             position: relative;
             z-index: 2;
-            max-width: 820px;
+            max-width: 900px;
             margin: 0 auto;
-        }
-        .insights-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            letter-spacing: 2.5px;
-            margin-bottom: 18px;
-            background: linear-gradient(90deg, #1a3e8c 60%, #e63946 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            text-shadow: 0 4px 18px rgba(26,62,140,0.10);
-        }
-        .insights-hero p {
-            font-size: 1.25rem;
-            margin-bottom: 28px;
-            color: rgba(29,53,87,0.72);
-            font-weight: 500;
-            letter-spacing: 0.2px;
-        }
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            gap: 22px;
-            margin-top: 18px;
-        }
-        .hero-actions .btn {
-            padding: 15px 36px;
-            border-radius: 28px;
-            font-size: 1.08rem;
-            font-weight: 700;
-            box-shadow: 0 4px 18px rgba(26,62,140,0.10);
-            border: none;
-            outline: none;
-            transition: all 0.22s;
-            cursor: pointer;
-            letter-spacing: 0.5px;
-        }
-        .hero-actions .btn-primary {
-            background: linear-gradient(90deg, #e63946 60%, #1a3e8c 100%);
-            color: #fff;
-        }
-        .hero-actions .btn-primary:hover {
-            background: linear-gradient(90deg, #1a3e8c 60%, #e63946 100%);
-            box-shadow: 0 8px 32px rgba(230,57,70,0.13);
-            transform: translateY(-2px) scale(1.04);
-        }
-        .hero-actions .btn-outline {
-            background: rgba(255,255,255,0.85);
-            color: var(--primary-blue);
-            border: 2px solid #e3eafc;
-        }
-        .hero-actions .btn-outline:hover {
-            background: linear-gradient(90deg, #e3eafc 60%, #f8f9fa 100%);
-            color: #e63946;
-            border-color: #e63946;
-            box-shadow: 0 8px 32px rgba(26,62,140,0.10);
-            transform: translateY(-2px) scale(1.04);
-        }
-        @media (max-width: 900px) {
-            .insights-hero {
-                padding: 70px 0 40px;
-            }
-            .insights-hero h1 {
-                font-size: 2.1rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .insights-hero {
-                padding: 48px 0 18px;
-            }
-            .insights-hero h1 {
-                font-size: 1.3rem;
-            }
-            .hero-actions .btn {
-                padding: 10px 18px;
-                font-size: 0.98rem;
-            }
+            padding: 0 20px;
         }
 
-        /* 标签导航分类 */
+        .insights-hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .insights-hero p {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin-top: 30px;
+        }
+
+        .hero-actions .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: clamp(15px, 1.8vw, 18px);
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-actions .btn-primary {
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: 2px solid var(--primary-red);
+            font-weight: 700;
+        }
+
+        .hero-actions .btn-primary:hover {
+            background-color: #c8394a;
+            border-color: #c8394a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.5);
+        }
+
+        .hero-actions .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+        }
+
+        .hero-actions .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border-color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        /* 内容分类导航 */
         .insights-nav {
             background-color: var(--white);
             box-shadow: var(--shadow);
@@ -482,452 +161,200 @@
             background-color: rgba(26, 62, 140, 0.05);
         }
 
-        /* 洞察内容区域优化 */
+        /* 洞察内容区域 */
         .insights-content {
-            padding: 56px 0 48px 0;
+            padding: 80px 0;
             background-color: var(--white);
         }
-        .insights-content .container {
-            max-width: 1040px;
-            padding: 0 12px;
-        }
+
         .section-header {
-            margin-bottom: 32px;
+            text-align: center;
+            margin-bottom: 60px;
         }
+
         .section-title {
-            font-size: 2.1rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, #1a3e8c 60%, #e63946 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            text-shadow: 0 2px 12px rgba(26,62,140,0.10);
-            margin-bottom: 8px;
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            line-height: 1.3;
+            position: relative;
         }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            border-radius: 2px;
+        }
+
         .section-subtitle {
-            font-size: 1.08rem;
-            color: rgba(29,53,87,0.68);
-            font-weight: 500;
-            letter-spacing: 0.2px;
-            margin-bottom: 0;
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+            margin-top: 25px;
         }
+
         .insights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 38px;
-            margin-top: 32px;
+            gap: 30px;
+            margin-top: 40px;
         }
+
         .insight-card {
-            background: rgba(255,255,255,0.98);
-            border-radius: 18px;
+            background-color: var(--white);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 6px 32px rgba(26,62,140,0.10);
-            border: 2.5px solid transparent;
-            background-clip: padding-box;
-            transition: box-shadow 0.22s, border 0.22s, transform 0.22s;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(26, 62, 140, 0.1);
             position: relative;
         }
+
         .insight-card:hover {
-            transform: translateY(-10px) scale(1.025);
-            box-shadow: 0 16px 48px rgba(26,62,140,0.13);
-            border: 2.5px solid #e3eafc;
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(26, 62, 140, 0.15);
+            border-color: var(--primary-blue);
         }
+
         .insight-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             background-color: var(--light-gray);
         }
+
         .insight-card-content {
-            padding: 28px 24px 22px 24px;
+            padding: 25px;
         }
+
         .insight-card h3 {
-            font-size: 1.18rem;
-            font-weight: 800;
+            font-size: 20px;
+            font-weight: 700;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #1a3e8c 60%, #e63946 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+            color: var(--nav-blue);
             line-height: 1.4;
         }
+
         .insight-card .meta {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            font-size: 13px;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
             color: var(--medium-gray);
         }
+
         .insight-card .meta .category {
-            background: linear-gradient(90deg, #1a3e8c 60%, #e63946 100%);
-            color: #fff;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            color: var(--white);
             padding: 4px 12px;
             border-radius: 12px;
             font-weight: 600;
             font-size: 12px;
         }
+
         .insight-card .summary {
-            color: rgba(29,53,87,0.68);
-            margin-bottom: 18px;
+            color: var(--medium-gray);
+            margin-bottom: 20px;
             line-height: 1.6;
             font-size: 15px;
         }
+
         .insight-card .readmore {
             display: inline-flex;
             align-items: center;
             color: var(--primary-blue);
-            font-weight: 700;
+            font-weight: 600;
             font-size: 14px;
-            border-radius: 18px;
-            padding: 7px 18px 7px 14px;
-            background: linear-gradient(90deg, #e3eafc 60%, #f8f9fa 100%);
-            box-shadow: 0 2px 8px rgba(26,62,140,0.07);
-            transition: all 0.22s;
-            border: none;
-            outline: none;
-            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
         }
+
         .insight-card .readmore:hover {
-            color: #e63946;
-            background: linear-gradient(90deg, #e63946 60%, #1a3e8c 100%);
-            color: #fff;
-            box-shadow: 0 8px 24px rgba(230,57,70,0.10);
-            transform: translateY(-2px) scale(1.04);
+            color: var(--primary-red);
         }
+
         .insight-card .readmore::after {
             content: ' →';
-            margin-left: 7px;
-            font-size: 1.1em;
-            transition: transform 0.22s;
+            margin-left: 5px;
+            transition: var(--transition);
         }
+
         .insight-card .readmore:hover::after {
-            transform: translateX(5px) scale(1.15);
-        }
-        @media (max-width: 900px) {
-            .insights-content .container {
-                max-width: 98vw;
-            }
-            .insights-grid {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-        }
-
-        /* 政策追踪区域 */
-        .policy-section {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-        }
-
-        .policy-timeline {
-            position: relative;
-            padding-left: 30px;
-            margin: 40px 0;
-        }
-
-        .policy-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 5px;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary-blue);
-        }
-
-        .policy-item {
-            position: relative;
-            padding-bottom: 30px;
-        }
-
-        .policy-item::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: -30px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--primary-red);
-            border: 2px solid var(--white);
-            box-shadow: 0 0 0 2px var(--primary-red);
-        }
-
-        .policy-date {
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-        }
-
-        .policy-content {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            margin-top: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .country-flag {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .article-tags {
-            margin-top: 15px;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin-right: 8px;
-            margin-bottom: 5px;
-        }
-
-        /* 技术趋势区域 */
-        .tech-trends-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .tech-card {
-            background-color: var(--white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #f1f3f4;
-        }
-
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .tech-icon {
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 40px;
-        }
-
-        .tech-content {
-            padding: 25px;
-        }
-
-        .tech-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--nav-blue);
-        }
-
-        .tech-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 14px;
-            color: var(--medium-gray);
-        }
-
-        .tech-desc {
-            color: var(--medium-gray);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        /* 推荐阅读区域 */
-        .related-insights {
-            padding: 60px 0;
-            background-color: var(--light-gray);
-        }
-
-        .related-insights h4 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--nav-blue);
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .related-insights ul {
-            list-style: none;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .related-insights li {
-            margin-bottom: 15px;
-            padding: 15px 20px;
-            background-color: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .related-insights li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .related-insights a {
-            color: var(--nav-blue);
-            font-weight: 500;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .related-insights a::after {
-            content: '→';
-            color: var(--primary-blue);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .related-insights a:hover::after {
             transform: translateX(3px);
-        }
-
-        /* 渐变分割线与装饰元素 */
-        .section-header {
-            margin-bottom: 32px;
-            position: relative;
-        }
-        .section-header::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            margin: 18px auto 0 auto;
-            border-radius: 2px;
-            background: linear-gradient(90deg, #1a3e8c 0%, #e63946 100%);
-            opacity: 0.18;
-        }
-        .insights-content {
-            position: relative;
-        }
-        .insights-content::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -38px;
-            width: 100%;
-            height: 38px;
-            background: url('data:image/svg+xml;utf8,<svg width="1920" height="38" viewBox="0 0 1920 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C0 0 320 38 960 38C1600 38 1920 0 1920 0V38H0V0Z" fill="%231a3e8c" fill-opacity="0.06"/><path d="M0 0C0 0 320 20 960 20C1600 20 1920 0 1920 0V38H0V0Z" fill="%23e63946" fill-opacity="0.05"/></svg>') no-repeat top center/cover;
-            z-index: 2;
-            pointer-events: none;
-        }
-        .insights-content .insights-grid::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 32px;
-            margin: 32px 0 0 0;
-            background: linear-gradient(180deg, rgba(26,62,140,0.04) 0%, rgba(255,255,255,0.0) 100%);
-            border-radius: 0 0 18px 18px;
-        }
-        .policy-section {
-            position: relative;
-        }
-        .policy-section::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -38px;
-            width: 100%;
-            height: 38px;
-            background: url('data:image/svg+xml;utf8,<svg width="1920" height="38" viewBox="0 0 1920 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C0 0 320 38 960 38C1600 38 1920 0 1920 0V38H0V0Z" fill="%231a3e8c" fill-opacity="0.06"/><path d="M0 0C0 0 320 20 960 20C1600 20 1920 0 1920 0V38H0V0Z" fill="%23e63946" fill-opacity="0.05"/></svg>') no-repeat top center/cover;
-            z-index: 2;
-            pointer-events: none;
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .insights-hero h1 {
-                font-size: 36px;
+            .insights-hero {
+                padding: 80px 0 60px;
             }
-            
-            .insights-hero p {
-                font-size: 18px;
-            }
-            
+
             .insights-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .tech-grid {
-                grid-template-columns: 1fr;
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .insights-nav-container {
+                gap: 20px;
+                padding: 15px 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 - 严格按图片描述 -->
+    <!-- Header Navigation -->
     <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
-                </a>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-link">
+                        <span class="brand-text">LottoBridge</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-i18n="nav.home">首页</a>
+                    <a href="products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
+                    <a href="market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
+                    <a href="case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
+                    <a href="insights.html" class="nav-link active" data-i18n="nav.insights">行业洞察</a>
+                    <a href="about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            
-            <nav id="mainNav">
-                <ul class="nav-links">
-                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
-                    <li><a href="market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                    <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
-                    <li><a href="insights.html" class="active" data-i18n="nav.insights">行业洞察</a></li>
-                    <li><a href="case-studies.html" data-i18n="nav.case_studies">合作案例</a></li>
-                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
-                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
-                </ul>
-            </nav>
-            
-            <div class="language-selector">
-                <select id="languageSelector">
-                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
-                    <option value="en">🇺🇸 English (US)</option>
-                    <option value="fr">🇫🇷 Français (FR)</option>
-                    <option value="es">🇪🇸 Español (ES)</option>
-                    <option value="ko">🇰🇷 한국어 (KR)</option>
-                    <option value="ar">🇸🇦 العربية (SA)</option>
-                    <option value="ru">🇷🇺 Русский (RU)</option>
-                </select>
-            </div>
-            
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero Banner Section -->
     <section class="insights-hero">
         <div class="container insights-hero-content">
             <h1 data-i18n="insights.hero.title">全球彩票行业趋势分析与专业见解</h1>
-            <p data-i18n="insights.hero.subtitle">提供专业、持续更新的全球彩票行业情报，覆盖政策法规、技术趋势、市场动态、玩法创新等内容</p>
+            <p data-i18n="insights.hero.description">提供专业、持续更新的全球彩票行业情报，覆盖政策法规、技术趋势、市场动态、玩法创新等内容</p>
             <div class="hero-actions">
-                <a href="#trends" class="btn btn-primary" data-i18n="insights.hero.viewTrends">查看趋势报告</a>
-                <a href="#subscribe" class="btn btn-outline" data-i18n="insights.hero.subscribe">订阅行业简报</a>
+                <a href="#trends" class="btn btn-primary" data-i18n="insights.hero.btn_view_trends">查看趋势报告</a>
+                <a href="#subscribe" class="btn btn-outline" data-i18n="insights.hero.btn_subscribe">订阅行业简报</a>
             </div>
         </div>
     </section>
@@ -935,10 +362,12 @@
     <!-- 内容分类导航 -->
     <section class="insights-nav">
         <div class="container insights-nav-container">
-            <div class="insights-nav-item active" data-target="policy" data-i18n="insights.nav.policy">政策动态</div>
-            <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav.tech">技术趋势</div>
-            <div class="insights-nav-item" data-target="market" data-i18n="insights.nav.market">市场机会</div>
-            <div class="insights-nav-item" data-target="innovation" data-i18n="insights.nav.innovation">玩法创新</div>
+            <div class="insights-nav-item active" data-target="policy" data-i18n="insights.nav_categories.policy_tracking">📜 法规政策追踪</div>
+            <div class="insights-nav-item" data-target="market" data-i18n="insights.nav_categories.market_trends">📈 市场趋势报告</div>
+            <div class="insights-nav-item" data-target="tech" data-i18n="insights.nav_categories.tech_trends">🧠 技术趋势分析</div>
+            <div class="insights-nav-item" data-target="cases" data-i18n="insights.nav_categories.case_studies">🧩 案例研究</div>
+            <div class="insights-nav-item" data-target="reports" data-i18n="insights.nav_categories.industry_reports">📊 行业报告</div>
+            <div class="insights-nav-item" data-target="webinars" data-i18n="insights.nav_categories.webinars">🎥 视频讲座</div>
         </div>
     </section>
 
@@ -961,7 +390,7 @@
                         </div>
                         <h3 data-i18n="insights.articles.keno.title">2025年东南亚Keno游戏潜力分析</h3>
                         <p class="summary" data-i18n="insights.articles.keno.summary">泰国、越南等国政策松动，Keno游戏有望成为数字彩票突破口，预计市场规模增长300%。</p>
-                        <a href="insights/southeast-asia-keno.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <a href="insights/southeast-asia-keno.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
                 
@@ -974,7 +403,7 @@
                         </div>
                         <h3 data-i18n="insights.articles.africa.title">非洲数字彩票发展机会分析</h3>
                         <p class="summary" data-i18n="insights.articles.africa.summary">尼日利亚新法案通过，肯尼亚移动支付普及，非洲数字彩票市场迎来黄金发展期。</p>
-                        <a href="insights/africa-digital.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <a href="insights/africa-digital.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
                 
@@ -988,7 +417,7 @@
                         </div>
                         <h3 data-i18n="insights.articles.ai.title">AI驱动的彩票风控系统升级</h3>
                         <p class="summary" data-i18n="insights.articles.ai.summary">机器学习算法在反欺诈、异常检测方面表现优异，误报率降低85%，检测精度提升40%。</p>
-                        <a href="insights/ai-risk-control.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <a href="insights/ai-risk-control.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
                 
@@ -1000,195 +429,37 @@
                             <span>2025-05-05</span>
                         </div>
                         <h3 data-i18n="insights.articles.blockchain.title">区块链彩票透明度解决方案</h3>
-                        <p class="summary" data-i18n="insights.articles.blockchain.summary">基于智能合约的开奖系统确保公正性，玩家信任度提升60%，监管合规成本降低30%。</p>
-                        <a href="insights/blockchain-transparency.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <p class="summary" data-i18n="insights.articles.blockchain.summary">基于区块链的开奖流程，确保每次开奖的公正性和透明度，用户信任度提升显著。</p>
+                        <a href="insights/blockchain-transparency.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
                 
-                <!-- 市场机会类文章 -->
+                <!-- 市场趋势类文章 -->
                 <article class="insight-card" data-category="market">
-                    <img src="images/insight-placeholder.jpg" alt="日本即开票产品设计趋势">
+                    <img src="images/insight-placeholder.jpg" alt="拉美彩票市场数字化进程">
                     <div class="insight-card-content">
                         <div class="meta">
-                            <span class="category" data-i18n="insights.categories.market">市场机会</span>
+                            <span class="category" data-i18n="insights.categories.market">市场趋势</span>
                             <span>2025-05-03</span>
                         </div>
-                        <h3 data-i18n="insights.articles.japan.title">日本即开票产品设计趋势</h3>
-                        <p class="summary" data-i18n="insights.articles.japan.summary">动漫IP联名、限量收藏版设计成为主流，年轻用户占比从25%提升至45%。</p>
-                        <a href="insights/japan-scratch.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <h3 data-i18n="insights.articles.latam.title">拉美彩票市场数字化进程</h3>
+                        <p class="summary" data-i18n="insights.articles.latam.summary">墨西哥、巴西等国数字彩票销售占比快速提升，预计2025年将达到60%。</p>
+                        <a href="insights/latam-digital.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
                 
                 <article class="insight-card" data-category="market">
-                    <img src="images/insight-placeholder.jpg" alt="拉美市场数字化转型机遇">
+                    <img src="images/insight-placeholder.jpg" alt="日本即开票市场创新分析">
                     <div class="insight-card-content">
                         <div class="meta">
-                            <span class="category" data-i18n="insights.categories.market">市场机会</span>
-                            <span>2025-04-28</span>
+                            <span class="category" data-i18n="insights.categories.market">市场趋势</span>
+                            <span>2025-05-01</span>
                         </div>
-                        <h3 data-i18n="insights.articles.latam.title">拉美市场数字化转型机遇</h3>
-                        <p class="summary" data-i18n="insights.articles.latam.summary">巴西、墨西哥移动支付普及率超70%，为数字彩票发展提供基础设施支撑。</p>
-                        <a href="insights/latam-digital-transformation.html" class="readmore" data-i18n="insights.readMore">阅读全文</a>
+                        <h3 data-i18n="insights.articles.japan.title">日本即开票市场创新分析</h3>
+                        <p class="summary" data-i18n="insights.articles.japan.summary">日本推出NFT结合的即开票产品，年轻用户参与度大幅提升，为全球市场提供新思路。</p>
+                        <a href="insights/japan-scratch.html" class="readmore" data-i18n="insights.read_more">阅读全文</a>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 政策追踪区域 -->
-    <section class="policy-section" id="policy">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="insights.policy.title">全球彩票政策追踪</h2>
-                <p class="section-subtitle" data-i18n="insights.policy.subtitle">实时跟踪全球彩票政策法规变化</p>
-            </div>
-            
-            <div class="policy-timeline">
-                <div class="policy-item">
-                    <div class="policy-date">2025年5月</div>
-                    <div class="policy-content">
-                        <span class="country-flag">🇳🇬</span>
-                        <strong data-i18n="insights.policy.nigeria.title">尼日利亚新彩票法案通过</strong>
-                        <p data-i18n="insights.policy.nigeria.description">允许私营运营商参与，预计市场规模增长300%</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.africa">非洲市场</span>
-                            <span class="tag" data-i18n="insights.tags.policy">政策解读</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="policy-item">
-                    <div class="policy-date">2025年4月</div>
-                    <div class="policy-content">
-                        <span class="country-flag">🇹🇭</span>
-                        <strong data-i18n="insights.policy.thailand.title">泰国数字彩票试点启动</strong>
-                        <p data-i18n="insights.policy.thailand.description">首批5个省份开始数字彩票销售试点项目</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.sea">东南亚</span>
-                            <span class="tag" data-i18n="insights.tags.digital">数字化</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="policy-item">
-                    <div class="policy-date">2025年3月</div>
-                    <div class="policy-content">
-                        <span class="country-flag">🇨🇴</span>
-                        <strong data-i18n="insights.policy.colombia.title">哥伦比亚修订彩票税收政策</strong>
-                        <p data-i18n="insights.policy.colombia.description">降低彩票税率至15%，刺激市场增长</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.latam">拉美市场</span>
-                            <span class="tag" data-i18n="insights.tags.tax">财税政策</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="policy-item">
-                    <div class="policy-date">2025年2月</div>
-                    <div class="policy-content">
-                        <span class="country-flag">🇵🇰</span>
-                        <strong data-i18n="insights.policy.pakistan.title">巴基斯坦彩票合法化进程</strong>
-                        <p data-i18n="insights.policy.pakistan.description">议会正在审议彩票合法化法案，预计年内通过</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.southasia">南亚</span>
-                            <span class="tag" data-i18n="insights.tags.local">地方政策</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 技术趋势区域 -->
-    <section class="tech-trends-section" id="tech">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="insights.tech.title">技术趋势</h2>
-                <p class="section-subtitle" data-i18n="insights.tech.subtitle">探索彩票行业最新技术应用与创新</p>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="tech-content">
-                        <div class="tech-meta">
-                            <span data-i18n="insights.categories.tech">技术趋势</span>
-                            <span>2025-05-15</span>
-                        </div>
-                        <h3 data-i18n="insights.tech.ai_prediction.title">AI在客户行为预测中的应用</h3>
-                        <p class="tech-desc" data-i18n="insights.tech.ai_prediction.description">机器学习算法帮助运营商更好地理解客户需求，提升销售转化率</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.ai">AI应用</span>
-                            <span class="tag" data-i18n="insights.tags.marketing">精准营销</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="tech-content">
-                        <div class="tech-meta">
-                            <span data-i18n="insights.categories.security">安全技术</span>
-                            <span>2025-04-28</span>
-                        </div>
-                        <h3 data-i18n="insights.tech.blockchain.title">区块链防伪技术突破</h3>
-                        <p class="tech-desc" data-i18n="insights.tech.blockchain.description">基于区块链的彩票防伪系统，确保开奖过程透明可信</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.anti_fake">防伪技术</span>
-                            <span class="tag" data-i18n="insights.tags.blockchain">区块链</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-dice-d20"></i>
-                    </div>
-                    <div class="tech-content">
-                        <div class="tech-meta">
-                            <span data-i18n="insights.categories.innovation">产品创新</span>
-                            <span>2025-04-10</span>
-                        </div>
-                        <h3 data-i18n="insights.tech.design.title">智能游戏设计平台</h3>
-                        <p class="tech-desc" data-i18n="insights.tech.design.description">AI驱动的游戏设计工具，快速生成符合本地化需求的彩票游戏</p>
-                        <div class="article-tags">
-                            <span class="tag" data-i18n="insights.tags.ai_design">AI设计</span>
-                            <span class="tag" data-i18n="insights.tags.innovation">玩法创新</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 推荐阅读区域 -->
-    <section class="related-insights">
-        <div class="container">
-            <h4 data-i18n="insights.related.title">你可能感兴趣</h4>
-            <ul>
-                <li><a href="insights/africa-digital.html" data-i18n="insights.related.africa">非洲数字彩票发展机会分析</a></li>
-                <li><a href="insights/japan-scratch.html" data-i18n="insights.related.japan">日本即开票产品设计趋势</a></li>
-                <li><a href="insights/blockchain-transparency.html" data-i18n="insights.related.blockchain">区块链彩票透明度解决方案</a></li>
-                <li><a href="insights/latam-digital-transformation.html" data-i18n="insights.related.latam">拉美市场数字化转型机遇</a></li>
-                <li><a href="insights/ai-risk-control.html" data-i18n="insights.related.ai">AI驱动的彩票风控系统升级</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title" data-i18n="insights.cta.title">获取更多彩票行业研究</h2>
-                <p class="cta-subtitle" data-i18n="insights.cta.subtitle">立即订阅行业洞察，获取每周最新趋势、市场动态与解决方案建议。</p>
-                <div class="cta-actions">
-                    <a href="contact.html" class="btn btn-primary" data-i18n="insights.cta.contact">联系我们</a>
-                    <a href="market-research.html" class="btn btn-outline" data-i18n="insights.cta.research">市场研究</a>
-                </div>
             </div>
         </div>
     </section>
@@ -1198,16 +469,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
                     <p>Email: info@lottobridge.com</p>
                     <p>Tel: +86 400-888-8888</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
                     <ul>
                         <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
                         <li><a href="market-research.html" data-i18n="nav.research">市场研究</a></li>
@@ -1216,12 +487,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- 多语言支持脚本 -->
+    <!-- Scripts -->
     <script src="js/languages/zh.js"></script>
     <script src="js/languages/en.js"></script>
     <script src="js/languages/fr.js"></script>
@@ -1233,54 +504,36 @@
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // 移动菜单切换
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        
-        if (mobileMenuBtn && mainNav) {
-            mobileMenuBtn.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
-                this.querySelector('i').classList.toggle('fa-times');
-                this.querySelector('i').classList.toggle('fa-bars');
-            });
-        }
-        
-        // 头部滚动效果
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 10) {
-                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
-            }
-        });
-        
-        // 多语言功能初始化
+        // 初始化国际化
         document.addEventListener('DOMContentLoaded', function() {
-            // 检查i18n是否已初始化
             if (window.i18n) {
                 console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
             } else {
                 console.warn('多语言系统未初始化');
             }
-            
-            // 内容分类导航交互
+
+            // 分类导航功能
             const navItems = document.querySelectorAll('.insights-nav-item');
-            
+            const insightCards = document.querySelectorAll('.insight-card');
+
             navItems.forEach(item => {
                 item.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // 移除所有活动状态
                     navItems.forEach(nav => nav.classList.remove('active'));
+                    // 添加当前活动状态
                     this.classList.add('active');
                     
-                    const target = this.getAttribute('data-target');
-                    const targetElement = document.getElementById(target);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 140,
-                            behavior: 'smooth'
-                        });
-                    }
+                    // 显示/隐藏对应文章
+                    insightCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (target === 'all' || category === target) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
         });
