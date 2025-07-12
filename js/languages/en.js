@@ -465,11 +465,11 @@ const en = {
             description: 'How global clients achieve business growth through LottoBridge solutions',
             mexico: {
                 title: 'Mexico Private Lottery Operator System Upgrade',
-                description: 'Provided comprehensive sales system upgrade and 2,000 terminal equipment for leading Mexican lottery operator, supporting business expansion to 5,000 sales points nationwide.'
+                description: 'Provided comprehensive sales system upgrade and 2,000 terminal equipment for leading Mexican lottery operator, supporting their business expansion to 5,000 sales points nationwide.'
             },
             south_africa: {
                 title: 'South Africa National Lottery Instant Ticket Supply',
-                description: 'Supplied 120 million customized instant tickets for South Africa National Lottery Bureau, featuring 12 local cultural themed designs, delivered within 6 months.'
+                description: 'Supplied 120 million customized instant tickets for the South African National Lottery Bureau, featuring 12 local cultural themed designs, delivered within 6 months.'
             },
             vietnam: {
                 title: 'Vietnam Lottery Digital Transformation Project',
@@ -1354,12 +1354,6 @@ const en = {
         title: 'Global Lottery Market Intelligence Reports',
         subtitle: 'AI-driven market analysis providing the latest global lottery market insights',
         view_report: 'View Report',
-        // 直接在 market_reports 下定义各国报告，匹配HTML结构
-        egypt: {
-            title: 'Egypt Lottery Market Deep Analysis',
-            date: 'January 2024',
-            highlights: ['$430M Market Size', '8% Annual Growth', 'Digital Transformation Opportunity']
-        },
         mexico: {
             title: 'Mexico Lottery Market Report',
             date: 'January 2024',
@@ -1377,33 +1371,6 @@ const en = {
             date: 'February 2024',
             tag1: 'Mobile Payment',
             tag2: 'Young Users'
-        },
-        reports: {
-            egypt: {
-                title: 'Egypt Lottery Market Deep Analysis',
-                date: 'January 2024',
-                highlights: ['$430M Market Size', '8% Annual Growth', 'Digital Transformation Opportunity']
-            },
-            mexico: {
-                title: 'Mexico Lottery Market Opportunity Assessment',
-                date: 'February 2024',
-                highlights: ['Private Access Policy', '$1.25B Market', 'Sports Betting Growth'],
-                tag1: 'Policy-friendly',
-                tag2: 'Market Growth'
-            },
-            philippines: {
-                title: 'Philippines Lottery Market Outlook Report',
-                date: 'March 2024',
-                highlights: ['High Growth Potential', '$870M Market Size', 'E-games Rising'],
-                tag1: 'Lottery',
-                tag2: 'Policy'
-            },
-            kenya: {
-                title: 'Kenya Market Report',
-                date: 'November 2023',
-                tag1: 'Growth',
-                tag2: 'Innovation'
-            }
         }
     },
     // Case Studies Highlights
@@ -1411,28 +1378,23 @@ const en = {
         title: 'Featured Case Studies',
         subtitle: 'Real success stories showing how LottoBridge helps clients achieve lottery business implementation',
         view_details: 'View Details',
-        cases: {
-            nigeria: {
-                title: 'Nigeria National Lottery System Project',
-                client_type: 'Government Agency',
-                scope: 'Nationwide Coverage',
-                description: 'Provided complete lottery system solution for Nigerian government, including system development, terminal deployment, operational training and full-process services.',
-                deliverables: ['Lottery System Development', '1000 Terminal Deployment', 'Operations Team Training', 'Compliance Consulting Services']
-            },
-            cambodia: {
-                title: 'Cambodia Private Lottery Operation Project',
-                client_type: 'Private Operator',
-                scope: 'Regional Pilot',
-                description: 'Assisted Cambodian private operator to quickly launch lottery business, from market research to system launch in just 3 months.',
-                deliverables: ['Market Feasibility Analysis', 'Custom System Development', 'Printing Service Integration', 'Localization Training']
-            },
-            mexico: {
-                title: 'Mexico Digital Lottery Transformation',
-                type: 'Market Expansion',
-                scope: 'Nationwide',
-                description: 'Helped Mexican client achieve digital transformation and increase market share.',
-                deliverable1: 'Customized Digital Platform',
-            },
+        mexico: {
+            title: 'Mexico National Lottery Digital Transformation',
+            type: 'Government Agency',
+            scope: 'Nationwide Deployment',
+            description: 'Provided complete digital lottery system for Mexican government, including online sales platform, mobile applications, and nationwide terminal network deployment',
+            deliverable1: 'System Development',
+            deliverable2: 'Terminal Deployment',
+            deliverable3: 'Operations Support'
+        },
+        kenya: {
+            title: 'Kenya Mobile Lottery Platform Development',
+            type: 'Private Operator',
+            scope: 'Mobile First',
+            description: 'Mobile lottery solution based on M-Pesa payment system, achieving rapid market penetration and user growth',
+            deliverable1: 'Mobile Application',
+            deliverable2: 'Payment Integration',
+            deliverable3: 'Market Promotion'
         }
     },
     // Global Service Data Map
@@ -1442,40 +1404,33 @@ const en = {
         stats: {
             countries: {
                 number: '50+',
-                label: 'Service Countries',
-                description: 'Covering major lottery markets worldwide'
+                label: 'Service Countries'
             },
             languages: {
                 number: '12',
-                label: 'Supported Languages',
-                description: 'Multi-language localization services'
+                label: 'Supported Languages'
             },
             projects: {
                 number: '200+',
-                label: 'Covered Projects',
-                description: 'Successfully delivered lottery projects'
+                label: 'Covered Projects'
             },
             users: {
                 number: '10M+',
-                label: 'End Users',
-                description: 'Number of lottery players served'
+                label: 'End Users'
             }
         },
         regions: {
-            asia_pacific: {
-                name: 'Asia Pacific',
-                count: '18 Countries',
-                description: 'Including Southeast Asia, South Asia and other major markets'
+            latin_america: {
+                name: 'Latin America',
+                count: '12 Countries'
             },
             africa: {
                 name: 'Africa',
-                count: '15 Countries',
-                description: 'Covering East Africa, West Africa, South Africa and other regions'
+                count: '15 Countries'
             },
-            latin_america: {
-                name: 'Latin America',
-                count: '12 Countries',
-                description: 'Key markets including Mexico, Brazil and others'
+            asia_pacific: {
+                name: 'Asia Pacific',
+                count: '18 Countries'
             }
         }
     },
@@ -1838,7 +1793,7 @@ const en = {
             },
             vietnam: {
                 title: 'Vietnam Lottery Digital Transformation Project',
-                description: 'Assisted Vietnam Lottery Company in completing digital transformation, deploying cloud lottery system and training 300 technical personnel, achieving 40% sales increase.'
+                description: 'Assisted Vietnam Lottery Company in completing digital transformation, deploying cloud lottery systems and training 300 technical personnel, achieving 40% sales increase.'
             }
         },
         cta: {

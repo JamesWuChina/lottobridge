@@ -1179,35 +1179,87 @@ const ko = {
         }
     },
     market_reports: {
+        title: '글로벌 복권 시장 정보 보고서',
+        subtitle: 'AI 기반 시장 분석으로 최신 글로벌 복권 시장 인사이트 제공',
+        view_report: '보고서 보기',
         mexico: {
-            title: "멕시코 시장 보고서",
-            date: "2023년 12월",
-            tag1: "디지털화",
-            tag2: "규제",
+            title: "멕시코 복권 시장 보고서",
+            date: "2024년 1월",
+            tag1: "정책 우호적",
+            tag2: "시장 성장",
         },
         kenya: {
-            title: "케냐 시장 보고서",
-            date: "2023년 11월",
-            tag1: "성장",
-            tag2: "혁신",
+            title: "케냐 복권 시장 보고서",
+            date: "2024년 2월",
+            tag1: "모바일 결제",
+            tag2: "젊은 사용자",
         },
         philippines: {
-            title: "필리핀 시장 보고서",
-            date: "2023년 10월",
-            tag1: "복권",
-            tag2: "정책",
+            title: "필리핀 복권 시장 보고서",
+            date: "2024년 3월",
+            tag1: "온라인 성장",
+            tag2: "규제 개선",
         },
     },
     case_studies: {
-        title: "사례 연구",
-        subtitle: "글로벌 성공 사례 선정",
+        title: "사례 연구 하이라이트",
+        subtitle: "LottoBridge가 고객들의 복권 사업 구현을 어떻게 도와주는지 보여주는 실제 성공 사례",
+        view_details: "상세 보기",
         mexico: {
-            title: "멕시코 디지털 복권 혁신",
-            type: "시장 확장",
-            scope: "전국 규모",
-            description: "멕시코 고객의 디지털 전환과 시장 점유율 확대를 지원했습니다.",
-            deliverable1: "맞춤형 디지털 플랫폼",
+            title: "멕시코 국가 복권 디지털 전환",
+            type: "정부 기관",
+            scope: "전국 배포",
+            description: "멕시코 정부에 온라인 판매 플랫폼, 모바일 애플리케이션, 전국 터미널 네트워크 배포를 포함한 완전한 디지털 복권 시스템을 제공했습니다",
+            deliverable1: "시스템 개발",
+            deliverable2: "터미널 배포",
+            deliverable3: "운영 지원"
         },
+        kenya: {
+            title: "케냐 모바일 복권 플랫폼 개발",
+            type: "민간 운영사",
+            scope: "모바일 우선",
+            description: "M-Pesa 결제 시스템 기반 모바일 복권 솔루션으로 빠른 시장 침투와 사용자 증가를 달성했습니다",
+            deliverable1: "모바일 애플리케이션",
+            deliverable2: "결제 통합",
+            deliverable3: "시장 홍보"
+        }
+    },
+    // 글로벌 서비스 데이터
+    global: {
+        title: '글로벌 서비스 데이터',
+        subtitle: '글로벌 시장에서 LottoBridge의 서비스 커버리지 및 비즈니스 데이터 표시',
+        stats: {
+            countries: {
+                number: '50+',
+                label: '서비스 국가'
+            },
+            languages: {
+                number: '12',
+                label: '지원 언어'
+            },
+            projects: {
+                number: '200+',
+                label: '커버 프로젝트'
+            },
+            users: {
+                number: '1000만+',
+                label: '최종 사용자'
+            }
+        },
+        regions: {
+            latin_america: {
+                name: '라틴 아메리카',
+                count: '12개국'
+            },
+            africa: {
+                name: '아프리카',
+                count: '15개국'
+            },
+            asia_pacific: {
+                name: '아시아 태평양',
+                count: '18개국'
+            }
+        }
     },
 };
 

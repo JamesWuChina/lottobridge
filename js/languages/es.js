@@ -1179,14 +1179,87 @@ const es = {
         }
     },
     case_studies: {
-        title: "Estudios de Caso",
-        subtitle: "Selección de éxitos globales",
+        title: "Estudios de Caso Destacados",
+        subtitle: "Casos de éxito reales que muestran cómo LottoBridge ayuda a los clientes a lograr la implementación de negocios de lotería",
+        view_details: "Ver Detalles",
         mexico: {
-            title: "Transformación Digital de Lotería en México",
-            type: "Expansión de Mercado",
-            scope: "A nivel nacional",
-            description: "Ayudó al cliente mexicano a lograr la transformación digital y aumentar la cuota de mercado.",
-            deliverable1: "Plataforma digital personalizada"
+            title: "Transformación Digital de la Lotería Nacional de México",
+            type: "Agencia Gubernamental",
+            scope: "Despliegue Nacional",
+            description: "Proporcionó un sistema completo de lotería digital para el gobierno mexicano, incluyendo plataforma de ventas en línea, aplicaciones móviles y despliegue de red de terminales a nivel nacional",
+            deliverable1: "Desarrollo de Sistema",
+            deliverable2: "Despliegue de Terminales",
+            deliverable3: "Soporte Operativo"
+        },
+        kenya: {
+            title: "Desarrollo de Plataforma de Lotería Móvil de Kenia",
+            type: "Operador Privado",
+            scope: "Móvil Primero",
+            description: "Solución de lotería móvil basada en el sistema de pago M-Pesa, logrando rápida penetración de mercado y crecimiento de usuarios",
+            deliverable1: "Aplicación Móvil",
+            deliverable2: "Integración de Pagos",
+            deliverable3: "Promoción de Mercado"
+        }
+    },
+    // Informes de Mercado
+    market_reports: {
+        title: "Informes de Inteligencia de Mercado Global de Lotería",
+        subtitle: "Informes de mercado profesionales basados en análisis de IA y investigación de campo, proporcionando apoyo de datos para sus decisiones de inversión",
+        view_report: "Ver Informe",
+        mexico: {
+            title: "Informe de Mercado de Lotería de México",
+            date: "Enero 2024",
+            tag1: "Política Amigable",
+            tag2: "Crecimiento de Mercado"
+        },
+        kenya: {
+            title: "Informe de Mercado de Lotería de Kenia",
+            date: "Febrero 2024",
+            tag1: "Pago Móvil",
+            tag2: "Usuarios Jóvenes"
+        },
+        philippines: {
+            title: "Informe de Mercado de Lotería de Filipinas",
+            date: "Marzo 2024",
+            tag1: "Crecimiento en Línea",
+            tag2: "Regulación Mejorada"
+        }
+    },
+    // Datos de Servicio Global
+    global: {
+        title: 'Datos de Servicio Global',
+        subtitle: 'Cobertura de servicios y datos comerciales de LottoBridge en mercados globales',
+        stats: {
+            countries: {
+                number: '50+',
+                label: 'Países de Servicio'
+            },
+            languages: {
+                number: '12',
+                label: 'Idiomas Soportados'
+            },
+            projects: {
+                number: '200+',
+                label: 'Proyectos Cubiertos'
+            },
+            users: {
+                number: '10M+',
+                label: 'Usuarios Finales'
+            }
+        },
+        regions: {
+            latin_america: {
+                name: 'América Latina',
+                count: '12 Países'
+            },
+            africa: {
+                name: 'África',
+                count: '15 Países'
+            },
+            asia_pacific: {
+                name: 'Asia Pacífico',
+                count: '18 Países'
+            }
         }
     }
 }

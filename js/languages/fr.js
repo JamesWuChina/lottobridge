@@ -1182,6 +1182,43 @@ const fr = {
             deliverable3: 'Promotion de Marché'
         }
     },
+    // Données de Service Global
+    global: {
+        title: 'Données de Service Global',
+        subtitle: 'Couverture de service et données commerciales de LottoBridge sur les marchés mondiaux',
+        stats: {
+            countries: {
+                number: '50+',
+                label: 'Pays de Service'
+            },
+            languages: {
+                number: '12',
+                label: 'Langues Supportées'
+            },
+            projects: {
+                number: '200+',
+                label: 'Projets Couverts'
+            },
+            users: {
+                number: '10M+',
+                label: 'Utilisateurs Finaux'
+            }
+        },
+        regions: {
+            latin_america: {
+                name: 'Amérique Latine',
+                count: '12 Pays'
+            },
+            africa: {
+                name: 'Afrique',
+                count: '15 Pays'
+            },
+            asia_pacific: {
+                name: 'Asie-Pacifique',
+                count: '18 Pays'
+            }
+        }
+    },
     // Hero Section
     hero: {
         title: 'Plateforme de Solutions Complètes pour l\'Industrie Mondiale de la Loterie',
