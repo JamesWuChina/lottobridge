@@ -3,129 +3,548 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="digital.title">数字彩票系统解决方案 - LottoBridge</title>
+    <title data-i18n="digital.page.title">数字彩票系统解决方案 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 专业高端样式优化 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #1e40af 100%);
+            --gradient-accent: linear-gradient(135deg, #e63946 0%, #dc2626 50%, #b91c1c 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><circle cx="100" cy="50" r="40" fill="url(%23grad1)"/><rect x="800" y="80" width="80" height="60" rx="10" fill="url(%23grad1)"/><polygon points="500,200 550,180 600,210 550,240" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .product-hero {
+            text-align: center;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            flex: 1;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .hero-visual {
+            flex: 1;
+            max-width: 500px;
+            margin-left: 40px;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .placeholder-text {
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
+        }
+
+        .features-grid, .game-types-grid, .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card, .game-type-card, .architecture-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before, .game-type-card::before, .architecture-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .feature-card:hover, .game-type-card:hover, .architecture-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .icon-container, .game-icon, .arch-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(26, 62, 140, 0.3);
+        }
+
+        .feature-title, .game-title, .feature-description, .game-description {
+            margin-bottom: 15px;
+        }
+
+        .feature-title, .game-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--nav-blue);
+        }
+
+        .feature-list, .arch-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li, .arch-features li {
+            padding: 8px 0;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li::before, .arch-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .game-examples {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .example-tag {
+            background: linear-gradient(135deg, var(--primary-blue), #2563eb);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: white;
+            border: 2px solid var(--primary-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #c8394a;
+            border-color: #c8394a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-blue);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
+            }
+            
+            .hero-visual {
+                margin-left: 0;
+                margin-top: 40px;
+                max-width: 100%;
+            }
+            
+            .features-grid, .game-types-grid, .architecture-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-actions {
+                justify-content: center;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
-                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
-                </div>
-                <div class="nav-actions">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    </ul>
                     <div class="language-selector">
                         <select id="languageSelect">
                             <option value="zh">中文</option>
                             <option value="en">English</option>
                             <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
                         </select>
                     </div>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
     <section class="hero-banner product-hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n="digital.hero.title">数字彩票系统解决方案</h1>
-                <p class="hero-subtitle" data-i18n="digital.hero.subtitle">一体化构建玩法、安全、合规与落地交付能力，助您快速部署现代化彩票系统</p>
+                <h1 class="hero-title" data-i18n="digital.hero.title">下一代数字彩票核心系统</h1>
+                <p class="hero-subtitle" data-i18n="digital.hero.subtitle">基于云原生架构的企业级彩票平台，支持全球主流玩法，集成AI风控与区块链技术，助力彩票运营商实现数字化转型与业务增长</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary" data-i18n="digital.hero.getSolution">获取定制方案</a>
-                    <a href="../products.html" class="btn btn-outline" data-i18n="digital.hero.viewProducts">查看其他产品</a>
+                    <a href="#features" class="btn btn-primary" data-i18n="digital.hero.viewFeatures">核心功能</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="digital.hero.getSolution">获取方案</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="image-placeholder hero-image">
-                    <span class="placeholder-text" data-i18n="digital.hero.imageText">数字彩票系统视觉图</span>
+                <div class="hero-image">
+                    <span class="placeholder-text" data-i18n="digital.hero.imageText">数字彩票系统架构图</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 模块一：核心玩法支持 -->
-    <section class="game-types-section">
+    <section class="section" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="digital.gameTypes.title">核心玩法支持</h2>
-                <p class="section-subtitle" data-i18n="digital.gameTypes.subtitle">支持全球主流彩票玩法，满足不同市场需求</p>
+                <h2 class="section-title" data-i18n="digital.gameTypes.title">全球主流彩票玩法支持</h2>
+                <p class="section-subtitle" data-i18n="digital.gameTypes.subtitle">原生支持50+种国际主流彩票玩法，灵活的玩法引擎支持快速定制与本地化适配</p>
             </div>
             <div class="game-types-grid">
                 <div class="game-type-card">
                     <div class="game-icon">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text" data-i18n="digital.gameTypes.lotto.icon">乐透图标</span>
-                        </div>
+                        <i class="fas fa-dice-six" style="font-size: 36px;"></i>
                     </div>
                     <div class="game-content">
                         <h3 class="game-title" data-i18n="digital.gameTypes.lotto.title">经典乐透玩法</h3>
-                        <p class="game-description" data-i18n="digital.gameTypes.lotto.desc">支持5/35、6/45等经典乐透玩法，适用于欧洲、北美等成熟市场</p>
+                        <p class="game-description" data-i18n="digital.gameTypes.lotto.desc">支持5/35、6/45、6/49等国际标准乐透玩法，包含奖池累积、多重开奖、系统投注等高级功能</p>
                         <div class="game-examples">
-                            <span class="example-tag" data-i18n="digital.gameTypes.lotto.example1">欧洲EuroMillions</span>
-                            <span class="example-tag" data-i18n="digital.gameTypes.lotto.example2">美国Powerball</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.lotto.example1">EuroMillions</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.lotto.example2">Powerball</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.lotto.example3">Mega Millions</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="game-type-card">
                     <div class="game-icon">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text" data-i18n="digital.gameTypes.number.icon">数字图标</span>
-                        </div>
+                        <i class="fas fa-sort-numeric-up" style="font-size: 36px;"></i>
                     </div>
                     <div class="game-content">
                         <h3 class="game-title" data-i18n="digital.gameTypes.number.title">数字排列玩法</h3>
-                        <p class="game-description" data-i18n="digital.gameTypes.number.desc">3D、4D等数字排列玩法，在亚洲市场广受欢迎</p>
+                        <p class="game-description" data-i18n="digital.gameTypes.number.desc">3D、4D、5D等数字排列玩法，支持直选、组选、胆拖等多种投注方式，适应亚洲市场偏好</p>
                         <div class="game-examples">
                             <span class="example-tag" data-i18n="digital.gameTypes.number.example1">新加坡4D</span>
                             <span class="example-tag" data-i18n="digital.gameTypes.number.example2">马来西亚Magnum</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.number.example3">中国福彩3D</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="game-type-card">
                     <div class="game-icon">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text" data-i18n="digital.gameTypes.daily.icon">日历图标</span>
-                        </div>
+                        <i class="fas fa-calendar-alt" style="font-size: 36px;"></i>
                     </div>
                     <div class="game-content">
-                        <h3 class="game-title" data-i18n="digital.gameTypes.daily.title">每日开奖玩法</h3>
-                        <p class="game-description" data-i18n="digital.gameTypes.daily.desc">每日固定时间开奖，提高用户参与频次和粘性</p>
+                        <h3 class="game-title" data-i18n="digital.gameTypes.daily.title">高频开奖玩法</h3>
+                        <p class="game-description" data-i18n="digital.gameTypes.daily.desc">支持每日多次开奖、实时开奖、快速开奖等高频次玩法，满足现代用户快节奏需求</p>
                         <div class="game-examples">
                             <span class="example-tag" data-i18n="digital.gameTypes.daily.example1">Daily Pick</span>
                             <span class="example-tag" data-i18n="digital.gameTypes.daily.example2">Cash 3</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.daily.example3">Quick Draw</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="game-type-card">
                     <div class="game-icon">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text" data-i18n="digital.gameTypes.fast.icon">快速图标</span>
-                        </div>
+                        <i class="fas fa-bolt" style="font-size: 36px;"></i>
                     </div>
                     <div class="game-content">
-                        <h3 class="game-title" data-i18n="digital.gameTypes.fast.title">高频次玩法</h3>
-                        <p class="game-description" data-i18n="digital.gameTypes.fast.desc">每5-15分钟开奖一次，满足快节奏市场需求</p>
+                        <h3 class="game-title" data-i18n="digital.gameTypes.fast.title">即时彩票玩法</h3>
+                        <p class="game-description" data-i18n="digital.gameTypes.fast.desc">Keno、基诺等即时开奖玩法，5-15分钟开奖周期，支持视频直播开奖与动画效果</p>
                         <div class="game-examples">
-                            <span class="example-tag" data-i18n="digital.gameTypes.fast.example1">Keno</span>
-                            <span class="example-tag" data-i18n="digital.gameTypes.fast.example2">Quick Draw</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.fast.example1">Video Keno</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.fast.example2">Lucky Numbers</span>
+                            <span class="example-tag" data-i18n="digital.gameTypes.fast.example3">Speed Lotto</span>
                         </div>
                     </div>
                 </div>
@@ -134,111 +553,94 @@
     </section>
 
     <!-- 模块二：系统架构与功能亮点 -->
-    <section class="system-features-section">
+    <section class="section bg-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="digital.systemFeatures.title">系统架构与功能亮点</h2>
-                <p class="section-subtitle" data-i18n="digital.systemFeatures.subtitle">全面覆盖彩票运营各环节，保障系统稳定可靠</p>
+                <h2 class="section-title" data-i18n="digital.systemFeatures.title">企业级系统架构与核心功能</h2>
+                <p class="section-subtitle" data-i18n="digital.systemFeatures.subtitle">采用微服务架构与容器化部署，提供99.99%系统可用性，全面覆盖彩票运营全生命周期</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="销售管理">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z" fill="#2563eb"/>
-                            <circle cx="6" cy="8" r="1" fill="#2563eb"/>
-                            <circle cx="6" cy="12" r="1" fill="#2563eb"/>
-                            <circle cx="6" cy="16" r="1" fill="#2563eb"/>
-                            <circle cx="6" cy="20" r="1" fill="#2563eb"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-store" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.sales.title">彩票销售管理</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.sales.desc">站点管理、票池分配、限额控制，全面管控销售流程</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.sales.title">智能销售管理</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.sales.desc">多层级代理商体系、动态佣金结算、实时销售监控与智能风险控制</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.sales.item1">✓ 多级代理商管理</li>
-                        <li data-i18n="digital.systemFeatures.sales.item2">✓ 实时销售监控</li>
-                        <li data-i18n="digital.systemFeatures.sales.item3">✓ 智能限额设置</li>
+                        <li data-i18n="digital.systemFeatures.sales.item1">多级代理商权限管理</li>
+                        <li data-i18n="digital.systemFeatures.sales.item2">实时销售数据监控</li>
+                        <li data-i18n="digital.systemFeatures.sales.item3">智能限额与风控</li>
+                        <li data-i18n="digital.systemFeatures.sales.item4">API接口开放平台</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="开奖管理">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5ZM5 5H19V19H5V5Z" fill="#2563eb"/>
-                            <circle cx="8" cy="8" r="1.5" fill="#2563eb"/>
-                            <circle cx="16" cy="8" r="1.5" fill="#2563eb"/>
-                            <circle cx="8" cy="16" r="1.5" fill="#2563eb"/>
-                            <circle cx="16" cy="16" r="1.5" fill="#2563eb"/>
-                            <circle cx="12" cy="12" r="1.5" fill="#2563eb"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-dice" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.draw.title">开奖管理</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.draw.desc">开奖数据生成、流程审批、公证接口，确保开奖公正透明</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.draw.title">公正开奖管理</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.draw.desc">硬件随机数生成、区块链存证、多重审核流程确保开奖公正透明</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.draw.item1">✓ 随机数生成算法</li>
-                        <li data-i18n="digital.systemFeatures.draw.item2">✓ 多重审批流程</li>
-                        <li data-i18n="digital.systemFeatures.draw.item3">✓ 第三方公证对接</li>
+                        <li data-i18n="digital.systemFeatures.draw.item1">硬件随机数生成器</li>
+                        <li data-i18n="digital.systemFeatures.draw.item2">区块链开奖存证</li>
+                        <li data-i18n="digital.systemFeatures.draw.item3">多重审批工作流</li>
+                        <li data-i18n="digital.systemFeatures.draw.item4">第三方公证对接</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="兑奖管理">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#2563eb"/>
-                            <path d="M8 17L9.5 20.5L12 19L14.5 20.5L16 17" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-trophy" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.prize.title">兑奖管理</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.prize.desc">兑奖规则、黑名单机制、风险控制，保障资金安全</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.prize.title">安全兑奖管理</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.prize.desc">AI反洗钱检测、黑名单实时拦截、大奖多重验证保障资金安全</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.prize.item1">✓ 自动兑奖验证</li>
-                        <li data-i18n="digital.systemFeatures.prize.item2">✓ 反洗钱检测</li>
-                        <li data-i18n="digital.systemFeatures.prize.item3">✓ 大奖审核流程</li>
+                        <li data-i18n="digital.systemFeatures.prize.item1">AI智能兑奖验证</li>
+                        <li data-i18n="digital.systemFeatures.prize.item2">反洗钱实时检测</li>
+                        <li data-i18n="digital.systemFeatures.prize.item3">黑名单自动拦截</li>
+                        <li data-i18n="digital.systemFeatures.prize.item4">大奖分级审核流程</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="财务管理">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09L12 17.5l-1.41.59L9 16.5V7h6v9.5l-1.59.59z" fill="#2563eb"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-chart-line" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.finance.title">财务管理</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.finance.desc">资金流水、佣金结算、财务报表，完整的财务体系</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.finance.title">财务资金管理</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.finance.desc">实时资金监控、自动对账结算、多维度财务报表与合规审计</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.finance.item1">✓ 实时资金监控</li>
-                        <li data-i18n="digital.systemFeatures.finance.item2">✓ 自动佣金结算</li>
-                        <li data-i18n="digital.systemFeatures.finance.item3">✓ 多维度财务报表</li>
+                        <li data-i18n="digital.systemFeatures.finance.item1">实时资金流水监控</li>
+                        <li data-i18n="digital.systemFeatures.finance.item2">自动化佣金结算</li>
+                        <li data-i18n="digital.systemFeatures.finance.item3">多维度财务报表</li>
+                        <li data-i18n="digital.systemFeatures.finance.item4">合规审计追踪</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="风险管理">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-shield-alt" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.risk.title">风险管理</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.risk.desc">异常检测、风险预警、合规监控，全方位风险管控</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.risk.title">AI风险管控</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.risk.desc">机器学习异常检测、实时风险预警、动态规则引擎防范各类风险</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.risk.item1">✓ 智能异常检测</li>
-                        <li data-i18n="digital.systemFeatures.risk.item2">✓ 实时风险预警</li>
-                        <li data-i18n="digital.systemFeatures.risk.item3">✓ 合规性监控</li>
+                        <li data-i18n="digital.systemFeatures.risk.item1">AI异常行为检测</li>
+                        <li data-i18n="digital.systemFeatures.risk.item2">实时风险预警系统</li>
+                        <li data-i18n="digital.systemFeatures.risk.item3">动态风控规则引擎</li>
+                        <li data-i18n="digital.systemFeatures.risk.item4">合规性自动监控</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-container" data-icon="数据分析">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" fill="#2563eb"/>
-                        </svg>
+                    <div class="icon-container">
+                        <i class="fas fa-chart-bar" style="font-size: 36px;"></i>
                     </div>
-                    <h3 class="feature-title" data-i18n="digital.systemFeatures.analytics.title">数据分析</h3>
-                    <p class="feature-description" data-i18n="digital.systemFeatures.analytics.desc">销售分析、用户行为、市场趋势，数据驱动决策</p>
+                    <h3 class="feature-title" data-i18n="digital.systemFeatures.analytics.title">大数据分析</h3>
+                    <p class="feature-description" data-i18n="digital.systemFeatures.analytics.desc">用户行为分析、销售趋势预测、BI商业智能助力数据驱动决策</p>
                     <ul class="feature-list">
-                        <li data-i18n="digital.systemFeatures.analytics.item1">✓ 实时数据看板</li>
-                        <li data-i18n="digital.systemFeatures.analytics.item2">✓ 用户行为分析</li>
-                        <li data-i18n="digital.systemFeatures.analytics.item3">✓ 预测性分析</li>
+                        <li data-i18n="digital.systemFeatures.analytics.item1">实时数据看板</li>
+                        <li data-i18n="digital.systemFeatures.analytics.item2">用户行为画像分析</li>
+                        <li data-i18n="digital.systemFeatures.analytics.item3">预测性业务分析</li>
+                        <li data-i18n="digital.systemFeatures.analytics.item4">自定义报表引擎</li>
                     </ul>
                 </div>
             </div>
@@ -246,56 +648,52 @@
     </section>
 
     <!-- 模块三：技术架构与安全 -->
-    <section class="tech-architecture-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="digital.techArchitecture.title">技术架构与安全</h2>
-                <p class="section-subtitle" data-i18n="digital.techArchitecture.subtitle">采用微服务架构，确保系统高可用性和安全性</p>
+                <h2 class="section-title" data-i18n="digital.techArchitecture.title">云原生技术架构与安全防护</h2>
+                <p class="section-subtitle" data-i18n="digital.techArchitecture.subtitle">基于Kubernetes的云原生架构，采用零信任安全模型，确保系统高可用性、高性能与高安全性</p>
             </div>
             <div class="architecture-grid">
                 <div class="architecture-card">
                     <div class="arch-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-cubes" style="font-size: 36px;"></i>
                     </div>
                     <h3 data-i18n="digital.techArchitecture.microservices.title">微服务架构</h3>
-                    <p data-i18n="digital.techArchitecture.microservices.desc">模块化设计，独立部署，易于扩展和维护</p>
+                    <p data-i18n="digital.techArchitecture.microservices.desc">容器化部署、服务网格、自动扩缩容，支持敏捷开发与持续交付</p>
                     <ul class="arch-features">
-                        <li data-i18n="digital.techArchitecture.microservices.item1">• 服务解耦</li>
-                        <li data-i18n="digital.techArchitecture.microservices.item2">• 独立扩展</li>
-                        <li data-i18n="digital.techArchitecture.microservices.item3">• 故障隔离</li>
+                        <li data-i18n="digital.techArchitecture.microservices.item1">Docker容器化部署</li>
+                        <li data-i18n="digital.techArchitecture.microservices.item2">Kubernetes编排管理</li>
+                        <li data-i18n="digital.techArchitecture.microservices.item3">Service Mesh服务网格</li>
+                        <li data-i18n="digital.techArchitecture.microservices.item4">自动扩缩容机制</li>
                     </ul>
                 </div>
                 
                 <div class="architecture-card">
                     <div class="arch-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="fas fa-lock" style="font-size: 36px;"></i>
                     </div>
-                    <h3 data-i18n="digital.techArchitecture.security.title">安全防护</h3>
-                    <p data-i18n="digital.techArchitecture.security.desc">多层次安全防护，确保数据和系统安全</p>
+                    <h3 data-i18n="digital.techArchitecture.security.title">零信任安全</h3>
+                    <p data-i18n="digital.techArchitecture.security.desc">端到端加密、多因子认证、零信任网络架构保障系统全方位安全</p>
                     <ul class="arch-features">
-                        <li data-i18n="digital.techArchitecture.security.item1">• 数据加密</li>
-                        <li data-i18n="digital.techArchitecture.security.item2">• 身份认证</li>
-                        <li data-i18n="digital.techArchitecture.security.item3">• 访问控制</li>
+                        <li data-i18n="digital.techArchitecture.security.item1">AES-256端到端加密</li>
+                        <li data-i18n="digital.techArchitecture.security.item2">多因子身份认证</li>
+                        <li data-i18n="digital.techArchitecture.security.item3">零信任网络架构</li>
+                        <li data-i18n="digital.techArchitecture.security.item4">WAF应用防火墙</li>
                     </ul>
                 </div>
                 
                 <div class="architecture-card">
                     <div class="arch-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+                        <i class="fas fa-server" style="font-size: 36px;"></i>
                     </div>
-                    <h3 data-i18n="digital.techArchitecture.highAvailability.title">高可用性</h3>
-                    <p data-i18n="digital.techArchitecture.highAvailability.desc">99.9%系统可用性，确保业务连续性</p>
+                    <h3 data-i18n="digital.techArchitecture.highAvailability.title">高可用架构</h3>
+                    <p data-i18n="digital.techArchitecture.highAvailability.desc">99.99%系统可用性，多活容灾、自动故障转移确保业务连续性</p>
                     <ul class="arch-features">
-                        <li data-i18n="digital.techArchitecture.highAvailability.item1">• 负载均衡</li>
-                        <li data-i18n="digital.techArchitecture.highAvailability.item2">• 故障转移</li>
-                        <li data-i18n="digital.techArchitecture.highAvailability.item3">• 自动恢复</li>
+                        <li data-i18n="digital.techArchitecture.highAvailability.item1">多机房容灾备份</li>
+                        <li data-i18n="digital.techArchitecture.highAvailability.item2">负载均衡集群</li>
+                        <li data-i18n="digital.techArchitecture.highAvailability.item3">自动故障转移</li>
+                        <li data-i18n="digital.techArchitecture.highAvailability.item4">实时健康监控</li>
                     </ul>
                 </div>
             </div>
@@ -306,8 +704,8 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title" data-i18n="digital.cta.title">开始您的数字彩票系统项目</h2>
-                <p class="cta-subtitle" data-i18n="digital.cta.subtitle">联系我们，获取专业的数字彩票系统解决方案</p>
+                <h2 class="cta-title" data-i18n="digital.cta.title">开启您的数字彩票转型之旅</h2>
+                <p class="cta-subtitle" data-i18n="digital.cta.subtitle">联系我们的专家团队，获取量身定制的数字彩票系统解决方案与技术架构设计</p>
                 <div class="cta-actions">
                     <a href="../contact.html" class="btn btn-primary" data-i18n="digital.cta.contact">立即咨询</a>
                     <a href="../products.html" class="btn btn-outline" data-i18n="digital.cta.products">查看其他产品</a>
@@ -321,16 +719,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
                     <p>Email: info@lottobridge.com</p>
                     <p>Tel: +86 400-888-8888</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
                     <ul>
                         <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
                         <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
@@ -339,32 +737,20 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- 多语言支持脚本 -->
+    <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        // 初始化国际化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 检查i18n是否已初始化
-            if (window.i18n) {
-                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
-            } else {
-                console.warn('多语言系统未初始化');
-            }
-        });
-    </script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html>

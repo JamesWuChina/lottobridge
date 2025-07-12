@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="about.page.title">关于我们 | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式 - 与首页保持一致 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--nav-blue);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 - 严格按图片描述 */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-lotto {
+            color: var(--primary-blue);
+        }
+
+        .logo-bridge {
+            color: var(--primary-red);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-right: 20px; /* 为语言选择器留出空间 */
+            flex-wrap: nowrap !important;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-right: 0;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--nav-blue);
+            padding: 8px 12px;
+            position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* 语言选择器 - 国际化专业设计 */
+        .language-selector {
+            position: relative;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
+        }
+
+        .language-selector::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--primary-blue);
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--nav-blue);
+        }
+
+        /* 关于我们页面特有样式 */
+        .about-page {
+            margin-top: 70px;
+        }
+
+        /* Hero区域 */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
+            color: var(--white);
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: 2px solid var(--primary-red);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* 内容区域 */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--nav-blue);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+        }
+
+        .highlight {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* 价值观区域 */
+        .values-section {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--nav-blue);
+        }
+
+        .value-card p {
+            color: var(--medium-gray);
+        }
+
+        /* 团队区域 */
+        .team-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-image {
+            height: 250px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 60px;
+        }
+
+        .team-content {
+            padding: 25px;
+        }
+
+        .team-content h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: var(--nav-blue);
+        }
+
+        .team-position {
+            color: var(--primary-blue);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .team-desc {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+
+        .team-languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .language-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--primary-blue);
+        }
+
+        /* 合作伙伴区域 */
+        .partners-section {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .partner-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-logo {
+            max-width: 150px;
+            max-height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .partner-card:hover .partner-logo {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* 资质认证区域 */
+        .credentials-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .credentials-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .credential-item:last-child {
+            border-bottom: none;
+        }
+
+        .credential-status {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--primary-red);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .credential-content {
+            flex: 1;
+        }
+
+        .credential-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--nav-blue);
+        }
+
+        .credential-content p {
+            color: var(--medium-gray);
+            font-size: 14px;
+        }
+
+        /* CTA区域 */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--nav-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-red);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .about-hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                margin-right: 15px;
+            }
+            
+            .nav-links li a {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+            
+            .language-selector {
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 6px 25px 6px 8px;
+                min-width: 80px;
+                border-radius: 6px;
+            }
+            
+            .language-selector::before,
+            .language-selector::after {
+                font-size: 10px;
+                left: 8px;
+                right: 8px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            .about-hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-hero p {
+                font-size: 18px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 8px;
+                margin-right: 8px;
+            }
+            
+            .nav-links li a {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+            
+            .language-selector {
+                margin-right: 5px;
+            }
+            
+            .language-selector select {
+                font-size: 10px;
+                padding: 4px 20px 4px 6px;
+                min-width: 70px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .about-hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 - 严格按图片描述 -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
+            </div>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="products-new.html" data-i18n="nav.products">产品</a></li>
+                    <li><a href="market-research.html" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="market-details.html" data-i18n="nav.market_details">市场详情</a></li>
+                    <li><a href="case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
+                    <li><a href="insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="about.html" class="active" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </select>
+            </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 关于我们页面内容 -->
+    <main class="about-page">
+        <!-- Hero区域 -->
+        <section class="about-hero">
+            <div class="container about-hero-content">
+                <h1 data-i18n="about.hero.title">关于LottoBridge</h1>
+<p data-i18n="about.hero.description">连接全球彩票市场的专业平台，为政府机构和私营运营商提供一站式解决方案</p>
+                
+                <div class="hero-buttons">
+                    <a href="#team" class="btn btn-primary" data-i18n="about.hero.learn_team">了解我们的团队</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="about.hero.contact_us">联系我们</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 我们是谁区域 -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.who_we_are.title">我们是谁</h2>
+                    <p data-i18n="about.who_we_are.subtitle">LottoBridge 是一个创新型平台，以 AI驱动+全链条出口+平台撮合 为核心</p>
+                </div>
+                
+                <div class="about-content">
+                    <p data-i18n="about.who_we_are.paragraph1">我们连接中国优质的彩票系统、设备、印刷与合规服务资源，帮助全球彩票市场从"调研"到"落地"实现一站式部署。平台整合了中国彩票产业链的核心能力，包括系统软件开发、终端硬件制造、票券安全印刷、热敏耗材供应等关键环节。</p>
+                    
+                    <p data-i18n="about.who_we_are.paragraph2">不同于传统的B2B贸易模式，LottoBridge 提供的是<span class="highlight">打包式的彩票商业落地系统</span>，涵盖前期咨询、产品供应、运营支持和本地化服务。我们的目标是让每个有潜力的彩票市场，都能轻松链接中国的系统力量。</p>
+                    
+                    <p data-i18n="about.who_we_are.paragraph3">目前，我们已帮助15个国家的政府机构和私营运营商成功进入彩票市场，包括墨西哥、南非、越南等新兴市场。2024年，平台交易额突破1.2亿美元，合作伙伴网络覆盖全球132个国家。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 愿景区域 -->
+        <section class="about-section" style="background-color: var(--light-gray);">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.vision.title">我们的愿景</h2>
+                    <p data-i18n="about.vision.subtitle">让每一个有潜力的彩票市场，都能轻松链接中国的系统力量</p>
+                </div>
+                
+                <div class="about-content">
+                    <p data-i18n="about.vision.paragraph1">我们相信，彩票行业的全球化转型，需要跨越文化、法规、技术与运营多重门槛。在传统模式下，新兴市场的运营商往往面临以下挑战：</p>
+                    
+                    <ul style="margin: 20px 0 20px 40px;">
+                        <li style="margin-bottom: 10px;" data-i18n="about.vision.challenge1">缺乏可靠的市场情报和准入政策分析</li>
+                        <li style="margin-bottom: 10px;" data-i18n="about.vision.challenge2">难以找到合规且性价比高的技术供应商</li>
+                        <li style="margin-bottom: 10px;" data-i18n="about.vision.challenge3">本地化运营经验不足，培训体系缺失</li>
+                        <li data-i18n="about.vision.challenge4">国际物流和合规流程复杂</li>
+                    </ul>
+                    
+                    <p data-i18n="about.vision.paragraph2">LottoBridge 就是为解决这些问题而生的<span class="highlight">可信赖桥梁</span>。我们不仅提供工具和系统，更交付信任与可能性，帮助客户降低试错成本，加速商业成功。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 价值观区域 -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.values.title">核心价值观</h2>
+                    <p data-i18n="about.values.subtitle">这些原则指导着我们每一个决策和行动</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 data-i18n="about.values.professional.title">专业</h3>
+                        <p data-i18n="about.values.professional.description">深耕彩票产业链，熟悉全球系统架构、发行流程与运营需求，提供精准的解决方案</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-i18n="about.values.international.title">国际化</h3>
+                        <p data-i18n="about.values.international.description">团队成员具备非洲、东南亚、拉美等多个地区实战经验，跨文化沟通与项目推进能力强</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 data-i18n="about.values.transparent.title">透明</h3>
+                        <p data-i18n="about.values.transparent.description">平台操作可视化、服务流程标准化、输出成果清晰可审计，建立长期信任关系</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-i18n="about.values.cooperation.title">合作</h3>
+                        <p data-i18n="about.values.cooperation.description">与全球终端制造、印刷、合规咨询、物流机构建立稳定合作网络，实现共赢</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 团队区域 -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.team.title">我们的团队</h2>
+                    <p data-i18n="about.team.subtitle">结合中国彩票核心供应链资源与全球市场落地经验的跨国专业团队</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.zhang_wei.name">张伟</h3>
+                            <div class="team-position" data-i18n="about.team.zhang_wei.position">创始人 & CEO</div>
+                            <div class="team-desc" data-i18n="about.team.zhang_wei.description">
+                                前中国福利彩票技术总监，20年彩票系统开发经验，主导过5个国家级彩票平台建设
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.zhang_wei.lang1">中文</span>
+                                <span class="language-tag" data-i18n="about.team.zhang_wei.lang2">英语</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.maria.name">Maria Gonzalez</h3>
+                            <div class="team-position" data-i18n="about.team.maria.position">国际业务总监</div>
+                            <div class="team-desc" data-i18n="about.team.maria.description">
+                                拉美市场专家，曾主导墨西哥、哥伦比亚等国彩票数字化改造项目
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.maria.lang1">西班牙语</span>
+                                <span class="language-tag" data-i18n="about.team.maria.lang2">英语</span>
+                                <span class="language-tag" data-i18n="about.team.maria.lang3">葡萄牙语</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.li_ming.name">李明</h3>
+                            <div class="team-position" data-i18n="about.team.li_ming.position">技术总监</div>
+                            <div class="team-desc" data-i18n="about.team.li_ming.description">
+                                彩票系统安全专家，主导开发过3个省级彩票销售系统，精通区块链防伪技术
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.li_ming.lang1">中文</span>
+                                <span class="language-tag" data-i18n="about.team.li_ming.lang2">英语</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tag"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.sarah.name">Sarah Johnson</h3>
+                            <div class="team-position" data-i18n="about.team.sarah.position">非洲区总经理</div>
+                            <div class="team-desc" data-i18n="about.team.sarah.description">
+                                非洲市场开拓者，成功落地尼日利亚、肯尼亚等国项目，熟悉当地政策环境
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.sarah.lang1">英语</span>
+                                <span class="language-tag" data-i18n="about.team.sarah.lang2">法语</span>
+                                <span class="language-tag" data-i18n="about.team.sarah.lang3">斯瓦希里语</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.wang_qiang.name">王强</h3>
+                            <div class="team-position" data-i18n="about.team.wang_qiang.position">产品总监</div>
+                            <div class="team-desc" data-i18n="about.team.wang_qiang.description">
+                                彩票游戏设计专家，开发过50+种玩法，擅长将本地文化融入票面设计
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.wang_qiang.lang1">中文</span>
+                                <span class="language-tag" data-i18n="about.team.wang_qiang.lang2">英语</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-chart"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3 data-i18n="about.team.chen_jing.name">陈静</h3>
+                            <div class="team-position" data-i18n="about.team.chen_jing.position">市场研究主管</div>
+                            <div class="team-desc" data-i18n="about.team.chen_jing.description">
+                                数据驱动型分析师，建立全球彩票市场数据库，覆盖100+国家政策与市场数据
+                            </div>
+                            <div class="team-languages">
+                                <span class="language-tag" data-i18n="about.team.chen_jing.lang1">中文</span>
+                                <span class="language-tag" data-i18n="about.team.chen_jing.lang2">英语</span>
+                                <span class="language-tag" data-i18n="about.team.chen_jing.lang3">日语</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 合作伙伴区域 -->
+        <section class="partners-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.partners.title">合作网络</h2>
+                    <p data-i18n="about.partners.subtitle">与全球优秀机构建立长期稳定的合作关系</p>
+                </div>
+                
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="TechLottery">TechLottery</div>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="PrintSecure">PrintSecure</div>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="GlobalPay">GlobalPay</div>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="AfricaLottery">AfricaLottery</div>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="AsiaGaming">AsiaGaming</div>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder" data-text="LegalComply">LegalComply</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 资质认证区域 -->
+        <section class="credentials-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.credentials.title">资质与品牌背书</h2>
+                    <p data-i18n="about.credentials.subtitle">我们的专业资质与行业认可</p>
+                </div>
+                
+                <div class="credentials-list">
+                    <div class="credential-item">
+                        <div class="credential-status">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="credential-content">
+                            <h3 data-i18n="about.credentials.iso.title">彩票系统 ISO 安全合规认证</h3>
+                            <p data-i18n="about.credentials.iso.description">通过ISO/IEC 27001信息安全管理体系认证</p>
+                        </div>
+                    </div>
+                    
+                    <div class="credential-item">
+                        <div class="credential-status">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="credential-content">
+                            <h3 data-i18n="about.credentials.printing.title">即开票印刷品出口资质</h3>
+                            <p data-i18n="about.credentials.printing.description">合作方为政府授权印刷企业，符合国际安全标准</p>
+                        </div>
+                    </div>
+                    
+                    <div class="credential-item">
+                        <div class="credential-status">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="credential-content">
+                            <h3 data-i18n="about.credentials.software.title">彩票行业软件著作权</h3>
+                            <p data-i18n="about.credentials.software.description">已登记2项核心系统软件著作权</p>
+                        </div>
+                    </div>
+                    
+                    <div class="credential-item">
+                        <div class="credential-status">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="credential-content">
+                            <h3 data-i18n="about.credentials.experience.title">多国项目落地经验</h3>
+                            <p data-i18n="about.credentials.experience.description">尼日利亚、柬埔寨、乌兹别克斯坦等地项目已成功实施</p>
+                        </div>
+                    </div>
+                    
+                    <div class="credential-item">
+                        <div class="credential-status">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="credential-content">
+                            <h3 data-i18n="about.credentials.exhibitions.title">展会与联盟参与</h3>
+                            <p data-i18n="about.credentials.exhibitions.description">参展过迪拜博彩展、肯尼亚GBC、东南亚数博会等行业盛会</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 承诺区域 -->
+        <section class="about-section" style="background-color: var(--light-gray);">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="about.commitment.title">我们相信</h2>
+                    <p data-i18n="about.commitment.subtitle">技术、合规与信任，是推动全球彩票业务可持续发展的三大支柱</p>
+                </div>
+                
+                <div class="about-content">
+                    <p data-i18n="about.commitment.paragraph1">LottoBridge 致力于成为值得全球客户托付的"核心连接平台"。我们不仅提供产品和服务，更致力于建立长期合作伙伴关系，帮助客户在快速变化的全球彩票市场中取得成功。</p>
+                    
+                    <p data-i18n="about.commitment.promise_title">我们的承诺：</p>
+                    
+                    <ul style="margin: 20px 0 20px 40px;">
+                        <li style="margin-bottom: 10px;" data-i18n="about.commitment.promise1">始终保持对行业趋势的前瞻性洞察</li>
+                        <li style="margin-bottom: 10px;" data-i18n="about.commitment.promise2">坚持最高标准的合规与安全要求</li>
+                        <li style="margin-bottom: 10px;" data-i18n="about.commitment.promise3">持续优化全球供应链与本地化服务能力</li>
+                        <li data-i18n="about.commitment.promise4">与客户共同成长，分享成功</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA区域 -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="about.cta.title">准备好与我们一起开拓全球市场了吗？</h2>
+                <p data-i18n="about.cta.description">无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="about.cta.contact_now">立即咨询</a>
+                    <a href="case-studies.html" class="btn btn-outline" data-i18n="about.cta.view_cases">查看成功案例</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="#" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.market_research">市场调研服务</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="#" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +8615110134225</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>
+                    <span data-i18n="footer.copyright.company">&copy; 2023 LottoBridge</span>.
+                    <span data-i18n="footer.copyright.rights">保留所有权利。</span>
+                    | <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a>
+                    | <a href="#" data-i18n="footer.copyright.terms">使用条款</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 脚本 -->
+    <script src="js/languages/zh.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>

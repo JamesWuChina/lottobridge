@@ -3,176 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="mexico.page.title">墨西哥彩票市场报告 | LottoBridge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title data-i18n="mexico.page.title">墨西哥彩票市场深度分析报告 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 国家报告页面专用样式 */
-        .country-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 50%, #1a3e8c 100%);
-            color: var(--white);
+        /* 墨西哥主题专业样式 */
+        :root {
+            --mexico-green: #006847;
+            --mexico-red: #ce1126;
+            --mexico-white: #ffffff;
+            --primary-blue: #1a3e8c;
+            --nav-blue: #1d3557;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --gradient-mexico: linear-gradient(135deg, #006847 0%, #ce1126 50%, #006847 100%);
+            --gradient-accent: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #3b82f6 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-mexico);
+            color: white;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
+            margin-top: 70px;
         }
-
-        .country-hero::before {
+        
+        .hero-banner::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><polygon points="100,50 150,30 200,60 150,90" fill="url(%23grad1)"/><circle cx="800" cy="80" r="35" fill="url(%23grad1)"/><rect x="500" y="200" width="60" height="40" rx="8" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
             opacity: 0.3;
         }
 
-        .country-hero-content {
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 2;
             text-align: center;
+        }
+
+        .hero-content {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .country-flag {
-            width: 80px;
-            height: 60px;
+            width: 100px;
+            height: 70px;
             background: linear-gradient(to bottom, #006847 0%, #006847 33%, #ffffff 33%, #ffffff 66%, #ce1126 66%, #ce1126 100%);
-            border-radius: 8px;
-            margin: 0 auto 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            margin: 0 auto 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .country-flag::after {
             content: '🦅';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 12px;
+            font-size: 20px;
         }
 
-        .country-hero-title {
-            font-size: 3.5rem;
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        .country-hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
             opacity: 0.95;
             line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .country-stats {
+        .market-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .country-stat-card {
-            background: rgba(255,255,255,0.1);
+        .stat-card {
+            background: rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 30px 20px;
             text-align: center;
             border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .country-stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
-        .country-stat-number {
-            font-size: 2.5rem;
+        .stat-number {
+            font-size: 2.8rem;
             font-weight: 700;
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .country-stat-label {
+        .stat-label {
             font-size: 1rem;
             opacity: 0.9;
             font-weight: 500;
         }
 
-        .market-overview {
+        .section {
             padding: 80px 0;
-            background: var(--light-gray);
         }
 
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .bg-light {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
         }
 
-        .overview-content h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .overview-content p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--nav-blue);
-            margin-bottom: 2rem;
-        }
-
-        .overview-visual {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 20px;
-            padding: 3rem;
-            color: var(--white);
+        .section-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 60px;
         }
 
-        .overview-visual::before {
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-mexico);
+            border-radius: 2px;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
         }
 
-        .market-analysis {
-            padding: 80px 0;
-        }
-
-        .analysis-grid {
+        .market-analysis-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .analysis-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -185,38 +192,33 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-mexico);
         }
 
         .analysis-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .analysis-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-mexico);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            font-size: 1.5rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(206, 17, 38, 0.3);
         }
 
         .analysis-title {
-            font-size: 1.5rem;
+            font-size: 20px;
             font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .analysis-description {
             color: var(--nav-blue);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            margin-bottom: 15px;
         }
 
         .analysis-features {
@@ -225,140 +227,181 @@
         }
 
         .analysis-features li {
-            padding: 0.5rem 0;
+            padding: 8px 0;
             color: var(--medium-gray);
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 25px;
         }
 
         .analysis-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary-blue);
+            color: var(--mexico-green);
             font-weight: bold;
         }
 
-        .regulatory-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .regulatory-grid {
+        .highlight-metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
         }
 
-        .regulatory-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary-blue);
+        .metric-card {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #86efac;
             transition: all 0.3s ease;
         }
 
-        .regulatory-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 25px rgba(26, 62, 140, 0.15);
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--mexico-green);
         }
 
-        .regulatory-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .regulatory-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .opportunities-section {
-            padding: 80px 0;
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--mexico-green);
+            margin-bottom: 10px;
         }
 
         .opportunities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .opportunity-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            padding: 35px 25px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
-            border: 1px solid rgba(26, 62, 140, 0.08);
         }
 
         .opportunity-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(26, 62, 140, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
         .opportunity-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-mexico);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 2rem;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
-        .opportunity-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
+        .regulatory-timeline {
+            position: relative;
+            margin: 60px 0;
         }
 
-        .opportunity-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
+        .regulatory-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-mexico);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-mexico);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            border: 4px solid white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
         .challenges-section {
+            background: var(--gradient-mexico);
+            color: white;
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 100%);
-            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenges-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
         .challenges-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .challenges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .challenge-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            padding: 35px 25px;
             border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .challenge-card:hover {
             background: rgba(255,255,255,0.15);
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .challenge-icon {
@@ -369,44 +412,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.75rem;
-        }
-
-        .challenge-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .challenge-description {
-            opacity: 0.9;
-            line-height: 1.6;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
         .solutions-section {
             padding: 80px 0;
-        }
-
-        .solutions-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #fef2f2, #fecaca);
         }
 
         .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .solution-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -419,445 +446,476 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-accent);
         }
 
         .solution-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .solution-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 1.75rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(26, 62, 140, 0.3);
         }
 
-        .solution-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .solution-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .country-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-red) 0%, #f03e3e 100%);
-            color: var(--white);
+        .cta-section {
+            background: var(--gradient-mexico);
+            color: white;
             text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
-        .cta-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
+        .cta-content {
+            position: relative;
+            z-index: 2;
         }
 
-        .cta-buttons {
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
             display: flex;
-            gap: 1.5rem;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-white {
-            background: var(--white);
-            color: var(--primary-red);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid var(--white);
-        }
-
-        .btn-white:hover {
-            background: transparent;
-            color: var(--white);
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             transition: all 0.3s ease;
-            border: 2px solid var(--white);
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
         }
 
-        .btn-outline-white:hover {
-            background: var(--white);
-            color: var(--primary-red);
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
         }
 
-        /* 响应式设计 */
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            border-color: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(26, 62, 140, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--mexico-green);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
         @media (max-width: 768px) {
-            .country-hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .overview-grid {
+            .market-analysis-grid, .opportunities-grid, .challenges-grid, .solutions-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
             
-            .country-stats {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
-            }
-            
-            .cta-buttons {
+            .cta-actions {
                 flex-direction: column;
                 align-items: center;
             }
-        }
 
-        @media (max-width: 480px) {
-            .country-hero-title {
-                font-size: 2rem;
+            .timeline-item {
+                flex-direction: column !important;
             }
-            
-            .country-hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .country-stat-card {
-                padding: 1.5rem;
-            }
-            
-            .country-stat-number {
-                font-size: 2rem;
-            }
-        }
 
-        /* 报告页面导航增强样式 */
-        .header {
-            min-height: 80px;
-        }
-
-        .header-container {
-            min-height: 80px;
-        }
-
-        .logo {
-            font-size: 26px;
-        }
-
-        .nav-links a {
-            font-size: 15px !important;
-            padding: 8px 12px !important;
-            max-width: 120px !important;
-        }
-
-        .language-selector select {
-            font-size: 14px !important;
-            padding: 8px 16px !important;
-            padding-right: 32px !important;
-            min-width: 100px !important;
-        }
-
-        /* 针对不同屏幕尺寸的导航优化 */
-        @media (max-width: 1400px) {
-            .nav-links a {
-                font-size: 14px !important;
-                padding: 7px 10px !important;
-                max-width: 110px !important;
+            .timeline-content {
+                width: 90%;
+                margin-top: 20px;
             }
-            
-            .language-selector select {
-                font-size: 13px !important;
-                padding: 7px 14px !important;
-                padding-right: 28px !important;
-                min-width: 90px !important;
-            }
-        }
 
-        @media (max-width: 1200px) {
-            .nav-links a {
-                font-size: 13px !important;
-                padding: 6px 8px !important;
-                max-width: 100px !important;
+            .regulatory-timeline::before {
+                left: 20px;
             }
-            
-            .language-selector select {
-                font-size: 12px !important;
-                padding: 6px 12px !important;
-                padding-right: 24px !important;
-                min-width: 80px !important;
-            }
-        }
 
-        @media (max-width: 992px) {
-            .nav-links a {
-                font-size: 12px !important;
-                padding: 6px 8px !important;
-                max-width: 95px !important;
-            }
-            
-            .language-selector select {
-                font-size: 11px !important;
-                padding: 6px 10px !important;
-                padding-right: 22px !important;
-                min-width: 75px !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links a {
-                font-size: 11px !important;
-                padding: 5px 6px !important;
-                max-width: 80px !important;
-            }
-            
-            .language-selector select {
-                font-size: 10px !important;
-                padding: 5px 8px !important;
-                padding-right: 20px !important;
-                min-width: 65px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links a {
-                font-size: 10px !important;
-                padding: 4px 5px !important;
-                max-width: 70px !important;
-            }
-            
-            .language-selector select {
-                font-size: 9px !important;
-                padding: 4px 6px !important;
-                padding-right: 18px !important;
-                min-width: 60px !important;
+            .highlight-metrics {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="header-container">
                 <div class="logo">
-                    <a href="../index.html">
-                        <span class="logo-text">
-                            <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
-                        </span>
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                
-                <nav id="mainNav">
+                <nav>
                     <ul class="nav-links">
                         <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../market-details.html" data-i18n="nav.market_details">市场详情</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
                         <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
                         <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
                         <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
                     </ul>
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                    </div>
                 </nav>
-                
-                <div class="language-selector">
-                    <select id="languageSelector">
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="en">🇺🇸 English</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                        <option value="ru">🇷🇺 Русский</option>
-                    </select>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 墨西哥英雄区域 -->
-    <section class="country-hero">
-        <div class="container">
-            <div class="country-hero-content">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-content">
                 <div class="country-flag"></div>
-                <h1 class="country-hero-title" data-i18n="mexico.hero.title">墨西哥彩票市场报告</h1>
-                <p class="country-hero-subtitle" data-i18n="mexico.hero.subtitle">深入分析拉丁美洲第二大经济体彩票市场的发展机遇、监管环境与投资前景</p>
+                <h1 class="hero-title" data-i18n="mexico.hero.title">墨西哥彩票市场深度分析报告</h1>
+                <p class="hero-subtitle" data-i18n="mexico.hero.description">拉丁美洲第二大经济体，拥有1.28亿人口的庞大市场，政府垄断彩票体系正在寻求现代化转型机遇，移动互联网快速普及为数字彩票发展奠定基础</p>
                 
-                <div class="country-stats">
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">1.3亿</div>
-                        <div class="country-stat-label" data-i18n="mexico.stats.population">人口规模</div>
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">1.28亿</div>
+                        <div class="stat-label" data-i18n="mexico.stats.population">总人口数量</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">$1.42万亿</div>
-                        <div class="country-stat-label" data-i18n="mexico.stats.gdp">GDP总量</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$1.68万亿</div>
+                        <div class="stat-label" data-i18n="mexico.stats.gdp">GDP总量</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">3.1%</div>
-                        <div class="country-stat-label" data-i18n="mexico.stats.growth">经济增长率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$35亿</div>
+                        <div class="stat-label" data-i18n="mexico.stats.lottery_market">彩票市场规模</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">81%</div>
-                        <div class="country-stat-label" data-i18n="mexico.stats.urbanization">城市化率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">75%</div>
+                        <div class="stat-label" data-i18n="mexico.stats.mobile_penetration">移动互联网普及率</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 市场概览 -->
-    <section class="market-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2 data-i18n="mexico.overview.title">市场概览</h2>
-                    <p data-i18n="mexico.overview.description">墨西哥作为拉丁美洲第二大经济体，拥有成熟的市场体系和稳定的监管环境。政府在数字化转型方面投入巨大，为彩票行业的发展提供了良好的基础设施。</p>
-                    <p data-i18n="mexico.overview.trends">随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。</p>
-                </div>
-                <div class="overview-visual">
-                    <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 1rem;"></i>
-                    <h3 data-i18n="mexico.overview.visual_title">市场趋势</h3>
-                    <p data-i18n="mexico.overview.visual_subtitle">成熟市场数字化转型加速</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 市场分析 -->
-    <section class="market-analysis">
+    <section class="section" id="market-analysis">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="mexico.analysis.title">深度市场分析</h2>
-                <p class="section-subtitle" data-i18n="mexico.analysis.subtitle">基于最新数据和行业研究，为您提供全面的市场洞察</p>
+                <h2 class="section-title" data-i18n="mexico.analysis.title">墨西哥彩票市场深度分析</h2>
+                <p class="section-subtitle" data-i18n="mexico.analysis.description">基于最新市场数据和行业趋势，全面分析墨西哥彩票市场的发展现状、机遇与挑战</p>
             </div>
-            
-            <div class="analysis-grid">
+
+            <div class="market-analysis-grid">
+                <div class="analysis-card">
+                    <div class="analysis-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="analysis-title" data-i18n="mexico.analysis.market_size.title">市场规模与增长</h3>
+                    <p data-i18n="mexico.analysis.market_size.description">墨西哥彩票市场规模达35亿美元，年增长率8.5%，在拉美地区仅次于巴西</p>
+                    <ul class="analysis-features">
+                        <li data-i18n="mexico.analysis.market_size.feature1">年销售额超过35亿美元</li>
+                        <li data-i18n="mexico.analysis.market_size.feature2">年增长率8.5%，高于地区平均</li>
+                        <li data-i18n="mexico.analysis.market_size.feature3">政府垄断运营，收入稳定</li>
+                        <li data-i18n="mexico.analysis.market_size.feature4">数字化转型需求强烈</li>
+                        <li data-i18n="mexico.analysis.market_size.feature5">年轻人口推动市场增长</li>
+                    </ul>
+                </div>
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="mexico.analysis.demographic.title">人口结构分析</h3>
-                    <p class="analysis-description" data-i18n="mexico.analysis.demographic.description">墨西哥拥有年轻的人口结构，25-45岁年龄段占总人口的40%以上，为彩票市场提供了巨大的潜在用户群体。</p>
+                    <h3 class="analysis-title" data-i18n="mexico.analysis.demographics.title">人口结构优势</h3>
+                    <p data-i18n="mexico.analysis.demographics.description">年轻化人口结构，25-45岁年龄段占比65%，为彩票市场提供强劲消费动力</p>
                     <ul class="analysis-features">
-                        <li data-i18n="mexico.analysis.demographic.feature1">年轻人口比例高，消费潜力大</li>
-                        <li data-i18n="mexico.analysis.demographic.feature2">移动互联网普及率快速提升</li>
-                        <li data-i18n="mexico.analysis.demographic.feature3">城市化进程加速，消费升级明显</li>
+                        <li data-i18n="mexico.analysis.demographics.feature1">平均年龄29岁，人口结构年轻</li>
+                        <li data-i18n="mexico.analysis.demographics.feature2">中产阶级快速增长</li>
+                        <li data-i18n="mexico.analysis.demographics.feature3">城市化率达81%</li>
+                        <li data-i18n="mexico.analysis.demographics.feature4">教育水平不断提升</li>
+                        <li data-i18n="mexico.analysis.demographics.feature5">消费习惯现代化转变</li>
                     </ul>
                 </div>
-                
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="mexico.analysis.technology.title">技术发展分析</h3>
-                    <p class="analysis-description" data-i18n="mexico.analysis.technology.description">移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过85%。</p>
+                    <h3 class="analysis-title" data-i18n="mexico.analysis.digital.title">数字化基础设施</h3>
+                    <p data-i18n="mexico.analysis.digital.description">移动互联网普及率75%，4G覆盖率90%，为数字彩票发展提供技术基础</p>
                     <ul class="analysis-features">
-                        <li data-i18n="mexico.analysis.technology.feature1">移动支付基础设施完善</li>
-                        <li data-i18n="mexico.analysis.technology.feature2">4G网络覆盖范围扩大</li>
-                        <li data-i18n="mexico.analysis.technology.feature3">数字身份认证系统成熟</li>
+                        <li data-i18n="mexico.analysis.digital.feature1">智能手机普及率85%</li>
+                        <li data-i18n="mexico.analysis.digital.feature2">移动支付快速发展</li>
+                        <li data-i18n="mexico.analysis.digital.feature3">5G网络建设加速</li>
+                        <li data-i18n="mexico.analysis.digital.feature4">电子商务蓬勃发展</li>
+                        <li data-i18n="mexico.analysis.digital.feature5">数字金融服务普及</li>
                     </ul>
                 </div>
-                
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="mexico.analysis.economic.title">经济环境分析</h3>
-                    <p class="analysis-description" data-i18n="mexico.analysis.economic.description">稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。</p>
+                    <h3 class="analysis-title" data-i18n="mexico.analysis.institutional.title">体制框架分析</h3>
+                    <p data-i18n="mexico.analysis.institutional.description">政府垄断运营体系，监管明确，为国际合作伙伴提供稳定的政策环境</p>
                     <ul class="analysis-features">
-                        <li data-i18n="mexico.analysis.economic.feature1">GDP持续增长，消费能力提升</li>
-                        <li data-i18n="mexico.analysis.economic.feature2">外商投资政策不断优化</li>
-                        <li data-i18n="mexico.analysis.economic.feature3">金融体系改革深化</li>
+                        <li data-i18n="mexico.analysis.institutional.feature1">国家彩票局统一管理</li>
+                        <li data-i18n="mexico.analysis.institutional.feature2">法律框架完善</li>
+                        <li data-i18n="mexico.analysis.institutional.feature3">支持技术合作</li>
+                        <li data-i18n="mexico.analysis.institutional.feature4">税收政策透明</li>
+                        <li data-i18n="mexico.analysis.institutional.feature5">反洗钱制度健全</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 监管环境 -->
-    <section class="regulatory-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="mexico.regulatory.title">监管环境分析</h2>
-                <p class="section-subtitle" data-i18n="mexico.regulatory.subtitle">了解墨西哥彩票行业的监管框架和政策导向</p>
-            </div>
-            
-            <div class="regulatory-grid">
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="mexico.regulatory.license.title">牌照申请</h3>
-                    <p class="regulatory-description" data-i18n="mexico.regulatory.license.description">政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。</p>
+            <div class="highlight-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">65%</div>
+                    <h4 data-i18n="mexico.metrics.young_population.title">年轻人口比例</h4>
+                    <p data-i18n="mexico.metrics.young_population.description">25-45岁核心消费群体</p>
                 </div>
-                
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="mexico.regulatory.tax.title">税收政策</h3>
-                    <p class="regulatory-description" data-i18n="mexico.regulatory.tax.description">彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。</p>
+                <div class="metric-card">
+                    <div class="metric-value">$12,800</div>
+                    <h4 data-i18n="mexico.metrics.per_capita_income.title">人均GDP</h4>
+                    <p data-i18n="mexico.metrics.per_capita_income.description">中等收入水平稳步提升</p>
                 </div>
-                
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="mexico.regulatory.compliance.title">合规要求</h3>
-                    <p class="regulatory-description" data-i18n="mexico.regulatory.compliance.description">要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。</p>
+                <div class="metric-card">
+                    <div class="metric-value">85%</div>
+                    <h4 data-i18n="mexico.metrics.banked_population.title">银行服务普及率</h4>
+                    <p data-i18n="mexico.metrics.banked_population.description">金融基础设施完善</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$480</div>
+                    <h4 data-i18n="mexico.metrics.annual_spending.title">年均彩票消费</h4>
+                    <p data-i18n="mexico.metrics.annual_spending.description">人均彩票支出水平</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 市场机遇 -->
-    <section class="opportunities-section">
+    <section class="section bg-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="mexico.opportunities.title">市场机遇</h2>
-                <p class="section-subtitle" data-i18n="mexico.opportunities.subtitle">识别并把握墨西哥彩票市场的关键机遇</p>
+                <h2 class="section-title" data-i18n="mexico.opportunities.title">关键市场机遇</h2>
+                <p class="section-subtitle" data-i18n="mexico.opportunities.description">识别并把握墨西哥彩票市场的核心发展机遇</p>
             </div>
-            
+
             <div class="opportunities-grid">
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-mobile"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="mexico.opportunities.mobile.title">移动彩票</h3>
-                    <p class="opportunity-description" data-i18n="mexico.opportunities.mobile.description">移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达20%。</p>
+                    <h3 data-i18n="mexico.opportunities.digital_transformation.title">数字化转型</h3>
+                    <p data-i18n="mexico.opportunities.digital_transformation.description">政府积极推动彩票系统数字化转型，为技术供应商提供巨大合作机会，预计投资规模达5亿美元。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="mexico.opportunities.games.title">游戏创新</h3>
-                    <p class="opportunity-description" data-i18n="mexico.opportunities.games.description">年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。</p>
+                    <h3 data-i18n="mexico.opportunities.game_innovation.title">游戏玩法创新</h3>
+                    <p data-i18n="mexico.opportunities.game_innovation.description">传统玩法需要现代化升级，本地化创新游戏设计需求强烈，年轻用户群体追求新颖体验。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-store"></i>
+                        <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="mexico.opportunities.retail.title">零售网络</h3>
-                    <p class="opportunity-description" data-i18n="mexico.opportunities.retail.description">传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。</p>
+                    <h3 data-i18n="mexico.opportunities.infrastructure.title">基础设施升级</h3>
+                    <p data-i18n="mexico.opportunities.infrastructure.description">全国彩票销售网络现代化改造，终端设备更新换代，系统集成服务需求旺盛。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="mexico.opportunities.ai.title">AI技术</h3>
-                    <p class="opportunity-description" data-i18n="mexico.opportunities.ai.description">人工智能在用户服务、风险控制等方面的应用前景广阔。</p>
+                    <h3 data-i18n="mexico.opportunities.data_analytics.title">大数据分析</h3>
+                    <p data-i18n="mexico.opportunities.data_analytics.description">用户行为分析、精准营销、风险控制等大数据应用场景丰富，BI系统建设需求迫切。</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="mexico.opportunities.security.title">安全合规</h3>
+                    <p data-i18n="mexico.opportunities.security.description">网络安全、数据保护、反洗钱合规要求不断提升，专业安全解决方案需求增长。</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="mexico.opportunities.customer_experience.title">用户体验提升</h3>
+                    <p data-i18n="mexico.opportunities.customer_experience.description">多渠道服务整合、个性化推荐、客户关系管理系统优化需求强烈。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 监管环境 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="mexico.regulatory.title">监管环境与政策框架</h2>
+                <p class="section-subtitle" data-i18n="mexico.regulatory.description">了解墨西哥彩票行业的监管环境、政策导向和合规要求</p>
+            </div>
+
+            <div class="regulatory-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="mexico.regulatory.licensing.title">运营牌照</h3>
+                        <p data-i18n="mexico.regulatory.licensing.description">政府垄断运营模式，国家彩票局负责统一管理，技术服务商可通过政府采购方式参与项目。许可证申请程序透明，技术标准明确。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="mexico.regulatory.taxation.title">税收制度</h3>
+                        <p data-i18n="mexico.regulatory.taxation.description">彩票收入税率为12%，技术服务增值税率为16%。外资企业享受平等待遇，可享受技术创新税收优惠政策。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="mexico.regulatory.compliance.title">合规要求</h3>
+                        <p data-i18n="mexico.regulatory.compliance.description">严格的反洗钱制度，要求实名认证、交易监控、可疑交易报告。数据保护法规日趋完善，要求本地化存储。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="mexico.regulatory.innovation.title">创新支持</h3>
+                        <p data-i18n="mexico.regulatory.innovation.description">政府鼓励技术创新，支持区块链、人工智能等新技术应用。设立创新沙盒机制，为新技术测试提供监管便利。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -867,33 +925,43 @@
     <section class="challenges-section">
         <div class="container">
             <div class="challenges-content">
-                <h2 class="section-title" data-i18n="mexico.challenges.title">市场挑战</h2>
-                <p class="section-subtitle" data-i18n="mexico.challenges.subtitle">了解行业面临的主要挑战，制定相应的应对策略</p>
-            </div>
-            
-            <div class="challenges-grid">
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="challenge-title" data-i18n="mexico.challenges.language.title">语言本地化</h3>
-                    <p class="challenge-description" data-i18n="mexico.challenges.language.description">需要提供西班牙语和英语的双语服务，本地化要求较高。</p>
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="mexico.challenges.title">市场挑战与风险</h2>
+                    <p class="section-subtitle" data-i18n="mexico.challenges.description">深入分析进入墨西哥彩票市场面临的主要挑战和潜在风险</p>
                 </div>
-                
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 data-i18n="mexico.challenges.monopoly.title">政府垄断体系</h3>
+                        <p data-i18n="mexico.challenges.monopoly.description">国家彩票局垄断运营，私人企业无法直接运营彩票业务，只能通过技术服务合作方式进入市场。</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="mexico.challenges.security.title">网络安全</h3>
-                    <p class="challenge-description" data-i18n="mexico.challenges.security.description">需要建立符合当地标准的网络安全体系，保障用户数据安全。</p>
-                </div>
-                
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-handshake"></i>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 data-i18n="mexico.challenges.localization.title">本地化要求</h3>
+                        <p data-i18n="mexico.challenges.localization.description">需要深入了解墨西哥文化和消费习惯，提供西班牙语本地化服务，建立本地团队和合作关系。</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="mexico.challenges.partnership.title">合作伙伴</h3>
-                    <p class="challenge-description" data-i18n="mexico.challenges.partnership.description">需要与当地金融机构和支付服务商建立合作关系。</p>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-i18n="mexico.challenges.competition.title">市场竞争</h3>
+                        <p data-i18n="mexico.challenges.competition.description">国际技术供应商竞争激烈，需要具备技术优势和本地化服务能力才能获得政府采购订单。</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 data-i18n="mexico.challenges.currency.title">汇率风险</h3>
+                        <p data-i18n="mexico.challenges.currency.description">比索汇率波动较大，长期合作项目需要考虑汇率风险管理和外汇对冲策略。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -902,107 +970,114 @@
     <!-- LottoBridge解决方案 -->
     <section class="solutions-section">
         <div class="container">
-            <div class="solutions-content">
-                <h2 class="section-title" data-i18n="mexico.solutions.title">LottoBridge解决方案</h2>
-                <p class="section-subtitle" data-i18n="mexico.solutions.subtitle">我们提供全方位的技术支持和服务，帮助您在墨西哥市场取得成功</p>
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="mexico.solutions.title">LottoBridge专业解决方案</h2>
+                <p class="section-subtitle" data-i18n="mexico.solutions.description">针对墨西哥市场特点，提供全方位的技术支持和专业服务</p>
             </div>
-            
+
             <div class="solutions-grid">
                 <div class="solution-card">
                     <div class="solution-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="mexico.solutions.compliance.title">合规支持</h3>
-                    <p class="solution-description" data-i18n="mexico.solutions.compliance.description">提供符合墨西哥监管要求的系统解决方案，确保业务合法运营。</p>
+                    <h3 data-i18n="mexico.solutions.technical.title">技术系统集成</h3>
+                    <p data-i18n="mexico.solutions.technical.description">提供符合墨西哥国家标准的彩票系统集成解决方案，包括核心系统、终端设备、网络基础设施等全套技术服务。</p>
                 </div>
-                
+
                 <div class="solution-card">
                     <div class="solution-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="mexico.solutions.localization.title">本地化服务</h3>
-                    <p class="solution-description" data-i18n="mexico.solutions.localization.description">提供西班牙语和英语的双语界面和客服支持，确保用户体验。</p>
+                    <h3 data-i18n="mexico.solutions.localization.title">本地化服务</h3>
+                    <p data-i18n="mexico.solutions.localization.description">提供西班牙语系统界面、本地化游戏设计、墨西哥文化元素融入，确保产品符合当地用户习惯和文化特色。</p>
                 </div>
-                
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="mexico.solutions.compliance.title">合规咨询服务</h3>
+                    <p data-i18n="mexico.solutions.compliance.description">深入了解墨西哥法律法规，提供全面的合规咨询服务，协助客户满足监管要求，降低合规风险。</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="mexico.solutions.training.title">培训与支持</h3>
+                    <p data-i18n="mexico.solutions.training.description">提供全面的技术培训和运营支持服务，包括系统操作培训、维护指导、7×24小时技术支持等。</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="mexico.solutions.analytics.title">数据分析服务</h3>
+                    <p data-i18n="mexico.solutions.analytics.description">提供先进的数据分析和商业智能服务，帮助优化运营决策，提升用户体验，实现精准营销。</p>
+                </div>
+
                 <div class="solution-card">
                     <div class="solution-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="mexico.solutions.partnership.title">合作伙伴网络</h3>
-                    <p class="solution-description" data-i18n="mexico.solutions.partnership.description">与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。</p>
+                    <h3 data-i18n="mexico.solutions.partnership.title">战略合作</h3>
+                    <p data-i18n="mexico.solutions.partnership.description">与墨西哥本地合作伙伴建立长期战略关系，共同开拓市场，提供更贴近本地需求的专业服务。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 行动号召 -->
-    <section class="country-cta">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 data-i18n="mexico.cta.title">开启您的墨西哥彩票业务之旅</h2>
-                <p data-i18n="mexico.cta.subtitle">联系我们，获取专业的市场分析和定制化解决方案</p>
-                <div class="cta-buttons">
-                    <a href="../contact.html" class="btn-white" data-i18n="mexico.cta.contact">立即咨询</a>
-                    <a href="../case-studies.html" class="btn-outline-white" data-i18n="mexico.cta.cases">查看案例</a>
+                <h2 class="cta-title" data-i18n="mexico.cta.title">开启墨西哥彩票市场合作之旅</h2>
+                <p class="cta-subtitle" data-i18n="mexico.cta.description">联系我们的专家团队，获取墨西哥市场专业分析报告和定制化解决方案</p>
+                <div class="cta-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="mexico.cta.btn_contact">立即咨询</a>
+                    <a href="../case-studies.html" class="btn btn-outline" data-i18n="mexico.cta.btn_cases">查看案例</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">LottoBridge</h3>
-                    <p class="footer-description" data-i18n="footer.description">全球彩票出海一站式解决方案平台，为您提供专业的技术支持和服务。</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.quick_links">快速链接</h4>
-                    <ul class="footer-links">
-                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
-                    </ul>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
+                    <p>Email: info@lottobridge.com</p>
+                    <p>Tel: +86 400-888-8888</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.services">服务</h4>
-                    <ul class="footer-links">
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
-                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.contact">联系方式</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
-                        <li><i class="fas fa-phone"></i> +86 400-888-8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 深圳市南山区科技园</li>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
+                    <ul>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利。</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- 脚本 -->
+    <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html> 

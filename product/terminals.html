@@ -181,26 +181,17 @@
     </footer>
 
     <!-- 多语言支持脚本 -->
-    <script src="../js/languages/zh.js"></script>
-    <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
-    <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
-    <script src="../js/languages/ar.js"></script>
-    <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        // 初始化国际化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 检查i18n是否已初始化
-            if (window.i18n) {
-                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
-            } else {
-                console.warn('多语言系统未初始化');
-            }
-        });
-    </script>
+    
+
+    <!-- Unified i18n System -->
+    <script src="js/languages/zh.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/unified-i18n.js"></script>
+    <script src="js/i18n-validation.js"></script>
 </body>
 </html>

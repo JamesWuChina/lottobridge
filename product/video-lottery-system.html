@@ -3,274 +3,902 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="video.title">视频彩票系统 - LottoBridge</title>
+    <title data-i18n="video.page.title">视频彩票系统解决方案 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 专业高端样式优化 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #7c2d12 0%, #ea580c 50%, #f97316 100%);
+            --gradient-accent: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #3b82f6 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><rect x="100" y="50" width="50" height="30" rx="5" fill="url(%23grad1)"/><circle cx="800" cy="80" r="20" fill="url(%23grad1)"/><polygon points="500,200 520,180 540,200 520,220" fill="url(%23grad1)"/><rect x="300" y="120" width="40" height="25" rx="3" fill="url(%23grad1)"/><circle cx="900" cy="150" r="15" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #fff7ed, #fed7aa);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
+        }
+
+        .features-grid, .gaming-grid, .tech-grid, .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card, .gaming-card, .tech-card, .compliance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before, .gaming-card::before, .tech-card::before, .compliance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .feature-card:hover, .gaming-card:hover, .tech-card:hover, .compliance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon, .gaming-icon, .tech-icon, .compliance-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(124, 45, 18, 0.3);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .game-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .game-sample {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .game-sample:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .game-preview {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .game-info {
+            padding: 25px;
+        }
+
+        .game-features {
+            margin-top: 15px;
+        }
+
+        .game-features span {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin: 2px 4px;
+            font-weight: 500;
+        }
+
+        .streaming-tech {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 1px solid #7dd3fc;
+        }
+
+        .streaming-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .streaming-feature i {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .platform-support {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .platform-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 25px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .platform-item:hover {
+            transform: translateY(-5px);
+            border-color: #ea580c;
+        }
+
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            border-color: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(26, 62, 140, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: #ea580c;
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .features-grid, .gaming-grid, .tech-grid, .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-actions, .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .platform-support {
+                flex-direction: column;
+            }
+
+            .game-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
-                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
-                </div>
-                <div class="nav-actions">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    </ul>
                     <div class="language-selector">
                         <select id="languageSelect">
                             <option value="zh">中文</option>
                             <option value="en">English</option>
                             <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
                         </select>
                     </div>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
-    <section class="hero-banner product-hero">
+    <section class="hero-banner">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n="video.hero.title">视频彩票系统解决方案</h1>
-                <p class="hero-subtitle" data-i18n="video.hero.subtitle">创新型视频彩票系统，融合娱乐与合规，提升用户体验</p>
+                <h1 class="hero-title" data-i18n="video.hero.title">创新视频彩票娱乐系统</h1>
+                <p class="hero-subtitle" data-i18n="video.hero.description">基于HTML5技术的高清视频彩票平台，融合娱乐与博彩体验，支持Keno、宾果、虚拟体育等多种游戏类型，提供沉浸式视频直播开奖、实时互动与多平台兼容的完整解决方案</p>
                 <div class="hero-actions">
-                    <a href="#features" class="btn btn-primary" data-i18n="video.hero.viewFeatures">系统亮点</a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="video.hero.contact">咨询方案</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="image-placeholder hero-image">
-                    <span class="placeholder-text" data-i18n="video.hero.imageText">视频彩票系统展示</span>
+                    <a href="#features" class="btn btn-primary" data-i18n="video.hero.btn_features">系统特色</a>
+                    <a href="#games" class="btn btn-outline" data-i18n="video.hero.btn_games">游戏类型</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块一：核心功能亮点 -->
-    <section class="video-features-section" id="features">
+    <!-- 核心功能特性 -->
+    <section class="section" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="video.features.title">核心功能亮点</h2>
-                <p class="section-subtitle" data-i18n="video.features.subtitle">创新玩法，安全合规，灵活部署</p>
+                <h2 class="section-title" data-i18n="video.features.title">创新视频彩票核心功能</h2>
+                <p class="section-subtitle" data-i18n="video.features.description">集成高清视频流技术、实时渲染引擎与人工智能，打造沉浸式彩票娱乐体验</p>
             </div>
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-video"></i>
                     </div>
-                    <h3 data-i18n="video.features.games.title">多样化游戏</h3>
-                    <p data-i18n="video.features.games.desc">支持多种视频彩票游戏，满足不同市场需求</p>
+                    <h3 data-i18n="video.features.hd_streaming.title">高清视频流技术</h3>
+                    <p data-i18n="video.features.hd_streaming.description">4K超高清视频开奖直播，毫秒级延迟，多码率自适应传输</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.features.hd_streaming.feature1">4K/1080P多分辨率支持</li>
+                        <li data-i18n="video.features.hd_streaming.feature2">H.265编码优化压缩</li>
+                        <li data-i18n="video.features.hd_streaming.feature3">CDN全球加速分发</li>
+                        <li data-i18n="video.features.hd_streaming.feature4">50ms超低延迟传输</li>
+                        <li data-i18n="video.features.hd_streaming.feature5">自适应码率调节</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 1L3 5V6C3 10 3 16 12 23C21 16 21 10 21 6V5L12 1Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-gamepad"></i>
                     </div>
-                    <h3 data-i18n="video.features.security.title">安全合规</h3>
-                    <p data-i18n="video.features.security.desc">严格遵循行业标准，保障数据与资金安全</p>
+                    <h3 data-i18n="video.features.interactive_ui.title">沉浸式交互界面</h3>
+                    <p data-i18n="video.features.interactive_ui.description">基于WebGL的3D游戏界面，实时动画效果与触控优化</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.features.interactive_ui.feature1">WebGL 3D渲染引擎</li>
+                        <li data-i18n="video.features.interactive_ui.feature2">粒子特效系统</li>
+                        <li data-i18n="video.features.interactive_ui.feature3">触控手势识别</li>
+                        <li data-i18n="video.features.interactive_ui.feature4">响应式UI设计</li>
+                        <li data-i18n="video.features.interactive_ui.feature5">多语言界面支持</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 19C9 19.5523 9.44772 20 10 20H14C14.5523 20 15 19.5523 15 19V18H9V19Z" fill="#2563eb"/>
-                            <path d="M9 16V17H15V16H9Z" fill="#2563eb"/>
-                            <path d="M11 4H13V14H11V4Z" fill="#2563eb"/>
-                            <path d="M5 9H7V14H5V9Z" fill="#2563eb"/>
-                            <path d="M17 7H19V14H17V7Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-random"></i>
                     </div>
-                    <h3 data-i18n="video.features.analytics.title">数据分析</h3>
-                    <p data-i18n="video.features.analytics.desc">实时数据分析，助力运营决策</p>
+                    <h3 data-i18n="video.features.rng_system.title">公正随机数系统</h3>
+                    <p data-i18n="video.features.rng_system.description">硬件级随机数生成器，区块链存证验证，确保游戏公平性</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.features.rng_system.feature1">硬件随机数生成器</li>
+                        <li data-i18n="video.features.rng_system.feature2">区块链开奖存证</li>
+                        <li data-i18n="video.features.rng_system.feature3">GLI标准认证</li>
+                        <li data-i18n="video.features.rng_system.feature4">第三方审计支持</li>
+                        <li data-i18n="video.features.rng_system.feature5">实时公正性验证</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3 data-i18n="video.features.custom.title">灵活定制</h3>
-                    <p data-i18n="video.features.custom.desc">支持多语言、多币种、多渠道接入</p>
+                    <h3 data-i18n="video.features.social_gaming.title">社交游戏体验</h3>
+                    <p data-i18n="video.features.social_gaming.description">实时聊天互动、多人竞技模式与社区功能集成</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.features.social_gaming.feature1">实时聊天室功能</li>
+                        <li data-i18n="video.features.social_gaming.feature2">多人同桌竞技</li>
+                        <li data-i18n="video.features.social_gaming.feature3">好友系统与排行榜</li>
+                        <li data-i18n="video.features.social_gaming.feature4">社区活动与赛事</li>
+                        <li data-i18n="video.features.social_gaming.feature5">表情与礼物系统</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块二：游戏类型 -->
-    <section class="gaming-types-section">
+    <!-- 游戏类型展示 -->
+    <section class="section bg-light" id="games">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="video.gaming.title">丰富的游戏类型</h2>
-                <p class="section-subtitle" data-i18n="video.gaming.subtitle">多样化的视频彩票游戏，满足不同玩家需求</p>
+                <h2 class="section-title" data-i18n="video.games.title">丰富视频彩票游戏类型</h2>
+                <p class="section-subtitle" data-i18n="video.games.description">涵盖传统与创新彩票玩法，融合视频元素提升娱乐性与参与度</p>
             </div>
-            <div class="gaming-grid">
-                <div class="gaming-card">
-                    <div class="gaming-image">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text">视频基诺游戏</span>
-                        </div>
+
+            <div class="game-showcase">
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.keno.preview">视频Keno开奖场景</span>
                     </div>
-                    <div class="gaming-content">
-                        <h3 data-i18n="video.gaming.keno.title">视频基诺</h3>
-                        <p data-i18n="video.gaming.keno.desc">高频开奖，快速投注，实时开奖动画</p>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.keno.title">视频Keno基诺</h3>
+                        <p data-i18n="video.games.keno.description">经典基诺玩法的视频版本，80个号码中选择20个，支持1-15分钟开奖间隔</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.keno.feature1">高频开奖</span>
+                            <span data-i18n="video.games.keno.feature2">实时动画</span>
+                            <span data-i18n="video.games.keno.feature3">多倍投注</span>
+                            <span data-i18n="video.games.keno.feature4">自动投注</span>
+                        </div>
                     </div>
                 </div>
-                <div class="gaming-card">
-                    <div class="gaming-image">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text">视频宾果游戏</span>
-                        </div>
+
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.bingo.preview">视频宾果游戏场景</span>
                     </div>
-                    <div class="gaming-content">
-                        <h3 data-i18n="video.gaming.bingo.title">视频宾果</h3>
-                        <p data-i18n="video.gaming.bingo.desc">经典宾果游戏，增加视频互动元素</p>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.bingo.title">视频宾果Bingo</h3>
+                        <p data-i18n="video.games.bingo.description">传统宾果游戏的现代化演绎，75球或90球模式，支持多张卡同时游戏</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.bingo.feature1">多卡投注</span>
+                            <span data-i18n="video.games.bingo.feature2">自动标记</span>
+                            <span data-i18n="video.games.bingo.feature3">奖励游戏</span>
+                            <span data-i18n="video.games.bingo.feature4">聊天互动</span>
+                        </div>
                     </div>
                 </div>
-                <div class="gaming-card">
-                    <div class="gaming-image">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text">视频刮刮卡</span>
-                        </div>
+
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.virtual_sports.preview">虚拟体育比赛场景</span>
                     </div>
-                    <div class="gaming-content">
-                        <h3 data-i18n="video.gaming.scratch.title">视频刮刮卡</h3>
-                        <p data-i18n="video.gaming.scratch.desc">数字化刮刮卡游戏，提供更多动画效果</p>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.virtual_sports.title">虚拟体育竞技</h3>
+                        <p data-i18n="video.games.virtual_sports.description">3D虚拟足球、赛马、赛车等体育赛事，AI驱动的真实比赛体验</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.virtual_sports.feature1">3D赛事</span>
+                            <span data-i18n="video.games.virtual_sports.feature2">多种玩法</span>
+                            <span data-i18n="video.games.virtual_sports.feature3">快速开奖</span>
+                            <span data-i18n="video.games.virtual_sports.feature4">统计分析</span>
+                        </div>
                     </div>
                 </div>
-                <div class="gaming-card">
-                    <div class="gaming-image">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text">即开游戏</span>
+
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.scratch.preview">视频刮刮卡游戏</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.scratch.title">视频刮刮卡</h3>
+                        <p data-i18n="video.games.scratch.description">数字化刮刮卡体验，丰富的主题设计，逼真的刮开动画效果</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.scratch.feature1">多主题</span>
+                            <span data-i18n="video.games.scratch.feature2">即开即奖</span>
+                            <span data-i18n="video.games.scratch.feature3">动画效果</span>
+                            <span data-i18n="video.games.scratch.feature4">批量购买</span>
                         </div>
                     </div>
-                    <div class="gaming-content">
-                        <h3 data-i18n="video.gaming.instant.title">即开游戏</h3>
-                        <p data-i18n="video.gaming.instant.desc">快速开奖，即时获得结果的视频游戏</p>
+                </div>
+
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.wheel.preview">幸运转盘游戏</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.wheel.title">幸运大转盘</h3>
+                        <p data-i18n="video.games.wheel.description">创新转盘游戏模式，支持多段式奖励与渐进式奖池</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.wheel.feature1">多级奖励</span>
+                            <span data-i18n="video.games.wheel.feature2">奖池累积</span>
+                            <span data-i18n="video.games.wheel.feature3">炫酷特效</span>
+                            <span data-i18n="video.games.wheel.feature4">边注玩法</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-sample">
+                    <div class="game-preview">
+                        <span data-i18n="video.games.lottery.preview">视频数字彩票</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 data-i18n="video.games.lottery.title">视频数字彩票</h3>
+                        <p data-i18n="video.games.lottery.description">传统数字彩票的视频化呈现，支持双色球、大乐透等经典玩法</p>
+                        <div class="game-features">
+                            <span data-i18n="video.games.lottery.feature1">经典玩法</span>
+                            <span data-i18n="video.games.lottery.feature2">视频开奖</span>
+                            <span data-i18n="video.games.lottery.feature3">追号功能</span>
+                            <span data-i18n="video.games.lottery.feature4">走势分析</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块三：技术架构 -->
-    <section class="technology-section">
+    <!-- 技术架构 -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="video.technology.title">领先技术架构</h2>
-                <p class="section-subtitle" data-i18n="video.technology.subtitle">基于现代云原生架构，确保系统稳定高效</p>
+                <h2 class="section-title" data-i18n="video.technology.title">先进视频技术架构</h2>
+                <p class="section-subtitle" data-i18n="video.technology.description">基于云原生架构的高性能视频处理与分发系统</p>
             </div>
-            <div class="technology-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="video.technology.rng.title">随机数生成</h3>
-                    <p data-i18n="video.technology.rng.desc">采用硬件随机数生成器，确保游戏公平性</p>
+
+            <div class="streaming-tech">
+                <h3 data-i18n="video.technology.streaming.title">
+                    <i class="fas fa-broadcast-tower"></i>
+                    专业视频流处理技术
+                </h3>
+                <div class="streaming-feature">
+                    <i class="fas fa-server"></i>
+                    <span data-i18n="video.technology.streaming.encoding">硬件编码加速，支持H.264/H.265多格式</span>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="video.technology.stream.title">视频流处理</h3>
-                    <p data-i18n="video.technology.stream.desc">高性能视频流处理，提供流畅的游戏体验</p>
+                <div class="streaming-feature">
+                    <i class="fas fa-globe"></i>
+                    <span data-i18n="video.technology.streaming.cdn">全球CDN网络，智能节点调度</span>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="video.technology.realtime.title">实时交互</h3>
-                    <p data-i18n="video.technology.realtime.desc">毫秒级响应，实现真正的实时游戏体验</p>
+                <div class="streaming-feature">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span data-i18n="video.technology.streaming.latency">超低延迟传输，实时互动体验</span>
                 </div>
+                <div class="streaming-feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span data-i18n="video.technology.streaming.adaptive">自适应码率，跨平台兼容</span>
+                </div>
+            </div>
+
+            <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3 data-i18n="video.technology.cdn.title">全球CDN</h3>
-                    <p data-i18n="video.technology.cdn.desc">全球内容分发网络，确保世界各地的用户体验</p>
+                    <h3 data-i18n="video.technology.rendering.title">实时渲染引擎</h3>
+                    <p data-i18n="video.technology.rendering.description">GPU加速的3D渲染引擎，支持复杂动画与特效</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.technology.rendering.feature1">WebGL 2.0图形API</li>
+                        <li data-i18n="video.technology.rendering.feature2">GPU并行计算优化</li>
+                        <li data-i18n="video.technology.rendering.feature3">实时光照与阴影</li>
+                        <li data-i18n="video.technology.rendering.feature4">粒子特效系统</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 data-i18n="video.technology.network.title">高并发网络架构</h3>
+                    <p data-i18n="video.technology.network.description">支持百万级并发用户的分布式网络架构</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.technology.network.feature1">WebSocket实时通信</li>
+                        <li data-i18n="video.technology.network.feature2">负载均衡集群</li>
+                        <li data-i18n="video.technology.network.feature3">Redis缓存加速</li>
+                        <li data-i18n="video.technology.network.feature4">容器化部署</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="video.technology.security.title">安全防护体系</h3>
+                    <p data-i18n="video.technology.security.description">多层次安全防护，保障游戏公平与数据安全</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.technology.security.feature1">DRM版权保护</li>
+                        <li data-i18n="video.technology.security.feature2">HTTPS加密传输</li>
+                        <li data-i18n="video.technology.security.feature3">防作弊检测系统</li>
+                        <li data-i18n="video.technology.security.feature4">访问控制与审计</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块四：合规与监管 -->
-    <section class="compliance-section">
+    <!-- 平台支持 -->
+    <section class="section bg-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="video.compliance.title">合规与监管</h2>
-                <p class="section-subtitle" data-i18n="video.compliance.subtitle">严格遵循国际标准，确保系统合规运营</p>
+                <h2 class="section-title" data-i18n="video.platforms.title">全平台兼容支持</h2>
+                <p class="section-subtitle" data-i18n="video.platforms.description">支持PC、移动端、智能电视等多种终端设备</p>
             </div>
+
+            <div class="platform-support">
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4 data-i18n="video.platforms.web.title">Web浏览器</h4>
+                    <p data-i18n="video.platforms.web.description">Chrome、Firefox、Safari全兼容</p>
+                </div>
+
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 data-i18n="video.platforms.mobile.title">移动设备</h4>
+                    <p data-i18n="video.platforms.mobile.description">iOS、Android原生App</p>
+                </div>
+
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h4 data-i18n="video.platforms.tablet.title">平板电脑</h4>
+                    <p data-i18n="video.platforms.tablet.description">iPad、Android平板优化</p>
+                </div>
+
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4 data-i18n="video.platforms.tv.title">智能电视</h4>
+                    <p data-i18n="video.platforms.tv.description">Android TV、Apple TV支持</p>
+                </div>
+
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4 data-i18n="video.platforms.console.title">游戏主机</h4>
+                    <p data-i18n="video.platforms.console.description">PlayStation、Xbox适配</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合规与认证 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="video.compliance.title">国际合规认证体系</h2>
+                <p class="section-subtitle" data-i18n="video.compliance.description">严格遵循国际游戏标准，确保系统合规运营</p>
+            </div>
+
             <div class="compliance-grid">
                 <div class="compliance-card">
                     <div class="compliance-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <h3 data-i18n="video.compliance.glI.title">GLI认证</h3>
-                    <p data-i18n="video.compliance.glI.desc">通过GLI国际游戏实验室认证，确保游戏公平性</p>
+                    <h3 data-i18n="video.compliance.gli.title">GLI认证标准</h3>
+                    <p data-i18n="video.compliance.gli.description">通过GLI国际游戏实验室认证，确保游戏公平性</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.compliance.gli.feature1">随机数生成器认证</li>
+                        <li data-i18n="video.compliance.gli.feature2">游戏逻辑验证</li>
+                        <li data-i18n="video.compliance.gli.feature3">数学模型审核</li>
+                        <li data-i18n="video.compliance.gli.feature4">安全性测试通过</li>
+                    </ul>
                 </div>
+
                 <div class="compliance-card">
                     <div class="compliance-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-percentage"></i>
                     </div>
-                    <h3 data-i18n="video.compliance.rtp.title">RTP控制</h3>
-                    <p data-i18n="video.compliance.rtp.desc">严格的返奖率控制，符合监管要求</p>
+                    <h3 data-i18n="video.compliance.rtp.title">RTP返奖率控制</h3>
+                    <p data-i18n="video.compliance.rtp.description">严格的返奖率控制，符合监管要求</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.compliance.rtp.feature1">可配置返奖率</li>
+                        <li data-i18n="video.compliance.rtp.feature2">实时监控统计</li>
+                        <li data-i18n="video.compliance.rtp.feature3">历史数据分析</li>
+                        <li data-i18n="video.compliance.rtp.feature4">合规报告生成</li>
+                    </ul>
                 </div>
+
                 <div class="compliance-card">
                     <div class="compliance-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="video.compliance.audit.title">审计追踪</h3>
-                    <p data-i18n="video.compliance.audit.desc">完整的审计日志，支持监管机构检查</p>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7V17H9V22H15V17H22V7L12 2Z" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-user-shield"></i>
                     </div>
                     <h3 data-i18n="video.compliance.responsible.title">负责任游戏</h3>
-                    <p data-i18n="video.compliance.responsible.desc">内置玩家保护机制，防范问题赌博</p>
+                    <p data-i18n="video.compliance.responsible.description">内置玩家保护机制，防范问题赌博</p>
+                    <ul class="feature-list">
+                        <li data-i18n="video.compliance.responsible.feature1">时间限制设置</li>
+                        <li data-i18n="video.compliance.responsible.feature2">投注限额控制</li>
+                        <li data-i18n="video.compliance.responsible.feature3">自我排除功能</li>
+                        <li data-i18n="video.compliance.responsible.feature4">问题识别预警</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="contact">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title" data-i18n="video.cta.title">开启视频彩票新体验</h2>
-                <p class="cta-subtitle" data-i18n="video.cta.subtitle">联系我们，获取专业的视频彩票系统解决方案</p>
+                <h2 class="cta-title" data-i18n="video.cta.title">体验下一代视频彩票</h2>
+                <p class="cta-subtitle" data-i18n="video.cta.description">联系我们的专家团队，获取创新视频彩票系统解决方案与演示</p>
                 <div class="cta-actions">
-                    <a href="../contact.html" class="btn btn-primary" data-i18n="video.cta.contact">立即咨询</a>
-                    <a href="../products.html" class="btn btn-outline" data-i18n="video.cta.products">查看其他产品</a>
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="video.cta.btn_demo">预约演示</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="video.cta.btn_products">查看其他产品</a>
                 </div>
             </div>
         </div>
@@ -282,7 +910,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-i18n="footer.company.name">LottoBridge</h3>
-                    <p data-i18n="footer.company.description">专业的彩票系统解决方案提供商</p>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
                     <h4 data-i18n="footer.contact.title">联系方式</h4>
@@ -304,27 +932,15 @@
         </div>
     </footer>
 
-    <!-- 多语言支持脚本 -->
+    <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        // 初始化国际化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 检查i18n是否已初始化
-            if (window.i18n) {
-                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
-            } else {
-                console.warn('多语言系统未初始化');
-            }
-        });
-    </script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html>

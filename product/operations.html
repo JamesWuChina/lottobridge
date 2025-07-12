@@ -9,12 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* 专业高端样式优化 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #115e59 100%);
+            --gradient-accent: linear-gradient(135deg, #e63946 0%, #dc2626 50%, #b91c1c 100%);
+        }
+
         .hero-banner {
-            background: linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #115e59 100%);
+            background: var(--gradient-primary);
             color: white;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
+            margin-top: 70px;
         }
         
         .hero-banner::before {
@@ -24,8 +39,86 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><polygon points="100,50 150,30 200,60 150,90" fill="url(%23grad1)"/><polygon points="800,80 850,60 900,90 850,110" fill="url(%23grad1)"/><polygon points="500,200 550,180 600,210 550,230" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><polygon points="100,50 150,30 200,60 150,90" fill="url(%23grad1)"/><polygon points="800,80 850,60 900,90 850,110" fill="url(%23grad1)"/><polygon points="500,200 550,180 600,210 550,230" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
             opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
         }
 
         .service-grid {
@@ -53,7 +146,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #134e4a, #e63946);
+            background: var(--gradient-accent);
         }
 
         .service-card:hover {
@@ -64,7 +157,7 @@
         .service-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #134e4a, #e63946);
+            background: var(--gradient-primary);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -72,6 +165,27 @@
             color: white;
             font-size: 32px;
             margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(19, 78, 74, 0.3);
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
         }
 
         .service-flow {
@@ -103,7 +217,7 @@
         .flow-circle {
             width: 100px;
             height: 100px;
-            background: linear-gradient(135deg, #134e4a, #e63946);
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -111,7 +225,7 @@
             color: white;
             font-size: 36px;
             margin: 0 auto 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(19, 78, 74, 0.3);
             position: relative;
         }
 
@@ -156,7 +270,7 @@
         .methodology-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #134e4a, #e63946);
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -202,7 +316,7 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
-            background: linear-gradient(135deg, #134e4a, #e63946);
+            background: var(--gradient-primary);
             color: white;
         }
 
@@ -228,6 +342,154 @@
             margin-bottom: 5px;
         }
 
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: white;
+            border: 2px solid var(--primary-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #c8394a;
+            border-color: #c8394a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-blue);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
         @media (max-width: 768px) {
             .service-flow {
                 flex-direction: column;
@@ -241,50 +503,66 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+            
+            .service-grid, .methodology-grid, .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-actions, .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
-                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
-                </div>
-                <div class="nav-actions">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    </ul>
                     <div class="language-selector">
                         <select id="languageSelect">
                             <option value="zh">中文</option>
                             <option value="en">English</option>
                             <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
                         </select>
                     </div>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
     <section class="hero-banner">
-        <div class="container">
-            <div class="hero-content text-center">
-                <h1 class="hero-title" data-i18n="operations.hero.title">全球彩票运营管理解决方案</h1>
-                <p class="hero-subtitle" data-i18n="operations.hero.description">从项目策划到运营优化，提供全生命周期专业服务，助力彩票项目成功实施与持续发展</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="operations.hero.title">全球彩票运营管理专家服务</h1>
+                <p class="hero-subtitle" data-i18n="operations.hero.description">从项目战略规划到运营管理优化，提供全生命周期专业服务，基于25年国际经验与最佳实践，助力彩票项目成功实施与可持续发展</p>
                 <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary" data-i18n="operations.hero.btn_services">查看服务体系</a>
-                    <a href="#methodology" class="btn btn-outline" data-i18n="operations.hero.btn_methodology">运营方法论</a>
+                    <a href="#services" class="btn btn-primary" data-i18n="operations.hero.btn_services">服务体系</a>
+                    <a href="#methodology" class="btn btn-outline" data-i18n="operations.hero.btn_methodology">方法论</a>
                 </div>
             </div>
         </div>
@@ -293,7 +571,7 @@
     <!-- 核心服务能力 -->
     <section class="section" id="services">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header">
                 <h2 class="section-title" data-i18n="operations.services.title">全方位运营服务体系</h2>
                 <p class="section-subtitle" data-i18n="operations.services.description">基于全球最佳实践，为彩票运营商提供专业的端到端服务解决方案</p>
             </div>
@@ -306,11 +584,11 @@
                     <h3 data-i18n="operations.services.strategic_planning.title">战略规划咨询</h3>
                     <p data-i18n="operations.services.strategic_planning.description">深度市场分析与商业模式设计，制定符合本地特色的彩票发展战略</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.strategic_planning.feature1"><i class="fas fa-check"></i> 市场机会评估分析</li>
-                        <li data-i18n="operations.services.strategic_planning.feature2"><i class="fas fa-check"></i> 竞争对手深度调研</li>
-                        <li data-i18n="operations.services.strategic_planning.feature3"><i class="fas fa-check"></i> 商业模式创新设计</li>
-                        <li data-i18n="operations.services.strategic_planning.feature4"><i class="fas fa-check"></i> 投资回报率预测建模</li>
-                        <li data-i18n="operations.services.strategic_planning.feature5"><i class="fas fa-check"></i> 风险评估与控制策略</li>
+                        <li data-i18n="operations.services.strategic_planning.feature1">市场机会评估分析</li>
+                        <li data-i18n="operations.services.strategic_planning.feature2">竞争对手深度调研</li>
+                        <li data-i18n="operations.services.strategic_planning.feature3">商业模式创新设计</li>
+                        <li data-i18n="operations.services.strategic_planning.feature4">投资回报率预测建模</li>
+                        <li data-i18n="operations.services.strategic_planning.feature5">风险评估与控制策略</li>
                     </ul>
                 </div>
 
@@ -321,11 +599,11 @@
                     <h3 data-i18n="operations.services.project_implementation.title">项目实施管理</h3>
                     <p data-i18n="operations.services.project_implementation.description">专业的项目管理团队，确保彩票项目按时按质顺利落地实施</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.project_implementation.feature1"><i class="fas fa-check"></i> 项目里程碑管理</li>
-                        <li data-i18n="operations.services.project_implementation.feature2"><i class="fas fa-check"></i> 资源协调与配置</li>
-                        <li data-i18n="operations.services.project_implementation.feature3"><i class="fas fa-check"></i> 质量控制与验收</li>
-                        <li data-i18n="operations.services.project_implementation.feature4"><i class="fas fa-check"></i> 风险监控与应对</li>
-                        <li data-i18n="operations.services.project_implementation.feature5"><i class="fas fa-check"></i> 变更管理与优化</li>
+                        <li data-i18n="operations.services.project_implementation.feature1">项目里程碑管理</li>
+                        <li data-i18n="operations.services.project_implementation.feature2">资源协调与配置</li>
+                        <li data-i18n="operations.services.project_implementation.feature3">质量控制与验收</li>
+                        <li data-i18n="operations.services.project_implementation.feature4">风险监控与应对</li>
+                        <li data-i18n="operations.services.project_implementation.feature5">变更管理与优化</li>
                     </ul>
                 </div>
 
@@ -336,11 +614,11 @@
                     <h3 data-i18n="operations.services.team_building.title">团队建设培养</h3>
                     <p data-i18n="operations.services.team_building.description">建立专业运营团队，提供全方位培训与能力提升服务</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.team_building.feature1"><i class="fas fa-check"></i> 组织架构设计优化</li>
-                        <li data-i18n="operations.services.team_building.feature2"><i class="fas fa-check"></i> 人才招聘与选拔</li>
-                        <li data-i18n="operations.services.team_building.feature3"><i class="fas fa-check"></i> 技能培训体系建设</li>
-                        <li data-i18n="operations.services.team_building.feature4"><i class="fas fa-check"></i> 绩效考核机制设计</li>
-                        <li data-i18n="operations.services.team_building.feature5"><i class="fas fa-check"></i> 团队文化建设指导</li>
+                        <li data-i18n="operations.services.team_building.feature1">组织架构设计优化</li>
+                        <li data-i18n="operations.services.team_building.feature2">人才招聘与选拔</li>
+                        <li data-i18n="operations.services.team_building.feature3">技能培训体系建设</li>
+                        <li data-i18n="operations.services.team_building.feature4">绩效考核机制设计</li>
+                        <li data-i18n="operations.services.team_building.feature5">团队文化建设指导</li>
                     </ul>
                 </div>
 
@@ -351,11 +629,11 @@
                     <h3 data-i18n="operations.services.operations_optimization.title">运营优化提升</h3>
                     <p data-i18n="operations.services.operations_optimization.description">持续监控运营数据，识别优化机会，提升运营效率与用户体验</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.operations_optimization.feature1"><i class="fas fa-check"></i> 运营数据分析挖掘</li>
-                        <li data-i18n="operations.services.operations_optimization.feature2"><i class="fas fa-check"></i> 业务流程优化重组</li>
-                        <li data-i18n="operations.services.operations_optimization.feature3"><i class="fas fa-check"></i> 用户体验改进提升</li>
-                        <li data-i18n="operations.services.operations_optimization.feature4"><i class="fas fa-check"></i> 成本控制与效率提升</li>
-                        <li data-i18n="operations.services.operations_optimization.feature5"><i class="fas fa-check"></i> 创新产品与服务设计</li>
+                        <li data-i18n="operations.services.operations_optimization.feature1">运营数据分析挖掘</li>
+                        <li data-i18n="operations.services.operations_optimization.feature2">业务流程优化重组</li>
+                        <li data-i18n="operations.services.operations_optimization.feature3">用户体验改进提升</li>
+                        <li data-i18n="operations.services.operations_optimization.feature4">成本控制与效率提升</li>
+                        <li data-i18n="operations.services.operations_optimization.feature5">创新产品与服务设计</li>
                     </ul>
                 </div>
 
@@ -366,11 +644,11 @@
                     <h3 data-i18n="operations.services.compliance_management.title">合规风控管理</h3>
                     <p data-i18n="operations.services.compliance_management.description">建立完善的合规体系，确保运营活动符合法律法规要求</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.compliance_management.feature1"><i class="fas fa-check"></i> 法规政策解读分析</li>
-                        <li data-i18n="operations.services.compliance_management.feature2"><i class="fas fa-check"></i> 合规体系建设咨询</li>
-                        <li data-i18n="operations.services.compliance_management.feature3"><i class="fas fa-check"></i> 风险识别与评估</li>
-                        <li data-i18n="operations.services.compliance_management.feature4"><i class="fas fa-check"></i> 内控制度设计实施</li>
-                        <li data-i18n="operations.services.compliance_management.feature5"><i class="fas fa-check"></i> 审计监督与整改</li>
+                        <li data-i18n="operations.services.compliance_management.feature1">法规政策解读分析</li>
+                        <li data-i18n="operations.services.compliance_management.feature2">合规体系建设咨询</li>
+                        <li data-i18n="operations.services.compliance_management.feature3">风险识别与评估</li>
+                        <li data-i18n="operations.services.compliance_management.feature4">内控制度设计实施</li>
+                        <li data-i18n="operations.services.compliance_management.feature5">审计监督与整改</li>
                     </ul>
                 </div>
 
@@ -381,11 +659,11 @@
                     <h3 data-i18n="operations.services.ongoing_support.title">持续支持服务</h3>
                     <p data-i18n="operations.services.ongoing_support.description">提供7×24小时技术支持与运营咨询，确保业务持续稳定运行</p>
                     <ul class="service-features">
-                        <li data-i18n="operations.services.ongoing_support.feature1"><i class="fas fa-check"></i> 7×24小时技术热线</li>
-                        <li data-i18n="operations.services.ongoing_support.feature2"><i class="fas fa-check"></i> 远程诊断与故障排除</li>
-                        <li data-i18n="operations.services.ongoing_support.feature3"><i class="fas fa-check"></i> 定期巡检与维护</li>
-                        <li data-i18n="operations.services.ongoing_support.feature4"><i class="fas fa-check"></i> 运营咨询与建议</li>
-                        <li data-i18n="operations.services.ongoing_support.feature5"><i class="fas fa-check"></i> 升级更新服务支持</li>
+                        <li data-i18n="operations.services.ongoing_support.feature1">7×24小时技术热线</li>
+                        <li data-i18n="operations.services.ongoing_support.feature2">远程诊断与故障排除</li>
+                        <li data-i18n="operations.services.ongoing_support.feature3">定期巡检与维护</li>
+                        <li data-i18n="operations.services.ongoing_support.feature4">运营咨询与建议</li>
+                        <li data-i18n="operations.services.ongoing_support.feature5">升级更新服务支持</li>
                     </ul>
                 </div>
             </div>
@@ -395,7 +673,7 @@
     <!-- 实施流程 -->
     <section class="section bg-light">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header">
                 <h2 class="section-title" data-i18n="operations.process.title">专业实施流程</h2>
                 <p class="section-subtitle" data-i18n="operations.process.description">基于国际最佳实践，建立标准化项目实施流程，确保项目成功落地</p>
             </div>
@@ -482,7 +760,7 @@
     <!-- 运营方法论 -->
     <section class="section" id="methodology">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header">
                 <h2 class="section-title" data-i18n="operations.methodology.title">专业运营方法论</h2>
                 <p class="section-subtitle" data-i18n="operations.methodology.description">基于多年实践经验，形成完整的彩票运营管理方法论体系</p>
             </div>
@@ -578,7 +856,7 @@
     <!-- 成功案例展示 -->
     <section class="section bg-light">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header">
                 <h2 class="section-title" data-i18n="operations.cases.title">全球成功案例</h2>
                 <p class="section-subtitle" data-i18n="operations.cases.description">在全球30+国家成功实施彩票运营项目，积累丰富的实战经验</p>
             </div>
@@ -663,12 +941,12 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section">
+    <section class="cta-section">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title" data-i18n="operations.cta.title">开启您的彩票运营之旅</h2>
-                <p class="section-subtitle" data-i18n="operations.cta.description">联系我们的专业团队，获取定制化的彩票运营解决方案</p>
-                <div class="hero-actions">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="operations.cta.title">开启您的彩票运营转型之旅</h2>
+                <p class="cta-subtitle" data-i18n="operations.cta.description">联系我们的专业团队，获取定制化的彩票运营解决方案与专家咨询服务</p>
+                <div class="cta-actions">
                     <a href="../contact.html" class="btn btn-primary" data-i18n="operations.cta.btn_contact">立即咨询</a>
                     <a href="../products.html" class="btn btn-outline" data-i18n="operations.cta.btn_products">查看其他产品</a>
                 </div>
@@ -707,23 +985,12 @@
     <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        // 初始化国际化
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.i18n) {
-                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
-            } else {
-                console.warn('多语言系统未初始化');
-            }
-        });
-    </script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">i18n System Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .language-selector {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .validation-results {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005a8b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 data-i18n="test.title">i18n System Test Page</h1>
+        
+        <div class="language-selector">
+            <label for="languageSelector" data-i18n="test.language_selector">Select Language:</label>
+            <select id="languageSelector">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+                <option value="ko">한국어</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
+        
+        <div class="test-section">
+            <h2 data-i18n="test.navigation">Navigation Test</h2>
+            <ul>
+                <li data-i18n="nav.home">Home</li>
+                <li data-i18n="nav.products">Products</li>
+                <li data-i18n="nav.market_research">Market Research</li>
+                <li data-i18n="nav.case_studies">Case Studies</li>
+                <li data-i18n="nav.insights">Insights</li>
+                <li data-i18n="nav.about">About</li>
+                <li data-i18n="nav.contact">Contact</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2 data-i18n="test.content">Content Test</h2>
+            <p data-i18n="hero.title">Global Lottery Export Solution Platform</p>
+            <p data-i18n="hero.subtitle">From market research to system construction, terminal supply and ticket printing, full-process AI-driven support for market implementation</p>
+        </div>
+        
+        <div class="test-section">
+            <h2 data-i18n="test.validation">System Validation</h2>
+            <button onclick="runValidation()" data-i18n="test.run_validation">Run Validation</button>
+            <div id="validationResults" class="validation-results"></div>
+        </div>
+    </div>
+    
+    <!-- Unified i18n System -->
+    <script src="js/languages/zh.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/unified-i18n.js"></script>
+    <script src="js/i18n-validation.js"></script>
+    
+    <script>
+        function runValidation() {
+            const results = validateI18nSystem();
+            const resultsDiv = document.getElementById('validationResults');
+            
+            let html = '<h3>Validation Results:</h3>';
+            Object.entries(results).forEach(([lang, data]) => {
+                html += `<div><strong>${lang.toUpperCase()}</strong>: ${data.coverage} coverage (${data.available}/${data.total} keys)</div>`;
+                if (data.missing > 0) {
+                    html += `<div style="margin-left: 20px; color: #666;">Missing: ${data.missingKeys.join(', ')}</div>`;
+                }
+            });
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Add test translations
+        if (window.zh) {
+            window.zh.test = {
+                title: 'i18n系统测试页面',
+                language_selector: '选择语言：',
+                navigation: '导航测试',
+                content: '内容测试',
+                validation: '系统验证',
+                run_validation: '运行验证'
+            };
+        }
+        
+        if (window.en) {
+            window.en.test = {
+                title: 'i18n System Test Page',
+                language_selector: 'Select Language:',
+                navigation: 'Navigation Test',
+                content: 'Content Test',
+                validation: 'System Validation',
+                run_validation: 'Run Validation'
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="case_studies.mexico.page_title">墨西哥国家彩票数字化转型 | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #fff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        body {
+            color: var(--nav-blue);
+            background: var(--white);
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        /* 导航栏样式（同主站） */
+        .header {background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);box-shadow:0 6px 32px rgba(26,62,140,0.10),0 1.5px 0 rgba(230,57,70,0.04);border-bottom:1.5px solid rgba(26,62,140,0.07);position:fixed;width:100%;top:0;z-index:1000;transition:box-shadow 0.3s;}
+        .header-container{display:flex;justify-content:flex-start;align-items:center;padding:18px 0 14px 0;max-width:1200px;margin:0 auto;}
+        .logo{display:flex;align-items:center;margin-right:70px;}
+        .logo-text{font-size:28px;font-weight:800;letter-spacing:2.5px;text-shadow:0 2px 8px rgba(26,62,140,0.08);font-family:'Inter',sans-serif;}
+        .logo-lotto{color:var(--primary-blue);}
+        .logo-bridge{color:var(--primary-red);}
+        nav{display:flex;align-items:center;}
+        .nav-links{display:flex;list-style:none;margin-right:30px;flex-wrap:nowrap !important;gap:10px;align-items:center;}
+        .nav-links li{margin-right:0;position:relative;flex-shrink:0;}
+        .nav-links a{font-weight:600;font-size:16px;color:var(--nav-blue);padding:10px 18px;border-radius:18px;position:relative;white-space:nowrap;display:block;text-align:center;transition:background 0.22s,color 0.22s,box-shadow 0.22s;}
+        .nav-links a:hover,.nav-links a.active{background:linear-gradient(90deg,rgba(26,62,140,0.10) 0%,rgba(230,57,70,0.08) 100%);color:var(--primary-blue);box-shadow:0 2px 8px rgba(26,62,140,0.07);}
+        .nav-links a::after{content:'';position:absolute;bottom:7px;left:20%;width:60%;height:2.5px;background:linear-gradient(90deg,var(--primary-blue),var(--primary-red));border-radius:2px;opacity:0;transition:opacity 0.22s;}
+        .nav-links a:hover::after,.nav-links a.active::after{opacity:1;}
+        .language-selector{position:relative;margin-left:auto;margin-right:24px;}
+        .language-selector::before{content:'\f0ac';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--primary-blue);font-size:16px;z-index:2;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(26,62,140,0.10));}
+        .language-selector select{padding:12px 44px 12px 44px;border:2px solid rgba(26,62,140,0.13);border-radius:28px;background:rgba(255,255,255,0.92);font-size:15px;font-weight:600;cursor:pointer;appearance:none;color:var(--nav-blue);min-width:140px;box-shadow:0 4px 18px rgba(26,62,140,0.10);transition:all 0.22s;letter-spacing:0.4px;outline:none;}
+        .language-selector select:hover,.language-selector select:focus{border-color:var(--primary-blue);background:linear-gradient(135deg,#f8faff 80%,#f1f3f7 100%);box-shadow:0 6px 24px rgba(26,62,140,0.13);}
+        .language-selector::after{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:18px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--primary-blue);font-size:13px;transition:transform 0.3s ease;}
+        .language-selector:hover::after{transform:translateY(-50%) rotate(180deg);}
+        .mobile-menu-btn{display:none;font-size:26px;cursor:pointer;color:var(--nav-blue);margin-left:8px;border-radius:50%;background:rgba(26,62,140,0.06);padding:6px 10px;transition:background 0.2s;}
+        .mobile-menu-btn:hover{background:rgba(26,62,140,0.13);}
+        @media (max-width:900px){.header-container{padding:10px 0;}.logo{margin-right:18px;}.logo-text{font-size:20px;}.nav-links{gap:0;}}
+        @media (max-width:768px){.header-container{padding:8px 0;}.logo{margin-right:10px;}.logo-text{font-size:18px;}.nav-links{display:none;position:absolute;top:100%;left:0;width:100vw;background:rgba(255,255,255,0.98);box-shadow:0 8px 32px rgba(26,62,140,0.13);flex-direction:column;padding:18px 0 10px 0;margin-right:0;gap:0;border-radius:0 0 18px 18px;}.nav-links.active{display:flex;}.nav-links li{width:100%;margin:0;}.nav-links a{padding:14px 24px;border-bottom:1px solid #f1f3f4;text-align:left;font-size:15px;}.nav-links a:last-child{border-bottom:none;}.mobile-menu-btn{display:block;}.language-selector{margin-right:8px;}.language-selector select{min-width:100px;padding:8px 30px 8px 30px;font-size:13px;}}
+        @media (max-width:480px){.container{padding:0 8px;}.logo-text{font-size:15px;}.language-selector select{min-width:80px;padding:6px 25px 6px 25px;font-size:12px;}}
+        /* Hero区 */
+        .case-hero{background:linear-gradient(120deg,#e9ecef 0%,#f8f9fa 60%,#e3eafc 100%);padding:110px 0 60px;text-align:center;position:relative;overflow:hidden;}
+        .case-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml;utf8,<svg width="1000" height="320" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%231a3e8c" stop-opacity="0.13"/><stop offset="1" stop-color="%23e63946" stop-opacity="0.10"/></linearGradient></defs><ellipse cx="800" cy="60" rx="120" ry="40" fill="url(%23g1)"/><ellipse cx="200" cy="80" rx="90" ry="30" fill="url(%23g1)"/><ellipse cx="500" cy="40" rx="60" ry="18" fill="url(%23g1)"/></svg>') no-repeat top center/cover;opacity:0.18;z-index:0;}
+        .case-hero-content{position:relative;z-index:2;max-width:820px;margin:0 auto;}
+        .case-flag{font-size:70px;margin-bottom:18px;}
+        .case-hero-title{font-size:2.6rem;font-weight:900;letter-spacing:2.5px;margin-bottom:18px;background:linear-gradient(90deg,#1a3e8c 60%,#e63946 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent;text-shadow:0 4px 18px rgba(26,62,140,0.10);}
+        .case-hero-desc{font-size:1.25rem;margin-bottom:28px;color:rgba(29,53,87,0.72);font-weight:500;letter-spacing:0.2px;}
+        .case-hero-slogan{font-size:1.1rem;color:var(--primary-blue);font-weight:700;margin-bottom:0;}
+        /* 项目概览 */
+        .case-overview{background:var(--white);box-shadow:0 4px 24px rgba(26,62,140,0.07);border-radius:18px;padding:38px 32px 32px 32px;max-width:900px;margin:0 auto 38px auto;position:relative;top:-38px;z-index:3;}
+        .case-overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
+        .case-overview-info{font-size:1.08rem;line-height:2;}
+        .case-overview-info strong{font-weight:700;display:inline-block;width:90px;}
+        .case-overview-img{border-radius:14px;box-shadow:0 2px 12px rgba(26,62,140,0.10);width:100%;max-width:340px;}
+        @media (max-width:900px){.case-overview-grid{grid-template-columns:1fr;gap:18px;}.case-overview-img{max-width:100%;}}
+        /* 核心成果/亮点 */
+        .case-highlights{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto 38px auto;}
+        .case-highlight{background:linear-gradient(120deg,#f8f9fa 60%,#e3eafc 100%);border-radius:14px;box-shadow:0 2px 12px rgba(26,62,140,0.07);padding:28px 24px;display:flex;align-items:flex-start;gap:18px;}
+        .case-highlight-icon{font-size:2.2rem;color:var(--primary-blue);margin-right:10px;}
+        .case-highlight-content{flex:1;}
+        .case-highlight-title{font-size:1.15rem;font-weight:700;margin-bottom:6px;color:var(--primary-blue);}
+        .case-highlight-desc{font-size:1rem;color:var(--nav-blue);}
+        @media (max-width:900px){.case-highlights{grid-template-columns:1fr;gap:18px;}}
+        /* 客户证言 */
+        .case-testimonial{max-width:700px;margin:0 auto 38px auto;background:linear-gradient(90deg,#e3eafc 60%,#f8f9fa 100%);border-radius:14px;box-shadow:0 2px 12px rgba(26,62,140,0.07);padding:32px 28px;display:flex;align-items:center;gap:22px;}
+        .testimonial-avatar{width:60px;height:60px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(26,62,140,0.10);display:flex;align-items:center;justify-content:center;font-size:2.2rem;}
+        .testimonial-content{flex:1;}
+        .testimonial-quote{font-size:1.1rem;font-style:italic;color:var(--nav-blue);margin-bottom:8px;}
+        .testimonial-author{font-size:1rem;color:var(--primary-blue);font-weight:700;}
+        /* 服务流程/交付内容 */
+        .case-delivery{max-width:900px;margin:0 auto 38px auto;}
+        .delivery-title{font-size:1.2rem;font-weight:800;color:var(--primary-blue);margin-bottom:18px;}
+        .delivery-steps{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;}
+        .delivery-step{flex:1 1 180px;min-width:160px;background:linear-gradient(120deg,#f8f9fa 60%,#e3eafc 100%);border-radius:14px;box-shadow:0 2px 12px rgba(26,62,140,0.07);padding:22px 14px;text-align:center;}
+        .delivery-step-icon{font-size:2rem;color:var(--primary-blue);margin-bottom:8px;}
+        .delivery-step-title{font-size:1.05rem;font-weight:700;color:var(--primary-blue);margin-bottom:4px;}
+        .delivery-step-desc{font-size:0.98rem;color:var(--nav-blue);}
+        @media (max-width:900px){.delivery-steps{flex-direction:column;gap:14px;}}
+        /* CTA区 */
+        .case-cta{background:linear-gradient(90deg,#1a3e8c 60%,#e63946 100%);color:#fff;text-align:center;padding:60px 0;}
+        .case-cta-title{font-size:2rem;font-weight:900;letter-spacing:1.5px;margin-bottom:18px;}
+        .case-cta-desc{font-size:1.1rem;margin-bottom:28px;}
+        .case-cta-buttons{display:flex;justify-content:center;gap:22px;}
+        .case-cta .btn{padding:15px 36px;border-radius:28px;font-size:1.08rem;font-weight:700;box-shadow:0 4px 18px rgba(26,62,140,0.10);border:none;outline:none;transition:all 0.22s;cursor:pointer;letter-spacing:0.5px;}
+        .case-cta .btn-primary{background:#fff;color:var(--primary-blue);}
+        .case-cta .btn-primary:hover{background:#e3eafc;color:#e63946;box-shadow:0 8px 32px rgba(230,57,70,0.13);transform:translateY(-2px) scale(1.04);}
+        .case-cta .btn-outline{background:rgba(255,255,255,0.15);color:#fff;border:2px solid #fff;}
+        .case-cta .btn-outline:hover{background:#fff;color:var(--primary-blue);border-color:#fff;box-shadow:0 8px 24px rgba(255,255,255,0.10);transform:translateY(-2px) scale(1.04);}
+        @media (max-width:600px){.case-cta-buttons{flex-direction:column;gap:12px;}}
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
+            </div>
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="market-research.html" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
+                    <li><a href="insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="case-studies.html" class="active" data-i18n="nav.case_studies">合作案例</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="en">🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
+                </select>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Hero区 -->
+    <section class="case-hero">
+        <div class="case-hero-content">
+            <div class="case-flag">🇲🇽</div>
+            <div class="case-hero-title" data-i18n="case_studies.mexico.title">墨西哥国家彩票数字化转型</div>
+            <div class="case-hero-desc" data-i18n="case_studies.mexico.description">为墨西哥政府提供完整的数字彩票系统，包括在线销售平台、移动应用和全国终端网络部署</div>
+            <div class="case-hero-slogan" data-i18n="case_studies.mexico.slogan">数字化驱动，赋能拉美彩票行业新未来</div>
+        </div>
+    </section>
+    <!-- 项目概览 -->
+    <section class="case-overview">
+        <div class="case-overview-grid">
+            <div class="case-overview-info">
+                <div><strong data-i18n="case_studies.mexico.country">国家：</strong><span data-i18n="case_studies.mexico.country_name">墨西哥</span></div>
+                <div><strong data-i18n="case_studies.mexico.client_type">客户类型：</strong><span data-i18n="case_studies.mexico.client_type_value">政府机构</span></div>
+                <div><strong data-i18n="case_studies.mexico.period">项目周期：</strong><span data-i18n="case_studies.mexico.period_value">2022-2024</span></div>
+                <div><strong data-i18n="case_studies.mexico.scope">服务范围：</strong><span data-i18n="case_studies.mexico.scope_value">系统开发、终端部署、运维培训、合规咨询</span></div>
+                <div><strong data-i18n="case_studies.mexico.result">主要成果：</strong><span data-i18n="case_studies.mexico.result_value">全国部署1000台终端，年销售额增长38%</span></div>
+            </div>
+            <div><img src="images/mexico-map.png" alt="Mexico Map" class="case-overview-img"></div>
+        </div>
+    </section>
+    <!-- 核心成果/亮点 -->
+    <section class="case-highlights">
+        <div class="case-highlight">
+            <div class="case-highlight-icon"><i class="fas fa-globe-americas"></i></div>
+            <div class="case-highlight-content">
+                <div class="case-highlight-title" data-i18n="case_studies.mexico.highlight1.title">全国数字化部署</div>
+                <div class="case-highlight-desc" data-i18n="case_studies.mexico.highlight1.desc">1000台终端覆盖全国主要城市，支持多渠道销售与数据实时汇总</div>
+            </div>
+        </div>
+        <div class="case-highlight">
+            <div class="case-highlight-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="case-highlight-content">
+                <div class="case-highlight-title" data-i18n="case_studies.mexico.highlight2.title">移动应用创新</div>
+                <div class="case-highlight-desc" data-i18n="case_studies.mexico.highlight2.desc">上线官方APP，支持在线购彩、兑奖、数据查询，提升用户体验</div>
+            </div>
+        </div>
+        <div class="case-highlight">
+            <div class="case-highlight-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="case-highlight-content">
+                <div class="case-highlight-title" data-i18n="case_studies.mexico.highlight3.title">销售增长显著</div>
+                <div class="case-highlight-desc" data-i18n="case_studies.mexico.highlight3.desc">年销售额增长38%，市场份额提升至全国第一</div>
+            </div>
+        </div>
+        <div class="case-highlight">
+            <div class="case-highlight-icon"><i class="fas fa-user-shield"></i></div>
+            <div class="case-highlight-content">
+                <div class="case-highlight-title" data-i18n="case_studies.mexico.highlight4.title">合规与安全保障</div>
+                <div class="case-highlight-desc" data-i18n="case_studies.mexico.highlight4.desc">系统通过多项国际合规认证，数据安全与隐私保护达行业领先</div>
+            </div>
+        </div>
+    </section>
+    <!-- 客户证言 -->
+    <section class="case-testimonial">
+        <div class="testimonial-avatar">🇲🇽</div>
+        <div class="testimonial-content">
+            <div class="testimonial-quote" data-i18n="case_studies.mexico.testimonial">“LottoBridge团队帮助我们实现了数字化转型，极大提升了运营效率和市场竞争力！”</div>
+            <div class="testimonial-author">Juan Pérez, <span data-i18n="case_studies.mexico.client">墨西哥国家彩票局负责人</span></div>
+        </div>
+    </section>
+    <!-- 服务流程/交付内容 -->
+    <section class="case-delivery">
+        <div class="delivery-title" data-i18n="case_studies.mexico.delivery_title">交付内容与服务流程</div>
+        <div class="delivery-steps">
+            <div class="delivery-step">
+                <div class="delivery-step-icon"><i class="fas fa-search-dollar"></i></div>
+                <div class="delivery-step-title" data-i18n="case_studies.mexico.delivery1.title">市场调研</div>
+                <div class="delivery-step-desc" data-i18n="case_studies.mexico.delivery1.desc">深入分析墨西哥彩票市场政策与用户需求</div>
+            </div>
+            <div class="delivery-step">
+                <div class="delivery-step-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="delivery-step-title" data-i18n="case_studies.mexico.delivery2.title">系统开发</div>
+                <div class="delivery-step-desc" data-i18n="case_studies.mexico.delivery2.desc">定制开发数字彩票销售与管理系统</div>
+            </div>
+            <div class="delivery-step">
+                <div class="delivery-step-icon"><i class="fas fa-desktop"></i></div>
+                <div class="delivery-step-title" data-i18n="case_studies.mexico.delivery3.title">终端部署</div>
+                <div class="delivery-step-desc" data-i18n="case_studies.mexico.delivery3.desc">全国范围内部署1000台高性能终端</div>
+            </div>
+            <div class="delivery-step">
+                <div class="delivery-step-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="delivery-step-title" data-i18n="case_studies.mexico.delivery4.title">运维培训</div>
+                <div class="delivery-step-desc" data-i18n="case_studies.mexico.delivery4.desc">为客户团队提供全流程运维与合规培训</div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA区 -->
+    <section class="case-cta">
+        <div class="case-cta-title" data-i18n="case_studies.cta.title">成为我们的下一位成功客户</div>
+        <div class="case-cta-desc" data-i18n="case_studies.cta.description">无论您是政府机构、私营运营商还是技术提供商，LottoBridge都能为您提供最适合的解决方案</div>
+        <div class="case-cta-buttons">
+            <a href="contact.html" class="btn btn-primary" data-i18n="case_studies.cta.contact_btn">提交合作需求</a>
+            <a href="#" class="btn btn-outline" data-i18n="case_studies.cta.download_btn">下载案例集</a>
+        </div>
+    </section>
+    <!-- 底部（可复用主站footer） -->
+    <footer style="background:var(--light-gray);padding:40px 0 20px 0;text-align:center;color:var(--medium-gray);font-size:15px;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="margin-bottom:12px;">
+                <span data-i18n="footer.company">LottoBridge</span> &copy; 2024 | <span data-i18n="footer.rights">保留所有权利</span>
+            </div>
+            <div>
+                <a href="#" style="color:var(--primary-blue);margin:0 8px;" data-i18n="footer.privacy">隐私政策</a> |
+                <a href="#" style="color:var(--primary-blue);margin:0 8px;" data-i18n="footer.terms">使用条款</a>
+            </div>
+        </div>
+    </footer>
+    <!-- 多语言与主站脚本复用 -->
+    <script src="js/languages/zh.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 移动菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-times');
+                this.querySelector('i').classList.toggle('fa-bars');
+            });
+        }
+        // 头部滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html> 

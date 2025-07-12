@@ -3,176 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="kenya.page.title">肯尼亚彩票市场报告 | LottoBridge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title data-i18n="kenya.page.title">肯尼亚彩票市场深度分析报告 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 国家报告页面专用样式 */
-        .country-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 50%, #1a3e8c 100%);
-            color: var(--white);
+        /* 肯尼亚主题专业样式 */
+        :root {
+            --kenya-red: #dc2626;
+            --kenya-green: #16a34a;
+            --kenya-black: #1f2937;
+            --kenya-white: #ffffff;
+            --primary-blue: #1a3e8c;
+            --nav-blue: #1d3557;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --gradient-kenya: linear-gradient(135deg, #1f2937 0%, #dc2626 50%, #16a34a 100%);
+            --gradient-accent: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #3b82f6 100%);
+            --gradient-success: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #16a34a 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-kenya);
+            color: white;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
+            margin-top: 70px;
         }
-
-        .country-hero::before {
+        
+        .hero-banner::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><polygon points="100,50 150,30 200,60 150,90" fill="url(%23grad1)"/><circle cx="800" cy="80" r="35" fill="url(%23grad1)"/><rect x="500" y="200" width="60" height="40" rx="8" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
             opacity: 0.3;
         }
 
-        .country-hero-content {
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 2;
             text-align: center;
+        }
+
+        .hero-content {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .country-flag {
-            width: 80px;
-            height: 60px;
-            background: linear-gradient(to bottom, #000000 0%, #000000 25%, #ffffff 25%, #ffffff 50%, #ff0000 50%, #ff0000 75%, #009900 75%, #009900 100%);
-            border-radius: 8px;
-            margin: 0 auto 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 100px;
+            height: 70px;
+            background: linear-gradient(to bottom, #1f2937 0%, #1f2937 20%, #dc2626 20%, #dc2626 40%, #ffffff 40%, #ffffff 60%, #16a34a 60%, #16a34a 80%, #1f2937 80%, #1f2937 100%);
+            border-radius: 12px;
+            margin: 0 auto 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .country-flag::after {
             content: '🛡️';
+            font-size: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 12px;
+            color: #dc2626;
         }
 
-        .country-hero-title {
-            font-size: 3.5rem;
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        .country-hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
             opacity: 0.95;
             line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .country-stats {
+        .market-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .country-stat-card {
-            background: rgba(255,255,255,0.1);
+        .stat-card {
+            background: rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 30px 20px;
             text-align: center;
             border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .country-stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
-        .country-stat-number {
-            font-size: 2.5rem;
+        .stat-number {
+            font-size: 2.8rem;
             font-weight: 700;
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .country-stat-label {
+        .stat-label {
             font-size: 1rem;
             opacity: 0.9;
             font-weight: 500;
         }
 
-        .market-overview {
+        .section {
             padding: 80px 0;
-            background: var(--light-gray);
         }
 
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .bg-light {
+            background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
         }
 
-        .overview-content h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .overview-content p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--nav-blue);
-            margin-bottom: 2rem;
-        }
-
-        .overview-visual {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 20px;
-            padding: 3rem;
-            color: var(--white);
+        .section-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 60px;
         }
 
-        .overview-visual::before {
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-kenya);
+            border-radius: 2px;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
         }
 
-        .market-analysis {
-            padding: 80px 0;
-        }
-
-        .analysis-grid {
+        .market-analysis-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .analysis-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -185,38 +199,33 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-kenya);
         }
 
         .analysis-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .analysis-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-kenya);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            font-size: 1.5rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
         }
 
         .analysis-title {
-            font-size: 1.5rem;
+            font-size: 20px;
             font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .analysis-description {
             color: var(--nav-blue);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            margin-bottom: 15px;
         }
 
         .analysis-features {
@@ -225,140 +234,181 @@
         }
 
         .analysis-features li {
-            padding: 0.5rem 0;
+            padding: 8px 0;
             color: var(--medium-gray);
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 25px;
         }
 
         .analysis-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary-blue);
+            color: var(--kenya-green);
             font-weight: bold;
         }
 
-        .regulatory-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .regulatory-grid {
+        .highlight-metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
         }
 
-        .regulatory-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary-blue);
+        .metric-card {
+            background: linear-gradient(135deg, #fef3c7, #fed7aa);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #fbbf24;
             transition: all 0.3s ease;
         }
 
-        .regulatory-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 25px rgba(26, 62, 140, 0.15);
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--kenya-red);
         }
 
-        .regulatory-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .regulatory-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .opportunities-section {
-            padding: 80px 0;
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kenya-red);
+            margin-bottom: 10px;
         }
 
         .opportunities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .opportunity-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            padding: 35px 25px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
-            border: 1px solid rgba(26, 62, 140, 0.08);
         }
 
         .opportunity-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(26, 62, 140, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
         .opportunity-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-kenya);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 2rem;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
-        .opportunity-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
+        .regulatory-timeline {
+            position: relative;
+            margin: 60px 0;
         }
 
-        .opportunity-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
+        .regulatory-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-kenya);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-kenya);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            border: 4px solid white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
         .challenges-section {
+            background: var(--gradient-kenya);
+            color: white;
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 100%);
-            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenges-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
         .challenges-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .challenges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .challenge-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            padding: 35px 25px;
             border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .challenge-card:hover {
             background: rgba(255,255,255,0.15);
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .challenge-icon {
@@ -369,44 +419,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.75rem;
-        }
-
-        .challenge-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .challenge-description {
-            opacity: 0.9;
-            line-height: 1.6;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
         .solutions-section {
             padding: 80px 0;
-        }
-
-        .solutions-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
         }
 
         .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .solution-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -419,110 +453,179 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-success);
         }
 
         .solution-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .solution-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-success);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 1.75rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.3);
         }
 
-        .solution-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .solution-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .country-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-red) 0%, #f03e3e 100%);
-            color: var(--white);
+        .cta-section {
+            background: var(--gradient-kenya);
+            color: white;
             text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
-        .cta-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2.5vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-white {
-            background: var(--white);
-            color: var(--primary-red);
-            padding: 1rem 2rem;
+        .btn-primary {
+            background: white;
+            color: var(--kenya-red);
+            padding: 15px 35px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: 2px solid var(--white);
+            border: 2px solid white;
+            font-size: 16px;
         }
 
-        .btn-white:hover {
+        .btn-primary:hover {
             background: transparent;
-            color: var(--white);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
         }
 
-        .btn-outline-white {
+        .btn-outline {
             background: transparent;
-            color: var(--white);
-            padding: 1rem 2rem;
+            color: white;
+            padding: 15px 35px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: 2px solid var(--white);
+            border: 2px solid white;
+            font-size: 16px;
         }
 
-        .btn-outline-white:hover {
-            background: var(--white);
-            color: var(--primary-red);
+        .btn-outline:hover {
+            background: white;
+            color: var(--kenya-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .country-hero-title {
-                font-size: 2.5rem;
-            }
-            
             .overview-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
             
-            .country-stats {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
+            .timeline-item {
+                flex-direction: column !important;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .regulatory-timeline::before {
+                left: 30px;
             }
             
             .cta-buttons {
@@ -530,236 +633,97 @@
                 align-items: center;
             }
         }
-
-        @media (max-width: 480px) {
-            .country-hero-title {
-                font-size: 2rem;
-            }
-            
-            .country-hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .country-stat-card {
-                padding: 1.5rem;
-            }
-            
-            .country-stat-number {
-                font-size: 2rem;
-            }
-        }
-
-        /* 报告页面导航增强样式 */
-        .header {
-            min-height: 80px;
-        }
-
-        .header-container {
-            min-height: 80px;
-        }
-
-        .logo {
-            font-size: 26px;
-        }
-
-        .nav-links a {
-            font-size: 15px !important;
-            padding: 8px 12px !important;
-            max-width: 120px !important;
-        }
-
-        .language-selector select {
-            font-size: 14px !important;
-            padding: 8px 16px !important;
-            padding-right: 32px !important;
-            min-width: 100px !important;
-        }
-
-        /* 针对不同屏幕尺寸的导航优化 */
-        @media (max-width: 1400px) {
-            .nav-links a {
-                font-size: 14px !important;
-                padding: 7px 10px !important;
-                max-width: 110px !important;
-            }
-            
-            .language-selector select {
-                font-size: 13px !important;
-                padding: 7px 14px !important;
-                padding-right: 28px !important;
-                min-width: 90px !important;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .nav-links a {
-                font-size: 13px !important;
-                padding: 6px 8px !important;
-                max-width: 100px !important;
-            }
-            
-            .language-selector select {
-                font-size: 12px !important;
-                padding: 6px 12px !important;
-                padding-right: 24px !important;
-                min-width: 80px !important;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .nav-links a {
-                font-size: 12px !important;
-                padding: 6px 8px !important;
-                max-width: 95px !important;
-            }
-            
-            .language-selector select {
-                font-size: 11px !important;
-                padding: 6px 10px !important;
-                padding-right: 22px !important;
-                min-width: 75px !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links a {
-                font-size: 11px !important;
-                padding: 5px 6px !important;
-                max-width: 80px !important;
-            }
-            
-            .language-selector select {
-                font-size: 10px !important;
-                padding: 5px 8px !important;
-                padding-right: 20px !important;
-                min-width: 65px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links a {
-                font-size: 10px !important;
-                padding: 4px 5px !important;
-                max-width: 70px !important;
-            }
-            
-            .language-selector select {
-                font-size: 9px !important;
-                padding: 4px 6px !important;
-                padding-right: 18px !important;
-                min-width: 60px !important;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- 导航栏 -->
-    <header class="header">
+    <nav class="navbar">
         <div class="container">
-            <div class="header-container">
-                <div class="logo">
-                    <a href="../index.html">
-                        <span class="logo-text">
-                            <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
-                        </span>
-                    </a>
-                </div>
-                
-                <nav id="mainNav">
-                    <ul class="nav-links">
-                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../market-details.html" data-i18n="nav.market_details">市场详情</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
-                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
-                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="language-selector">
-                    <select id="languageSelector">
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="en">🇺🇸 English</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                        <option value="ru">🇷🇺 Русский</option>
-                    </select>
-                </div>
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="LottoBridge" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                <li><a href="../insights.html" data-i18n="nav.insights">市场洞察</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="language-select" class="language-select">
+                    <option value="zh-CN">中文</option>
+                    <option value="en">English</option>
+                </select>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- 肯尼亚英雄区域 -->
-    <section class="country-hero">
-        <div class="container">
-            <div class="country-hero-content">
+    <!-- 英雄横幅 -->
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-content">
                 <div class="country-flag"></div>
-                <h1 class="country-hero-title" data-i18n="kenya.hero.title">肯尼亚彩票市场报告</h1>
-                <p class="country-hero-subtitle" data-i18n="kenya.hero.subtitle">深入分析东非地区最具活力的经济体彩票市场的发展机遇、监管环境与投资前景</p>
+                <h1 class="hero-title" data-i18n="kenya.hero.title">肯尼亚彩票市场深度分析</h1>
+                <p class="hero-subtitle" data-i18n="kenya.hero.subtitle">东非门户，数字化转型的先行者，拥有巨大的彩票市场潜力和增长机会</p>
                 
-                <div class="country-stats">
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">5,400万</div>
-                        <div class="country-stat-label" data-i18n="kenya.stats.population">人口规模</div>
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5,400万</div>
+                        <div class="stat-label" data-i18n="kenya.stats.population">人口总数</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">$1,140亿</div>
-                        <div class="country-stat-label" data-i18n="kenya.stats.gdp">GDP总量</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$1,180亿</div>
+                        <div class="stat-label" data-i18n="kenya.stats.gdp">GDP总值</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">4.8%</div>
-                        <div class="country-stat-label" data-i18n="kenya.stats.growth">经济增长率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$12亿</div>
+                        <div class="stat-label" data-i18n="kenya.stats.market">彩票市场规模</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">28%</div>
-                        <div class="country-stat-label" data-i18n="kenya.stats.urbanization">城市化率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label" data-i18n="kenya.stats.mobile">手机普及率</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 市场概览 -->
-    <section class="market-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2 data-i18n="kenya.overview.title">市场概览</h2>
-                    <p data-i18n="kenya.overview.description">肯尼亚作为东非地区最具活力的经济体，近年来在数字化转型方面取得了显著进展。政府积极推动现代化改革，为彩票行业的发展创造了有利条件。</p>
-                    <p data-i18n="kenya.overview.trends">随着移动互联网的普及和年轻人口的增加，数字彩票市场呈现出快速增长的趋势。政府监管框架的完善为国际投资者提供了稳定的政策环境。</p>
-                </div>
-                <div class="overview-visual">
-                    <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 1rem;"></i>
-                    <h3 data-i18n="kenya.overview.visual_title">市场趋势</h3>
-                    <p data-i18n="kenya.overview.visual_subtitle">移动支付领先推动彩票市场增长</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 市场分析 -->
-    <section class="market-analysis">
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="kenya.analysis.title">深度市场分析</h2>
-                <p class="section-subtitle" data-i18n="kenya.analysis.subtitle">基于最新数据和行业研究，为您提供全面的市场洞察</p>
+                <h2 class="section-title" data-i18n="kenya.analysis.title">市场分析概览</h2>
+                <p class="section-subtitle" data-i18n="kenya.analysis.subtitle">肯尼亚作为东非经济中心，拥有发达的移动支付系统和不断增长的数字娱乐需求，为彩票行业发展提供了理想的市场环境</p>
             </div>
             
-            <div class="analysis-grid">
+            <div class="market-analysis-grid">
+                <div class="analysis-card">
+                    <div class="analysis-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="analysis-title" data-i18n="kenya.analysis.economic.title">经济发展水平</h3>
+                    <ul class="analysis-features">
+                        <li data-i18n="kenya.analysis.economic.gdp">人均GDP约2,100美元，持续增长</li>
+                        <li data-i18n="kenya.analysis.economic.growth">年GDP增长率约5.5%</li>
+                        <li data-i18n="kenya.analysis.economic.services">服务业占GDP比重超过50%</li>
+                        <li data-i18n="kenya.analysis.economic.agriculture">农业和制造业稳定发展</li>
+                        <li data-i18n="kenya.analysis.economic.tourism">旅游业是重要外汇来源</li>
+                    </ul>
+                </div>
+                
                 <div class="analysis-card">
                     <div class="analysis-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="kenya.analysis.demographic.title">人口结构分析</h3>
-                    <p class="analysis-description" data-i18n="kenya.analysis.demographic.description">肯尼亚拥有年轻的人口结构，25-45岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。</p>
+                    <h3 class="analysis-title" data-i18n="kenya.analysis.demographics.title">人口结构特征</h3>
                     <ul class="analysis-features">
-                        <li data-i18n="kenya.analysis.demographic.feature1">年轻人口比例高，消费潜力大</li>
-                        <li data-i18n="kenya.analysis.demographic.feature2">移动互联网普及率快速提升</li>
-                        <li data-i18n="kenya.analysis.demographic.feature3">城市化进程加速，消费升级明显</li>
+                        <li data-i18n="kenya.analysis.demographics.young">70%人口年龄在35岁以下</li>
+                        <li data-i18n="kenya.analysis.demographics.urban">城市化率约28%，快速增长</li>
+                        <li data-i18n="kenya.analysis.demographics.literacy">识字率约82%</li>
+                        <li data-i18n="kenya.analysis.demographics.english">英语为官方语言之一</li>
+                        <li data-i18n="kenya.analysis.demographics.internet">互联网普及率约64%</li>
                     </ul>
                 </div>
                 
@@ -767,153 +731,216 @@
                     <div class="analysis-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="kenya.analysis.technology.title">技术发展分析</h3>
-                    <p class="analysis-description" data-i18n="kenya.analysis.technology.description">移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。</p>
+                    <h3 class="analysis-title" data-i18n="kenya.analysis.digital.title">数字化基础设施</h3>
                     <ul class="analysis-features">
-                        <li data-i18n="kenya.analysis.technology.feature1">移动支付基础设施完善</li>
-                        <li data-i18n="kenya.analysis.technology.feature2">4G网络覆盖范围扩大</li>
-                        <li data-i18n="kenya.analysis.technology.feature3">数字身份认证系统成熟</li>
+                        <li data-i18n="kenya.analysis.digital.mpesa">M-Pesa移动支付全球领先</li>
+                        <li data-i18n="kenya.analysis.digital.mobile">移动支付普及率超过80%</li>
+                        <li data-i18n="kenya.analysis.digital.fiber">光纤网络覆盖主要城市</li>
+                        <li data-i18n="kenya.analysis.digital.4g">4G网络覆盖率约75%</li>
+                        <li data-i18n="kenya.analysis.digital.fintech">金融科技创新活跃</li>
                     </ul>
                 </div>
-                
-                <div class="analysis-card">
-                    <div class="analysis-icon">
-                        <i class="fas fa-chart-bar"></i>
+            </div>
+            
+            <div class="highlight-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">$12亿</div>
+                    <div class="metric-label" data-i18n="kenya.metrics.market">彩票市场规模</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15%</div>
+                    <div class="metric-label" data-i18n="kenya.metrics.growth">年增长率</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">65%</div>
+                    <div class="metric-label" data-i18n="kenya.metrics.digital">数字化彩票占比</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">18-35岁</div>
+                    <div class="metric-label" data-i18n="kenya.metrics.age">主要用户群体</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 机遇分析 -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="kenya.opportunities.title">市场机遇分析</h2>
+                <p class="section-subtitle" data-i18n="kenya.opportunities.subtitle">肯尼亚独特的移动支付生态系统和年轻人口结构为彩票行业数字化转型提供了绝佳机会</p>
+            </div>
+            
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="kenya.analysis.economic.title">经济环境分析</h3>
-                    <p class="analysis-description" data-i18n="kenya.analysis.economic.description">稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。</p>
-                    <ul class="analysis-features">
-                        <li data-i18n="kenya.analysis.economic.feature1">GDP持续增长，消费能力提升</li>
-                        <li data-i18n="kenya.analysis.economic.feature2">外商投资政策不断优化</li>
-                        <li data-i18n="kenya.analysis.economic.feature3">金融体系改革深化</li>
-                    </ul>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.mobile.title">移动支付优势</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.mobile.description">M-Pesa等移动支付平台的成熟应用，为彩票购买和奖金发放提供了便利的支付解决方案</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.growth.title">经济增长潜力</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.growth.description">持续的经济增长和中产阶级扩大，为彩票市场提供了不断增长的消费能力</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.youth.title">年轻人口红利</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.youth.description">年轻人口占比高，对数字化娱乐产品接受度高，是彩票市场的主要消费群体</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.hub.title">区域中心地位</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.hub.description">作为东非经济中心，肯尼亚可以作为进入东非市场的战略据点</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.language.title">语言优势</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.language.description">英语作为官方语言，降低了国际运营商进入市场的语言障碍</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.tech.title">技术创新环境</h3>
+                    <p class="opportunity-description" data-i18n="kenya.opportunities.tech.description">肯尼亚被称为"硅谷萨瓦纳"，拥有活跃的科技创新生态系统</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 监管环境 -->
-    <section class="regulatory-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="kenya.regulatory.title">监管环境分析</h2>
-                <p class="section-subtitle" data-i18n="kenya.regulatory.subtitle">了解肯尼亚彩票行业的监管框架和政策导向</p>
+                <h2 class="section-title" data-i18n="kenya.regulatory.title">监管环境与政策</h2>
+                <p class="section-subtitle" data-i18n="kenya.regulatory.subtitle">肯尼亚政府对彩票行业采取相对宽松的监管政策，为行业发展提供了良好的政策环境</p>
             </div>
             
-            <div class="regulatory-grid">
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="kenya.regulatory.license.title">牌照申请</h3>
-                    <p class="regulatory-description" data-i18n="kenya.regulatory.license.description">政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约6-12个月。</p>
+            <div class="regulatory-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 data-i18n="kenya.regulatory.licensing.title">许可证申请</h4>
+                        <p data-i18n="kenya.regulatory.licensing.description">向肯尼亚博彩控制委员会(Betting Control and Licensing Board)申请彩票运营许可证</p>
+                        <ul>
+                            <li data-i18n="kenya.regulatory.licensing.fee">许可证费用：100万肯尼亚先令</li>
+                            <li data-i18n="kenya.regulatory.licensing.period">有效期：3年</li>
+                            <li data-i18n="kenya.regulatory.licensing.renewal">可续期</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
                 </div>
                 
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="kenya.regulatory.tax.title">税收政策</h3>
-                    <p class="regulatory-description" data-i18n="kenya.regulatory.tax.description">彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为16%，为行业发展提供支持。</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 data-i18n="kenya.regulatory.taxation.title">税收政策</h4>
+                        <p data-i18n="kenya.regulatory.taxation.description">彩票运营商需要遵守相应的税收规定</p>
+                        <ul>
+                            <li data-i18n="kenya.regulatory.taxation.withholding">奖金代扣税：20%</li>
+                            <li data-i18n="kenya.regulatory.taxation.corporate">企业所得税：30%</li>
+                            <li data-i18n="kenya.regulatory.taxation.vat">增值税：16%</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
                 </div>
                 
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="kenya.regulatory.compliance.title">合规要求</h3>
-                    <p class="regulatory-description" data-i18n="kenya.regulatory.compliance.description">要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 data-i18n="kenya.regulatory.compliance.title">合规要求</h4>
+                        <p data-i18n="kenya.regulatory.compliance.description">运营商需要满足相关的合规要求</p>
+                        <ul>
+                            <li data-i18n="kenya.regulatory.compliance.aml">反洗钱措施</li>
+                            <li data-i18n="kenya.regulatory.compliance.kyc">客户身份验证</li>
+                            <li data-i18n="kenya.regulatory.compliance.reporting">定期报告义务</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 市场机遇 -->
-    <section class="opportunities-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="kenya.opportunities.title">市场机遇</h2>
-                <p class="section-subtitle" data-i18n="kenya.opportunities.subtitle">识别并把握肯尼亚彩票市场的关键机遇</p>
-            </div>
-            
-            <div class="opportunities-grid">
-                <div class="opportunity-card">
-                    <div class="opportunity-icon">
-                        <i class="fas fa-mobile"></i>
-                    </div>
-                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.mobile.title">移动彩票</h3>
-                    <p class="opportunity-description" data-i18n="kenya.opportunities.mobile.description">移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达40%。</p>
-                </div>
-                
-                <div class="opportunity-card">
-                    <div class="opportunity-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.games.title">游戏创新</h3>
-                    <p class="opportunity-description" data-i18n="kenya.opportunities.games.description">年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。</p>
-                </div>
-                
-                <div class="opportunity-card">
-                    <div class="opportunity-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.retail.title">零售网络</h3>
-                    <p class="opportunity-description" data-i18n="kenya.opportunities.retail.description">传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。</p>
-                </div>
-                
-                <div class="opportunity-card">
-                    <div class="opportunity-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="opportunity-title" data-i18n="kenya.opportunities.ai.title">AI技术</h3>
-                    <p class="opportunity-description" data-i18n="kenya.opportunities.ai.description">人工智能在用户服务、风险控制等方面的应用前景广阔。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 市场挑战 -->
+    <!-- 挑战分析 -->
     <section class="challenges-section">
         <div class="container">
             <div class="challenges-content">
-                <h2 class="section-title" data-i18n="kenya.challenges.title">市场挑战</h2>
-                <p class="section-subtitle" data-i18n="kenya.challenges.subtitle">了解行业面临的主要挑战，制定相应的应对策略</p>
-            </div>
-            
-            <div class="challenges-grid">
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="challenge-title" data-i18n="kenya.challenges.language.title">语言本地化</h3>
-                    <p class="challenge-description" data-i18n="kenya.challenges.language.description">需要提供斯瓦希里语和英语的双语服务，本地化要求较高。</p>
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="kenya.challenges.title">市场挑战</h2>
+                    <p class="section-subtitle" data-i18n="kenya.challenges.subtitle">在巨大机遇的同时，肯尼亚彩票市场也面临着一些需要克服的挑战</p>
                 </div>
                 
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="challenge-title" data-i18n="kenya.challenges.competition.title">市场竞争激烈</h3>
+                        <p class="challenge-description" data-i18n="kenya.challenges.competition.description">既有本土运营商，也有国际品牌，竞争环境相对激烈</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="kenya.challenges.security.title">网络安全</h3>
-                    <p class="challenge-description" data-i18n="kenya.challenges.security.description">需要建立符合当地标准的网络安全体系，保障用户数据安全。</p>
-                </div>
-                
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-handshake"></i>
+                    
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3 class="challenge-title" data-i18n="kenya.challenges.infrastructure.title">基础设施差异</h3>
+                        <p class="challenge-description" data-i18n="kenya.challenges.infrastructure.description">城乡之间的网络基础设施存在一定差距</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="kenya.challenges.partnership.title">合作伙伴</h3>
-                    <p class="challenge-description" data-i18n="kenya.challenges.partnership.description">需要与当地金融机构和支付服务商建立合作关系。</p>
+                    
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="challenge-title" data-i18n="kenya.challenges.regulation.title">监管变化</h3>
+                        <p class="challenge-description" data-i18n="kenya.challenges.regulation.description">监管政策可能会根据市场发展情况进行调整</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="challenge-title" data-i18n="kenya.challenges.economy.title">经济波动</h3>
+                        <p class="challenge-description" data-i18n="kenya.challenges.economy.description">经济周期性波动可能影响消费者的彩票购买行为</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LottoBridge解决方案 -->
+    <!-- 解决方案 -->
     <section class="solutions-section">
         <div class="container">
-            <div class="solutions-content">
+            <div class="section-header">
                 <h2 class="section-title" data-i18n="kenya.solutions.title">LottoBridge解决方案</h2>
-                <p class="section-subtitle" data-i18n="kenya.solutions.subtitle">我们提供全方位的技术支持和服务，帮助您在肯尼亚市场取得成功</p>
+                <p class="section-subtitle" data-i18n="kenya.solutions.subtitle">针对肯尼亚市场特点，我们提供定制化的彩票技术解决方案</p>
             </div>
             
             <div class="solutions-grid">
                 <div class="solution-card">
                     <div class="solution-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="kenya.solutions.compliance.title">合规支持</h3>
-                    <p class="solution-description" data-i18n="kenya.solutions.compliance.description">提供符合肯尼亚监管要求的系统解决方案，确保业务合法运营。</p>
+                    <h3 class="solution-title" data-i18n="kenya.solutions.mobile.title">移动优先平台</h3>
+                    <p class="solution-description" data-i18n="kenya.solutions.mobile.description">专为移动设备优化的彩票平台，完美集成M-Pesa等本地支付方式</p>
                 </div>
                 
                 <div class="solution-card">
@@ -921,29 +948,53 @@
                         <i class="fas fa-language"></i>
                     </div>
                     <h3 class="solution-title" data-i18n="kenya.solutions.localization.title">本地化服务</h3>
-                    <p class="solution-description" data-i18n="kenya.solutions.localization.description">提供斯瓦希里语和英语的双语界面和客服支持，确保用户体验。</p>
+                    <p class="solution-description" data-i18n="kenya.solutions.localization.description">提供英语和斯瓦希里语双语支持，满足不同用户群体需求</p>
                 </div>
                 
                 <div class="solution-card">
                     <div class="solution-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="kenya.solutions.partnership.title">合作伙伴网络</h3>
-                    <p class="solution-description" data-i18n="kenya.solutions.partnership.description">与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。</p>
+                    <h3 class="solution-title" data-i18n="kenya.solutions.compliance.title">合规管理</h3>
+                    <p class="solution-description" data-i18n="kenya.solutions.compliance.description">内置合规管理系统，确保符合肯尼亚监管要求</p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="solution-title" data-i18n="kenya.solutions.analytics.title">数据分析</h3>
+                    <p class="solution-description" data-i18n="kenya.solutions.analytics.description">深度数据分析工具，帮助运营商了解用户行为和市场趋势</p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="solution-title" data-i18n="kenya.solutions.support.title">客户支持</h3>
+                    <p class="solution-description" data-i18n="kenya.solutions.support.description">24/7多语言客户支持，提供专业的技术和运营服务</p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="solution-title" data-i18n="kenya.solutions.integration.title">系统集成</h3>
+                    <p class="solution-description" data-i18n="kenya.solutions.integration.description">与现有系统无缝集成，支持API接口和第三方服务集成</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 行动号召 -->
-    <section class="country-cta">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 data-i18n="kenya.cta.title">开启您的肯尼亚彩票业务之旅</h2>
-                <p data-i18n="kenya.cta.subtitle">联系我们，获取专业的市场分析和定制化解决方案</p>
+                <h2 class="cta-title" data-i18n="kenya.cta.title">抓住肯尼亚市场机遇</h2>
+                <p class="cta-subtitle" data-i18n="kenya.cta.subtitle">与LottoBridge合作，在东非最具潜力的彩票市场中获得竞争优势</p>
                 <div class="cta-buttons">
-                    <a href="../contact.html" class="btn-white" data-i18n="kenya.cta.contact">立即咨询</a>
-                    <a href="../case-studies.html" class="btn-outline-white" data-i18n="kenya.cta.cases">查看案例</a>
+                    <a href="../contact.html" class="btn-primary" data-i18n="kenya.cta.contact">联系我们</a>
+                    <a href="../demo.html" class="btn-outline" data-i18n="kenya.cta.demo">申请演示</a>
                 </div>
             </div>
         </div>
@@ -954,55 +1005,59 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">LottoBridge</h3>
-                    <p class="footer-description" data-i18n="footer.description">全球彩票出海一站式解决方案平台，为您提供专业的技术支持和服务。</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.quick_links">快速链接</h4>
-                    <ul class="footer-links">
-                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    <h3 data-i18n="footer.company.title">公司信息</h3>
+                    <ul>
+                        <li><a href="../about.html" data-i18n="footer.company.about">关于我们</a></li>
+                        <li><a href="../careers.html" data-i18n="footer.company.careers">招聘信息</a></li>
+                        <li><a href="../news.html" data-i18n="footer.company.news">新闻动态</a></li>
+                        <li><a href="../contact.html" data-i18n="footer.company.contact">联系我们</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.services">服务</h4>
-                    <ul class="footer-links">
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
-                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
+                    <ul>
+                        <li><a href="../products.html#lottery-platform" data-i18n="footer.products.platform">彩票平台</a></li>
+                        <li><a href="../products.html#management-system" data-i18n="footer.products.management">管理系统</a></li>
+                        <li><a href="../products.html#mobile-app" data-i18n="footer.products.mobile">移动应用</a></li>
+                        <li><a href="../products.html#analytics" data-i18n="footer.products.analytics">数据分析</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.contact">联系方式</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
-                        <li><i class="fas fa-phone"></i> +86 400-888-8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 深圳市南山区科技园</li>
+                    <h3 data-i18n="footer.support.title">技术支持</h3>
+                    <ul>
+                        <li><a href="../support.html" data-i18n="footer.support.center">帮助中心</a></li>
+                        <li><a href="../documentation.html" data-i18n="footer.support.documentation">技术文档</a></li>
+                        <li><a href="../api.html" data-i18n="footer.support.api">API文档</a></li>
+                        <li><a href="../support.html#contact" data-i18n="footer.support.contact">技术支持</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.legal.title">法律信息</h3>
+                    <ul>
+                        <li><a href="../privacy.html" data-i18n="footer.legal.privacy">隐私政策</a></li>
+                        <li><a href="../terms.html" data-i18n="footer.legal.terms">使用条款</a></li>
+                        <li><a href="../compliance.html" data-i18n="footer.legal.compliance">合规信息</a></li>
+                        <li><a href="../security.html" data-i18n="footer.legal.security">安全政策</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利。</span></p>
+                <p data-i18n="footer.copyright">© 2024 LottoBridge. 保留所有权利。</p>
             </div>
         </div>
     </footer>
 
-    <!-- 脚本 -->
-    <script src="../js/languages/zh.js"></script>
-    <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
-    <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
-    <script src="../js/languages/ar.js"></script>
-    <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
     <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
+    <script>
+        // 页面加载完成后初始化多语言
+        document.addEventListener('DOMContentLoaded', function() {
+            const i18n = new I18n();
+            i18n.init();
+        });
+    </script>
 </body>
 </html> 

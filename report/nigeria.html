@@ -3,179 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="nigeria.page.title">尼日利亚彩票市场报告 | LottoBridge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title data-i18n="nigeria.page.title">尼日利亚彩票市场深度分析报告 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 国家报告页面专用样式 */
-        .country-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 50%, #1a3e8c 100%);
-            color: var(--white);
+        /* 尼日利亚主题专业样式 */
+        :root {
+            --nigeria-green: #008751;
+            --nigeria-white: #ffffff;
+            --primary-blue: #1a3e8c;
+            --nav-blue: #1d3557;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --gradient-nigeria: linear-gradient(135deg, #008751 0%, #00a95f 50%, #008751 100%);
+            --gradient-accent: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #3b82f6 100%);
+            --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #f59e0b 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-nigeria);
+            color: white;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
+            margin-top: 70px;
         }
-
-        .country-hero::before {
+        
+        .hero-banner::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><polygon points="100,50 150,30 200,60 150,90" fill="url(%23grad1)"/><circle cx="800" cy="80" r="35" fill="url(%23grad1)"/><rect x="500" y="200" width="60" height="40" rx="8" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
             opacity: 0.3;
         }
 
-        .country-hero-content {
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 2;
             text-align: center;
+        }
+
+        .hero-content {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .country-flag {
-            width: 80px;
-            height: 60px;
-            background: linear-gradient(to bottom, #008751 0%, #008751 33%, #ffffff 33%, #ffffff 66%, #008751 66%, #008751 100%);
-            border-radius: 8px;
-            margin: 0 auto 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 100px;
+            height: 70px;
+            background: linear-gradient(to bottom, #008751 0%, #008751 50%, #ffffff 50%, #ffffff 100%);
+            border-radius: 12px;
+            margin: 0 auto 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .country-flag::after {
-            content: '';
+            content: '🦅';
+            font-size: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background: #ffffff;
-            border-radius: 50%;
         }
 
-        .country-hero-title {
-            font-size: 3.5rem;
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        .country-hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
             opacity: 0.95;
             line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .country-stats {
+        .market-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .country-stat-card {
-            background: rgba(255,255,255,0.1);
+        .stat-card {
+            background: rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 30px 20px;
             text-align: center;
             border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .country-stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
-        .country-stat-number {
-            font-size: 2.5rem;
+        .stat-number {
+            font-size: 2.8rem;
             font-weight: 700;
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .country-stat-label {
+        .stat-label {
             font-size: 1rem;
             opacity: 0.9;
             font-weight: 500;
         }
 
-        .market-overview {
+        .section {
             padding: 80px 0;
-            background: var(--light-gray);
         }
 
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .bg-light {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
         }
 
-        .overview-content h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .overview-content p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--nav-blue);
-            margin-bottom: 2rem;
-        }
-
-        .overview-visual {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 20px;
-            padding: 3rem;
-            color: var(--white);
+        .section-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 60px;
         }
 
-        .overview-visual::before {
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-nigeria);
+            border-radius: 2px;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
         }
 
-        .market-analysis {
-            padding: 80px 0;
-        }
-
-        .analysis-grid {
+        .market-analysis-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .analysis-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -188,38 +196,33 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-nigeria);
         }
 
         .analysis-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .analysis-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-nigeria);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            font-size: 1.5rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0, 135, 81, 0.3);
         }
 
         .analysis-title {
-            font-size: 1.5rem;
+            font-size: 20px;
             font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .analysis-description {
             color: var(--nav-blue);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            margin-bottom: 15px;
         }
 
         .analysis-features {
@@ -228,140 +231,181 @@
         }
 
         .analysis-features li {
-            padding: 0.5rem 0;
+            padding: 8px 0;
             color: var(--medium-gray);
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 25px;
         }
 
         .analysis-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary-blue);
+            color: var(--nigeria-green);
             font-weight: bold;
         }
 
-        .regulatory-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .regulatory-grid {
+        .highlight-metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
         }
 
-        .regulatory-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary-blue);
+        .metric-card {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #86efac;
             transition: all 0.3s ease;
         }
 
-        .regulatory-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 25px rgba(26, 62, 140, 0.15);
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--nigeria-green);
         }
 
-        .regulatory-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .regulatory-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .opportunities-section {
-            padding: 80px 0;
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--nigeria-green);
+            margin-bottom: 10px;
         }
 
         .opportunities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .opportunity-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            padding: 35px 25px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
-            border: 1px solid rgba(26, 62, 140, 0.08);
         }
 
         .opportunity-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(26, 62, 140, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
         .opportunity-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-nigeria);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 2rem;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
-        .opportunity-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
+        .regulatory-timeline {
+            position: relative;
+            margin: 60px 0;
         }
 
-        .opportunity-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
+        .regulatory-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-nigeria);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-nigeria);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            border: 4px solid white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
         .challenges-section {
+            background: var(--gradient-nigeria);
+            color: white;
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a9c 100%);
-            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenges-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
         .challenges-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .challenges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .challenge-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            padding: 35px 25px;
             border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .challenge-card:hover {
             background: rgba(255,255,255,0.15);
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .challenge-icon {
@@ -372,44 +416,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.75rem;
-        }
-
-        .challenge-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .challenge-description {
-            opacity: 0.9;
-            line-height: 1.6;
+            font-size: 28px;
+            margin: 0 auto 20px;
         }
 
         .solutions-section {
             padding: 80px 0;
-        }
-
-        .solutions-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #fef3c7, #fed7aa);
         }
 
         .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .solution-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(26, 62, 140, 0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -422,445 +450,651 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+            background: var(--gradient-accent);
         }
 
         .solution-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 62, 140, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .solution-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: var(--white);
-            font-size: 1.75rem;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(26, 62, 140, 0.3);
         }
 
-        .solution-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .solution-description {
-            color: var(--nav-blue);
-            line-height: 1.6;
-        }
-
-        .country-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-red) 0%, #f03e3e 100%);
-            color: var(--white);
+        .cta-section {
+            background: var(--gradient-nigeria);
+            color: white;
             text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
         }
 
-        .cta-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
+        .cta-content {
+            position: relative;
+            z-index: 2;
         }
 
-        .cta-buttons {
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
             display: flex;
-            gap: 1.5rem;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-white {
-            background: var(--white);
-            color: var(--primary-red);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid var(--white);
-        }
-
-        .btn-white:hover {
-            background: transparent;
-            color: var(--white);
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             transition: all 0.3s ease;
-            border: 2px solid var(--white);
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
         }
 
-        .btn-outline-white:hover {
-            background: var(--white);
-            color: var(--primary-red);
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
         }
 
-        /* 响应式设计 */
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            border-color: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(26, 62, 140, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--nigeria-green);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .economic-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .indicator-card {
+            background: linear-gradient(135deg, #fef3c7, #fed7aa);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #fbbf24;
+            transition: all 0.3s ease;
+        }
+
+        .indicator-card:hover {
+            transform: translateY(-5px);
+            border-color: #f59e0b;
+        }
+
+        .indicator-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        .indicator-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        .demographic-insights {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            padding: 80px 0;
+        }
+
+        .demographic-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .demographic-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demographic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-nigeria);
+        }
+
+        .demographic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .demographic-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-nigeria);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
+        }
+
         @media (max-width: 768px) {
-            .country-hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .overview-grid {
+            .market-analysis-grid, .opportunities-grid, .challenges-grid, .solutions-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
             
-            .country-stats {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
-            }
-            
-            .cta-buttons {
+            .cta-actions {
                 flex-direction: column;
                 align-items: center;
             }
-        }
 
-        @media (max-width: 480px) {
-            .country-hero-title {
-                font-size: 2rem;
+            .timeline-item {
+                flex-direction: column !important;
             }
-            
-            .country-hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .country-stat-card {
-                padding: 1.5rem;
-            }
-            
-            .country-stat-number {
-                font-size: 2rem;
-            }
-        }
 
-        /* 报告页面导航增强样式 */
-        .header {
-            min-height: 80px;
-        }
-
-        .header-container {
-            min-height: 80px;
-        }
-
-        .logo {
-            font-size: 26px;
-        }
-
-        .nav-links a {
-            font-size: 15px !important;
-            padding: 8px 12px !important;
-            max-width: 120px !important;
-        }
-
-        .language-selector select {
-            font-size: 14px !important;
-            padding: 8px 16px !important;
-            padding-right: 32px !important;
-            min-width: 100px !important;
-        }
-
-        /* 针对不同屏幕尺寸的导航优化 */
-        @media (max-width: 1400px) {
-            .nav-links a {
-                font-size: 14px !important;
-                padding: 7px 10px !important;
-                max-width: 110px !important;
+            .timeline-content {
+                width: 90%;
+                margin-top: 20px;
             }
-            
-            .language-selector select {
-                font-size: 13px !important;
-                padding: 7px 14px !important;
-                padding-right: 28px !important;
-                min-width: 90px !important;
-            }
-        }
 
-        @media (max-width: 1200px) {
-            .nav-links a {
-                font-size: 13px !important;
-                padding: 6px 8px !important;
-                max-width: 100px !important;
+            .regulatory-timeline::before {
+                left: 20px;
             }
-            
-            .language-selector select {
-                font-size: 12px !important;
-                padding: 6px 12px !important;
-                padding-right: 24px !important;
-                min-width: 80px !important;
-            }
-        }
 
-        @media (max-width: 992px) {
-            .nav-links a {
-                font-size: 12px !important;
-                padding: 6px 8px !important;
-                max-width: 95px !important;
-            }
-            
-            .language-selector select {
-                font-size: 11px !important;
-                padding: 6px 10px !important;
-                padding-right: 22px !important;
-                min-width: 75px !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links a {
-                font-size: 11px !important;
-                padding: 5px 6px !important;
-                max-width: 80px !important;
-            }
-            
-            .language-selector select {
-                font-size: 10px !important;
-                padding: 5px 8px !important;
-                padding-right: 20px !important;
-                min-width: 65px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links a {
-                font-size: 10px !important;
-                padding: 4px 5px !important;
-                max-width: 70px !important;
-            }
-            
-            .language-selector select {
-                font-size: 9px !important;
-                padding: 4px 6px !important;
-                padding-right: 18px !important;
-                min-width: 60px !important;
+            .highlight-metrics, .economic-indicators, .demographic-cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="header-container">
                 <div class="logo">
-                    <a href="../index.html">
-                        <span class="logo-text">
-                            <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
-                        </span>
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                
-                <nav id="mainNav">
+                <nav>
                     <ul class="nav-links">
                         <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../market-details.html" data-i18n="nav.market_details">市场详情</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
                         <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
                         <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
                         <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
                     </ul>
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                    </div>
                 </nav>
-                
-                <div class="language-selector">
-                    <select id="languageSelector">
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="en">🇺🇸 English</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                        <option value="ru">🇷🇺 Русский</option>
-                    </select>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 尼日利亚英雄区域 -->
-    <section class="country-hero">
-        <div class="container">
-            <div class="country-hero-content">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-content">
                 <div class="country-flag"></div>
-                <h1 class="country-hero-title" data-i18n="nigeria.hero.title">尼日利亚彩票市场报告</h1>
-                <p class="country-hero-subtitle" data-i18n="nigeria.hero.subtitle">深入分析非洲最大经济体彩票市场的发展机遇、监管环境与投资前景</p>
+                <h1 class="hero-title" data-i18n="nigeria.hero.title">尼日利亚彩票市场深度分析报告</h1>
+                <p class="hero-subtitle" data-i18n="nigeria.hero.description">非洲第一大经济体，2.2亿人口的超级市场，年轻化的人口结构和快速数字化进程为彩票行业带来前所未有的发展机遇</p>
                 
-                <div class="country-stats">
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">2.1亿</div>
-                        <div class="country-stat-label" data-i18n="nigeria.stats.population">人口规模</div>
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">2.2亿</div>
+                        <div class="stat-label" data-i18n="nigeria.stats.population">总人口数量</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">$4,770亿</div>
-                        <div class="country-stat-label" data-i18n="nigeria.stats.gdp">GDP总量</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$4,400亿</div>
+                        <div class="stat-label" data-i18n="nigeria.stats.gdp">GDP总量</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">3.1%</div>
-                        <div class="country-stat-label" data-i18n="nigeria.stats.growth">经济增长率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">$18亿</div>
+                        <div class="stat-label" data-i18n="nigeria.stats.lottery_market">彩票市场规模</div>
                     </div>
-                    <div class="country-stat-card">
-                        <div class="country-stat-number">52%</div>
-                        <div class="country-stat-label" data-i18n="nigeria.stats.urbanization">城市化率</div>
+                    <div class="stat-card">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label" data-i18n="nigeria.stats.mobile_penetration">移动互联网普及率</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 市场概览 -->
-    <section class="market-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2 data-i18n="nigeria.overview.title">市场概览</h2>
-                    <p data-i18n="nigeria.overview.description">尼日利亚作为非洲最大的经济体，拥有庞大的人口基数和快速增长的数字经济。移动互联网的普及为彩票行业的发展提供了巨大的市场空间。</p>
-                    <p data-i18n="nigeria.overview.trends">随着年轻人口的增加和移动支付的普及，数字彩票市场呈现出爆发式增长的趋势。政府正在积极推动数字化转型，为彩票行业的发展创造了有利条件。</p>
-                </div>
-                <div class="overview-visual">
-                    <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 1rem;"></i>
-                    <h3 data-i18n="nigeria.overview.visual_title">市场趋势</h3>
-                    <p data-i18n="nigeria.overview.visual_subtitle">移动互联网推动彩票市场快速增长</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 市场分析 -->
-    <section class="market-analysis">
+    <section class="section" id="market-analysis">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="nigeria.analysis.title">深度市场分析</h2>
-                <p class="section-subtitle" data-i18n="nigeria.analysis.subtitle">基于最新数据和行业研究，为您提供全面的市场洞察</p>
+                <h2 class="section-title" data-i18n="nigeria.analysis.title">尼日利亚彩票市场深度分析</h2>
+                <p class="section-subtitle" data-i18n="nigeria.analysis.description">基于最新市场数据和行业趋势，全面分析非洲最大经济体彩票市场的发展现状、机遇与挑战</p>
             </div>
-            
-            <div class="analysis-grid">
+
+            <div class="market-analysis-grid">
+                <div class="analysis-card">
+                    <div class="analysis-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="analysis-title" data-i18n="nigeria.analysis.market_scale.title">市场规模与增长</h3>
+                    <p data-i18n="nigeria.analysis.market_scale.description">尼日利亚彩票市场规模达18亿美元，年增长率15%，是非洲增长最快的彩票市场之一</p>
+                    <ul class="analysis-features">
+                        <li data-i18n="nigeria.analysis.market_scale.feature1">年销售额18亿美元，增长迅速</li>
+                        <li data-i18n="nigeria.analysis.market_scale.feature2">年增长率15%，远超全球平均</li>
+                        <li data-i18n="nigeria.analysis.market_scale.feature3">政府支持产业发展</li>
+                        <li data-i18n="nigeria.analysis.market_scale.feature4">移动彩票渗透率提升</li>
+                        <li data-i18n="nigeria.analysis.market_scale.feature5">年轻人口推动消费增长</li>
+                    </ul>
+                </div>
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="nigeria.analysis.demographic.title">人口结构分析</h3>
-                    <p class="analysis-description" data-i18n="nigeria.analysis.demographic.description">尼日利亚拥有年轻的人口结构，18-35岁年龄段占总人口的60%以上，为彩票市场提供了巨大的潜在用户群体。</p>
+                    <h3 class="analysis-title" data-i18n="nigeria.analysis.demographics.title">人口结构优势</h3>
+                    <p data-i18n="nigeria.analysis.demographics.description">平均年龄仅18.1岁，70%人口在30岁以下，为彩票市场提供庞大的年轻消费群体</p>
                     <ul class="analysis-features">
-                        <li data-i18n="nigeria.analysis.demographic.feature1">年轻人口比例极高，消费潜力巨大</li>
-                        <li data-i18n="nigeria.analysis.demographic.feature2">移动互联网普及率快速提升</li>
-                        <li data-i18n="nigeria.analysis.demographic.feature3">城市化进程加速，消费升级明显</li>
+                        <li data-i18n="nigeria.analysis.demographics.feature1">全球最年轻的人口结构</li>
+                        <li data-i18n="nigeria.analysis.demographics.feature2">城市化率快速提升</li>
+                        <li data-i18n="nigeria.analysis.demographics.feature3">教育水平不断改善</li>
+                        <li data-i18n="nigeria.analysis.demographics.feature4">中产阶级快速扩大</li>
+                        <li data-i18n="nigeria.analysis.demographics.feature5">消费能力持续增强</li>
                     </ul>
                 </div>
-                
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="nigeria.analysis.technology.title">技术发展分析</h3>
-                    <p class="analysis-description" data-i18n="nigeria.analysis.technology.description">移动互联网技术的快速发展为数字彩票提供了良好的技术基础，智能手机普及率超过70%。</p>
+                    <h3 class="analysis-title" data-i18n="nigeria.analysis.digital.title">数字化基础设施</h3>
+                    <p data-i18n="nigeria.analysis.digital.description">移动互联网普及率85%，移动支付快速发展，为数字彩票提供坚实技术基础</p>
                     <ul class="analysis-features">
-                        <li data-i18n="nigeria.analysis.technology.feature1">移动支付基础设施完善</li>
-                        <li data-i18n="nigeria.analysis.technology.feature2">4G网络覆盖范围扩大</li>
-                        <li data-i18n="nigeria.analysis.technology.feature3">数字身份认证系统成熟</li>
+                        <li data-i18n="nigeria.analysis.digital.feature1">移动支付领先全球</li>
+                        <li data-i18n="nigeria.analysis.digital.feature2">智能手机普及率95%</li>
+                        <li data-i18n="nigeria.analysis.digital.feature3">4G网络覆盖率85%</li>
+                        <li data-i18n="nigeria.analysis.digital.feature4">金融科技创新活跃</li>
+                        <li data-i18n="nigeria.analysis.digital.feature5">数字身份系统完善</li>
                     </ul>
                 </div>
-                
+
                 <div class="analysis-card">
                     <div class="analysis-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <h3 class="analysis-title" data-i18n="nigeria.analysis.economic.title">经济环境分析</h3>
-                    <p class="analysis-description" data-i18n="nigeria.analysis.economic.description">稳定的经济增长和不断改善的商业环境为彩票行业的发展提供了良好的经济基础。</p>
+                    <h3 class="analysis-title" data-i18n="nigeria.analysis.regulatory.title">监管环境改善</h3>
+                    <p data-i18n="nigeria.analysis.regulatory.description">政府积极推动彩票行业规范化发展，法律框架不断完善，为行业健康发展提供保障</p>
                     <ul class="analysis-features">
-                        <li data-i18n="nigeria.analysis.economic.feature1">GDP持续增长，消费能力提升</li>
-                        <li data-i18n="nigeria.analysis.economic.feature2">外商投资政策不断优化</li>
-                        <li data-i18n="nigeria.analysis.economic.feature3">金融体系改革深化</li>
+                        <li data-i18n="nigeria.analysis.regulatory.feature1">国家彩票委员会监管</li>
+                        <li data-i18n="nigeria.analysis.regulatory.feature2">许可证制度规范</li>
+                        <li data-i18n="nigeria.analysis.regulatory.feature3">税收政策明确</li>
+                        <li data-i18n="nigeria.analysis.regulatory.feature4">反洗钱措施完善</li>
+                        <li data-i18n="nigeria.analysis.regulatory.feature5">外资政策开放</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="highlight-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">70%</div>
+                    <h4 data-i18n="nigeria.metrics.young_population.title">年轻人口比例</h4>
+                    <p data-i18n="nigeria.metrics.young_population.description">30岁以下人口占比</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$2,028</div>
+                    <h4 data-i18n="nigeria.metrics.per_capita_income.title">人均GDP</h4>
+                    <p data-i18n="nigeria.metrics.per_capita_income.description">经济发展水平稳步提升</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">65%</div>
+                    <h4 data-i18n="nigeria.metrics.banked_population.title">银行服务普及率</h4>
+                    <p data-i18n="nigeria.metrics.banked_population.description">金融包容性持续改善</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$82</div>
+                    <h4 data-i18n="nigeria.metrics.annual_spending.title">年均彩票消费</h4>
+                    <p data-i18n="nigeria.metrics.annual_spending.description">人均彩票支出水平</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 监管环境 -->
-    <section class="regulatory-section">
+    <!-- 人口结构洞察 -->
+    <section class="demographic-insights">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="nigeria.regulatory.title">监管环境分析</h2>
-                <p class="section-subtitle" data-i18n="nigeria.regulatory.subtitle">了解尼日利亚彩票行业的监管框架和政策导向</p>
+                <h2 class="section-title" data-i18n="nigeria.demographics.title">人口结构深度洞察</h2>
+                <p class="section-subtitle" data-i18n="nigeria.demographics.description">分析尼日利亚独特的人口结构优势及其对彩票市场的影响</p>
             </div>
-            
-            <div class="regulatory-grid">
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="nigeria.regulatory.license.title">牌照申请</h3>
-                    <p class="regulatory-description" data-i18n="nigeria.regulatory.license.description">政府提供透明的牌照申请流程，支持外资企业参与彩票市场运营，申请周期约8-15个月。</p>
+
+            <div class="demographic-cards">
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.demographics.age_structure.title">年龄结构</h3>
+                    <p data-i18n="nigeria.demographics.age_structure.description">全球最年轻的人口结构，平均年龄仅18.1岁，为彩票市场提供持续的消费动力和增长潜力。</p>
                 </div>
-                
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="nigeria.regulatory.tax.title">税收政策</h3>
-                    <p class="regulatory-description" data-i18n="nigeria.regulatory.tax.description">彩票行业享受优惠税收政策，企业所得税率为30%，增值税率为7.5%，为行业发展提供支持。</p>
+
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.demographics.urbanization.title">城市化进程</h3>
+                    <p data-i18n="nigeria.demographics.urbanization.description">城市化率达52%并持续提升，城市人口消费能力强，对数字彩票接受度高。</p>
                 </div>
-                
-                <div class="regulatory-card">
-                    <h3 class="regulatory-title" data-i18n="nigeria.regulatory.compliance.title">合规要求</h3>
-                    <p class="regulatory-description" data-i18n="nigeria.regulatory.compliance.description">要求严格的反洗钱和负责任博彩措施，确保行业健康发展和消费者权益保护。</p>
+
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.demographics.education.title">教育水平</h3>
+                    <p data-i18n="nigeria.demographics.education.description">识字率快速提升至62%，年轻人教育水平显著改善，为数字化彩票普及创造条件。</p>
+                </div>
+
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.demographics.language.title">语言环境</h3>
+                    <p data-i18n="nigeria.demographics.language.description">英语为官方语言，便于国际合作，同时拥有丰富的本地语言文化多样性。</p>
+                </div>
+            </div>
+
+            <div class="economic-indicators">
+                <div class="indicator-card">
+                    <div class="indicator-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="indicator-value">6.5%</div>
+                    <h4 data-i18n="nigeria.economics.gdp_growth.title">GDP增长率</h4>
+                    <p data-i18n="nigeria.economics.gdp_growth.description">经济增长强劲</p>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="indicator-value">₦480</div>
+                    <h4 data-i18n="nigeria.economics.exchange_rate.title">汇率水平</h4>
+                    <p data-i18n="nigeria.economics.exchange_rate.description">奈拉对美元汇率</p>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="indicator-value">25%</div>
+                    <h4 data-i18n="nigeria.economics.mobile_commerce.title">移动商务增长</h4>
+                    <p data-i18n="nigeria.economics.mobile_commerce.description">年增长率</p>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="indicator-value">35%</div>
+                    <h4 data-i18n="nigeria.economics.middle_class.title">中产阶级比例</h4>
+                    <p data-i18n="nigeria.economics.middle_class.description">消费主力群体</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 市场机遇 -->
-    <section class="opportunities-section">
+    <section class="section bg-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="nigeria.opportunities.title">市场机遇</h2>
-                <p class="section-subtitle" data-i18n="nigeria.opportunities.subtitle">识别并把握尼日利亚彩票市场的关键机遇</p>
+                <h2 class="section-title" data-i18n="nigeria.opportunities.title">关键市场机遇</h2>
+                <p class="section-subtitle" data-i18n="nigeria.opportunities.description">识别并把握尼日利亚彩票市场的核心发展机遇</p>
             </div>
-            
+
             <div class="opportunities-grid">
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-mobile"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="nigeria.opportunities.mobile.title">移动彩票</h3>
-                    <p class="opportunity-description" data-i18n="nigeria.opportunities.mobile.description">移动互联网普及率高，移动彩票市场潜力巨大，预计年增长率可达35%。</p>
+                    <h3 data-i18n="nigeria.opportunities.mobile_first.title">移动优先战略</h3>
+                    <p data-i18n="nigeria.opportunities.mobile_first.description">移动互联网普及率85%，智能手机成为主要上网工具，移动彩票市场潜力巨大，预计年增长率超过30%。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-gamepad"></i>
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="nigeria.opportunities.games.title">游戏创新</h3>
-                    <p class="opportunity-description" data-i18n="nigeria.opportunities.games.description">年轻用户对创新游戏玩法需求强烈，为游戏设计和开发提供了广阔空间。</p>
+                    <h3 data-i18n="nigeria.opportunities.fintech.title">金融科技创新</h3>
+                    <p data-i18n="nigeria.opportunities.fintech.description">移动支付技术全球领先，数字钱包普及率高，为彩票支付提供便利的基础设施和创新解决方案。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-store"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="nigeria.opportunities.retail.title">零售网络</h3>
-                    <p class="opportunity-description" data-i18n="nigeria.opportunities.retail.description">传统零售渠道仍有发展空间，线上线下结合的销售模式前景广阔。</p>
+                    <h3 data-i18n="nigeria.opportunities.youth_market.title">年轻人市场</h3>
+                    <p data-i18n="nigeria.opportunities.youth_market.description">70%人口在30岁以下，年轻消费群体对新兴娱乐形式接受度高，为创新彩票产品提供广阔市场。</p>
                 </div>
-                
+
                 <div class="opportunity-card">
                     <div class="opportunity-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3 class="opportunity-title" data-i18n="nigeria.opportunities.ai.title">AI技术</h3>
-                    <p class="opportunity-description" data-i18n="nigeria.opportunities.ai.description">人工智能在用户服务、风险控制等方面的应用前景广阔。</p>
+                    <h3 data-i18n="nigeria.opportunities.infrastructure.title">基础设施建设</h3>
+                    <p data-i18n="nigeria.opportunities.infrastructure.description">政府加大数字基础设施投入，5G网络建设加速，为高质量彩票服务提供技术保障。</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.opportunities.regional_hub.title">区域枢纽地位</h3>
+                    <p data-i18n="nigeria.opportunities.regional_hub.description">作为西非经济中心，可成为进入整个西非市场的门户，具有强大的区域辐射效应。</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.opportunities.economic_growth.title">经济快速增长</h3>
+                    <p data-i18n="nigeria.opportunities.economic_growth.description">GDP年增长率6.5%，消费能力持续提升，为彩票市场提供持续的增长动力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 监管环境 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="nigeria.regulatory.title">监管环境与政策框架</h2>
+                <p class="section-subtitle" data-i18n="nigeria.regulatory.description">了解尼日利亚彩票行业的监管环境、政策导向和合规要求</p>
+            </div>
+
+            <div class="regulatory-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="nigeria.regulatory.licensing.title">许可证制度</h3>
+                        <p data-i18n="nigeria.regulatory.licensing.description">国家彩票委员会(NLC)负责监管，许可证申请程序规范透明，支持外资参与，申请周期6-12个月。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="nigeria.regulatory.taxation.title">税收政策</h3>
+                        <p data-i18n="nigeria.regulatory.taxation.description">彩票税率为20%，公司所得税率为30%，VAT税率为7.5%，税收政策相对稳定。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="nigeria.regulatory.compliance.title">合规要求</h3>
+                        <p data-i18n="nigeria.regulatory.compliance.description">要求建立完善的反洗钱体系、客户身份识别系统和负责任博彩措施，保护消费者权益。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-i18n="nigeria.regulatory.innovation.title">创新支持</h3>
+                        <p data-i18n="nigeria.regulatory.innovation.description">政府支持数字创新，鼓励移动彩票发展，为新技术应用提供政策支持和监管便利。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -870,33 +1104,43 @@
     <section class="challenges-section">
         <div class="container">
             <div class="challenges-content">
-                <h2 class="section-title" data-i18n="nigeria.challenges.title">市场挑战</h2>
-                <p class="section-subtitle" data-i18n="nigeria.challenges.subtitle">了解行业面临的主要挑战，制定相应的应对策略</p>
-            </div>
-            
-            <div class="challenges-grid">
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="challenge-title" data-i18n="nigeria.challenges.language.title">语言本地化</h3>
-                    <p class="challenge-description" data-i18n="nigeria.challenges.language.description">需要提供英语和当地语言的多语种服务，本地化要求较高。</p>
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="nigeria.challenges.title">市场挑战与风险</h2>
+                    <p class="section-subtitle" data-i18n="nigeria.challenges.description">深入分析进入尼日利亚彩票市场面临的主要挑战和潜在风险</p>
                 </div>
-                
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 data-i18n="nigeria.challenges.infrastructure.title">基础设施挑战</h3>
+                        <p data-i18n="nigeria.challenges.infrastructure.description">部分地区网络覆盖不足，电力供应不稳定，需要建设适应性强的技术解决方案。</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="nigeria.challenges.security.title">网络安全</h3>
-                    <p class="challenge-description" data-i18n="nigeria.challenges.security.description">需要建立符合当地标准的网络安全体系，保障用户数据安全。</p>
-                </div>
-                
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-handshake"></i>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 data-i18n="nigeria.challenges.currency.title">汇率波动</h3>
+                        <p data-i18n="nigeria.challenges.currency.description">奈拉汇率波动较大，需要制定有效的汇率风险管理策略和对冲机制。</p>
                     </div>
-                    <h3 class="challenge-title" data-i18n="nigeria.challenges.partnership.title">合作伙伴</h3>
-                    <p class="challenge-description" data-i18n="nigeria.challenges.partnership.description">需要与当地金融机构和支付服务商建立合作关系。</p>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-i18n="nigeria.challenges.cultural.title">文化适应</h3>
+                        <p data-i18n="nigeria.challenges.cultural.description">需要深入了解当地文化和消费习惯，提供符合本地特色的产品和服务。</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-i18n="nigeria.challenges.competition.title">市场竞争</h3>
+                        <p data-i18n="nigeria.challenges.competition.description">本地和国际运营商竞争激烈，需要具备独特的竞争优势才能获得市场份额。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -905,107 +1149,114 @@
     <!-- LottoBridge解决方案 -->
     <section class="solutions-section">
         <div class="container">
-            <div class="solutions-content">
-                <h2 class="section-title" data-i18n="nigeria.solutions.title">LottoBridge解决方案</h2>
-                <p class="section-subtitle" data-i18n="nigeria.solutions.subtitle">我们提供全方位的技术支持和服务，帮助您在尼日利亚市场取得成功</p>
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="nigeria.solutions.title">LottoBridge专业解决方案</h2>
+                <p class="section-subtitle" data-i18n="nigeria.solutions.description">针对尼日利亚市场特点，提供全方位的技术支持和专业服务</p>
             </div>
-            
+
             <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.solutions.mobile_platform.title">移动优先平台</h3>
+                    <p data-i18n="nigeria.solutions.mobile_platform.description">专为尼日利亚市场设计的移动优先彩票平台，支持低带宽网络和离线功能，确保在各种网络条件下的流畅体验。</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.solutions.payment_integration.title">支付集成方案</h3>
+                    <p data-i18n="nigeria.solutions.payment_integration.description">集成主流移动支付平台，支持多种本地支付方式，提供便捷安全的支付体验。</p>
+                </div>
+
                 <div class="solution-card">
                     <div class="solution-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="nigeria.solutions.compliance.title">合规支持</h3>
-                    <p class="solution-description" data-i18n="nigeria.solutions.compliance.description">提供符合尼日利亚监管要求的系统解决方案，确保业务合法运营。</p>
+                    <h3 data-i18n="nigeria.solutions.compliance.title">合规管理系统</h3>
+                    <p data-i18n="nigeria.solutions.compliance.description">提供全面的合规管理解决方案，确保满足尼日利亚法律法规要求，降低合规风险。</p>
                 </div>
-                
+
                 <div class="solution-card">
                     <div class="solution-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="nigeria.solutions.localization.title">本地化服务</h3>
-                    <p class="solution-description" data-i18n="nigeria.solutions.localization.description">提供英语和当地语言的多语种界面和客服支持，确保用户体验。</p>
+                    <h3 data-i18n="nigeria.solutions.localization.title">本地化服务</h3>
+                    <p data-i18n="nigeria.solutions.localization.description">提供英语和主要本地语言支持，融入尼日利亚文化元素，确保产品符合当地用户习惯。</p>
                 </div>
-                
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="nigeria.solutions.analytics.title">数据分析平台</h3>
+                    <p data-i18n="nigeria.solutions.analytics.description">提供先进的数据分析和商业智能工具，帮助深入了解用户行为，优化产品和营销策略。</p>
+                </div>
+
                 <div class="solution-card">
                     <div class="solution-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 class="solution-title" data-i18n="nigeria.solutions.partnership.title">合作伙伴网络</h3>
-                    <p class="solution-description" data-i18n="nigeria.solutions.partnership.description">与当地金融机构和支付服务商建立合作关系，提供完整的支付解决方案。</p>
+                    <h3 data-i18n="nigeria.solutions.local_partnership.title">本地合作伙伴</h3>
+                    <p data-i18n="nigeria.solutions.local_partnership.description">建立强大的本地合作伙伴网络，提供本地化运营支持和市场拓展服务。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 行动号召 -->
-    <section class="country-cta">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 data-i18n="nigeria.cta.title">开启您的尼日利亚彩票业务之旅</h2>
-                <p data-i18n="nigeria.cta.subtitle">联系我们，获取专业的市场分析和定制化解决方案</p>
-                <div class="cta-buttons">
-                    <a href="../contact.html" class="btn-white" data-i18n="nigeria.cta.contact">立即咨询</a>
-                    <a href="../case-studies.html" class="btn-outline-white" data-i18n="nigeria.cta.cases">查看案例</a>
+                <h2 class="cta-title" data-i18n="nigeria.cta.title">抓住尼日利亚市场黄金机遇</h2>
+                <p class="cta-subtitle" data-i18n="nigeria.cta.description">联系我们的专家团队，获取尼日利亚市场专业分析报告和定制化解决方案</p>
+                <div class="cta-actions">
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="nigeria.cta.btn_contact">立即咨询</a>
+                    <a href="../case-studies.html" class="btn btn-outline" data-i18n="nigeria.cta.btn_cases">查看案例</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">LottoBridge</h3>
-                    <p class="footer-description" data-i18n="footer.description">全球彩票出海一站式解决方案平台，为您提供专业的技术支持和服务。</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.quick_links">快速链接</h4>
-                    <ul class="footer-links">
-                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products-new.html" data-i18n="nav.products">产品</a></li>
-                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
-                    </ul>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
+                    <p>Email: info@lottobridge.com</p>
+                    <p>Tel: +86 400-888-8888</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.services">服务</h4>
-                    <ul class="footer-links">
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
-                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle" data-i18n="footer.contact">联系方式</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@lottobridge.com</li>
-                        <li><i class="fas fa-phone"></i> +86 400-888-8888</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 深圳市南山区科技园</li>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
+                    <ul>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利。</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- 脚本 -->
+    <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html> 

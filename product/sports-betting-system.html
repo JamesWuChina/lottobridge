@@ -3,105 +3,838 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="sports.title">体育博彩系统 - LottoBridge</title>
+    <title data-i18n="sports.page.title">体育博彩系统解决方案 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 专业高端样式优化 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+            --gradient-accent: linear-gradient(135deg, #1a3e8c 0%, #2563eb 50%, #3b82f6 100%);
+        }
+
+        .hero-banner {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/></linearGradient></defs><circle cx="100" cy="50" r="25" fill="url(%23grad1)"/><circle cx="800" cy="80" r="35" fill="url(%23grad1)"/><circle cx="500" cy="200" r="20" fill="url(%23grad1)"/><polygon points="300,100 320,80 340,100 320,120" fill="url(%23grad1)"/><polygon points="900,150 920,130 940,150 920,170" fill="url(%23grad1)"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #fef2f2, #fecaca);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--nav-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 25px auto 0;
+            line-height: 1.7;
+        }
+
+        .features-grid, .betting-types-grid, .tech-grid, .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card, .betting-card, .tech-card, .compliance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before, .betting-card::before, .tech-card::before, .compliance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .feature-card:hover, .betting-card:hover, .tech-card:hover, .compliance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon, .betting-icon, .tech-icon, .compliance-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .odds-engine {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .odds-card {
+            background: linear-gradient(135deg, #fef2f2, #fecaca);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid #fca5a5;
+            transition: all 0.3s ease;
+        }
+
+        .odds-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+        }
+
+        .odds-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        .sports-coverage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .sport-item {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .sport-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+        }
+
+        .sport-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto 15px;
+        }
+
+        .risk-management {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 1px solid #7dd3fc;
+        }
+
+        .risk-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .risk-feature i {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320"><circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 16px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            border-color: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(26, 62, 140, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-red);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .footer {
+            background-color: var(--nav-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .features-grid, .betting-types-grid, .tech-grid, .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-actions, .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sports-coverage {
+                flex-direction: column;
+            }
+
+            .odds-engine {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
-                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
-                </div>
-                <div class="nav-actions">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    </ul>
                     <div class="language-selector">
                         <select id="languageSelect">
                             <option value="zh">中文</option>
                             <option value="en">English</option>
                             <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="ko">한국어</option>
+                            <option value="ru">Русский</option>
                         </select>
                     </div>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
-    <section class="hero-banner product-hero">
+    <section class="hero-banner">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n="sports.hero.title">体育博彩系统解决方案</h1>
-                <p class="hero-subtitle" data-i18n="sports.hero.subtitle">全渠道体育博彩平台，安全合规，灵活定制</p>
+                <h1 class="hero-title" data-i18n="sports.hero.title">全球领先体育博彩系统解决方案</h1>
+                <p class="hero-subtitle" data-i18n="sports.hero.description">基于AI智能赔率引擎的企业级体育博彩平台，覆盖全球主流体育赛事，集成实时数据流、多元投注模式与智能风控系统，为运营商提供安全、合规、高效的博彩服务</p>
                 <div class="hero-actions">
-                    <a href="#features" class="btn btn-primary" data-i18n="sports.hero.viewFeatures">系统亮点</a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="sports.hero.contact">咨询方案</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="image-placeholder hero-image">
-                    <span class="placeholder-text" data-i18n="sports.hero.imageText">体育博彩系统展示</span>
+                    <a href="#features" class="btn btn-primary" data-i18n="sports.hero.btn_features">核心功能</a>
+                    <a href="#betting-types" class="btn btn-outline" data-i18n="sports.hero.btn_betting">投注模式</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模块一：核心功能亮点 -->
-    <section class="sports-features-section" id="features">
+    <!-- 核心功能特性 -->
+    <section class="section" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="sports.features.title">核心功能亮点</h2>
-                <p class="section-subtitle" data-i18n="sports.features.subtitle">支持多种玩法，灵活适配全球市场</p>
+                <h2 class="section-title" data-i18n="sports.features.title">智能化核心功能体系</h2>
+                <p class="section-subtitle" data-i18n="sports.features.description">集成人工智能、大数据分析与区块链技术，打造新一代体育博彩运营平台</p>
             </div>
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3 data-i18n="sports.features.odds.title">多样赔率引擎</h3>
-                    <p data-i18n="sports.features.odds.desc">支持固定赔率、浮动赔率、亚洲盘等多种模式</p>
+                    <h3 data-i18n="sports.features.ai_odds.title">AI智能赔率引擎</h3>
+                    <p data-i18n="sports.features.ai_odds.description">基于机器学习的动态赔率调整系统，实时分析市场情况与投注趋势</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.features.ai_odds.feature1">深度学习价格模型</li>
+                        <li data-i18n="sports.features.ai_odds.feature2">实时市场情绪分析</li>
+                        <li data-i18n="sports.features.ai_odds.feature3">自动套利检测与防护</li>
+                        <li data-i18n="sports.features.ai_odds.feature4">多因子风险定价算法</li>
+                        <li data-i18n="sports.features.ai_odds.feature5">赔率历史回测优化</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="4" width="16" height="16" fill="#2563eb"/>
-                        </svg>
+                        <i class="fas fa-satellite-dish"></i>
                     </div>
-                    <h3 data-i18n="sports.features.live.title">实时赛事数据</h3>
-                    <p data-i18n="sports.features.live.desc">集成全球主流赛事数据源，实时更新</p>
+                    <h3 data-i18n="sports.features.live_data.title">实时赛事数据流</h3>
+                    <p data-i18n="sports.features.live_data.description">与全球顶级数据供应商合作，提供毫秒级赛事数据更新与统计分析</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.features.live_data.feature1">Sportradar官方数据源</li>
+                        <li data-i18n="sports.features.live_data.feature2">毫秒级数据同步技术</li>
+                        <li data-i18n="sports.features.live_data.feature3">多维度统计分析</li>
+                        <li data-i18n="sports.features.live_data.feature4">可视化比赛追踪</li>
+                        <li data-i18n="sports.features.live_data.feature5">历史数据深度挖掘</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M9 12L11 14L15 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="fas fa-shield-virus"></i>
                     </div>
-                    <h3 data-i18n="sports.features.security.title">安全合规</h3>
-                    <p data-i18n="sports.features.security.desc">多重风控与合规体系，保障资金与数据安全</p>
+                    <h3 data-i18n="sports.features.risk_control.title">全方位风险管控</h3>
+                    <p data-i18n="sports.features.risk_control.description">AI驱动的实时风险检测与控制系统，保障平台稳定运营</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.features.risk_control.feature1">异常投注模式识别</li>
+                        <li data-i18n="sports.features.risk_control.feature2">账户关联性分析</li>
+                        <li data-i18n="sports.features.risk_control.feature3">动态限额管理</li>
+                        <li data-i18n="sports.features.risk_control.feature4">反洗钱智能监控</li>
+                        <li data-i18n="sports.features.risk_control.feature5">合规性自动审计</li>
+                    </ul>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2563eb" stroke-width="2" fill="none"/>
-                        </svg>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 data-i18n="sports.features.custom.title">灵活定制</h3>
-                    <p data-i18n="sports.features.custom.desc">支持多语言、多币种、多渠道接入</p>
+                    <h3 data-i18n="sports.features.omnichannel.title">全渠道投注体验</h3>
+                    <p data-i18n="sports.features.omnichannel.description">支持Web、移动端、API等多渠道接入，提供一致的用户体验</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.features.omnichannel.feature1">响应式Web平台</li>
+                        <li data-i18n="sports.features.omnichannel.feature2">原生移动App开发</li>
+                        <li data-i18n="sports.features.omnichannel.feature3">RESTful API接口</li>
+                        <li data-i18n="sports.features.omnichannel.feature4">第三方系统集成</li>
+                        <li data-i18n="sports.features.omnichannel.feature5">白标解决方案</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 投注模式与赔率类型 -->
+    <section class="section bg-light" id="betting-types">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="sports.betting.title">多元化投注模式与赔率体系</h2>
+                <p class="section-subtitle" data-i18n="sports.betting.description">支持全球主流投注模式，满足不同地区用户偏好与监管要求</p>
+            </div>
+
+            <div class="odds-engine">
+                <div class="odds-card">
+                    <div class="odds-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 data-i18n="sports.betting.fixed_odds.title">固定赔率</h3>
+                    <p data-i18n="sports.betting.fixed_odds.description">经典欧洲模式，投注时确定赔率</p>
+                    <ul>
+                        <li data-i18n="sports.betting.fixed_odds.feature1">• 胜负平投注</li>
+                        <li data-i18n="sports.betting.fixed_odds.feature2">• 让球盘投注</li>
+                        <li data-i18n="sports.betting.fixed_odds.feature3">• 大小球投注</li>
+                        <li data-i18n="sports.betting.fixed_odds.feature4">• 单双投注</li>
+                    </ul>
+                </div>
+
+                <div class="odds-card">
+                    <div class="odds-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 data-i18n="sports.betting.asian_handicap.title">亚洲盘口</h3>
+                    <p data-i18n="sports.betting.asian_handicap.description">亚洲市场主流的让球投注模式</p>
+                    <ul>
+                        <li data-i18n="sports.betting.asian_handicap.feature1">• 主让客胜</li>
+                        <li data-i18n="sports.betting.asian_handicap.feature2">• 水位动态调整</li>
+                        <li data-i18n="sports.betting.asian_handicap.feature3">• 半球盘全球盘</li>
+                        <li data-i18n="sports.betting.asian_handicap.feature4">• 独赢走盘</li>
+                    </ul>
+                </div>
+
+                <div class="odds-card">
+                    <div class="odds-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="sports.betting.exchange.title">交易所模式</h3>
+                    <p data-i18n="sports.betting.exchange.description">P2P投注交易，用户间直接博弈</p>
+                    <ul>
+                        <li data-i18n="sports.betting.exchange.feature1">• Back & Lay投注</li>
+                        <li data-i18n="sports.betting.exchange.feature2">• 流动性聚合</li>
+                        <li data-i18n="sports.betting.exchange.feature3">• 实时价格发现</li>
+                        <li data-i18n="sports.betting.exchange.feature4">• 套利机会提示</li>
+                    </ul>
+                </div>
+
+                <div class="odds-card">
+                    <div class="odds-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h3 data-i18n="sports.betting.live_betting.title">滚球投注</h3>
+                    <p data-i18n="sports.betting.live_betting.description">比赛进行中的实时投注</p>
+                    <ul>
+                        <li data-i18n="sports.betting.live_betting.feature1">• 实时赔率更新</li>
+                        <li data-i18n="sports.betting.live_betting.feature2">• 比赛进程跟踪</li>
+                        <li data-i18n="sports.betting.live_betting.feature3">• 多样化滚球市场</li>
+                        <li data-i18n="sports.betting.live_betting.feature4">• 现金退出功能</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 体育赛事覆盖 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="sports.coverage.title">全球体育赛事全覆盖</h2>
+                <p class="section-subtitle" data-i18n="sports.coverage.description">覆盖全球60+运动项目，100,000+年度赛事，满足不同市场需求</p>
+            </div>
+
+            <div class="sports-coverage">
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.football.title">足球</h4>
+                    <p data-i18n="sports.coverage.football.leagues">五大联赛+世界杯</p>
+                </div>
+
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.basketball.title">篮球</h4>
+                    <p data-i18n="sports.coverage.basketball.leagues">NBA + CBA + 欧洲联赛</p>
+                </div>
+
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-baseball-ball"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.baseball.title">棒球</h4>
+                    <p data-i18n="sports.coverage.baseball.leagues">MLB + NPB + KBO</p>
+                </div>
+
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.athletics.title">田径</h4>
+                    <p data-i18n="sports.coverage.athletics.events">奥运会 + 世锦赛</p>
+                </div>
+
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.table_tennis.title">乒乓球</h4>
+                    <p data-i18n="sports.coverage.table_tennis.events">世乒赛 + 中超联赛</p>
+                </div>
+
+                <div class="sport-item">
+                    <div class="sport-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4 data-i18n="sports.coverage.olympics.title">奥运项目</h4>
+                    <p data-i18n="sports.coverage.olympics.events">夏奥 + 冬奥全项目</p>
+                </div>
+            </div>
+
+            <div class="risk-management">
+                <h3 data-i18n="sports.coverage.risk_management.title">
+                    <i class="fas fa-shield-alt"></i>
+                    专业风险管理体系
+                </h3>
+                <div class="risk-feature">
+                    <i class="fas fa-eye"></i>
+                    <span data-i18n="sports.coverage.risk_management.monitoring">24/7实时监控，AI异常行为检测</span>
+                </div>
+                <div class="risk-feature">
+                    <i class="fas fa-ban"></i>
+                    <span data-i18n="sports.coverage.risk_management.limits">动态限额管理，智能风险预警</span>
+                </div>
+                <div class="risk-feature">
+                    <i class="fas fa-users-slash"></i>
+                    <span data-i18n="sports.coverage.risk_management.fraud">反欺诈检测，账户关联分析</span>
+                </div>
+                <div class="risk-feature">
+                    <i class="fas fa-chart-pie"></i>
+                    <span data-i18n="sports.coverage.risk_management.reporting">风险报告自动生成，合规性监控</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构与安全 -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="sports.technology.title">企业级技术架构与安全保障</h2>
+                <p class="section-subtitle" data-i18n="sports.technology.description">基于云原生微服务架构，采用零信任安全模型，确保99.99%系统可用性</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 data-i18n="sports.technology.cloud_native.title">云原生架构</h3>
+                    <p data-i18n="sports.technology.cloud_native.description">基于Kubernetes的容器化部署，支持弹性扩缩容</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.technology.cloud_native.feature1">Docker容器化部署</li>
+                        <li data-i18n="sports.technology.cloud_native.feature2">自动扩缩容机制</li>
+                        <li data-i18n="sports.technology.cloud_native.feature3">服务网格管理</li>
+                        <li data-i18n="sports.technology.cloud_native.feature4">CI/CD持续集成</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-i18n="sports.technology.data_processing.title">高性能数据处理</h3>
+                    <p data-i18n="sports.technology.data_processing.description">实时数据流处理，支持百万级并发用户</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.technology.data_processing.feature1">Apache Kafka消息队列</li>
+                        <li data-i18n="sports.technology.data_processing.feature2">Redis缓存加速</li>
+                        <li data-i18n="sports.technology.data_processing.feature3">Elasticsearch搜索引擎</li>
+                        <li data-i18n="sports.technology.data_processing.feature4">分布式数据库集群</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 data-i18n="sports.technology.security.title">零信任安全架构</h3>
+                    <p data-i18n="sports.technology.security.description">端到端加密，多层次安全防护</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.technology.security.feature1">TLS 1.3端到端加密</li>
+                        <li data-i18n="sports.technology.security.feature2">零信任网络架构</li>
+                        <li data-i18n="sports.technology.security.feature3">多因子身份认证</li>
+                        <li data-i18n="sports.technology.security.feature4">WAF应用防火墙</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合规与监管 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="sports.compliance.title">全球合规与监管支持</h2>
+                <p class="section-subtitle" data-i18n="sports.compliance.description">支持全球主要博彩监管机构要求，确保合规运营</p>
+            </div>
+
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <div class="compliance-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 data-i18n="sports.compliance.licenses.title">监管牌照支持</h3>
+                    <p data-i18n="sports.compliance.licenses.description">支持英国、马耳他、直布罗陀等主流监管要求</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.compliance.licenses.feature1">英国博彩委员会(UKGC)</li>
+                        <li data-i18n="sports.compliance.licenses.feature2">马耳他博彩局(MGA)</li>
+                        <li data-i18n="sports.compliance.licenses.feature3">直布罗陀监管局</li>
+                        <li data-i18n="sports.compliance.licenses.feature4">库拉索eGaming许可证</li>
+                    </ul>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 data-i18n="sports.compliance.responsible_gambling.title">负责任博彩</h3>
+                    <p data-i18n="sports.compliance.responsible_gambling.description">内置玩家保护机制，防范问题赌博</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.compliance.responsible_gambling.feature1">自我排除功能</li>
+                        <li data-i18n="sports.compliance.responsible_gambling.feature2">存款限额设置</li>
+                        <li data-i18n="sports.compliance.responsible_gambling.feature3">时间限制提醒</li>
+                        <li data-i18n="sports.compliance.responsible_gambling.feature4">问题赌博检测</li>
+                    </ul>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 data-i18n="sports.compliance.aml.title">反洗钱合规</h3>
+                    <p data-i18n="sports.compliance.aml.description">完整的反洗钱与KYC系统</p>
+                    <ul class="feature-list">
+                        <li data-i18n="sports.compliance.aml.feature1">KYC身份验证</li>
+                        <li data-i18n="sports.compliance.aml.feature2">AML交易监控</li>
+                        <li data-i18n="sports.compliance.aml.feature3">可疑交易报告</li>
+                        <li data-i18n="sports.compliance.aml.feature4">制裁名单筛查</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -111,11 +844,11 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title" data-i18n="sports.cta.title">开启体育博彩新体验</h2>
-                <p class="cta-subtitle" data-i18n="sports.cta.subtitle">联系我们，获取专业的体育博彩系统解决方案</p>
+                <h2 class="cta-title" data-i18n="sports.cta.title">开启您的体育博彩业务</h2>
+                <p class="cta-subtitle" data-i18n="sports.cta.description">联系我们的专家团队，获取量身定制的体育博彩系统解决方案</p>
                 <div class="cta-actions">
-                    <a href="../contact.html" class="btn btn-primary" data-i18n="sports.cta.contact">立即咨询</a>
-                    <a href="../products.html" class="btn btn-outline" data-i18n="sports.cta.products">查看其他产品</a>
+                    <a href="../contact.html" class="btn btn-primary" data-i18n="sports.cta.btn_contact">立即咨询</a>
+                    <a href="../products.html" class="btn btn-outline" data-i18n="sports.cta.btn_products">查看其他产品</a>
                 </div>
             </div>
         </div>
@@ -126,16 +859,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
+                    <h4 data-i18n="footer.contact.title">联系方式</h4>
                     <p>Email: info@lottobridge.com</p>
                     <p>Tel: +86 400-888-8888</p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                    <h4 data-i18n="footer.products.title">产品服务</h4>
                     <ul>
                         <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
                         <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
@@ -144,32 +877,20 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- 多语言支持脚本 -->
+    <!-- Scripts -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/fr.js"></script>
     <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
     <script src="../js/languages/ru.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/i18n.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        // 初始化国际化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 检查i18n是否已初始化
-            if (window.i18n) {
-                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
-            } else {
-                console.warn('多语言系统未初始化');
-            }
-        });
-    </script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html>
