@@ -1,0 +1,537 @@
+/* 移动端统一样式 */
+/* =================== */
+/* 统一的响应式断点设计 */
+/* =================== */
+
+/* 基础变量 */
+:root {
+    --mobile-header-height: 60px;
+    --mobile-nav-height: 50px;
+    --mobile-padding: 16px;
+    --mobile-gap: 12px;
+    --mobile-border-radius: 8px;
+    --mobile-button-height: 48px;
+    --mobile-input-height: 44px;
+    --mobile-touch-target: 44px;
+    --mobile-font-size: 16px;
+    --mobile-line-height: 1.5;
+    
+    /* 移动端特有颜色 */
+    --mobile-overlay: rgba(29, 53, 87, 0.95);
+    --mobile-border: rgba(0, 0, 0, 0.1);
+    --mobile-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =================== */
+/* 移动端导航系统 */
+/* =================== */
+
+/* 汉堡菜单按钮 */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--nav-blue);
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+    transition: var(--transition);
+    width: var(--mobile-touch-target);
+    height: var(--mobile-touch-target);
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.mobile-menu-btn:hover {
+    background-color: var(--light-gray);
+}
+
+.mobile-menu-btn:active {
+    transform: scale(0.95);
+}
+
+/* 移动端导航遮罩 */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mobile-overlay);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 移动端导航菜单 */
+.mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100%;
+    background-color: var(--white);
+    z-index: 1002;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+}
+
+.mobile-nav-menu.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    padding: var(--mobile-padding);
+    border-bottom: 1px solid var(--mobile-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-gray);
+}
+
+.mobile-nav-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--nav-blue);
+    cursor: pointer;
+    padding: 8px;
+    width: var(--mobile-touch-target);
+    height: var(--mobile-touch-target);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.mobile-nav-close:hover {
+    background-color: var(--white);
+}
+
+.mobile-nav-links {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.mobile-nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    margin: 0;
+}
+
+.mobile-nav-links a {
+    display: block;
+    padding: 16px var(--mobile-padding);
+    color: var(--nav-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--mobile-font-size);
+    border-bottom: 1px solid var(--mobile-border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+}
+
+.mobile-nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-blue);
+}
+
+/* 移动端语言选择器 */
+.mobile-language-selector {
+    padding: var(--mobile-padding);
+    border-top: 1px solid var(--mobile-border);
+    background-color: var(--light-gray);
+}
+
+.mobile-language-selector select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--mobile-border);
+    border-radius: var(--mobile-border-radius);
+    background-color: var(--white);
+    font-size: var(--mobile-font-size);
+    color: var(--nav-blue);
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6,9 12,15 18,9"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+/* =================== */
+/* 移动端通用组件 */
+/* =================== */
+
+/* 移动端按钮 */
+@media (max-width: 768px) {
+    .btn {
+        min-height: var(--mobile-button-height);
+        padding: 12px 20px;
+        font-size: var(--mobile-font-size);
+        border-radius: var(--mobile-border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .btn-sm {
+        min-height: 40px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .btn-lg {
+        min-height: 56px;
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+}
+
+/* 移动端表单 */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    select,
+    textarea {
+        min-height: var(--mobile-input-height);
+        padding: 12px 16px;
+        font-size: var(--mobile-font-size);
+        border-radius: var(--mobile-border-radius);
+        border: 1px solid var(--mobile-border);
+        background-color: var(--white);
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+}
+
+/* 移动端卡片 */
+@media (max-width: 768px) {
+    .card,
+    .case-card,
+    .product-card,
+    .feature-card {
+        margin-bottom: var(--mobile-gap);
+        border-radius: var(--mobile-border-radius);
+        box-shadow: var(--mobile-shadow);
+    }
+    
+    .card-header,
+    .card-body,
+    .card-footer {
+        padding: var(--mobile-padding);
+    }
+}
+
+/* 移动端网格布局 */
+@media (max-width: 768px) {
+    .grid-1 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    
+    .grid-gap {
+        gap: var(--mobile-gap);
+    }
+}
+
+/* =================== */
+/* 移动端导航适配 */
+/* =================== */
+
+/* 平板设备 (768px - 1024px) */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .language-selector select {
+        min-width: 90px;
+        font-size: 13px;
+        padding: 8px 30px 8px 30px;
+    }
+}
+
+/* 移动设备 (最大768px) */
+@media (max-width: 768px) {
+    .header {
+        height: var(--mobile-header-height);
+    }
+    
+    .header-container {
+        padding: 12px 0;
+        min-height: var(--mobile-header-height);
+    }
+    
+    .logo {
+        margin-right: 20px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    /* 隐藏桌面导航 */
+    .nav-links,
+    .language-selector {
+        display: none;
+    }
+    
+    /* 显示移动端菜单按钮 */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* 调整页面顶部边距 */
+    main,
+    .main-content {
+        margin-top: var(--mobile-header-height);
+    }
+}
+
+/* 小屏幕移动设备 (最大480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .mobile-nav-menu {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .mobile-nav-links a {
+        padding: 18px var(--mobile-padding);
+        font-size: 18px;
+    }
+}
+
+/* =================== */
+/* 移动端页面特定样式 */
+/* =================== */
+
+/* Hero区域移动端优化 */
+@media (max-width: 768px) {
+    .hero,
+    .case-hero,
+    .product-hero {
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero h1,
+    .case-hero h1,
+    .product-hero h1 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+    }
+    
+    .hero p,
+    .case-hero p,
+    .product-hero p {
+        font-size: var(--mobile-font-size);
+        line-height: var(--mobile-line-height);
+        margin-bottom: 24px;
+    }
+    
+    .hero-buttons,
+    .case-hero-buttons,
+    .product-hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn,
+    .case-hero-buttons .btn,
+    .product-hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* 移动端工具栏 */
+@media (max-width: 768px) {
+    .mobile-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--mobile-padding);
+        background-color: var(--light-gray);
+        border-bottom: 1px solid var(--mobile-border);
+        position: sticky;
+        top: var(--mobile-header-height);
+        z-index: 100;
+    }
+    
+    .mobile-toolbar-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--nav-blue);
+    }
+    
+    .mobile-toolbar-actions {
+        display: flex;
+        gap: 8px;
+    }
+    
+    .mobile-toolbar-btn {
+        padding: 8px 12px;
+        background-color: var(--white);
+        border: 1px solid var(--mobile-border);
+        border-radius: 6px;
+        font-size: 14px;
+        color: var(--nav-blue);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .mobile-toolbar-btn:hover {
+        background-color: var(--primary-blue);
+        color: var(--white);
+    }
+}
+
+/* =================== */
+/* 移动端动画和过渡 */
+/* =================== */
+
+/* 触摸反馈 */
+@media (max-width: 768px) {
+    .btn:active,
+    .mobile-nav-links a:active,
+    .mobile-toolbar-btn:active {
+        transform: scale(0.98);
+    }
+    
+    .card:active,
+    .case-card:active,
+    .product-card:active {
+        transform: scale(0.99);
+    }
+}
+
+/* 滚动优化 */
+@media (max-width: 768px) {
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+    
+    .mobile-nav-menu {
+        overscroll-behavior: contain;
+    }
+    
+    .mobile-nav-links {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* =================== */
+/* 移动端可访问性 */
+/* =================== */
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    .mobile-nav-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .mobile-nav-links a {
+        border-bottom: 2px solid var(--mobile-border);
+    }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-nav-overlay,
+    .mobile-nav-menu,
+    .mobile-nav-links a {
+        transition: none;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    .mobile-nav-menu {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .mobile-nav-links a {
+        color: #ffffff;
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* =================== */
+/* 移动端打印样式 */
+/* =================== */
+
+@media print {
+    .mobile-menu-btn,
+    .mobile-nav-overlay,
+    .mobile-nav-menu,
+    .mobile-toolbar {
+        display: none !important;
+    }
+    
+    .header {
+        position: static;
+        box-shadow: none;
+        border-bottom: 1px solid #000;
+    }
+    
+    main,
+    .main-content {
+        margin-top: 0 !important;
+    }
+} 

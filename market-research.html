@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="market_research.page.title">市场调研 | LottoBridge</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <style>
         /* 基础样式 - 与首页保持一致 */
         :root {
@@ -1176,10 +1177,6 @@
                     <option value="ru">🇷🇺 Русский (RU)</option>
                 </select>
             </div>
-            
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
     
@@ -1490,18 +1487,6 @@
         `;
         document.head.appendChild(style);
         
-        // 移动菜单切换
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        
-        if (mobileMenuBtn && mainNav) {
-            mobileMenuBtn.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
-                this.querySelector('i').classList.toggle('fa-times');
-                this.querySelector('i').classList.toggle('fa-bars');
-            });
-        }
-        
         // 报告标签切换
         const reportTabs = document.querySelectorAll('.report-tab');
         const reportContents = document.querySelectorAll('.report-content');
@@ -1558,8 +1543,11 @@
         });
     </script>
 
+    <!-- 移动端导航系统 -->
+    <script src="js/mobile-nav.js"></script>
+
     <!-- Unified i18n System -->
-    <script src="../js/languages/zh.js"></script>
+    <script src="js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
     <script src="../js/languages/es.js"></script>
     <script src="../js/languages/fr.js"></script>

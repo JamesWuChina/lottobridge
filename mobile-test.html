@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端测试 | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--nav-blue);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-lotto {
+            color: var(--primary-blue);
+        }
+
+        .logo-bridge {
+            color: var(--primary-red);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--nav-blue);
+            padding: 10px 15px;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .language-selector {
+            position: relative;
+            margin-left: auto;
+        }
+
+        .language-selector select {
+            padding: 10px 30px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background-color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            color: var(--primary-blue);
+            min-width: 120px;
+        }
+
+        /* 主要内容 */
+        .main-content {
+            margin-top: 80px;
+            padding: 50px 0;
+        }
+
+        .test-section {
+            background-color: var(--light-gray);
+            padding: 50px 0;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .test-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-blue);
+            font-size: 28px;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .test-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .test-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .test-card p {
+            margin-bottom: 20px;
+            color: var(--medium-gray);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c8394a;
+            transform: translateY(-2px);
+        }
+
+        /* 移动端测试区域 */
+        .mobile-test-info {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .mobile-test-info h3 {
+            margin-bottom: 15px;
+        }
+
+        .mobile-test-info ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .mobile-test-info li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .mobile-test-info li::before {
+            content: '✓';
+            position: absolute;
+            left: -20px;
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .test-card {
+                padding: 20px;
+            }
+            
+            .mobile-test-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="market-research.html">市场调研</a></li>
+                    <li><a href="products.html">产品服务</a></li>
+                    <li><a href="insights.html">行业洞察</a></li>
+                    <li><a href="case-studies.html">合作案例</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <div class="mobile-test-info">
+                <h3>移动端导航测试</h3>
+                <p>这个页面用于测试移动端导航功能。请尝试以下操作：</p>
+                <ul>
+                    <li>在手机或平板上打开此页面</li>
+                    <li>点击右上角的汉堡菜单按钮</li>
+                    <li>测试侧边栏导航的滑动效果</li>
+                    <li>测试语言选择器的功能</li>
+                    <li>测试滑动手势关闭导航</li>
+                    <li>测试滚动时导航栏的隐藏/显示</li>
+                </ul>
+            </div>
+
+            <div class="test-section">
+                <h2>移动端功能测试</h2>
+                <div class="test-grid">
+                    <div class="test-card">
+                        <h3>触摸测试</h3>
+                        <p>测试移动端触摸反馈和交互体验</p>
+                        <button class="btn">点击测试</button>
+                    </div>
+                    <div class="test-card">
+                        <h3>滑动测试</h3>
+                        <p>测试水平滑动手势打开/关闭导航</p>
+                        <button class="btn">滑动测试</button>
+                    </div>
+                    <div class="test-card">
+                        <h3>响应式测试</h3>
+                        <p>测试不同屏幕尺寸下的布局适配</p>
+                        <button class="btn">布局测试</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>页面内容测试</h2>
+                <div class="test-grid">
+                    <div class="test-card">
+                        <h3>卡片布局</h3>
+                        <p>测试卡片在移动端的显示效果</p>
+                        <button class="btn">查看效果</button>
+                    </div>
+                    <div class="test-card">
+                        <h3>按钮交互</h3>
+                        <p>测试按钮的触摸反馈和点击效果</p>
+                        <button class="btn">交互测试</button>
+                    </div>
+                    <div class="test-card">
+                        <h3>文字排版</h3>
+                        <p>测试移动端文字的可读性和排版</p>
+                        <button class="btn">排版测试</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 移动端导航系统 -->
+    <script src="js/mobile-nav.js"></script>
+    
+    <script>
+        // 测试按钮点击效果
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('按钮点击测试成功！移动端交互正常工作。');
+            });
+        });
+
+        // 显示当前屏幕信息
+        function showScreenInfo() {
+            const info = {
+                宽度: window.innerWidth,
+                高度: window.innerHeight,
+                设备像素比: window.devicePixelRatio,
+                用户代理: navigator.userAgent.includes('Mobile') ? '移动设备' : '桌面设备'
+            };
+            
+            console.log('屏幕信息:', info);
+        }
+
+        // 页面加载时显示屏幕信息
+        window.addEventListener('load', showScreenInfo);
+        window.addEventListener('resize', showScreenInfo);
+    </script>
+</body>
+</html> 
