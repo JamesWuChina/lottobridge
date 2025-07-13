@@ -2041,7 +2041,7 @@ const en = {
         services: "Services",
         contact: {
             title: "Contact Us",
-            address: "No.88 Jianguo Road, Chaoyang District, Beijing"
+            address: "Block B, Hongxiang Industrial Park, Tongzhou District, Beijing"
         },
         rights: "All rights reserved",
         company: {
