@@ -318,33 +318,41 @@
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">
+                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
                     </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="insights.html" class="nav-link active" data-i18n="nav.insights">行业洞察</a>
-                    <a href="about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
+                <nav id="mainNav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
+                        <li><a href="market-research.html" data-i18n="nav.research">市场研究</a></li>
+                        <li><a href="case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="insights.html" class="active" data-i18n="nav.insights">行业洞察</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="language-selector">
+                    <select id="languageSelector">
+                        <option value="zh">🇨🇳 中文 (CN)</option>
+                        <option value="en">🇺🇸 English (US)</option>
+                        <option value="fr">🇫🇷 Français (FR)</option>
+                        <option value="es">🇪🇸 Español (ES)</option>
+                        <option value="ar">🇸🇦 العربية (SA)</option>
+                        <option value="ko">🇰🇷 한국어 (KR)</option>
+                        <option value="ru">🇷🇺 Русский (RU)</option>
+                    </select>
                 </div>
-                <div class="nav-actions">
-                    <div class="language-selector">
-                        <select id="languageSelect">
-                            <option value="zh">中文</option>
-                            <option value="en">English</option>
-                            <option value="fr">Français</option>
-                        </select>
-                    </div>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
@@ -464,36 +472,98 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- 8. 页脚 -->
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h3 data-i18n="footer.company.name">LottoBridge</h3>
-                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商</p>
+                    <p data-i18n="footer.company.description">Global lottery industry one-stop solution platform, leveraging China's strong lottery industry chain resources to help clients worldwide quickly enter the lottery market.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.contact.title">联系方式</h4>
-                    <p>Email: info@lottobridge.com</p>
-                    <p>Tel: +86 400-888-8888</p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.products.title">产品服务</h4>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.products.title">Products & Services</h3>
                     <ul>
-                        <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
-                        <li><a href="market-research.html" data-i18n="nav.research">市场研究</a></li>
-                        <li><a href="case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.products.lottery_system">Lottery System Services</a></li>
+                        <li><a href="#" data-i18n="footer.products.terminal_equipment">Terminal Equipment Services</a></li>
+                        <li><a href="#" data-i18n="footer.products.game_design">Game Design & Development</a></li>
+                        <li><a href="#" data-i18n="footer.products.printing_service">Ticket Printing Services</a></li>
+                        <li><a href="#" data-i18n="footer.products.market_research">Market Research Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.resources.title">Resource Center</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.resources.case_studies">Case Studies</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">Whitepaper Downloads</a></li>
+                        <li><a href="#" data-i18n="footer.resources.industry_reports">Industry Reports</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">Blog & News</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.contact.title">Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +8615110134225</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> No.88 Jianguo Road, Chaoyang District, Beijing</li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span></p>
+                <p>
+                    <span data-i18n="footer.copyright.company">&copy; 2023 LottoBridge</span>.
+                    <span data-i18n="footer.copyright.rights">保留所有权利。</span>
+                    | <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a>
+                    | <a href="#" data-i18n="footer.copyright.terms">使用条款</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    
+    <!-- 多语言支持脚本 -->
+    <script>
+        // 移动菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-times');
+                this.querySelector('i').classList.toggle('fa-bars');
+            });
+        }
+        
+        // 头部滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
+            }
+        });
+        
+        // 多语言功能初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查i18n是否已初始化
+            if (window.i18n) {
+                console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());
+            } else {
+                console.warn('多语言系统未初始化');
+            }
+        });
+    </script>
 
     <!-- Unified i18n System -->
     <script src="js/languages/zh.js"></script>

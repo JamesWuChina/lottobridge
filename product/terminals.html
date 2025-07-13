@@ -29,9 +29,13 @@
                 <div class="nav-actions">
                     <div class="language-selector">
                         <select id="languageSelect">
-                            <option value="zh">中文</option>
-                            <option value="en">English</option>
-                            <option value="fr">Français</option>
+                            <option value="zh">🇨🇳 中文 (CN)</option>
+                            <option value="en">🇺🇸 English (US)</option>
+                            <option value="es">🇪🇸 Español (ES)</option>
+                            <option value="fr">🇫🇷 Français (FR)</option>
+                            <option value="ko">🇰🇷 한국어 (KR)</option>
+                            <option value="ar">🇸🇦 العربية (SA)</option>
+                            <option value="ru">🇷🇺 Русский (RU)</option>
                         </select>
                     </div>
                 </div>
@@ -153,29 +157,59 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>LottoBridge</h3>
-                    <p data-i18n="footer.description">专业的彩票系统解决方案提供商</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-i18n="footer.company.name">LottoBridge</h3>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.contact">联系方式</h4>
-                    <p>Email: info@lottobridge.com</p>
-                    <p>Tel: +86 400-888-8888</p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.services">服务</h4>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
-                        <li><a href="../market-research.html" data-i18n="nav.research">市场研究</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="../products.html" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="../product/terminals.html" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="../products.html" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="../product/printing.html" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="../market-research.html" data-i18n="footer.products.market_research">市场调研服务</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
+                    <ul>
+                        <li><a href="../case-studies.html" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="../insights.html" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +8615110134225</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.rights">保留所有权利</span></p>
+                <p>
+                    <span data-i18n="footer.copyright.company">&copy; 2023 LottoBridge</span>.
+                    <span data-i18n="footer.copyright.rights">保留所有权利。</span>
+                    | <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a>
+                    | <a href="#" data-i18n="footer.copyright.terms">使用条款</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -184,14 +218,14 @@
     
 
     <!-- Unified i18n System -->
-    <script src="js/languages/zh.js"></script>
-    <script src="js/languages/en.js"></script>
-    <script src="js/languages/es.js"></script>
-    <script src="js/languages/fr.js"></script>
-    <script src="js/languages/ar.js"></script>
-    <script src="js/languages/ko.js"></script>
-    <script src="js/languages/ru.js"></script>
-    <script src="js/unified-i18n.js"></script>
-    <script src="js/i18n-validation.js"></script>
+    <script src="../js/languages/zh.js"></script>
+    <script src="../js/languages/en.js"></script>
+    <script src="../js/languages/es.js"></script>
+    <script src="../js/languages/fr.js"></script>
+    <script src="../js/languages/ar.js"></script>
+    <script src="../js/languages/ko.js"></script>
+    <script src="../js/languages/ru.js"></script>
+    <script src="../js/unified-i18n.js"></script>
+    <script src="../js/i18n-validation.js"></script>
 </body>
 </html>
