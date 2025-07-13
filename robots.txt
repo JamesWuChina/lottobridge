@@ -1,0 +1,67 @@
+# Robots.txt for LottoBridge
+# 彩票出海一站式解决方案平台
+
+# 允许所有搜索引擎爬虫访问
+User-agent: *
+Allow: /
+
+# 特别允许Google爬虫
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# 特别允许百度爬虫
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# 特别允许Bing爬虫
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# 特别允许Yandex爬虫（俄语地区）
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# 特别允许Sogou爬虫（中文搜索）
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 2
+
+# 特别允许360搜索爬虫（中文搜索）
+User-agent: 360Spider
+Allow: /
+Crawl-delay: 2
+
+# 禁止访问的目录和文件
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /components/
+Disallow: /mobile-test.html
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /cache/
+
+# 允许访问重要的静态资源
+Allow: /css/style.css
+Allow: /css/mobile.css
+Allow: /js/unified-i18n.js
+Allow: /js/seo-config.js
+Allow: /images/*.jpg
+Allow: /images/*.png
+Allow: /images/*.svg
+
+# Sitemap位置
+Sitemap: https://lottobridge.com/sitemap.xml
+
+# 网站根目录
+Host: https://lottobridge.com
+
+# 访问延迟（避免对服务器造成压力）
+# Google和主流搜索引擎：1秒
+# 其他搜索引擎：2秒 
