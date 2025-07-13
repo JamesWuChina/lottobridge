@@ -1665,6 +1665,10 @@ const fr = {
         title: "Sélection de Cas de Coopération",
         subtitle: "Cas de succès réels, montrant comment LottoBridge aide les clients à réaliser l\'atterrissage commercial de loterie",
         view_details: "Voir les Détails",
+        cases: {
+            view_details: "Voir les Détails",
+            download_brief: "Télécharger le Résumé"
+        },
         mexico: {
             title: "Transformation Numérique de Loterie Nationale Mexicaine",
             type: "Agence Gouvernementale",
@@ -1728,6 +1732,54 @@ const fr = {
             deliverable1: "Application Mobile",
             deliverable2: "Intégration de Paiement",
             deliverable3: "Promotion de Marché",
+            feature1: "Conseil en catégories de loterie + conception de billets sécurisés + impression de billets instantanés",
+            feature2: "Fourni 10 types de billets personnalisés, tous approuvés par le gouvernement local",
+            testimonial: "La solution mobile de LottoBridge nous a permis d'atteindre une croissance par saut dans le marché kenyan !",
+            country: "Kenya",
+            country_name: "Kenya",
+            client: "PDG d'opérateur de loterie privé kényan",
+            client_type: "Type de Client :",
+            client_type_value: "Opérateur Privé",
+            period: "Période du Projet :",
+            period_value: "2021-2023",
+            result: "Principaux Résultats :",
+            result_value: "Croissance des utilisateurs 120%, part de marché passée au top deux",
+            scope_value: "Développement d'application mobile, intégration de paiement, déploiement de terminaux, promotion de marché",
+            page_title: "Construction de Plateforme de Loterie Mobile du Kenya | LottoBridge",
+            slogan: "Mobile d'abord, l'innovation conduit le nouvel écosystème de loterie africaine",
+            delivery_title: "Contenu de Livraison et Processus de Service",
+            highlight1: {
+                title: "Conception Mobile First",
+                desc: "Expérience mobile complète, compatible avec les smartphones grand public, achat de loterie pratique"
+            },
+            highlight2: {
+                title: "Innovation d'Intégration de Paiement",
+                desc: "Intégration profonde avec le paiement mobile M-Pesa, amélioration du taux de conversion des utilisateurs"
+            },
+            highlight3: {
+                title: "Croissance Significative des Utilisateurs",
+                desc: "Croissance des utilisateurs 120%, part de marché passée au top deux"
+            },
+            highlight4: {
+                title: "Promotion de Marché Réussie",
+                desc: "Promotion de marché multi-canaux, influence de marque grandement améliorée"
+            },
+            delivery1: {
+                title: "Recherche de Marché",
+                desc: "Analyse approfondie du marché de la loterie kényane et des besoins des utilisateurs"
+            },
+            delivery2: {
+                title: "Développement d'Application Mobile",
+                desc: "Développement personnalisé d'application de loterie adaptée localement"
+            },
+            delivery3: {
+                title: "Intégration de Paiement",
+                desc: "Intégration profonde avec le paiement mobile M-Pesa"
+            },
+            delivery4: {
+                title: "Promotion de Marché",
+                desc: "Promotion de marché multi-canaux, amélioration de l'influence de marque"
+            },
             highlight1: {
                 desc: "case_studies.kenya.highlight1.desc",
                 title: "case_studies.kenya.highlight1.title"
@@ -2604,14 +2656,22 @@ const fr = {
         download_handbook: "Télécharger le Manuel de Service"
     },
     footer: {
-        company: "footer.company",
+        company: {
+            name: "LottoBridge",
+            description: "Fournisseur leader mondial de solutions technologiques de loterie, engagé à fournir des solutions innovantes et fiables pour les clients."
+        },
         products: {
             title: "Produits et Services",
             lottery_system: "Solutions de Systèmes de Loterie",
             terminal_equipment: "Services d'Équipement Terminal",
             game_design: "Conception et Développement de Jeux",
             printing_service: "Services d'Impression de Billets",
-            market_research: "Services d'Études de Marché"
+            market_research: "Services d'Études de Marché",
+            digital: "Système de Loterie Numérique",
+            instant: "Système de Billets Instantanés",
+            sports: "Système de Paris Sportifs",
+            video: "Système de Loterie Vidéo",
+            terminals: "Terminaux de Loterie"
         },
         resources: {
             title: "Centre de Ressources",
@@ -2619,14 +2679,24 @@ const fr = {
             whitepapers: "Téléchargements de Livres Blancs",
             industry_reports: "Rapports de l'Industrie",
             blog_news: "Blog et Actualités",
-            faq: "FAQ"
+            faq: "FAQ",
+            research: "Études de Marché",
+            cases: "Études de Cas",
+            insights: "Perspectives de l'Industrie",
+            about: "À Propos de Nous",
+            contact: "Contactez-Nous"
         },
-        contact: "Contact",
+        contact: {
+            title: "Informations de Contact",
+            address: "Bloc B, Parc Industriel Hongxiang, District Tongzhou, Pékin",
+            wechat: "Scannez pour suivre WeChat"
+        },
         copyright: {
             company: "© 2023 LottoBridge",
-            rights: "Tous droits réservés.",
+            rights: "Tous droits réservés",
             privacy: "Politique de Confidentialité",
-            terms: "Conditions d'Utilisation"
+            terms: "Conditions de Service",
+            cookies: "Politique de Cookies"
         },
         terms: "footer.terms",
         services: "Services",

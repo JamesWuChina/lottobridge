@@ -307,14 +307,22 @@ const es = {
         download_handbook: "Download Handbook"
     },
     footer: {
-        company: "footer.company",
+        company: {
+            name: "LottoBridge",
+            description: "Proveedor líder mundial de soluciones tecnológicas de lotería, comprometido con brindar soluciones innovadoras y confiables para clientes."
+        },
         products: {
             title: "Productos y Servicios",
             lottery_system: "Servicios de Sistema de Lotería",
             terminal_equipment: "Servicios de Equipos Terminales",
             game_design: "Diseño y Desarrollo de Juegos",
             printing_service: "Servicios de Impresión de Boletos",
-            market_research: "Servicios de Investigación de Mercado"
+            market_research: "Servicios de Investigación de Mercado",
+            digital: "Sistema de Lotería Digital",
+            instant: "Sistema de Boletos Instantáneos",
+            sports: "Sistema de Apuestas Deportivas",
+            video: "Sistema de Lotería de Video",
+            terminals: "Terminales de Lotería"
         },
         resources: {
             title: "Centro de Recursos",
@@ -322,14 +330,24 @@ const es = {
             whitepapers: "Descargas de Libros Blancos",
             industry_reports: "Reportes de la Industria",
             blog_news: "Blog y Noticias",
-            faq: "FAQ"
+            faq: "FAQ",
+            research: "Investigación de Mercado",
+            cases: "Estudios de Caso",
+            insights: "Perspectivas de la Industria",
+            about: "Acerca de Nosotros",
+            contact: "Contáctanos"
         },
-        contact: "Contacto",
+        contact: {
+            title: "Información de Contacto",
+            address: "Bloque B, Parque Industrial Hongxiang, Distrito Tongzhou, Pekín",
+            wechat: "Escanea para seguir WeChat"
+        },
         copyright: {
             company: "© 2023 LottoBridge",
-            rights: "Todos los derechos reservados.",
+            rights: "Todos los derechos reservados",
             privacy: "Política de Privacidad",
-            terms: "Términos de Uso"
+            terms: "Términos de Servicio",
+            cookies: "Política de Cookies"
         },
         services: "Servicios",
         description: "Global lottery overseas one-stop solution platform, providing professional technical support and services.",
@@ -1227,6 +1245,8 @@ const es = {
             apply: "Aplicar"
         },
         cases: {
+            view_details: "Ver Detalles",
+            download_brief: "Descargar Resumen",
             cambodia: {
                 title: "Sistema de Lotería Nacional de Camboya",
                 type: "Configuración del Sistema y Despliegue de Terminales",
@@ -1527,13 +1547,61 @@ const es = {
             client_type_value: "case_studies.mexico.client_type_value"
         },
         kenya: {
-            title: "Desarrollo de Plataforma de Lotería Móvil de Kenia",
+            title: "Construcción de Plataforma de Lotería Móvil de Kenia",
             type: "Operador Privado",
             scope: "Móvil Primero",
             description: "Solución de lotería móvil basada en el sistema de pago M-Pesa, logrando rápida penetración de mercado y crecimiento de usuarios",
             deliverable1: "Aplicación Móvil",
             deliverable2: "Integración de Pagos",
             deliverable3: "Promoción de Mercado",
+            feature1: "Consultoría de categorías de lotería + diseño de boletos de seguridad + impresión de boletos instantáneos",
+            feature2: "Proporcionó 10 tipos de boletos personalizados, todos aprobados por el gobierno local",
+            testimonial: "¡La solución móvil de LottoBridge nos ha permitido lograr un crecimiento exponencial en el mercado keniano!",
+            country: "Kenia",
+            country_name: "Kenia",
+            client: "CEO de Operador de Lotería Privada de Kenia",
+            client_type: "Tipo de Cliente:",
+            client_type_value: "Operador Privado",
+            period: "Período del Proyecto:",
+            period_value: "2021-2023",
+            result: "Resultados Principales:",
+            result_value: "Crecimiento de usuarios 120%, cuota de mercado subió al top dos",
+            scope_value: "Desarrollo de aplicación móvil, integración de pagos, despliegue de terminales, promoción de mercado",
+            page_title: "Construcción de Plataforma de Lotería Móvil de Kenia | LottoBridge",
+            slogan: "Móvil primero, la innovación impulsa el nuevo ecosistema de lotería africana",
+            delivery_title: "Contenido de Entrega y Proceso de Servicio",
+            highlight1: {
+                title: "Diseño Móvil Primero",
+                desc: "Experiencia móvil completa, compatible con smartphones principales, compra de lotería conveniente"
+            },
+            highlight2: {
+                title: "Innovación de Integración de Pagos",
+                desc: "Integración profunda con pago móvil M-Pesa, mejorando tasa de conversión de usuarios"
+            },
+            highlight3: {
+                title: "Crecimiento Significativo de Usuarios",
+                desc: "Crecimiento de usuarios 120%, cuota de mercado subió al top dos"
+            },
+            highlight4: {
+                title: "Promoción de Mercado Exitosa",
+                desc: "Promoción de mercado multicanal, influencia de marca mejorada enormemente"
+            },
+            delivery1: {
+                title: "Investigación de Mercado",
+                desc: "Análisis profundo del mercado de lotería de Kenia y necesidades de usuarios"
+            },
+            delivery2: {
+                title: "Desarrollo de Aplicación Móvil",
+                desc: "Desarrollo personalizado de aplicación de lotería adaptada localmente"
+            },
+            delivery3: {
+                title: "Integración de Pagos",
+                desc: "Integración profunda con pago móvil M-Pesa"
+            },
+            delivery4: {
+                title: "Promoción de Mercado",
+                desc: "Promoción de mercado multicanal, mejorando influencia de marca"
+            },
             highlight1: {
                 desc: "case_studies.kenya.highlight1.desc",
                 title: "case_studies.kenya.highlight1.title"

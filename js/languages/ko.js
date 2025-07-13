@@ -307,14 +307,22 @@ const ko = {
         download_handbook: "Download Handbook"
     },
     footer: {
-        company: "footer.company",
+        company: {
+            name: "LottoBridge",
+            description: "고객에게 혁신적이고 신뢰할 수 있는 복권 시스템 솔루션을 제공하는 글로벌 복권 기술 솔루션 선도 업체입니다."
+        },
         products: {
             title: "제품 및 서비스",
             lottery_system: "복권 시스템 서비스",
             terminal_equipment: "터미널 장비 서비스",
             game_design: "게임 디자인 및 개발",
             printing_service: "복권 인쇄 서비스",
-            market_research: "시장 조사 서비스"
+            market_research: "시장 조사 서비스",
+            digital: "디지털 복권 시스템",
+            instant: "즉석 복권 시스템",
+            sports: "스포츠 베팅 시스템",
+            video: "비디오 복권 시스템",
+            terminals: "복권 터미널"
         },
         resources: {
             title: "자원 센터",
@@ -322,14 +330,24 @@ const ko = {
             whitepapers: "백서 다운로드",
             industry_reports: "산업 보고서",
             blog_news: "블로그 및 뉴스",
-            faq: "FAQ"
+            faq: "FAQ",
+            research: "시장 조사",
+            cases: "사례 연구",
+            insights: "업계 인사이트",
+            about: "회사 소개",
+            contact: "연락처"
         },
-        contact: "연락처",
+        contact: {
+            title: "연락처 정보",
+            address: "베이징 통저우구 홍샹산업단지 B동",
+            wechat: "WeChat 팔로우를 위해 스캔하세요"
+        },
         copyright: {
             company: "© 2023 LottoBridge",
-            rights: "모든 권리 보유.",
+            rights: "모든 권리 보유",
             privacy: "개인정보 보호정책",
-            terms: "이용약관"
+            terms: "서비스 약관",
+            cookies: "쿠키 정책"
         },
         services: "서비스",
         description: "Global lottery overseas one-stop solution platform, providing professional technical support and services.",
@@ -1227,6 +1245,8 @@ const ko = {
             apply: "적용"
         },
         cases: {
+            view_details: "자세히 보기",
+            download_brief: "요약 다운로드",
             cambodia: {
                 title: "캄보디아 국가 복권 시스템",
                 type: "시스템 구축 및 터미널 배포",
@@ -1527,13 +1547,61 @@ const ko = {
             client_type_value: "case_studies.mexico.client_type_value"
         },
         kenya: {
-            title: "케냐 모바일 복권 플랫폼 개발",
+            title: "케냐 모바일 복권 플랫폼 구축",
             type: "민간 운영사",
             scope: "모바일 우선",
             description: "M-Pesa 결제 시스템 기반 모바일 복권 솔루션으로 빠른 시장 침투와 사용자 증가를 달성했습니다",
             deliverable1: "모바일 애플리케이션",
             deliverable2: "결제 통합",
             deliverable3: "시장 홍보",
+            feature1: "복권 카테고리 컨설팅 + 보안 복권 디자인 + 즉석 복권 인쇄",
+            feature2: "10가지 맞춤형 복권 유형 제공, 모두 지방 정부 승인 통과",
+            testimonial: "LottoBridge의 모바일 솔루션으로 케냐 시장에서 도약적 성장을 이루었습니다!",
+            country: "케냐",
+            country_name: "케냐",
+            client: "케냐 민간 복권 운영사 CEO",
+            client_type: "클라이언트 유형:",
+            client_type_value: "민간 운영사",
+            period: "프로젝트 기간:",
+            period_value: "2021-2023",
+            result: "주요 성과:",
+            result_value: "사용자 120% 증가, 시장 점유율 상위 2위로 상승",
+            scope_value: "모바일 앱 개발, 결제 통합, 터미널 배포, 시장 홍보",
+            page_title: "케냐 모바일 복권 플랫폼 구축 | LottoBridge",
+            slogan: "모바일 우선, 혁신이 아프리카 복권의 새로운 생태계를 이끌다",
+            delivery_title: "전달 내용 및 서비스 프로세스",
+            highlight1: {
+                title: "모바일 우선 설계",
+                desc: "완전한 모바일 경험, 주요 스마트폰과 호환, 편리한 복권 구매"
+            },
+            highlight2: {
+                title: "결제 통합 혁신",
+                desc: "M-Pesa 모바일 결제와 깊은 통합, 사용자 전환율 향상"
+            },
+            highlight3: {
+                title: "상당한 사용자 증가",
+                desc: "사용자 120% 증가, 시장 점유율 상위 2위로 상승"
+            },
+            highlight4: {
+                title: "성공적인 시장 홍보",
+                desc: "다채널 시장 홍보, 브랜드 영향력 크게 향상"
+            },
+            delivery1: {
+                title: "시장 조사",
+                desc: "케냐 복권 시장과 사용자 요구사항 심층 분석"
+            },
+            delivery2: {
+                title: "모바일 앱 개발",
+                desc: "현지 맞춤형 복권 앱 개발"
+            },
+            delivery3: {
+                title: "결제 통합",
+                desc: "M-Pesa 모바일 결제와 깊은 통합"
+            },
+            delivery4: {
+                title: "시장 홍보",
+                desc: "다채널 시장 홍보, 브랜드 영향력 향상"
+            },
             highlight1: {
                 desc: "case_studies.kenya.highlight1.desc",
                 title: "case_studies.kenya.highlight1.title"

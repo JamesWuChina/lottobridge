@@ -184,37 +184,41 @@
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html" class="brand-link">
-                        <span class="brand-text">LottoBridge</span>
-                    </a>
-                </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                    <a href="../products.html" class="nav-link" data-i18n="nav.products">产品服务</a>
-                    <a href="../market-research.html" class="nav-link" data-i18n="nav.research">市场研究</a>
-                    <a href="../case-studies.html" class="nav-link" data-i18n="nav.cases">案例研究</a>
-                    <a href="../insights.html" class="nav-link" data-i18n="nav.insights">行业洞察</a>
-                    <a href="../about.html" class="nav-link" data-i18n="nav.about">关于我们</a>
-                    <a href="../contact.html" class="nav-link" data-i18n="nav.contact">联系我们</a>
-                </div>
-                <div class="nav-actions">
-                    <div class="language-selector">
-                        <select id="languageSelect">
-                            <option value="zh">🇨🇳 中文 (CN)</option>
-                            <option value="en">🇺🇸 English (US)</option>
-                            <option value="es">🇪🇸 Español (ES)</option>
-                            <option value="fr">🇫🇷 Français (FR)</option>
-                            <option value="ko">🇰🇷 한국어 (KR)</option>
-                            <option value="ar">🇸🇦 العربية (SA)</option>
-                            <option value="ru">🇷🇺 Русский (RU)</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
             </div>
-        </nav>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="../products.html" class="active" data-i18n="nav.products">产品服务</a></li>
+                    <li><a href="../insights.html" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="../case-studies.html" data-i18n="nav.case_studies">合作案例</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="en">🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
+                </select>
+            </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Banner Section -->
@@ -595,7 +599,7 @@
                     <h3 data-i18n="footer.contact.title">联系我们</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
-                        <li><i class="fas fa-phone"></i> +8615110134225</li>
+                        <li><i class="fas fa-phone"></i> +8617610653863</li>
                         <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
                     </ul>
                 </div>
@@ -613,7 +617,32 @@
     </footer>
 
     <!-- Scripts -->
-    
+    <script>
+        // 移动菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-times');
+                this.querySelector('i').classList.toggle('fa-bars');
+            });
+        }
+        
+        // 多语言功能初始化和语言切换
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('languageSelector');
+            if (languageSelector && window.i18nManager) {
+                languageSelector.value = window.i18nManager.getCurrentLanguage();
+                languageSelector.addEventListener('change', function() {
+                    window.i18nManager.setLanguage(this.value);
+                });
+            } else {
+                console.warn('多语言系统未初始化');
+            }
+        });
+    </script>
 
     <!-- Unified i18n System -->
     <script src="../js/languages/zh.js"></script>

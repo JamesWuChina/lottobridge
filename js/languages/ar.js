@@ -307,14 +307,22 @@ const ar = {
         download_handbook: "Download Handbook"
     },
     footer: {
-        company: "footer.company",
+        company: {
+            name: "LottoBridge",
+            description: "مزود رائد عالمياً لحلول تكنولوجيا اليانصيب، ملتزم بتقديم حلول مبتكرة وموثوقة للعملاء."
+        },
         products: {
             title: "المنتجات والخدمات",
             lottery_system: "خدمات نظام اليانصيب",
             terminal_equipment: "خدمات المعدات الطرفية",
             game_design: "تصميم وتطوير الألعاب",
             printing_service: "خدمات طباعة البطاقات",
-            market_research: "خدمات أبحاث السوق"
+            market_research: "خدمات أبحاث السوق",
+            digital: "نظام اليانصيب الرقمي",
+            instant: "نظام التذاكر الفورية",
+            sports: "نظام المراهنات الرياضية",
+            video: "نظام يانصيب الفيديو",
+            terminals: "محطات اليانصيب"
         },
         resources: {
             title: "مركز الموارد",
@@ -322,14 +330,24 @@ const ar = {
             whitepapers: "تحميل الكتب البيضاء",
             industry_reports: "تقارير الصناعة",
             blog_news: "المدونة والأخبار",
-            faq: "الأسئلة الشائعة"
+            faq: "الأسئلة الشائعة",
+            research: "أبحاث السوق",
+            cases: "دراسات الحالة",
+            insights: "رؤى الصناعة",
+            about: "معلومات عنا",
+            contact: "اتصل بنا"
         },
-        contact: "اتصل",
+        contact: {
+            title: "معلومات الاتصال",
+            address: "المبنى ب، حديقة هونغشيانغ الصناعية، منطقة تونغتشو، بكين",
+            wechat: "امسح لمتابعة WeChat"
+        },
         copyright: {
             company: "© 2023 LottoBridge",
-            rights: "جميع الحقوق محفوظة.",
+            rights: "جميع الحقوق محفوظة",
             privacy: "سياسة الخصوصية",
-            terms: "شروط الاستخدام"
+            terms: "شروط الخدمة",
+            cookies: "سياسة ملفات تعريف الارتباط"
         },
         services: "الخدمات",
         description: "Global lottery overseas one-stop solution platform, providing professional technical support and services.",
@@ -1227,6 +1245,8 @@ const ar = {
             apply: "تطبيق"
         },
         cases: {
+            view_details: "عرض التفاصيل",
+            download_brief: "تحميل الملخص",
             cambodia: {
                 title: "نظام اليانصيب الوطني الكمبودي",
                 type: "إعداد النظام ونشر المحطات الطرفية",
@@ -1527,13 +1547,61 @@ const ar = {
             client_type_value: "case_studies.mexico.client_type_value"
         },
         kenya: {
-            title: "تطوير منصة اليانصيب المحمولة الكينية",
+            title: "بناء منصة اليانصيب المحمولة الكينية",
             type: "مشغل خاص",
             scope: "الهاتف المحمول أولاً",
             description: "حل يانصيب محمول قائم على نظام الدفع M-Pesa، تحقيق اختراق سريع للسوق ونمو المستخدمين",
             deliverable1: "تطبيق محمول",
             deliverable2: "تكامل الدفع",
             deliverable3: "ترويج السوق",
+            feature1: "استشارات فئات اليانصيب + تصميم تذاكر آمنة + طباعة تذاكر فورية",
+            feature2: "قدم 10 أنواع تذاكر مخصصة، جميعها اجتازت مراجعة الحكومة المحلية",
+            testimonial: "حل LottoBridge المحمول مكننا من تحقيق نمو نوعي في السوق الكينية!",
+            country: "كينيا",
+            country_name: "كينيا",
+            client: "الرئيس التنفيذي لمشغل اليانصيب الخاص الكيني",
+            client_type: "نوع العميل:",
+            client_type_value: "مشغل خاص",
+            period: "فترة المشروع:",
+            period_value: "2021-2023",
+            result: "النتائج الرئيسية:",
+            result_value: "نمو المستخدمين 120%، حصة السوق قفزت إلى المرتبة الثانية",
+            scope_value: "تطوير تطبيق محمول، تكامل الدفع، نشر المحطات، ترويج السوق",
+            page_title: "بناء منصة اليانصيب المحمولة الكينية | LottoBridge",
+            slogan: "المحمول أولاً، الابتكار يقود النظام البيئي الجديد لليانصيب الأفريقي",
+            delivery_title: "محتوى التسليم وعملية الخدمة",
+            highlight1: {
+                title: "تصميم المحمول أولاً",
+                desc: "تجربة محمولة كاملة، متوافقة مع الهواتف الذكية الرئيسية، شراء يانصيب مريح"
+            },
+            highlight2: {
+                title: "ابتكار تكامل الدفع",
+                desc: "تكامل عميق مع دفع M-Pesa المحمول، تحسين معدل تحويل المستخدمين"
+            },
+            highlight3: {
+                title: "نمو كبير في المستخدمين",
+                desc: "نمو المستخدمين 120%، حصة السوق قفزت إلى المرتبة الثانية"
+            },
+            highlight4: {
+                title: "ترويج السوق الناجح",
+                desc: "ترويج السوق متعدد القنوات، تأثير العلامة التجارية تحسن بشكل كبير"
+            },
+            delivery1: {
+                title: "بحث السوق",
+                desc: "تحليل متعمق لسوق اليانصيب الكيني واحتياجات المستخدمين"
+            },
+            delivery2: {
+                title: "تطوير تطبيق محمول",
+                desc: "تطوير مخصص لتطبيق يانصيب مكيف محلياً"
+            },
+            delivery3: {
+                title: "تكامل الدفع",
+                desc: "تكامل عميق مع دفع M-Pesa المحمول"
+            },
+            delivery4: {
+                title: "ترويج السوق",
+                desc: "ترويج السوق متعدد القنوات، تحسين تأثير العلامة التجارية"
+            },
             highlight1: {
                 desc: "case_studies.kenya.highlight1.desc",
                 title: "case_studies.kenya.highlight1.title"

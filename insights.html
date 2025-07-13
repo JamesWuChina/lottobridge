@@ -8,6 +8,223 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* 基础样式 */
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557; /* 导航栏文字颜色 */
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Microsoft YaHei', '微软雅黑', 'SimSun', '宋体';
+        }
+
+        body {
+            color: var(--nav-blue);
+            line-height: 1.7;
+            background-color: var(--white);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-lotto {
+            color: var(--primary-blue);
+        }
+
+        .logo-bridge {
+            color: var(--primary-red);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+            flex-wrap: nowrap !important;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-right: 0;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--nav-blue);
+            padding: 8px 12px;
+            position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* 语言选择器 */
+        .language-selector {
+            position: relative;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
+        }
+
+        .language-selector::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--primary-blue);
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--nav-blue);
+        }
+
         /* 行业洞察页面特有样式 */
         .insights-hero {
             background: linear-gradient(135deg, var(--primary-blue), #2a56c4);
@@ -293,8 +510,160 @@
             transform: translateX(3px);
         }
 
+        /* 页脚样式 */
+        footer {
+            background-color: var(--nav-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-red);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
         /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .nav-links {
+                gap: 5px;
+                margin-right: 12px;
+            }
+            
+            .nav-links a {
+                font-size: 13px;
+                padding: 7px 9px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 3px;
+                margin-right: 8px;
+            }
+            
+            .nav-links a {
+                font-size: 12px;
+                padding: 6px 7px;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
+            .nav-links {
+                gap: 3px;
+                margin-right: 5px;
+            }
+            
+            .nav-links a {
+                font-size: 13px;
+                padding: 6px 8px;
+            }
+            
+            .language-selector {
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 12px;
+                padding: 8px 25px 8px 25px;
+                min-width: 100px;
+                border-radius: 20px;
+            }
+            
+            .language-selector::before {
+                font-size: 12px;
+                left: 8px;
+            }
+            
+            .language-selector::after {
+                right: 8px;
+                font-size: 10px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+
             .insights-hero {
                 padding: 80px 0 60px;
             }
@@ -313,6 +682,39 @@
                 padding: 15px 0;
             }
         }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 2px;
+                margin-right: 3px;
+            }
+            
+            .nav-links a {
+                font-size: 11px;
+                padding: 4px 6px;
+            }
+            
+            .language-selector select {
+                font-size: 10px;
+                padding: 6px 20px 6px 20px;
+                min-width: 80px;
+                border-radius: 15px;
+            }
+            
+            .language-selector::before {
+                font-size: 10px;
+                left: 6px;
+            }
+            
+            .language-selector::after {
+                right: 6px;
+                font-size: 8px;
+            }
+            
+            .logo {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -329,8 +731,8 @@
                     <ul class="nav-links">
                         <li><a href="index.html" data-i18n="nav.home">首页</a></li>
                         <li><a href="products.html" data-i18n="nav.products">产品服务</a></li>
-                        <li><a href="market-research.html" data-i18n="nav.research">市场研究</a></li>
-                        <li><a href="case-studies.html" data-i18n="nav.cases">案例研究</a></li>
+                        <li><a href="market-research.html" data-i18n="nav.market_research">市场研究</a></li>
+                        <li><a href="case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
                         <li><a href="insights.html" class="active" data-i18n="nav.insights">行业洞察</a></li>
                         <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
                         <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
@@ -472,13 +874,13 @@
         </div>
     </section>
 
-    <!-- 8. 页脚 -->
+    <!-- 页脚 -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3 data-i18n="footer.company.name">LottoBridge</h3>
-                    <p data-i18n="footer.company.description">Global lottery industry one-stop solution platform, leveraging China's strong lottery industry chain resources to help clients worldwide quickly enter the lottery market.</p>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -488,33 +890,33 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3 data-i18n="footer.products.title">Products & Services</h3>
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="#" data-i18n="footer.products.lottery_system">Lottery System Services</a></li>
-                        <li><a href="#" data-i18n="footer.products.terminal_equipment">Terminal Equipment Services</a></li>
-                        <li><a href="#" data-i18n="footer.products.game_design">Game Design & Development</a></li>
-                        <li><a href="#" data-i18n="footer.products.printing_service">Ticket Printing Services</a></li>
-                        <li><a href="#" data-i18n="footer.products.market_research">Market Research Services</a></li>
+                        <li><a href="#" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="#" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="#" data-i18n="footer.products.market_research">市场调研服务</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 data-i18n="footer.resources.title">Resource Center</h3>
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
                     <ul>
-                        <li><a href="#" data-i18n="footer.resources.case_studies">Case Studies</a></li>
-                        <li><a href="#" data-i18n="footer.resources.whitepapers">Whitepaper Downloads</a></li>
-                        <li><a href="#" data-i18n="footer.resources.industry_reports">Industry Reports</a></li>
-                        <li><a href="#" data-i18n="footer.resources.blog_news">Blog & News</a></li>
-                        <li><a href="#" data-i18n="footer.resources.faq">FAQ</a></li>
+                        <li><a href="#" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="#" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="#" data-i18n="footer.resources.faq">常见问题</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 data-i18n="footer.contact.title">Contact Us</h3>
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
-                        <li><i class="fas fa-phone"></i> +8615110134225</li>
-                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> No.88 Jianguo Road, Chaoyang District, Beijing</li>
+                        <li><i class="fas fa-phone"></i> +8617610653863</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</li>
                     </ul>
                 </div>
             </div>
@@ -554,8 +956,33 @@
             }
         });
         
-        // 多语言功能初始化
+        // 洞察导航切换功能
         document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.insights-nav-item');
+            const insightCards = document.querySelectorAll('.insight-card');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有active类
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // 添加active类到当前项
+                    this.classList.add('active');
+                    
+                    // 获取目标类别
+                    const targetCategory = this.getAttribute('data-target');
+                    
+                    // 显示/隐藏相关卡片
+                    insightCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (targetCategory === 'all' || cardCategory === targetCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
             // 检查i18n是否已初始化
             if (window.i18n) {
                 console.log('多语言系统已初始化，当前语言:', window.i18n.getCurrentLanguage());

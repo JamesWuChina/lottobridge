@@ -1636,6 +1636,10 @@ const en = {
         title: "Featured Case Studies",
         subtitle: "Real cooperation cases showing LottoBridge\'s successful practices in global markets",
         view_details: "View Details",
+        cases: {
+            view_details: "View Details",
+            download_brief: "Download Brief"
+        },
         mexico: {
             title: "Mexico National Lottery Digital Transformation",
             type: "Government Agency",
@@ -1652,7 +1656,55 @@ const en = {
             description: "Mobile lottery solution based on M-Pesa payment system, achieved rapid market penetration and user growth",
             deliverable1: "Mobile App",
             deliverable2: "Payment Integration",
-            deliverable3: "Market Promotion"
+            deliverable3: "Market Promotion",
+            feature1: "Lottery category consulting + security ticket design + instant ticket printing",
+            feature2: "Provided 10 custom ticket types, all passed local government review",
+            testimonial: "LottoBridge's mobile solution has enabled us to achieve leapfrog growth in the Kenya market!",
+            country: "Kenya",
+            country_name: "Kenya",
+            client: "Kenya Private Lottery Operator CEO",
+            client_type: "Client Type:",
+            client_type_value: "Private Operator",
+            period: "Project Period:",
+            period_value: "2021-2023",
+            result: "Main Results:",
+            result_value: "User growth 120%, market share jumped to top two",
+            scope_value: "Mobile app development, payment integration, terminal deployment, market promotion",
+            page_title: "Kenya Mobile Lottery Platform Construction | LottoBridge",
+            slogan: "Mobile-first, innovation drives new Africa lottery ecosystem",
+            delivery_title: "Delivery Content and Service Process",
+            highlight1: {
+                title: "Mobile-first Design",
+                desc: "Full mobile experience, compatible with mainstream smartphones, convenient lottery purchase"
+            },
+            highlight2: {
+                title: "Payment Integration Innovation",
+                desc: "Deep integration with M-Pesa mobile payment, improving user conversion rate"
+            },
+            highlight3: {
+                title: "Significant User Growth",
+                desc: "User growth 120%, market share jumped to top two"
+            },
+            highlight4: {
+                title: "Successful Market Promotion",
+                desc: "Multi-channel market promotion, brand influence greatly enhanced"
+            },
+            delivery1: {
+                title: "Market Research",
+                desc: "In-depth analysis of Kenya lottery market and user needs"
+            },
+            delivery2: {
+                title: "Mobile App Development",
+                desc: "Custom development of locally adapted lottery app"
+            },
+            delivery3: {
+                title: "Payment Integration",
+                desc: "Deep integration with M-Pesa mobile payment"
+            },
+            delivery4: {
+                title: "Market Promotion",
+                desc: "Multi-channel market promotion, enhancing brand influence"
+            }
         },
         page: {
             title: "Case Studies | LottoBridge"
@@ -2254,6 +2306,721 @@ const en = {
             title: "Can\'t find the market intelligence you need?",
             description: "Our expert team can provide customized market research services",
             button: "Contact Expert"
+        }
+    },
+    insights: {
+        page: {
+            title: "Industry Insights | LottoBridge"
+        },
+        hero: {
+            title: "Global Lottery Industry Trend Analysis and Professional Insights",
+            description: "Providing professional, continuously updated global lottery industry intelligence, covering policy regulations, technology trends, market dynamics, game innovations and more",
+            btn_view_trends: "View Trend Reports",
+            btn_subscribe: "Subscribe to Industry Brief"
+        },
+        nav_categories: {
+            policy_tracking: "📜 Policy Tracking",
+            market_trends: "📈 Market Trend Reports",
+            tech_trends: "🧠 Technology Trend Analysis",
+            case_studies: "🧩 Case Studies",
+            industry_reports: "📊 Industry Reports",
+            webinars: "🎥 Video Seminars"
+        },
+        content: {
+            title: "Industry Insights",
+            subtitle: "Global lottery industry trend analysis and professional insights"
+        },
+        categories: {
+            policy: "Policy Dynamics",
+            tech: "Technology Trends",
+            market: "Market Trends",
+            technology: "Technology Innovation"
+        },
+        articles: {
+            keno: {
+                title: "Southeast Asia Keno Game Potential Analysis for 2025",
+                summary: "Policy relaxation in Thailand, Vietnam and other countries, Keno games expected to become a breakthrough for digital lottery, market size projected to grow 300%."
+            },
+            africa: {
+                title: "Africa Digital Lottery Development Opportunity Analysis",
+                summary: "Nigeria's new bill passed, Kenya's mobile payment popularity, Africa's digital lottery market ushers in a golden development period."
+            },
+            ai: {
+                title: "AI-Driven Lottery Risk Control System Upgrade",
+                summary: "Machine learning algorithms excel in anti-fraud and anomaly detection, false positive rate reduced by 85%, detection accuracy improved by 40%."
+            },
+            blockchain: {
+                title: "Blockchain Lottery Transparency Solutions",
+                summary: "Blockchain-based lottery process ensures fairness and transparency of each draw, significantly improving user trust."
+            },
+            latam: {
+                title: "Latin America Lottery Market Digitization Process",
+                summary: "Digital lottery sales proportion in Mexico, Brazil and other countries rapidly increasing, expected to reach 60% in 2025."
+            },
+            japan: {
+                title: "Japan Scratch Ticket Market Innovation Analysis",
+                summary: "Japan launches NFT-combined scratch ticket products, young user participation significantly increased, providing new ideas for global markets."
+            }
+        },
+        read_more: "Read More",
+        keno: {
+            page: {
+                title: "2025 Southeast Asia Keno Game Market Potential Analysis | LottoBridge"
+            },
+            author: "Asia Pacific Research Team",
+            hero: {
+                title: "Southeast Asia Keno: The Next Billion Dollar Market",
+                subtitle: "Mobile Keno game participation rate increased by 280%, young users account for over 70%, Southeast Asia Keno market expected to exceed $1.2 billion in 2025, becoming the fastest-growing digital lottery segment globally"
+            },
+            section1: {
+                title: "Background of Southeast Asia Keno Market Rise",
+                p1: "Keno, as an ancient lottery game originating from China, is experiencing unprecedented digital revival in Southeast Asia. This perfect fusion of traditional games with modern technology, combined with the unique cultural background and rapidly developing digital economy environment in Southeast Asia, has laid a solid foundation for the explosive growth of Keno games.",
+                p2: "According to in-depth research by LottoBridge Asia Pacific Research Team, the Southeast Asia Keno game market reached $850 million in 2024, expected to exceed $1.2 billion in 2025, with an annual growth rate of 41%. This remarkable growth is mainly driven by the following core factors:",
+                list1: "🎮 **High Cultural Recognition**: Keno games have deep historical roots in Chinese cultural circles, naturally possessing a user base",
+                list2: "📱 **Mature Mobile Gaming Ecosystem**: Southeast Asia has over 400 million mobile game users, with mobile payment penetration reaching 85%", 
+                list3: "👨‍💼 **Young Demographics Driving Growth**: Users aged 18-35 account for over 70%, with strong consumption power",
+                list4: "🏛️ **Continuously Optimizing Regulatory Environment**: Governments in Singapore, Malaysia and other countries support digital lottery development",
+                list5: "💰 **Technology Innovation Driving Experience Upgrades**: Real-time draws, social interaction, personalized recommendations and other features"
+            },
+            highlight: {
+                title: "🎯 Core Market Insights",
+                content: "The key to success in Southeast Asia Keno market lies in the deep integration of cultural heritage with modern technology. By maintaining the traditional charm of the game while incorporating modern elements like AI recommendations, social sharing, and real-time competition, Keno games successfully attract cross-generational user groups, forming unique market advantages and growth momentum."
+            },
+            section2: {
+                singapore: {
+                    title: "Singapore: High-end Digital Keno Pioneer",
+                    subtitle: "Asia Pacific Fintech Center",
+                    description: "As the most developed digital economy in the Asia Pacific region, Singapore leads in high-end digital Keno games. Local users have extremely high quality requirements for games, preferring Keno platforms with AI intelligent recommendations, blockchain transparency verification and advanced data analysis functions."
+                },
+                malaysia: {
+                    title: "Malaysia: Multicultural Keno Hotspot",
+                    subtitle: "Southeast Asia Digitization Benchmark",
+                    description: "Malaysia's multicultural background provides a rich user base for Keno games. The Chinese community has deep traditional knowledge of Keno games, while Malay and Indian users also show strong interest. The government's open attitude towards digital lottery further promotes market development."
+                },
+                thailand: {
+                    title: "Thailand: Young Users Driving Growth",
+                    subtitle: "Mobile Gaming Powerhouse",
+                    description: "Thailand has the most active mobile game user base in Southeast Asia, with extremely high acceptance of emerging digital entertainment forms among young users. Localized Keno game products combined with Thai cultural elements have achieved explosive growth among young groups."
+                },
+                indonesia: {
+                    title: "Indonesia: Emerging Market with Huge Potential",
+                    subtitle: "Southeast Asia's Largest Economy",
+                    description: "As the most populous country in Southeast Asia, Indonesia has a population base of 270 million and a rapidly growing digital economy. Although the regulatory environment is relatively complex, Chinese communities and young user groups show strong interest in Keno games, with huge market potential."
+                }
+            },
+            features: {
+                title: "Modern Keno Game Core Features",
+                subtitle: "Technology-driven gaming experience innovation",
+                ai: {
+                    title: "AI Intelligent Recommendation System",
+                    description: "Based on machine learning algorithms to analyze user behavior patterns, providing personalized number recommendations and game strategy suggestions",
+                    highlight1: "Personalized number combination recommendations",
+                    highlight2: "Intelligent betting strategy optimization",
+                    highlight3: "Historical data trend analysis", 
+                    highlight4: "Risk control automatic reminders"
+                },
+                realtime: {
+                    title: "Real-time Draw Experience",
+                    description: "Using advanced streaming media technology, providing millisecond-level real-time draw experience, supporting simultaneous viewing of multiple draws",
+                    highlight1: "5-minute interval rapid draws",
+                    highlight2: "HD video live streaming draws",
+                    highlight3: "Multi-draw simultaneous screen display",
+                    highlight4: "Instant winning result push notifications"
+                },
+                social: {
+                    title: "Social Gaming Ecosystem",
+                    description: "Integrated social media functions, supporting friend teams, group betting, achievement sharing and other social interaction experiences",
+                    highlight1: "Friend circle betting sharing",
+                    highlight2: "Group betting pool functions",
+                    highlight3: "Community leaderboard competition",
+                    highlight4: "Winning story social propagation"
+                },
+                blockchain: {
+                    title: "Blockchain Transparency Guarantee",
+                    description: "Based on blockchain technology to ensure completely transparent draw process, all draw data immutable, improving user trust",
+                    highlight1: "Draw process recorded on chain",
+                    highlight2: "Betting records permanently saved",
+                    highlight3: "Smart contract automatic payouts",
+                    highlight4: "Third-party audit verification"
+                },
+                analytics: {
+                    title: "Big Data Analysis Tools",
+                    description: "Providing professional data analysis tools to help users deeply understand historical draw patterns and betting strategy effectiveness",
+                    highlight1: "Historical data visualization analysis",
+                    highlight2: "Number popularity statistical charts",
+                    highlight3: "Betting strategy effectiveness evaluation",
+                    highlight4: "Personal gaming behavior reports"
+                },
+                payment: {
+                    title: "Diversified Payment Methods",
+                    description: "Supporting traditional bank cards, mobile payments, digital currencies and other payment methods, meeting different users' payment habits",
+                    highlight1: "Local mobile payment integration",
+                    highlight2: "Digital currency payment support",
+                    highlight3: "One-click recharge rapid betting",
+                    highlight4: "Automatic winning fund deposits"
+                }
+            },
+            forecast: {
+                title: "2025-2030 Market Development Forecast",
+                subtitle: "Long-term trend analysis based on in-depth market research",
+                2025: {
+                    title: "Market Breakthrough Year: Revolutionary Growth",
+                    subtitle: "Mobile comprehensive popularization, AI technology deep application",
+                    description: "2025 will be a key breakthrough year for Southeast Asia Keno game market, with market size expected to exceed $1.2 billion. Mobile Keno games will dominate absolutely, and AI intelligent recommendation system applications will significantly improve user experience and engagement."
+                },
+                2027: {
+                    title: "Technology Integration Year: Innovation-driven Development",
+                    subtitle: "VR/AR technology popularization, metaverse Keno emergence",
+                    description: "By 2027, VR/AR technology is expected to be widely applied in Keno games, and metaverse Keno experiences will become new growth points. Deep application of blockchain technology will further improve game transparency and user trust."
+                },
+                2030: {
+                    title: "Mature Stability Year: Comprehensive Ecosystemization",
+                    subtitle: "Ecosystem improvement, international development",
+                    description: "By 2030, Southeast Asia Keno game market will reach mature stability stage, forming a complete industrial ecosystem. Cross-border games and international operations will become mainstream trends, with AI technology achieving deep personalized customization."
+                }
+            },
+            data: {
+                title: "Southeast Asia Keno Market Key Data",
+                subtitle: "Authoritative data based on LottoBridge Asia Pacific Research Team field research",
+                growth: "Mobile participation rate growth",
+                young_users: "Young user proportion",
+                market_size: "2025 projected market size",
+                annual_growth: "Compound annual growth rate",
+                active_users: "Active user count",
+                mobile_penetration: "Mobile penetration rate"
+            },
+            related: {
+                title: "Related Market Analysis",
+                subtitle: "More in-depth research on Asia Pacific lottery markets",
+                article1: {
+                    title: "China Lottery Market Digital Transformation In-depth Report",
+                    summary: "Analyzing digital transformation trends in China's lottery market, exploring innovative models and development opportunities for traditional lottery games integrating with modern technology"
+                },
+                article2: {
+                    title: "Asia Pacific Mobile Lottery User Behavior In-depth Research",
+                    summary: "In-depth research on game preferences, consumption habits and behavior patterns of mobile lottery users in Asia Pacific region, providing data support for product optimization"
+                },
+                article3: {
+                    title: "Asia Pacific Digital Lottery Regulatory Policy Comparative Analysis",
+                    summary: "Comparative analysis of digital lottery regulatory policies in Singapore, Malaysia, Thailand and other countries, interpreting policy changes' impact on markets"
+                }
+            },
+            cta: {
+                title: "Seize Southeast Asia Keno Gaming Golden Opportunities",
+                subtitle: "Contact LottoBridge Asia Pacific expert team for customized Southeast Asia Keno gaming solutions and market entry strategies",
+                contact: "Get Market Report",
+                back: "Back to Industry Insights"
+            }
+        },
+        africa: {
+            page: {
+                title: "Africa Digital Lottery Development Opportunity Analysis | LottoBridge"
+            },
+            author: "Market Research Department",
+            hero: {
+                title: "Africa Digital Lottery Market Golden Development Opportunities",
+                subtitle: "Nigeria's new bill passed, Kenya mobile payment penetration over 80%, Africa digital lottery market expected to grow 400% in 2025, becoming the most promising emerging market globally"
+            },
+            section1: {
+                title: "Africa Digital Lottery Market Overview",
+                p1: "Africa, as the last blue ocean of global lottery markets, is welcoming unprecedented development opportunities. With rapid popularization of mobile internet and increasingly mature digital payment infrastructure, Africa's digital lottery market shows enormous growth potential and investment value.",
+                p2: "According to latest analysis by LottoBridge Research Institute, Africa's digital lottery market size is expected to surge from $380 million in 2024 to $1.52 billion in 2025, with a compound annual growth rate of 400%. This explosive growth is mainly driven by the following key factors:",
+                list1: "🏛️ **Significantly Improved Policy Environment**: Governments of major economies like Nigeria and Kenya actively promote digital economy development",
+                list2: "📱 **Explosive Growth of Mobile Payments**: Mobile payment platforms like M-Pesa and Airtel Money have over 80% coverage",
+                list3: "👥 **Prominent Young Population Dividend**: Digital natives aged 18-35 account for over 60% of total population",
+                list4: "🚀 **Leapfrog Development of Technical Infrastructure**: 5G network construction accelerating, smartphone penetration rapidly increasing",
+                list5: "💰 **Continued Increase in Foreign Investment**: International lottery operators and tech companies increasing investment"
+            },
+            highlight: {
+                title: "🎯 Core Insights",
+                content: "The key to success in Africa's digital lottery market lies in localized operations and mobile-first strategy. By deeply understanding local cultural habits, payment preferences and regulatory requirements, operators can quickly establish competitive advantages and achieve scalable growth. Mobile payment popularization lays a solid foundation for instant lottery purchases and quick prize redemptions."
+            },
+            section2: {
+                title: "In-depth Analysis of Key Country Markets",
+                nigeria: {
+                    title: "Nigeria: Policy Breakthrough Leading Market",
+                    subtitle: "West Africa's Economic Engine, 220 Million Population Powerhouse",
+                    p1: "As Africa's largest economy, Nigeria passed the landmark Digital Lottery Management Act in early 2025, clearly allowing private operators to participate in digital lottery business. This policy breakthrough sets a benchmark for the entire African region and is expected to trigger chain reactions.",
+                    p2: "The bill stipulates that digital lottery operators need government licenses, pay preferential 15% tax rates, and establish localized operation centers. Nigeria's digital lottery market size is expected to reach $520 million by end of 2025, accounting for 34% of the entire African market."
+                },
+                kenya: {
+                    title: "Kenya: Mobile Payment Driving Growth",
+                    subtitle: "East Africa Fintech Center",
+                    p1: "As a global pioneer in mobile payments, Kenya's high penetration of mobile payment platforms like M-Pesa provides unique advantages for digital lottery development. Currently, Kenya's mobile payment user coverage reaches 85%, the highest globally.",
+                    p2: "The Kenyan government has set ambitious digital lottery development goals, planning to increase digital lottery proportion to 60% of total lottery sales within two years, with market size expected to reach $310 million."
+                },
+                southafrica: {
+                    title: "South Africa: Mature Market Digital Transformation",
+                    subtitle: "Africa's Most Developed Economy",
+                    p1: "As Africa's most mature lottery market, South Africa's traditional lottery business is already well-developed, with annual sales exceeding 20 billion rand. However, digital lottery still has huge development space, with digital channels currently accounting for only 15%.",
+                    p2: "The South African government is developing comprehensive digital lottery regulatory framework, expected to be officially released in second half of 2025. The new framework will introduce more open competition mechanisms, providing more development opportunities for digital lottery operators."
+                }
+            },
+            section3: {
+                title: "Technology Development Trends and Innovative Applications",
+                p1: "Africa's digital lottery market shows distinct trends of mobilization, localization and socialization. Operators continuously improve user experience and operational efficiency by integrating cutting-edge technologies like AI, blockchain, and big data analytics, driving the industry toward higher levels.",
+                subtitle: "🚀 Technology Application Highlights",
+                list1: "📱 **Mobile Native Experience**: Mobile application optimization for African user habits, supporting offline operations",
+                list2: "🤖 **AI Intelligent Recommendations**: Personalized game recommendations and marketing strategies based on user behavior",
+                list3: "🔗 **Blockchain Technology**: Ensuring transparent and fair lottery processes, improving user trust",
+                list4: "📊 **Real-time Data Analytics**: Multi-dimensional user behavior analysis and risk control systems",
+                list5: "🌐 **Multi-language Support**: Supporting English, French, Swahili and other major local languages",
+                list6: "🔒 **Secure Payments**: Integrating local mobile payments, ensuring fund security"
+            },
+            section4: {
+                title: "Investment Opportunities and Strategic Recommendations",
+                p1: "Based on in-depth market research and analysis, LottoBridge Research Institute offers the following strategic recommendations for investors and operators interested in entering Africa's digital lottery market:",
+                investment: {
+                    title: "💼 Investment Strategy Recommendations",
+                    list1: "Prioritize entry into Nigeria and Kenya markets with more mature policy environments",
+                    list2: "Establish localized teams to deeply understand local culture and user needs",
+                    list3: "Build strategic partnerships with local mobile operators and financial institutions",
+                    list4: "Adopt gradual market entry strategy, pilot first then scale"
+                },
+                risks: {
+                    title: "⚠️ Risk Assessment and Response",
+                    list1: "Policy risks: Closely monitor regulatory policy changes, establish government relationships",
+                    list2: "Technical risks: Strengthen cybersecurity and system stability construction",
+                    list3: "Market risks: Deeply understand local competitive landscape and user preferences",
+                    list4: "Exchange rate risks: Establish diversified fund management and hedging mechanisms"
+                }
+            },
+            data: {
+                title: "Africa Digital Lottery Market Key Indicators",
+                subtitle: "Based on LottoBridge Research Institute Q1 2025 in-depth research data",
+                growth: "Market size annual growth rate",
+                mobile: "Mobile user proportion",
+                young: "18-35 age group proportion",
+                market_size: "2025 projected market size (USD)",
+                payment: "Mobile payment penetration",
+                satisfaction: "User satisfaction"
+            },
+            related: {
+                title: "Related In-depth Analysis",
+                subtitle: "More professional insights and research reports on African lottery markets",
+                article1: {
+                    title: "Nigeria Digital Lottery Management Act In-depth Analysis",
+                    summary: "Comprehensive analysis of Nigeria's latest digital lottery policy's profound impact on entire West African regional market landscape, interpreting policy details and investment opportunities"
+                },
+                article2: {
+                    title: "Kenya M-Pesa Ecosystem and Digital Lottery Development Opportunities",
+                    summary: "In-depth exploration of M-Pesa and other mobile payment platforms' key driving role in African lottery industry digital transformation and business model innovations"
+                },
+                article3: {
+                    title: "Africa Digital Lottery Technology Innovation and Application Prospects",
+                    summary: "Analyzing innovative application cases and development prospects of AI, blockchain, 5G and other cutting-edge technologies in African digital lottery markets"
+                }
+            },
+            cta: {
+                title: "Get Professional Insights on Africa Digital Lottery Markets",
+                subtitle: "Contact LottoBridge expert team for detailed African lottery market analysis reports, investment strategy recommendations and localized solutions",
+                contact: "Consult Experts Now",
+                back: "Back to Industry Insights"
+            }
+        },
+        ai: {
+            page: {
+                title: "AI-Driven Lottery Risk Control System Upgrade | LottoBridge"
+            },
+            author: "Technology R&D Department",
+            hero: {
+                title: "AI-Driven Next-Generation Lottery Risk Control System",
+                subtitle: "Machine learning algorithms identify abnormal behavior with 99.7% accuracy, real-time risk control response time reduced to 50 milliseconds, AI-driven intelligent risk control systems are reshaping lottery industry security standards"
+            },
+            section1: {
+                title: "AI Risk Control System Technology Revolution",
+                p1: "With the rapid development of digital lottery markets, traditional risk control methods can no longer meet the security needs of modern lottery operations. The mature application of artificial intelligence technology, especially machine learning, deep learning and natural language processing technologies, is bringing unprecedented risk control capability improvements to the lottery industry.",
+                p2: "According to latest research by LottoBridge Technology R&D Team, AI-driven risk control systems compared to traditional methods have improved fraud detection accuracy by 87%, reduced false positive rates by 92%, and improved real-time response speed by 95%. This technological breakthrough not only significantly improves lottery operation security, but also significantly enhances user experience and operational efficiency."
+            },
+            highlight: {
+                title: "🎯 Core Technology Breakthrough",
+                content: "The core advantage of AI risk control systems lies in their powerful pattern recognition capabilities and real-time learning characteristics. Through deep learning algorithms, systems can automatically identify and learn new fraud patterns, achieving proactive risk prevention rather than passive rule matching. This technological innovation provides the lottery industry with more intelligent, efficient, and precise risk control solutions."
+            },
+            section2: {
+                title: "Core AI Technology Features and Applications",
+                ml: {
+                    title: "Machine Learning Anomaly Detection",
+                    description: "Deep learning models trained on massive historical data can identify abnormal betting behavior, suspicious account operations and potential fraud patterns in real-time.",
+                    benefit1: "99.7% abnormal behavior identification accuracy",
+                    benefit2: "Real-time processing of million-level transaction data",
+                    benefit3: "Adaptive learning of new fraud patterns",
+                    benefit4: "Zero-delay risk assessment"
+                },
+                behavioral: {
+                    title: "Behavioral Analysis and Profiling",
+                    description: "Through NLP and deep learning technologies, build user behavior profiles to identify money laundering, arbitrage, bot and other malicious behaviors.",
+                    benefit1: "360° user behavior profile construction",
+                    benefit2: "95% bot account identification rate", 
+                    benefit3: "Real-time risk scoring dynamic adjustment",
+                    benefit4: "Cross-platform behavior correlation analysis"
+                },
+                realtime: {
+                    title: "Real-time Risk Control Decisions",
+                    description: "Based on edge computing and stream processing technology, achieve millisecond-level risk control decisions, supporting real-time risk prevention in high-concurrency scenarios.",
+                    benefit1: "50 milliseconds risk control response time",
+                    benefit2: "Support ten million level concurrent processing",
+                    benefit3: "Intelligent risk level stratification",
+                    benefit4: "Automated processing workflows"
+                },
+                network: {
+                    title: "Correlation Network Analysis",
+                    description: "Using graph neural network technology to build complex correlation networks, identify gang crimes, fund chains and other hidden risks.",
+                    benefit1: "Multi-dimensional correlation relationship mining",
+                    benefit2: "Gang crime identification rate 98%",
+                    benefit3: "Real-time fund flow tracking",
+                    benefit4: "Automatic discovery of abnormal network structures"
+                }
+            },
+            section3: {
+                title: "Technical Architecture and Implementation Solutions",
+                p1: "LottoBridge AI risk control system adopts distributed microservice architecture, combined with cloud-native technology and edge computing, ensuring high availability, high performance and scalability of the system. The entire system is based on event-driven architecture, supporting hybrid computing mode combining real-time stream processing and batch processing."
+            },
+            quote: "The value of AI risk control systems lies not only in their technological advancement, but also in their ability to continuously learn and evolve. Through continuous optimization of machine learning algorithms, systems can adapt to new threat patterns and maintain continuous improvement of risk control capabilities.",
+            architecture: {
+                title: "AI Risk Control System Technical Architecture", 
+                subtitle: "Distributed AI risk control solution based on cloud-native architecture",
+                ai_engine: {
+                    title: "AI Inference Engine",
+                    description: "Distributed AI inference engine based on TensorFlow and PyTorch, supporting parallel execution and hot updates of multiple machine learning models"
+                },
+                data_platform: {
+                    title: "Real-time Data Platform", 
+                    description: "Real-time data processing platform based on Apache Kafka and Apache Flink, supporting billion-level data real-time stream processing and storage"
+                },
+                edge_computing: {
+                    title: "Edge Computing Nodes",
+                    description: "Distributed edge computing nodes enabling proximity processing and low-latency response, supporting offline mode risk control decisions"
+                },
+                security: {
+                    title: "Security Protection System",
+                    description: "Multi-layer security protection system including data encryption, access control, audit logs and privacy protection mechanisms"
+                }
+            },
+            cases: {
+                title: "AI Risk Control System Implementation Cases",
+                subtitle: "Successful implementation experience of global leading lottery operators",
+                uk: {
+                    title: "UK National Lottery AI Risk Control Upgrade",
+                    subtitle: "One of the world's largest lottery operators",
+                    description: "After adopting LottoBridge AI risk control system, UK National Lottery achieved 85% reduction in fraud losses, 70% decrease in user complaints, and 45% savings in system operating costs within 6 months, becoming a benchmark case for AI risk control applications in the global lottery industry."
+                },
+                spain: {
+                    title: "Spain ONCE Intelligent Risk Control System",
+                    subtitle: "Leading lottery organization in Europe",
+                    description: "Through deploying AI risk control system, Spain ONCE achieved precise identification of complex fraud networks. In the first month after system deployment, it successfully prevented fraudulent transactions worth 2.8 million euros, improving risk control efficiency by 320%."
+                },
+                france: {
+                    title: "France FDJ Digital Risk Control Transformation",
+                    subtitle: "France's largest lottery operator",
+                    description: "During comprehensive digital transformation, France FDJ adopted LottoBridge AI risk control technology, successfully addressing risk control challenges brought by rapid growth of digital lottery business, achieving perfect balance between business growth and risk control."
+                }
+            },
+            data: {
+                title: "AI Risk Control System Performance Indicators",
+                subtitle: "Performance test data based on real production environments",
+                accuracy: "Anomaly detection accuracy",
+                response_time: "Average response time",
+                daily_transactions: "Daily transaction processing volume",
+                false_positive_reduction: "False positive rate reduction",
+                fraud_detection_improvement: "Fraud detection improvement",
+                uptime: "System availability"
+            },
+            related: {
+                title: "Related Technology Insights",
+                subtitle: "More in-depth analysis of AI technology applications in the lottery industry",
+                article1: {
+                    title: "Blockchain Technology Applications in Lottery Transparency",
+                    summary: "Exploring how blockchain technology improves lottery draw process credibility and fairness through immutable transparent records"
+                },
+                article2: {
+                    title: "Big Data-Driven Lottery User Behavior Analysis", 
+                    summary: "In-depth analysis of innovative applications of big data technology in lottery user behavior analysis, precision marketing and personalized recommendations"
+                },
+                article3: {
+                    title: "Lottery System Modernization under Cloud-Native Architecture",
+                    summary: "Analyzing how cloud-native technology helps lottery systems achieve high availability, high performance and scalable modern architecture upgrades"
+                }
+            },
+            cta: {
+                title: "Experience the Powerful Capabilities of AI Risk Control Systems",
+                subtitle: "Contact LottoBridge technology experts for AI risk control system demonstrations, technical whitepapers and customized solutions",
+                contact: "Schedule Technical Demo",
+                back: "Back to Industry Insights"
+            }
+        },
+        blockchain: {
+            page: {
+                title: "Blockchain Lottery Transparency Solutions | LottoBridge"
+            },
+            author: "Blockchain Research Institute",
+            hero: {
+                title: "Blockchain Technology Reshaping Lottery Transparency Standards",
+                subtitle: "Blockchain-based lottery process ensures 100% transparency, smart contracts automatically distribute prizes eliminating human intervention, user trust increased by 90%, blockchain is redefining lottery industry credibility standards"
+            },
+            section1: {
+                title: "Blockchain Lottery Transparency Revolution",
+                p1: "Blockchain technology, as a representative of next-generation information technology, its characteristics of decentralization, immutability, and transparency are highly compatible with the lottery industry's needs for fairness and transparency. Trust issues existing in traditional lottery systems in lottery processes, fund management, prize verification and other aspects are being fundamentally resolved through blockchain technology.",
+                p2: "According to latest research data from LottoBridge Blockchain Research Institute, lottery platforms that have deployed blockchain technology have seen average user trust increase by 90%, user complaints decrease by 85%, and lottery process disputes almost reduced to zero. This technological innovation not only improves user experience, but also establishes new credibility standards for the entire industry."
+            },
+            highlight: {
+                title: "🎯 Core Technology Advantages",
+                content: "The greatest value of blockchain lottery systems lies in establishing a trust mechanism that requires no third-party guarantee through technological means. Every lottery draw, every prize distribution, every ticket sale is permanently recorded on an immutable distributed ledger, allowing anyone to verify its authenticity and fairness."
+            }
+        },
+        japan: {
+            page: {
+                title: "Japan Scratch Ticket Market Innovation Analysis | LottoBridge"
+            },
+            author: "Japan Market Research Department",
+            hero: {
+                title: "Japan Scratch Ticket Market: NFT Integration Innovation Breakthrough",
+                subtitle: "Japan launches world's first NFT scratch ticket products, young user participation increased by 180%, perfect combination of collectible value and gaming experience, providing new ideas for global scratch ticket market innovation development"
+            },
+            section1: {
+                title: "Japan Scratch Ticket Market Innovation Background",
+                p1: "Japan, as a global frontier of technological innovation, also demonstrates unique innovative spirit in the lottery industry. Facing challenges of traditional scratch ticket market growth slowdown and declining young user participation, Japanese lottery operators actively explore new technology integration, launching revolutionary NFT scratch ticket products.",
+                p2: "According to research data from LottoBridge Japan Market Research Department, since NFT scratch tickets were launched in second half of 2024, user participation in the 18-35 age group has increased by 180%, average value per ticket has grown by 45%, injecting new vitality into traditional scratch ticket markets."
+            },
+            highlight: {
+                title: "🎯 Innovation Core Value",
+                content: "The greatest innovation of Japan's NFT scratch tickets lies in perfectly combining the immediacy of traditional lottery with the collectibility of digital collectibles. Each ticket is not only a gaming experience, but also a digital collectible with unique artistic value and potential appreciation space, providing users with multiple values beyond traditional lottery."
+            }
+        },
+        latam: {
+            page: {
+                title: "Latin America Lottery Market Digitization Process Analysis | LottoBridge"
+            },
+            author: "Latin America Market Analysis Team",
+            hero: {
+                title: "Latin America Lottery Market Digital Transformation Acceleration",
+                subtitle: "Digital lottery sales proportion in major Latin American countries like Mexico, Brazil, Argentina rapidly increasing, expected to reach 60% in 2025, mobile purchasing becoming mainstream, Latin America digital lottery market entering high-speed development period"
+            },
+            section1: {
+                title: "Latin America Digital Lottery Market Overview",
+                p1: "Latin America, as an important component of global lottery markets, is experiencing unprecedented digital transformation. The region has over 650 million population, with continuously increasing mobile internet penetration providing broad space for digital lottery development. Particularly accelerated by COVID-19 pandemic, traditional offline lottery purchasing habits are rapidly migrating online.",
+                p2: "According to research data from LottoBridge Latin America Market Analysis Team, Latin America's digital lottery market reached $3.8 billion in 2024, expected to grow to $6.1 billion in 2025, with annual growth rate exceeding 60%. Mexico, Brazil, and Argentina, the three core markets, account for 75% of the entire region's market share."
+            },
+            highlight: {
+                title: "🎯 Market Opportunity Core",
+                content: "The greatest advantage of Latin America's digital lottery market lies in its young user structure and rapidly growing mobile internet penetration. The region's users have high acceptance of new technologies and continuously improving consumption capacity, providing huge development opportunities for digital lottery operators."
+            },
+            section2: {
+                title: "Key Country Market Analysis",
+                mexico: {
+                    title: "🇲🇽 Mexico: Policy Benefits Driving Development",
+                    description: "As Latin America's second largest economy, Mexico's digital lottery market is developing rapidly. The government's newly issued digital gambling regulations provide clear guidance for industry development, with market size expected to reach $1.8 billion in 2025."
+                },
+                brazil: {
+                    title: "🇧🇷 Brazil: Largest Market with Unlimited Potential", 
+                    description: "Brazil has the largest population base and economic scale in Latin America, with huge digital lottery market potential. Although the regulatory environment is relatively complex, the government is formulating new regulatory frameworks, expected to achieve major breakthroughs in 2025."
+                },
+                argentina: {
+                    title: "🇦🇷 Argentina: Leading in Technology Innovation",
+                    description: "Argentina is relatively advanced in digital payments and fintech, providing good infrastructure for digital lottery development. Local operators actively adopt new technologies, continuously optimizing user experience."
+                }
+            },
+            section3: {
+                title: "Digital Transformation Driving Factors",
+                p1: "The rapid development of Latin America's digital lottery market benefits from multiple factors working together, including technological progress, policy support, changes in user habits and economic development. These factors interact to form strong development momentum.",
+                tech: {
+                    title: "🚀 Perfect Technology Infrastructure",
+                    list1: "4G/5G network coverage rapidly increasing",
+                    list2: "Smartphone penetration exceeding 80%",
+                    list3: "Cloud computing and big data technologies widely applied"
+                },
+                policy: {
+                    title: "🏛️ Continuously Improving Policy Environment",
+                    list1: "Governments formulating digital lottery development plans",
+                    list2: "Tax policies gradually optimizing",
+                    list3: "Cross-border payment regulatory frameworks improving"
+                },
+                user: {
+                    title: "👥 Deep Changes in User Behavior",
+                    list1: "Mobile shopping habits forming",
+                    list2: "Digital payment acceptance improving",
+                    list3: "Entertainment consumption demand growing"
+                }
+            },
+            section4: {
+                title: "Development Prospects and Investment Opportunities",
+                p1: "Looking forward, Latin America's digital lottery market will continue to maintain high-speed growth. With technology continuously maturing, regulatory environment further improving, and user base continuously expanding, this market provides rich opportunities for investors and operators.",
+                forecast: {
+                    title: "📈 Market Forecast",
+                    list1: "2025 market size expected to reach $6.1 billion",
+                    list2: "Digital proportion will increase to 60%",
+                    list3: "Mobile users will exceed 85 million"
+                },
+                opportunities: {
+                    title: "💰 Investment Opportunities",
+                    list1: "Technology platform development and operations",
+                    list2: "Payment solution provision",
+                    list3: "Game content innovation and localization"
+                }
+            },
+            cta: {
+                title: "Seize Latin America Digital Lottery Market Opportunities",
+                subtitle: "Contact LottoBridge Latin America expert team for detailed market analysis reports and investment recommendations",
+                contact: "Get Market Report",
+                back: "Back to Industry Insights"
+            }
+        },
+        blockchain: {
+            page: {
+                title: "Blockchain Lottery Transparency Solutions | LottoBridge"
+            },
+            author: "Blockchain Research Institute",
+            hero: {
+                title: "Blockchain Technology Reshaping Lottery Transparency Standards",
+                subtitle: "Blockchain-based draw process ensures 100% transparency, smart contracts automatically distribute prizes eliminating human intervention, user trust increased by 90%, blockchain is redefining lottery industry credibility standards"
+            },
+            section1: {
+                title: "Blockchain Lottery Transparency Revolution",
+                p1: "As a representative of next-generation information technology, blockchain's characteristics of decentralization, immutability, and transparency highly align with the lottery industry's demands for fairness and transparency. Trust issues in traditional lottery systems regarding draw processes, fund management, and prize verification are being fundamentally resolved through blockchain technology.",
+                p2: "According to the latest research data from LottoBridge Blockchain Research Institute, lottery platforms that have deployed blockchain technology have seen average user trust increase by 90%, user complaints decrease by 85%, and draw process disputes reduced to almost zero. This technological innovation has not only improved user experience but also established new credibility standards for the entire industry.",
+                list1: "🔒 Immutability Guarantee: All draw data is permanently recorded on the blockchain, impossible for anyone to modify",
+                list2: "⚡ Smart Contract Automation: Eliminates human intervention, ensuring automatic and accurate prize distribution",
+                list3: "👁️ Full Transparency: Complete traceability and verifiability from ticket purchase to draw",
+                list4: "🌐 Decentralized Verification: Multi-node joint verification, avoiding single point of failure and manipulation risks",
+                list5: "💰 Fund Security Assurance: Encryption technology and multi-signature ensure fund security"
+            },
+            highlight: {
+                title: "🎯 Core Technology Advantages",
+                content: "The greatest value of blockchain lottery systems lies in establishing a trust mechanism that requires no third-party guarantees through technological means. Every draw, every prize distribution, every ticket sale is permanently recorded on an immutable distributed ledger that anyone can verify for authenticity and fairness."
+            },
+            section2: {
+                title: "Blockchain Technology Applications in the Lottery Industry",
+                p1: "Blockchain technology applications in the lottery industry extend far beyond draw transparency, with the entire lifecycle from lottery issuance, sales, draws to prize distribution capable of optimization through blockchain technology. Smart contract applications further enable true automation and de-humanization of the entire process.",
+                issuance: {
+                    title: "🎫 Lottery Issuance and Sales",
+                    list1: "Digital lottery issued as NFTs, ensuring uniqueness of each ticket",
+                    list2: "Sales data uploaded to blockchain in real-time, preventing over-issuance and duplicate sales",
+                    list3: "Purchase records permanently stored, users can verify purchase history anytime"
+                },
+                drawing: {
+                    title: "🎰 Draw Process Transparency",
+                    list1: "Random number generation algorithms publicly transparent, accepting third-party audits",
+                    list2: "Draw process fully livestreamed and recorded on blockchain",
+                    list3: "Draw results immediately broadcast to all nodes, cannot be tampered with afterwards"
+                },
+                payout: {
+                    title: "💰 Prize Distribution Automation",
+                    list1: "Smart contracts automatically calculate and distribute prizes",
+                    list2: "Winner identity verification and fund transfer fully automated",
+                    list3: "Prize fund management fully transparent and traceable"
+                }
+            },
+            section3: {
+                title: "Technical Implementation and Case Studies",
+                p1: "LottoBridge blockchain lottery solution adopts enterprise-grade blockchain architecture, combining consortium blockchain and public blockchain advantages to ensure both system performance and transparency. The solution has been successfully implemented in multiple countries and regions, accumulating rich practical experience.",
+                cases: {
+                    title: "📊 Global Implementation Cases",
+                    europe: {
+                        title: "Europe: Estonia National Lottery",
+                        description: "Estonia became the first country to implement blockchain lottery system nationwide. After one year of operation, user trust increased by 94%, operational costs decreased by 38%, and completely eliminated draw disputes."
+                    },
+                    asia: {
+                        title: "Asia: Singapore Lottery Innovation",
+                        description: "Singapore introduced blockchain technology in its national lottery system, achieving full transparency in prize distribution. The system processes over 100,000 transactions daily with zero errors."
+                    },
+                    americas: {
+                        title: "Americas: Canadian Provincial Lottery",
+                        description: "Three Canadian provinces adopted blockchain technology for their lottery systems, achieving cross-provincial prize sharing and unified management while maintaining complete transparency."
+                    }
+                }
+            },
+            cta: {
+                title: "Experience Revolutionary Blockchain Lottery Technology",
+                subtitle: "Contact LottoBridge blockchain experts for comprehensive solutions, technical demonstrations and implementation guidance",
+                contact: "Get Technical Solution",
+                back: "Back to Industry Insights"
+            }
+        },
+        japan: {
+            page: {
+                title: "Japan Scratch Lottery Market Innovation Analysis | LottoBridge"
+            },
+            author: "Japan Market Research Department",
+            hero: {
+                title: "Japan Scratch Lottery Market: NFT Integration Innovation Breakthrough",
+                subtitle: "Japan launches world's first NFT scratch lottery product, young user participation increased by 180%, perfect combination of collectible value and gaming experience, providing new insights for global scratch lottery market innovation"
+            },
+            section1: {
+                title: "Japan Scratch Lottery Market Innovation Background",
+                p1: "As a frontrunner in global technological innovation, Japan also demonstrates unique innovative spirit in the lottery industry. Facing challenges of slowing traditional scratch lottery market growth and declining young user participation, Japanese lottery operators actively explored new technology integration, launching revolutionary NFT scratch lottery products.",
+                p2: "According to research data from LottoBridge Japan Market Research Department, since the launch of NFT scratch lottery in the second half of 2024, participation among users aged 18-35 has increased by 180%, average ticket value has grown by 45%, injecting new vitality into the traditional scratch lottery market.",
+                list1: "🎨 Digital Collectible Value: Each scratch lottery is a unique digital collectible",
+                list2: "🎮 Enhanced Gaming Experience: AR/VR technology enhances scratch interactive experience",
+                list3: "💎 Dual Value of Collection and Investment: Winning tickets have long-term collectible value",
+                list4: "🌟 Limited Release Mechanism: Scarcity enhances product appeal",
+                list5: "🔗 Social Sharing Functions: Supports social media display and trading"
+            },
+            highlight: {
+                title: "🎯 Core Innovation Value",
+                content: "The greatest innovation of Japan's NFT scratch lottery lies in perfectly combining the immediacy of traditional lottery with the collectibility of digital art. Each ticket is not only a gaming experience but also a unique digital collectible with artistic value and potential appreciation, providing users with multiple values beyond traditional lottery."
+            },
+            section2: {
+                title: "NFT Scratch Lottery Technical Implementation Solutions",
+                p1: "The successful implementation of Japan's NFT scratch lottery relies on mature blockchain technology, digital art creation and mobile application development. Each link is carefully designed to ensure user experience fluidity and technical solution reliability.",
+                nft: {
+                    title: "🎨 NFT Design and Minting",
+                    list1: "Collaborate with renowned artists to design unique visual elements",
+                    list2: "Based on Ethereum ERC-721 standard minting",
+                    list3: "Each ticket contains unique identifier and rarity attributes"
+                },
+                game: {
+                    title: "🎮 Gaming Mechanism Innovation",
+                    list1: "AR technology achieves virtual scratch experience",
+                    list2: "Dynamic random numbers ensure fairness",
+                    list3: "Multi-level reward mechanism design"
+                },
+                platform: {
+                    title: "📱 Complete Platform Functions",
+                    list1: "Mobile native application experience",
+                    list2: "Integrated digital wallet management",
+                    list3: "Secondary market trading support"
+                }
+            },
+            section3: {
+                title: "Market Response and User Feedback",
+                p1: "After the launch of NFT scratch lottery, it caused huge response in the Japanese market, not only attracting traditional lottery users but also successfully expanding young user groups and digital collectible enthusiasts. Multi-dimensional positive feedback proved the market value of this innovative model.",
+                data: {
+                    title: "📊 Key Data Performance",
+                    list1: "Monthly active users increased by 120%",
+                    list2: "Average user session time extended by 85%",
+                    list3: "Social sharing increased by 300%",
+                    list4: "User satisfaction reached 92%"
+                },
+                feedback: {
+                    title: "💬 User Feedback Highlights",
+                    list1: "Scratch process became more interesting, AR effects are cool",
+                    list2: "Even without winning, NFT itself has collectible value",
+                    list3: "Can show off rare cards on social media",
+                    list4: "Secondary market trading provides new investment channels"
+                }
+            },
+            section4: {
+                title: "Global Promotion Value and Challenges",
+                p1: "The success of Japan's NFT scratch lottery provides valuable innovation experience for the global lottery industry. However, promoting this model in different markets also faces challenges in regulation, technology, culture and other aspects, requiring localized adjustments and optimization.",
+                value: {
+                    title: "🌍 Promotion Value",
+                    list1: "Provides new ideas for traditional lottery industry digital transformation",
+                    list2: "Effective solution for expanding young user groups",
+                    list3: "Successful example of technology and art integration",
+                    list4: "Pioneer in exploring emerging market opportunities"
+                },
+                challenges: {
+                    title: "⚠️ Promotion Challenges",
+                    list1: "Differences in NFT and digital asset regulatory policies across countries",
+                    list2: "User acceptance and understanding of new technologies",
+                    list3: "Technical infrastructure and network environment requirements"
+                }
+            },
+            cta: {
+                title: "Explore Japan NFT Scratch Lottery Innovation Model",
+                subtitle: "Contact LottoBridge Japan experts for detailed technical solutions and market adaptation strategies",
+                contact: "Get Innovation Report",
+                back: "Back to Industry Insights"
+            }
         }
     },
     contact: {
@@ -3601,6 +4368,173 @@ const en = {
                 title: 'Vietnam Lottery Digital Transformation Project',
                 description: 'Assisted Vietnam Lottery Company in completing digital transformation, deploying cloud lottery system and training 300 technical personnel, achieving 40% sales growth.'
             }
+        }
+    },
+    contact: {
+        page: {
+            title: "Contact Us | LottoBridge"
+        },
+        hero: {
+            title: "Contact Us",
+            description: "Ready to start your global lottery business? Our expert team is here to provide professional consultation and customized solutions.",
+            btn_submit: "Submit Partnership Inquiry",
+            btn_direct: "Contact Us Directly"
+        },
+        form: {
+            title: "Tell Us Your Needs",
+            description: "Fill out the form below and our experts will contact you within 24 hours",
+            name: "Name",
+            company: "Company / Organization",
+            country: "Country",
+            select_country: "Please select a country",
+            country_china: "China",
+            country_usa: "United States",
+            country_uk: "United Kingdom", 
+            country_japan: "Japan",
+            country_korea: "South Korea",
+            country_germany: "Germany",
+            country_france: "France",
+            country_italy: "Italy",
+            country_spain: "Spain",
+            country_russia: "Russia",
+            country_brazil: "Brazil",
+            country_india: "India",
+            country_south_africa: "South Africa",
+            country_nigeria: "Nigeria",
+            country_kenya: "Kenya",
+            country_egypt: "Egypt",
+            country_mexico: "Mexico",
+            country_argentina: "Argentina",
+            country_australia: "Australia",
+            country_canada: "Canada",
+            country_other: "Other Countries",
+            role_type: "Role Type",
+            role_government: "Government",
+            role_operator: "Operator",
+            role_supplier: "Supplier",
+            role_investor: "Investor",
+            role_other: "Other",
+            email: "Contact Email",
+            phone: "Phone / WhatsApp",
+            needs: "Your Needs",
+            need_report: "Generate Market Report",
+            need_system: "Lottery System",
+            need_printing: "Printing & Terminal Procurement",
+            need_compliance: "Compliance & Implementation",
+            need_other: "Other",
+            message: "Additional Information",
+            message_placeholder: "Describe your project background, specific questions or goals",
+            upload: "Upload Attachments",
+            upload_text: "Drag and drop files here or click to upload",
+            upload_format: "Support PDF/PPT/DOC formats, maximum 10MB",
+            language_preference: "Language Preference",
+            lang_english: "English",
+            lang_chinese: "Chinese",
+            lang_russian: "Russian",
+            lang_arabic: "Arabic",
+            privacy: "I have read and agree to the <a href='#'>Privacy Policy</a>",
+            submit: "Submit Partnership Inquiry",
+            schedule: "Schedule Expert Discussion",
+            footer: "By submitting this form, you agree to our processing of your personal information in accordance with our Privacy Policy"
+        },
+        direct: {
+            title: "Don't want to fill out the form?",
+            description: "You can also contact us directly through the following methods",
+            email: "Email",
+            send_email: "Send Email",
+            send_message: "Send Message",
+            contact_us: "Contact Us",
+            phone: "Phone",
+            work_hours: "Working Hours: UTC+8 09:00–18:00",
+            call: "Make a Call",
+            wechat: "WeChat",
+            scan_qr: "Scan QR code to add customer service"
+        },
+        global: {
+            title: "We Serve 100+ Countries and Regions Worldwide",
+            description: "LottoBridge has successfully implemented projects in multiple countries and regions",
+            africa: "Africa Region",
+            africa_desc: "We have representative offices or partners in multiple African countries, including Nigeria, Kenya, South Africa, etc.",
+            manager: "Regional Manager: Sarah Johnson",
+            asia: "Asia Region",
+            asia_desc: "Covering Southeast Asia, South Asia and Middle East markets, including Vietnam, Cambodia, Philippines, UAE, etc.",
+            manager_asia: "Regional Manager: David Chen",
+            latam: "Latin America",
+            latam_desc: "Serving Mexico, Brazil, Colombia, Argentina and other Latin American markets",
+            manager_latam: "Regional Manager: Maria Gonzalez"
+        },
+        resources: {
+            title: "Quick Download Resources",
+            description: "Get LottoBridge product and service introduction materials",
+            platform_title: "Platform Service Overview",
+            platform_desc: "Learn about LottoBridge's core services and solutions",
+            download_pdf: "Download PDF",
+            cases_title: "Partnership Case Studies",
+            cases_desc: "View our successful cases and customer reviews worldwide",
+            download_ppt: "Download Presentation",
+            whitepaper_title: "White Paper",
+            whitepaper_desc: "Global lottery market trends and opportunity analysis",
+            download_whitepaper: "Download White Paper"
+        },
+        ai: {
+            title: "AI Q&A Assistant",
+            description: "Get quick answers to frequently asked questions",
+            assistant: "LottoBridge AI Assistant",
+            welcome: "Hello! I'm the LottoBridge AI assistant. I can answer questions about lottery overseas expansion, system procurement, compliance requirements, etc. How can I help you?",
+            input_placeholder: "Enter your question...",
+            send: "Send",
+            question1: "I'm in Kenya, what types of lottery licenses can I apply for?",
+            question2: "I want to purchase instant ticket terminals, how do I start?",
+            question3: "What successful cases does your company have in Africa?"
+        },
+        cta: {
+            title: "Ready to Start Your Lottery Overseas Journey?",
+            description: "Wherever you are in the process: market assessment, game design, system procurement, or implementation, LottoBridge will be your trusted partner",
+            get_advice: "Get Customized Lottery Overseas Advice",
+            view_cases: "View Success Cases"
+        }
+    },
+    footer: {
+        company: {
+            name: "LottoBridge",
+            description: "A leading global lottery technology solutions provider, committed to providing innovative and reliable lottery system solutions for clients."
+        },
+        products: {
+            title: "Products & Services",
+            lottery_system: "Lottery System Services",
+            terminal_equipment: "Terminal Equipment Services",
+            game_design: "Game Design & Development",
+            printing_service: "Ticket Printing Services",
+            market_research: "Market Research Services",
+            digital: "Digital Lottery System",
+            instant: "Instant Ticket System",
+            sports: "Sports Betting System",
+            video: "Video Lottery System",
+            terminals: "Lottery Terminals"
+        },
+        resources: {
+            title: "Resource Center",
+            case_studies: "Case Studies",
+            whitepapers: "White Paper Downloads",
+            industry_reports: "Industry Reports",
+            blog_news: "Blog & News",
+            faq: "FAQ",
+            research: "Market Research",
+            cases: "Case Studies",
+            insights: "Industry Insights",
+            about: "About Us",
+            contact: "Contact Us"
+        },
+        contact: {
+            title: "Contact Information", 
+            address: "Block B, Hongxiang Industrial Park, Tongzhou District, Beijing",
+            wechat: "Scan to follow WeChat"
+        },
+        copyright: {
+            rights: "All Rights Reserved",
+            privacy: "Privacy Policy",
+            terms: "Terms of Service",
+            cookies: "Cookie Policy"
         }
     }
 };

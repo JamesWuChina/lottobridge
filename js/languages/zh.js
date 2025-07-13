@@ -8,13 +8,13 @@ const zh = {
     },
     nav: {
         home: "首页",
-        market_research: "市场调研",
+        market_research: "市场研究",
         market_details: "市场详情",
         products: "产品服务",
         research: "市场研究",
         cases: "案例研究",
         insights: "行业洞察",
-        case_studies: "合作案例",
+        case_studies: "案例研究",
         about: "关于我们",
         contact: "联系我们"
     },
@@ -255,6 +255,10 @@ const zh = {
         title: "合作案例精选",
         subtitle: "真实的合作案例，展示LottoBridge在全球市场的成功实践",
         view_details: "查看详情",
+        cases: {
+            view_details: "查看详情",
+            download_brief: "下载简报"
+        },
         mexico: {
             title: "墨西哥国家彩票数字化转型",
             type: "政府机构",
@@ -311,59 +315,61 @@ const zh = {
             client_type_value: "case_studies.mexico.client_type_value"
         },
         kenya: {
-            title: "肯尼亚移动彩票平台建设",
-            type: "私营运营商",
+            title: "即开票项目快速部署",
+            type: "票券印刷 + 物流出口",
             scope: "移动优先",
             description: "基于M-Pesa支付系统的移动彩票解决方案，实现了快速市场渗透和用户增长",
             deliverable1: "移动应用",
             deliverable2: "支付集成",
             deliverable3: "市场推广",
+            feature1: "彩票品类咨询 + 安全票面设计 + 即开票印刷",
+            feature2: "提供10款定制票种，全部通过地方政府审查",
+            testimonial: "LottoBridge的移动解决方案让我们在肯尼亚市场实现了跨越式增长！",
+            country: "肯尼亚",
             highlight1: {
-                desc: "case_studies.kenya.highlight1.desc",
-                title: "case_studies.kenya.highlight1.title"
+                desc: "全流程移动端体验，适配主流智能手机，便捷购彩",
+                title: "移动优先设计"
             },
-            slogan: "case_studies.kenya.slogan",
-            period: "case_studies.kenya.period",
-            result: "case_studies.kenya.result",
-            result_value: "case_studies.kenya.result_value",
-            country_name: "case_studies.kenya.country_name",
-            client: "case_studies.kenya.client",
-            client_type: "case_studies.kenya.client_type",
+            slogan: "移动优先，创新驱动非洲彩票新生态",
+            period: "项目周期：",
+            result: "主要成果：",
+            result_value: "用户数增长120%，市场份额跃居前二",
+            country_name: "肯尼亚",
+            client: "肯尼亚私营彩票运营商CEO",
+            client_type: "客户类型：",
             delivery4: {
-                title: "case_studies.kenya.delivery4.title",
-                desc: "case_studies.kenya.delivery4.desc"
+                title: "市场推广",
+                desc: "多渠道市场推广，提升品牌影响力"
             },
-            period_value: "case_studies.kenya.period_value",
-            page_title: "case_studies.kenya.page_title",
+            period_value: "2021-2023",
+            page_title: "肯尼亚移动彩票平台建设 | LottoBridge",
             delivery3: {
-                title: "case_studies.kenya.delivery3.title",
-                desc: "case_studies.kenya.delivery3.desc"
+                title: "支付集成",
+                desc: "深度集成M-Pesa移动支付"
             },
             highlight3: {
-                desc: "case_studies.kenya.highlight3.desc",
-                title: "case_studies.kenya.highlight3.title"
+                desc: "用户数增长120%，市场份额跃居前二",
+                title: "用户增长显著"
             },
-            delivery_title: "case_studies.kenya.delivery_title",
+            delivery_title: "交付内容与服务流程",
             highlight4: {
-                title: "case_studies.kenya.highlight4.title",
-                desc: "case_studies.kenya.highlight4.desc"
+                title: "市场推广成功",
+                desc: "多渠道市场推广，品牌影响力大幅提升"
             },
-            country: "case_studies.kenya.country",
-            scope_value: "case_studies.kenya.scope_value",
-            testimonial: "case_studies.kenya.testimonial",
+            scope_value: "移动应用开发、支付集成、终端部署、市场推广",
             delivery1: {
-                desc: "case_studies.kenya.delivery1.desc",
-                title: "case_studies.kenya.delivery1.title"
+                desc: "深入分析肯尼亚彩票市场与用户需求",
+                title: "市场调研"
             },
             highlight2: {
-                desc: "case_studies.kenya.highlight2.desc",
-                title: "case_studies.kenya.highlight2.title"
+                desc: "深度集成M-Pesa移动支付，提升用户转化率",
+                title: "支付集成创新"
             },
             delivery2: {
-                desc: "case_studies.kenya.delivery2.desc",
-                title: "case_studies.kenya.delivery2.title"
+                desc: "定制开发适配本地的购彩APP",
+                title: "移动应用开发"
             },
-            client_type_value: "case_studies.kenya.client_type_value"
+            client_type_value: "私营运营商"
         },
         uzbekistan: {
             highlight1: {
@@ -395,7 +401,7 @@ const zh = {
             scope_value: "系统 Setup, Ticket Printing, CRM 系统, Thermal Paper Export",
             testimonial: "\"Platform helped us from strategy analysis to system launch in only 5 months, very efficient\"",
             delivery_title: "Delivery Content and Service Process",
-            country_name: "Uzbekistan",
+            country_name: "乌兹别克斯坦",
             client: "Uzbekistan National 彩票 Bureau Technical Director",
             period_value: "2024",
             client_type_value: "Government Agency",
@@ -462,7 +468,7 @@ const zh = {
             scope_value: "Consulting Cooperation, 市场研究, Policy 分析, 系统 Planning",
             scope: "Service Scope:",
             page_title: "Brazil Strategic Consulting and 系统 Pre-research | LottoBridge",
-            country_name: "Brazil",
+            country_name: "巴西",
             period: "Project Period:",
             description: "Market access policy analysis + AI research + online lottery system planning, providing 4 rounds of policy discussions + local expert connections + whitepaper support",
             slogan: "Strategic consulting, empowering Brazil lottery industry innovation"
@@ -527,7 +533,7 @@ const zh = {
                 title: "系统 Customization"
             },
             period: "Project Period:",
-            country_name: "Cambodia",
+            country_name: "柬埔寨",
             highlight2: {
                 title: "Local Terminal Deployment",
                 desc: "Nationwide deployment of 1,200 POS terminals"
@@ -699,18 +705,27 @@ const zh = {
         quick_links: "快速链接",
         services: "服务",
         contact: {
-            title: "联系我们",
-            address: "北京市朝阳区建国路88号"
+            title: "联系方式",
+            address: "北京市通州区弘祥产业园B座",
+            wechat: "扫码关注微信"
         },
         rights: "保留所有权利",
-        company: "footer.company",
+        company: {
+            name: "LottoBridge",
+            description: "全球领先的彩票技术解决方案提供商，致力于为客户提供创新、可靠的彩票系统解决方案。"
+        },
         products: {
             title: "产品服务",
             lottery_system: "彩票系统服务",
             terminal_equipment: "终端设备服务",
             game_design: "游戏设计与开发",
             printing_service: "票券印刷服务",
-            market_research: "市场调研服务"
+            market_research: "市场调研服务",
+            digital: "数字彩票系统",
+            instant: "即开票系统",
+            sports: "体育博彩系统",
+            video: "视频彩票系统",
+            terminals: "彩票终端"
         },
         resources: {
             title: "资源中心",
@@ -718,13 +733,19 @@ const zh = {
             whitepapers: "白皮书下载",
             industry_reports: "行业报告",
             blog_news: "博客与新闻",
-            faq: "常见问题"
+            faq: "常见问题",
+            research: "市场研究",
+            cases: "案例研究",
+            insights: "行业洞察",
+            about: "关于我们",
+            contact: "联系我们"
         },
         copyright: {
             company: "© 2023 LottoBridge",
-            rights: "保留所有权利。",
+            rights: "保留所有权利",
             privacy: "隐私政策",
-            terms: "使用条款"
+            terms: "服务条款",
+            cookies: "Cookie政策"
         },
         privacy: "footer.privacy",
         terms: "footer.terms"
