@@ -204,20 +204,21 @@ class UnifiedI18nManager {
 }
 
 // Create global instance
-window.unifiedI18n = new UnifiedI18nManager();
-
-// Backward compatibility
-window.i18n = {
-    getCurrentLanguage: () => window.unifiedI18n.getCurrentLanguage(),
-    setLanguage: (lang) => window.unifiedI18n.setLanguage(lang),
-    changeLanguage: (lang) => window.unifiedI18n.setLanguage(lang), // Alias for backward compatibility
-    translate: (key) => window.unifiedI18n.translate(key),
-    getAvailableLanguages: () => window.unifiedI18n.getAvailableLanguages(),
-    validateTranslations: () => window.unifiedI18n.validateTranslations()
-};
-
-// Initialize when DOM is ready
+// Initialize when DOM is ready - 确保DOM完全加载后再初始化
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize the global i18n manager
+    window.unifiedI18n = new UnifiedI18nManager();
+
+    // Backward compatibility API
+    window.i18n = {
+        getCurrentLanguage: () => window.unifiedI18n.getCurrentLanguage(),
+        setLanguage: (lang) => window.unifiedI18n.setLanguage(lang),
+        changeLanguage: (lang) => window.unifiedI18n.setLanguage(lang), // Alias for backward compatibility
+        translate: (key) => window.unifiedI18n.translate(key),
+        getAvailableLanguages: () => window.unifiedI18n.getAvailableLanguages(),
+        validateTranslations: () => window.unifiedI18n.validateTranslations()
+    };
+
     // Setup language selector
     const languageSelector = document.getElementById('languageSelector');
     if (languageSelector) {

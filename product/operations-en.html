@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Operations Management | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive lottery operations management services including consulting, implementation, and ongoing support">
+    <meta name="keywords" content="lottery operations, lottery management, operations consulting, lottery implementation, operations support">
+    <meta name="author" content="LottoBridge Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lottery Operations Management | LottoBridge">
+    <meta property="og:description" content="Complete lottery operations management and consulting services for optimal performance">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://lottobridge.com/product/operations-en.html">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://lottobridge.com/product/operations-en.html">
+    <link rel="alternate" hreflang="zh" href="https://lottobridge.com/product/operations.html">
+    <link rel="canonical" href="https://lottobridge.com/product/operations-en.html">
+    
+    <style>
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+            --info-cyan: #17a2b8;
+            --ops-blue: #0f172a;
+            --ops-teal: #0d9488;
+            --ops-amber: #f59e0b;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-ops: linear-gradient(135deg, #0f172a 0%, #0d9488 50%, #f59e0b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--nav-blue);
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles - index.html compatible */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-lotto {
+            color: var(--primary-blue);
+        }
+
+        .logo-bridge {
+            color: var(--primary-red);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+            flex-wrap: nowrap !important;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-right: 0;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--nav-blue);
+            padding: 8px 12px;
+            position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Language selector */
+        .language-selector {
+            position: relative;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
+        }
+
+        /* Hero Section */
+        .hero-banner {
+            background: var(--gradient-ops);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-banner p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 5rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--nav-blue);
+            text-align: center;
+        }
+
+        .section-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, var(--ops-blue) 0%, var(--ops-teal) 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .service-body {
+            padding: 2rem;
+        }
+
+        .service-body p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            color: var(--nav-blue);
+        }
+
+        .service-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--ops-teal);
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        /* Process Grid */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-item {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border-top: 4px solid var(--ops-teal);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .process-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .process-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--ops-amber);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .process-icon {
+            font-size: 2.5rem;
+            color: var(--ops-blue);
+            margin: 1rem 0;
+        }
+
+        .process-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--nav-blue);
+        }
+
+        .process-item p {
+            color: var(--medium-gray);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            color: var(--success-green);
+            margin-top: 0.2rem;
+        }
+
+        .benefit-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--nav-blue);
+        }
+
+        .benefit-content p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            margin: 0 10px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-ops);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--ops-blue);
+            border: 2px solid var(--ops-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--ops-blue);
+            color: white;
+        }
+
+        /* Footer styles - index.html compatible */
+        footer {
+            background: var(--nav-blue);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1rem;
+            color: var(--ops-amber);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--ops-amber);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
+            </div>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../market-research.html">Research</a></li>
+                    <li><a href="../products.html" class="active">Products</a></li>
+                    <li><a href="../insights.html">Insights</a></li>
+                    <li><a href="../case-studies.html">Cases</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh">🇨🇳 中文 (CN)</option>
+                    <option value="en" selected>🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="container">
+            <h1>Lottery Operations Management</h1>
+            <p>Comprehensive lottery operations consulting, implementation, and ongoing management services to optimize performance and maximize revenue</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">100+</span>
+                    <div class="hero-stat-label">Projects Delivered</div>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">95%</span>
+                    <div class="hero-stat-label">Success Rate</div>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">24/7</span>
+                    <div class="hero-stat-label">Support Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2>Operations Services</h2>
+                <div class="section-content">
+                    <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem; color: var(--medium-gray);">
+                        Our comprehensive operations management services ensure efficient, compliant, and profitable lottery operations from launch to ongoing optimization.
+                    </p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                                <h3>Strategic Consulting</h3>
+                            </div>
+                            <div class="service-body">
+                                <p>Expert consulting services for lottery market entry, business strategy development, and operational optimization.</p>
+                                <ul class="service-features">
+                                    <li>Market analysis and feasibility studies</li>
+                                    <li>Business model development</li>
+                                    <li>Regulatory compliance strategy</li>
+                                    <li>Revenue optimization planning</li>
+                                    <li>Risk assessment and mitigation</li>
+                                    <li>Go-to-market strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                                <h3>Implementation Support</h3>
+                            </div>
+                            <div class="service-body">
+                                <p>End-to-end implementation support from system deployment to staff training and operational launch.</p>
+                                <ul class="service-features">
+                                    <li>Project management and coordination</li>
+                                    <li>System integration and testing</li>
+                                    <li>Staff training and certification</li>
+                                    <li>Operational procedures development</li>
+                                    <li>Launch planning and execution</li>
+                                    <li>Post-launch optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                                <h3>Ongoing Management</h3>
+                            </div>
+                            <div class="service-body">
+                                <p>Continuous operational support, performance monitoring, and optimization to ensure sustained success.</p>
+                                <ul class="service-features">
+                                    <li>Daily operations monitoring</li>
+                                    <li>Performance analytics and reporting</li>
+                                    <li>Compliance monitoring and auditing</li>
+                                    <li>System maintenance and updates</li>
+                                    <li>Customer support management</li>
+                                    <li>Continuous improvement initiatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Implementation Process</h2>
+                <div class="section-content">
+                    <div class="process-grid">
+                        <div class="process-item">
+                            <div class="process-number">1</div>
+                            <div class="process-icon"><i class="fas fa-search"></i></div>
+                            <h4>Discovery & Analysis</h4>
+                            <p>Comprehensive assessment of requirements, market conditions, and regulatory environment.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">2</div>
+                            <div class="process-icon"><i class="fas fa-drafting-compass"></i></div>
+                            <h4>Planning & Design</h4>
+                            <p>Detailed project planning, system design, and implementation roadmap development.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">3</div>
+                            <div class="process-icon"><i class="fas fa-tools"></i></div>
+                            <h4>Implementation</h4>
+                            <p>System deployment, integration, testing, and staff training execution.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">4</div>
+                            <div class="process-icon"><i class="fas fa-play"></i></div>
+                            <h4>Launch</h4>
+                            <p>Coordinated launch execution with marketing support and operational monitoring.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">5</div>
+                            <div class="process-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Optimization</h4>
+                            <p>Performance analysis, fine-tuning, and continuous improvement implementation.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">6</div>
+                            <div class="process-icon"><i class="fas fa-headset"></i></div>
+                            <h4>Ongoing Support</h4>
+                            <p>24/7 support, maintenance, updates, and strategic consultation services.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Key Benefits</h2>
+                <div class="section-content">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Reduced Time to Market</h4>
+                                <p>Accelerate your lottery launch with proven methodologies and experienced project management.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Minimized Risk</h4>
+                                <p>Leverage our experience to avoid common pitfalls and ensure regulatory compliance from day one.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Optimized Performance</h4>
+                                <p>Benefit from industry best practices and continuous optimization to maximize revenue potential.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Expert Knowledge</h4>
+                                <p>Access deep industry expertise and stay current with market trends and regulatory changes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Cost Efficiency</h4>
+                                <p>Reduce operational costs through process optimization and efficient resource utilization.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Scalable Solutions</h4>
+                                <p>Build operations that can scale with your business growth and market expansion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Optimize Your Operations?</h2>
+            <p>Contact our operations experts to discuss how we can help streamline and enhance your lottery business.</p>
+            <a href="../contact.html" class="btn btn-primary">Start Consultation</a>
+            <a href="../case-studies.html" class="btn btn-outline">View Case Studies</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LottoBridge</h3>
+                    <p>Global lottery industry one-stop solution platform, leveraging China's robust lottery industry chain resources to help clients worldwide enter the lottery market quickly.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Products & Services</h3>
+                    <ul>
+                        <li><a href="digital-lottery-system-en.html">Digital Lottery System</a></li>
+                        <li><a href="terminals-en.html">Terminal Equipment</a></li>
+                        <li><a href="instant-ticket-system-en.html">Game Design & Development</a></li>
+                        <li><a href="printing-en.html">Ticket Printing Services</a></li>
+                        <li><a href="../market-research.html">Market Research</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../case-studies.html">Case Studies</a></li>
+                        <li><a href="../insights.html">Whitepapers</a></li>
+                        <li><a href="../insights.html">Industry Reports</a></li>
+                        <li><a href="../insights.html">Blog & News</a></li>
+                        <li><a href="../contact.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +86 17610653863</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Building B, Hongxiang Industrial Park, Tongzhou District, Beijing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2024 LottoBridge. All rights reserved.
+                    | <a href="#">Privacy Policy</a>
+                    | <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const lang = this.value;
+            if (lang === 'zh') {
+                window.location.href = 'operations.html';
+            }
+            // For other languages, stay on current page for now
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html> 

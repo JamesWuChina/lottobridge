@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Ticket System | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Advanced instant ticket system with scratch card games, digital instant win, and comprehensive management features">
+    <meta name="keywords" content="instant ticket system, scratch cards, instant win games, lottery scratchcards, instant lottery">
+    <meta name="author" content="LottoBridge Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Instant Ticket System | LottoBridge">
+    <meta property="og:description" content="Complete instant ticket and scratch card management platform with digital and physical game support">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://lottobridge.com/product/instant-ticket-system-en.html">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://lottobridge.com/product/instant-ticket-system-en.html">
+    <link rel="alternate" hreflang="zh" href="https://lottobridge.com/product/instant-ticket-system.html">
+    <link rel="canonical" href="https://lottobridge.com/product/instant-ticket-system-en.html">
+    
+    <style>
+        :root {
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+            --info-cyan: #17a2b8;
+            --instant-gold: #ffd700;
+            --instant-purple: #8e44ad;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --gradient-instant: linear-gradient(135deg, #8e44ad 0%, #ffd700 50%, #e63946 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--nav-blue);
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles - index.html compatible */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-lotto {
+            color: var(--primary-blue);
+        }
+
+        .logo-bridge {
+            color: var(--primary-red);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+            flex-wrap: nowrap !important;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-right: 0;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--nav-blue);
+            padding: 8px 12px;
+            position: relative;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Language selector */
+        .language-selector {
+            position: relative;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .language-selector::before {
+            content: '\f0ac';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 14px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .language-selector select {
+            padding: 10px 35px 10px 35px;
+            border: 2px solid rgba(26, 62, 140, 0.15);
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none;
+            color: var(--nav-blue);
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(26, 62, 140, 0.08);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--white), #f8fafc);
+            box-shadow: 0 6px 20px rgba(26, 62, 140, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 62, 140, 0.1), 0 6px 20px rgba(26, 62, 140, 0.15);
+        }
+
+        /* Hero Section */
+        .hero-banner {
+            background: var(--gradient-instant);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-banner p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 5rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--nav-blue);
+            text-align: center;
+        }
+
+        .section-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--instant-purple);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--nav-blue);
+        }
+
+        .feature-card p {
+            color: var(--medium-gray);
+        }
+
+        /* Game Types Section */
+        .game-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .game-type-card {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--instant-gold);
+            transition: var(--transition);
+        }
+
+        .game-type-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .game-type-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--nav-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .game-type-icon {
+            font-size: 1.5rem;
+            color: var(--instant-purple);
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            color: var(--success-green);
+            margin-top: 0.2rem;
+        }
+
+        .benefit-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--nav-blue);
+        }
+
+        .benefit-content p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            margin: 0 10px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-instant);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(142, 68, 173, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--instant-purple);
+            border: 2px solid var(--instant-purple);
+        }
+
+        .btn-outline:hover {
+            background: var(--instant-purple);
+            color: white;
+        }
+
+        /* Footer styles - index.html compatible */
+        footer {
+            background: var(--nav-blue);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1rem;
+            color: var(--instant-gold);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--instant-gold);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .game-types-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
+            </div>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../market-research.html">Research</a></li>
+                    <li><a href="../products.html" class="active">Products</a></li>
+                    <li><a href="../insights.html">Insights</a></li>
+                    <li><a href="../case-studies.html">Cases</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh">🇨🇳 中文 (CN)</option>
+                    <option value="en" selected>🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="container">
+            <h1>Instant Ticket System</h1>
+            <p>Complete instant win and scratch card platform supporting both digital and physical games with advanced security, prize management, and real-time analytics</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">500+</span>
+                    <div class="hero-stat-label">Game Templates</div>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">95%</span>
+                    <div class="hero-stat-label">Player Engagement</div>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">24/7</span>
+                    <div class="hero-stat-label">Real-time Security</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2>System Overview</h2>
+                <div class="section-content">
+                    <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem; color: var(--medium-gray);">
+                        Our Instant Ticket System provides comprehensive management for scratch cards, instant win games, and digital instant lottery products with advanced security features and flexible game creation tools.
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                            <h3>Digital Scratch Cards</h3>
+                            <p>Interactive digital scratch card games with realistic animations, sound effects, and customizable reveal mechanics for web and mobile platforms.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-ticket-alt"></i></div>
+                            <h3>Physical Ticket Integration</h3>
+                            <p>Seamless integration with printed instant tickets, barcode scanning, and validation systems for retail and terminal networks.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Advanced Security</h3>
+                            <p>Multi-layer security with encrypted ticket generation, fraud detection, and tamper-proof validation systems to ensure fair play.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                            <h3>Prize Management</h3>
+                            <p>Comprehensive prize pool management with flexible payout structures, instant claims processing, and automated prize distribution.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                            <h3>Game Design Studio</h3>
+                            <p>Intuitive drag-and-drop game designer with pre-built templates, custom artwork support, and rapid game deployment capabilities.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h3>Real-Time Analytics</h3>
+                            <p>Detailed game performance analytics, player behavior insights, and revenue optimization tools with customizable dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Game Types & Formats</h2>
+                <div class="section-content">
+                    <div class="game-types-grid">
+                        <div class="game-type-card">
+                            <h4><span class="game-type-icon"><i class="fas fa-coins"></i></span>Traditional Scratch Cards</h4>
+                            <p>Classic scratch-off games with various reveal patterns, multiple prize tiers, and customizable artwork. Perfect for retail distribution and player familiarity.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1rem;">
+                                <li>• Match-3 games</li>
+                                <li>• Symbol matching</li>
+                                <li>• Number games</li>
+                                <li>• Crossword puzzles</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-type-card">
+                            <h4><span class="game-type-icon"><i class="fas fa-mobile-alt"></i></span>Digital Instant Win</h4>
+                            <p>Engaging digital games with interactive elements, animations, and bonus features. Designed for mobile-first experiences with social sharing capabilities.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1rem;">
+                                <li>• Slot-style games</li>
+                                <li>• Mini-games</li>
+                                <li>• Progressive jackpots</li>
+                                <li>• Themed experiences</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-type-card">
+                            <h4><span class="game-type-icon"><i class="fas fa-gift"></i></span>Promotional Games</h4>
+                            <p>Special event games for marketing campaigns, seasonal promotions, and brand partnerships with customizable rewards and engagement mechanics.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1rem;">
+                                <li>• Holiday specials</li>
+                                <li>• Brand tie-ins</li>
+                                <li>• Loyalty rewards</li>
+                                <li>• Second-chance draws</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-type-card">
+                            <h4><span class="game-type-icon"><i class="fas fa-gamepad"></i></span>Interactive Games</h4>
+                            <p>Skill-based and hybrid games combining chance with player interaction, offering extended play time and enhanced entertainment value.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1rem;">
+                                <li>• Puzzle games</li>
+                                <li>• Racing games</li>
+                                <li>• Adventure games</li>
+                                <li>• Sports-themed games</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Key Benefits</h2>
+                <div class="section-content">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Rapid Game Deployment</h4>
+                                <p>Launch new games in days with our template-based system and automated game generation tools.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>High Player Engagement</h4>
+                                <p>Keep players engaged with interactive features, bonus rounds, and personalized gaming experiences.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Flexible Prize Structures</h4>
+                                <p>Configure complex prize structures with multiple tiers, bonus prizes, and progressive jackpots.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Multi-Platform Support</h4>
+                                <p>Deploy games across web, mobile, retail terminals, and physical tickets with unified management.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Revenue Optimization</h4>
+                                <p>Maximize revenue with dynamic pricing, A/B testing, and data-driven game optimization tools.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-content">
+                                <h4>Regulatory Compliance</h4>
+                                <p>Built-in compliance features for major gaming jurisdictions with automated reporting and audit trails.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Launch Your Instant Games?</h2>
+            <p>Discover how our Instant Ticket System can boost player engagement and drive revenue growth for your lottery business.</p>
+            <a href="../contact.html" class="btn btn-primary">Get Started Today</a>
+            <a href="../case-studies.html" class="btn btn-outline">View Success Stories</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LottoBridge</h3>
+                    <p>Global lottery industry one-stop solution platform, leveraging China's robust lottery industry chain resources to help clients worldwide enter the lottery market quickly.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Products & Services</h3>
+                    <ul>
+                        <li><a href="digital-lottery-system-en.html">Digital Lottery System</a></li>
+                        <li><a href="terminals-en.html">Terminal Equipment</a></li>
+                        <li><a href="instant-ticket-system-en.html">Game Design & Development</a></li>
+                        <li><a href="printing-en.html">Ticket Printing Services</a></li>
+                        <li><a href="../market-research.html">Market Research</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../case-studies.html">Case Studies</a></li>
+                        <li><a href="../insights.html">Whitepapers</a></li>
+                        <li><a href="../insights.html">Industry Reports</a></li>
+                        <li><a href="../insights.html">Blog & News</a></li>
+                        <li><a href="../contact.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +86 17610653863</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Building B, Hongxiang Industrial Park, Tongzhou District, Beijing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2024 LottoBridge. All rights reserved.
+                    | <a href="#">Privacy Policy</a>
+                    | <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const lang = this.value;
+            if (lang === 'zh') {
+                window.location.href = 'instant-ticket-system.html';
+            }
+            // For other languages, stay on current page for now
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html> 
+</html> 

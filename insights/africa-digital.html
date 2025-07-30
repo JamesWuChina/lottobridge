@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="insights.africa.page.title">非洲数字彩票发展机会分析 | LottoBridge</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="深度分析非洲数字彩票市场发展机遇，包括市场规模、技术需求、法规环境和投资前景">
+    <meta name="keywords" content="非洲彩票,数字彩票,彩票市场分析,African lottery,mobile lottery,市场机会">
+    <meta name="author" content="LottoBridge Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="非洲数字彩票发展机会分析 | LottoBridge">
+    <meta property="og:description" content="深度分析非洲数字彩票市场发展机遇和投资前景">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lottobridge.com/insights/africa-digital.html">
+    <meta property="og:image" content="https://lottobridge.com/images/africa-digital.jpg">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="zh" href="https://lottobridge.com/insights/africa-digital.html">
+    <link rel="alternate" hreflang="en" href="https://lottobridge.com/insights/africa-digital.html">
+    <link rel="alternate" hreflang="fr" href="https://lottobridge.com/insights/africa-digital.html">
+    <link rel="canonical" href="https://lottobridge.com/insights/africa-digital.html">
     <style>
         /* 基础样式 */
         * {
@@ -918,35 +938,36 @@
 <body>
     <!-- Header Navigation -->
     <header class="header">
-        <div class="container">
-            <div class="header-container">
-                <div class="logo">
-                    <a href="../index.html" class="logo-text">
-                        <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
-                    </a>
-                </div>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
-                        <li><a href="../market-research.html" data-i18n="nav.market_research">市场研究</a></li>
-                        <li><a href="../case-studies.html" data-i18n="nav.case_studies">案例研究</a></li>
-                        <li><a href="../insights.html" class="active" data-i18n="nav.insights">行业洞察</a></li>
-                        <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
-                    </ul>
-                    <div class="language-selector">
-                        <select id="languageSelector">
-                            <option value="zh">🇨🇳 中文 (CN)</option>
-                            <option value="en">🇺🇸 English (US)</option>
-                            <option value="fr">🇫🇷 Français (FR)</option>
-                            <option value="es">🇪🇸 Español (ES)</option>
-                            <option value="ar">🇸🇦 العربية (SA)</option>
-                            <option value="ko">🇰🇷 한국어 (KR)</option>
-                            <option value="ru">🇷🇺 Русский (RU)</option>
-                        </select>
-                    </div>
-                </nav>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-text"><span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span></div>
+                </a>
+            </div>
+            
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="../market-research.html" data-i18n="nav.market_research">市场调研</a></li>
+                    <li><a href="../products.html" data-i18n="nav.products">产品服务</a></li>
+                    <li><a href="../insights.html" class="active" data-i18n="nav.insights">行业洞察</a></li>
+                    <li><a href="../case-studies.html" data-i18n="nav.case_studies">合作案例</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="../contact.html" data-i18n="nav.contact">联系我们</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="zh" selected>🇨🇳 中文 (CN)</option>
+                    <option value="en">🇺🇸 English (US)</option>
+                    <option value="fr">🇫🇷 Français (FR)</option>
+                    <option value="es">🇪🇸 Español (ES)</option>
+                    <option value="ko">🇰🇷 한국어 (KR)</option>
+                    <option value="ar">🇸🇦 العربية (SA)</option>
+                    <option value="ru">🇷🇺 Русский (RU)</option>
+                </select>
+            </div>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -1228,63 +1249,75 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- 8. 页脚 -->
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h3 data-i18n="footer.company.name">LottoBridge</h3>
-                    <p data-i18n="footer.company.description">全球领先的彩票技术解决方案提供商，致力于为客户提供创新、可靠的彩票系统解决方案。</p>
+                    <p data-i18n="footer.company.description">全球彩票出海一站式解决方案平台，依托中国强大的彩票产业链资源，帮助各国客户快速进入彩票市场。</p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
-                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.products.title">产品服务</h4>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.products.title">产品服务</h3>
                     <ul>
-                        <li><a href="../product/digital-lottery-system.html" data-i18n="footer.products.digital">数字彩票系统</a></li>
-                        <li><a href="../product/instant-ticket-system.html" data-i18n="footer.products.instant">即开票系统</a></li>
-                        <li><a href="../product/sports-betting-system.html" data-i18n="footer.products.sports">体育博彩系统</a></li>
-                        <li><a href="../product/video-lottery-system.html" data-i18n="footer.products.video">视频彩票系统</a></li>
-                        <li><a href="../product/terminals.html" data-i18n="footer.products.terminals">彩票终端</a></li>
+                        <li><a href="../#" data-i18n="footer.products.lottery_system">彩票系统服务</a></li>
+                        <li><a href="../#" data-i18n="footer.products.terminal_equipment">终端设备服务</a></li>
+                        <li><a href="../#" data-i18n="footer.products.game_design">游戏设计与开发</a></li>
+                        <li><a href="../#" data-i18n="footer.products.printing_service">票券印刷服务</a></li>
+                        <li><a href="../#" data-i18n="footer.products.market_research">市场调研服务</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.resources.title">资源中心</h4>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.resources.title">资源中心</h3>
                     <ul>
-                        <li><a href="../market-research.html" data-i18n="footer.resources.research">市场研究</a></li>
-                        <li><a href="../case-studies.html" data-i18n="footer.resources.cases">案例研究</a></li>
-                        <li><a href="../insights.html" data-i18n="footer.resources.insights">行业洞察</a></li>
-                        <li><a href="../about.html" data-i18n="footer.resources.about">关于我们</a></li>
-                        <li><a href="../contact.html" data-i18n="footer.resources.contact">联系我们</a></li>
+                        <li><a href="../#" data-i18n="footer.resources.case_studies">案例研究</a></li>
+                        <li><a href="../#" data-i18n="footer.resources.whitepapers">白皮书下载</a></li>
+                        <li><a href="../#" data-i18n="footer.resources.industry_reports">行业报告</a></li>
+                        <li><a href="../#" data-i18n="footer.resources.blog_news">博客与新闻</a></li>
+                        <li><a href="../#" data-i18n="footer.resources.faq">常见问题</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.contact.title">联系方式</h4>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i>wupengfei@outlook.com</p>
-                        <p><i class="fas fa-phone"></i>+8617610653863</p>
-                        <p><i class="fas fa-map-marker-alt"></i><span data-i18n="footer.contact.address">北京市通州区弘祥产业园B座</span></p>
-                    </div>
-                    <div class="qr-code">
-                        <img src="../images/wechat-qr.png" alt="微信二维码" width="80" height="80">
-                        <p data-i18n="footer.contact.wechat">扫码关注微信</p>
-                    </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.contact.title">联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> wupengfei@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> +8617610653863</li>
+                        <li data-i18n="footer.contact.address"><i class="fas fa-map-marker-alt"></i> 北京市通州区弘祥产业园B座</li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 LottoBridge. <span data-i18n="footer.copyright.rights">保留所有权利</span> | 
-                <a href="#" data-i18n="footer.copyright.privacy">隐私政策</a> | 
-                <a href="#" data-i18n="footer.copyright.terms">服务条款</a> | 
-                <a href="#" data-i18n="footer.copyright.cookies">Cookie政策</a></p>
+                <p>
+                    <span data-i18n="footer.copyright.company">&copy; 2023 LottoBridge</span>.
+                    <span data-i18n="footer.copyright.rights">保留所有权利。</span>
+                    | <a href="../#" data-i18n="footer.copyright.privacy">隐私政策</a>
+                    | <a href="../#" data-i18n="footer.copyright.terms">使用条款</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <!-- Essential Scripts -->
+    <script src="../js/mobile-nav.js"></script>
+    
+    <!-- SEO & Analytics Scripts -->
+    <script src="../js/seo-config.js"></script>
+    <script src="../js/seo-structured-data.js"></script>
+    <script src="../js/baidu-seo.js"></script>
+    <script src="../js/analytics.js"></script>
+    
+    <!-- Unified i18n System -->
     <script src="../js/languages/zh.js"></script>
     <script src="../js/languages/en.js"></script>
     <script src="../js/languages/es.js"></script>
@@ -1294,5 +1327,8 @@
     <script src="../js/languages/ru.js"></script>
     <script src="../js/unified-i18n.js"></script>
     <script src="../js/i18n-validation.js"></script>
+    
+    <!-- 通用多语言翻译系统 -->
+    <script src="../js/universal-translator.js"></script>
 </body>
 </html> 

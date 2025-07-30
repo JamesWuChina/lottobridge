@@ -9,10 +9,12 @@ const en = {
     nav: {
         home: "Home",
         market_research: "Market Research",
+        research: "Market Research",
         market_details: "Market Details",
         products: "Products & Services",
         insights: "Industry Insights",
         case_studies: "Case Studies",
+        cases: "Case Studies",
         about: "About Us",
         contact: "Contact Us"
     },
@@ -3256,13 +3258,119 @@ const en = {
         },
         hero: {
             title: "Uzbekistan Lottery Market Report",
-            subtitle: "In-depth analysis of development opportunities, regulatory environment and investment prospects in the largest economy in Central Asia"
+            description: "Central Asian gateway country with 35 million people, an emerging market where government's economic reforms and digital transformation bring unprecedented opportunities for the lottery industry"
         },
         stats: {
             population: "Population Size",
             gdp: "GDP Total",
-            growth: "Economic Growth Rate",
-            urbanization: "Urbanization Rate"
+            lottery_market: "Lottery Market Potential", 
+            gdp_growth: "GDP Growth Rate"
+        },
+        analysis: {
+            title: "Uzbekistan Lottery Market Deep Analysis",
+            description: "Based on latest market data and policy trends, comprehensive analysis of Central Asian emerging market development status, reform dividends and investment opportunities",
+            market_potential: {
+                title: "Market Potential and Prospects",
+                description: "Uzbekistan lottery market is still in its early stage, with expected market size reaching $500 million, showing huge development potential",
+                feature1: "Market infrastructure is being established",
+                feature2: "Government supports entertainment industry development",
+                feature3: "Young population with strong consumption demand",
+                feature4: "Digital transformation accelerating",
+                feature5: "Obvious first-mover advantages"
+            },
+            demographics: {
+                title: "Population Structure Advantages",
+                description: "Average age 30 years, 60% of population under 35, providing broad consumer base for emerging entertainment industry",
+                feature1: "Young population proportion as high as 60%",
+                feature2: "Education level rapidly improving",
+                feature3: "Urbanization process accelerating",
+                feature4: "Middle class growing rapidly",
+                feature5: "Consumption concepts modernizing"
+            },
+            digital: {
+                title: "Digital Infrastructure",
+                description: "Mobile internet penetration rapidly increasing to 70%, digital payment system gradually improving, laying foundation for digital lottery development",
+                feature1: "Smartphone penetration rate 85%",
+                feature2: "Mobile payment developing rapidly",
+                feature3: "4G network coverage improving",
+                feature4: "E-government services popularizing",
+                feature5: "Digital identity authentication system"
+            },
+            reform: {
+                title: "Reform Dividend Release",
+                description: "Government vigorously promotes economic reform, open foreign investment policies, creating favorable conditions for international investors to enter the market",
+                feature1: "Open foreign investment policies",
+                feature2: "Continuously improving laws and regulations",
+                feature3: "Tax incentive policy support",
+                feature4: "Simplified administrative approval",
+                feature5: "Active international cooperation"
+            }
+        },
+        metrics: {
+            young_population: {
+                title: "Young Population Proportion",
+                description: "Population under 35 years old"
+            },
+            per_capita_income: {
+                title: "Per Capita GDP",
+                description: "Economic development level rapidly improving"
+            },
+            mobile_penetration: {
+                title: "Mobile Internet Penetration",
+                description: "Digital infrastructure continuously improving"
+            },
+            economic_growth: {
+                title: "Economic Growth Rate",
+                description: "Economic growth stable and strong"
+            }
+        },
+        reforms: {
+            title: "New Opportunities from Reform and Opening",
+            description: "In-depth analysis of policy dividends and development opportunities that Uzbekistan's economic reform brings to the lottery industry",
+            openness: {
+                title: "Opening Policy",
+                description: "Government actively promotes opening up, simplifies foreign investment approval procedures, providing convenient conditions for international enterprises to enter."
+            },
+            currency: {
+                title: "Currency Reform",
+                description: "Implements market-oriented exchange rate reform, stable Som currency, creating good environment for international investment and trade."
+            },
+            taxation: {
+                title: "Tax Incentives",
+                description: "Introduces multiple tax incentive policies, supports foreign investment and technological innovation, effectively reducing enterprise operating costs."
+            },
+            infrastructure: {
+                title: "Infrastructure Construction",
+                description: "Heavily invests in digital infrastructure, accelerates 5G network construction, providing technical support for digital economy development."
+            }
+        },
+        opportunities: {
+            title: "Key Market Opportunities",
+            description: "Identify and seize core development opportunities in Uzbekistan's lottery market",
+            first_mover: {
+                title: "First-mover Advantage",
+                description: "As an emerging market, competition is relatively limited, early entrants can gain significant market first-mover advantages and brand influence."
+            },
+            belt_road: {
+                title: "Belt and Road Hub",
+                description: "Located at the core of the Silk Road Economic Belt, can serve as a strategic base for entering Central Asian and Eurasian markets."
+            },
+            government_support: {
+                title: "Government Policy Support",
+                description: "Government actively supports digital economy development, providing policy guarantees and financial support for lottery industry development."
+            },
+            youth_market: {
+                title: "Young Consumer Groups",
+                description: "High proportion of young population, strong acceptance of emerging entertainment methods, providing broad market space for innovative products."
+            },
+            economic_growth: {
+                title: "Rapid Economic Growth",
+                description: "GDP growth rate 6.5%, residents' income continuously improving, providing economic foundation for lottery consumption growth."
+            },
+            regional_expansion: {
+                title: "Regional Expansion Base",
+                description: "Can use Uzbekistan as a base to expand to Kazakhstan, Kyrgyzstan and other Central Asian countries."
+            }
         },
         overview: {
             title: "Market Overview",
@@ -3297,19 +3405,23 @@ const en = {
             }
         },
         regulatory: {
-            title: "Regulatory Environment Analysis",
-            subtitle: "Understanding the regulatory framework and policy orientation of Uzbekistan\'s lottery industry",
-            license: {
-                title: "License Application",
-                description: "The government provides transparent license application procedures, supports foreign enterprises to participate in lottery market operations, with application cycle of about 6-12 months."
+            title: "Regulatory Environment and Policy Framework",
+            description: "Understanding the regulatory environment, policy orientation and compliance requirements of Uzbekistan's lottery industry",
+            licensing: {
+                title: "License System Establishment",
+                description: "Government is establishing comprehensive lottery license system, providing legal guarantee for industry development, application procedures gradually standardized."
             },
-            tax: {
-                title: "Tax Policy",
-                description: "The lottery industry enjoys preferential tax policies, with corporate income tax rate of 15% and VAT rate of 15%, providing support for industry development."
+            taxation: {
+                title: "Tax Policy Incentives",
+                description: "Emerging industries enjoy tax incentive policies, foreign enterprise income tax rate preferential, VAT policy flexible."
             },
-            compliance: {
-                title: "Compliance Requirements",
-                description: "Strict anti-money laundering and responsible gambling measures are required to ensure healthy industry development and consumer rights protection."
+            international: {
+                title: "International Cooperation Framework",
+                description: "Actively participates in international cooperation, signs investment protection agreements with multiple countries, providing legal protection for foreign enterprises."
+            },
+            innovation: {
+                title: "Innovation Policy Support",
+                description: "Establishes innovation development fund, supports digital technology applications, providing financial support for lottery industry technological innovation."
             }
         },
         opportunities: {
@@ -3333,41 +3445,58 @@ const en = {
             }
         },
         challenges: {
-            title: "Market Challenges",
-            subtitle: "Understand the main challenges facing the industry and develop corresponding response strategies",
-            language: {
-                title: "Language Localization",
-                description: "Need to provide bilingual services in Uzbek and Russian, with high localization requirements."
+            title: "Market Challenges and Risks",
+            description: "In-depth analysis of main challenges and potential risks facing entry into Uzbekistan lottery market",
+            market_maturity: {
+                title: "Market Maturity",
+                description: "Lottery market still in early stage, requires significant resource investment for market education and infrastructure construction."
             },
-            security: {
-                title: "Cybersecurity",
-                description: "Need to establish a cybersecurity system that meets local standards to protect user data security."
+            localization: {
+                title: "Localization Requirements",
+                description: "Need deep understanding of local culture and language, providing localized services in Uzbek and Russian languages."
             },
-            partnership: {
-                title: "Partnerships",
-                description: "Need to establish cooperative relationships with local financial institutions and payment service providers."
+            infrastructure: {
+                title: "Infrastructure Construction",
+                description: "Digital infrastructure still being improved, need to build adaptable technical solutions."
+            },
+            currency: {
+                title: "Exchange Rate Risk",
+                description: "Som exchange rate still in stabilization process, need to develop effective exchange rate risk management strategies."
             }
         },
         solutions: {
-            title: "LottoBridge Solutions",
-            subtitle: "We provide comprehensive technical support and services to help you succeed in the Uzbekistan market",
-            compliance: {
-                title: "Compliance Support",
-                description: "Provide system solutions that meet Uzbekistan\'s regulatory requirements to ensure legal business operations."
+            title: "LottoBridge Professional Solutions",
+            description: "Targeting Uzbekistan market characteristics, providing comprehensive technical support and professional services",
+            market_development: {
+                title: "Market Development Solutions",
+                description: "Provide comprehensive market cultivation and user education services, assist in establishing healthy lottery ecosystem."
             },
             localization: {
-                title: "Localization Services",
-                description: "Provide bilingual interface and customer service support in Uzbek and Russian to ensure user experience."
+                title: "Deep Localization",
+                description: "Provide multi-language support including Uzbek and Russian, integrate local cultural elements, ensure product localization."
             },
-            partnership: {
-                title: "Partnership Network",
-                description: "Establish cooperative relationships with local financial institutions and payment service providers to provide complete payment solutions."
+            government_relations: {
+                title: "Government Relations Management",
+                description: "Assist in establishing good government relations, obtain policy support, ensure compliant and stable business operations."
+            },
+            infrastructure: {
+                title: "Infrastructure Construction",
+                description: "Provide technical solutions adapted to local network conditions, support offline functions and low-bandwidth network operations."
+            },
+            training: {
+                title: "Training and Support",
+                description: "Provide comprehensive technical training and talent development services, establish localized operation teams."
+            },
+            regional_strategy: {
+                title: "Regional Development Strategy",
+                description: "Develop Central Asian regional development strategy, use Uzbekistan as base to radiate the entire Central Asian market."
             }
         },
         cta: {
             title: "Start Your Uzbekistan Lottery Business Journey",
             subtitle: "Contact us for professional market analysis and customized solutions",
             contact: "Contact Now",
+            btn_cases: "View Cases",
             cases: "View Cases"
         }
     },
@@ -4530,7 +4659,32 @@ const en = {
             address: "Block B, Hongxiang Industrial Park, Tongzhou District, Beijing",
             wechat: "Scan to follow WeChat"
         },
+        company: {
+            name: "LottoBridge",
+            description: "Global lottery overseas one-stop solution platform, relying on China's strong lottery industry chain resources, helping customers from all countries quickly enter the lottery market."
+        },
+        products: {
+            title: "Products & Services",
+            lottery_system: "Lottery System Services",
+            terminal_equipment: "Terminal Equipment Services", 
+            game_design: "Game Design & Development",
+            printing_service: "Ticket Printing Services",
+            market_research: "Market Research Services"
+        },
+        resources: {
+            title: "Resource Center",
+            case_studies: "Case Studies",
+            whitepapers: "White Paper Downloads",
+            industry_reports: "Industry Reports",
+            blog_news: "Blog & News",
+            faq: "FAQ"
+        },
+        contact: {
+            title: "Contact Us",
+            address: "Block B, Hongxiang Industrial Park, Tongzhou District, Beijing"
+        },
         copyright: {
+            company: "© 2023 LottoBridge",
             rights: "All Rights Reserved",
             privacy: "Privacy Policy",
             terms: "Terms of Service",

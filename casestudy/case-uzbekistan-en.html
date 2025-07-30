@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzbekistan National Lottery Instant Ticket System Deployment | LottoBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="LottoBridge successfully deployed a comprehensive national lottery instant ticket system in Uzbekistan, featuring 20 million annual ticket capacity and complete CRM integration.">
+    <meta name="keywords" content="Uzbekistan lottery, instant ticket system, lottery deployment, market analysis, CRM system, Central Asia lottery">
+    <meta name="author" content="LottoBridge Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Uzbekistan National Lottery Instant Ticket System Deployment | LottoBridge">
+    <meta property="og:description" content="Comprehensive lottery system deployment in Uzbekistan with provincial pilot program and 20 million ticket capacity">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lottobridge.com/casestudy/case-uzbekistan-en.html">
+    <meta property="og:image" content="https://lottobridge.com/images/report-uzbekistan.jpg">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="zh" href="https://lottobridge.com/casestudy/case-uzbekistan.html">
+    <link rel="alternate" hreflang="en" href="https://lottobridge.com/casestudy/case-uzbekistan-en.html">
+    <link rel="alternate" hreflang="ru" href="https://lottobridge.com/casestudy/case-uzbekistan-ru.html">
+    <link rel="canonical" href="https://lottobridge.com/casestudy/case-uzbekistan-en.html">
+    
+    <style>
+        :root {
+            --uzbek-primary: #0091d5;
+            --uzbek-secondary: #1eb53a;
+            --uzbek-accent: #ce1126;
+            --uzbek-gradient: linear-gradient(135deg, #0091d5 0%, #1eb53a 50%, #ce1126 100%);
+            --primary-blue: #1a3e8c;
+            --primary-red: #e63946;
+            --nav-blue: #1d3557;
+            --white: #fff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: var(--nav-blue);
+            background: var(--white);
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header with index.html compatible structure */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo-lotto { color: #1a56db; }
+        .logo-bridge { color: #dc2626; }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1a56db;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a56db;
+        }
+
+        .language-selector select {
+            padding: 8px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--nav-blue);
+        }
+
+        /* Hero Section */
+        .case-hero {
+            background: var(--uzbek-gradient);
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.15)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="150" r="120" fill="url(%23grad1)"/><circle cx="1000" cy="650" r="180" fill="url(%23grad1)"/><rect x="500" y="300" width="100" height="100" rx="25" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat center/cover;
+            opacity: 0.3;
+        }
+
+        .case-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .case-flag {
+            font-size: 80px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-hero-title {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-hero-desc {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .case-hero-slogan {
+            font-size: clamp(14px, 2vw, 18px);
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        /* Project Overview */
+        .case-overview {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: -60px auto 60px auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        .case-overview-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .case-overview-info {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .case-overview-info div {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .case-overview-info strong {
+            font-weight: 700;
+            min-width: 120px;
+            color: var(--uzbek-primary);
+        }
+
+        .case-overview-img {
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Highlights */
+        .case-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 60px auto;
+        }
+
+        .case-highlight {
+            background: linear-gradient(135deg, #f8fafc, #e3f2fd);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 145, 213, 0.1);
+        }
+
+        .case-highlight:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .case-highlight-icon {
+            font-size: 32px;
+            color: var(--uzbek-primary);
+            min-width: 40px;
+        }
+
+        .case-highlight-content {
+            flex: 1;
+        }
+
+        .case-highlight-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--uzbek-primary);
+        }
+
+        .case-highlight-desc {
+            font-size: 14px;
+            color: var(--nav-blue);
+            line-height: 1.6;
+        }
+
+        /* Testimonial */
+        .case-testimonial {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            background: linear-gradient(135deg, #e3f2fd, #f8fafc);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-left: 5px solid var(--uzbek-primary);
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-content {
+            flex: 1;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--nav-blue);
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 24px;
+            color: var(--uzbek-primary);
+        }
+
+        .testimonial-quote::after {
+            content: '"';
+            font-size: 24px;
+            color: var(--uzbek-primary);
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            color: var(--uzbek-primary);
+            font-weight: 700;
+        }
+
+        /* Delivery Process */
+        .case-delivery {
+            max-width: 1000px;
+            margin: 0 auto 60px auto;
+        }
+
+        .delivery-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--uzbek-primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .delivery-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .delivery-step {
+            background: linear-gradient(135deg, #f8fafc, #e3f2fd);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 145, 213, 0.1);
+        }
+
+        .delivery-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .delivery-step-icon {
+            font-size: 40px;
+            color: var(--uzbek-primary);
+            margin-bottom: 15px;
+        }
+
+        .delivery-step-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--uzbek-primary);
+            margin-bottom: 10px;
+        }
+
+        .delivery-step-desc {
+            font-size: 14px;
+            color: var(--nav-blue);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .case-cta {
+            background: var(--uzbek-gradient);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle cx="200" cy="100" r="80" fill="rgba(255,255,255,0.05)"/><circle cx="1000" cy="300" r="120" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+            opacity: 0.5;
+        }
+
+        .case-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .case-cta-title {
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .case-cta-desc {
+            font-size: clamp(16px, 2vw, 18px);
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .case-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            text-align: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--uzbek-primary);
+            border-color: white;
+        }
+
+        .btn-primary:hover {
+            background: #f0f9ff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--uzbek-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .case-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .case-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .case-testimonial {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .delivery-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .case-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .case-hero {
+                padding: 100px 0 60px;
+            }
+
+            .case-overview {
+                margin: -40px auto 40px auto;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-lotto">Lotto</span><span class="logo-bridge">Bridge</span>
+            </a>
+            
+            <div class="nav-container">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../market-research.html">Market Research</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../insights.html">Insights</a></li>
+                        <li><a href="../case-studies.html" class="active">Case Studies</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="language-selector">
+                    <select id="languageSelector" onchange="switchLanguage()">
+                        <option value="en" selected>🇺🇸 English</option>
+                        <option value="zh">🇨🇳 中文</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="ko">🇰🇷 한국어</option>
+                    </select>
+                </div>
+                
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-hero-content">
+                <div class="case-flag">🇺🇿</div>
+                <div class="case-hero-title">Uzbekistan National Lottery Instant Ticket System Deployment</div>
+                <div class="case-hero-desc">Provincial pilot program with 20 million annual ticket capacity, comprehensive market research + CRM system + security ticket design + thermal paper export</div>
+                <div class="case-hero-slogan">Modernization-driven digital transformation empowering Central Asia's lottery industry</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="container">
+        <div class="case-overview">
+            <div class="case-overview-grid">
+                <div class="case-overview-info">
+                    <div><strong>Country:</strong> Uzbekistan</div>
+                    <div><strong>Client Type:</strong> Government Institution</div>
+                    <div><strong>Project Period:</strong> 2024</div>
+                    <div><strong>Service Scope:</strong> System development, ticket printing, CRM system, thermal paper export</div>
+                    <div><strong>Key Results:</strong> Provincial pilot with 20 million annual ticket capacity, completed in just 5 months</div>
+                    <div><strong>Market Impact:</strong> Established foundation for national lottery modernization across Central Asia</div>
+                </div>
+                <div>
+                    <img src="../images/report-uzbekistan.jpg" alt="Uzbekistan Lottery System" class="case-overview-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="container">
+        <div class="case-highlights">
+            <div class="case-highlight">
+                <div class="case-highlight-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="case-highlight-content">
+                    <div class="case-highlight-title">Provincial Pilot Success</div>
+                    <div class="case-highlight-desc">Successfully launched comprehensive pilot program at provincial level, setting foundation for national expansion</div>
+                </div>
+            </div>
+            <div class="case-highlight">
+                <div class="case-highlight-icon"><i class="fas fa-print"></i></div>
+                <div class="case-highlight-content">
+                    <div class="case-highlight-title">Large-Scale Production</div>
+                    <div class="case-highlight-desc">20 million annual ticket printing capacity with state-of-the-art security features meeting international standards</div>
+                </div>
+            </div>
+            <div class="case-highlight">
+                <div class="case-highlight-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="case-highlight-content">
+                    <div class="case-highlight-title">Custom CRM System</div>
+                    <div class="case-highlight-desc">Tailored customer relationship management system with advanced analytics and multi-language support</div>
+                </div>
+            </div>
+            <div class="case-highlight">
+                <div class="case-highlight-icon"><i class="fas fa-clock"></i></div>
+                <div class="case-highlight-content">
+                    <div class="case-highlight-title">Rapid Deployment</div>
+                    <div class="case-highlight-desc">Complete project delivery from strategic analysis to system launch in just 5 months</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="container">
+        <div class="case-testimonial">
+            <div class="testimonial-avatar">🇺🇿</div>
+            <div class="testimonial-content">
+                <div class="testimonial-quote">The platform helped us achieve complete system deployment from strategic analysis to live operations in just 5 months. The efficiency and quality exceeded our expectations.</div>
+                <div class="testimonial-author">Aziz Karimov, Technical Director, Uzbekistan National Lottery Bureau</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="container">
+        <div class="case-delivery">
+            <div class="delivery-title">Delivery Components & Service Process</div>
+            <div class="delivery-steps">
+                <div class="delivery-step">
+                    <div class="delivery-step-icon"><i class="fas fa-search-dollar"></i></div>
+                    <div class="delivery-step-title">Market Research</div>
+                    <div class="delivery-step-desc">Comprehensive analysis of Uzbekistan lottery market policies, regulations, and user demand patterns</div>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="delivery-step-title">CRM System Development</div>
+                    <div class="delivery-step-desc">Custom-built customer relationship management system with advanced features and local language support</div>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="delivery-step-title">Security Design</div>
+                    <div class="delivery-step-desc">Advanced security ticket design complying with international standards and anti-counterfeiting measures</div>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <div class="delivery-step-title">Thermal Paper Export</div>
+                    <div class="delivery-step-desc">High-quality thermal paper material export and supply chain management for sustainable operations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="case-cta">
+        <div class="container">
+            <div class="case-cta-content">
+                <div class="case-cta-title">Become Our Next Success Story</div>
+                <div class="case-cta-desc">Whether you're a government institution, private operator, or technology provider, LottoBridge delivers the perfect solution tailored to your needs</div>
+                <div class="case-cta-buttons">
+                    <a href="../contact.html" class="btn btn-primary">Submit Partnership Inquiry</a>
+                    <a href="../case-studies.html" class="btn btn-outline">View All Case Studies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LottoBridge</h3>
+                    <p>Leading global lottery technology and consulting solutions provider, empowering lottery operators worldwide with comprehensive solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="../products.html">Lottery System Services</a></li>
+                        <li><a href="../products.html">Terminal Equipment</a></li>
+                        <li><a href="../products.html">Game Design & Development</a></li>
+                        <li><a href="../products.html">Ticket Printing Services</a></li>
+                        <li><a href="../market-research.html">Market Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../case-studies.html">Case Studies</a></li>
+                        <li><a href="../insights.html">Industry Reports</a></li>
+                        <li><a href="../insights.html">Market Analysis</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="../contact.html">Get in Touch</a></li>
+                        <li><a href="../contact.html">Support</a></li>
+                        <li><a href="../about.html">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LottoBridge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage() {
+            const selector = document.getElementById('languageSelector');
+            const language = selector.value;
+            
+            if (language === 'zh') {
+                window.location.href = 'case-uzbekistan.html';
+            } else if (language === 'ru') {
+                window.location.href = 'case-uzbekistan-ru.html';
+            }
+            // Add other language redirects as needed
+        }
+
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html> 

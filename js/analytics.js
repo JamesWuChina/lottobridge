@@ -9,22 +9,22 @@ class AnalyticsManager {
             // Google Analytics配置
             googleAnalytics: {
                 measurementId: 'G-XXXXXXXXXX', // 需要替换为实际的GA4测量ID
-                enabled: true
+                enabled: false // 暂时禁用以避免加载错误
             },
             // 百度统计配置
             baiduAnalytics: {
                 siteId: 'your-baidu-site-id', // 需要替换为实际的百度统计ID
-                enabled: true
+                enabled: false // 暂时禁用以避免加载错误
             },
             // Yandex Metrica配置（俄语地区）
             yandexMetrica: {
                 counterId: 'your-yandex-counter-id',
-                enabled: true
+                enabled: false // 暂时禁用以避免加载错误
             },
             // Microsoft Clarity配置
             microsoftClarity: {
                 projectId: 'your-clarity-project-id',
-                enabled: true
+                enabled: false // 暂时禁用以避免加载错误
             },
             // 热力图工具
             hotjar: {

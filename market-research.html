@@ -1258,7 +1258,7 @@
                                 <li data-i18n="market_research.reports.uzbekistan.point2">用户习惯与支付行为</li>
                                 <li data-i18n="market_research.reports.uzbekistan.point3">热门游戏与市场空白</li>
                             </ul>
-                            <a href="/report/uzbekistan.html" class="button">
+                            <a href="/report/uzbekistan.html" class="button report-link" data-zh="/report/uzbekistan.html" data-en="/report/uzbekistan-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.uzbekistan.button">查看详情</span>
                             </a>
@@ -1279,7 +1279,7 @@
                                 <li data-i18n="market_research.reports.nigeria.point2">年轻人口红利分析</li>
                                 <li data-i18n="market_research.reports.nigeria.point3">州级监管差异对比</li>
                             </ul>
-                            <a href="/report/nigeria.html" class="button">
+                            <a href="/report/nigeria.html" class="button report-link" data-zh="/report/nigeria.html" data-en="/report/nigeria-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.nigeria.button">查看详情</span>
                             </a>
@@ -1300,7 +1300,7 @@
                                 <li data-i18n="market_research.reports.vietnam.point2">外资合作政策解读</li>
                                 <li data-i18n="market_research.reports.vietnam.point3">区域竞争格局分析</li>
                             </ul>
-                            <a href="/report/vietnam.html" class="button">
+                            <a href="/report/vietnam.html" class="button report-link" data-zh="/report/vietnam.html" data-en="/report/vietnam-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.vietnam.button">查看详情</span>
                             </a>
@@ -1321,7 +1321,7 @@
                                 <li data-i18n="market_research.reports.mexico.point2">体育博彩融合趋势</li>
                                 <li data-i18n="market_research.reports.mexico.point3">美墨边境市场特色</li>
                             </ul>
-                            <a href="/report/mexico.html" class="button">
+                            <a href="/report/mexico.html" class="button report-link" data-zh="/report/mexico.html" data-en="/report/mexico-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.mexico.button">查看详情</span>
                             </a>
@@ -1342,7 +1342,7 @@
                                 <li data-i18n="market_research.reports.philippines.point2">海外菲律宾人市场</li>
                                 <li data-i18n="market_research.reports.philippines.point3">岛屿分布运营挑战</li>
                             </ul>
-                            <a href="/report/philippines.html" class="button">
+                            <a href="/report/philippines.html" class="button report-link" data-zh="/report/philippines.html" data-en="/report/philippines-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.philippines.button">查看详情</span>
                             </a>
@@ -1363,7 +1363,7 @@
                                 <li data-i18n="market_research.reports.kenya.point2">移动优先用户行为</li>
                                 <li data-i18n="market_research.reports.kenya.point3">东非区域辐射潜力</li>
                             </ul>
-                            <a href="/report/kenya.html" class="button">
+                            <a href="/report/kenya.html" class="button report-link" data-zh="/report/kenya.html" data-en="/report/kenya-en.html">
                                 <span>📝</span>
                                 <span data-i18n="market_research.reports.kenya.button">查看详情</span>
                             </a>
@@ -1548,13 +1548,53 @@
 
     <!-- Unified i18n System -->
     <script src="js/languages/zh.js"></script>
-    <script src="../js/languages/en.js"></script>
-    <script src="../js/languages/es.js"></script>
-    <script src="../js/languages/fr.js"></script>
-    <script src="../js/languages/ar.js"></script>
-    <script src="../js/languages/ko.js"></script>
-    <script src="../js/languages/ru.js"></script>
-    <script src="../js/unified-i18n.js"></script>
-    <script src="../js/i18n-validation.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/es.js"></script>
+    <script src="js/languages/fr.js"></script>
+    <script src="js/languages/ar.js"></script>
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/ru.js"></script>
+    <script src="js/unified-i18n.js"></script>
+    <script src="js/i18n-validation.js"></script>
+    
+    <!-- 通用多语言翻译系统 -->
+    <script src="js/universal-translator.js"></script>
+    
+    <!-- 语言参数传递脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有报告链接添加语言参数
+            const reportLinks = document.querySelectorAll('a.report-link');
+            reportLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 获取当前语言设置
+                    const currentLang = localStorage.getItem('selectedLanguage') || 
+                                       (document.documentElement.lang === 'en' ? 'en' : 'zh');
+                    
+                    // 根据语言选择对应的URL
+                    let targetUrl;
+                    if (currentLang === 'en' && this.getAttribute('data-en')) {
+                        targetUrl = this.getAttribute('data-en');
+                    } else if (currentLang === 'zh' && this.getAttribute('data-zh')) {
+                        targetUrl = this.getAttribute('data-zh');
+                    } else {
+                        // 后备方案：使用默认href
+                        targetUrl = this.getAttribute('href');
+                        if (currentLang !== 'zh') {
+                            const separator = targetUrl.includes('?') ? '&' : '?';
+                            targetUrl = targetUrl + separator + 'lang=' + currentLang;
+                        }
+                    }
+                    
+                    console.log('跳转到:', targetUrl, '语言:', currentLang);
+                    
+                    // 跳转到目标URL
+                    window.location.href = targetUrl;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
